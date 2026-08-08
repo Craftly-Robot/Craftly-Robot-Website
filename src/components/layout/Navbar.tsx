@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navigation } from '../../data/navigation';
+import { brandAssets } from '../../utils/brandAssets';
 import './Navbar.css';
 
 /* ── Icons ── */
@@ -103,14 +104,20 @@ export default function Navbar() {
         {/* Logo */}
         <div className="navbar__left">
           <Link to="/" className="navbar__logo" aria-label="Craftly Home">
-            <span className="navbar__logo-text">Craftly</span>
+            <img
+              src={brandAssets.logo}
+              alt="Craftly"
+              className="navbar__logo-img"
+              width="100"
+              height="auto"
+            />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
           {navigation.map((item) => (
-            <div key={item.label} style={{ position: 'relative' }}>
+            <div key={item.label}>
               <button
                 className={`navbar__nav-item ${activeDropdown === item.label ? 'navbar__nav-item--active navbar__nav-item--open' : ''}`}
                 onClick={() => toggleDropdown(item.label)}
@@ -122,28 +129,30 @@ export default function Navbar() {
               </button>
 
               {item.items && (
-                <div
-                  className={`navbar__dropdown ${activeDropdown === item.label ? 'navbar__dropdown--visible' : ''}`}
-                  role="menu"
-                >
-                  {item.items.map((child) => (
-                    <Link
-                      key={child.route}
-                      to={child.route}
-                      className="dropdown-item"
-                      role="menuitem"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      <div className="dropdown-item__icon">
-                        <DropdownIcon icon={child.icon} />
-                      </div>
-                      <div className="dropdown-item__content">
-                        <div className="dropdown-item__title">{child.title}</div>
-                        <div className="dropdown-item__desc">{child.description}</div>
-                      </div>
-                      <ArrowRight className="dropdown-item__arrow" />
-                    </Link>
-                  ))}
+                <div className="navbar__dropdown-wrapper">
+                  <div
+                    className={`navbar__dropdown ${activeDropdown === item.label ? 'navbar__dropdown--visible' : ''}`}
+                    role="menu"
+                  >
+                    {item.items.map((child) => (
+                      <Link
+                        key={child.route}
+                        to={child.route}
+                        className="dropdown-item"
+                        role="menuitem"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <div className="dropdown-item__icon">
+                          <DropdownIcon icon={child.icon} />
+                        </div>
+                        <div className="dropdown-item__content">
+                          <div className="dropdown-item__title">{child.title}</div>
+                          <div className="dropdown-item__desc">{child.description}</div>
+                        </div>
+                        <ArrowRight className="dropdown-item__arrow" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
