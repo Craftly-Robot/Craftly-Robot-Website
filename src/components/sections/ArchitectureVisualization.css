@@ -1,15 +1,22 @@
 .architecture-section {
-  background: var(--color-bg-elevated);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
 }
 
 .architecture__grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: var(--space-3xl);
+  gap: var(--space-4xl);
   align-items: center;
   margin-top: var(--space-2xl);
+}
+
+.architecture__header {
+  max-width: 500px;
+}
+
+.architecture__title {
+  margin-top: var(--space-md);
+  color: var(--color-text);
 }
 
 .architecture__flow {
@@ -21,45 +28,45 @@
 .architecture__layer {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
-  padding: var(--space-md) var(--space-lg);
+  gap: var(--space-xl);
+  padding: var(--space-md) var(--space-xl);
   border-left: 2px solid var(--color-border);
   position: relative;
-  transition:
-    border-color var(--duration-normal) var(--ease-out),
-    background-color var(--duration-normal) var(--ease-out);
+  transition: background-color var(--duration-fast) var(--ease-out);
 }
 
 .architecture__layer:hover {
-  border-left-color: var(--color-accent);
-  background: var(--color-accent-muted);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--color-bg-subtle);
+  border-left-color: var(--color-text); /* Black line on hover */
 }
 
 .architecture__layer-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--color-border);
+  background: var(--color-text); /* Black node */
   flex-shrink: 0;
-  transition: background-color var(--duration-normal) var(--ease-out);
+  position: absolute;
+  left: -6px; /* align on the border */
+  transition: transform var(--duration-fast) var(--ease-out);
 }
 
 .architecture__layer:hover .architecture__layer-dot {
-  background: var(--color-accent);
+  transform: scale(1.4);
 }
 
 .architecture__layer-label {
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  font-weight: 500;
+  font-size: var(--text-base);
+  font-weight: 600;
   color: var(--color-text);
-  min-width: 100px;
+  min-width: 140px;
+  letter-spacing: var(--tracking-wider);
 }
 
 .architecture__layer-desc {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
 }
 
 @media (max-width: 1024px) {

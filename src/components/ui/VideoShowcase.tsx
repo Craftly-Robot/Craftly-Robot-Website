@@ -11,7 +11,6 @@ interface VideoShowcaseProps {
 
 export default function VideoShowcase({ src, poster, altText }: VideoShowcaseProps) {
   const [error, setError] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const reducedMotion = useReducedMotion();
 
@@ -24,7 +23,7 @@ export default function VideoShowcase({ src, poster, altText }: VideoShowcasePro
         entries.forEach((entry) => {
           if (entry.isIntersecting && !reducedMotion) {
             video.play().catch(() => {
-              // Ignore autoplay errors (usually due to lack of user interaction)
+              // Ignore autoplay errors
             });
           } else {
             video.pause();
@@ -52,12 +51,7 @@ export default function VideoShowcase({ src, poster, altText }: VideoShowcasePro
           loop
           playsInline
           onError={() => setError(true)}
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
         />
-      )}
-      {!error && !isPlaying && !reducedMotion && (
-        <VideoPlaceholder label={altText || src.split('/').pop() || 'Video'} />
       )}
     </div>
   );

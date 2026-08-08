@@ -33,12 +33,12 @@ const CONNECTION_DISTANCE = 280;
 const MOUSE_INFLUENCE = 120;
 
 const COLORS = {
-  primary: 'hsla(222, 84%, 58%, ',
-  secondary: 'hsla(260, 60%, 60%, ',
-  tertiary: 'hsla(200, 70%, 55%, ',
-  line: 'hsla(222, 40%, 45%, ',
-  particle: 'hsla(222, 84%, 70%, ',
-  grid: 'hsla(228, 15%, 18%, ',
+  primary: 'hsla(0, 0%, 100%, ', // White
+  secondary: 'hsla(0, 0%, 85%, ', // Light Gray
+  tertiary: 'hsla(0, 0%, 70%, ', // Gray
+  line: 'hsla(0, 0%, 40%, ', // Darker Gray line
+  particle: 'hsla(0, 0%, 90%, ', // Very Light Gray
+  grid: 'hsla(0, 0%, 15%, ', // Very Dark Gray grid
 };
 
 export default function HeroVisual() {
@@ -294,8 +294,8 @@ export default function HeroVisual() {
         <div style={{
           width: '100%',
           height: '100%',
-          background: `radial-gradient(ellipse at 30% 50%, hsla(222, 84%, 58%, 0.06) 0%, transparent 60%),
-                       radial-gradient(ellipse at 70% 30%, hsla(260, 60%, 60%, 0.04) 0%, transparent 50%)`,
+          background: `radial-gradient(ellipse at 30% 50%, hsla(0, 0%, 100%, 0.05) 0%, transparent 60%),
+                       radial-gradient(ellipse at 70% 30%, hsla(0, 0%, 80%, 0.03) 0%, transparent 50%)`,
         }} />
       </div>
     );

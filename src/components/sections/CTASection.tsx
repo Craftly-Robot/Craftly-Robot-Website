@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { siteContent } from '../../data/siteContent';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './CTASection.css';
 
 function ArrowRight({ className }: { className?: string }) {
@@ -11,21 +11,32 @@ function ArrowRight({ className }: { className?: string }) {
 }
 
 export default function CTASection() {
+  const revealRef = useScrollReveal();
+
   return (
-    <section className="section section--lg home-cta" id="cta">
-      <div className="home-cta__bg" aria-hidden="true" />
-      <div className="container">
-        <div className="home-cta__content">
-          <h2 className="text-h2 home-cta__headline reveal">
-            {siteContent.cta.headline}
-          </h2>
-          <p className="text-body-lg home-cta__description reveal reveal-delay-1">
-            {siteContent.cta.description}
-          </p>
-          <Link to="/download" className="home-cta__btn reveal reveal-delay-2">
-            {siteContent.cta.buttonText}
-            <ArrowRight className="product-showcase__cta-arrow" />
-          </Link>
+    <section className="section section--xl home-cta" ref={revealRef}>
+      <div className="container container--wide">
+        <div className="home-cta__container reveal">
+          {/* Subtle monochrome network/particle background using pure CSS gradients */}
+          <div className="home-cta__bg" aria-hidden="true">
+            <div className="home-cta__bg-grid" />
+            <div className="home-cta__bg-glow" />
+          </div>
+          
+          <div className="home-cta__content">
+            <h2 className="text-hero-display home-cta__headline reveal reveal-delay-1">
+              Build with Craftly.
+            </h2>
+            <div className="home-cta__actions reveal reveal-delay-2">
+              <Link to="/products/workspace" className="home-cta__btn-primary">
+                Explore Craftly
+                <ArrowRight className="home-cta__btn-arrow" />
+              </Link>
+              <Link to="/download" className="home-cta__btn-secondary">
+                Download Craftly
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

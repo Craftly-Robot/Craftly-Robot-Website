@@ -1,57 +1,75 @@
 import { Link } from 'react-router-dom';
-import { siteContent } from '../../data/siteContent';
-import HeroVisual from './HeroVisual';
+import { brandAssets } from '../../utils/brandAssets';
+import VideoShowcase from '../ui/VideoShowcase';
 import './Hero.css';
 
 function ArrowRight({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8h10M9 4l4 4-4 4" />
+    <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.33334 8H12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M8 3.33333L12.6667 8L8 12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 }
 
+// Conceptual monochrome technology symbols
+const TECH_ICONS = [
+  { id: 'workspace', icon: '⬡' },
+  { id: 'robot', icon: '◈' },
+  { id: 'agents', icon: '⟐' },
+  { id: 'code', icon: '⟨ ⟩' },
+  { id: 'security', icon: '⊞' },
+  { id: 'memory', icon: '◉' },
+  { id: 'tools', icon: '⊟' },
+  { id: 'execution', icon: '⚡' },
+  { id: 'verification', icon: '✓' }
+];
+
 export default function Hero() {
-  const { hero } = siteContent;
-
   return (
-    <section className="hero" id="hero" aria-labelledby="hero-headline">
-      {/* Canvas background */}
-      <div className="hero__canvas-wrap" aria-hidden="true">
-        <HeroVisual />
-      </div>
-
+    <section className="hero">
       <div className="container">
         <div className="hero__content">
-          <div className="hero__badge">
-            <span className="hero__badge-dot" />
-            {hero.badge}
+          
+          <div className="hero__brand">
+            <img src={brandAssets.logo} alt="Craftly" className="hero__brand-icon" style={{ height: '14px', width: 'auto' }} />
+            <span>Craftly</span>
           </div>
 
-          <h1 className="hero__headline" id="hero-headline">
-            Building the <span className="hero__headline-accent">Intelligent</span>
-            {'\n'}Systems of Tomorrow.
+          <h1 className="text-hero-display hero__title">
+            Experience intelligent systems built for the agentic era.
           </h1>
 
-          <p className="hero__description">
-            {hero.description}
-          </p>
-
-          <div className="hero__actions">
-            <Link to="/products/workspace" className="hero__btn hero__btn--primary">
-              {hero.ctaPrimary}
-              <ArrowRight className="hero__btn-arrow" />
+          <div className="hero__cta-group">
+            <Link to="/products/workspace" className="hero__btn-primary">
+              Explore Craftly
+              <ArrowRight />
             </Link>
-            <Link to="/download" className="hero__btn hero__btn--secondary">
-              {hero.ctaSecondary}
+            <Link to="/products/robot" className="hero__btn-secondary">
+              Learn more
             </Link>
           </div>
-        </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="hero__scroll-indicator" aria-hidden="true">
-        <div className="hero__scroll-line" />
+        </div>
+
+        <div className="hero__media-wrapper">
+          <VideoShowcase 
+            src="/assets/videos/hero.mp4"
+            poster="/assets/posters/hero-poster.webp"
+            altText="Craftly intelligent system interfaces"
+          />
+        </div>
+
+        <div className="hero__tech-row">
+          <div className="hero__tech-track">
+            {TECH_ICONS.map(tech => (
+              <div key={tech.id} className="tech-icon" aria-label={tech.id} title={tech.id}>
+                {tech.icon}
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
