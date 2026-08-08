@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: var(--navbar-height);
   z-index: var(--z-fixed);
   transition:
     background-color var(--duration-normal) var(--ease-out),
@@ -82,10 +83,10 @@
 
 /* ── Dropdowns ── */
 .navbar__dropdown-wrapper {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: var(--navbar-height);
   left: 0;
-  width: 100%;
+  width: 100vw;
   pointer-events: none;
   display: flex;
   justify-content: center;

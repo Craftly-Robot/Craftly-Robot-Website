@@ -3,9 +3,9 @@
  * Update these if asset locations change.
  */
 export const brandAssets = {
-  logo: '/assets/brand/craftly-logo.svg',
-  logoLight: '/assets/brand/craftly-logo.svg',       // For dark backgrounds
-  logoDark: '/assets/brand/craftly-logo-dark.svg',    // For light backgrounds
+  logo: '/assets/brand/craftly-logo.jpg',
+  logoLight: '/assets/brand/craftly-logo.jpg',       // For dark backgrounds
+  logoDark: '/assets/brand/craftly-logo.jpg',    // For light backgrounds
   icon: '/assets/brand/craftly-icon.svg',
   favicon: '/assets/brand/craftly-icon.svg',
   ogImage: '/assets/brand/craftly-og.png',
