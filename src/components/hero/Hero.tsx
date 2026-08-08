@@ -1,13 +1,15 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { brandAssets } from '../../utils/brandAssets';
 import VideoShowcase from '../ui/VideoShowcase';
 import './Hero.css';
 
-function ArrowRight({ className }: { className?: string }) {
+function MonitorIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3.33334 8H12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M8 3.33333L12.6667 8L8 12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <svg className={className} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+      <line x1="8" y1="21" x2="16" y2="21"></line>
+      <line x1="12" y1="17" x2="12" y2="21"></line>
     </svg>
   );
 }
@@ -26,27 +28,38 @@ const TECH_ICONS = [
 ];
 
 export default function Hero() {
+  const [osName, setOsName] = useState('Windows');
+
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent;
+    if (userAgent.indexOf("Mac") !== -1) {
+      setOsName("macOS");
+    } else if (userAgent.indexOf("Linux") !== -1) {
+      setOsName("Linux");
+    }
+  }, []);
+
   return (
     <section className="hero">
       <div className="container">
         <div className="hero__content">
           
           <div className="hero__brand">
-            <img src={brandAssets.icon} alt="Craftly" className="hero__brand-icon" style={{ height: '16px', width: 'auto' }} />
-            <span>Craftly</span>
+            <img src={brandAssets.icon} alt="Craftly" className="hero__brand-icon" style={{ height: '24px', width: 'auto' }} />
+            <span style={{ fontSize: '20px', fontWeight: 500, color: '#111' }}>Craftly</span>
           </div>
 
           <h1 className="text-hero-display hero__title">
-            Experience liftoff with the next-gen AI platform
+            Experience liftoff with the next-gen agent platform
           </h1>
 
           <div className="hero__cta-group">
-            <Link to="/products/workspace" className="hero__btn-primary">
-              Explore Craftly
-              <ArrowRight />
+            <Link to="/download" className="hero__btn-primary">
+              <MonitorIcon />
+              Download for {osName}
             </Link>
-            <Link to="/products/robot" className="hero__btn-secondary">
-              Learn more
+            <Link to="/use-cases" className="hero__btn-secondary">
+              Explore use cases
             </Link>
           </div>
 
