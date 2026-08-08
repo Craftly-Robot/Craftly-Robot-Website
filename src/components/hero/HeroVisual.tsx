@@ -24,15 +24,15 @@ export default function HeroVisual() {
 
   const initParticles = useCallback(() => {
     const particles: Particle[] = [];
-    const count = 1800; // Even denser cluster for an even larger ball
-    const radius = 250; // Much larger radius for the swarm
+    const count = 2500; // Extremely dense cluster for a massive ball
+    const radius = 320; // Massive radius for the swarm
     
-    // Google brand colors made extremely faint/pastel (15% opacity) to blend flawlessly
+    // Google brand colors made incredibly faint (8% opacity) 
     const colors = [
-      'rgba(66, 133, 244, 0.15)', // Very Faint Blue
-      'rgba(234, 67, 53, 0.15)',  // Very Faint Red
-      'rgba(251, 188, 5, 0.15)',  // Very Faint Yellow
-      'rgba(52, 168, 83, 0.15)'   // Very Faint Green
+      'rgba(66, 133, 244, 0.08)', // Barely visible Blue
+      'rgba(234, 67, 53, 0.08)',  // Barely visible Red
+      'rgba(251, 188, 5, 0.08)',  // Barely visible Yellow
+      'rgba(52, 168, 83, 0.08)'   // Barely visible Green
     ];
 
     for (let i = 0; i < count; i++) {
