@@ -94,6 +94,32 @@ export default function Navbar() {
     setActiveDropdown((prev) => (prev === label ? null : label));
   }, []);
 
+  const timeoutRef = useRef<number | null>(null);
+
+  const handleMouseEnter = useCallback((label: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setActiveDropdown(label);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = window.setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150);
+  }, []);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   return (
     <header
       ref={navRef}
@@ -117,7 +143,11 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
           {navigation.map((item) => (
-            <div key={item.label}>
+            <div 
+              key={item.label}
+              onMouseEnter={() => handleMouseEnter(item.label)}
+              onMouseLeave={handleMouseLeave}
+            >
               <button
                 className={`navbar__nav-item ${activeDropdown === item.label ? 'navbar__nav-item--active navbar__nav-item--open' : ''}`}
                 onClick={() => toggleDropdown(item.label)}
