@@ -12,13 +12,7 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
-function ArrowRight({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8h10M9 4l4 4-4 4" />
-    </svg>
-  );
-}
+
 
 /* ── Icon map for dropdown items ── */
 function DropdownIcon({ icon }: { icon: string }) {
@@ -177,7 +171,7 @@ export default function Navbar() {
                       
                       <div className="navbar__mega-right">
                         <div className="navbar__mega-list-title">{item.label}</div>
-                        <div className="navbar__mega-grid">
+                        <div className={`navbar__mega-grid ${item.label === 'Products' ? 'navbar__mega-grid--products' : ''}`}>
                           {item.items.map((child) => (
                             <Link
                               key={child.route}
@@ -191,9 +185,10 @@ export default function Navbar() {
                               </div>
                               <div className="dropdown-item__content">
                                 <div className="dropdown-item__title">{child.title}</div>
-                                <div className="dropdown-item__desc">{child.description}</div>
+                                {item.label !== 'Products' && (
+                                  <div className="dropdown-item__desc">{child.description}</div>
+                                )}
                               </div>
-                              <ArrowRight className="dropdown-item__arrow" />
                             </Link>
                           ))}
                         </div>

@@ -140,12 +140,13 @@
 }
 
 .navbar__mega-title {
-  font-size: var(--text-h3);
+  font-size: var(--text-h2);
   font-weight: 600;
   line-height: var(--leading-tight);
   margin-bottom: var(--space-xl);
   letter-spacing: var(--tracking-tight);
   color: var(--color-text);
+  max-width: 250px;
 }
 
 .navbar__mega-btn {
@@ -187,9 +188,15 @@
   gap: var(--space-xs) var(--space-md);
 }
 
+.navbar__mega-grid--products {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
 .dropdown-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-md);
   padding: var(--space-sm);
   border-radius: var(--radius-lg);
@@ -207,11 +214,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-md);
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  border-radius: var(--radius-sm);
   color: var(--color-text);
   flex-shrink: 0;
 }
@@ -221,7 +227,7 @@
 }
 
 .dropdown-item__title {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 500;
   margin-bottom: 2px;
 }
@@ -230,23 +236,6 @@
   font-size: var(--text-xs);
   color: var(--color-text-secondary);
   line-height: var(--leading-tight);
-}
-
-.dropdown-item__arrow {
-  width: 16px;
-  height: 16px;
-  color: var(--color-text-muted);
-  align-self: center;
-  opacity: 0;
-  transform: translateX(-4px);
-  transition:
-    opacity 150ms ease,
-    transform 150ms ease;
-}
-
-.dropdown-item:hover .dropdown-item__arrow {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 /* ── Download Button ── */
