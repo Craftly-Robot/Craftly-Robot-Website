@@ -17,26 +17,8 @@
   align-items: center;
 }
 
-.hero__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-2xl); /* generous gap */
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) forwards;
-}
-
-.hero__brand-icon {
-  width: 16px;
-  height: 16px;
-}
-
 .hero__title {
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(3.5rem, 7vw, 6rem);
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.04em;
@@ -59,9 +41,9 @@
 .hero__btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 0.875rem 1.75rem;
-  font-size: 1.125rem;
+  gap: 12px;
+  padding: 1.125rem 2rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #fff;
   background: #111;
@@ -78,8 +60,8 @@
 .hero__btn-secondary {
   display: inline-flex;
   align-items: center;
-  padding: 0.875rem 1.75rem;
-  font-size: 1.125rem;
+  padding: 1.125rem 2rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #111;
   background: #f1f3f5;

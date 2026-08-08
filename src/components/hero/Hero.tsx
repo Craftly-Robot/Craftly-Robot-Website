@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { brandAssets } from '../../utils/brandAssets';
 import VideoShowcase from '../ui/VideoShowcase';
 import './Hero.css';
 
@@ -44,11 +43,6 @@ export default function Hero() {
       <div className="container">
         <div className="hero__content">
           
-          <div className="hero__brand">
-            <img src={brandAssets.icon} alt="Craftly" className="hero__brand-icon" style={{ height: '24px', width: 'auto' }} />
-            <span style={{ fontSize: '20px', fontWeight: 500, color: '#111' }}>Craftly</span>
-          </div>
-
           <h1 className="text-hero-display hero__title">
             Experience liftoff with the next-gen agent platform
           </h1>
