@@ -160,24 +160,46 @@ export default function Navbar() {
                     className={`navbar__dropdown ${activeDropdown === item.label ? 'navbar__dropdown--visible' : ''}`}
                     role="menu"
                   >
-                    {item.items.map((child) => (
-                      <Link
-                        key={child.route}
-                        to={child.route}
-                        className="dropdown-item"
-                        role="menuitem"
-                        onClick={() => setActiveDropdown(null)}
-                      >
-                        <div className="dropdown-item__icon">
-                          <DropdownIcon icon={child.icon} />
+                    <div className="navbar__mega">
+                      <div className="navbar__mega-left">
+                        <h2 className="navbar__mega-title">
+                          {item.label === 'Products' && 'Explore our next generation products'}
+                          {item.label === 'Use Cases' && 'Discover solutions for your specific needs'}
+                          {item.label === 'Resources' && 'Everything you need to stay up-to-date and get help'}
+                        </h2>
+                        <Link 
+                          to={item.items[0]?.route || '/'} 
+                          className="navbar__mega-btn"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          See overview
+                        </Link>
+                      </div>
+                      
+                      <div className="navbar__mega-right">
+                        <div className="navbar__mega-list-title">{item.label}</div>
+                        <div className="navbar__mega-grid">
+                          {item.items.map((child) => (
+                            <Link
+                              key={child.route}
+                              to={child.route}
+                              className="dropdown-item"
+                              role="menuitem"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <div className="dropdown-item__icon">
+                                <DropdownIcon icon={child.icon} />
+                              </div>
+                              <div className="dropdown-item__content">
+                                <div className="dropdown-item__title">{child.title}</div>
+                                <div className="dropdown-item__desc">{child.description}</div>
+                              </div>
+                              <ArrowRight className="dropdown-item__arrow" />
+                            </Link>
+                          ))}
                         </div>
-                        <div className="dropdown-item__content">
-                          <div className="dropdown-item__title">{child.title}</div>
-                          <div className="dropdown-item__desc">{child.description}</div>
-                        </div>
-                        <ArrowRight className="dropdown-item__arrow" />
-                      </Link>
-                    ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}

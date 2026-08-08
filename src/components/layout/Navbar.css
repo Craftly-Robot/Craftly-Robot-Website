@@ -98,13 +98,14 @@
   pointer-events: auto;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-md);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-  min-width: 320px;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2xl) var(--space-3xl);
+  box-shadow: var(--shadow-xl);
+  width: 100%;
+  max-width: 960px;
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xs);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px) scale(0.98);
@@ -118,7 +119,70 @@
 .navbar__dropdown--visible {
   opacity: 1;
   visibility: visible;
-  transform: translateY(8px) scale(1);
+  transform: translateY(0) scale(1);
+}
+
+/* ── Mega Menu Layout ── */
+.navbar__mega {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-3xl);
+}
+
+.navbar__mega-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: var(--space-3xl);
+  border-right: 1px solid var(--color-border-subtle);
+}
+
+.navbar__mega-title {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-xl);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+.navbar__mega-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.navbar__mega-btn:hover {
+  background: var(--color-border);
+}
+
+.navbar__mega-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__mega-list-title {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-sm);
+  font-weight: 500;
+}
+
+.navbar__mega-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xs) var(--space-md);
 }
 
 .dropdown-item {
