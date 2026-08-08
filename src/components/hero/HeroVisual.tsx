@@ -62,8 +62,8 @@ export default function HeroVisual() {
           vy: 0,
           angle: baseAngle,
           baseAngle: baseAngle,
-          size: 2 + Math.random() * 3, // length of the dash
-          color: `rgba(180, 180, 180, ${0.1 + Math.random() * 0.15})` // very subtle light gray
+          size: 4 + Math.random() * 5, // slightly longer dash
+          color: `rgba(100, 100, 100, ${0.2 + Math.random() * 0.2})` // much more visible gray
         });
       }
     }
@@ -83,9 +83,9 @@ export default function HeroVisual() {
     ctx.clearRect(0, 0, w, h);
 
     // Physics constants
-    const MOUSE_RADIUS = 150;
-    const REPULSION_FORCE = 0.6;
-    const SPRING_CONSTANT = 0.03;
+    const MOUSE_RADIUS = 250;
+    const REPULSION_FORCE = 1.2;
+    const SPRING_CONSTANT = 0.04;
     const DAMPING = 0.85; // friction
 
     const time = performance.now() * 0.001; // for idle drift
