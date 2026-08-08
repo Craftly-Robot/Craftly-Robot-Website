@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import VideoShowcase from '../ui/VideoShowcase';
+import HeroVisual from './HeroVisual';
 import './Hero.css';
 
 function MonitorIcon({ className }: { className?: string }) {
@@ -57,7 +58,8 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="container">
+      <HeroVisual />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero__content">
           
           <h1 className="text-hero-display hero__title">
