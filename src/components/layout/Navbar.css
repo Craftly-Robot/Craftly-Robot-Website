@@ -41,8 +41,9 @@
 
 .navbar__logo-img {
   display: block;
-  height: 24px;
+  height: 28px;
   width: auto;
+  mix-blend-mode: multiply;
 }
 
 /* ── Desktop Nav ── */

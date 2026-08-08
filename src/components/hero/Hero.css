@@ -1,9 +1,9 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height));
   display: flex;
   flex-direction: column;
-  padding-top: calc(var(--navbar-height) + var(--space-4xl));
+  padding-top: var(--space-4xl);
   background: var(--color-bg);
   overflow: hidden;
 }
@@ -146,7 +146,7 @@
 
 @media (max-width: 1024px) {
   .hero {
-    padding-top: calc(var(--navbar-height) + var(--space-2xl));
+    padding-top: var(--space-2xl);
   }
   
   .hero__title {

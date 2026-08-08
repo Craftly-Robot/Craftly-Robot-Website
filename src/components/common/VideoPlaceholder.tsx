@@ -1,4 +1,3 @@
-import HeroVisual from '../hero/HeroVisual';
 import './VideoPlaceholder.css';
 
 interface VideoPlaceholderProps {
@@ -8,8 +7,6 @@ interface VideoPlaceholderProps {
 export default function VideoPlaceholder({ label }: VideoPlaceholderProps) {
   return (
     <div className="video-placeholder">
-      <HeroVisual />
-      
       {/* Floating Mock UI Panels */}
       <div className="mock-panel mock-panel--main">
         <div className="mock-panel__header">
