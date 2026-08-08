@@ -24,11 +24,16 @@ export default function HeroVisual() {
 
   const initParticles = useCallback(() => {
     const particles: Particle[] = [];
-    const count = 600; // Dense cluster
-    const radius = 90; // Radius of the swarm
+    const count = 1200; // Denser cluster for larger ball
+    const radius = 180; // Much larger radius for the swarm
     
-    // Google brand colors from Antigravity reference
-    const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853'];
+    // Google brand colors made faint/pastel to blend with black & white theme
+    const colors = [
+      'rgba(66, 133, 244, 0.4)', // Faint Blue
+      'rgba(234, 67, 53, 0.4)',  // Faint Red
+      'rgba(251, 188, 5, 0.4)',  // Faint Yellow
+      'rgba(52, 168, 83, 0.4)'   // Faint Green
+    ];
 
     for (let i = 0; i < count; i++) {
       const angle = Math.random() * Math.PI * 2;
