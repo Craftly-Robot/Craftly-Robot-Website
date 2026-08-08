@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="hero__content">
           
           <div className="hero__brand">
-            <img src={brandAssets.logo} alt="Craftly" className="hero__brand-icon" style={{ height: '14px', width: 'auto' }} />
+            <img src={brandAssets.icon} alt="Craftly" className="hero__brand-icon" style={{ height: '16px', width: 'auto' }} />
             <span>Craftly</span>
           </div>
 

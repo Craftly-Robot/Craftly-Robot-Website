@@ -39,11 +39,11 @@
   z-index: calc(var(--z-sticky) + 2);
 }
 
-.navbar__logo-img {
-  display: block;
-  height: 28px;
-  width: auto;
-  mix-blend-mode: multiply;
+.navbar__logo-text {
+  font-family: 'Yellowtail', cursive;
+  font-size: 28px;
+  color: var(--color-text);
+  line-height: 1;
 }
 
 /* ── Desktop Nav ── */
