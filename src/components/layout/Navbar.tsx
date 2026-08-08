@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navigation } from '../../data/navigation';
-import { brandAssets } from '../../utils/brandAssets';
 import './Navbar.css';
 
 /* ── Icons ── */
