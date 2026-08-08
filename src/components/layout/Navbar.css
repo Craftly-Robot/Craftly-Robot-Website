@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--navbar-height);
+  height: var(--nav-height);
   z-index: var(--z-fixed);
   transition:
     background-color var(--duration-normal) var(--ease-out),
@@ -20,7 +20,7 @@
   max-width: var(--container-wide);
   margin: 0 auto;
   padding-inline: var(--page-margin);
-  height: var(--navbar-height);
+  height: var(--nav-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,7 +85,7 @@
 /* ── Dropdowns ── */
 .navbar__dropdown-wrapper {
   position: fixed;
-  top: var(--navbar-height);
+  top: var(--nav-height);
   left: 0;
   width: 100vw;
   pointer-events: none;
@@ -261,7 +261,7 @@
   position: fixed;
   inset: 0;
   background: var(--color-bg);
-  padding: calc(var(--navbar-height) + var(--space-xl)) var(--page-margin) var(--space-2xl);
+  padding: calc(var(--nav-height) + var(--space-xl)) var(--page-margin) var(--space-2xl);
   z-index: calc(var(--z-fixed) + 1);
   overflow-y: auto;
   opacity: 0;

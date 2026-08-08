@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   flex-direction: column;
   padding-top: var(--space-4xl);
