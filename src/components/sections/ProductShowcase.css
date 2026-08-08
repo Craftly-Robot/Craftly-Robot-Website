@@ -1,0 +1,116 @@
+.product-showcase {
+  position: relative;
+}
+
+.product-showcase--alt {
+  background: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-showcase__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.product-showcase__grid--reverse .product-showcase__content {
+  order: 2;
+}
+
+.product-showcase__grid--reverse .product-showcase__visual {
+  order: 1;
+}
+
+.product-showcase__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.product-showcase__title {
+  margin-top: var(--space-md);
+}
+
+.product-showcase__tagline {
+  margin-top: var(--space-sm);
+  max-width: 480px;
+}
+
+.product-showcase__description {
+  margin-top: var(--space-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 440px;
+  line-height: var(--leading-relaxed);
+}
+
+.product-showcase__capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-xl);
+}
+
+.product-showcase__capability {
+  padding: var(--space-2xs) var(--space-md);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.product-showcase__capability:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.product-showcase__cta {
+  margin-top: var(--space-xl);
+}
+
+.product-showcase__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  transition: gap var(--duration-fast) var(--ease-out);
+}
+
+.product-showcase__cta-link:hover {
+  gap: var(--space-sm);
+}
+
+.product-showcase__cta-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.product-showcase__visual {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 1024px) {
+  .product-showcase__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .product-showcase__grid--reverse .product-showcase__content,
+  .product-showcase__grid--reverse .product-showcase__visual {
+    order: unset;
+  }
+}

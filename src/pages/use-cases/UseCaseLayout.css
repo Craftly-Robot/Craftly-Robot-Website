@@ -1,0 +1,100 @@
+.use-case-hero {
+  padding-block: var(--space-4xl) var(--space-2xl);
+  max-width: 800px;
+}
+
+.use-case-hero__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) forwards;
+}
+
+.use-case-hero__number {
+  background: var(--color-accent-muted);
+  padding: var(--space-2xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.use-case-hero__title {
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.15s forwards;
+}
+
+.use-case-hero__concept {
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-xl);
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.3s forwards;
+}
+
+.use-case-hero__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 640px;
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.45s forwards;
+}
+
+.use-case-areas {
+  padding-block: var(--space-3xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.use-case-areas__header {
+  margin-bottom: var(--space-2xl);
+}
+
+.use-case-areas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.area-card {
+  padding: var(--space-xl);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
+}
+
+.area-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+}
+
+.area-card__title {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.area-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 768px) {
+  .use-case-hero {
+    padding-block: var(--space-2xl);
+  }
+
+  .use-case-hero__concept {
+    font-size: var(--text-xl);
+  }
+}
