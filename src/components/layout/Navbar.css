@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  z-index: var(--z-fixed);
+  z-index: var(--z-sticky);
   transition:
     background-color var(--duration-normal) var(--ease-out),
     border-color var(--duration-normal) var(--ease-out);
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  z-index: calc(var(--z-fixed) + 2);
+  z-index: calc(var(--z-sticky) + 2);
 }
 
 .navbar__logo-img {
@@ -91,7 +91,7 @@
   pointer-events: none;
   display: flex;
   justify-content: center;
-  z-index: calc(var(--z-fixed) + 1);
+  z-index: calc(var(--z-sticky) + 1);
 }
 
 .navbar__dropdown {
@@ -216,7 +216,7 @@
   background: none;
   border: none;
   padding: var(--space-xs);
-  z-index: calc(var(--z-fixed) + 2);
+  z-index: calc(var(--z-sticky) + 2);
   cursor: pointer;
 }
 
@@ -262,7 +262,7 @@
   inset: 0;
   background: var(--color-bg);
   padding: calc(var(--nav-height) + var(--space-xl)) var(--page-margin) var(--space-2xl);
-  z-index: calc(var(--z-fixed) + 1);
+  z-index: calc(var(--z-sticky) + 1);
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
