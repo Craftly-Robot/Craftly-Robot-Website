@@ -18,7 +18,7 @@
 }
 
 .hero__title {
-  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.04em;
@@ -41,9 +41,9 @@
 .hero__btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 1.125rem 2rem;
-  font-size: 1.25rem;
+  gap: 10px;
+  padding: 0.875rem 1.75rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #fff;
   background: #111;
@@ -60,8 +60,8 @@
 .hero__btn-secondary {
   display: inline-flex;
   align-items: center;
-  padding: 1.125rem 2rem;
-  font-size: 1.25rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #111;
   background: #f1f3f5;

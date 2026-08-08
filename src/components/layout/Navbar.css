@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -84,7 +84,7 @@
 
 /* ── Dropdowns ── */
 .navbar__dropdown-wrapper {
-  position: fixed;
+  position: absolute;
   top: var(--nav-height);
   left: 0;
   width: 100vw;
