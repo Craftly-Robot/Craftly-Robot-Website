@@ -102,15 +102,11 @@ export default function Navbar() {
     >
       <div className="navbar__inner">
         {/* Logo */}
-        <Link to="/" className="navbar__logo" aria-label="Craftly Home">
-          <img
-            src={brandAssets.logo}
-            alt="Craftly"
-            className="navbar__logo-img"
-            width="120"
-            height="28"
-          />
-        </Link>
+        <div className="navbar__left">
+          <Link to="/" className="navbar__logo" aria-label="Craftly Home">
+            <span className="navbar__logo-text">Craftly</span>
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
@@ -156,9 +152,11 @@ export default function Navbar() {
         </nav>
 
         {/* Download Button */}
-        <Link to="/download" className="navbar__download">
-          Download
-        </Link>
+        <div className="navbar__right">
+          <Link to="/download" className="navbar__download">
+            Download
+          </Link>
+        </div>
 
         {/* Mobile Toggle */}
         <button

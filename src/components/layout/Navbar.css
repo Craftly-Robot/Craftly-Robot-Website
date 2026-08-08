@@ -25,18 +25,25 @@
   justify-content: space-between;
 }
 
+.navbar__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
   text-decoration: none;
   z-index: calc(var(--z-fixed) + 2);
 }
 
-.navbar__logo-img {
-  display: block;
-  height: 24px;
-  width: auto;
+.navbar__logo-text {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-text);
+  /* slight vertical adjustment if needed, but flex center handles it */
 }
 
 /* ── Desktop Nav ── */
@@ -165,6 +172,13 @@
 }
 
 /* ── Download Button ── */
+.navbar__right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .navbar__download {
   display: inline-flex;
   align-items: center;
