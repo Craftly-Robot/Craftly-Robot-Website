@@ -24,13 +24,17 @@ export default function HeroVisual() {
 
   const initParticles = useCallback(() => {
     const particles: Particle[] = [];
-    const count = 400; // Dense cluster of particles
-    const radius = 80; // Radius of the cluster ball
+    const count = 600; // Dense cluster
+    const radius = 90; // Radius of the swarm
+    
+    // Google brand colors from Antigravity reference
+    const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853'];
 
     for (let i = 0; i < count; i++) {
-      // Random position inside a circle to form a ball
       const angle = Math.random() * Math.PI * 2;
-      const r = Math.sqrt(Math.random()) * radius;
+      // Use cube root for more uniform spherical distribution
+      const r = Math.pow(Math.random(), 1/3) * radius;
+      const color = colors[Math.floor(Math.random() * colors.length)];
       
       particles.push({
         x: -9999,
@@ -39,8 +43,8 @@ export default function HeroVisual() {
         vy: 0,
         offsetX: Math.cos(angle) * r,
         offsetY: Math.sin(angle) * r,
-        size: 1 + Math.random() * 2, // Tiny particles
-        color: `rgba(100, 100, 100, ${0.3 + Math.random() * 0.5})` // Visible gray
+        size: 3 + Math.random() * 2, // Very distinct round dots
+        color: color
       });
     }
     particlesRef.current = particles;
@@ -63,40 +67,35 @@ export default function HeroVisual() {
       if (pos.x === -9999) {
         pos.x = mouse.x;
         pos.y = mouse.y;
-        // Instantly move particles to mouse on entry
         for (const p of particles) {
           p.x = mouse.x + p.offsetX;
           p.y = mouse.y + p.offsetY;
         }
       }
       
-      // Center of the ball smoothly tracks the mouse
       pos.x += (mouse.x - pos.x) * 0.15;
       pos.y += (mouse.y - pos.y) * 0.15;
 
-      const time = performance.now() * 0.002;
+      const time = performance.now() * 0.003;
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
-        // Slight organic swirling motion
-        const noiseX = Math.sin(time + i * 0.1) * 15;
-        const noiseY = Math.cos(time + i * 0.1) * 15;
+        // Chaotic swarm noise
+        const noiseX = Math.sin(time + i * 0.2) * 25;
+        const noiseY = Math.cos(time + i * 0.2) * 25;
 
-        // Target position for each individual particle
         const targetX = pos.x + p.offsetX + noiseX;
         const targetY = pos.y + p.offsetY + noiseY;
 
-        // Spring force pulling particle towards its target
         const dx = targetX - p.x;
         const dy = targetY - p.y;
         
-        p.vx += dx * 0.06;
-        p.vy += dy * 0.06;
+        p.vx += dx * 0.08;
+        p.vy += dy * 0.08;
 
-        // Friction to prevent infinite bouncing
-        p.vx *= 0.8;
-        p.vy *= 0.8;
+        p.vx *= 0.75;
+        p.vy *= 0.75;
 
         p.x += p.vx;
         p.y += p.vy;
