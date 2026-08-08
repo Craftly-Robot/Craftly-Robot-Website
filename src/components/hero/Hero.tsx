@@ -37,7 +37,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-hero-display hero__title">
-            Experience intelligent systems built for the agentic era.
+            Experience liftoff with the next-gen AI platform
           </h1>
 
           <div className="hero__cta-group">
