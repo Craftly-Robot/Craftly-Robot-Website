@@ -27,12 +27,12 @@ export default function HeroVisual() {
     const count = 2500; // Extremely dense cluster for a massive ball
     const radius = 320; // Massive radius for the swarm
     
-    // Google brand colors made incredibly faint (8% opacity) 
+    // Google brand colors made slightly more visible (20% opacity)
     const colors = [
-      'rgba(66, 133, 244, 0.08)', // Barely visible Blue
-      'rgba(234, 67, 53, 0.08)',  // Barely visible Red
-      'rgba(251, 188, 5, 0.08)',  // Barely visible Yellow
-      'rgba(52, 168, 83, 0.08)'   // Barely visible Green
+      'rgba(66, 133, 244, 0.2)', // Visible Faint Blue
+      'rgba(234, 67, 53, 0.2)',  // Visible Faint Red
+      'rgba(251, 188, 5, 0.2)',  // Visible Faint Yellow
+      'rgba(52, 168, 83, 0.2)'   // Visible Faint Green
     ];
 
     for (let i = 0; i < count; i++) {
@@ -48,7 +48,7 @@ export default function HeroVisual() {
         vy: 0,
         offsetX: Math.cos(angle) * r,
         offsetY: Math.sin(angle) * r,
-        size: 1 + Math.random() * 1.5, // Much smaller dots
+        size: 0.5 + Math.random() * 1.0, // Extremely small specks/dust
         color: color
       });
     }
@@ -78,9 +78,9 @@ export default function HeroVisual() {
         }
       }
       
-      // Much slower, lazier tracking of the mouse cursor
-      pos.x += (mouse.x - pos.x) * 0.04;
-      pos.y += (mouse.y - pos.y) * 0.04;
+      // Even slower, almost drifting track of the mouse cursor
+      pos.x += (mouse.x - pos.x) * 0.015;
+      pos.y += (mouse.y - pos.y) * 0.015;
 
       const time = performance.now() * 0.003;
 
