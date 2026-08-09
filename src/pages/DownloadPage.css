@@ -42,32 +42,34 @@
 .product-tab {
   padding: 10px 22px;
   border-radius: 99px;
-  border: 1.5px solid var(--color-border);
-  background: var(--color-bg);
-  color: var(--color-text);
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #3c4043;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.25s ease;
   font-family: inherit;
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .product-tab:hover {
-  background: var(--color-bg-subtle);
-  border-color: var(--color-text-secondary);
+  background: #f8f9fa;
+  border-color: #bbb;
 }
 
 .product-tab--active {
-  background: #111;
-  color: #fff;
-  border-color: #111;
+  background: #f0f1f3;
+  border-color: #ccc;
+  color: #111;
 }
 
 .product-tab--active:hover {
-  background: #000;
-  color: #fff;
-  border-color: #000;
+  background: #e8e9eb;
+  color: #111;
+  border-color: #bbb;
 }
 
 /* Download section */
@@ -129,19 +131,19 @@
 .os-title {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  font-size: 1.125rem;
+  gap: 10px;
+  font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .dl-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 20px;
+  padding: 16px 24px;
   border-radius: 99px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
