@@ -46,6 +46,18 @@ export default function OnboardingQuestionsPage() {
         <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img src="/assets/onboarding/question-10.png" alt="Onboarding Question 10" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-10.png</p>'; }} />
         </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-11.png" alt="Onboarding Question 11" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-11.png</p>'; }} />
+        </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-12.png" alt="Onboarding Question 12" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-12.png</p>'; }} />
+        </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-13.png" alt="Onboarding Question 13" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-13.png</p>'; }} />
+        </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-14.png" alt="Onboarding Question 14" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-14.png</p>'; }} />
+        </div>
       </div>
       
       <p className="docs__text">More content coming soon...</p>
