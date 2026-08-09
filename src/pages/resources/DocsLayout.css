@@ -19,7 +19,7 @@
   }
   
   .docs__sidebar--left {
-    width: 280px;
+    width: 300px;
     flex-shrink: 0;
     border-right: 1px solid #eaeaeb;
     position: sticky;
@@ -53,7 +53,7 @@
   gap: 12px;
   padding: 8px 12px;
   border-radius: 0 6px 6px 0;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: #3c4043;
   text-decoration: none;
@@ -114,7 +114,8 @@
 .docs__nav-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .docs__tag {
