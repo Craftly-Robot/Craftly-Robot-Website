@@ -281,15 +281,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
-  padding: 0 var(--space-lg);
-  font-size: var(--text-sm);
+  gap: 8px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--color-text-inverse);
-  background: var(--color-text);
-  border-radius: var(--radius-full);
+  background: #111111;
+  border-radius: 9999px;
   text-decoration: none;
-  transition: opacity var(--duration-fast) var(--ease-out);
+  transition: opacity 150ms ease;
+}
+
+.navbar__download-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .navbar__download:hover {
