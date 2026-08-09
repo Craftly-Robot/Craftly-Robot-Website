@@ -218,6 +218,19 @@
   text-decoration-color: #1a73e8;
 }
 
+.docs__link--black {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 150ms ease;
+  font-weight: 600;
+}
+
+.docs__link--black:hover {
+  text-decoration-color: #000000;
+}
+
 /* Right Sidebar TOC */
 .docs__toc {
   /* Removed sticky here since parent sidebar is sticky */
