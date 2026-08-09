@@ -149,7 +149,7 @@
   line-height: 1.15;
   margin-bottom: 24px;
   letter-spacing: -0.01em;
-  color: #111111;
+  color: #000000;
   max-width: 260px;
   opacity: 0;
   transform: translateY(10px);
@@ -225,6 +225,9 @@
   border-radius: var(--radius-lg);
   text-decoration: none;
   color: var(--color-text);
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
   width: fit-content;
   opacity: 0;
   transform: translateY(10px);
