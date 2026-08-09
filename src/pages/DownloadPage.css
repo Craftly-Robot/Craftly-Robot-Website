@@ -109,6 +109,15 @@
   align-items: start;
 }
 
+.download-columns--mobile {
+  display: flex;
+  justify-content: center;
+}
+
+.download-columns--mobile .os-column {
+  width: 33.333%;
+}
+
 .os-column {
   display: flex;
   flex-direction: column;

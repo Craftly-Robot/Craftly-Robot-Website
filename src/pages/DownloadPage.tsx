@@ -105,7 +105,7 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
         </div>
       </div>
 
-      <div className="download-columns" style={{ marginTop: '24px' }}>
+      <div className="download-columns download-columns--mobile" style={{ marginTop: '24px' }}>
         {/* Android Column */}
         <div className="os-column">
           <h3 className="os-title">
