@@ -1,5 +1,6 @@
 .docs__container {
   display: flex;
+  align-items: flex-start;
   max-width: var(--container-wide);
   margin: 0 auto;
   min-height: calc(100vh - 72px);
@@ -21,11 +22,19 @@
     width: 280px;
     flex-shrink: 0;
     border-right: 1px solid #eaeaeb;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
   
   .docs__sidebar--right {
     width: 260px;
     flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
 }
 
@@ -62,6 +71,10 @@
   background-color: #f1f3f4;
 }
 
+.docs__nav-text {
+  white-space: nowrap;
+}
+
 .docs__nav-meta {
   display: flex;
   align-items: center;
@@ -87,13 +100,13 @@
 /* Main Content */
 .docs__main {
   flex: 1;
-  padding: 40px 24px;
+  padding: 40px 24px 60vh 24px;
   max-width: 800px;
 }
 
 @media (min-width: 1024px) {
   .docs__main {
-    padding: 40px 64px;
+    padding: 40px 64px 60vh 64px;
   }
 }
 
@@ -163,8 +176,7 @@
 
 /* Right Sidebar TOC */
 .docs__toc {
-  position: sticky;
-  top: 100px; /* offset from navbar */
+  /* Removed sticky here since parent sidebar is sticky */
 }
 
 .docs__toc-title {
