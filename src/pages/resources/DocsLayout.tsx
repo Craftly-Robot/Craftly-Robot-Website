@@ -1,16 +1,23 @@
-import { useState, useEffect } from 'react';
-import type { ReactNode } from 'react';
+import React, { useState, useEffect, type ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './DocsLayout.css';
 
-function ChevronRight({ isOpen }: { isOpen?: boolean }) {
-  return (
-    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={`docs__sidebar-chevron ${isOpen ? 'docs__sidebar-chevron--open' : ''}`}>
-      <path d="M4.5 2.5L8.5 6L4.5 9.5" />
-    </svg>
-  );
+interface ChevronRightProps {
+  isOpen?: boolean;
 }
+
+const ChevronRight = ({ isOpen }: ChevronRightProps) => (
+  <svg 
+    className={`docs__sidebar-chevron ${isOpen ? 'docs__sidebar-chevron--open' : ''}`}
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2"
+  >
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+);
 
 interface DocsLayoutProps {
   title: string;
@@ -72,27 +79,83 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <div className="docs__nav-meta">
               <span className="docs__nav-text">Craftly Workspace</span>
             </div>
-            <svg 
-              className={`docs__sidebar-chevron ${isWorkspaceOpen ? 'docs__sidebar-chevron--open' : ''}`} 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2"
-            >
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
+            <ChevronRight isOpen={isWorkspaceOpen} />
           </div>
           
           {isWorkspaceOpen && (
             <div className="docs__nav-subnav">
-              <NavLink to="/resources/documentation/workspace/overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Overview</NavLink>
-              <NavLink to="/resources/documentation/workspace/getting-started" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Getting Started</NavLink>
-              <NavLink to="/resources/documentation/workspace/organization" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Organization</NavLink>
-              <NavLink to="/resources/documentation/workspace/people-roles" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>People & Roles</NavLink>
-              <NavLink to="/resources/documentation/workspace/tasks-operations" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tasks & Operations</NavLink>
-              <NavLink to="/resources/documentation/workspace/communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Communication</NavLink>
-              <NavLink to="/resources/documentation/workspace/resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Resources</NavLink>
-              <NavLink to="/resources/documentation/workspace/onboarding" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Onboarding</NavLink>
+              <NavLink to="/resources/documentation/workspace/overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Overview</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/overview/what-is-craftly-workspace" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>What is Craftly Workspace?</NavLink>
+                <NavLink to="/resources/documentation/workspace/overview/how-workspace-works" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>How Workspace Works</NavLink>
+                <NavLink to="/resources/documentation/workspace/overview/workspace-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Workspace Structure</NavLink>
+                <NavLink to="/resources/documentation/workspace/overview/core-concepts" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Core Concepts</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/getting-started" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Getting Started</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/getting-started/create-account" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Create Your Account</NavLink>
+                <NavLink to="/resources/documentation/workspace/getting-started/join-organization" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Join an Organization</NavLink>
+                <NavLink to="/resources/documentation/workspace/getting-started/complete-profile" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Complete Your Profile</NavLink>
+                <NavLink to="/resources/documentation/workspace/getting-started/understand-workspace" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Understanding Your Workspace</NavLink>
+                <NavLink to="/resources/documentation/workspace/getting-started/first-task" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Your First Task</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/organization" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Organization</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/organization/org-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Organization Structure</NavLink>
+                <NavLink to="/resources/documentation/workspace/organization/departments" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Departments</NavLink>
+                <NavLink to="/resources/documentation/workspace/organization/teams" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Teams</NavLink>
+                <NavLink to="/resources/documentation/workspace/organization/reporting-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Reporting Structure</NavLink>
+                <NavLink to="/resources/documentation/workspace/organization/roles-permissions" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Roles & Permissions</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/people-roles" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>People & Roles</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/people-roles/members" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Members</NavLink>
+                <NavLink to="/resources/documentation/workspace/people-roles/roles" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Roles</NavLink>
+                <NavLink to="/resources/documentation/workspace/people-roles/permissions" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Permissions</NavLink>
+                <NavLink to="/resources/documentation/workspace/people-roles/managers" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Managers</NavLink>
+                <NavLink to="/resources/documentation/workspace/people-roles/access-control" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Access Control</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/tasks-operations" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Tasks & Operations</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/tasks-operations/tasks" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tasks</NavLink>
+                <NavLink to="/resources/documentation/workspace/tasks-operations/task-assignment" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Task Assignment</NavLink>
+                <NavLink to="/resources/documentation/workspace/tasks-operations/task-evidence" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Task Evidence</NavLink>
+                <NavLink to="/resources/documentation/workspace/tasks-operations/support-requests" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Support Requests</NavLink>
+                <NavLink to="/resources/documentation/workspace/tasks-operations/notices" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Notices</NavLink>
+                <NavLink to="/resources/documentation/workspace/tasks-operations/operational-workflows" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Operational Workflows</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Communication</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/communication/direct-communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Direct Communication</NavLink>
+                <NavLink to="/resources/documentation/workspace/communication/team-communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Team Communication</NavLink>
+                <NavLink to="/resources/documentation/workspace/communication/chain-of-command" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Chain of Command</NavLink>
+                <NavLink to="/resources/documentation/workspace/communication/reporting-communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Reporting-Based Communication</NavLink>
+                <NavLink to="/resources/documentation/workspace/communication/notifications" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Notifications</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Resources</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/resources/org-resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Organization Resources</NavLink>
+                <NavLink to="/resources/documentation/workspace/resources/dept-resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Department Resources</NavLink>
+                <NavLink to="/resources/documentation/workspace/resources/training" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Training</NavLink>
+                <NavLink to="/resources/documentation/workspace/resources/training-participation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Training Participation</NavLink>
+                <NavLink to="/resources/documentation/workspace/resources/resource-access" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Resource Access</NavLink>
+              </div>
+
+              <NavLink to="/resources/documentation/workspace/onboarding" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Onboarding</NavLink>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <NavLink to="/resources/documentation/workspace/onboarding/welcome-setup" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Welcome & Setup</NavLink>
+                <NavLink to="/resources/documentation/workspace/onboarding/onboarding-questions" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Onboarding Questions</NavLink>
+                <NavLink to="/resources/documentation/workspace/onboarding/agreements" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agreements</NavLink>
+                <NavLink to="/resources/documentation/workspace/onboarding/digital-signatures" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Digital Signatures</NavLink>
+                <NavLink to="/resources/documentation/workspace/onboarding/private-key" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Private Key</NavLink>
+                <NavLink to="/resources/documentation/workspace/onboarding/completing-onboarding" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Completing Onboarding</NavLink>
+              </div>
             </div>
           )}
           
