@@ -1,7 +1,45 @@
 import DocsLayout from '../../DocsLayout';
 
 export default function OnboardingQuestionsPage() {
-  const questions = Array.from({ length: 22 }, (_, i) => i + 2); // 2 to 23
+  const questionsData = [
+    { 
+      id: 2, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>1. Full Legal Name</h2>
+          <p className="docs__text">The onboarding assistant will first ask for your full legal name.</p>
+          <p className="docs__text">Enter your complete name exactly as it appears on your official documents. Reply with your name only no introduction or additional information is needed.</p>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example:</p>
+            <p style={{ margin: 0, fontSize: '15px' }}>Mahmud Hasan</p>
+          </div>
+          <p className="docs__text" style={{ marginBottom: '16px' }}><strong>Expected answer:</strong> Full legal name only.</p>
+        </>
+      ), 
+      textBelow: "" 
+    },
+    { id: 3, textAbove: "", textBelow: "" },
+    { id: 4, textAbove: "", textBelow: "" },
+    { id: 5, textAbove: "", textBelow: "" },
+    { id: 6, textAbove: "", textBelow: "" },
+    { id: 7, textAbove: "", textBelow: "" },
+    { id: 8, textAbove: "", textBelow: "" },
+    { id: 9, textAbove: "", textBelow: "" },
+    { id: 10, textAbove: "", textBelow: "" },
+    { id: 11, textAbove: "", textBelow: "" },
+    { id: 12, textAbove: "", textBelow: "" },
+    { id: 13, textAbove: "", textBelow: "" },
+    { id: 14, textAbove: "", textBelow: "" },
+    { id: 15, textAbove: "", textBelow: "" },
+    { id: 16, textAbove: "", textBelow: "" },
+    { id: 17, textAbove: "", textBelow: "" },
+    { id: 18, textAbove: "", textBelow: "" },
+    { id: 19, textAbove: "", textBelow: "" },
+    { id: 20, textAbove: "", textBelow: "" },
+    { id: 21, textAbove: "", textBelow: "" },
+    { id: 22, textAbove: "", textBelow: "" },
+    { id: 23, textAbove: "", textBelow: "" }
+  ];
 
   return (
     <DocsLayout 
@@ -18,25 +56,33 @@ export default function OnboardingQuestionsPage() {
       <h1 className="docs__title" id="onboarding-questions">Onboarding Questions</h1>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', margin: '32px 0' }}>
-        {questions.map((q) => (
-          <div key={q} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {/* Empty space for future text above the image */}
-            <div className="docs__text-placeholder" style={{ minHeight: '24px' }}></div>
+        {questionsData.map((q) => (
+          <div key={q.id} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {/* Text above the image */}
+            {q.textAbove ? (
+              <div>{q.textAbove}</div>
+            ) : (
+              <div className="docs__text-placeholder" style={{ minHeight: '24px' }}></div>
+            )}
             
             <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img 
-                src={`/assets/onboarding_pic/${q}.png`} 
-                alt={`Onboarding Question ${q}`} 
+                src={`/assets/onboarding_pic/${q.id}.png`} 
+                alt={`Onboarding Question ${q.id}`} 
                 style={{ width: '100%', display: 'block' }} 
                 onError={(e) => { 
                   e.currentTarget.style.display = 'none'; 
-                  e.currentTarget.parentElement!.innerHTML = `<p style="color:#5f6368;font-family:inherit;">Image placeholder: /assets/onboarding_pic/${q}.png</p>`; 
+                  e.currentTarget.parentElement!.innerHTML = `<p style="color:#5f6368;font-family:inherit;">Image placeholder: /assets/onboarding_pic/${q.id}.png</p>`; 
                 }} 
               />
             </div>
             
-            {/* Empty space for future text below the image */}
-            <div className="docs__text-placeholder" style={{ minHeight: '24px' }}></div>
+            {/* Text below the image */}
+            {q.textBelow ? (
+              <div>{q.textBelow}</div>
+            ) : (
+              <div className="docs__text-placeholder" style={{ minHeight: '24px' }}></div>
+            )}
           </div>
         ))}
       </div>
