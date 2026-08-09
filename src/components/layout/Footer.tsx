@@ -31,7 +31,7 @@ export default function Footer() {
 
       <div className="footer__middle">
         <div className="footer__huge-text">
-          Craftly Rob<span className="footer__special-ot">ot</span>
+          Craftly Rob<span className="footer__special-o">o</span><span className="footer__special-t">t</span>
         </div>
       </div>
 

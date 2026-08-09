@@ -102,11 +102,13 @@
   white-space: nowrap;
 }
 
-.footer__special-ot {
-  font-size: 0.65em;
-  position: relative;
-  top: -0.25em;
-  letter-spacing: -2px;
+.footer__special-o {
+  /* No special styles needed, just here for grouping if necessary */
+}
+
+.footer__special-t {
+  display: inline-block;
+  transform: translateY(-0.12em);
 }
 
 /* ── Bottom Section ── */
