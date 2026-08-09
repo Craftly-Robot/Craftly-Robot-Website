@@ -82,6 +82,9 @@ export default function OnboardingQuestionsPage() {
         <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img src="/assets/onboarding/question-22.png" alt="Onboarding Question 22" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-22.png</p>'; }} />
         </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-23.png" alt="Onboarding Question 23" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-23.png</p>'; }} />
+        </div>
       </div>
       
       <p className="docs__text">More content coming soon...</p>
