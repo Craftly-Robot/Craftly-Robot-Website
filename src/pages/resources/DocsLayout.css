@@ -50,13 +50,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 8px 12px;
-  border-radius: 6px;
+  border-radius: 0 6px 6px 0;
   font-size: 15px;
   font-weight: 500;
   color: #3c4043;
   text-decoration: none;
   cursor: pointer;
+  border-left: 3px solid transparent;
   transition: background-color 150ms ease, color 150ms ease;
 }
 
@@ -67,9 +69,10 @@
 }
 
 .docs__nav-link--active {
-  color: #202124;
-  background-color: #f1f3f4;
-  font-weight: 500;
+  background-color: #f8f9fa;
+  color: #111111;
+  font-weight: 600;
+  border-left: 3px solid #111111;
 }
 
 .docs__nav-text {
@@ -117,11 +120,12 @@
 .docs__tag {
   background-color: #111111;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-radius: 9999px;
   line-height: 1;
+  letter-spacing: 0.5px;
 }
 
 .docs__sidebar-chevron {
