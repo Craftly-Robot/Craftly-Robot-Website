@@ -71,6 +71,27 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
             </div>
           </div>
           
+          <div className="docs__nav-subnav">
+            <a href="#overview" className="docs__nav-subitem">Overview</a>
+            <a href="#getting-started" className="docs__nav-subitem">Getting Started</a>
+            <a href="#build-with-craftly" className="docs__nav-subitem">Build with Craftly</a>
+            <a href="#feature-overview" className="docs__nav-subitem">Feature Overview</a>
+            <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '16px' }}>
+              <a href="#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
+              <a href="#tool-use-feature" className="docs__nav-subitem">Tool Use</a>
+              <a href="#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
+              <a href="#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
+              <a href="#multi-agent-coordination-feature" className="docs__nav-subitem">Multi-Agent Coordination</a>
+              <a href="#privacy-aware-communication-feature" className="docs__nav-subitem">Privacy Boundaries</a>
+              <a href="#human-confirmation-feature" className="docs__nav-subitem">Human Confirmation</a>
+            </div>
+            <a href="#projects" className="docs__nav-subitem">Projects</a>
+            <a href="#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
+            <a href="#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
+            <a href="#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
+            <a href="#human-confirmation-feature" className="docs__nav-subitem">Human Control & Safety</a>
+          </div>
+          
           <div className="docs__nav-item docs__nav-item--with-meta">
             <span className="docs__nav-text">Migration</span>
             <div className="docs__nav-meta">
@@ -113,9 +134,6 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
             </li>
             <li className={`docs__toc-item ${activeId === 'craftly-robot' ? 'docs__toc-item--active' : ''}`}>
               <a href="#craftly-robot">Craftly Robot</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'robot-structure' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#robot-structure">Craftly Robot Structure</a>
             </li>
             <li className={`docs__toc-item ${activeId === 'overview' ? 'docs__toc-item--active' : ''}`}>
               <a href="#overview">Overview</a>

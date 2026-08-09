@@ -39,31 +39,6 @@ export default function DocumentationPage() {
         <li><strong>Learn more:</strong> <a href="#" className="docs__link">Explore Craftly Robot</a></li>
       </ul>
 
-      <h2 className="docs__section-title" id="robot-structure">Craftly Robot Structure</h2>
-      <pre className="docs__code-block" style={{ background: '#f8f9fa', padding: '24px', borderRadius: '12px', fontSize: '15px', lineHeight: '1.6', fontFamily: 'monospace', color: '#3c4043', border: '1px solid #eaeaeb' }}>
-{`Craftly Robot
-│
-├── Overview
-├── Getting Started
-├── Build with Craftly
-├── Feature Overview
-├── Projects
-├── Agentic AI
-├── Agent Discovery
-├── Agent-to-Agent Negotiation
-└── Human Control & Safety
-
-Feature Overview
-│
-├── Agentic AI
-├── Tool Use
-├── Agent Discovery
-├── Agent-to-Agent Negotiation
-├── Multi-Agent Coordination
-├── Privacy Boundaries
-└── Human Confirmation`}
-      </pre>
-
       <h2 className="docs__section-title" id="overview">Overview</h2>
       <p className="docs__text" style={{ color: '#5f6368', fontStyle: 'italic' }}>Craftly Robot is currently under active research and development.</p>
       

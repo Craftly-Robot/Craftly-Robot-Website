@@ -75,6 +75,32 @@
   white-space: nowrap;
 }
 
+.docs__nav-subnav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  gap: 2px;
+  margin-top: -2px;
+  margin-bottom: 8px;
+  border-left: 1px solid #eaeaeb;
+  margin-left: 24px;
+}
+
+.docs__nav-subitem {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #5f6368;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.docs__nav-subitem:hover {
+  background-color: #f8f9fa;
+  color: #202124;
+}
+
 .docs__nav-meta {
   display: flex;
   align-items: center;
