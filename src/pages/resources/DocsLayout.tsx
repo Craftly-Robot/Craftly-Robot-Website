@@ -28,8 +28,8 @@ interface DocsLayoutProps {
 
 export default function DocsLayout({ title, description, tocItems = [], children }: DocsLayoutProps) {
   const [activeId, setActiveId] = useState<string>('welcome');
-  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(true);
-  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(true);
+  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(false);
+  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(false);
 
   const toggleRobot = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -75,11 +75,12 @@ export default function DocsLayout({ title, description, tocItems = [], children
             Home
           </NavLink>
           
-          <div className="docs__nav-item" onClick={toggleWorkspace}>
+          <div className="docs__nav-item docs__nav-item--with-meta" onClick={toggleWorkspace}>
+            <span className="docs__nav-text">Craftly Workspace</span>
             <div className="docs__nav-meta">
-              <span className="docs__nav-text">Craftly Workspace</span>
+              <span className="docs__tag">v1.2.0</span>
+              <ChevronRight isOpen={isWorkspaceOpen} />
             </div>
-            <ChevronRight isOpen={isWorkspaceOpen} />
           </div>
           
           {isWorkspaceOpen && (
