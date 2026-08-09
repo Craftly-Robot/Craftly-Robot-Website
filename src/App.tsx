@@ -1,4 +1,4 @@
-﻿import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
@@ -11,6 +11,7 @@ const OperationsPage = lazy(() => import('./pages/use-cases/OperationsPage'));
 const AgentNegotiationPage = lazy(() => import('./pages/use-cases/AgentNegotiationPage'));
 const AIPage = lazy(() => import('./pages/use-cases/AIPage'));
 const DocumentationPage = lazy(() => import('./pages/resources/DocumentationPage'));
+const PlanPage = lazy(() => import('./pages/resources/PlanPage'));
 const WhatIsRobotPage = lazy(() => import('./pages/resources/robot/overview/WhatIsRobotPage'));
 const RobotArchitecturePage = lazy(() => import('./pages/resources/robot/overview/RobotArchitecturePage'));
 const HowRobotWorksPage = lazy(() => import('./pages/resources/robot/overview/HowRobotWorksPage'));
@@ -125,6 +126,7 @@ export default function App() {
 
           {/* Resource pages */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
+          <Route path="/resources/documentation/plan" element={<PlanPage />} />
           
           <Route path="/resources/documentation/workspace/overview/what-is-craftly-workspace" element={<WhatIsWorkspacePage />} />
           <Route path="/resources/documentation/workspace/overview/how-workspace-works" element={<HowWorkspaceWorksPage />} />

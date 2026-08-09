@@ -332,9 +332,9 @@ export default function DocsLayout({ title, description, tocItems = [], children
             </div>
           )}
           
-          <div className="docs__nav-item">
-            <span className="docs__nav-text">Plans</span>
-          </div>
+          <NavLink to="/resources/documentation/plan" className={({isActive}) => `docs__nav-item ${isActive ? 'docs__nav-link--active' : ''}`}>
+            <span className="docs__nav-text">The Craftly Plan</span>
+          </NavLink>
           
           <div className="docs__nav-item">
             <span className="docs__nav-text">FAQ</span>
