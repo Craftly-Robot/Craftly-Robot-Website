@@ -104,7 +104,6 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
 
 function TypewriterTitle({ text }: { text: string }) {
   const [displayedText, setDisplayedText] = useState('');
-  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     let index = 0;
@@ -114,8 +113,6 @@ function TypewriterTitle({ text }: { text: string }) {
         index++;
       } else {
         clearInterval(interval);
-        // Hide cursor after typing finishes
-        setTimeout(() => setShowCursor(false), 1200);
       }
     }, 45);
 
@@ -125,7 +122,7 @@ function TypewriterTitle({ text }: { text: string }) {
   return (
     <h1 className="download-hero__title">
       {displayedText}
-      {showCursor && <span className="typewriter-cursor">|</span>}
+      <span className="typewriter-cursor">|</span>
     </h1>
   );
 }
