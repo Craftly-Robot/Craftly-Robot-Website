@@ -58,12 +58,12 @@
 .navbar__nav-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
+  gap: 4px;
+  padding: 8px 12px;
   border-radius: 9999px;
   font-size: 15px;
   font-weight: 500;
-  color: var(--color-text);
+  color: #3c4043;
   background: transparent;
   border: none;
   cursor: pointer;
