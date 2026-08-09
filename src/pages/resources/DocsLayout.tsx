@@ -1,7 +1,9 @@
-import React, { useState, useEffect, type ReactNode } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './DocsLayout.css';
+
+let globalSidebarScroll = 0;
 
 interface ChevronRightProps {
   isOpen?: boolean;
@@ -91,6 +93,27 @@ export default function DocsLayout({ title, description, tocItems = [], children
     return () => observer.disconnect();
   }, []);
 
+  const sidebarRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const sidebar = sidebarRef.current;
+    if (!sidebar) return;
+
+    // Restore scroll position
+    sidebar.scrollTop = globalSidebarScroll;
+
+    // Save scroll position on scroll
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.scrollHeight > target.clientHeight) {
+        globalSidebarScroll = target.scrollTop;
+      }
+    };
+
+    sidebar.addEventListener('scroll', handleScroll, { passive: true });
+    return () => sidebar.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="docs__container">
       <Helmet>
@@ -99,7 +122,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
       </Helmet>
 
       {/* Left Sidebar */}
-      <aside className="docs__sidebar docs__sidebar--left">
+      <aside className="docs__sidebar docs__sidebar--left" ref={sidebarRef}>
         <nav className="docs__nav">
           <NavLink to="/resources/documentation" className={({isActive}) => `docs__nav-link ${isActive ? 'docs__nav-link--active' : ''}`} end>
             Home
