@@ -22,6 +22,17 @@ interface DocsLayoutProps {
 export default function DocsLayout({ title, description, tocItems = [], children }: DocsLayoutProps) {
   const [activeId, setActiveId] = useState<string>('welcome');
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(true);
+  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(true);
+
+  const toggleRobot = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsRobotOpen(!isRobotOpen);
+  };
+
+  const toggleWorkspace = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsWorkspaceOpen(!isWorkspaceOpen);
+  };
 
   useEffect(() => {
     const handleObserver = (entries: IntersectionObserverEntry[]) => {
@@ -53,19 +64,39 @@ export default function DocsLayout({ title, description, tocItems = [], children
       {/* Left Sidebar */}
       <aside className="docs__sidebar docs__sidebar--left">
         <nav className="docs__nav">
-          <NavLink to="/resources/documentation" end className={({isActive}) => `docs__nav-link ${isActive ? 'docs__nav-link--active' : ''}`}>
+          <NavLink to="/resources/documentation" className={({isActive}) => `docs__nav-link ${isActive ? 'docs__nav-link--active' : ''}`} end>
             Home
           </NavLink>
           
-          <div className="docs__nav-item docs__nav-item--with-meta">
-            <span className="docs__nav-text">Craftly Workspace</span>
+          <div className="docs__nav-item" onClick={toggleWorkspace}>
             <div className="docs__nav-meta">
-              <span className="docs__tag">v1.2.0</span>
-              <ChevronRight />
+              <span className="docs__nav-text">Craftly Workspace</span>
             </div>
+            <svg 
+              className={`docs__sidebar-chevron ${isWorkspaceOpen ? 'docs__sidebar-chevron--open' : ''}`} 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
           </div>
           
-          <div className="docs__nav-item docs__nav-item--with-meta" onClick={() => setIsRobotOpen(!isRobotOpen)}>
+          {isWorkspaceOpen && (
+            <div className="docs__nav-subnav">
+              <NavLink to="/resources/documentation/workspace/overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Overview</NavLink>
+              <NavLink to="/resources/documentation/workspace/getting-started" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Getting Started</NavLink>
+              <NavLink to="/resources/documentation/workspace/organization" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Organization</NavLink>
+              <NavLink to="/resources/documentation/workspace/people-roles" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>People & Roles</NavLink>
+              <NavLink to="/resources/documentation/workspace/tasks-operations" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tasks & Operations</NavLink>
+              <NavLink to="/resources/documentation/workspace/communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Communication</NavLink>
+              <NavLink to="/resources/documentation/workspace/resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Resources</NavLink>
+              <NavLink to="/resources/documentation/workspace/onboarding" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Onboarding</NavLink>
+            </div>
+          )}
+          
+          <div className="docs__nav-item docs__nav-item--with-meta" onClick={toggleRobot}>
             <span className="docs__nav-text">Craftly Robot</span>
             <div className="docs__nav-meta">
               <span className="docs__tag">v2.0.1</span>

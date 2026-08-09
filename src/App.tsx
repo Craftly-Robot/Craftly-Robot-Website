@@ -23,6 +23,14 @@ const MultiAgentCoordinationPage = lazy(() => import('./pages/resources/robot/fe
 const PrivacyBoundariesPage = lazy(() => import('./pages/resources/robot/features/PrivacyBoundariesPage'));
 const HumanConfirmationPage = lazy(() => import('./pages/resources/robot/features/HumanConfirmationPage'));
 const ProjectsPage = lazy(() => import('./pages/resources/robot/ProjectsPage'));
+const WorkspaceOverviewPage = lazy(() => import('./pages/resources/workspace/OverviewPage'));
+const WorkspaceGettingStartedPage = lazy(() => import('./pages/resources/workspace/GettingStartedPage'));
+const OrganizationPage = lazy(() => import('./pages/resources/workspace/OrganizationPage'));
+const PeopleRolesPage = lazy(() => import('./pages/resources/workspace/PeopleRolesPage'));
+const TasksOperationsPage = lazy(() => import('./pages/resources/workspace/TasksOperationsPage'));
+const CommunicationPage = lazy(() => import('./pages/resources/workspace/CommunicationPage'));
+const ResourcesPage = lazy(() => import('./pages/resources/workspace/ResourcesPage'));
+const OnboardingPage = lazy(() => import('./pages/resources/workspace/OnboardingPage'));
 const BlogPage = lazy(() => import('./pages/resources/BlogPage'));
 const SupportPage = lazy(() => import('./pages/resources/SupportPage'));
 const ReleasesPage = lazy(() => import('./pages/resources/ReleasesPage'));
@@ -55,6 +63,16 @@ export default function App() {
 
           {/* Resource pages */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
+          
+          <Route path="/resources/documentation/workspace/overview" element={<WorkspaceOverviewPage />} />
+          <Route path="/resources/documentation/workspace/getting-started" element={<WorkspaceGettingStartedPage />} />
+          <Route path="/resources/documentation/workspace/organization" element={<OrganizationPage />} />
+          <Route path="/resources/documentation/workspace/people-roles" element={<PeopleRolesPage />} />
+          <Route path="/resources/documentation/workspace/tasks-operations" element={<TasksOperationsPage />} />
+          <Route path="/resources/documentation/workspace/communication" element={<CommunicationPage />} />
+          <Route path="/resources/documentation/workspace/resources" element={<ResourcesPage />} />
+          <Route path="/resources/documentation/workspace/onboarding" element={<OnboardingPage />} />
+
           <Route path="/resources/documentation/overview" element={<OverviewPage />} />
           <Route path="/resources/documentation/getting-started" element={<GettingStartedPage />} />
           <Route path="/resources/documentation/build-with-craftly" element={<BuildWithCraftlyPage />} />
