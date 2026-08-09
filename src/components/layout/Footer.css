@@ -102,14 +102,11 @@
   white-space: nowrap;
 }
 
-.footer__special-o {
+.footer__special-ot {
+  font-size: 0.65em;
+  position: relative;
+  top: -0.25em;
   letter-spacing: -2px;
-}
-
-.footer__special-t {
-  display: inline-block;
-  transform: scaleY(1.2) translateY(-0.04em);
-  margin-left: -2px;
 }
 
 /* ── Bottom Section ── */
