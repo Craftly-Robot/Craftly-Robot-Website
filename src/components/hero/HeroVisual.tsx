@@ -27,12 +27,12 @@ export default function HeroVisual() {
     const count = 2500; // Extremely dense cluster for a massive ball
     const radius = 320; // Massive radius for the swarm
     
-    // Google brand colors made slightly more visible (20% opacity)
+    // Google brand colors made much more vibrant/colorful (45% opacity)
     const colors = [
-      'rgba(66, 133, 244, 0.2)', // Visible Faint Blue
-      'rgba(234, 67, 53, 0.2)',  // Visible Faint Red
-      'rgba(251, 188, 5, 0.2)',  // Visible Faint Yellow
-      'rgba(52, 168, 83, 0.2)'   // Visible Faint Green
+      'rgba(66, 133, 244, 0.45)', // Colorful Blue
+      'rgba(234, 67, 53, 0.45)',  // Colorful Red
+      'rgba(251, 188, 5, 0.45)',  // Colorful Yellow
+      'rgba(52, 168, 83, 0.45)'   // Colorful Green
     ];
 
     for (let i = 0; i < count; i++) {
