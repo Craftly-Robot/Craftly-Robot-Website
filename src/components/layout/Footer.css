@@ -108,7 +108,9 @@
 
 .footer__special-t {
   display: inline-block;
-  transform: translateY(-0.12em);
+  font-size: 1.3em;
+  transform: translateY(-0.05em);
+  margin-left: -2px;
 }
 
 /* ── Bottom Section ── */
