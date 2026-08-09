@@ -121,6 +121,11 @@
   width: 14px;
   height: 14px;
   color: #5f6368;
+  transition: transform 150ms ease;
+}
+
+.docs__sidebar-chevron--open {
+  transform: rotate(90deg);
 }
 
 /* Main Content */

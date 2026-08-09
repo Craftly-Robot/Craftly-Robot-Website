@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './DocsLayout.css';
 
-function ChevronRight() {
+function ChevronRight({ isOpen }: { isOpen?: boolean }) {
   return (
-    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="docs__sidebar-chevron">
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={`docs__sidebar-chevron ${isOpen ? 'docs__sidebar-chevron--open' : ''}`}>
       <path d="M4.5 2.5L8.5 6L4.5 9.5" />
     </svg>
   );
@@ -20,6 +20,7 @@ interface DocsLayoutProps {
 
 export default function DocsLayout({ title, description, children }: DocsLayoutProps) {
   const [activeId, setActiveId] = useState<string>('welcome');
+  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(true);
 
   useEffect(() => {
     const handleObserver = (entries: IntersectionObserverEntry[]) => {
@@ -63,34 +64,32 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
             </div>
           </div>
           
-          <div className="docs__nav-item docs__nav-item--with-meta">
+          <div className="docs__nav-item docs__nav-item--with-meta" onClick={() => setIsRobotOpen(!isRobotOpen)}>
             <span className="docs__nav-text">Craftly Robot</span>
             <div className="docs__nav-meta">
               <span className="docs__tag">v2.0.1</span>
-              <ChevronRight />
+              <ChevronRight isOpen={isRobotOpen} />
             </div>
           </div>
           
-          <div className="docs__nav-subnav">
-            <a href="#overview" className="docs__nav-subitem">Overview</a>
-            <a href="#getting-started" className="docs__nav-subitem">Getting Started</a>
-            <a href="#build-with-craftly" className="docs__nav-subitem">Build with Craftly</a>
-            <a href="#feature-overview" className="docs__nav-subitem">Feature Overview</a>
-            <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '16px' }}>
-              <a href="#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
-              <a href="#tool-use-feature" className="docs__nav-subitem">Tool Use</a>
-              <a href="#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
-              <a href="#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
-              <a href="#multi-agent-coordination-feature" className="docs__nav-subitem">Multi-Agent Coordination</a>
-              <a href="#privacy-aware-communication-feature" className="docs__nav-subitem">Privacy Boundaries</a>
-              <a href="#human-confirmation-feature" className="docs__nav-subitem">Human Confirmation</a>
+          {isRobotOpen && (
+            <div className="docs__nav-subnav">
+              <a href="#overview" className="docs__nav-subitem">Overview</a>
+              <a href="#getting-started" className="docs__nav-subitem">Getting Started</a>
+              <a href="#build-with-craftly" className="docs__nav-subitem">Build with Craftly</a>
+              <a href="#feature-overview" className="docs__nav-subitem">Feature Overview</a>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '16px' }}>
+                <a href="#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
+                <a href="#tool-use-feature" className="docs__nav-subitem">Tool Use</a>
+                <a href="#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
+                <a href="#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
+                <a href="#multi-agent-coordination-feature" className="docs__nav-subitem">Multi-Agent Coordination</a>
+                <a href="#privacy-aware-communication-feature" className="docs__nav-subitem">Privacy Boundaries</a>
+                <a href="#human-confirmation-feature" className="docs__nav-subitem">Human Confirmation</a>
+              </div>
+              <a href="#projects" className="docs__nav-subitem">Projects</a>
             </div>
-            <a href="#projects" className="docs__nav-subitem">Projects</a>
-            <a href="#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
-            <a href="#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
-            <a href="#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
-            <a href="#human-confirmation-feature" className="docs__nav-subitem">Human Control & Safety</a>
-          </div>
+          )}
           
           <div className="docs__nav-item docs__nav-item--with-meta">
             <span className="docs__nav-text">Migration</span>

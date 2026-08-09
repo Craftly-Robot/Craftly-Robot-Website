@@ -27,7 +27,7 @@ export default function DocumentationPage() {
       </p>
       <ul className="docs__list">
         <li><strong>Key Features:</strong> Organization management, task coordination, communication, onboarding, resources, and operational workflows.</li>
-        <li><strong>Learn more:</strong> <a href="#" className="docs__link">Explore Craftly Workspace</a></li>
+        <li><strong>Learn more:</strong> <a href="#craftly-workspace" className="docs__link">Explore Craftly Workspace</a></li>
       </ul>
 
       <h3 className="docs__section-title" id="craftly-robot" style={{ fontSize: '18px' }}>Craftly Robot</h3>
@@ -36,7 +36,7 @@ export default function DocumentationPage() {
       </p>
       <ul className="docs__list">
         <li><strong>Key Features:</strong> Agentic AI, tool use, agent discovery, agent-to-agent negotiation, multi-agent coordination, and human-controlled execution.</li>
-        <li><strong>Learn more:</strong> <a href="#" className="docs__link">Explore Craftly Robot</a></li>
+        <li><strong>Learn more:</strong> <a href="#overview" className="docs__link">Explore Craftly Robot</a></li>
       </ul>
 
       <h2 className="docs__section-title" id="overview">Overview</h2>
