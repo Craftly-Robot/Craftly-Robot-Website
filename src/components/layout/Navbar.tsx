@@ -170,8 +170,10 @@ export default function Navbar() {
                       </div>
                       
                       <div className="navbar__mega-right">
-                        <div className="navbar__mega-list-title">{item.label}</div>
-                        <div className={`navbar__mega-grid ${item.label === 'Products' ? 'navbar__mega-grid--products' : ''}`}>
+                        {item.label === 'Products' && (
+                          <div className="navbar__mega-list-title">Products</div>
+                        )}
+                        <div className="navbar__mega-grid">
                           {item.items.map((child) => (
                             <Link
                               key={child.route}
@@ -180,14 +182,16 @@ export default function Navbar() {
                               role="menuitem"
                               onClick={() => setActiveDropdown(null)}
                             >
-                              <div className="dropdown-item__icon">
-                                <DropdownIcon icon={child.icon} />
-                              </div>
+                              {item.label === 'Products' && (
+                                <div className="dropdown-item__icon">
+                                  <DropdownIcon icon={child.icon} />
+                                </div>
+                              )}
                               <div className="dropdown-item__content">
-                                <div className="dropdown-item__title">{child.title}</div>
-                                {item.label !== 'Products' && (
-                                  <div className="dropdown-item__desc">{child.description}</div>
-                                )}
+                                <div className="dropdown-item__title">
+                                  {child.title} 
+                                  {item.label === 'Resources' && child.title === 'Documentation' && ' >'}
+                                </div>
                               </div>
                             </Link>
                           ))}
