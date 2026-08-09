@@ -16,8 +16,16 @@ const WindowsIcon = () => (
 );
 
 const LinuxIcon = () => (
-  <svg viewBox="0 0 448 512" width="16" height="16" fill="currentColor">
-    <path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.7.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.5zM420 432c-1.8-3.4-5.4-4-9.3-4-19.1 0-38.3.4-57.4-.2-23.7-.8-47.5-3.4-70.9-8.4-13.6-2.9-27.5-6.8-40.8-11.3C223.3 401.7 205.8 400 188 400c-17.6 0-35.3 1.6-53.5 8-13.3 4.6-27.1 8.5-40.8 11.3-23.4 5-47.2 7.6-70.9 8.4-19.1.6-38.3.2-57.4.2-3.9 0-7.5.6-9.3 4-2.8 5.3-.2 13 3.5 17.5 12.3 15 28.1 26 46.8 32.5 24 8.3 49 11.4 74.3 11 11.6-.2 23.2-1.2 34.6-3.3 27-5.1 53.6-13.1 79.5-23.8 28.5 11.5 57.5 19.8 87.5 24.8 12.5 2.1 25.1 3.2 37.8 3.3 23 .3 45.6-3.1 67.5-11 18-6.6 33.3-17.6 44.9-32.5 3.5-4.4 6-12.1 3.2-17.5zM224 16C123.5 16 46.8 91.8 46.8 186.2c0 23.6 4.7 46.4 13.8 67 19.1 43.1 49 78.4 89.2 103.2 24 14.8 51.5 24.8 79.8 29 16.5 2.4 33.3 2.5 49.8.5 27.5-3.4 54.1-13 77.8-28.5 40.5-26.6 69.4-61.9 87.2-104.5 7.6-18.4 11.6-38.2 11.6-58.7C456 93.3 371.3 16 224 16zm-74.1 190.5c-19.6 1.4-34.7-14.8-34.7-32.3 0-18.1 14.8-33.6 35.1-33.6 19.1 0 35.1 15 35.1 33.6-.1 17.6-15.6 33.8-35.5 32.3zm142.1 0c-19.6 1.4-34.7-14.8-34.7-32.3 0-18.1 14.8-33.6 35.1-33.6 19.1 0 35.1 15 35.1 33.6 0 17.6-15.5 33.8-35.5 32.3zM161.7 87.2c-5.5 0-9.8-3.4-9.8-7.5s4.4-7.5 9.8-7.5 9.8 3.4 9.8 7.5-4.4 7.5-9.8 7.5zm121.1 0c-5.5 0-9.8-3.4-9.8-7.5s4.4-7.5 9.8-7.5 9.8 3.4 9.8 7.5-4.3 7.5-9.8 7.5z"/>
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M7 19c-1.5 1.5-3 1.5-3 3h4c0-1.5 1-2 2-3" />
+    <path d="M17 19c1.5 1.5 3 1.5 3 3h-4c0-1.5-1-2-2-3" />
+    <path d="M6 11c-2 0-3 1.5-3 3s2 3 3 2" />
+    <path d="M18 11c2 0 3 1.5 3 3s-2 3-3 2" />
+    <path d="M12 2C8 2 6 5 6 9v5c0 3.5 2.5 5 6 5s6-1.5 6-5V9c0-4-2-7-6-7Z" />
+    <path d="M12 7c-2 0-3 1-3 3v3c0 2 1.5 3 3 3s3-1 3-3v-3c0-2-1-3-3-3Z" />
+    <circle cx="10" cy="9" r="1" fill="currentColor" stroke="none" />
+    <circle cx="14" cy="9" r="1" fill="currentColor" stroke="none" />
+    <path d="M11 12h2l-1 1.5Z" />
   </svg>
 );
 
@@ -42,12 +50,12 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <AppleIcon /> macOS
           </h3>
-          <button className="dl-btn dl-btn--primary" disabled={disabled}>
+          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for Apple Silicon
-          </button>
-          <button className="dl-btn dl-btn--secondary" disabled={disabled}>
+          </a>
+          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for Intel
-          </button>
+          </a>
           
           <div className="min-reqs">
             <div className="min-reqs__title">Minimum Requirements</div>
@@ -62,12 +70,12 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <WindowsIcon /> Windows
           </h3>
-          <button className="dl-btn dl-btn--primary" disabled={disabled}>
+          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for x64
-          </button>
-          <button className="dl-btn dl-btn--secondary" disabled={disabled}>
+          </a>
+          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for ARM64
-          </button>
+          </a>
           
           <div className="min-reqs">
             <div className="min-reqs__title">Minimum Requirements</div>
@@ -82,12 +90,13 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <LinuxIcon /> Linux
           </h3>
-          <button className="dl-btn dl-btn--primary" disabled={disabled}>
+          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for x64
-          </button>
-          <button className="dl-btn dl-btn--secondary" disabled={disabled}>
+          </a>
+          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for ARM64
-          </button>
+          </a>
+
           
           <div className="min-reqs">
             <div className="min-reqs__title">Minimum Requirements</div>
