@@ -145,11 +145,11 @@
 
 .navbar__mega-title {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
-  letter-spacing: -0.5px;
-  color: #202124;
+  letter-spacing: -0.02em;
+  color: #111111;
   max-width: 260px;
   opacity: 0;
   transform: translateY(10px);
