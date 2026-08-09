@@ -34,7 +34,21 @@ export default function OnboardingQuestionsPage() {
       ), 
       textBelow: "" 
     },
-    { id: 4, textAbove: "", textBelow: "" },
+    { 
+      id: 4, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>3. Date of Birth</h2>
+          <p className="docs__text">You will then be asked to provide your date of birth. Enter it using the required YYYY-MM-DD format.</p>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example:</p>
+            <p style={{ margin: 0, fontSize: '15px' }}>2004-10-14</p>
+          </div>
+          <p className="docs__text" style={{ marginBottom: '16px' }}>The assistant will ask you to confirm the date before moving to the next onboarding question.</p>
+        </>
+      ), 
+      textBelow: "" 
+    },
     { id: 5, textAbove: "", textBelow: "" },
     { id: 6, textAbove: "", textBelow: "" },
     { id: 7, textAbove: "", textBelow: "" },
