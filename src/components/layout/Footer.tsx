@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="footer__bottom-left">
           <Link to="/" className="footer__bottom-logo">
-            Craftly
+            Craftly Robot
           </Link>
         </div>
         <div className="footer__bottom-right">
