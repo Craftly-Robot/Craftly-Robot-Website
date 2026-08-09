@@ -31,6 +31,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  padding-left: 16px; /* Shift everything slightly to the right */
 }
 
 .navbar__logo {
@@ -150,6 +151,15 @@
   letter-spacing: -0.5px;
   color: #202124;
   max-width: 260px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.navbar__dropdown--visible .navbar__mega-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 50ms;
 }
 
 .navbar__mega-btn {
@@ -163,7 +173,15 @@
   border: none;
   border-radius: 9999px;
   text-decoration: none;
-  transition: background-color 150ms ease;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 400ms ease, transform 400ms ease, background-color 150ms ease;
+}
+
+.navbar__dropdown--visible .navbar__mega-btn {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 100ms;
 }
 
 .navbar__mega-btn:hover {
@@ -182,6 +200,15 @@
   margin-bottom: 16px;
   padding-left: 12px;
   font-weight: 400;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.navbar__dropdown--visible .navbar__mega-list-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 100ms;
 }
 
 .navbar__mega-grid {
@@ -198,9 +225,24 @@
   border-radius: var(--radius-lg);
   text-decoration: none;
   color: var(--color-text);
-  transition: background-color 150ms ease;
   width: fit-content;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 400ms ease, transform 400ms ease, background-color 150ms ease;
 }
+
+.navbar__dropdown--visible .dropdown-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for list items */
+.navbar__dropdown--visible .dropdown-item:nth-child(1) { transition-delay: 140ms; }
+.navbar__dropdown--visible .dropdown-item:nth-child(2) { transition-delay: 180ms; }
+.navbar__dropdown--visible .dropdown-item:nth-child(3) { transition-delay: 220ms; }
+.navbar__dropdown--visible .dropdown-item:nth-child(4) { transition-delay: 260ms; }
+.navbar__dropdown--visible .dropdown-item:nth-child(5) { transition-delay: 300ms; }
+.navbar__dropdown--visible .dropdown-item:nth-child(6) { transition-delay: 340ms; }
 
 .dropdown-item:hover {
   background: #f1f3f4;
