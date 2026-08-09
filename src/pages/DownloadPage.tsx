@@ -154,12 +154,12 @@ export default function DownloadPage() {
           </div>
         </div>
 
-        <ProductDownloadSection title="Craftly Workspace" version="2.6.0" id="workspace" />
+        <ProductDownloadSection title="Craftly Workspace" version="3.8.5" id="workspace" />
         
         {/* Divider */}
         <hr style={{ border: 'none', borderTop: '1px solid var(--color-border-subtle)', margin: '48px 0' }} />
 
-        <ProductDownloadSection title="Craftly Robot" version="2.1.1" id="robot" disabled={true} />
+        <ProductDownloadSection title="Craftly Robot" version="1.0.21" id="robot" disabled={true} />
       </div>
     </>
   );
