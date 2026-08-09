@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/hero/Hero';
-import { siteContent } from '../data/siteContent';
 import { products } from '../data/products';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import ProductShowcase from '../components/sections/ProductShowcase';
@@ -18,8 +17,9 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Craftly — Intelligent Systems for the Agentic Era</title>
-        <meta name="description" content={siteContent.hero.description} />
+        <title>Craftly — Intelligent Systems for the Agentic Era | Craftly Bangladesh</title>
+        <meta name="description" content="Craftly builds intelligent systems for the agentic era. Explore Craftly Workspace and Craftly Robot — tools for operating modern organizations and autonomous software engineering in Bangladesh." />
+        <meta name="keywords" content="Craftly, Craftly Bangladesh, Agentic AI, Autonomous Workspace, Craftly Robot, Software Engineering AI, AI Agents Bangladesh" />
       </Helmet>
 
       {/* 02-04 — Hero, Media, and Tech Icon Transition */}
