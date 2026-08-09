@@ -18,10 +18,7 @@ const WindowsIcon = () => (
 
 /* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
-  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 2a4 4 0 0 0-4 4v4l-4 8h16l-4-8V6a4 4 0 0 0-4-4Z" />
-    <path d="M8 18v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2" />
-  </svg>
+  <img src="/assets/brand/linux-logo.png" alt="Linux" width="20" height="20" style={{ objectFit: 'contain' }} />
 );
 
 interface ProductSectionProps {
