@@ -48,7 +48,7 @@ export default function HeroVisual() {
         vy: 0,
         offsetX: Math.cos(angle) * r,
         offsetY: Math.sin(angle) * r,
-        size: 3 + Math.random() * 2, // Very distinct round dots
+        size: 1 + Math.random() * 1.5, // Much smaller dots
         color: color
       });
     }
@@ -78,8 +78,9 @@ export default function HeroVisual() {
         }
       }
       
-      pos.x += (mouse.x - pos.x) * 0.15;
-      pos.y += (mouse.y - pos.y) * 0.15;
+      // Much slower, lazier tracking of the mouse cursor
+      pos.x += (mouse.x - pos.x) * 0.04;
+      pos.y += (mouse.y - pos.y) * 0.04;
 
       const time = performance.now() * 0.003;
 
