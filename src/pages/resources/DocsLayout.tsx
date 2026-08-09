@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -18,6 +19,28 @@ interface DocsLayoutProps {
 }
 
 export default function DocsLayout({ title, description, children }: DocsLayoutProps) {
+  const [activeId, setActiveId] = useState<string>('welcome');
+
+  useEffect(() => {
+    const handleObserver = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveId(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleObserver, {
+      rootMargin: '-10% 0px -70% 0px',
+    });
+
+    // Observe all headings that have an ID
+    const sections = document.querySelectorAll('h1[id], h2[id], h3[id]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="docs__container">
       <Helmet>
@@ -79,22 +102,22 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
         <div className="docs__toc">
           <h4 className="docs__toc-title">On this Page</h4>
           <ul className="docs__toc-list">
-            <li className="docs__toc-item docs__toc-item--active">
+            <li className={`docs__toc-item ${activeId === 'welcome' ? 'docs__toc-item--active' : ''}`}>
               <a href="#welcome">Welcome to Craftly</a>
             </li>
-            <li className="docs__toc-item">
+            <li className={`docs__toc-item ${activeId === 'choose-surface' ? 'docs__toc-item--active' : ''}`}>
               <a href="#choose-surface">Choose Your Surface</a>
             </li>
-            <li className="docs__toc-item">
+            <li className={`docs__toc-item ${activeId === 'craftly-workspace' ? 'docs__toc-item--active' : ''}`}>
               <a href="#craftly-workspace">Craftly Workspace</a>
             </li>
-            <li className="docs__toc-item">
+            <li className={`docs__toc-item ${activeId === 'craftly-robot' ? 'docs__toc-item--active' : ''}`}>
               <a href="#craftly-robot">Craftly Robot</a>
             </li>
-            <li className="docs__toc-item">
+            <li className={`docs__toc-item ${activeId === 'core-capabilities' ? 'docs__toc-item--active' : ''}`}>
               <a href="#core-capabilities">Core Capabilities</a>
             </li>
-            <li className="docs__toc-item">
+            <li className={`docs__toc-item ${activeId === 'craftly-platform' ? 'docs__toc-item--active' : ''}`}>
               <a href="#craftly-platform">The Craftly Platform</a>
             </li>
           </ul>
