@@ -91,13 +91,14 @@
 }
 
 .version-badge {
-  background: #e8f0fe;
+  background: #eef0f2;
   color: #000;
   padding: 4px 10px;
   border-radius: 99px;
   font-size: 0.75rem;
   font-weight: 600;
   font-family: var(--font-mono);
+  letter-spacing: 0.02em;
 }
 
 .download-columns {
