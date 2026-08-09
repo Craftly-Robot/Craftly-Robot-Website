@@ -114,11 +114,23 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
             <li className={`docs__toc-item ${activeId === 'craftly-robot' ? 'docs__toc-item--active' : ''}`}>
               <a href="#craftly-robot">Craftly Robot</a>
             </li>
-            <li className={`docs__toc-item ${activeId === 'core-capabilities' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#core-capabilities">Core Capabilities</a>
+            <li className={`docs__toc-item ${activeId === 'robot-structure' ? 'docs__toc-item--active' : ''}`}>
+              <a href="#robot-structure">Craftly Robot Structure</a>
             </li>
-            <li className={`docs__toc-item ${activeId === 'craftly-platform' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#craftly-platform">The Craftly Platform</a>
+            <li className={`docs__toc-item ${activeId === 'overview' ? 'docs__toc-item--active' : ''}`}>
+              <a href="#overview">Overview</a>
+            </li>
+            <li className={`docs__toc-item ${activeId === 'getting-started' ? 'docs__toc-item--active' : ''}`}>
+              <a href="#getting-started">Getting Started</a>
+            </li>
+            <li className={`docs__toc-item ${activeId === 'build-with-craftly' ? 'docs__toc-item--active' : ''}`}>
+              <a href="#build-with-craftly">Build with Craftly</a>
+            </li>
+            <li className={`docs__toc-item ${activeId === 'feature-overview' ? 'docs__toc-item--active' : ''}`}>
+              <a href="#feature-overview">Feature Overview</a>
+            </li>
+            <li className={`docs__toc-item ${activeId === 'projects' ? 'docs__toc-item--active' : ''}`}>
+              <a href="#projects">Projects</a>
             </li>
           </ul>
         </div>
