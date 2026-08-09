@@ -51,7 +51,7 @@ export default function DocumentationPage() {
           <li><strong>Get Started:</strong> Learn how Craftly Workspace works and how people and teams use it to coordinate their work.</li>
         </ul>
         <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-          <Link to="/resources/documentation/workspace/overview/what-is-craftly-workspace" className="docs__link">Explore Workspace &rarr;</Link>
+          <Link to="/resources/documentation/workspace/overview/what-is-craftly-workspace" className="docs__link" style={{ color: '#111111', fontWeight: '600' }}>Explore Workspace &rarr;</Link>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function DocumentationPage() {
           <li><strong>Get Started:</strong> Explore Craftly Robot and learn how we’re building intelligent systems that can work alongside people.</li>
         </ul>
         <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-          <Link to="/resources/documentation/robot/overview/what-is-craftly-robot" className="docs__link">Explore Robot &rarr;</Link>
+          <Link to="/resources/documentation/robot/overview/what-is-craftly-robot" className="docs__link" style={{ color: '#111111', fontWeight: '600' }}>Explore Robot &rarr;</Link>
         </div>
       </div>
 
