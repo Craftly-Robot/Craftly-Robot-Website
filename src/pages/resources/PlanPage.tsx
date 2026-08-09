@@ -3,10 +3,10 @@ import DocsLayout from './DocsLayout';
 export default function PlanPage() {
   return (
     <DocsLayout 
-      title="The Craftly Plan — Craftly Documentation"
-      description="The Craftly Plan - Workspace, Robot, and Glass."
+      title="Craftly Plan — Craftly Documentation"
+      description="Craftly Plan - Workspace, Robot, and Glass."
       tocItems={[
-        { id: 'the-craftly-plan', label: 'The Craftly Plan' },
+        { id: 'craftly-plan', label: 'Craftly Plan' },
         { id: 'what-works-today', label: 'What works today' },
         { id: 'what-were-building-now', label: 'What we\'re building now' },
         { id: 'where-were-going', label: 'Where we\'re going' },
@@ -14,10 +14,10 @@ export default function PlanPage() {
       ]}
     >
       <div className="docs__breadcrumb">
-        Documentation &gt; <strong>The Craftly Plan</strong>
+        Documentation &gt; <strong>Craftly Plan</strong>
       </div>
 
-      <h1 className="docs__title" id="the-craftly-plan">The Craftly Plan</h1>
+      <h1 className="docs__title" id="craftly-plan">Craftly Plan</h1>
       <p className="docs__text">
         Craftly is being built step by step. Our first priority is to build the organization itself and create the systems that allow people to work together effectively. Craftly Workspace is the foundation of that effort, giving us a place to coordinate people, work, communication, and everyday operations.
       </p>
