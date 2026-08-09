@@ -20,7 +20,7 @@ export default function WelcomeSetupPage() {
       <p className="docs__text">Our onboarding assistant will guide you through a few questions to understand who you are, what you’re interested in, and how you’d like to contribute to Craftly.</p>
       <p className="docs__text">You don't need to know everything before you start. Just answer honestly, and we'll guide you through the rest.</p>
       <p className="docs__text" style={{ fontWeight: 600, marginTop: '24px' }}>Ready to begin?</p>
-      <p className="docs__text">Go to <a href="https://join.craftlyrobot.com" target="_blank" rel="noreferrer" style={{ color: '#0066cc', textDecoration: 'none' }}>join.craftlyrobot.com</a> and select:</p>
+      <p className="docs__text">Go to <a href="https://join.craftlyrobot.com" target="_blank" rel="noreferrer" style={{ color: '#0066cc', textDecoration: 'none' }}>join.craftlyrobot.com</a> and write :</p>
       
       <div style={{ padding: '16px 24px', backgroundColor: '#f8f9fa', border: '1px solid #eaeaeb', borderRadius: '8px', margin: '16px 0', display: 'inline-block', fontWeight: 500 }}>
         I want to join
