@@ -31,14 +31,14 @@ export default function Footer() {
 
       <div className="footer__middle">
         <div className="footer__huge-text">
-          Craftly
+          Craftly Robot
         </div>
       </div>
 
       <div className="footer__bottom">
         <div className="footer__bottom-left">
           <Link to="/" className="footer__bottom-logo">
-            Craftly Robot
+            Craftly
           </Link>
         </div>
         <div className="footer__bottom-right">

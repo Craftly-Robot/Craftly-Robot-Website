@@ -90,12 +90,12 @@
 }
 
 .footer__huge-text {
-  font-family: 'Pacifico', cursive;
-  font-size: clamp(80px, 20vw, 300px);
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(60px, 15vw, 250px);
+  font-weight: 500;
   line-height: 1;
   color: #171717;
-  letter-spacing: -2px;
+  letter-spacing: -4px;
   text-align: center;
   white-space: nowrap;
 }
