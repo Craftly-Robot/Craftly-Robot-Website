@@ -102,10 +102,10 @@
 }
 
 .docs__nav-subitem--active {
-  background-color: #f4f7fe;
-  color: #202124;
-  font-weight: 500;
-  border-left: 3px solid #1a73e8;
+  background-color: #f8f9fa;
+  color: #111111;
+  font-weight: 600;
+  border-left: 3px solid #111111;
 }
 
 .docs__nav-meta {
@@ -115,8 +115,8 @@
 }
 
 .docs__tag {
-  background-color: #e8f0fe;
-  color: #1a73e8;
+  background-color: #111111;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   padding: 4px 10px;
