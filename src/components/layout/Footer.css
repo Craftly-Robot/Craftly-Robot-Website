@@ -138,12 +138,12 @@
 }
 
 .footer__bottom-logo {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 400;
   color: #202124;
   text-decoration: none;
-  letter-spacing: -0.5px;
+  letter-spacing: normal;
 }
 
 .footer__bottom-right {
