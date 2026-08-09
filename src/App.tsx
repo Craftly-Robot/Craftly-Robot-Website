@@ -15,6 +15,13 @@ const OverviewPage = lazy(() => import('./pages/resources/robot/OverviewPage'));
 const GettingStartedPage = lazy(() => import('./pages/resources/robot/GettingStartedPage'));
 const BuildWithCraftlyPage = lazy(() => import('./pages/resources/robot/BuildWithCraftlyPage'));
 const FeatureOverviewPage = lazy(() => import('./pages/resources/robot/FeatureOverviewPage'));
+const AgenticAIPage = lazy(() => import('./pages/resources/robot/features/AgenticAIPage'));
+const ToolUsePage = lazy(() => import('./pages/resources/robot/features/ToolUsePage'));
+const AgentDiscoveryPage = lazy(() => import('./pages/resources/robot/features/AgentDiscoveryPage'));
+const FeatureAgentNegotiationPage = lazy(() => import('./pages/resources/robot/features/AgentNegotiationPage'));
+const MultiAgentCoordinationPage = lazy(() => import('./pages/resources/robot/features/MultiAgentCoordinationPage'));
+const PrivacyBoundariesPage = lazy(() => import('./pages/resources/robot/features/PrivacyBoundariesPage'));
+const HumanConfirmationPage = lazy(() => import('./pages/resources/robot/features/HumanConfirmationPage'));
 const ProjectsPage = lazy(() => import('./pages/resources/robot/ProjectsPage'));
 const BlogPage = lazy(() => import('./pages/resources/BlogPage'));
 const SupportPage = lazy(() => import('./pages/resources/SupportPage'));
@@ -52,6 +59,13 @@ export default function App() {
           <Route path="/resources/documentation/getting-started" element={<GettingStartedPage />} />
           <Route path="/resources/documentation/build-with-craftly" element={<BuildWithCraftlyPage />} />
           <Route path="/resources/documentation/feature-overview" element={<FeatureOverviewPage />} />
+          <Route path="/resources/documentation/feature-overview/agentic-ai" element={<AgenticAIPage />} />
+          <Route path="/resources/documentation/feature-overview/tool-use" element={<ToolUsePage />} />
+          <Route path="/resources/documentation/feature-overview/agent-discovery" element={<AgentDiscoveryPage />} />
+          <Route path="/resources/documentation/feature-overview/agent-negotiation" element={<FeatureAgentNegotiationPage />} />
+          <Route path="/resources/documentation/feature-overview/multi-agent-coordination" element={<MultiAgentCoordinationPage />} />
+          <Route path="/resources/documentation/feature-overview/privacy-boundaries" element={<PrivacyBoundariesPage />} />
+          <Route path="/resources/documentation/feature-overview/human-confirmation" element={<HumanConfirmationPage />} />
           <Route path="/resources/documentation/projects" element={<ProjectsPage />} />
           <Route path="/resources/blog" element={<BlogPage />} />
           <Route path="/resources/support" element={<SupportPage />} />

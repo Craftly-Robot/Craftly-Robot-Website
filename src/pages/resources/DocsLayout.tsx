@@ -78,15 +78,15 @@ export default function DocsLayout({ title, description, tocItems = [], children
               <NavLink to="/resources/documentation/overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Overview</NavLink>
               <NavLink to="/resources/documentation/getting-started" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Getting Started</NavLink>
               <NavLink to="/resources/documentation/build-with-craftly" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Build with Craftly</NavLink>
-              <NavLink to="/resources/documentation/feature-overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Feature Overview</NavLink>
+              <NavLink to="/resources/documentation/feature-overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`} end>Feature Overview</NavLink>
               <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                <a href="/resources/documentation/feature-overview#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
-                <a href="/resources/documentation/feature-overview#tool-use-feature" className="docs__nav-subitem">Tool Use</a>
-                <a href="/resources/documentation/feature-overview#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
-                <a href="/resources/documentation/feature-overview#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
-                <a href="/resources/documentation/feature-overview#multi-agent-coordination-feature" className="docs__nav-subitem">Multi-Agent Coordination</a>
-                <a href="/resources/documentation/feature-overview#privacy-aware-communication-feature" className="docs__nav-subitem">Privacy Boundaries</a>
-                <a href="/resources/documentation/feature-overview#human-confirmation-feature" className="docs__nav-subitem">Human Confirmation</a>
+                <NavLink to="/resources/documentation/feature-overview/agentic-ai" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agentic AI</NavLink>
+                <NavLink to="/resources/documentation/feature-overview/tool-use" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tool Use</NavLink>
+                <NavLink to="/resources/documentation/feature-overview/agent-discovery" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent Discovery</NavLink>
+                <NavLink to="/resources/documentation/feature-overview/agent-negotiation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent-to-Agent Negotiation</NavLink>
+                <NavLink to="/resources/documentation/feature-overview/multi-agent-coordination" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Multi-Agent Coordination</NavLink>
+                <NavLink to="/resources/documentation/feature-overview/privacy-boundaries" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Privacy Boundaries</NavLink>
+                <NavLink to="/resources/documentation/feature-overview/human-confirmation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Human Confirmation</NavLink>
               </div>
               <NavLink to="/resources/documentation/projects" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Projects</NavLink>
             </div>
