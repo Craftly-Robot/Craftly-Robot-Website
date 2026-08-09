@@ -80,25 +80,22 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
           <h4 className="docs__toc-title">On this Page</h4>
           <ul className="docs__toc-list">
             <li className="docs__toc-item docs__toc-item--active">
-              <a href="#getting-started">Getting Started with Craftly...</a>
+              <a href="#welcome">Welcome to Craftly</a>
             </li>
             <li className="docs__toc-item">
-              <a href="#download">Download</a>
+              <a href="#choose-surface">Choose Your Surface</a>
             </li>
             <li className="docs__toc-item">
-              <a href="#installation">Installation</a>
+              <a href="#craftly-workspace">Craftly Workspace</a>
             </li>
             <li className="docs__toc-item">
-              <a href="#creating-project">Creating a Project</a>
+              <a href="#craftly-robot">Craftly Robot</a>
             </li>
             <li className="docs__toc-item">
-              <a href="#starting-agent">Starting an Agent</a>
+              <a href="#core-capabilities">Core Capabilities</a>
             </li>
             <li className="docs__toc-item">
-              <a href="#basic-navigation">Basic Navigation</a>
-            </li>
-            <li className="docs__toc-item">
-              <a href="#slash-commands">Slash Commands</a>
+              <a href="#craftly-platform">The Craftly Platform</a>
             </li>
           </ul>
         </div>
