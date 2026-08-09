@@ -141,6 +141,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 16px 24px;
   border-radius: 99px;
   font-size: 1rem;
@@ -150,6 +151,7 @@
   border: none;
   font-family: inherit;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .dl-btn--primary {
