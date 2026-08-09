@@ -1,5 +1,5 @@
 import React, { useState, useEffect, type ReactNode } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './DocsLayout.css';
 
@@ -27,14 +27,34 @@ interface DocsLayoutProps {
 }
 
 export default function DocsLayout({ title, description, tocItems = [], children }: DocsLayoutProps) {
+  const location = useLocation();
+  const path = location.pathname;
+
   const [activeId, setActiveId] = useState<string>('welcome');
   
   // Top-level toggles
-  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(false);
-  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(false);
+  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(path.includes('/robot'));
+  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(path.includes('/workspace'));
 
   // Nested section toggles
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<string[]>(() => {
+    const sections: string[] = [];
+    if (path.includes('/workspace/overview')) sections.push('ws-overview');
+    if (path.includes('/workspace/getting-started')) sections.push('ws-getting-started');
+    if (path.includes('/workspace/organization')) sections.push('ws-organization');
+    if (path.includes('/workspace/people-roles')) sections.push('ws-people-roles');
+    if (path.includes('/workspace/tasks-operations')) sections.push('ws-tasks-operations');
+    if (path.includes('/workspace/communication')) sections.push('ws-communication');
+    if (path.includes('/workspace/resources')) sections.push('ws-resources');
+    if (path.includes('/workspace/onboarding')) sections.push('ws-onboarding');
+
+    if (path.includes('/robot/overview')) sections.push('robot-overview');
+    if (path.includes('/robot/getting-started')) sections.push('robot-getting-started');
+    if (path.includes('/robot/build-with-craftly')) sections.push('robot-build-with-craftly');
+    if (path.includes('/robot/feature-overview')) sections.push('robot-feature-overview');
+    
+    return sections;
+  });
 
   const toggleRobot = (e: React.MouseEvent) => {
     e.preventDefault();
