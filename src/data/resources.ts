@@ -16,6 +16,13 @@ export const resources: Resource[] = [
     icon: 'blog',
   },
   {
+    id: 'changelog',
+    title: 'Changelog',
+    description: 'Track the latest updates and improvements.',
+    route: '/resources/changelog',
+    icon: 'changelog',
+  },
+  {
     id: 'support',
     title: 'Support',
     description: 'Get help with Craftly products — troubleshooting, FAQs, and contact.',
@@ -28,12 +35,5 @@ export const resources: Resource[] = [
     description: 'Changelogs, version history, and release notes for all Craftly products.',
     route: '/resources/releases',
     icon: 'releases',
-  },
-  {
-    id: 'press',
-    title: 'Press',
-    description: 'Media resources, press releases, and brand assets.',
-    route: '/resources/press',
-    icon: 'press',
   },
 ];
