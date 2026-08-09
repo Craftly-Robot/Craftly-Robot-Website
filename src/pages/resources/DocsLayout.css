@@ -53,7 +53,7 @@
   gap: 12px;
   padding: 8px 12px;
   border-radius: 0 6px 6px 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #3c4043;
   text-decoration: none;
@@ -90,7 +90,7 @@
 
 .docs__nav-subitem {
   padding: 8px 12px 8px 16px;
-  font-size: 14px;
+  font-size: 15px;
   color: #5f6368;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
@@ -130,8 +130,8 @@
 }
 
 .docs__sidebar-chevron {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   color: #5f6368;
   transition: transform 150ms ease;
 }
