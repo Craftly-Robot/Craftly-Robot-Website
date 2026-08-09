@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useOS } from '../hooks/useOS';
@@ -15,17 +16,11 @@ const WindowsIcon = () => (
   </svg>
 );
 
+/* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M7 19c-1.5 1.5-3 1.5-3 3h4c0-1.5 1-2 2-3" />
-    <path d="M17 19c1.5 1.5 3 1.5 3 3h-4c0-1.5-1-2-2-3" />
-    <path d="M6 11c-2 0-3 1.5-3 3s2 3 3 2" />
-    <path d="M18 11c2 0 3 1.5 3 3s-2 3-3 2" />
-    <path d="M12 2C8 2 6 5 6 9v5c0 3.5 2.5 5 6 5s6-1.5 6-5V9c0-4-2-7-6-7Z" />
-    <path d="M12 7c-2 0-3 1-3 3v3c0 2 1.5 3 3 3s3-1 3-3v-3c0-2-1-3-3-3Z" />
-    <circle cx="10" cy="9" r="1" fill="currentColor" stroke="none" />
-    <circle cx="14" cy="9" r="1" fill="currentColor" stroke="none" />
-    <path d="M11 12h2l-1 1.5Z" />
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2a4 4 0 0 0-4 4v4l-4 8h16l-4-8V6a4 4 0 0 0-4-4Z" />
+    <path d="M8 18v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2" />
   </svg>
 );
 
@@ -110,9 +105,38 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
   );
 }
 
+function TypewriterTitle({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+        // Hide cursor after typing finishes
+        setTimeout(() => setShowCursor(false), 1200);
+      }
+    }, 45);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return (
+    <h1 className="download-hero__title">
+      {displayedText}
+      {showCursor && <span className="typewriter-cursor">|</span>}
+    </h1>
+  );
+}
+
 export default function DownloadPage() {
   const revealRef = useScrollReveal();
   const osName = useOS();
+  const [activeProduct, setActiveProduct] = useState<'workspace' | 'robot'>('workspace');
 
   return (
     <>
@@ -123,25 +147,31 @@ export default function DownloadPage() {
 
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-            <h1 className="download-hero__title">
-              Download Craftly for {osName}
-            </h1>
-            <a href="#" className="nav-pill" style={{ display: 'inline-flex', alignSelf: 'flex-start' }}>View previous releases</a>
-          </div>
-          <div className="download-nav-pills">
-            <a href="#workspace" className="nav-pill">Craftly Workspace</a>
-            <a href="#robot" className="nav-pill">Craftly Robot</a>
+          <TypewriterTitle text={`Download Craftly for ${osName}`} />
+          
+          <div className="download-product-tabs">
+            <button
+              className={`product-tab ${activeProduct === 'workspace' ? 'product-tab--active' : ''}`}
+              onClick={() => setActiveProduct('workspace')}
+            >
+              Craftly Workspace
+            </button>
+            <button
+              className={`product-tab ${activeProduct === 'robot' ? 'product-tab--active' : ''}`}
+              onClick={() => setActiveProduct('robot')}
+            >
+              Craftly Robot
+            </button>
           </div>
         </div>
 
-        <ProductDownloadSection title="Craftly Workspace" version="2.6.0" id="workspace" />
+        {activeProduct === 'workspace' && (
+          <ProductDownloadSection title="Craftly Workspace" version="2.6.0" id="workspace" />
+        )}
         
-        {/* Divider */}
-        <hr style={{ border: 'none', borderTop: '1px solid var(--color-border-subtle)', margin: '48px 0' }} />
-
-        <ProductDownloadSection title="Craftly Robot" version="2.1.1" id="robot" disabled={true} />
-
+        {activeProduct === 'robot' && (
+          <ProductDownloadSection title="Craftly Robot" version="2.1.1" id="robot" disabled={true} />
+        )}
       </div>
     </>
   );
