@@ -11,26 +11,39 @@ const OperationsPage = lazy(() => import('./pages/use-cases/OperationsPage'));
 const AgentNegotiationPage = lazy(() => import('./pages/use-cases/AgentNegotiationPage'));
 const AIPage = lazy(() => import('./pages/use-cases/AIPage'));
 const DocumentationPage = lazy(() => import('./pages/resources/DocumentationPage'));
-const OverviewPage = lazy(() => import('./pages/resources/robot/OverviewPage'));
-const GettingStartedPage = lazy(() => import('./pages/resources/robot/GettingStartedPage'));
-const BuildWithCraftlyPage = lazy(() => import('./pages/resources/robot/BuildWithCraftlyPage'));
-const FeatureOverviewPage = lazy(() => import('./pages/resources/robot/FeatureOverviewPage'));
-const AgenticAIPage = lazy(() => import('./pages/resources/robot/features/AgenticAIPage'));
-const ToolUsePage = lazy(() => import('./pages/resources/robot/features/ToolUsePage'));
-const AgentDiscoveryPage = lazy(() => import('./pages/resources/robot/features/AgentDiscoveryPage'));
-const FeatureAgentNegotiationPage = lazy(() => import('./pages/resources/robot/features/AgentNegotiationPage'));
-const MultiAgentCoordinationPage = lazy(() => import('./pages/resources/robot/features/MultiAgentCoordinationPage'));
-const PrivacyBoundariesPage = lazy(() => import('./pages/resources/robot/features/PrivacyBoundariesPage'));
-const HumanConfirmationPage = lazy(() => import('./pages/resources/robot/features/HumanConfirmationPage'));
-const ProjectsPage = lazy(() => import('./pages/resources/robot/ProjectsPage'));
-const WorkspaceOverviewPage = lazy(() => import('./pages/resources/workspace/OverviewPage'));
-const WorkspaceGettingStartedPage = lazy(() => import('./pages/resources/workspace/GettingStartedPage'));
-const OrganizationPage = lazy(() => import('./pages/resources/workspace/OrganizationPage'));
-const PeopleRolesPage = lazy(() => import('./pages/resources/workspace/PeopleRolesPage'));
-const TasksOperationsPage = lazy(() => import('./pages/resources/workspace/TasksOperationsPage'));
-const CommunicationPage = lazy(() => import('./pages/resources/workspace/CommunicationPage'));
-const ResourcesPage = lazy(() => import('./pages/resources/workspace/ResourcesPage'));
-const OnboardingPage = lazy(() => import('./pages/resources/workspace/OnboardingPage'));
+const WhatIsRobotPage = lazy(() => import('./pages/resources/robot/overview/WhatIsRobotPage'));
+const RobotArchitecturePage = lazy(() => import('./pages/resources/robot/overview/RobotArchitecturePage'));
+const HowRobotWorksPage = lazy(() => import('./pages/resources/robot/overview/HowRobotWorksPage'));
+const AgentModelPage = lazy(() => import('./pages/resources/robot/overview/AgentModelPage'));
+const CurrentStatusPage = lazy(() => import('./pages/resources/robot/overview/CurrentStatusPage'));
+const LongTermVisionPage = lazy(() => import('./pages/resources/robot/overview/LongTermVisionPage'));
+
+const RobotPrerequisitesPage = lazy(() => import('./pages/resources/robot/getting-started/PrerequisitesPage'));
+const RobotInstallationPage = lazy(() => import('./pages/resources/robot/getting-started/InstallationPage'));
+const RobotQuickstartPage = lazy(() => import('./pages/resources/robot/getting-started/QuickstartPage'));
+const RobotCreateFirstAgentPage = lazy(() => import('./pages/resources/robot/getting-started/CreateFirstAgentPage'));
+const RobotRunFirstTaskPage = lazy(() => import('./pages/resources/robot/getting-started/RunFirstTaskPage'));
+const RobotNextStepsPage = lazy(() => import('./pages/resources/robot/getting-started/NextStepsPage'));
+
+const RobotAgentsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/AgentsPage'));
+const RobotTasksPage = lazy(() => import('./pages/resources/robot/build-with-craftly/TasksPage'));
+const RobotToolsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/ToolsPage'));
+const RobotWorkflowsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/WorkflowsPage'));
+const RobotContextMemoryPage = lazy(() => import('./pages/resources/robot/build-with-craftly/ContextMemoryPage'));
+const RobotAgentRuntimePage = lazy(() => import('./pages/resources/robot/build-with-craftly/AgentRuntimePage'));
+const RobotIntegrationsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/IntegrationsPage'));
+const RobotCustomAgentsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/CustomAgentsPage'));
+
+const RobotAgenticAIPage = lazy(() => import('./pages/resources/robot/feature-overview/AgenticAIPage'));
+const RobotToolUsePage = lazy(() => import('./pages/resources/robot/feature-overview/ToolUsePage'));
+const RobotPlanningReasoningPage = lazy(() => import('./pages/resources/robot/feature-overview/PlanningReasoningPage'));
+const RobotAgentDiscoveryPage = lazy(() => import('./pages/resources/robot/feature-overview/AgentDiscoveryPage'));
+const RobotAgentNegotiationPage = lazy(() => import('./pages/resources/robot/feature-overview/AgentNegotiationPage'));
+const RobotMultiAgentCoordinationPage = lazy(() => import('./pages/resources/robot/feature-overview/MultiAgentCoordinationPage'));
+const RobotPrivacyBoundariesPage = lazy(() => import('./pages/resources/robot/feature-overview/PrivacyBoundariesPage'));
+const RobotHumanConfirmationPage = lazy(() => import('./pages/resources/robot/feature-overview/HumanConfirmationPage'));
+const RobotRealWorldTaskCoordinationPage = lazy(() => import('./pages/resources/robot/feature-overview/RealWorldTaskCoordinationPage'));
+
 
 const WhatIsWorkspacePage = lazy(() => import('./pages/resources/workspace/overview/WhatIsWorkspacePage'));
 const HowWorkspaceWorksPage = lazy(() => import('./pages/resources/workspace/overview/HowWorkspaceWorksPage'));
@@ -113,34 +126,29 @@ export default function App() {
           {/* Resource pages */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
           
-          <Route path="/resources/documentation/workspace/overview" element={<WorkspaceOverviewPage />} />
           <Route path="/resources/documentation/workspace/overview/what-is-craftly-workspace" element={<WhatIsWorkspacePage />} />
           <Route path="/resources/documentation/workspace/overview/how-workspace-works" element={<HowWorkspaceWorksPage />} />
           <Route path="/resources/documentation/workspace/overview/workspace-structure" element={<WorkspaceStructurePage />} />
           <Route path="/resources/documentation/workspace/overview/core-concepts" element={<CoreConceptsPage />} />
 
-          <Route path="/resources/documentation/workspace/getting-started" element={<WorkspaceGettingStartedPage />} />
           <Route path="/resources/documentation/workspace/getting-started/create-account" element={<CreateAccountPage />} />
           <Route path="/resources/documentation/workspace/getting-started/join-organization" element={<JoinOrganizationPage />} />
           <Route path="/resources/documentation/workspace/getting-started/complete-profile" element={<CompleteProfilePage />} />
           <Route path="/resources/documentation/workspace/getting-started/understand-workspace" element={<UnderstandWorkspacePage />} />
           <Route path="/resources/documentation/workspace/getting-started/first-task" element={<FirstTaskPage />} />
 
-          <Route path="/resources/documentation/workspace/organization" element={<OrganizationPage />} />
           <Route path="/resources/documentation/workspace/organization/org-structure" element={<OrgStructurePage />} />
           <Route path="/resources/documentation/workspace/organization/departments" element={<DepartmentsPage />} />
           <Route path="/resources/documentation/workspace/organization/teams" element={<TeamsPage />} />
           <Route path="/resources/documentation/workspace/organization/reporting-structure" element={<ReportingStructurePage />} />
           <Route path="/resources/documentation/workspace/organization/roles-permissions" element={<RolesPermissionsPage />} />
 
-          <Route path="/resources/documentation/workspace/people-roles" element={<PeopleRolesPage />} />
           <Route path="/resources/documentation/workspace/people-roles/members" element={<MembersPage />} />
           <Route path="/resources/documentation/workspace/people-roles/roles" element={<RolesPage />} />
           <Route path="/resources/documentation/workspace/people-roles/permissions" element={<PermissionsPage />} />
           <Route path="/resources/documentation/workspace/people-roles/managers" element={<ManagersPage />} />
           <Route path="/resources/documentation/workspace/people-roles/access-control" element={<AccessControlPage />} />
 
-          <Route path="/resources/documentation/workspace/tasks-operations" element={<TasksOperationsPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/tasks" element={<TasksPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/task-assignment" element={<TaskAssignmentPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/task-evidence" element={<TaskEvidencePage />} />
@@ -148,21 +156,18 @@ export default function App() {
           <Route path="/resources/documentation/workspace/tasks-operations/notices" element={<NoticesPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/operational-workflows" element={<OperationalWorkflowsPage />} />
 
-          <Route path="/resources/documentation/workspace/communication" element={<CommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/direct-communication" element={<DirectCommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/team-communication" element={<TeamCommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/chain-of-command" element={<ChainOfCommandPage />} />
           <Route path="/resources/documentation/workspace/communication/reporting-communication" element={<ReportingCommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/notifications" element={<NotificationsPage />} />
 
-          <Route path="/resources/documentation/workspace/resources" element={<ResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/org-resources" element={<OrgResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/dept-resources" element={<DeptResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/training" element={<TrainingPage />} />
           <Route path="/resources/documentation/workspace/resources/training-participation" element={<TrainingParticipationPage />} />
           <Route path="/resources/documentation/workspace/resources/resource-access" element={<ResourceAccessPage />} />
 
-          <Route path="/resources/documentation/workspace/onboarding" element={<OnboardingPage />} />
           <Route path="/resources/documentation/workspace/onboarding/welcome-setup" element={<WelcomeSetupPage />} />
           <Route path="/resources/documentation/workspace/onboarding/onboarding-questions" element={<OnboardingQuestionsPage />} />
           <Route path="/resources/documentation/workspace/onboarding/agreements" element={<AgreementsPage />} />
@@ -170,18 +175,38 @@ export default function App() {
           <Route path="/resources/documentation/workspace/onboarding/private-key" element={<PrivateKeyPage />} />
           <Route path="/resources/documentation/workspace/onboarding/completing-onboarding" element={<CompletingOnboardingPage />} />
 
-          <Route path="/resources/documentation/overview" element={<OverviewPage />} />
-          <Route path="/resources/documentation/getting-started" element={<GettingStartedPage />} />
-          <Route path="/resources/documentation/build-with-craftly" element={<BuildWithCraftlyPage />} />
-          <Route path="/resources/documentation/feature-overview" element={<FeatureOverviewPage />} />
-          <Route path="/resources/documentation/feature-overview/agentic-ai" element={<AgenticAIPage />} />
-          <Route path="/resources/documentation/feature-overview/tool-use" element={<ToolUsePage />} />
-          <Route path="/resources/documentation/feature-overview/agent-discovery" element={<AgentDiscoveryPage />} />
-          <Route path="/resources/documentation/feature-overview/agent-negotiation" element={<FeatureAgentNegotiationPage />} />
-          <Route path="/resources/documentation/feature-overview/multi-agent-coordination" element={<MultiAgentCoordinationPage />} />
-          <Route path="/resources/documentation/feature-overview/privacy-boundaries" element={<PrivacyBoundariesPage />} />
-          <Route path="/resources/documentation/feature-overview/human-confirmation" element={<HumanConfirmationPage />} />
-          <Route path="/resources/documentation/projects" element={<ProjectsPage />} />
+          <Route path="/resources/documentation/robot/overview/what-is-craftly-robot" element={<WhatIsRobotPage />} />
+          <Route path="/resources/documentation/robot/overview/architecture" element={<RobotArchitecturePage />} />
+          <Route path="/resources/documentation/robot/overview/how-robot-works" element={<HowRobotWorksPage />} />
+          <Route path="/resources/documentation/robot/overview/agent-model" element={<AgentModelPage />} />
+          <Route path="/resources/documentation/robot/overview/current-status" element={<CurrentStatusPage />} />
+          <Route path="/resources/documentation/robot/overview/long-term-vision" element={<LongTermVisionPage />} />
+
+          <Route path="/resources/documentation/robot/getting-started/prerequisites" element={<RobotPrerequisitesPage />} />
+          <Route path="/resources/documentation/robot/getting-started/installation" element={<RobotInstallationPage />} />
+          <Route path="/resources/documentation/robot/getting-started/quickstart" element={<RobotQuickstartPage />} />
+          <Route path="/resources/documentation/robot/getting-started/create-first-agent" element={<RobotCreateFirstAgentPage />} />
+          <Route path="/resources/documentation/robot/getting-started/run-first-task" element={<RobotRunFirstTaskPage />} />
+          <Route path="/resources/documentation/robot/getting-started/next-steps" element={<RobotNextStepsPage />} />
+
+          <Route path="/resources/documentation/robot/build-with-craftly/agents" element={<RobotAgentsPage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/tasks" element={<RobotTasksPage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/tools" element={<RobotToolsPage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/workflows" element={<RobotWorkflowsPage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/context-memory" element={<RobotContextMemoryPage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/agent-runtime" element={<RobotAgentRuntimePage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/integrations" element={<RobotIntegrationsPage />} />
+          <Route path="/resources/documentation/robot/build-with-craftly/custom-agents" element={<RobotCustomAgentsPage />} />
+
+          <Route path="/resources/documentation/robot/feature-overview/agentic-ai" element={<RobotAgenticAIPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/tool-use" element={<RobotToolUsePage />} />
+          <Route path="/resources/documentation/robot/feature-overview/planning-reasoning" element={<RobotPlanningReasoningPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/agent-discovery" element={<RobotAgentDiscoveryPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation" element={<RobotAgentNegotiationPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/multi-agent-coordination" element={<RobotMultiAgentCoordinationPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/privacy-boundaries" element={<RobotPrivacyBoundariesPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/human-confirmation" element={<RobotHumanConfirmationPage />} />
+          <Route path="/resources/documentation/robot/feature-overview/real-world-task-coordination" element={<RobotRealWorldTaskCoordinationPage />} />
           <Route path="/resources/blog" element={<BlogPage />} />
           <Route path="/resources/support" element={<SupportPage />} />
           <Route path="/resources/releases" element={<ReleasesPage />} />
@@ -191,4 +216,5 @@ export default function App() {
     </Layout>
   );
 }
+
 

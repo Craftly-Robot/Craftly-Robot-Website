@@ -1,10 +1,10 @@
-import DocsLayout from '../../DocsLayout';
+﻿import DocsLayout from '../../DocsLayout';
 
 export default function MultiAgentCoordinationPage() {
   return (
     <DocsLayout 
-      title="Multi-Agent Coordination — Craftly Robot"
-      description="Multi-Agent Coordination feature in Craftly Robot"
+      title="Multi-Agent Coordination â€” Craftly Robot"
+      description="Multi-Agent Coordination in Craftly Robot"
       tocItems={[
         { id: 'multi-agent-coordination', label: 'Multi-Agent Coordination' }
       ]}
@@ -14,7 +14,7 @@ export default function MultiAgentCoordinationPage() {
       </div>
 
       <h1 className="docs__title" id="multi-agent-coordination">Multi-Agent Coordination</h1>
-      <p className="docs__text">Orchestrate complex workflows involving multiple specialized agents.</p>
+      <p className="docs__text">Content coming soon...</p>
     </DocsLayout>
   );
 }

@@ -1,10 +1,10 @@
-import DocsLayout from '../../DocsLayout';
+﻿import DocsLayout from '../../DocsLayout';
 
 export default function ToolUsePage() {
   return (
     <DocsLayout 
-      title="Tool Use — Craftly Robot"
-      description="Tool Use feature in Craftly Robot"
+      title="Tool Use â€” Craftly Robot"
+      description="Tool Use in Craftly Robot"
       tocItems={[
         { id: 'tool-use', label: 'Tool Use' }
       ]}
@@ -14,7 +14,7 @@ export default function ToolUsePage() {
       </div>
 
       <h1 className="docs__title" id="tool-use">Tool Use</h1>
-      <p className="docs__text">Secure and robust integration with external tools and APIs.</p>
+      <p className="docs__text">Content coming soon...</p>
     </DocsLayout>
   );
 }

@@ -263,3 +263,9 @@
   width: 2px;
   background-color: #1a73e8;
 }
+
+.docs__nav-subitem--toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

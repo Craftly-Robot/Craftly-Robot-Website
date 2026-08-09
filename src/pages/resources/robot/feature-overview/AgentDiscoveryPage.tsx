@@ -1,10 +1,10 @@
-import DocsLayout from '../../DocsLayout';
+﻿import DocsLayout from '../../DocsLayout';
 
 export default function AgentDiscoveryPage() {
   return (
     <DocsLayout 
-      title="Agent Discovery — Craftly Robot"
-      description="Agent Discovery feature in Craftly Robot"
+      title="Agent Discovery â€” Craftly Robot"
+      description="Agent Discovery in Craftly Robot"
       tocItems={[
         { id: 'agent-discovery', label: 'Agent Discovery' }
       ]}
@@ -14,7 +14,7 @@ export default function AgentDiscoveryPage() {
       </div>
 
       <h1 className="docs__title" id="agent-discovery">Agent Discovery</h1>
-      <p className="docs__text">Dynamically find and connect with other agents on the network.</p>
+      <p className="docs__text">Content coming soon...</p>
     </DocsLayout>
   );
 }

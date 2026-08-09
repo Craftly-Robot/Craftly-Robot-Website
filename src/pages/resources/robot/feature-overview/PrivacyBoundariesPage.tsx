@@ -1,10 +1,10 @@
-import DocsLayout from '../../DocsLayout';
+﻿import DocsLayout from '../../DocsLayout';
 
 export default function PrivacyBoundariesPage() {
   return (
     <DocsLayout 
-      title="Privacy Boundaries — Craftly Robot"
-      description="Privacy Boundaries feature in Craftly Robot"
+      title="Privacy Boundaries â€” Craftly Robot"
+      description="Privacy Boundaries in Craftly Robot"
       tocItems={[
         { id: 'privacy-boundaries', label: 'Privacy Boundaries' }
       ]}
@@ -14,7 +14,7 @@ export default function PrivacyBoundariesPage() {
       </div>
 
       <h1 className="docs__title" id="privacy-boundaries">Privacy Boundaries</h1>
-      <p className="docs__text">Secure communication channels with strict data privacy boundaries.</p>
+      <p className="docs__text">Content coming soon...</p>
     </DocsLayout>
   );
 }
