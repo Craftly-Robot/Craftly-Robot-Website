@@ -309,17 +309,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
             </div>
           )}
           
-          <div className="docs__nav-item docs__nav-item--with-meta">
-            <span className="docs__nav-text">Migration</span>
-            <div className="docs__nav-meta">
-              <ChevronRight />
-            </div>
-          </div>
-          
-          <div className="docs__nav-item">
-            <span className="docs__nav-text">Enterprise</span>
-          </div>
-          
           <div className="docs__nav-item">
             <span className="docs__nav-text">Plans</span>
           </div>
