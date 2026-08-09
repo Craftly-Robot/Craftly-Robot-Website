@@ -84,6 +84,9 @@ export default function OnboardingQuestionsPage() {
 
       <h1 className="docs__title" id="onboarding-questions">Onboarding Questions</h1>
       
+      <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>How the Onboarding Questions Work</h2>
+      <p className="docs__text">Once you choose “I want to join”, the Craftly onboarding assistant will guide you through a series of questions one step at a time. Answer each question clearly and follow the format requested by the assistant. After some answers, the assistant may ask you to confirm the information before continuing.</p>
+      
       <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', margin: '32px 0' }}>
         {questionsData.map((q) => (
           <div key={q.id} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
