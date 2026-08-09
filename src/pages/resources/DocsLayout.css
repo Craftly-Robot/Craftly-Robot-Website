@@ -43,7 +43,7 @@
   justify-content: space-between;
   padding: 10px 16px;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: #3c4043;
   text-decoration: none;
@@ -125,7 +125,7 @@
 }
 
 .docs__text {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
   color: #202124;
   margin-bottom: 16px;
@@ -136,7 +136,7 @@
   padding-left: 24px;
   margin-bottom: 16px;
   color: #202124;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .docs__list li {
@@ -168,7 +168,7 @@
 }
 
 .docs__toc-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #202124;
   margin-bottom: 16px;
@@ -187,7 +187,7 @@
 
 .docs__toc-item a {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   color: #5f6368;
   text-decoration: none;
   padding-left: 16px;
