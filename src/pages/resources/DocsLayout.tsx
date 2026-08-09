@@ -15,10 +15,11 @@ function ChevronRight({ isOpen }: { isOpen?: boolean }) {
 interface DocsLayoutProps {
   title: string;
   description: string;
+  tocItems?: { id: string; label: string }[];
   children: ReactNode;
 }
 
-export default function DocsLayout({ title, description, children }: DocsLayoutProps) {
+export default function DocsLayout({ title, description, tocItems = [], children }: DocsLayoutProps) {
   const [activeId, setActiveId] = useState<string>('welcome');
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(true);
 
@@ -74,20 +75,20 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
           
           {isRobotOpen && (
             <div className="docs__nav-subnav">
-              <a href="#overview" className={`docs__nav-subitem ${activeId === 'overview' ? 'docs__nav-subitem--active' : ''}`}>Overview</a>
-              <a href="#getting-started" className={`docs__nav-subitem ${activeId === 'getting-started' ? 'docs__nav-subitem--active' : ''}`}>Getting Started</a>
-              <a href="#build-with-craftly" className={`docs__nav-subitem ${activeId === 'build-with-craftly' ? 'docs__nav-subitem--active' : ''}`}>Build with Craftly</a>
-              <a href="#feature-overview" className={`docs__nav-subitem ${activeId === 'feature-overview' ? 'docs__nav-subitem--active' : ''}`}>Feature Overview</a>
+              <NavLink to="/resources/documentation/overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Overview</NavLink>
+              <NavLink to="/resources/documentation/getting-started" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Getting Started</NavLink>
+              <NavLink to="/resources/documentation/build-with-craftly" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Build with Craftly</NavLink>
+              <NavLink to="/resources/documentation/feature-overview" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Feature Overview</NavLink>
               <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                <a href="#agentic-ai-feature" className={`docs__nav-subitem ${activeId === 'agentic-ai-feature' ? 'docs__nav-subitem--active' : ''}`}>Agentic AI</a>
-                <a href="#tool-use-feature" className={`docs__nav-subitem ${activeId === 'tool-use-feature' ? 'docs__nav-subitem--active' : ''}`}>Tool Use</a>
-                <a href="#agent-discovery-feature" className={`docs__nav-subitem ${activeId === 'agent-discovery-feature' ? 'docs__nav-subitem--active' : ''}`}>Agent Discovery</a>
-                <a href="#agent-negotiation-feature" className={`docs__nav-subitem ${activeId === 'agent-negotiation-feature' ? 'docs__nav-subitem--active' : ''}`}>Agent-to-Agent Negotiation</a>
-                <a href="#multi-agent-coordination-feature" className={`docs__nav-subitem ${activeId === 'multi-agent-coordination-feature' ? 'docs__nav-subitem--active' : ''}`}>Multi-Agent Coordination</a>
-                <a href="#privacy-aware-communication-feature" className={`docs__nav-subitem ${activeId === 'privacy-aware-communication-feature' ? 'docs__nav-subitem--active' : ''}`}>Privacy Boundaries</a>
-                <a href="#human-confirmation-feature" className={`docs__nav-subitem ${activeId === 'human-confirmation-feature' ? 'docs__nav-subitem--active' : ''}`}>Human Confirmation</a>
+                <a href="/resources/documentation/feature-overview#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
+                <a href="/resources/documentation/feature-overview#tool-use-feature" className="docs__nav-subitem">Tool Use</a>
+                <a href="/resources/documentation/feature-overview#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
+                <a href="/resources/documentation/feature-overview#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
+                <a href="/resources/documentation/feature-overview#multi-agent-coordination-feature" className="docs__nav-subitem">Multi-Agent Coordination</a>
+                <a href="/resources/documentation/feature-overview#privacy-aware-communication-feature" className="docs__nav-subitem">Privacy Boundaries</a>
+                <a href="/resources/documentation/feature-overview#human-confirmation-feature" className="docs__nav-subitem">Human Confirmation</a>
               </div>
-              <a href="#projects" className={`docs__nav-subitem ${activeId === 'projects' ? 'docs__nav-subitem--active' : ''}`}>Projects</a>
+              <NavLink to="/resources/documentation/projects" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Projects</NavLink>
             </div>
           )}
           
@@ -119,38 +120,18 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
 
       {/* Right Sidebar */}
       <aside className="docs__sidebar docs__sidebar--right">
-        <div className="docs__toc">
-          <h4 className="docs__toc-title">On this Page</h4>
-          <ul className="docs__toc-list">
-            <li className={`docs__toc-item ${activeId === 'welcome' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#welcome">Welcome to Craftly</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'choose-surface' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#choose-surface">Choose Your Surface</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'craftly-workspace' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#craftly-workspace">Craftly Workspace</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'craftly-robot' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#craftly-robot">Craftly Robot</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'overview' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#overview">Overview</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'getting-started' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#getting-started">Getting Started</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'build-with-craftly' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#build-with-craftly">Build with Craftly</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'feature-overview' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#feature-overview">Feature Overview</a>
-            </li>
-            <li className={`docs__toc-item ${activeId === 'projects' ? 'docs__toc-item--active' : ''}`}>
-              <a href="#projects">Projects</a>
-            </li>
-          </ul>
-        </div>
+        {tocItems.length > 0 && (
+          <div className="docs__toc">
+            <h4 className="docs__toc-title">On this Page</h4>
+            <ul className="docs__toc-list">
+              {tocItems.map((item) => (
+                <li key={item.id} className={`docs__toc-item ${activeId === item.id ? 'docs__toc-item--active' : ''}`}>
+                  <a href={`#${item.id}`}>{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </aside>
     </div>
   );

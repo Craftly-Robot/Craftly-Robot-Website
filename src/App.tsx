@@ -11,6 +11,11 @@ const OperationsPage = lazy(() => import('./pages/use-cases/OperationsPage'));
 const AgentNegotiationPage = lazy(() => import('./pages/use-cases/AgentNegotiationPage'));
 const AIPage = lazy(() => import('./pages/use-cases/AIPage'));
 const DocumentationPage = lazy(() => import('./pages/resources/DocumentationPage'));
+const OverviewPage = lazy(() => import('./pages/resources/robot/OverviewPage'));
+const GettingStartedPage = lazy(() => import('./pages/resources/robot/GettingStartedPage'));
+const BuildWithCraftlyPage = lazy(() => import('./pages/resources/robot/BuildWithCraftlyPage'));
+const FeatureOverviewPage = lazy(() => import('./pages/resources/robot/FeatureOverviewPage'));
+const ProjectsPage = lazy(() => import('./pages/resources/robot/ProjectsPage'));
 const BlogPage = lazy(() => import('./pages/resources/BlogPage'));
 const SupportPage = lazy(() => import('./pages/resources/SupportPage'));
 const ReleasesPage = lazy(() => import('./pages/resources/ReleasesPage'));
@@ -43,6 +48,11 @@ export default function App() {
 
           {/* Resource pages */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
+          <Route path="/resources/documentation/overview" element={<OverviewPage />} />
+          <Route path="/resources/documentation/getting-started" element={<GettingStartedPage />} />
+          <Route path="/resources/documentation/build-with-craftly" element={<BuildWithCraftlyPage />} />
+          <Route path="/resources/documentation/feature-overview" element={<FeatureOverviewPage />} />
+          <Route path="/resources/documentation/projects" element={<ProjectsPage />} />
           <Route path="/resources/blog" element={<BlogPage />} />
           <Route path="/resources/support" element={<SupportPage />} />
           <Route path="/resources/releases" element={<ReleasesPage />} />
