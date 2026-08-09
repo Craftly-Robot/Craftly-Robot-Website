@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
 .footer {
   background: #ffffff;
   color: #202124;
@@ -90,14 +92,24 @@
 }
 
 .footer__huge-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(60px, 15vw, 250px);
   font-weight: 500;
   line-height: 1;
-  color: #171717;
+  color: #000000;
   letter-spacing: -4px;
   text-align: center;
   white-space: nowrap;
+}
+
+.footer__special-o {
+  letter-spacing: -2px;
+}
+
+.footer__special-t {
+  display: inline-block;
+  transform: scaleY(1.2) translateY(-0.04em);
+  margin-left: -2px;
 }
 
 /* ── Bottom Section ── */
