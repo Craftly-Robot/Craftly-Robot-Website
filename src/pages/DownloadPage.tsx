@@ -21,6 +21,12 @@ const LinuxIcon = () => (
   <img src="/assets/brand/linux-logo.png" alt="Linux" width="20" height="20" style={{ objectFit: 'contain' }} />
 );
 
+const AndroidIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997zm-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997zm11.4045-6.02l1.9973-3.4592c.1158-.201.0475-.4587-.1545-.5745-.2015-.1158-.4587-.0461-.5745.1545L17.11 8.971C15.6575 8.2934 13.9103 7.874 12 7.874c-1.9103 0-3.6575.4194-5.11 1.097l-2.0398-3.5288c-.1158-.2006-.373-.2703-.5745-.1545-.202.1158-.2703.3735-.1545.5745l1.9973 3.4592C2.6953 10.334 0 13.921 0 18.2323h24c0-4.3113-2.6953-7.8983-6.1185-9.3109z"/>
+  </svg>
+);
+
 interface ProductSectionProps {
   title: string;
   version: string;
@@ -98,9 +104,51 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           </div>
         </div>
       </div>
+
+      <div className="download-columns" style={{ marginTop: '24px' }}>
+        {/* Android Column */}
+        <div className="os-column">
+          <h3 className="os-title">
+            <AndroidIcon /> Android
+          </h3>
+          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+            Download APK
+          </a>
+          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+            Get it on Google Play
+          </a>
+          
+          <div className="min-reqs">
+            <div className="min-reqs__title">Minimum Requirements</div>
+            <div className="min-reqs__text">
+              Android 8.0 (Oreo) or later.
+            </div>
+          </div>
+        </div>
+
+        {/* iOS Column */}
+        <div className="os-column">
+          <h3 className="os-title">
+            <AppleIcon /> iOS
+          </h3>
+          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+            Download on the App Store
+          </a>
+          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5, visibility: 'hidden' } : { visibility: 'hidden' }}>
+            Placeholder
+          </a>
+          
+          <div className="min-reqs">
+            <div className="min-reqs__title">Minimum Requirements</div>
+            <div className="min-reqs__text">
+              iOS 15.0 or later. Compatible with iPhone, iPad, and iPod touch.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 function TypewriterTitle({ text }: { text: string }) {
   const [displayedText, setDisplayedText] = useState('');
