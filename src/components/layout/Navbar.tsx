@@ -120,16 +120,15 @@ export default function Navbar() {
       role="banner"
     >
       <div className="navbar__inner">
-        {/* Logo */}
+        {/* Left Side: Logo + Nav */}
         <div className="navbar__left">
           <Link to="/" className="navbar__logo" aria-label="Craftly Home">
             <div className="navbar__logo-container">
               <span className="navbar__logo-text">Craftly</span>
             </div>
           </Link>
-        </div>
 
-        {/* Desktop Navigation */}
+          {/* Desktop Navigation */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
           {navigation.map((item) => (
             <div 
@@ -204,6 +203,7 @@ export default function Navbar() {
             </div>
           ))}
         </nav>
+        </div>
 
         {/* Download Button */}
         <div className="navbar__right">

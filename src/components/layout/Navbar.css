@@ -30,6 +30,7 @@
   flex: 1;
   display: flex;
   align-items: center;
+  gap: 32px;
 }
 
 .navbar__logo {
@@ -50,16 +51,16 @@
 .navbar__nav {
   display: flex;
   align-items: center;
-  gap: var(--space-xl);
+  gap: 4px;
 }
 
 .navbar__nav-item {
   display: flex;
   align-items: center;
-  gap: var(--space-2xs);
-  padding: 8px 16px;
+  gap: 6px;
+  padding: 6px 14px;
   border-radius: 9999px;
-  font-size: var(--text-sm);
+  font-size: 15px;
   font-weight: 500;
   color: var(--color-text);
   background: transparent;
@@ -87,7 +88,7 @@
 /* ── Dropdowns ── */
 .navbar__dropdown-wrapper {
   position: absolute;
-  top: var(--nav-height);
+  top: 100%;
   left: 0;
   width: 100vw;
   pointer-events: none;
@@ -99,12 +100,12 @@
 
 .navbar__dropdown {
   pointer-events: auto;
-  background: var(--color-bg);
+  background: #ffffff;
   border: 1px solid var(--color-border);
   border-top: none;
-  border-radius: 0 0 2.5rem 2.5rem;
-  padding: var(--space-4xl) var(--space-4xl);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 24px 24px;
+  padding: 40px 48px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
   width: 100%;
   max-width: var(--container-wide);
   margin-top: 0;
@@ -129,26 +130,26 @@
 /* ── Mega Menu Layout ── */
 .navbar__mega {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 0; /* Handled by padding */
+  grid-template-columns: 320px 1fr;
+  gap: 0;
 }
 
 .navbar__mega-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: var(--space-3xl);
-  border-right: 1px solid var(--color-border-subtle);
+  padding-right: 48px;
+  border-right: 1px solid #eaeaeb;
 }
 
 .navbar__mega-title {
-  font-size: var(--text-h2);
-  font-weight: 600;
-  line-height: var(--leading-tight);
-  margin-bottom: var(--space-xl);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-text);
-  max-width: 250px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+  color: #202124;
+  max-width: 260px;
 }
 
 .navbar__mega-btn {
@@ -172,14 +173,14 @@
 .navbar__mega-right {
   display: flex;
   flex-direction: column;
-  padding-left: var(--space-3xl);
+  padding-left: 48px;
 }
 
 .navbar__mega-list-title {
   font-size: 14px;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-md);
-  padding-left: var(--space-sm);
+  color: #5f6368;
+  margin-bottom: 16px;
+  padding-left: 12px;
   font-weight: 400;
 }
 
