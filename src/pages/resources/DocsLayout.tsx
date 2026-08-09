@@ -74,20 +74,20 @@ export default function DocsLayout({ title, description, children }: DocsLayoutP
           
           {isRobotOpen && (
             <div className="docs__nav-subnav">
-              <a href="#overview" className="docs__nav-subitem">Overview</a>
-              <a href="#getting-started" className="docs__nav-subitem">Getting Started</a>
-              <a href="#build-with-craftly" className="docs__nav-subitem">Build with Craftly</a>
-              <a href="#feature-overview" className="docs__nav-subitem">Feature Overview</a>
-              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '16px' }}>
-                <a href="#agentic-ai-feature" className="docs__nav-subitem">Agentic AI</a>
-                <a href="#tool-use-feature" className="docs__nav-subitem">Tool Use</a>
-                <a href="#agent-discovery-feature" className="docs__nav-subitem">Agent Discovery</a>
-                <a href="#agent-negotiation-feature" className="docs__nav-subitem">Agent-to-Agent Negotiation</a>
-                <a href="#multi-agent-coordination-feature" className="docs__nav-subitem">Multi-Agent Coordination</a>
-                <a href="#privacy-aware-communication-feature" className="docs__nav-subitem">Privacy Boundaries</a>
-                <a href="#human-confirmation-feature" className="docs__nav-subitem">Human Confirmation</a>
+              <a href="#overview" className={`docs__nav-subitem ${activeId === 'overview' ? 'docs__nav-subitem--active' : ''}`}>Overview</a>
+              <a href="#getting-started" className={`docs__nav-subitem ${activeId === 'getting-started' ? 'docs__nav-subitem--active' : ''}`}>Getting Started</a>
+              <a href="#build-with-craftly" className={`docs__nav-subitem ${activeId === 'build-with-craftly' ? 'docs__nav-subitem--active' : ''}`}>Build with Craftly</a>
+              <a href="#feature-overview" className={`docs__nav-subitem ${activeId === 'feature-overview' ? 'docs__nav-subitem--active' : ''}`}>Feature Overview</a>
+              <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
+                <a href="#agentic-ai-feature" className={`docs__nav-subitem ${activeId === 'agentic-ai-feature' ? 'docs__nav-subitem--active' : ''}`}>Agentic AI</a>
+                <a href="#tool-use-feature" className={`docs__nav-subitem ${activeId === 'tool-use-feature' ? 'docs__nav-subitem--active' : ''}`}>Tool Use</a>
+                <a href="#agent-discovery-feature" className={`docs__nav-subitem ${activeId === 'agent-discovery-feature' ? 'docs__nav-subitem--active' : ''}`}>Agent Discovery</a>
+                <a href="#agent-negotiation-feature" className={`docs__nav-subitem ${activeId === 'agent-negotiation-feature' ? 'docs__nav-subitem--active' : ''}`}>Agent-to-Agent Negotiation</a>
+                <a href="#multi-agent-coordination-feature" className={`docs__nav-subitem ${activeId === 'multi-agent-coordination-feature' ? 'docs__nav-subitem--active' : ''}`}>Multi-Agent Coordination</a>
+                <a href="#privacy-aware-communication-feature" className={`docs__nav-subitem ${activeId === 'privacy-aware-communication-feature' ? 'docs__nav-subitem--active' : ''}`}>Privacy Boundaries</a>
+                <a href="#human-confirmation-feature" className={`docs__nav-subitem ${activeId === 'human-confirmation-feature' ? 'docs__nav-subitem--active' : ''}`}>Human Confirmation</a>
               </div>
-              <a href="#projects" className="docs__nav-subitem">Projects</a>
+              <a href="#projects" className={`docs__nav-subitem ${activeId === 'projects' ? 'docs__nav-subitem--active' : ''}`}>Projects</a>
             </div>
           )}
           
