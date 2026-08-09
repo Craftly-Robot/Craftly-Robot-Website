@@ -18,7 +18,22 @@ export default function OnboardingQuestionsPage() {
       ), 
       textBelow: "" 
     },
-    { id: 3, textAbove: "", textBelow: "" },
+    { 
+      id: 3, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>2. Gender</h2>
+          <p className="docs__text">The onboarding assistant will ask you to select your gender.</p>
+          <p className="docs__text">Choose the option that best describes you from the available choices, then confirm your selection when the assistant asks you to verify it.</p>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example:</p>
+            <p style={{ margin: 0, fontSize: '15px' }}>Male</p>
+          </div>
+          <p className="docs__text" style={{ marginBottom: '16px' }}><strong>Expected answer:</strong> Select one of the available gender options, then confirm when prompted.</p>
+        </>
+      ), 
+      textBelow: "" 
+    },
     { id: 4, textAbove: "", textBelow: "" },
     { id: 5, textAbove: "", textBelow: "" },
     { id: 6, textAbove: "", textBelow: "" },
