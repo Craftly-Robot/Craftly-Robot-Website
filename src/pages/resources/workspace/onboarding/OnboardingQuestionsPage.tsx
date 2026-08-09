@@ -1,4 +1,4 @@
-﻿import DocsLayout from '../../DocsLayout';
+import DocsLayout from '../../DocsLayout';
 
 export default function OnboardingQuestionsPage() {
   return (
@@ -14,7 +14,20 @@ export default function OnboardingQuestionsPage() {
       </div>
 
       <h1 className="docs__title" id="onboarding-questions">Onboarding Questions</h1>
-      <p className="docs__text">Content coming soon...</p>
+      
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', margin: '32px 0' }}>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-1.png" alt="Onboarding Question 1" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-1.png</p>'; }} />
+        </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-2.png" alt="Onboarding Question 2" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-2.png</p>'; }} />
+        </div>
+        <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/assets/onboarding/question-3.png" alt="Onboarding Question 3" style={{ width: '100%', display: 'block' }} onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<p style=\"color:#5f6368;font-family:inherit;\">Image placeholder: /assets/onboarding/question-3.png</p>'; }} />
+        </div>
+      </div>
+      
+      <p className="docs__text">More content coming soon...</p>
     </DocsLayout>
   );
 }
