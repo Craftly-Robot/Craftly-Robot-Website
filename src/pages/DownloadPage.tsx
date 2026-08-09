@@ -32,9 +32,20 @@ interface ProductSectionProps {
   version: string;
   id: string;
   disabled?: boolean;
+  links?: {
+    macAppleSilicon?: string;
+    macIntel?: string;
+    winX64?: string;
+    winArm64?: string;
+    linuxX64?: string;
+    linuxArm64?: string;
+    androidApk?: string;
+    androidPlayStore?: string;
+    iosAppStore?: string;
+  };
 }
 
-const ProductDownloadSection = ({ title, version, id, disabled }: ProductSectionProps) => {
+const ProductDownloadSection = ({ title, version, id, disabled, links }: ProductSectionProps) => {
   return (
     <div className="download-section" id={id}>
       <div className="section-header">
@@ -48,10 +59,10 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <AppleIcon /> macOS
           </h3>
-          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.macAppleSilicon || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for Apple Silicon
           </a>
-          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.macIntel || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for Intel
           </a>
           
@@ -68,10 +79,10 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <WindowsIcon /> Windows
           </h3>
-          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.winX64 || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for x64
           </a>
-          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.winArm64 || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for ARM64
           </a>
           
@@ -88,10 +99,10 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <LinuxIcon /> Linux
           </h3>
-          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.linuxX64 || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for x64
           </a>
-          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.linuxArm64 || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for ARM64
           </a>
 
@@ -111,10 +122,10 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <AndroidIcon /> Android
           </h3>
-          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.androidApk || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download APK
           </a>
-          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.androidPlayStore || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Get it on Google Play
           </a>
           
@@ -131,7 +142,7 @@ const ProductDownloadSection = ({ title, version, id, disabled }: ProductSection
           <h3 className="os-title">
             <AppleIcon /> iOS
           </h3>
-          <a href="#" className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.iosAppStore || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download on the App Store
           </a>
           <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5, visibility: 'hidden' } : { visibility: 'hidden' }}>
