@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useOS } from '../hooks/useOS';
@@ -133,7 +133,6 @@ function TypewriterTitle({ text }: { text: string }) {
 export default function DownloadPage() {
   const revealRef = useScrollReveal();
   const osName = useOS();
-  const [activeProduct, setActiveProduct] = useState<'workspace' | 'robot'>('workspace');
 
   return (
     <>
@@ -147,30 +146,23 @@ export default function DownloadPage() {
           <TypewriterTitle text={`Download Craftly for ${osName}`} />
           
           <div className="download-product-tabs">
-            <button
-              className={`product-tab ${activeProduct === 'workspace' ? 'product-tab--active' : ''}`}
-              onClick={() => setActiveProduct('workspace')}
-            >
+            <a href="#workspace" className="product-tab product-tab--active">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg>
               Craftly Workspace
-            </button>
-            <button
-              className={`product-tab ${activeProduct === 'robot' ? 'product-tab--active' : ''}`}
-              onClick={() => setActiveProduct('robot')}
-            >
+            </a>
+            <a href="#robot" className="product-tab">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2" /><path d="M20 14h2" /><path d="M15 13v2" /><path d="M9 13v2" /></svg>
               Craftly Robot
-            </button>
+            </a>
           </div>
         </div>
 
-        {activeProduct === 'workspace' && (
-          <ProductDownloadSection title="Craftly Workspace" version="2.6.0" id="workspace" />
-        )}
+        <ProductDownloadSection title="Craftly Workspace" version="2.6.0" id="workspace" />
         
-        {activeProduct === 'robot' && (
-          <ProductDownloadSection title="Craftly Robot" version="2.1.1" id="robot" disabled={true} />
-        )}
+        {/* Divider */}
+        <hr style={{ border: 'none', borderTop: '1px solid var(--color-border-subtle)', margin: '48px 0' }} />
+
+        <ProductDownloadSection title="Craftly Robot" version="2.1.1" id="robot" disabled={true} />
       </div>
     </>
   );
