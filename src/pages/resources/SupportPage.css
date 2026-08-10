@@ -125,7 +125,7 @@
 }
 
 .support-card__link {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--color-text);
   display: flex;

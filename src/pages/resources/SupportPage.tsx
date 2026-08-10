@@ -32,7 +32,7 @@ export default function SupportPage() {
               <p className="support-card__desc">Join the conversation</p>
             </div>
             <div className="support-card__footer">
-              <span className="support-card__link">Visit <span className="support-card__arrow">&gt;</span></span>
+              <span className="support-card__link">Visit <span className="support-card__arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></span>
             </div>
           </a>
 
@@ -48,7 +48,7 @@ export default function SupportPage() {
               <p className="support-card__desc">Connect with us</p>
             </div>
             <div className="support-card__footer">
-              <span className="support-card__link">Visit <span className="support-card__arrow">&gt;</span></span>
+              <span className="support-card__link">Visit <span className="support-card__arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></span>
             </div>
           </a>
 
@@ -64,7 +64,7 @@ export default function SupportPage() {
               <p className="support-card__desc">Stay updated</p>
             </div>
             <div className="support-card__footer">
-              <span className="support-card__link">Visit <span className="support-card__arrow">&gt;</span></span>
+              <span className="support-card__link">Visit <span className="support-card__arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></span>
             </div>
           </a>
         </div>
