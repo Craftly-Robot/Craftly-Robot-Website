@@ -263,10 +263,58 @@ export default function OnboardingQuestionsPage() {
       ), 
       textBelow: "" 
     },
-    { id: 20, textAbove: "", textBelow: "" },
-    { id: 21, textAbove: "", textBelow: "" },
-    { id: 22, textAbove: "", textBelow: "" },
-    { id: 23, textAbove: "", textBelow: "" }
+    { 
+      id: 20, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" id="q-19" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>17. Harmful Social Media Content</h2>
+          <p className="docs__text"><strong>Question:</strong> If you ever see someone writing harmful things about Craftly on social media, what will you do?</p>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
+            <p style={{ margin: 0, fontSize: '15px' }}>I will handle the situation strategically and professionally. I will avoid engaging in unnecessary arguments, verify the information, and report or escalate the issue to the appropriate team so that the correct response can be taken.</p>
+          </div>
+        </>
+      ), 
+      textBelow: "" 
+    },
+    { 
+      id: 21, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" id="q-20" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>18. Unfair Instructions</h2>
+          <p className="docs__text"><strong>Question:</strong> If a leader or someone above you instructs you to do something unfair according to Craftly’s Constitution, what will you do?</p>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
+            <p style={{ margin: 0, fontSize: '15px' }}>I would respectfully explain my concerns and follow Craftly’s Constitution and principles. I would not carry out an unfair instruction, and if necessary, I would raise the issue through the appropriate channel while remaining professional and objective.</p>
+          </div>
+        </>
+      ), 
+      textBelow: "" 
+    },
+    { 
+      id: 22, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" id="q-21" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>19. Confirmation of Information</h2>
+          <p className="docs__text"><strong>Question:</strong> Last step: do you confirm all information you gave is true and written by you? Reply yes to continue.</p>
+          <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
+            <p style={{ margin: 0, fontSize: '15px' }}>Yes.</p>
+          </div>
+        </>
+      ), 
+      textBelow: "" 
+    },
+    { 
+      id: 23, 
+      textAbove: (
+        <>
+          <h2 className="docs__subtitle" id="q-22" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>20. Onboarding Completed</h2>
+          <p className="docs__text">Now complete your onboarding. Then download our Key and Workspace, and use the Key to log in to the Workspace.</p>
+        </>
+      ), 
+      textBelow: "" 
+    }
   ];
 
   return (
@@ -292,7 +340,11 @@ export default function OnboardingQuestionsPage() {
         { id: 'q-15', label: '13. Department Choice' },
         { id: 'q-16', label: '14. Hardest Achievement' },
         { id: 'q-17', label: '15. Technical Achievement' },
-        { id: 'q-18', label: '16. Goals at Craftly' }
+        { id: 'q-18', label: '16. Goals at Craftly' },
+        { id: 'q-19', label: '17. Harmful Social Media Content' },
+        { id: 'q-20', label: '18. Unfair Instructions' },
+        { id: 'q-21', label: '19. Confirmation of Information' },
+        { id: 'q-22', label: '20. Onboarding Completed' }
       ]}
     >
       <div className="docs__breadcrumb">
