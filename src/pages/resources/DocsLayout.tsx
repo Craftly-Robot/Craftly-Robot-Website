@@ -114,6 +114,15 @@ export default function DocsLayout({ title, description, tocItems = [], children
     return () => sidebar.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (activeId) {
+      const activeElement = document.getElementById(`toc-${activeId}`);
+      if (activeElement) {
+        activeElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  }, [activeId]);
+
   return (
     <div className="docs__container">
       <Helmet>
@@ -354,7 +363,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <h4 className="docs__toc-title">On this Page</h4>
             <ul className="docs__toc-list">
               {tocItems.map((item) => (
-                <li key={item.id} className={`docs__toc-item ${activeId === item.id ? 'docs__toc-item--active' : ''}`}>
+                <li key={item.id} id={`toc-${item.id}`} className={`docs__toc-item ${activeId === item.id ? 'docs__toc-item--active' : ''}`}>
                   <a href={`#${item.id}`}>{item.label}</a>
                 </li>
               ))}
