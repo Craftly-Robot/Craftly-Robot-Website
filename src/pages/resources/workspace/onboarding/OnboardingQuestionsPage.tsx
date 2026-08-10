@@ -309,8 +309,8 @@ export default function OnboardingQuestionsPage() {
       id: 23, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" id="q-22" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>20. Onboarding Completed</h2>
-          <p className="docs__text">Now complete your onboarding. Then download our Key and Workspace, and use the Key to log in to the Workspace.</p>
+          <h2 className="docs__subtitle" id="q-22" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>20. Onboarding Questions Completed</h2>
+          <p className="docs__text">Now complete your onboarding question. Then download our Key and Workspace, and use the Key to log in to the Workspace.</p>
         </>
       ), 
       textBelow: "" 
@@ -344,7 +344,7 @@ export default function OnboardingQuestionsPage() {
         { id: 'q-19', label: '17. Harmful Social Media Content' },
         { id: 'q-20', label: '18. Unfair Instructions' },
         { id: 'q-21', label: '19. Confirmation of Information' },
-        { id: 'q-22', label: '20. Onboarding Completed' }
+        { id: 'q-22', label: '20. Onboarding Questions Completed' }
       ]}
     >
       <div className="docs__breadcrumb">
