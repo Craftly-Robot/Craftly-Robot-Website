@@ -74,7 +74,7 @@
   background-color: #f8f9fa;
   border-radius: 24px;
   padding: var(--space-xl);
-  width: 320px;
+  width: 380px;
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
@@ -88,8 +88,8 @@
 }
 
 .support-card__icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
@@ -139,5 +139,5 @@
 }
 
 .support-card:hover .support-card__arrow {
-  transform: translateX(4px);
+  transform: translateX(8px);
 }

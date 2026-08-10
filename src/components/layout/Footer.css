@@ -32,7 +32,7 @@
 }
 
 .footer__heading {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -41,7 +41,7 @@
 
 @media (min-width: 768px) {
   .footer__heading {
-    font-size: 40px;
+    font-size: 28px;
   }
 }
 
