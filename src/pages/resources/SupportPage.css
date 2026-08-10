@@ -127,12 +127,12 @@
 }
 
 .support-card__link {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #111;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .support-card__arrow {
