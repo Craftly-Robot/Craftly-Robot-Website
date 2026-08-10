@@ -23,6 +23,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 100px 80px 40px;
+    align-items: flex-start;
   }
 }
 
@@ -31,12 +32,18 @@
   margin-bottom: 48px;
 }
 
+@media (min-width: 768px) {
+  .footer__top-left {
+    margin-bottom: 0;
+  }
+}
+
 .footer__heading {
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.5px;
-  color: #111;
+  color: #000000;
   margin-top: 0;
 }
 
@@ -75,7 +82,7 @@
 .footer__link {
   font-size: 15px;
   font-weight: 500;
-  color: #111;
+  color: #000000;
   text-decoration: none;
   transition: opacity 150ms ease;
 }
