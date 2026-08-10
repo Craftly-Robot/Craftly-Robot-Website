@@ -27,6 +27,19 @@
   letter-spacing: -0.02em;
   color: var(--color-text);
   margin: 0;
+  opacity: 0;
+  animation: slideUpFade 0.8s var(--ease-out) forwards;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .support-hero__btn {
