@@ -36,7 +36,8 @@
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.5px;
-  color: #202124;
+  color: #111;
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
@@ -47,12 +48,12 @@
 
 .footer__top-right {
   display: flex;
-  gap: 64px;
+  gap: 80px;
 }
 
 @media (min-width: 1024px) {
   .footer__top-right {
-    gap: 120px;
+    gap: 160px;
     padding-right: 80px;
   }
 }
@@ -67,13 +68,14 @@
   font-size: 15px;
   font-weight: 500;
   color: #5f6368;
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
 .footer__link {
   font-size: 15px;
   font-weight: 500;
-  color: #202124;
+  color: #111;
   text-decoration: none;
   transition: opacity 150ms ease;
 }
