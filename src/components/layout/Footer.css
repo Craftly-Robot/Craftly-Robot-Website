@@ -44,7 +44,7 @@
   line-height: 1.2;
   letter-spacing: -0.5px;
   color: #000000;
-  margin-top: 0;
+  margin-top: 8px; /* Push down to visually align top of 'E' with top of 'P' in Product */
 }
 
 @media (min-width: 768px) {
@@ -60,8 +60,8 @@
 
 @media (min-width: 1024px) {
   .footer__top-right {
-    gap: 160px;
-    padding-right: 80px;
+    gap: 100px;
+    padding-right: 40px;
   }
 }
 
