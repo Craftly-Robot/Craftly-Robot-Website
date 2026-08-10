@@ -12,7 +12,7 @@
 
 .support-hero {
   text-align: center;
-  margin-top: var(--space-4xl);
+  margin-top: var(--space-xl);
   margin-bottom: var(--space-4xl);
   display: flex;
   flex-direction: column;
@@ -21,25 +21,24 @@
 }
 
 .support-hero__title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--color-text);
   margin: 0;
-  opacity: 0;
-  animation: slideUpFade 0.8s var(--ease-out) forwards;
+  min-height: 7rem;
+  white-space: pre-wrap;
 }
 
-@keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.typewriter-cursor {
+  font-weight: 200;
+  color: var(--color-text);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .support-hero__btn {

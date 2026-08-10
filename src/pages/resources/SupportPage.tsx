@@ -1,5 +1,31 @@
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './SupportPage.css';
+
+function TypewriterTitle({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 45);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return (
+    <h1 className="support-hero__title">
+      {displayedText}
+      <span className="typewriter-cursor">|</span>
+    </h1>
+  );
+}
 
 export default function SupportPage() {
   return (
@@ -11,9 +37,7 @@ export default function SupportPage() {
 
       <div className="support-page">
         <div className="support-hero">
-          <h1 className="support-hero__title">
-            Find answers in our docs<br />or go to our community
-          </h1>
+          <TypewriterTitle text={`Find answers in our docs\nor go to our community`} />
           <a href="/docs" className="support-hero__btn">
             View docs
           </a>
