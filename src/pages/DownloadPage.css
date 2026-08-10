@@ -1,14 +1,14 @@
 .download-page {
-  padding-block: var(--space-4xl) var(--space-xl);
+  padding-block: var(--space-2xl) var(--space-xl);
 }
 
 .download-header {
   margin-bottom: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
+  padding-bottom: 20px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: 64px;
 }
 
 .download-hero__title {
@@ -68,7 +68,7 @@
 }
 
 .product-tab {
-  padding: 10px 22px;
+  padding: 10px 28px;
   border-radius: 99px;
   border: 1px solid #e0e0e0;
   background: #fff;
@@ -89,15 +89,15 @@
 }
 
 .product-tab--active {
-  background: #f0f1f3;
-  border-color: #ccc;
-  color: #111;
+  background: #fff;
+  border-color: #888;
+  color: #000;
 }
 
 .product-tab--active:hover {
-  background: #e8e9eb;
-  color: #111;
-  border-color: #bbb;
+  background: #f8f9fa;
+  color: #000;
+  border-color: #666;
 }
 
 /* Download section */
