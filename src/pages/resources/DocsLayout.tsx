@@ -118,7 +118,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
     if (activeId) {
       const activeElement = document.getElementById(`toc-${activeId}`);
       if (activeElement) {
-        activeElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        activeElement.scrollIntoView({ behavior: 'auto', block: 'nearest' });
       }
     }
   }, [activeId]);
