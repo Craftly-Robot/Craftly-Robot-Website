@@ -21,7 +21,7 @@ export default function PrivateKeyPage() {
         <img 
           src="/assets/private_key/1.png" 
           alt="Private Key" 
-          style={{ maxWidth: '400px', width: '100%', display: 'block' }} 
+          style={{ maxWidth: '200px', width: '100%', display: 'block' }} 
         />
       </div>
 
