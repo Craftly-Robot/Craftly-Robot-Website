@@ -6,7 +6,7 @@
   font-family: 'Inter', sans-serif;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid #eaeaeb;
+  border-top: 1px solid #d0d0d0;
 }
 
 /* ── Top Section ── */
@@ -32,7 +32,7 @@
 }
 
 .footer__heading {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -41,7 +41,7 @@
 
 @media (min-width: 768px) {
   .footer__heading {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 

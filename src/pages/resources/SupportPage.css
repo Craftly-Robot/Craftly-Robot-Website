@@ -74,7 +74,9 @@
   background-color: #f8f9fa;
   border-radius: 24px;
   padding: var(--space-xl);
-  width: 380px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
