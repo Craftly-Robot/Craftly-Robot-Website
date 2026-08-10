@@ -1,0 +1,118 @@
+.support-page {
+  padding-block: var(--space-4xl) var(--space-xl);
+  min-height: 100vh;
+  /* Dotted background pattern */
+  background-image: radial-gradient(#dcdcdc 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-hero {
+  text-align: center;
+  margin-top: var(--space-4xl);
+  margin-bottom: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.support-hero__title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.support-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 99px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.support-hero__btn:hover {
+  background-color: #f0f1f3;
+  border-color: #bbb;
+}
+
+.support-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.support-card {
+  background-color: #f8f9fa;
+  border-radius: 24px;
+  padding: var(--space-xl);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.support-card:hover {
+  transform: translateY(-4px);
+}
+
+.support-card__icon {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.support-card__icon svg {
+  color: #111;
+}
+
+.support-card__content {
+  flex-grow: 1;
+}
+
+.support-card__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: var(--color-text);
+}
+
+.support-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.support-card__footer {
+  margin-top: auto;
+}
+
+.support-card__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
