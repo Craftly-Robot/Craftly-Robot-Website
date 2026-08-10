@@ -88,17 +88,6 @@
   border-color: #bbb;
 }
 
-.product-tab--active {
-  background: #fff;
-  border-color: #888;
-  color: #000;
-}
-
-.product-tab--active:hover {
-  background: #f8f9fa;
-  color: #000;
-  border-color: #666;
-}
 
 /* Download section */
 .download-section {
