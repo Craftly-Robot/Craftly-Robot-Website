@@ -199,7 +199,12 @@ export default function DownloadPage() {
 
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">
-          <TypewriterTitle text={`Download Craftly for ${osName}`} />
+          <div className="download-hero-top">
+            <TypewriterTitle text={`Download Craftly\nfor ${osName}`} />
+            <a href="/releases" className="btn-previous-releases">
+              View previous releases
+            </a>
+          </div>
           
           <div className="download-product-tabs">
             <a href="#workspace" className="product-tab product-tab--active">
