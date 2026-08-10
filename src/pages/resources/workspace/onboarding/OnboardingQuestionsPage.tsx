@@ -6,7 +6,7 @@ export default function OnboardingQuestionsPage() {
       id: 2, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>1. Full Legal Name</h2>
+          <h2 className="docs__subtitle" id="q-1" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>1. Full Legal Name</h2>
           <p className="docs__text">The onboarding assistant will first ask for your full legal name.</p>
           <p className="docs__text">Enter your complete name exactly as it appears on your official documents. Reply with your name only no introduction or additional information is needed.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -22,7 +22,7 @@ export default function OnboardingQuestionsPage() {
       id: 3, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>2. Gender</h2>
+          <h2 className="docs__subtitle" id="q-2" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>2. Gender</h2>
           <p className="docs__text">The onboarding assistant will ask you to select your gender.</p>
           <p className="docs__text">Choose the option that best describes you from the available choices, then confirm your selection when the assistant asks you to verify it.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -38,7 +38,7 @@ export default function OnboardingQuestionsPage() {
       id: 4, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>3. Date of Birth</h2>
+          <h2 className="docs__subtitle" id="q-3" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>3. Date of Birth</h2>
           <p className="docs__text">You will then be asked to provide your date of birth. Enter it using the required YYYY-MM-DD format.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example:</p>
@@ -53,7 +53,7 @@ export default function OnboardingQuestionsPage() {
       id: 5, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>4. Institution Level</h2>
+          <h2 className="docs__subtitle" id="q-4" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>4. Institution Level</h2>
           <p className="docs__text">The onboarding assistant will ask about your current education level. Choose the option that best describes where you currently study.</p>
           <p className="docs__text">Available options: School, College, or University</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -69,7 +69,7 @@ export default function OnboardingQuestionsPage() {
       id: 6, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>5. Institution Name</h2>
+          <h2 className="docs__subtitle" id="q-5" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>5. Institution Name</h2>
           <p className="docs__text">The onboarding assistant will ask for the name of your current school, college, or university. Enter the institution’s full name as you normally use it.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example:</p>
@@ -84,7 +84,7 @@ export default function OnboardingQuestionsPage() {
       id: 7, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>6. WhatsApp Number</h2>
+          <h2 className="docs__subtitle" id="q-6" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>6. WhatsApp Number</h2>
           <p className="docs__text">The onboarding assistant will ask for your WhatsApp number so Craftly can use it for relevant communication during and after onboarding. Enter a valid 11-digit Bangladeshi WhatsApp number.</p>
           <p className="docs__text">Format: 01XXXXXXXXX</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -100,7 +100,7 @@ export default function OnboardingQuestionsPage() {
       id: 8, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>7. Social Media Profile</h2>
+          <h2 className="docs__subtitle" id="q-7" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>7. Social Media Profile</h2>
           <p className="docs__text"><strong>Question:</strong> Please provide one public social media profile link.</p>
           <p className="docs__text"><strong>Answer:</strong> You can provide a Facebook, Instagram, LinkedIn, or TikTok profile link. If you don't use social media, write: I do not have social media.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -116,7 +116,7 @@ export default function OnboardingQuestionsPage() {
       id: 9, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>8. Email Address</h2>
+          <h2 className="docs__subtitle" id="q-8" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>8. Email Address</h2>
           <p className="docs__text">Provide the email address you currently use and can be reached at.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example:</p>
@@ -131,7 +131,7 @@ export default function OnboardingQuestionsPage() {
       id: 10, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>9. Department</h2>
+          <h2 className="docs__subtitle" id="q-9" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>9. Department</h2>
           <p className="docs__text" style={{ marginBottom: '16px' }}>Choose the department you want to work in Operations, Human Resources, Marketing, or Finance.</p>
         </>
       ), 
@@ -141,7 +141,7 @@ export default function OnboardingQuestionsPage() {
       id: 11, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>10. Problem-Solving & Execution</h2>
+          <h2 className="docs__subtitle" id="q-10" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>10. Problem-Solving & Execution</h2>
           <p className="docs__text" style={{ marginBottom: '16px' }}>Explain how you would accomplish 30 days’ worth of work in just 6 hours, focusing on your approach, priorities, automation, and use of available tools.</p>
         </>
       ), 
@@ -151,7 +151,7 @@ export default function OnboardingQuestionsPage() {
       id: 12, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>9. Work Approach</h2>
+          <h2 className="docs__subtitle" id="q-11" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>9. Work Approach</h2>
           <p className="docs__text"><strong>Question:</strong> How would you accomplish 30 days' worth of work in six hours?</p>
           <p className="docs__text"><strong>Answer:</strong> Explain how you would prioritize important work, use automation and AI, work on multiple tasks efficiently, and focus on high-value decisions.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -166,7 +166,7 @@ export default function OnboardingQuestionsPage() {
       id: 13, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>10. AI Development Prompt</h2>
+          <h2 className="docs__subtitle" id="q-12" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>10. AI Development Prompt</h2>
           <p className="docs__text"><strong>Question:</strong> Write the prompt you would give an AI system to deliver an exceptional outcome while developing a module.</p>
           <p className="docs__text"><strong>Answer:</strong> Provide a clear prompt that defines the AI's role, the project context, the exact task, requirements, constraints, and expected output.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -181,7 +181,7 @@ export default function OnboardingQuestionsPage() {
       id: 14, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>11. Daily Availability</h2>
+          <h2 className="docs__subtitle" id="q-13" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>11. Daily Availability</h2>
           <p className="docs__text"><strong>Question:</strong> How many hours can you give daily?</p>
           <p className="docs__text"><strong>Answer:</strong> Reply with one of the available options: 1 hour, 2 hours, 4 hours, or 8 hours.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -196,7 +196,7 @@ export default function OnboardingQuestionsPage() {
       id: 15, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>12. Working Style</h2>
+          <h2 className="docs__subtitle" id="q-14" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>12. Working Style</h2>
           <p className="docs__text"><strong>Question:</strong> How do you feel most comfortable working?</p>
           <p className="docs__text"><strong>Answer:</strong> Reply with one of the available options: With a mentor, or Independently.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
@@ -211,7 +211,7 @@ export default function OnboardingQuestionsPage() {
       id: 16, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>13. Department Choice</h2>
+          <h2 className="docs__subtitle" id="q-15" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>13. Department Choice</h2>
           <p className="docs__text"><strong>Question:</strong> Why did you choose this department? Write 2–3 lines.</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
@@ -225,7 +225,7 @@ export default function OnboardingQuestionsPage() {
       id: 17, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>14. Hardest Achievement</h2>
+          <h2 className="docs__subtitle" id="q-16" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>14. Hardest Achievement</h2>
           <p className="docs__text"><strong>Question:</strong> What is the hardest thing you have completed so far?</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
@@ -239,7 +239,7 @@ export default function OnboardingQuestionsPage() {
       id: 18, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>15. Technical Achievement</h2>
+          <h2 className="docs__subtitle" id="q-17" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>15. Technical Achievement</h2>
           <p className="docs__text"><strong>Question:</strong> What is the hardest technical milestone you have achieved?</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
@@ -253,7 +253,7 @@ export default function OnboardingQuestionsPage() {
       id: 19, 
       textAbove: (
         <>
-          <h2 className="docs__subtitle" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>16. Goals at Craftly</h2>
+          <h2 className="docs__subtitle" id="q-18" style={{ fontSize: '1.25rem', fontWeight: 600, marginTop: '24px', marginBottom: '16px' }}>16. Goals at Craftly</h2>
           <p className="docs__text"><strong>Question:</strong> What do you want to learn or achieve by joining Craftly?</p>
           <div style={{ backgroundColor: '#f8f9fa', padding: '16px', borderRadius: '8px', border: '1px solid #eaeaeb', margin: '16px 0' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#5f6368', fontSize: '14px', marginBottom: '8px' }}>Example Answer:</p>
@@ -274,7 +274,25 @@ export default function OnboardingQuestionsPage() {
       title="Onboarding Questions — Craftly Workspace"
       description="Onboarding Questions in Craftly Workspace"
       tocItems={[
-        { id: 'onboarding-questions', label: 'Onboarding Questions' }
+        { id: 'onboarding-questions', label: 'Onboarding Questions' },
+        { id: 'q-1', label: '1. Full Legal Name' },
+        { id: 'q-2', label: '2. Gender' },
+        { id: 'q-3', label: '3. Date of Birth' },
+        { id: 'q-4', label: '4. Institution Level' },
+        { id: 'q-5', label: '5. Institution Name' },
+        { id: 'q-6', label: '6. WhatsApp Number' },
+        { id: 'q-7', label: '7. Social Media Profile' },
+        { id: 'q-8', label: '8. Email Address' },
+        { id: 'q-9', label: '9. Department' },
+        { id: 'q-10', label: '10. Problem-Solving & Execution' },
+        { id: 'q-11', label: '9. Work Approach' },
+        { id: 'q-12', label: '10. AI Development Prompt' },
+        { id: 'q-13', label: '11. Daily Availability' },
+        { id: 'q-14', label: '12. Working Style' },
+        { id: 'q-15', label: '13. Department Choice' },
+        { id: 'q-16', label: '14. Hardest Achievement' },
+        { id: 'q-17', label: '15. Technical Achievement' },
+        { id: 'q-18', label: '16. Goals at Craftly' }
       ]}
     >
       <div className="docs__breadcrumb">
