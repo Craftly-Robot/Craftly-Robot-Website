@@ -1,4 +1,4 @@
-﻿import DocsLayout from '../../DocsLayout';
+import DocsLayout from '../../DocsLayout';
 
 export default function PrivateKeyPage() {
   return (
@@ -14,7 +14,18 @@ export default function PrivateKeyPage() {
       </div>
 
       <h1 className="docs__title" id="private-key">Private Key</h1>
-      <p className="docs__text">Content coming soon...</p>
+      
+      <div id="private-key-text-above"></div>
+      
+      <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
+        <img 
+          src="/assets/private_key/1.png" 
+          alt="Private Key" 
+          style={{ width: '100%', display: 'block' }} 
+        />
+      </div>
+
+      <div id="private-key-text-below"></div>
     </DocsLayout>
   );
 }
