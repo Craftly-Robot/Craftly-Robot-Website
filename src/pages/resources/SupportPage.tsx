@@ -32,7 +32,7 @@ export default function SupportPage() {
               <p className="support-card__desc">Join the conversation</p>
             </div>
             <div className="support-card__footer">
-              <span className="support-card__link">Visit &gt;</span>
+              <span className="support-card__link">Visit <span className="support-card__arrow">&gt;</span></span>
             </div>
           </a>
 
@@ -48,7 +48,7 @@ export default function SupportPage() {
               <p className="support-card__desc">Connect with us</p>
             </div>
             <div className="support-card__footer">
-              <span className="support-card__link">Visit &gt;</span>
+              <span className="support-card__link">Visit <span className="support-card__arrow">&gt;</span></span>
             </div>
           </a>
 
@@ -64,7 +64,7 @@ export default function SupportPage() {
               <p className="support-card__desc">Stay updated</p>
             </div>
             <div className="support-card__footer">
-              <span className="support-card__link">Visit &gt;</span>
+              <span className="support-card__link">Visit <span className="support-card__arrow">&gt;</span></span>
             </div>
           </a>
         </div>

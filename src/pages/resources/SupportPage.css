@@ -84,7 +84,7 @@
 }
 
 .support-card:hover {
-  transform: translateY(-4px);
+  /* removed transform translateY */
 }
 
 .support-card__icon {
@@ -128,4 +128,16 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.support-card__arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.support-card:hover .support-card__arrow {
+  transform: translateX(4px);
 }
