@@ -17,11 +17,11 @@ export default function PrivateKeyPage() {
       
       <div id="private-key-text-above"></div>
       
-      <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
+      <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0', padding: '24px' }}>
         <img 
           src="/assets/private_key/1.png" 
           alt="Private Key" 
-          style={{ width: '100%', display: 'block' }} 
+          style={{ maxWidth: '400px', width: '100%', display: 'block' }} 
         />
       </div>
 
