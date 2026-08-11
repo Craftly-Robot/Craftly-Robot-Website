@@ -140,5 +140,5 @@
 }
 
 .support-card:hover .support-card__arrow {
-  transform: translateX(8px);
+  transform: translateX(12px);
 }

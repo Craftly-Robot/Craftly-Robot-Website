@@ -325,11 +325,11 @@
 }
 
 .docs__page-nav-link--prev:hover .docs__page-nav-arrow {
-  transform: translateX(-4px);
+  transform: translateX(-8px);
 }
 
 .docs__page-nav-link--next:hover .docs__page-nav-arrow {
-  transform: translateX(4px);
+  transform: translateX(8px);
 }
 
 .docs__page-nav-label {

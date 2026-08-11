@@ -457,5 +457,5 @@
 }
 
 .dropdown-item:hover .dropdown-item__arrow {
-  transform: translateX(4px);
+  transform: translateX(8px);
 }
