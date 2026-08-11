@@ -7,14 +7,14 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation", label: "Home" },
   { path: "/resources/documentation/workspace/overview/what-is-craftly-workspace", label: "What is Craftly Workspace?" },
   { path: "/resources/documentation/workspace/overview/how-workspace-works", label: "How Workspace Works?" },
-  { path: "/resources/documentation/workspace/overview/workspace-structure", label: "Workspace Structure" },
+
   { path: "/resources/documentation/workspace/overview/core-concepts", label: "Core Concepts" },
   { path: "/resources/documentation/workspace/getting-started/create-account", label: "Create Your Account" },
   { path: "/resources/documentation/workspace/getting-started/join-organization", label: "Join an Organization" },
   { path: "/resources/documentation/workspace/getting-started/complete-profile", label: "Complete Your Profile" },
   { path: "/resources/documentation/workspace/getting-started/understand-workspace", label: "Understanding Your Workspace" },
   { path: "/resources/documentation/workspace/getting-started/first-task", label: "Your First Task" },
-  { path: "/resources/documentation/workspace/organization/org-structure", label: "Organization Structure" },
+
   { path: "/resources/documentation/workspace/organization/departments", label: "Departments" },
   { path: "/resources/documentation/workspace/organization/teams", label: "Teams" },
   { path: "/resources/documentation/workspace/organization/reporting-structure", label: "Reporting Structure" },
@@ -23,7 +23,7 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/people-roles/roles", label: "Roles" },
   { path: "/resources/documentation/workspace/people-roles/permissions", label: "Permissions" },
   { path: "/resources/documentation/workspace/people-roles/managers", label: "Managers" },
-  { path: "/resources/documentation/workspace/people-roles/access-control", label: "Access Control" },
+
   { path: "/resources/documentation/workspace/tasks-operations/tasks", label: "Tasks" },
   { path: "/resources/documentation/workspace/tasks-operations/task-assignment", label: "Task Assignment" },
   { path: "/resources/documentation/workspace/tasks-operations/task-evidence", label: "Task Evidence" },
@@ -35,7 +35,7 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/communication/chain-of-command", label: "Chain of Command" },
   { path: "/resources/documentation/workspace/communication/reporting-communication", label: "Reporting-Based Communication" },
   { path: "/resources/documentation/workspace/communication/notifications", label: "Notifications" },
-  { path: "/resources/documentation/workspace/resources/org-resources", label: "Organization Resources" },
+
   { path: "/resources/documentation/workspace/resources/dept-resources", label: "Department Resources" },
   { path: "/resources/documentation/workspace/resources/training", label: "Training" },
   { path: "/resources/documentation/workspace/resources/training-participation", label: "Training Participation" },
@@ -257,7 +257,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
                   <NavLink to="/resources/documentation/workspace/overview/what-is-craftly-workspace" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>What is Craftly Workspace?</NavLink>
                   <NavLink to="/resources/documentation/workspace/overview/how-workspace-works" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>How Workspace Works?</NavLink>
-                  <NavLink to="/resources/documentation/workspace/overview/workspace-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Workspace Structure</NavLink>
+
                   <NavLink to="/resources/documentation/workspace/overview/core-concepts" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Core Concepts</NavLink>
                 </div>
               )}
@@ -282,7 +282,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
               </div>
               {expandedSections.includes('ws-organization') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                  <NavLink to="/resources/documentation/workspace/organization/org-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Organization Structure</NavLink>
+
                   <NavLink to="/resources/documentation/workspace/organization/departments" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Departments</NavLink>
                   <NavLink to="/resources/documentation/workspace/organization/teams" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Teams</NavLink>
                   <NavLink to="/resources/documentation/workspace/organization/reporting-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Reporting Structure</NavLink>
@@ -300,7 +300,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
                   <NavLink to="/resources/documentation/workspace/people-roles/roles" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Roles</NavLink>
                   <NavLink to="/resources/documentation/workspace/people-roles/permissions" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Permissions</NavLink>
                   <NavLink to="/resources/documentation/workspace/people-roles/managers" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Managers</NavLink>
-                  <NavLink to="/resources/documentation/workspace/people-roles/access-control" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Access Control</NavLink>
+
                 </div>
               )}
 
@@ -339,7 +339,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
               </div>
               {expandedSections.includes('ws-resources') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                  <NavLink to="/resources/documentation/workspace/resources/org-resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Organization Resources</NavLink>
+
                   <NavLink to="/resources/documentation/workspace/resources/dept-resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Department Resources</NavLink>
                   <NavLink to="/resources/documentation/workspace/resources/training" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Training</NavLink>
                   <NavLink to="/resources/documentation/workspace/resources/training-participation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Training Participation</NavLink>
