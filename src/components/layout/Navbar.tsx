@@ -155,9 +155,15 @@ export default function Navbar() {
                     <div className="navbar__mega">
                       <div className="navbar__mega-left">
                         <h2 className="navbar__mega-title">
-                          {item.label === 'Products' && 'Explore our next generation products'}
-                          {item.label === 'Use Cases' && 'Discover solutions for your specific needs'}
-                          {item.label === 'Resources' && 'Everything you need to stay up-to-date and get help'}
+                          {item.label === 'Products' && (
+                            <>Explore our <br /> next generation <br /> products</>
+                          )}
+                          {item.label === 'Use Cases' && (
+                            <>Discover solutions <br /> for your specific <br /> needs</>
+                          )}
+                          {item.label === 'Resources' && (
+                            <>Everything you <br /> need to stay <br /> up-to-date and <br /> get help</>
+                          )}
                         </h2>
                         <Link 
                           to={item.items[0]?.route || '/'} 
