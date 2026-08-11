@@ -1,4 +1,4 @@
-﻿import DocsLayout from '../../DocsLayout';
+import DocsLayout from '../../DocsLayout';
 
 export default function SupportRequestsPage() {
   return (
@@ -14,7 +14,20 @@ export default function SupportRequestsPage() {
       </div>
 
       <h1 className="docs__title" id="support-requests">Support Requests</h1>
-      <p className="docs__text">Content coming soon...</p>
+      
+      <div className="docs__content-placeholder" style={{ marginBottom: '32px' }}>
+        {/* Placeholder for top content */}
+        <p className="docs__text">Content describing support requests will go here...</p>
+      </div>
+
+      <div className="docs__image-wrapper" style={{ margin: '40px 0', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+        <img src="/assets/Support%20Requests/1.png" alt="Support Requests Overview" style={{ width: '100%', display: 'block' }} />
+      </div>
+
+      <div className="docs__content-placeholder" style={{ marginTop: '32px' }}>
+        {/* Placeholder for bottom content */}
+        <p className="docs__text">More detailed content about support requests will go here...</p>
+      </div>
     </DocsLayout>
   );
 }
