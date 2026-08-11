@@ -108,7 +108,7 @@
   padding: 40px 48px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
   width: max-content;
-  min-width: 900px;
+  min-width: 1000px;
   max-width: var(--container-wide);
   margin-top: 0;
   display: flex;
@@ -193,7 +193,7 @@
 .navbar__mega-right {
   display: flex;
   flex-direction: column;
-  padding-left: 24px;
+  padding-left: 16px;
 }
 
 .navbar__mega-list-title {
@@ -216,14 +216,14 @@
 .navbar__mega-grid {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .dropdown-item {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  padding: 6px 12px;
+  padding: 4px 12px;
   border-radius: var(--radius-lg);
   text-decoration: none;
   color: #000000;
