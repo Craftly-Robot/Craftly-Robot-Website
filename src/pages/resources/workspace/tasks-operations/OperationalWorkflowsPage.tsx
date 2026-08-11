@@ -1,4 +1,5 @@
 import DocsLayout from '../../DocsLayout';
+import projectImage from '../../../../assets/projects/1.png';
 
 export default function OperationalWorkflowsPage() {
   return (
@@ -21,7 +22,7 @@ export default function OperationalWorkflowsPage() {
       </div>
 
       <div className="docs__image-wrapper" style={{ margin: '40px 0', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-        <img src="/assets/projects/1.png" alt="Projects Overview" style={{ width: '100%', display: 'block' }} />
+        <img src={projectImage} alt="Projects Overview" style={{ width: '100%', display: 'block' }} />
       </div>
 
       <div className="docs__content-placeholder" style={{ marginTop: '32px' }}>

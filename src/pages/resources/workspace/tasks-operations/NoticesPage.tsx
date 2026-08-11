@@ -1,4 +1,6 @@
 import DocsLayout from '../../DocsLayout';
+import notice1 from '../../../../assets/Notice Board/1.jpg';
+import notice2 from '../../../../assets/Notice Board/2.jpg';
 
 export default function NoticesPage() {
   return (
@@ -21,10 +23,10 @@ export default function NoticesPage() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', margin: '40px 0' }}>
         <div className="docs__image-wrapper" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-          <img src="/assets/Notice%20Board/1.jpg" alt="Notice Board 1" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <img src={notice1} alt="Notice Board 1" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
         <div className="docs__image-wrapper" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-          <img src="/assets/Notice%20Board/2.jpg" alt="Notice Board 2" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <img src={notice2} alt="Notice Board 2" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
       </div>
 

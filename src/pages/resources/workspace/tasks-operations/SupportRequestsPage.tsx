@@ -1,4 +1,5 @@
 import DocsLayout from '../../DocsLayout';
+import supportImage from '../../../../assets/Support Requests/1.png';
 
 export default function SupportRequestsPage() {
   return (
@@ -21,7 +22,7 @@ export default function SupportRequestsPage() {
       </div>
 
       <div className="docs__image-wrapper" style={{ margin: '40px 0', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-        <img src="/assets/Support%20Requests/1.png" alt="Support Requests Overview" style={{ width: '100%', display: 'block' }} />
+        <img src={supportImage} alt="Support Requests Overview" style={{ width: '100%', display: 'block' }} />
       </div>
 
       <div className="docs__content-placeholder" style={{ marginTop: '32px' }}>
