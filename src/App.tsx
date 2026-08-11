@@ -97,6 +97,7 @@ const CompletingOnboardingPage = lazy(() => import('./pages/resources/workspace/
 const BlogPage = lazy(() => import('./pages/resources/BlogPage'));
 const SupportPage = lazy(() => import('./pages/resources/SupportPage'));
 const ReleasesPage = lazy(() => import('./pages/resources/ReleasesPage'));
+const FAQPage = lazy(() => import('./pages/resources/FAQPage'));
 const PressPage = lazy(() => import('./pages/resources/PressPage'));
 
 function PageLoader() {
@@ -127,6 +128,7 @@ export default function App() {
           {/* Resource pages */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
           <Route path="/resources/documentation/plan" element={<PlanPage />} />
+          <Route path="/resources/documentation/faq" element={<FAQPage />} />
           
           <Route path="/resources/documentation/workspace/overview/what-is-craftly-workspace" element={<WhatIsWorkspacePage />} />
           <Route path="/resources/documentation/workspace/overview/how-workspace-works" element={<HowWorkspaceWorksPage />} />

@@ -74,7 +74,9 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/robot/feature-overview/multi-agent-coordination", label: "Multi-Agent Coordination" },
   { path: "/resources/documentation/robot/feature-overview/privacy-boundaries", label: "Privacy Boundaries" },
   { path: "/resources/documentation/robot/feature-overview/human-confirmation", label: "Human Confirmation" },
-  { path: "/resources/documentation/robot/feature-overview/real-world-task-coordination", label: "Real-World Task Coordination" }
+  { path: "/resources/documentation/robot/feature-overview/real-world-task-coordination", label: "Real-World Task Coordination" },
+  { path: "/resources/documentation/plan", label: "Craftly Plan" },
+  { path: "/resources/documentation/faq", label: "FAQ" }
 ];
 
 let globalSidebarScroll = 0;
@@ -423,9 +425,9 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <span className="docs__nav-text">Craftly Plan</span>
           </NavLink>
           
-          <div className="docs__nav-item">
+          <NavLink to="/resources/documentation/faq" className={({isActive}) => `docs__nav-item ${isActive ? 'docs__nav-link--active' : ''}`}>
             <span className="docs__nav-text">FAQ</span>
-          </div>
+          </NavLink>
         </nav>
       </aside>
 
