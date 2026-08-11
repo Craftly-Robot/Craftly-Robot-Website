@@ -173,6 +173,19 @@ export default function DocsLayout({ title, description, tocItems = [], children
     return () => observer.disconnect();
   }, []);
 
+  // Handle bottom of page reached
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!tocItems || tocItems.length === 0) return;
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
+        setActiveId(tocItems[tocItems.length - 1].id);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [tocItems]);
+
   const sidebarRef = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
