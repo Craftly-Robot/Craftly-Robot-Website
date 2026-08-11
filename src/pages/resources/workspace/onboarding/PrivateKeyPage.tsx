@@ -24,7 +24,7 @@ export default function PrivateKeyPage() {
       </p>
       
       <p className="docs__text">
-        It is required to log in to Craftly Workspace, so keep your Private Key safe and never share it with anyone.
+        It is required to log in to Craftly Workspace and Craftly Robot, so keep your Private Key safe and never share it with anyone.
       </p>
       
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0', padding: '16px' }}>
