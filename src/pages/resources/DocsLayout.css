@@ -175,6 +175,7 @@
   color: #202124;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
+  scroll-margin-top: 100px;
 }
 
 .docs__section-title {
@@ -183,6 +184,7 @@
   color: #202124;
   margin: 32px 0 16px;
   letter-spacing: -0.3px;
+  scroll-margin-top: 100px;
 }
 
 .docs__text {
@@ -333,4 +335,12 @@
 
 .docs__page-nav-label {
   color: #202124;
+}
+
+.docs__subsection-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #202124;
+  margin: 24px 0 12px;
+  scroll-margin-top: 100px;
 }
