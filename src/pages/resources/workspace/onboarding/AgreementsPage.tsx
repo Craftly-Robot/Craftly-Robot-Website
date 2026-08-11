@@ -25,6 +25,14 @@ export default function AgreementsPage() {
         />
       </div>
 
+      <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
+        <img 
+          src="/assets/aggrements/2.png" 
+          alt="Digital Signatures" 
+          style={{ width: '100%', display: 'block' }} 
+        />
+      </div>
+
       <div id="agreements-text-below"></div>
     </DocsLayout>
   );

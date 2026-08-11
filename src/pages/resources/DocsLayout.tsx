@@ -43,7 +43,6 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/onboarding/welcome-setup", label: "Welcome & Setup" },
   { path: "/resources/documentation/workspace/onboarding/onboarding-questions", label: "Onboarding Questions" },
   { path: "/resources/documentation/workspace/onboarding/agreements", label: "Agreements" },
-  { path: "/resources/documentation/workspace/onboarding/digital-signatures", label: "Digital Signatures" },
   { path: "/resources/documentation/workspace/onboarding/private-key", label: "Private Key" },
   { path: "/resources/documentation/workspace/onboarding/completing-onboarding", label: "Completing Onboarding" },
   { path: "/resources/documentation/robot/overview/what-is-craftly-robot", label: "What is Craftly Robot?" },
@@ -369,7 +368,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
                   <NavLink to="/resources/documentation/workspace/onboarding/welcome-setup" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Welcome & Setup</NavLink>
                   <NavLink to="/resources/documentation/workspace/onboarding/onboarding-questions" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Onboarding Questions</NavLink>
                   <NavLink to="/resources/documentation/workspace/onboarding/agreements" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agreements</NavLink>
-                  <NavLink to="/resources/documentation/workspace/onboarding/digital-signatures" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Digital Signatures</NavLink>
                   <NavLink to="/resources/documentation/workspace/onboarding/private-key" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Private Key</NavLink>
                   <NavLink to="/resources/documentation/workspace/onboarding/completing-onboarding" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Completing Onboarding</NavLink>
                 </div>

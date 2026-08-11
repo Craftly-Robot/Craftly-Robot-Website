@@ -91,7 +91,6 @@ const ResourceAccessPage = lazy(() => import('./pages/resources/workspace/resour
 const WelcomeSetupPage = lazy(() => import('./pages/resources/workspace/onboarding/WelcomeSetupPage'));
 const OnboardingQuestionsPage = lazy(() => import('./pages/resources/workspace/onboarding/OnboardingQuestionsPage'));
 const AgreementsPage = lazy(() => import('./pages/resources/workspace/onboarding/AgreementsPage'));
-const DigitalSignaturesPage = lazy(() => import('./pages/resources/workspace/onboarding/DigitalSignaturesPage'));
 const PrivateKeyPage = lazy(() => import('./pages/resources/workspace/onboarding/PrivateKeyPage'));
 const CompletingOnboardingPage = lazy(() => import('./pages/resources/workspace/onboarding/CompletingOnboardingPage'));
 const BlogPage = lazy(() => import('./pages/resources/BlogPage'));
@@ -186,7 +185,6 @@ export default function App() {
           <Route path="/resources/documentation/workspace/onboarding/welcome-setup" element={<WelcomeSetupPage />} />
           <Route path="/resources/documentation/workspace/onboarding/onboarding-questions" element={<OnboardingQuestionsPage />} />
           <Route path="/resources/documentation/workspace/onboarding/agreements" element={<AgreementsPage />} />
-          <Route path="/resources/documentation/workspace/onboarding/digital-signatures" element={<DigitalSignaturesPage />} />
           <Route path="/resources/documentation/workspace/onboarding/private-key" element={<PrivateKeyPage />} />
           <Route path="/resources/documentation/workspace/onboarding/completing-onboarding" element={<CompletingOnboardingPage />} />
 
