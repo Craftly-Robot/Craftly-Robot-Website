@@ -108,6 +108,7 @@
   padding: 40px 48px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
   width: max-content;
+  min-width: 640px;
   max-width: var(--container-wide);
   margin-top: 0;
   display: flex;
@@ -131,7 +132,7 @@
 /* ── Mega Menu Layout ── */
 .navbar__mega {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
   gap: 0;
 }
 
