@@ -1,7 +1,80 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './DocsLayout.css';
+
+const DOCS_ROUTES = [
+  { path: "/resources/documentation/workspace/overview/what-is-craftly-workspace", label: "What is Craftly Workspace?" },
+  { path: "/resources/documentation/workspace/overview/how-workspace-works", label: "How Workspace Works?" },
+  { path: "/resources/documentation/workspace/overview/workspace-structure", label: "Workspace Structure" },
+  { path: "/resources/documentation/workspace/overview/core-concepts", label: "Core Concepts" },
+  { path: "/resources/documentation/workspace/getting-started/create-account", label: "Create Your Account" },
+  { path: "/resources/documentation/workspace/getting-started/join-organization", label: "Join an Organization" },
+  { path: "/resources/documentation/workspace/getting-started/complete-profile", label: "Complete Your Profile" },
+  { path: "/resources/documentation/workspace/getting-started/understand-workspace", label: "Understanding Your Workspace" },
+  { path: "/resources/documentation/workspace/getting-started/first-task", label: "Your First Task" },
+  { path: "/resources/documentation/workspace/organization/org-structure", label: "Organization Structure" },
+  { path: "/resources/documentation/workspace/organization/departments", label: "Departments" },
+  { path: "/resources/documentation/workspace/organization/teams", label: "Teams" },
+  { path: "/resources/documentation/workspace/organization/reporting-structure", label: "Reporting Structure" },
+  { path: "/resources/documentation/workspace/organization/roles-permissions", label: "Roles & Permissions" },
+  { path: "/resources/documentation/workspace/people-roles/members", label: "Members" },
+  { path: "/resources/documentation/workspace/people-roles/roles", label: "Roles" },
+  { path: "/resources/documentation/workspace/people-roles/permissions", label: "Permissions" },
+  { path: "/resources/documentation/workspace/people-roles/managers", label: "Managers" },
+  { path: "/resources/documentation/workspace/people-roles/access-control", label: "Access Control" },
+  { path: "/resources/documentation/workspace/tasks-operations/tasks", label: "Tasks" },
+  { path: "/resources/documentation/workspace/tasks-operations/task-assignment", label: "Task Assignment" },
+  { path: "/resources/documentation/workspace/tasks-operations/task-evidence", label: "Task Evidence" },
+  { path: "/resources/documentation/workspace/tasks-operations/support-requests", label: "Support Requests" },
+  { path: "/resources/documentation/workspace/tasks-operations/notices", label: "Notices" },
+  { path: "/resources/documentation/workspace/tasks-operations/operational-workflows", label: "Operational Workflows" },
+  { path: "/resources/documentation/workspace/communication/direct-communication", label: "Direct Communication" },
+  { path: "/resources/documentation/workspace/communication/team-communication", label: "Team Communication" },
+  { path: "/resources/documentation/workspace/communication/chain-of-command", label: "Chain of Command" },
+  { path: "/resources/documentation/workspace/communication/reporting-communication", label: "Reporting-Based Communication" },
+  { path: "/resources/documentation/workspace/communication/notifications", label: "Notifications" },
+  { path: "/resources/documentation/workspace/resources/org-resources", label: "Organization Resources" },
+  { path: "/resources/documentation/workspace/resources/dept-resources", label: "Department Resources" },
+  { path: "/resources/documentation/workspace/resources/training", label: "Training" },
+  { path: "/resources/documentation/workspace/resources/training-participation", label: "Training Participation" },
+  { path: "/resources/documentation/workspace/resources/resource-access", label: "Resource Access" },
+  { path: "/resources/documentation/workspace/onboarding/welcome-setup", label: "Welcome & Setup" },
+  { path: "/resources/documentation/workspace/onboarding/onboarding-questions", label: "Onboarding Questions" },
+  { path: "/resources/documentation/workspace/onboarding/agreements", label: "Agreements" },
+  { path: "/resources/documentation/workspace/onboarding/digital-signatures", label: "Digital Signatures" },
+  { path: "/resources/documentation/workspace/onboarding/private-key", label: "Private Key" },
+  { path: "/resources/documentation/workspace/onboarding/completing-onboarding", label: "Completing Onboarding" },
+  { path: "/resources/documentation/robot/overview/what-is-craftly-robot", label: "What is Craftly Robot?" },
+  { path: "/resources/documentation/robot/overview/architecture", label: "Architecture" },
+  { path: "/resources/documentation/robot/overview/how-robot-works", label: "How Robot Works" },
+  { path: "/resources/documentation/robot/overview/agent-model", label: "Agent Model" },
+  { path: "/resources/documentation/robot/overview/current-status", label: "Current Status" },
+  { path: "/resources/documentation/robot/overview/long-term-vision", label: "Long-Term Vision" },
+  { path: "/resources/documentation/robot/getting-started/prerequisites", label: "Prerequisites" },
+  { path: "/resources/documentation/robot/getting-started/installation", label: "Installation" },
+  { path: "/resources/documentation/robot/getting-started/quickstart", label: "Quickstart" },
+  { path: "/resources/documentation/robot/getting-started/create-first-agent", label: "Create Your First Agent" },
+  { path: "/resources/documentation/robot/getting-started/run-first-task", label: "Run Your First Task" },
+  { path: "/resources/documentation/robot/getting-started/next-steps", label: "Next Steps" },
+  { path: "/resources/documentation/robot/build-with-craftly/agents", label: "Agents" },
+  { path: "/resources/documentation/robot/build-with-craftly/tasks", label: "Tasks" },
+  { path: "/resources/documentation/robot/build-with-craftly/tools", label: "Tools" },
+  { path: "/resources/documentation/robot/build-with-craftly/workflows", label: "Workflows" },
+  { path: "/resources/documentation/robot/build-with-craftly/context-memory", label: "Context & Memory" },
+  { path: "/resources/documentation/robot/build-with-craftly/agent-runtime", label: "Agent Runtime" },
+  { path: "/resources/documentation/robot/build-with-craftly/integrations", label: "Integrations" },
+  { path: "/resources/documentation/robot/build-with-craftly/custom-agents", label: "Custom Agents" },
+  { path: "/resources/documentation/robot/feature-overview/agentic-ai", label: "Agentic AI" },
+  { path: "/resources/documentation/robot/feature-overview/tool-use", label: "Tool Use" },
+  { path: "/resources/documentation/robot/feature-overview/planning-reasoning", label: "Planning & Reasoning" },
+  { path: "/resources/documentation/robot/feature-overview/agent-discovery", label: "Agent Discovery" },
+  { path: "/resources/documentation/robot/feature-overview/agent-to-agent-negotiation", label: "Agent-to-Agent Negotiation" },
+  { path: "/resources/documentation/robot/feature-overview/multi-agent-coordination", label: "Multi-Agent Coordination" },
+  { path: "/resources/documentation/robot/feature-overview/privacy-boundaries", label: "Privacy Boundaries" },
+  { path: "/resources/documentation/robot/feature-overview/human-confirmation", label: "Human Confirmation" },
+  { path: "/resources/documentation/robot/feature-overview/real-world-task-coordination", label: "Real-World Task Coordination" }
+];
 
 let globalSidebarScroll = 0;
 
@@ -32,11 +105,15 @@ export default function DocsLayout({ title, description, tocItems = [], children
   const location = useLocation();
   const path = location.pathname;
 
+  const currentIndex = DOCS_ROUTES.findIndex(r => r.path === location.pathname);
+  const prevRoute = currentIndex > 0 ? DOCS_ROUTES[currentIndex - 1] : null;
+  const nextRoute = currentIndex !== -1 && currentIndex < DOCS_ROUTES.length - 1 ? DOCS_ROUTES[currentIndex + 1] : null;
+
   const [activeId, setActiveId] = useState<string>('welcome');
   
   // Top-level toggles
-  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(path.includes('/robot'));
-  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(path.includes('/workspace'));
+  const [isRobotOpen, setIsRobotOpen] = useState<boolean>(location.pathname.includes('/robot'));
+  const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(location.pathname.includes('/workspace'));
 
   // Nested section toggles
   const [expandedSections, setExpandedSections] = useState<string[]>(() => {
@@ -354,6 +431,31 @@ export default function DocsLayout({ title, description, tocItems = [], children
       {/* Main Content Area */}
       <main className="docs__main">
         {children}
+
+        {(prevRoute || nextRoute) && (
+          <div className="docs__page-nav">
+            {prevRoute ? (
+              <Link to={prevRoute.path} className="docs__page-nav-link docs__page-nav-link--prev">
+                <span className="docs__page-nav-arrow">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </span>
+                <span className="docs__page-nav-label">{prevRoute.label}</span>
+              </Link>
+            ) : <div />}
+            {nextRoute ? (
+              <Link to={nextRoute.path} className="docs__page-nav-link docs__page-nav-link--next">
+                <span className="docs__page-nav-label">{nextRoute.label}</span>
+                <span className="docs__page-nav-arrow">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </span>
+              </Link>
+            ) : <div />}
+          </div>
+        )}
       </main>
 
       {/* Right Sidebar */}
