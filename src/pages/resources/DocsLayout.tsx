@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import './DocsLayout.css';
 
 const DOCS_ROUTES = [
+  { path: "/resources/documentation", label: "Home" },
   { path: "/resources/documentation/workspace/overview/what-is-craftly-workspace", label: "What is Craftly Workspace?" },
   { path: "/resources/documentation/workspace/overview/how-workspace-works", label: "How Workspace Works?" },
   { path: "/resources/documentation/workspace/overview/workspace-structure", label: "Workspace Structure" },
