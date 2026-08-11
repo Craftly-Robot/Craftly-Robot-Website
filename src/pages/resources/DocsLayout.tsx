@@ -203,6 +203,27 @@ export default function DocsLayout({ title, description, tocItems = [], children
     }
   }, [activeId]);
 
+  useEffect(() => {
+    const sidebar = sidebarRef.current;
+    if (!sidebar) return;
+
+    const timeoutId = setTimeout(() => {
+      const activeLink = sidebar.querySelector('.docs__nav-link--active, .docs__nav-subitem--active') as HTMLElement;
+      if (activeLink) {
+        const sidebarRect = sidebar.getBoundingClientRect();
+        const activeLinkRect = activeLink.getBoundingClientRect();
+
+        // Check if active link is out of bounds
+        if (activeLinkRect.top < sidebarRect.top || activeLinkRect.bottom > sidebarRect.bottom) {
+          const scrollTop = sidebar.scrollTop + (activeLinkRect.top - sidebarRect.top) - (sidebarRect.height / 2) + (activeLinkRect.height / 2);
+          sidebar.scrollTo({ top: scrollTop, behavior: 'smooth' });
+        }
+      }
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [location.pathname]);
+
   return (
     <div className="docs__container">
       <Helmet>
