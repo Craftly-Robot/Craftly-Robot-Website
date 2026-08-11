@@ -38,8 +38,6 @@ const DOCS_ROUTES = [
 
   { path: "/resources/documentation/workspace/resources/dept-resources", label: "Department Resources" },
   { path: "/resources/documentation/workspace/resources/training", label: "Training" },
-  { path: "/resources/documentation/workspace/resources/training-participation", label: "Training Participation" },
-  { path: "/resources/documentation/workspace/resources/resource-access", label: "Resource Access" },
   { path: "/resources/documentation/workspace/onboarding/welcome-setup", label: "Welcome & Setup" },
   { path: "/resources/documentation/workspace/onboarding/onboarding-questions", label: "Onboarding Questions" },
   { path: "/resources/documentation/workspace/onboarding/agreements", label: "Agreements" },
@@ -354,8 +352,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
                   <NavLink to="/resources/documentation/workspace/resources/dept-resources" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Department Resources</NavLink>
                   <NavLink to="/resources/documentation/workspace/resources/training" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Training</NavLink>
-                  <NavLink to="/resources/documentation/workspace/resources/training-participation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Training Participation</NavLink>
-                  <NavLink to="/resources/documentation/workspace/resources/resource-access" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Resource Access</NavLink>
                 </div>
               )}
 

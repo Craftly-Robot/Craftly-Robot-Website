@@ -85,8 +85,7 @@ const NotificationsPage = lazy(() => import('./pages/resources/workspace/communi
 const OrgResourcesPage = lazy(() => import('./pages/resources/workspace/resources/OrgResourcesPage'));
 const DeptResourcesPage = lazy(() => import('./pages/resources/workspace/resources/DeptResourcesPage'));
 const TrainingPage = lazy(() => import('./pages/resources/workspace/resources/TrainingPage'));
-const TrainingParticipationPage = lazy(() => import('./pages/resources/workspace/resources/TrainingParticipationPage'));
-const ResourceAccessPage = lazy(() => import('./pages/resources/workspace/resources/ResourceAccessPage'));
+
 
 const WelcomeSetupPage = lazy(() => import('./pages/resources/workspace/onboarding/WelcomeSetupPage'));
 const OnboardingQuestionsPage = lazy(() => import('./pages/resources/workspace/onboarding/OnboardingQuestionsPage'));
@@ -179,8 +178,7 @@ export default function App() {
           <Route path="/resources/documentation/workspace/resources/org-resources" element={<OrgResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/dept-resources" element={<DeptResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/training" element={<TrainingPage />} />
-          <Route path="/resources/documentation/workspace/resources/training-participation" element={<TrainingParticipationPage />} />
-          <Route path="/resources/documentation/workspace/resources/resource-access" element={<ResourceAccessPage />} />
+
 
           <Route path="/resources/documentation/workspace/onboarding/welcome-setup" element={<WelcomeSetupPage />} />
           <Route path="/resources/documentation/workspace/onboarding/onboarding-questions" element={<OnboardingQuestionsPage />} />
