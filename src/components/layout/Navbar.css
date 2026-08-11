@@ -447,3 +447,15 @@
     display: block;
   }
 }
+
+.dropdown-item__arrow {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+  margin-left: 4px;
+  color: #5f6368;
+}
+
+.dropdown-item:hover .dropdown-item__arrow {
+  transform: translateX(4px);
+}
