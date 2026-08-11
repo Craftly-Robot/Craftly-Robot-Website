@@ -25,8 +25,8 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/people-roles/managers", label: "Managers" },
 
   { path: "/resources/documentation/workspace/tasks-operations/tasks", label: "Tasks" },
-  { path: "/resources/documentation/workspace/tasks-operations/task-assignment", label: "Task Assignment" },
-  { path: "/resources/documentation/workspace/tasks-operations/task-evidence", label: "Task Evidence" },
+
+
   { path: "/resources/documentation/workspace/tasks-operations/support-requests", label: "Support Requests" },
   { path: "/resources/documentation/workspace/tasks-operations/notices", label: "Notices" },
   { path: "/resources/documentation/workspace/tasks-operations/operational-workflows", label: "Projects" },
@@ -311,8 +311,8 @@ export default function DocsLayout({ title, description, tocItems = [], children
               {expandedSections.includes('ws-tasks-operations') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
                   <NavLink to="/resources/documentation/workspace/tasks-operations/tasks" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tasks</NavLink>
-                  <NavLink to="/resources/documentation/workspace/tasks-operations/task-assignment" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Task Assignment</NavLink>
-                  <NavLink to="/resources/documentation/workspace/tasks-operations/task-evidence" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Task Evidence</NavLink>
+
+
                   <NavLink to="/resources/documentation/workspace/tasks-operations/support-requests" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Support Requests</NavLink>
                   <NavLink to="/resources/documentation/workspace/tasks-operations/notices" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Notices</NavLink>
                   <NavLink to="/resources/documentation/workspace/tasks-operations/operational-workflows" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Projects</NavLink>
