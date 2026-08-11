@@ -15,7 +15,36 @@ export default function CompletingOnboardingPage() {
 
       <h1 className="docs__title" id="completing-onboarding">Completing Onboarding</h1>
       
-      <div id="completing-onboarding-text-1"></div>
+      <p className="docs__text">
+        Congratulations your Craftly onboarding is now complete.
+      </p>
+      
+      <p className="docs__text">
+        From here, there is nothing else you need to rush. Wait for your organizational position to be assigned and stay ready to begin your responsibilities.
+      </p>
+
+      <p className="docs__text">
+        Once you receive your position:
+      </p>
+
+      <ul className="docs__list">
+        <li>Understand your role and responsibilities clearly.</li>
+        <li>Stay active and involved in your unit.</li>
+        <li>Complete your assigned work responsibly.</li>
+        <li>Stay dedicated and sincere toward your responsibilities.</li>
+        <li>Communicate clearly with your team and leadership.</li>
+        <li>Ask for help when you are unsure or blocked.</li>
+        <li>Keep improving your skills and understanding of the organization.</li>
+        <li>Maintain better communication, consistency, and professionalism.</li>
+      </ul>
+
+      <p className="docs__text">
+        Your position is not just a title it represents a responsibility within the organization.
+      </p>
+
+      <p className="docs__text" style={{ fontWeight: 600 }}>
+        Stay active. Understand your work. Stay dedicated. Communicate well. Keep learning. Keep contributing.
+      </p>
       
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
         <img 
@@ -25,8 +54,6 @@ export default function CompletingOnboardingPage() {
         />
       </div>
 
-      <div id="completing-onboarding-text-2"></div>
-      
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
         <img 
           src="/assets/aggrements/4.png" 
@@ -34,8 +61,6 @@ export default function CompletingOnboardingPage() {
           style={{ width: '100%', display: 'block' }} 
         />
       </div>
-
-      <div id="completing-onboarding-text-3"></div>
     </DocsLayout>
   );
 }
