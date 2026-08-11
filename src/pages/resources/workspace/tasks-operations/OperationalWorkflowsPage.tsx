@@ -1,19 +1,19 @@
-﻿import DocsLayout from '../../DocsLayout';
+import DocsLayout from '../../DocsLayout';
 
 export default function OperationalWorkflowsPage() {
   return (
     <DocsLayout 
-      title="Operational Workflows â€” Craftly Workspace"
-      description="Operational Workflows in Craftly Workspace"
+      title="Projects â€” Craftly Workspace"
+      description="Projects in Craftly Workspace"
       tocItems={[
-        { id: 'operational-workflows', label: 'Operational Workflows' }
+        { id: 'projects', label: 'Projects' }
       ]}
     >
       <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt; <strong>Operational Workflows</strong>
+        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt; <strong>Projects</strong>
       </div>
 
-      <h1 className="docs__title" id="operational-workflows">Operational Workflows</h1>
+      <h1 className="docs__title" id="projects">Projects</h1>
       <p className="docs__text">Content coming soon...</p>
     </DocsLayout>
   );

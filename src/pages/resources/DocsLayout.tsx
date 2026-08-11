@@ -29,7 +29,7 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/tasks-operations/task-evidence", label: "Task Evidence" },
   { path: "/resources/documentation/workspace/tasks-operations/support-requests", label: "Support Requests" },
   { path: "/resources/documentation/workspace/tasks-operations/notices", label: "Notices" },
-  { path: "/resources/documentation/workspace/tasks-operations/operational-workflows", label: "Operational Workflows" },
+  { path: "/resources/documentation/workspace/tasks-operations/operational-workflows", label: "Projects" },
   { path: "/resources/documentation/workspace/communication/direct-communication", label: "Direct Communication" },
   { path: "/resources/documentation/workspace/communication/team-communication", label: "Team Communication" },
   { path: "/resources/documentation/workspace/communication/chain-of-command", label: "Chain of Command" },
@@ -315,7 +315,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
                   <NavLink to="/resources/documentation/workspace/tasks-operations/task-evidence" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Task Evidence</NavLink>
                   <NavLink to="/resources/documentation/workspace/tasks-operations/support-requests" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Support Requests</NavLink>
                   <NavLink to="/resources/documentation/workspace/tasks-operations/notices" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Notices</NavLink>
-                  <NavLink to="/resources/documentation/workspace/tasks-operations/operational-workflows" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Operational Workflows</NavLink>
+                  <NavLink to="/resources/documentation/workspace/tasks-operations/operational-workflows" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Projects</NavLink>
                 </div>
               )}
 
