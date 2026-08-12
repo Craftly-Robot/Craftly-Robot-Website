@@ -6,7 +6,10 @@ export default function DepartmentsPage() {
       title="Departments â€” Craftly Workspace"
       description="Departments in Craftly Workspace"
       tocItems={[
-        { id: 'departments', label: 'Departments' }
+        { id: 'departments', label: 'Departments' },
+        { id: 'current-departments', label: 'Current Functional Departments' },
+        { id: 'functional-not-fixed', label: 'Functional, Not Fixed' },
+        { id: 'placement', label: 'How Department Placement Works' }
       ]}
     >
       <div className="docs__breadcrumb">
