@@ -163,7 +163,7 @@ select {
   --container-wide:   1440px;
   --container-narrow: 720px;
   --page-margin:      clamp(1.25rem, 4vw, 3rem);
-  --nav-height:       64px;
+  --nav-height:       56px;
 
   /* ── Shape ── */
   --radius-sm:    6px;
@@ -362,7 +362,7 @@ select {
 
 @media (max-width: 1024px) {
   :root {
-    --nav-height: 56px;
+    --nav-height: 48px;
   }
 
   .section {
