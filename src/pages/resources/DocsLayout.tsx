@@ -9,11 +9,6 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/overview/how-workspace-works", label: "How Workspace Works?" },
 
   { path: "/resources/documentation/workspace/overview/core-concepts", label: "Core Concepts" },
-  { path: "/resources/documentation/workspace/getting-started/create-account", label: "Create Your Account" },
-  { path: "/resources/documentation/workspace/getting-started/join-organization", label: "Join an Organization" },
-  { path: "/resources/documentation/workspace/getting-started/complete-profile", label: "Complete Your Profile" },
-  { path: "/resources/documentation/workspace/getting-started/understand-workspace", label: "Understanding Your Workspace" },
-  { path: "/resources/documentation/workspace/getting-started/first-task", label: "Your First Task" },
 
   { path: "/resources/documentation/workspace/organization/departments", label: "Departments" },
   { path: "/resources/documentation/workspace/organization/teams", label: "Teams" },
