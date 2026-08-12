@@ -22,7 +22,7 @@ export default function MembersPage() {
       <p className="docs__text">The Members section in Craftly Workspace gives you a live view of the people working across your department.</p>
       <p className="docs__text">Craftly has members contributing across different departments and functional areas. Everyone does not have the same responsibilities, workload, or opportunities, so the ranking is intended to reflect individual contribution and engagement within the member's department, rather than simply showing who joined first or who holds the highest position.</p>
 
-      <div className="docs__image-container" style={{ marginTop: '32px' }}>
+      <div className="docs__image-container" style={{ marginTop: '32px', marginBottom: '48px' }}>
         <img src="/assets/Members/1.png" alt="Members" className="docs__image" />
       </div>
 
