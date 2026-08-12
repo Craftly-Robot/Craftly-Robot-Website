@@ -287,10 +287,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  height: 40px;
-  padding: 0 20px;
-  font-size: 15px;
+  gap: 6px;
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-text-inverse);
   background: #111111;
