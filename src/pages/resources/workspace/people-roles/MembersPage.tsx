@@ -38,13 +38,13 @@ export default function MembersPage() {
       <p className="docs__text">It is influenced by multiple types of meaningful participation rather than a single activity.</p>
       <p className="docs__text">Examples include:</p>
 
-      <h3 className="docs__heading-3" id="attendance">Attendance</h3>
+      <h3 className="docs__heading-3" id="attendance">1. Attendance</h3>
       <p className="docs__text">Consistent attendance and active participation in organizational activities contribute to your performance signal.</p>
 
-      <h3 className="docs__heading-3" id="verified-work">Verified Work</h3>
+      <h3 className="docs__heading-3" id="verified-work">2. Verified Work</h3>
       <p className="docs__text">Completing assigned work is important, but verified and accepted work provides a stronger indication that the work was actually completed to the required standard.</p>
 
-      <h3 className="docs__heading-3" id="hierarchy-chat-participation">Hierarchy Chat Participation</h3>
+      <h3 className="docs__heading-3" id="hierarchy-chat-participation">3. Hierarchy Chat Participation</h3>
       <p className="docs__text">Communication through the organizational hierarchy also contributes to your overall participation.</p>
       <p className="docs__text">This includes meaningful communication with:</p>
       <ul className="docs__list">
@@ -54,30 +54,30 @@ export default function MembersPage() {
       </ul>
       <p className="docs__text">The goal is not to send unnecessary messages, but to maintain effective organizational communication.</p>
 
-      <h3 className="docs__heading-3" id="agent-to-agent-negotiation">Agent-to-Agent Negotiation</h3>
+      <h3 className="docs__heading-3" id="agent-to-agent-negotiation">4. Agent-to-Agent Negotiation</h3>
       <p className="docs__text">Participation in Craftly Robot's agent-to-agent negotiation capabilities can also contribute to your performance signal when the feature is available and relevant to your work.</p>
 
-      <h3 className="docs__heading-3" id="department-projects">Department Projects</h3>
+      <h3 className="docs__heading-3" id="department-projects">5. Department Projects</h3>
       <p className="docs__text">For members of Operations, practical project participation and successful project work can contribute significantly to their performance signal.</p>
       <p className="docs__text">Other departments may have their own relevant forms of contribution.</p>
 
-      <h3 className="docs__heading-3" id="department-work">Department Work</h3>
+      <h3 className="docs__heading-3" id="department-work">6. Department Work</h3>
       <p className="docs__text">Consistently participating in the actual work of your department is an important part of your overall contribution.</p>
 
-      <h3 className="docs__heading-3" id="invitations">Invitations</h3>
+      <h3 className="docs__heading-3" id="invitations">7. Invitations</h3>
       <p className="docs__text">If you use your official Craftly invitation link and people join through your invitation, this can contribute to your performance signal.</p>
       <p className="docs__text">The purpose is to recognize members who actively help grow the organization.</p>
 
-      <h3 className="docs__heading-3" id="decentralized-contribution">Decentralized Contribution</h3>
+      <h3 className="docs__heading-3" id="decentralized-node-contribution">8. Decentralized node Contribution</h3>
       <p className="docs__text">Contributing computing resources or participating in Craftly's decentralized infrastructure and training systems, where available, can also contribute to your performance signal.</p>
 
-      <h3 className="docs__heading-3" id="model-training">Model Training</h3>
+      <h3 className="docs__heading-3" id="model-training">9. Model Training</h3>
       <p className="docs__text">Participation in approved model training and AI research activities can provide additional contribution signals.</p>
 
-      <h3 className="docs__heading-3" id="bug-reports">Bug Reports</h3>
+      <h3 className="docs__heading-3" id="bug-reports">10. Bug Reports</h3>
       <p className="docs__text">Finding and properly reporting genuine bugs helps improve Craftly's systems and can contribute to your performance signal.</p>
 
-      <h3 className="docs__heading-3" id="feature-requests">Feature Requests</h3>
+      <h3 className="docs__heading-3" id="feature-requests">11. Feature Requests</h3>
       <p className="docs__text">Useful and well described feature requests can also contribute by helping Craftly identify meaningful improvements.</p>
 
       <h2 className="docs__subtitle" id="why-did-my-ranking-go-down">Why Did My Ranking Go Down?</h2>
