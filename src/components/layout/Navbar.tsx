@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navigation } from '../../data/navigation';
+import { brandAssets } from '../../utils/brandAssets';
 import './Navbar.css';
 
 /* ── Icons ── */
@@ -124,7 +125,7 @@ export default function Navbar() {
         <div className="navbar__left">
           <Link to="/" className="navbar__logo" aria-label="Craftly Home">
             <div className="navbar__logo-container">
-              <span className="navbar__logo-text">Craftly</span>
+              <img src={brandAssets.logo} alt="Craftly" className="navbar__logo-image" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
             </div>
           </Link>
 
