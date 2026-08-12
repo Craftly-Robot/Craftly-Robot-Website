@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { brandAssets } from '../../utils/brandAssets';
 import './Footer.css';
 
 export default function Footer() {
@@ -39,7 +38,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="footer__bottom-left">
           <Link to="/" className="footer__bottom-logo">
-            <img src={brandAssets.logo} alt="Craftly" style={{ height: '24px', width: 'auto', objectFit: 'contain' }} />
+            Craftly
           </Link>
         </div>
         <div className="footer__bottom-right">
