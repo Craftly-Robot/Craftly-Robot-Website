@@ -272,19 +272,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
                 </div>
               )}
 
-              <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-getting-started')}>
-                <span>Getting Started</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-getting-started')} />
-              </div>
-              {expandedSections.includes('ws-getting-started') && (
-                <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                  <NavLink to="/resources/documentation/workspace/getting-started/create-account" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Create Your Account</NavLink>
-                  <NavLink to="/resources/documentation/workspace/getting-started/join-organization" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Join an Organization</NavLink>
-                  <NavLink to="/resources/documentation/workspace/getting-started/complete-profile" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Complete Your Profile</NavLink>
-                  <NavLink to="/resources/documentation/workspace/getting-started/understand-workspace" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Understanding Your Workspace</NavLink>
-                  <NavLink to="/resources/documentation/workspace/getting-started/first-task" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Your First Task</NavLink>
-                </div>
-              )}
+
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-organization')}>
                 <span>Organization</span>

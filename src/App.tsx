@@ -51,11 +51,7 @@ const HowWorkspaceWorksPage = lazy(() => import('./pages/resources/workspace/ove
 const WorkspaceStructurePage = lazy(() => import('./pages/resources/workspace/overview/WorkspaceStructurePage'));
 const CoreConceptsPage = lazy(() => import('./pages/resources/workspace/overview/CoreConceptsPage'));
 
-const CreateAccountPage = lazy(() => import('./pages/resources/workspace/getting-started/CreateAccountPage'));
-const JoinOrganizationPage = lazy(() => import('./pages/resources/workspace/getting-started/JoinOrganizationPage'));
-const CompleteProfilePage = lazy(() => import('./pages/resources/workspace/getting-started/CompleteProfilePage'));
-const UnderstandWorkspacePage = lazy(() => import('./pages/resources/workspace/getting-started/UnderstandWorkspacePage'));
-const FirstTaskPage = lazy(() => import('./pages/resources/workspace/getting-started/FirstTaskPage'));
+
 
 const OrgStructurePage = lazy(() => import('./pages/resources/workspace/organization/OrgStructurePage'));
 const DepartmentsPage = lazy(() => import('./pages/resources/workspace/organization/DepartmentsPage'));
@@ -144,11 +140,7 @@ export default function App() {
           <Route path="/resources/documentation/workspace/overview/workspace-structure" element={<WorkspaceStructurePage />} />
           <Route path="/resources/documentation/workspace/overview/core-concepts" element={<CoreConceptsPage />} />
 
-          <Route path="/resources/documentation/workspace/getting-started/create-account" element={<CreateAccountPage />} />
-          <Route path="/resources/documentation/workspace/getting-started/join-organization" element={<JoinOrganizationPage />} />
-          <Route path="/resources/documentation/workspace/getting-started/complete-profile" element={<CompleteProfilePage />} />
-          <Route path="/resources/documentation/workspace/getting-started/understand-workspace" element={<UnderstandWorkspacePage />} />
-          <Route path="/resources/documentation/workspace/getting-started/first-task" element={<FirstTaskPage />} />
+
 
           <Route path="/resources/documentation/workspace/organization/org-structure" element={<OrgStructurePage />} />
           <Route path="/resources/documentation/workspace/organization/departments" element={<DepartmentsPage />} />
