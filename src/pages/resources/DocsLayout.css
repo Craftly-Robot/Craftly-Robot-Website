@@ -11,6 +11,12 @@
 .docs__sidebar {
   display: none;
   padding: 40px 24px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.docs__sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 1024px) {
