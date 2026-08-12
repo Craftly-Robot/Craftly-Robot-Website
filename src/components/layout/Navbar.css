@@ -199,8 +199,6 @@
   display: flex;
   flex-direction: column;
   padding-left: 16px;
-  padding-right: 24px;
-  border-right: 1px solid #eaeaeb;
 }
 
 .navbar__mega-list-title {
@@ -224,6 +222,9 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding-right: 24px;
+  border-right: 1px solid #eaeaeb;
+  width: max-content;
 }
 
 .dropdown-item {
