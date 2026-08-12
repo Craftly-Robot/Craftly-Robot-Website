@@ -41,6 +41,14 @@
   z-index: calc(var(--z-sticky) + 2);
 }
 
+.navbar__logo-container {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  margin-right: 8px;
+  border-right: 1px solid var(--color-border);
+}
+
 .navbar__logo-text {
   font-family: 'Pacifico', cursive;
   font-size: 28px;
