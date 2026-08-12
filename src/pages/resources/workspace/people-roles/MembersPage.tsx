@@ -11,7 +11,8 @@ export default function MembersPage() {
         { id: 'what-is-performance-signal', label: 'What Is Performance Signal?' },
         { id: 'why-did-my-ranking-go-down', label: 'Why Did My Ranking Go Down?' },
         { id: 'how-can-i-improve-my-ranking', label: 'How Can I Improve My Ranking?' },
-        { id: 'departments-are-different', label: 'Departments Are Different' }
+        { id: 'departments-are-different', label: 'Departments Are Different' },
+        { id: 'whatsapp-contact', label: 'WhatsApp Contact' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -113,6 +114,14 @@ export default function MembersPage() {
       <p className="docs__text">For example, an Operations member may have opportunities to work on Projects that are not available to someone in another department. Similarly, some technical or research activities may only be available to members with relevant responsibilities.</p>
       <p className="docs__text">Therefore, the ranking should be understood within the context of each member's department and available responsibilities, rather than assuming that every member must perform exactly the same activities.</p>
       <p className="docs__text">The system is designed to recognize meaningful contribution appropriate to the member's role and department.</p>
+
+      <h2 className="docs__subtitle" id="whatsapp-contact">WhatsApp Contact</h2>
+      <p className="docs__text">The WhatsApp contact information shown in Workspace is restricted to Senior members and top-level leadership, including the Chairman, MD, CEO, and C-Suite members.</p>
+      <p className="docs__text">This restriction exists to maintain professional boundaries, privacy, and member safety, and to reduce the possibility of unwanted contact or harassment.</p>
+      <p className="docs__text">If you need to contact a Senior or top-level member but you are not authorized to contact them directly, do not obtain or use their private WhatsApp number yourself.</p>
+      <p className="docs__text">Instead, contact your direct Senior or Unit Leader and explain who you need to reach and why. They can coordinate the appropriate contact when necessary.</p>
+      <p className="docs__text">If the Senior does not respond or does not facilitate the required communication, report the situation to the relevant C-Suite member or Department Head through the appropriate channel.</p>
+      <p className="docs__text">Use direct WhatsApp contact only when it is officially available to you. When you need to reach someone outside your access level, follow the reporting structure rather than bypassing it.</p>
     </DocsLayout>
   );
 }
