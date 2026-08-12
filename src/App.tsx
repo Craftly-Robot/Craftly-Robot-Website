@@ -55,7 +55,6 @@ const CoreConceptsPage = lazy(() => import('./pages/resources/workspace/overview
 
 const OrgStructurePage = lazy(() => import('./pages/resources/workspace/organization/OrgStructurePage'));
 const DepartmentsPage = lazy(() => import('./pages/resources/workspace/organization/DepartmentsPage'));
-const TeamsPage = lazy(() => import('./pages/resources/workspace/organization/TeamsPage'));
 const ReportingStructurePage = lazy(() => import('./pages/resources/workspace/organization/ReportingStructurePage'));
 const RolesPermissionsPage = lazy(() => import('./pages/resources/workspace/organization/RolesPermissionsPage'));
 
@@ -144,7 +143,6 @@ export default function App() {
 
           <Route path="/resources/documentation/workspace/organization/org-structure" element={<OrgStructurePage />} />
           <Route path="/resources/documentation/workspace/organization/departments" element={<DepartmentsPage />} />
-          <Route path="/resources/documentation/workspace/organization/teams" element={<TeamsPage />} />
           <Route path="/resources/documentation/workspace/organization/reporting-structure" element={<ReportingStructurePage />} />
           <Route path="/resources/documentation/workspace/organization/roles-permissions" element={<RolesPermissionsPage />} />
 

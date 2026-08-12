@@ -11,7 +11,6 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/overview/core-concepts", label: "Core Concepts" },
 
   { path: "/resources/documentation/workspace/organization/departments", label: "Departments" },
-  { path: "/resources/documentation/workspace/organization/teams", label: "Teams" },
   { path: "/resources/documentation/workspace/organization/reporting-structure", label: "Reporting Structure" },
   { path: "/resources/documentation/workspace/organization/roles-permissions", label: "Roles & Permissions" },
   { path: "/resources/documentation/workspace/people-roles/members", label: "Members" },
@@ -277,7 +276,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
 
                   <NavLink to="/resources/documentation/workspace/organization/departments" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Departments</NavLink>
-                  <NavLink to="/resources/documentation/workspace/organization/teams" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Teams</NavLink>
                   <NavLink to="/resources/documentation/workspace/organization/reporting-structure" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Reporting Structure</NavLink>
                   <NavLink to="/resources/documentation/workspace/organization/roles-permissions" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Roles & Permissions</NavLink>
                 </div>
