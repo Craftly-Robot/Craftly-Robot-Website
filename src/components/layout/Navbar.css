@@ -136,8 +136,7 @@
 
 /* ── Mega Menu Layout ── */
 .navbar__mega {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   gap: 0;
 }
 
@@ -146,7 +145,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding-right: 24px;
-  border-right: 1px solid #eaeaeb;
+  border-right: 1px solid #f1f3f4;
 }
 
 .navbar__mega-title {
@@ -199,6 +198,8 @@
   display: flex;
   flex-direction: column;
   padding-left: 16px;
+  padding-right: 24px;
+  border-right: 1px solid #f1f3f4;
 }
 
 .navbar__mega-list-title {
@@ -222,8 +223,6 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding-right: 24px;
-  border-right: 1px solid #eaeaeb;
   width: max-content;
 }
 
