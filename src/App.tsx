@@ -69,8 +69,6 @@ const SupportRequestsPage = lazy(() => import('./pages/resources/workspace/tasks
 const NoticesPage = lazy(() => import('./pages/resources/workspace/tasks-operations/NoticesPage'));
 const OperationalWorkflowsPage = lazy(() => import('./pages/resources/workspace/tasks-operations/OperationalWorkflowsPage'));
 
-const DirectCommunicationPage = lazy(() => import('./pages/resources/workspace/communication/DirectCommunicationPage'));
-const TeamCommunicationPage = lazy(() => import('./pages/resources/workspace/communication/TeamCommunicationPage'));
 const ChainOfCommandPage = lazy(() => import('./pages/resources/workspace/communication/ChainOfCommandPage'));
 const ReportingCommunicationPage = lazy(() => import('./pages/resources/workspace/communication/ReportingCommunicationPage'));
 const NotificationsPage = lazy(() => import('./pages/resources/workspace/communication/NotificationsPage'));
@@ -156,8 +154,6 @@ export default function App() {
           <Route path="/resources/documentation/workspace/tasks-operations/notices" element={<NoticesPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/operational-workflows" element={<OperationalWorkflowsPage />} />
 
-          <Route path="/resources/documentation/workspace/communication/direct-communication" element={<DirectCommunicationPage />} />
-          <Route path="/resources/documentation/workspace/communication/team-communication" element={<TeamCommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/chain-of-command" element={<ChainOfCommandPage />} />
           <Route path="/resources/documentation/workspace/communication/reporting-communication" element={<ReportingCommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/notifications" element={<NotificationsPage />} />

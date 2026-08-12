@@ -23,8 +23,6 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/workspace/tasks-operations/support-requests", label: "Support Requests" },
   { path: "/resources/documentation/workspace/tasks-operations/notices", label: "Notice Board" },
   { path: "/resources/documentation/workspace/tasks-operations/operational-workflows", label: "Projects" },
-  { path: "/resources/documentation/workspace/communication/direct-communication", label: "Direct Communication" },
-  { path: "/resources/documentation/workspace/communication/team-communication", label: "Team Communication" },
   { path: "/resources/documentation/workspace/communication/chain-of-command", label: "Chain of Command" },
   { path: "/resources/documentation/workspace/communication/reporting-communication", label: "Reporting-Based Communication" },
   { path: "/resources/documentation/workspace/communication/notifications", label: "Notifications" },
@@ -314,8 +312,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
               </div>
               {expandedSections.includes('ws-communication') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                  <NavLink to="/resources/documentation/workspace/communication/direct-communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Direct Communication</NavLink>
-                  <NavLink to="/resources/documentation/workspace/communication/team-communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Team Communication</NavLink>
                   <NavLink to="/resources/documentation/workspace/communication/chain-of-command" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Chain of Command</NavLink>
                   <NavLink to="/resources/documentation/workspace/communication/reporting-communication" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Reporting-Based Communication</NavLink>
                   <NavLink to="/resources/documentation/workspace/communication/notifications" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Notifications</NavLink>
