@@ -21,6 +21,15 @@ export default function TrainingPage() {
       </div>
 
       <h1 className="docs__title" id="training">Training</h1>
+      
+      <div style={{ marginBottom: '32px' }}>
+        <img 
+          src="/assets/training_participation/1.png" 
+          alt="Training Participation" 
+          style={{ width: '100%', borderRadius: '12px', border: '1px solid var(--color-border)' }} 
+        />
+      </div>
+
       <p className="docs__text">
         Craftly's Training section is where members can contribute computing resources to the development and training of Craftly's AI systems through decentralized AI training.
       </p>
