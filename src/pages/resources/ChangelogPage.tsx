@@ -109,6 +109,7 @@ const releases: ReleaseData[] = [
 
 export default function ChangelogPage() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
 
   const toggle = (id: string) => {
     setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
@@ -134,8 +135,18 @@ export default function ChangelogPage() {
             </div>
             
             <div className="changelog-tabs">
-              <button className="changelog-tab active">Craftly Workspace</button>
-              <button className="changelog-tab">Craftly Robot</button>
+              <button 
+                className={`changelog-tab ${activeTab === 'workspace' ? 'active' : ''}`}
+                onClick={() => setActiveTab('workspace')}
+              >
+                Craftly Workspace
+              </button>
+              <button 
+                className={`changelog-tab ${activeTab === 'robot' ? 'active' : ''}`}
+                onClick={() => setActiveTab('robot')}
+              >
+                Craftly Robot
+              </button>
             </div>
           </div>
 
@@ -149,50 +160,57 @@ export default function ChangelogPage() {
             <div className="changelog-col-title">Description</div>
           </div>
 
-          <div className="changelog-list">
-            {releases.map((release) => (
-              <div className="changelog-item" key={release.version}>
-                <div className="changelog-item__left">
-                  <div className="cl-version">{release.version}</div>
-                  <div className="cl-date">{release.date}</div>
-                </div>
-                
-                <div className="changelog-card">
-                  <h2 className="changelog-card__title">{release.title}</h2>
+          {activeTab === 'workspace' ? (
+            <div className="changelog-list">
+              {releases.map((release) => (
+                <div className="changelog-item" key={release.version}>
+                  <div className="changelog-item__left">
+                    <div className="cl-version">{release.version}</div>
+                    <div className="cl-date">{release.date}</div>
+                  </div>
                   
-                  <div className="changelog-card__body">
-                    <p className="changelog-card__desc">{release.desc}</p>
+                  <div className="changelog-card">
+                    <h2 className="changelog-card__title">{release.title}</h2>
                     
-                    <div className="changelog-accordions">
-                      {release.accordions.map((acc) => {
-                        const id = `${release.version}-${acc.type}`;
-                        const isOpen = expanded[id] || false;
-                        return (
-                          <div className="cl-accordion" key={acc.type}>
-                            <button className="cl-accordion__toggle" onClick={() => toggle(id)}>
-                              <span>{acc.type} ({acc.count})</span>
-                              <ChevronIcon isOpen={isOpen} />
-                            </button>
-                            {isOpen && (
-                              <div className="cl-accordion__content" style={{ paddingBottom: acc.items.length === 0 ? 0 : undefined }}>
-                                {acc.items.length > 0 && (
-                                  <ul>
-                                    {acc.items.map((item, idx) => (
-                                      <li key={idx}>{item}</li>
-                                    ))}
-                                  </ul>
-                                )}
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}
+                    <div className="changelog-card__body">
+                      <p className="changelog-card__desc">{release.desc}</p>
+                      
+                      <div className="changelog-accordions">
+                        {release.accordions.map((acc) => {
+                          const id = `${release.version}-${acc.type}`;
+                          const isOpen = expanded[id] || false;
+                          return (
+                            <div className="cl-accordion" key={acc.type}>
+                              <button className="cl-accordion__toggle" onClick={() => toggle(id)}>
+                                <span>{acc.type} ({acc.count})</span>
+                                <ChevronIcon isOpen={isOpen} />
+                              </button>
+                              {isOpen && (
+                                <div className="cl-accordion__content" style={{ paddingBottom: acc.items.length === 0 ? 0 : undefined }}>
+                                  {acc.items.length > 0 && (
+                                    <ul>
+                                      {acc.items.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div style={{ textAlign: 'center', padding: '120px 0', color: '#5f6368' }}>
+              <p style={{ fontSize: '18px', fontWeight: 500, color: '#202124', marginBottom: '8px' }}>Coming Soon</p>
+              <p>Changelog for Craftly Robot will be available here.</p>
+            </div>
+          )}
 
         </div>
       </main>
