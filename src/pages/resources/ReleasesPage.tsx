@@ -155,18 +155,10 @@ export default function ReleasesPage() {
             const isExpanded = expandedVersions.includes(release.version);
 
             return (
-              <div key={release.version} className={`release-item ${isExpanded ? 'release-item--expanded' : ''}`}>
-                <div 
-                  className="release-item__header"
-                  onClick={() => toggleVersion(release.version)}
-                >
-                  <div className="release-item__version-info">
-                    <span className="release-item__version-label">Version</span>
-                    <span className="release-item__version-number">{release.version}</span>
-                  </div>
-                  <div className="release-item__toggle">
-                    {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
-                  </div>
+              <div key={release.version} className={`release-item ${isExpanded ? 'release-item--expanded' : ''}`} onClick={() => toggleVersion(release.version)}>
+                <div className="release-item__version-info">
+                  <span className="release-item__version-label">Version</span>
+                  <span className="release-item__version-number">{release.version}</span>
                 </div>
 
                 {isExpanded && (
@@ -217,6 +209,10 @@ export default function ReleasesPage() {
                     </div>
                   </div>
                 )}
+
+                <div className="release-item__toggle">
+                  {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                </div>
               </div>
             );
           })}

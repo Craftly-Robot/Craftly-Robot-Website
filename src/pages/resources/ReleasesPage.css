@@ -129,33 +129,32 @@
 }
 
 .release-item {
+  display: flex;
+  flex-direction: row;
   border-bottom: 1px solid #eaeaeb;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-height: 80px;
+}
+
+.release-item:hover {
+  background-color: #fafafa;
 }
 
 .releases-list {
   display: flex;
   flex-direction: column;
   border-top: 1px solid #eaeaeb;
-}
-
-.release-item__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 0;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.release-item__header:hover {
-  background-color: #fafafa;
+  margin-top: 48px; /* Extra gap between tabs and the list box */
 }
 
 .release-item__version-info {
   display: flex;
-  align-items: center;
-  gap: 48px; /* Space between "Version" and "2.8.0" */
-  width: 30%;
+  align-items: flex-start;
+  gap: 48px; 
+  padding: 24px 32px 24px 0;
+  width: 250px;
+  flex-shrink: 0;
 }
 
 .release-item__version-label {
@@ -174,42 +173,25 @@
 .release-item__toggle {
   color: #5f6368;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 24px 0 24px 32px;
+  min-width: 48px;
 }
 
 /* Expanded Content */
 .release-item__content {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  padding: 16px 0 48px 0;
-}
-
-@media (min-width: 768px) {
-  .release-item__content {
-    flex-direction: row;
-    padding: 16px 0 64px 30%; /* Start the content where the version number ends roughly */
-  }
+  flex-direction: row;
 }
 
 .os-downloads {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-bottom: 32px;
-}
-
-@media (min-width: 768px) {
-  .os-downloads {
-    padding-bottom: 0;
-    padding-left: 40px;
-    border-left: 1px solid #f1f3f4;
-  }
-  
-  .os-downloads:first-child {
-    padding-left: 0;
-    border-left: none;
-  }
+  padding: 24px 32px;
+  border-left: 1px solid #eaeaeb;
 }
 
 .os-downloads__title {
