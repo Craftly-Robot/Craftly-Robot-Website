@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 64px;
+  margin-bottom: 120px;
 }
 
 @media (min-width: 768px) {
@@ -25,7 +25,7 @@
 }
 
 .releases-hero__content {
-  max-width: 600px;
+  max-width: 680px;
 }
 
 .releases-hero__title {
@@ -44,10 +44,22 @@
 }
 
 .releases-hero__desc {
-  font-size: 16px;
+  font-size: 18px;
   color: #5f6368;
   line-height: 1.6;
   margin: 0;
+}
+
+.typewriter-cursor-gradient {
+  display: inline-block;
+  background: linear-gradient(180deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .btn-changelog {

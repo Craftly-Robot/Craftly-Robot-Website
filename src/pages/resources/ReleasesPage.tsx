@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './ReleasesPage.css';
 
@@ -71,6 +71,31 @@ const workspaceReleases: ReleaseItem[] = [
   { version: '3.8.0' },
 ];
 
+function TypewriterTitle({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 45);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return (
+    <h1 className="releases-hero__title">
+      {displayedText}
+      <span className="typewriter-cursor-gradient">|</span>
+    </h1>
+  );
+}
+
 export default function ReleasesPage() {
   const [activeTab, setActiveTab] = useState<'craftly' | 'workspace'>('craftly');
   const [expandedVersion, setExpandedVersion] = useState<string>('2.8.0');
@@ -92,9 +117,7 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <h1 className="releases-hero__title">
-                Craftly<br />Releases
-              </h1>
+              <TypewriterTitle text="Craftly Releases" />
               <p className="releases-hero__desc">
                 Download previous Craftly and Craftly Workspace releases. By default, they auto-update to the latest version. To stay on old versions, you will need to set Update: Mode to manual or none in the settings.
               </p>
