@@ -169,7 +169,7 @@
 .changelog-card {
   background: #f8f9fa;
   border-radius: 24px;
-  padding: 40px;
+  padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: 48px;
@@ -218,12 +218,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 12px 0;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  color: #3c4043;
+  color: #000000;
 }
 
 .cl-accordion__toggle:hover {
