@@ -12,7 +12,7 @@ const InfoIcon = () => (
 );
 
 const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <svg className={`cl-chevron ${isOpen ? 'open' : ''}`} viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg className={`cl-chevron ${isOpen ? 'open' : ''}`} viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="6 9 12 15 18 9" />
   </svg>
 );
@@ -45,7 +45,18 @@ const releases: ReleaseData[] = [
           "The sidebar now remembers which folders you have collapsed or expanded, including when you use the 'Collapse All' action, keeping your Projects list organized across sessions."
         ]
       },
-      { type: 'Fixes', count: 6, items: [] },
+      {
+        type: 'Fixes',
+        count: 6,
+        items: [
+          "Fixed an issue that prevented submitting or dismissing the feedback form on the welcome screen.",
+          "Fixed frequent application crashes when opening conversations that contain large command outputs. The file viewer now limits the size of files it will display, and large changes in the history are limited to ensure stability.",
+          "Fixed a styling issue where inline code in chat messages and the file viewer did not display in the correct colors.",
+          "Fixed a layout bug that caused multi-line commands to display without line breaks in the activity history.",
+          "Fixed an issue where the application header and top menu bar failed to display on Linux.",
+          "Fixed an issue where empty section headers (such as \"Terminal\") appeared in Settings when all contained settings were disabled."
+        ]
+      },
       { type: 'Patches', count: 0, items: [] }
     ]
   },

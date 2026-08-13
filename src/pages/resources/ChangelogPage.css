@@ -229,7 +229,7 @@
   font-size: 14px;
   color: #5f6368;
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .cl-accordion__content li:last-child {
@@ -237,12 +237,10 @@
 }
 
 .cl-accordion__content li::before {
-  content: '';
+  content: '•';
   position: absolute;
   left: 0;
-  top: 8px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #5f6368;
+  top: 0;
+  color: #5f6368;
+  font-size: 14px;
 }
