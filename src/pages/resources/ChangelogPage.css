@@ -90,18 +90,21 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #f8f9fa;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   padding: 16px 24px;
-  border-radius: 16px;
+  border-radius: 12px;
   margin-bottom: 48px;
   font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .changelog-banner svg {
-  color: #000000;
   flex-shrink: 0;
+  color: #ffffff;
 }
+
 
 .changelog-list-header {
   display: grid;
