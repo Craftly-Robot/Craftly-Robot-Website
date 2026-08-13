@@ -135,10 +135,8 @@ export default function ChangelogPage() {
             </div>
             
             <div className="changelog-tabs">
-              <button className="changelog-tab active">Craftly 2.0</button>
-              <button className="changelog-tab">Craftly CLI</button>
-              <button className="changelog-tab">Craftly SDK</button>
-              <button className="changelog-tab">Craftly IDE</button>
+              <button className="changelog-tab active">Craftly Workspace</button>
+              <button className="changelog-tab">Craftly Robot</button>
             </div>
           </div>
 

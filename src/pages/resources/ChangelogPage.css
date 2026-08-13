@@ -85,8 +85,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #f0f4ff; /* Pale blue tint to exactly match the screenshot shape and tone as requested "same to same" */
-  color: #0052cc;
+  background: #f8f9fa;
+  color: #000000;
   padding: 16px 24px;
   border-radius: 16px;
   margin-bottom: 48px;
@@ -94,7 +94,7 @@
 }
 
 .changelog-banner svg {
-  color: #0052cc;
+  color: #000000;
   flex-shrink: 0;
 }
 
