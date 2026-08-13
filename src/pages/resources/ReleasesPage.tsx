@@ -112,13 +112,13 @@ export default function ReleasesPage() {
               className={`releases-tab ${activeTab === 'craftly' ? 'active' : ''}`}
               onClick={() => { setActiveTab('craftly'); setExpandedVersion('2.8.0'); }}
             >
-              Craftly 2.0
+              Craftly Workspace
             </button>
             <button
               className={`releases-tab ${activeTab === 'workspace' ? 'active' : ''}`}
               onClick={() => { setActiveTab('workspace'); setExpandedVersion('3.8.5'); }}
             >
-              Craftly Workspace
+              Craftly Robot
             </button>
           </div>
         </div>
