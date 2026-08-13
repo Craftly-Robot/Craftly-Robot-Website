@@ -421,7 +421,7 @@ export default function ChangelogPage() {
                                       ))}
                                     </ul>
                                   ) : (
-                                    <div style={{ color: '#5f6368', fontStyle: 'italic', paddingLeft: '16px' }}>
+                                    <div style={{ color: '#3c4043', fontStyle: 'italic', paddingLeft: '16px', fontSize: '15px' }}>
                                       No {acc.type.toLowerCase()} in this release.
                                     </div>
                                   )}

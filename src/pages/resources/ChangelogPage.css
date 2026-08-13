@@ -180,9 +180,9 @@
 }
 
 .changelog-card__title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
-  color: #202124;
+  color: #000000;
   line-height: 1.3;
   letter-spacing: -0.02em;
   margin: 0;
@@ -194,8 +194,8 @@
 }
 
 .changelog-card__desc {
-  font-size: 15px;
-  color: #5f6368;
+  font-size: 16px;
+  color: #3c4043;
   line-height: 1.6;
   margin: 0 0 32px 0;
 }
@@ -217,8 +217,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 15px;
-  color: #5f6368;
+  font-size: 16px;
+  color: #3c4043;
 }
 
 .cl-accordion__toggle:hover {
@@ -246,8 +246,8 @@
 .cl-accordion__content li {
   position: relative;
   padding-left: 16px;
-  font-size: 14px;
-  color: #5f6368;
+  font-size: 15px;
+  color: #3c4043;
   line-height: 1.6;
   margin-bottom: 16px;
 }
