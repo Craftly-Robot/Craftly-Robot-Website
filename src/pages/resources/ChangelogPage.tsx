@@ -107,9 +107,7 @@ const releases: ReleaseData[] = [
 ];
 
 export default function ChangelogPage() {
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({
-    '2.8.0-Improvements': true // Default open the first one to match screenshot
-  });
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   const toggle = (id: string) => {
     setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
@@ -174,13 +172,15 @@ export default function ChangelogPage() {
                               <span>{acc.type} ({acc.count})</span>
                               <ChevronIcon isOpen={isOpen} />
                             </button>
-                            {isOpen && acc.items.length > 0 && (
-                              <div className="cl-accordion__content">
-                                <ul>
-                                  {acc.items.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
-                                  ))}
-                                </ul>
+                            {isOpen && (
+                              <div className="cl-accordion__content" style={{ paddingBottom: acc.items.length === 0 ? 0 : undefined }}>
+                                {acc.items.length > 0 && (
+                                  <ul>
+                                    {acc.items.map((item, idx) => (
+                                      <li key={idx}>{item}</li>
+                                    ))}
+                                  </ul>
+                                )}
                               </div>
                             )}
                           </div>
