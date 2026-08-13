@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import './ReleasesPage.css';
 
 const AppleIcon = () => (
@@ -128,9 +129,9 @@ export default function ReleasesPage() {
             </div>
             
             <div className="releases-hero__action">
-              <a href="/changelog" className="btn-changelog">
+              <Link to="/resources/changelog" className="btn-changelog">
                 View changelog
-              </a>
+              </Link>
             </div>
           </div>
 

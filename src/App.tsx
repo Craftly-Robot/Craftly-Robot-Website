@@ -88,6 +88,7 @@ const SupportPage = lazy(() => import('./pages/resources/SupportPage'));
 const ReleasesPage = lazy(() => import('./pages/resources/ReleasesPage'));
 const FAQPage = lazy(() => import('./pages/resources/FAQPage'));
 const PressPage = lazy(() => import('./pages/resources/PressPage'));
+const ChangelogPage = lazy(() => import('./pages/resources/ChangelogPage'));
 
 function PageLoader() {
   return (
@@ -204,6 +205,7 @@ export default function App() {
           <Route path="/resources/blog" element={<BlogPage />} />
           <Route path="/resources/support" element={<SupportPage />} />
           <Route path="/resources/releases" element={<ReleasesPage />} />
+          <Route path="/resources/changelog" element={<ChangelogPage />} />
           <Route path="/resources/press" element={<PressPage />} />
         </Routes>
       </Suspense>
