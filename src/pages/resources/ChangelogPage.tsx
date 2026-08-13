@@ -32,7 +32,7 @@ type ReleaseData = {
   accordions: AccordionData[];
 };
 
-const releases: ReleaseData[] = [
+const workspaceReleases: ReleaseData[] = [
   {
     version: '2.8.0',
     date: 'August 12, 2026',
@@ -107,6 +107,71 @@ const releases: ReleaseData[] = [
   }
 ];
 
+const robotReleases: ReleaseData[] = [
+  {
+    version: '1.2.0',
+    date: 'August 10, 2026',
+    title: 'Advanced Reasoning Engine and Custom Agent Skills',
+    desc: 'Craftly Robot now features an upgraded reasoning engine capable of breaking down highly complex multi-step workflows autonomously, alongside the ability to define custom skills for specialized tasks.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 8,
+        items: [
+          "Introduced a new Advanced Reasoning Engine that significantly improves the robot's ability to handle ambiguous instructions.",
+          "Added support for defining and attaching custom agent skills via JSON configurations."
+        ]
+      },
+      { type: 'Fixes', count: 4, items: [] },
+      { type: 'Patches', count: 1, items: [] }
+    ]
+  },
+  {
+    version: '1.1.5',
+    date: 'July 25, 2026',
+    title: 'New Integration Capabilities and Coordination Fixes',
+    desc: 'Improved real-time coordination between multiple Craftly Robots working in parallel. Added new native integrations for GitHub, Jira, and Slack.',
+    accordions: [
+      { type: 'Improvements', count: 12, items: [] },
+      { type: 'Fixes', count: 6, items: [] },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '1.1.0',
+    date: 'July 14, 2026',
+    title: 'Multi-Agent Workflows and Department Task Allocation',
+    desc: 'Craftly Robots can now dynamically assign sub-tasks to other specialized agents within the same department, improving parallel execution speed.',
+    accordions: [
+      { type: 'Improvements', count: 15, items: [] },
+      { type: 'Fixes', count: 9, items: [] },
+      { type: 'Patches', count: 2, items: [] }
+    ]
+  },
+  {
+    version: '1.0.8',
+    date: 'June 28, 2026',
+    title: 'Task Evidence Enhancements and Performance',
+    desc: 'Enhanced task evidence collection. Robots now automatically take screenshots and log critical API requests during task execution for better auditing.',
+    accordions: [
+      { type: 'Improvements', count: 5, items: [] },
+      { type: 'Fixes', count: 11, items: [] },
+      { type: 'Patches', count: 1, items: [] }
+    ]
+  },
+  {
+    version: '1.0.0',
+    date: 'June 10, 2026',
+    title: 'Initial Release of Craftly Robot',
+    desc: 'The highly anticipated first version of Craftly Robot is now generally available. Create, deploy, and manage autonomous agents directly from Craftly Workspace.',
+    accordions: [
+      { type: 'Improvements', count: 25, items: [] },
+      { type: 'Fixes', count: 0, items: [] },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  }
+];
+
 export default function ChangelogPage() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
@@ -160,10 +225,9 @@ export default function ChangelogPage() {
             <div className="changelog-col-title">Description</div>
           </div>
 
-          {activeTab === 'workspace' ? (
-            <div className="changelog-list">
-              {releases.map((release) => (
-                <div className="changelog-item" key={release.version}>
+          <div className="changelog-list">
+            {(activeTab === 'workspace' ? workspaceReleases : robotReleases).map((release) => (
+              <div className="changelog-item" key={release.version}>
                   <div className="changelog-item__left">
                     <div className="cl-version">{release.version}</div>
                     <div className="cl-date">{release.date}</div>
@@ -205,13 +269,6 @@ export default function ChangelogPage() {
                 </div>
               ))}
             </div>
-          ) : (
-            <div style={{ textAlign: 'center', padding: '120px 0', color: '#5f6368' }}>
-              <p style={{ fontSize: '18px', fontWeight: 500, color: '#202124', marginBottom: '8px' }}>Coming Soon</p>
-              <p>Changelog for Craftly Robot will be available here.</p>
-            </div>
-          )}
-
         </div>
       </main>
     </>
