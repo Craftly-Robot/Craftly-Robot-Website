@@ -92,8 +92,22 @@ const workspaceReleases: ReleaseData[] = [
     title: 'Reliability, Performance Gains, and User Experience Polish',
     desc: 'Craftly 2.7.1 introduces visual side-by-side previews for image diffs alongside comprehensive screen-reader and keyboard accessibility enhancements. This update also delivers key performance boosts, bug fixes, and UX refinements across chat interactions and project navigation.',
     accordions: [
-      { type: 'Improvements', count: 11, items: [] },
-      { type: 'Fixes', count: 20, items: [] },
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Added side-by-side visual previews for image diffs.",
+          "Enhanced keyboard navigation and screen reader support."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 2,
+        items: [
+          "Resolved performance issues during long interactions.",
+          "Fixed an issue with project navigation state."
+        ]
+      },
       { type: 'Patches', count: 0, items: [] }
     ]
   },
@@ -103,9 +117,28 @@ const workspaceReleases: ReleaseData[] = [
     title: 'Faster long conversations, more reliable hooks and subagents',
     desc: 'Conversations with long histories now open faster, improved custom hooks and subagents behavior, and administrator policies for connected tool servers are applied correctly —',
     accordions: [
-      { type: 'Improvements', count: 5, items: [] },
-      { type: 'Fixes', count: 8, items: [] },
-      { type: 'Patches', count: 1, items: [] }
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Faster loading times for conversations with long histories.",
+          "Administrator policies for connected tool servers are now applied correctly."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Improved custom hooks and subagents behavior for better reliability."
+        ]
+      },
+      {
+        type: 'Patches',
+        count: 1,
+        items: [
+          "Security patch for third-party dependencies."
+        ]
+      }
     ]
   },
   {
@@ -114,8 +147,22 @@ const workspaceReleases: ReleaseData[] = [
     title: 'Enterprise sign-in: Craftly Enterprise accounts and Workforce Identity Federation',
     desc: 'Added enterprise sign-in support for Craftly Enterprise user accounts (with admin controls) and Workforce Identity Federation via Advanced SSO.',
     accordions: [
-      { type: 'Improvements', count: 20, items: [] },
-      { type: 'Fixes', count: 13, items: [] },
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Added enterprise sign-in support for Craftly Enterprise user accounts.",
+          "Support for Workforce Identity Federation via Advanced SSO."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 2,
+        items: [
+          "Resolved an issue where admin controls were sometimes unresponsive.",
+          "Fixed session expiration bugs for federated logins."
+        ]
+      },
       { type: 'Patches', count: 0, items: [] }
     ]
   },
@@ -125,9 +172,29 @@ const workspaceReleases: ReleaseData[] = [
     title: 'Preview tabs, MCP timeouts, file attachments, and performance fixes',
     desc: 'Added preview tabs, attachment support for .json, .md, and .csv files, MCP timeouts, keyboard shortcuts, and various bug fixes and improvements.',
     accordions: [
-      { type: 'Improvements', count: 17, items: [] },
-      { type: 'Fixes', count: 5, items: [] },
-      { type: 'Patches', count: 2, items: [] }
+      {
+        type: 'Improvements',
+        count: 3,
+        items: [
+          "Added preview tabs for multiple concurrent views.",
+          "Attachment support for .json, .md, and .csv files.",
+          "Introduced new keyboard shortcuts for faster navigation."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Fixed MCP timeouts occurring on large file uploads."
+        ]
+      },
+      {
+        type: 'Patches',
+        count: 1,
+        items: [
+          "Various minor performance fixes."
+        ]
+      }
     ]
   }
 ];
@@ -147,8 +214,20 @@ const robotReleases: ReleaseData[] = [
           "Added support for defining and attaching custom agent skills via JSON configurations."
         ]
       },
-      { type: 'Fixes', count: 4, items: [] },
-      { type: 'Patches', count: 1, items: [] }
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Fixed an issue with skill execution timeouts."
+        ]
+      },
+      {
+        type: 'Patches',
+        count: 1,
+        items: [
+          "Minor memory leak patched in the reasoning engine."
+        ]
+      }
     ]
   },
   {
@@ -157,8 +236,21 @@ const robotReleases: ReleaseData[] = [
     title: 'New Integration Capabilities and Coordination Fixes',
     desc: 'Improved real-time coordination between multiple Craftly Robots working in parallel. Added new native integrations for GitHub, Jira, and Slack.',
     accordions: [
-      { type: 'Improvements', count: 12, items: [] },
-      { type: 'Fixes', count: 6, items: [] },
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Improved real-time coordination between parallel robots.",
+          "Added GitHub, Jira, and Slack integrations."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Resolved synchronization delays during multi-agent handoffs."
+        ]
+      },
       { type: 'Patches', count: 0, items: [] }
     ]
   },
@@ -168,9 +260,28 @@ const robotReleases: ReleaseData[] = [
     title: 'Multi-Agent Workflows and Department Task Allocation',
     desc: 'Craftly Robots can now dynamically assign sub-tasks to other specialized agents within the same department, improving parallel execution speed.',
     accordions: [
-      { type: 'Improvements', count: 15, items: [] },
-      { type: 'Fixes', count: 9, items: [] },
-      { type: 'Patches', count: 2, items: [] }
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Dynamic sub-task assignment for specialized department agents.",
+          "Faster parallel execution speed for complex requests."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Fixed an issue where department routing failed on edge cases."
+        ]
+      },
+      {
+        type: 'Patches',
+        count: 1,
+        items: [
+          "Patched minor visual bugs in the Task flow UI."
+        ]
+      }
     ]
   },
   {
@@ -179,9 +290,28 @@ const robotReleases: ReleaseData[] = [
     title: 'Task Evidence Enhancements and Performance',
     desc: 'Enhanced task evidence collection. Robots now automatically take screenshots and log critical API requests during task execution for better auditing.',
     accordions: [
-      { type: 'Improvements', count: 5, items: [] },
-      { type: 'Fixes', count: 11, items: [] },
-      { type: 'Patches', count: 1, items: [] }
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Enhanced task evidence collection with automatic screenshots.",
+          "Critical API requests are now logged during task execution."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Fixed an issue where some logs were dropped under heavy load."
+        ]
+      },
+      {
+        type: 'Patches',
+        count: 1,
+        items: [
+          "Security update for the logging framework."
+        ]
+      }
     ]
   },
   {
@@ -190,7 +320,15 @@ const robotReleases: ReleaseData[] = [
     title: 'Initial Release of Craftly Robot',
     desc: 'The highly anticipated first version of Craftly Robot is now generally available. Create, deploy, and manage autonomous agents directly from Craftly Workspace.',
     accordions: [
-      { type: 'Improvements', count: 25, items: [] },
+      {
+        type: 'Improvements',
+        count: 3,
+        items: [
+          "Initial general availability of Craftly Robot.",
+          "Support for creating and deploying autonomous agents.",
+          "Integration with Craftly Workspace for seamless management."
+        ]
+      },
       { type: 'Fixes', count: 0, items: [] },
       { type: 'Patches', count: 0, items: [] }
     ]
@@ -275,13 +413,17 @@ export default function ChangelogPage() {
                                 <ChevronIcon isOpen={isOpen} />
                               </button>
                               {isOpen && (
-                                <div className="cl-accordion__content" style={{ paddingBottom: acc.items.length === 0 ? 0 : undefined }}>
-                                  {acc.items.length > 0 && (
+                                <div className="cl-accordion__content" style={{ paddingBottom: acc.items.length === 0 ? '16px' : undefined }}>
+                                  {acc.items.length > 0 ? (
                                     <ul>
                                       {acc.items.map((item, idx) => (
                                         <li key={idx}>{item}</li>
                                       ))}
                                     </ul>
+                                  ) : (
+                                    <div style={{ color: '#5f6368', fontStyle: 'italic', paddingLeft: '16px' }}>
+                                      No {acc.type.toLowerCase()} in this release.
+                                    </div>
                                   )}
                                 </div>
                               )}
