@@ -4,14 +4,17 @@
 }
 
 .changelog-hero {
-  margin-bottom: 64px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 48px;
 }
 
 .changelog-hero__title {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
   color: #000000;
   margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
 .changelog-hero__desc {
@@ -24,30 +27,43 @@
 .changelog-content {
   display: flex;
   flex-direction: column;
-  gap: 48px;
 }
 
 .changelog-item {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0;
   border-bottom: 1px solid #eaeaeb;
-  padding-bottom: 48px;
 }
 
 .changelog-item:last-child {
   border-bottom: none;
 }
 
-.changelog-item__header {
-  display: flex;
-  align-items: baseline;
-  gap: 24px;
-  margin-bottom: 24px;
+@media (min-width: 768px) {
+  .changelog-item {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
-.changelog-item__header h2 {
+.changelog-item__sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .changelog-item__sidebar {
+    margin-bottom: 0;
+  }
+}
+
+.changelog-item__version {
   font-size: 32px;
   font-weight: 600;
   color: #000000;
-  margin: 0;
+  margin: 0 0 8px 0;
 }
 
 .changelog-item__date {
@@ -55,14 +71,69 @@
   color: #5f6368;
 }
 
-.changelog-item__list {
-  list-style: disc;
+.changelog-item__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.changelog-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.changelog-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+
+/* Strictly Black & White as requested by user */
+.changelog-badge--new {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.changelog-badge--improved {
+  background-color: #f1f3f4;
+  color: #000000;
+}
+
+.changelog-badge--fixed {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.changelog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.changelog-list li {
+  position: relative;
   padding-left: 24px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.6;
   color: #202124;
 }
 
-.changelog-item__list li {
-  margin-bottom: 12px;
-  font-size: 18px;
-  line-height: 1.5;
+.changelog-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+  border-radius: 50%;
 }
