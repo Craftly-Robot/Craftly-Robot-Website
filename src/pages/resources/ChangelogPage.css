@@ -31,6 +31,18 @@
   margin: 0;
 }
 
+.typewriter-cursor {
+  display: inline-block;
+  color: #202124;
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 @media (max-width: 768px) {
   .changelog-hero__title {
     font-size: 40px;

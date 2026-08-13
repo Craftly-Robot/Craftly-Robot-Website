@@ -1,7 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import './ChangelogPage.css';
+
+function TypewriterTitle({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 45);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return (
+    <h1 className="changelog-hero__title">
+      {displayedText}
+      <span className="typewriter-cursor">|</span>
+    </h1>
+  );
+}
 
 // SVG Icons
 const InfoIcon = () => (
@@ -192,7 +217,7 @@ export default function ChangelogPage() {
           
           <div className="changelog-hero">
             <div className="changelog-hero__top">
-              <h1 className="changelog-hero__title">Craftly Changelog</h1>
+              <TypewriterTitle text="Craftly Changelog" />
               <div className="changelog-actions">
                 <Link to="/resources/documentation" className="btn-pill">View docs</Link>
                 <a href="https://x.com/Craftly_robot" target="_blank" rel="noopener noreferrer" className="btn-pill">Follow us on X</a>
