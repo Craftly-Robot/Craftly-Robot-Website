@@ -128,14 +128,14 @@
   background-color: #000000;
 }
 
-/* List */
+.release-item {
+  border-bottom: 1px solid #eaeaeb;
+}
+
 .releases-list {
   display: flex;
   flex-direction: column;
-}
-
-.release-item {
-  border-bottom: 1px solid #f1f3f4;
+  border-top: 1px solid #eaeaeb;
 }
 
 .release-item__header {
@@ -159,14 +159,16 @@
 }
 
 .release-item__version-label {
-  color: #5f6368;
-  font-size: 16px;
-  width: 60px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  width: 70px;
 }
 
 .release-item__version-number {
-  color: #202124;
-  font-size: 16px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .release-item__toggle {
@@ -214,9 +216,9 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #202124;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
   margin: 0 0 24px 0;
 }
 
