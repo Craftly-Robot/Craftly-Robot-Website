@@ -69,13 +69,13 @@
 .footer__column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
 }
 
 .footer__column-title {
   font-size: 15px;
   font-weight: 500;
-  color: #5f6368;
+  color: #3c4043;
   margin-top: 0;
   margin-bottom: 8px;
 }
