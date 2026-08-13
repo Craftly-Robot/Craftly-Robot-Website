@@ -120,7 +120,7 @@
 
 .changelog-list-header {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 150px 1fr;
   padding-bottom: 16px;
   border-bottom: 1px solid #eaeaeb;
   margin-bottom: 32px;
@@ -144,7 +144,7 @@
 
 .changelog-item {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 150px 1fr;
   margin-bottom: 48px;
 }
 
@@ -175,7 +175,6 @@
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: 48px;
-  max-width: 840px;
 }
 
 @media (max-width: 768px) {
