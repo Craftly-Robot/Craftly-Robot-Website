@@ -9,13 +9,6 @@ export const resources: Resource[] = [
     icon: 'docs',
   },
   {
-    id: 'blog',
-    title: 'Blog',
-    description: 'Insights, product updates, and technical deep dives from the Craftly team.',
-    route: '/resources/blog',
-    icon: 'blog',
-  },
-  {
     id: 'changelog',
     title: 'Changelog',
     description: 'Track the latest updates and improvements.',

@@ -22,7 +22,6 @@ export default function Footer() {
           
           <div className="footer__column">
             <h3 className="footer__column-title">Resources</h3>
-            <Link to="/resources/blog" className="footer__link">Blog</Link>
             <Link to="/pricing" className="footer__link">Pricing</Link>
             <Link to="/use-cases/operations" className="footer__link">Use Cases</Link>
           </div>
