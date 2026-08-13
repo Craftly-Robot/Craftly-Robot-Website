@@ -1,0 +1,240 @@
+/* ReleasesPage.css */
+.releases-page {
+  padding: 80px 0 120px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.releases-hero-wrapper {
+  margin-bottom: 0;
+}
+
+.releases-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .releases-hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.releases-hero__content {
+  max-width: 600px;
+}
+
+.releases-hero__title {
+  font-size: 48px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+}
+
+@media (min-width: 768px) {
+  .releases-hero__title {
+    font-size: 56px;
+  }
+}
+
+.releases-hero__desc {
+  font-size: 16px;
+  color: #5f6368;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.btn-changelog {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #f8f9fa;
+  color: #202124;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 1px solid #eaeaeb;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .btn-changelog {
+    margin-top: 0;
+  }
+}
+
+.btn-changelog:hover {
+  background-color: #f1f3f4;
+  border-color: #dadce0;
+}
+
+/* Tabs */
+.releases-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #000000; /* As seen in reference */
+  padding-bottom: 0;
+}
+
+.releases-tab {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5f6368;
+  padding: 0 0 16px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.releases-tab:hover {
+  color: #202124;
+}
+
+.releases-tab.active {
+  color: #000000;
+  font-weight: 600;
+}
+
+.releases-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+/* List */
+.releases-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.release-item {
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.release-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.release-item__header:hover {
+  background-color: #fafafa;
+}
+
+.release-item__version-info {
+  display: flex;
+  align-items: center;
+  gap: 48px; /* Space between "Version" and "2.8.0" */
+  width: 30%;
+}
+
+.release-item__version-label {
+  color: #5f6368;
+  font-size: 16px;
+  width: 60px;
+}
+
+.release-item__version-number {
+  color: #202124;
+  font-size: 16px;
+}
+
+.release-item__toggle {
+  color: #5f6368;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Expanded Content */
+.release-item__content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0 48px 0;
+}
+
+@media (min-width: 768px) {
+  .release-item__content {
+    flex-direction: row;
+    padding: 16px 0 64px 30%; /* Start the content where the version number ends roughly */
+  }
+}
+
+.os-downloads {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .os-downloads {
+    padding-bottom: 0;
+    padding-left: 40px;
+    border-left: 1px solid #f1f3f4;
+  }
+  
+  .os-downloads:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+.os-downloads__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #202124;
+  margin: 0 0 24px 0;
+}
+
+.os-downloads__links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.os-download-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #5f6368;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.os-download-link:hover {
+  color: #202124;
+}
+
+.os-download-link svg,
+.os-download-link img {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.os-download-link:hover svg,
+.os-download-link:hover img {
+  opacity: 1;
+}
