@@ -127,7 +127,7 @@ export default function ChangelogPage() {
             <div className="changelog-hero__top">
               <h1 className="changelog-hero__title">Craftly Changelog</h1>
               <div className="changelog-actions">
-                <a href="/docs" className="btn-pill">View docs</a>
+                <Link to="/resources/documentation" className="btn-pill">View docs</Link>
                 <a href="https://x.com/craftly" target="_blank" rel="noopener noreferrer" className="btn-pill">Follow us on X</a>
               </div>
             </div>
