@@ -153,14 +153,18 @@
   }
 }
 
-.cl-version, .cl-date {
+.cl-version {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.cl-date {
   font-size: 15px;
   color: #5f6368;
 }
 
-.cl-version {
-  margin-bottom: 4px;
-}
 
 .changelog-card {
   background: #f8f9fa;
