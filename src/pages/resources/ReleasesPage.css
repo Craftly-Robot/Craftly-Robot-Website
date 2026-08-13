@@ -93,7 +93,7 @@
 .releases-tabs {
   display: flex;
   gap: 32px;
-  border-bottom: 1px solid #000000; /* As seen in reference */
+  border-bottom: 1px solid #eaeaeb;
   padding-bottom: 0;
 }
 
