@@ -153,6 +153,13 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .changelog-item__left {
+    padding-top: 0;
+  }
+}
+
+.changelog-item__left {
+  padding-top: 32px;
 }
 
 .cl-version {
@@ -170,7 +177,7 @@
 
 .changelog-card {
   background: #f8f9fa;
-  border-radius: 32px;
+  border-radius: 40px;
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1.6fr;
