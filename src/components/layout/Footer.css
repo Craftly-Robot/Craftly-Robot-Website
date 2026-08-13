@@ -13,7 +13,7 @@
 .footer__top {
   display: flex;
   flex-direction: column;
-  padding: 80px 48px;
+  padding: 40px 48px;
   max-width: var(--container-wide);
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@
   .footer__top {
     flex-direction: row;
     justify-content: space-between;
-    padding: 100px 80px 40px;
+    padding: 48px 80px 40px;
     align-items: flex-start;
   }
 }
@@ -44,7 +44,7 @@
   line-height: 1.2;
   letter-spacing: -0.5px;
   color: #000000;
-  margin-top: 8px; /* Push down to visually align top of 'E' with top of 'P' in Product */
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
@@ -55,12 +55,12 @@
 
 .footer__top-right {
   display: flex;
-  gap: 80px;
+  gap: 120px;
 }
 
 @media (min-width: 1024px) {
   .footer__top-right {
-    gap: 100px;
+    gap: 180px;
     padding-right: 40px;
   }
 }
