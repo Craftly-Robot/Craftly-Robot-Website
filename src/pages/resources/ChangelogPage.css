@@ -99,7 +99,7 @@
 }
 
 .changelog-banner {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   background: #000000;
