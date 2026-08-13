@@ -13,7 +13,7 @@
 .footer__top {
   display: flex;
   flex-direction: column;
-  padding: 40px 48px;
+  padding: 20px 48px;
   max-width: var(--container-wide);
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@
   .footer__top {
     flex-direction: row;
     justify-content: flex-start;
-    padding: 32px 80px 40px;
+    padding: 20px 80px 40px;
     align-items: flex-start;
   }
 }
