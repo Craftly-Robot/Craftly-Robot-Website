@@ -51,6 +51,11 @@
   font-weight: 500;
   text-decoration: none;
   transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .btn-pill:hover {
