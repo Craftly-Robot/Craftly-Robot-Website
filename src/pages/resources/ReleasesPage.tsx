@@ -98,12 +98,16 @@ function TypewriterTitle({ text }: { text: string }) {
 
 export default function ReleasesPage() {
   const [activeTab, setActiveTab] = useState<'craftly' | 'workspace'>('craftly');
-  const [expandedVersion, setExpandedVersion] = useState<string>('2.8.0');
+  const [expandedVersions, setExpandedVersions] = useState<string[]>(['2.8.0']);
 
   const releases = activeTab === 'craftly' ? craftlyReleases : workspaceReleases;
 
   const toggleVersion = (version: string) => {
-    setExpandedVersion(expandedVersion === version ? '' : version);
+    setExpandedVersions(prev => 
+      prev.includes(version) 
+        ? prev.filter(v => v !== version) 
+        : [...prev, version]
+    );
   };
 
   return (
@@ -133,13 +137,13 @@ export default function ReleasesPage() {
           <div className="releases-tabs container">
             <button
               className={`releases-tab ${activeTab === 'craftly' ? 'active' : ''}`}
-              onClick={() => { setActiveTab('craftly'); setExpandedVersion('2.8.0'); }}
+              onClick={() => { setActiveTab('craftly'); setExpandedVersions(['2.8.0']); }}
             >
               Craftly Workspace
             </button>
             <button
               className={`releases-tab ${activeTab === 'workspace' ? 'active' : ''}`}
-              onClick={() => { setActiveTab('workspace'); setExpandedVersion('3.8.5'); }}
+              onClick={() => { setActiveTab('workspace'); setExpandedVersions(['3.8.5']); }}
             >
               Craftly Robot
             </button>
@@ -148,7 +152,7 @@ export default function ReleasesPage() {
 
         <div className="releases-list container">
           {releases.map((release) => {
-            const isExpanded = expandedVersion === release.version;
+            const isExpanded = expandedVersions.includes(release.version);
 
             return (
               <div key={release.version} className={`release-item ${isExpanded ? 'release-item--expanded' : ''}`}>
