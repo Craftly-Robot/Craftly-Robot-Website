@@ -105,10 +105,10 @@
   box-sizing: border-box;
   align-items: center;
   gap: 12px;
-  background: #202124;
-  color: #ffffff;
-  padding: 16px 24px;
-  border-radius: 12px;
+  background: #f8f9fa;
+  color: #202124;
+  padding: 12px 24px;
+  border-radius: 20px;
   margin-bottom: 48px;
   font-size: 15px;
   font-weight: 500;
@@ -117,7 +117,7 @@
 
 .changelog-banner svg {
   flex-shrink: 0;
-  color: #ffffff;
+  color: #202124;
 }
 
 
