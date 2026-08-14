@@ -285,7 +285,7 @@ export default function Navbar() {
                       className="mobile-nav__item"
                       onClick={() => setMobileOpen(false)}
                     >
-                      {child.icon && (
+                      {item.label === 'Products' && child.icon && (
                         <div className="mobile-nav__item-icon">
                           <DropdownIcon icon={child.icon} />
                         </div>
