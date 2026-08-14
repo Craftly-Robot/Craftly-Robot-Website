@@ -38,14 +38,13 @@ export default function Navbar() {
   const [mobileSection, setMobileSection] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
   const location = useLocation();
-  const clickedCloseRef = useRef<string | null>(null);
+  const hoverLockoutRef = useRef<boolean>(false);
 
   // Close mobile nav on route change
   useEffect(() => {
     setMobileOpen(false);
     setMobileSection(null);
     setActiveDropdown(null);
-    clickedCloseRef.current = null;
   }, [location.pathname]);
 
   // Scroll detection
@@ -61,7 +60,6 @@ export default function Navbar() {
     const handler = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setActiveDropdown(null);
-        clickedCloseRef.current = null;
       }
     };
     document.addEventListener('mousedown', handler);
@@ -74,7 +72,6 @@ export default function Navbar() {
       if (e.key === 'Escape') {
         setActiveDropdown(null);
         setMobileOpen(false);
-        clickedCloseRef.current = null;
       }
     };
     document.addEventListener('keydown', handler);
@@ -90,10 +87,12 @@ export default function Navbar() {
   const toggleDropdown = useCallback((label: string) => {
     setActiveDropdown((prev) => {
       if (prev === label) {
-        clickedCloseRef.current = label;
+        hoverLockoutRef.current = true;
+        setTimeout(() => {
+          hoverLockoutRef.current = false;
+        }, 300);
         return null;
       }
-      clickedCloseRef.current = null;
       return label;
     });
   }, []);
@@ -101,18 +100,17 @@ export default function Navbar() {
   const timeoutRef = useRef<number | null>(null);
 
   const handleMouseEnter = useCallback((label: string) => {
+    if (hoverLockoutRef.current) {
+      return;
+    }
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
-    }
-    if (clickedCloseRef.current === label) {
-      return;
     }
     setActiveDropdown(label);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
-    clickedCloseRef.current = null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
