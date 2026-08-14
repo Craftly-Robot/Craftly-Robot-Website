@@ -213,9 +213,15 @@
     font-size: 2rem;
   }
 
-  .download-columns {
+  .download-columns,
+  .download-columns--mobile {
+    display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-4xl);
+  }
+  
+  .download-columns--mobile .os-column {
+    width: 100%;
   }
   
   .os-column {
