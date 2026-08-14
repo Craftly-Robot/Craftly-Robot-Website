@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useOS } from '../hooks/useOS';
 import './DownloadPage.css';
@@ -208,9 +209,9 @@ export default function DownloadPage() {
         <div className="download-header">
           <div className="download-hero-top">
             <TypewriterTitle text={`Download Craftly\nfor ${osName}`} />
-            <a href="/releases" className="btn-previous-releases">
+            <Link to="/resources/releases" className="btn-previous-releases">
               View previous releases
-            </a>
+            </Link>
           </div>
           
           <div className="download-product-tabs">
