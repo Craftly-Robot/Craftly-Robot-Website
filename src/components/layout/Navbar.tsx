@@ -292,9 +292,6 @@ export default function Navbar() {
                       )}
                       <div className="mobile-nav__item-content">
                         <div className="mobile-nav__item-title">{child.title}</div>
-                        {child.description && (
-                          <div className="mobile-nav__item-desc">{child.description}</div>
-                        )}
                       </div>
                     </Link>
                   ))}
