@@ -38,6 +38,8 @@
   color: #202124;
   animation: blink 1s step-end infinite;
   margin-left: 8px;
+  font-size: 46px;
+  font-weight: 300;
 }
 
 @keyframes blink {
