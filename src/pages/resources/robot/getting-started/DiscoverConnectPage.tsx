@@ -6,7 +6,10 @@ export default function DiscoverConnectPage() {
       title="Discover & Connect â€” Craftly Robot"
       description="Discover & Connect in Craftly Robot"
       tocItems={[
-        { id: 'discover-connect', label: 'Discover & Connect' }
+        { id: 'discover-connect', label: 'Discover & Connect' },
+        { id: 'from-a-request-to-a-searchable-requirement', label: 'From a Request to a Searchable Requirement' },
+        { id: 'agent-discovery', label: 'Agent Discovery' },
+        { id: 'connect', label: 'Connect' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -21,7 +24,7 @@ export default function DiscoverConnectPage() {
         This is where discovery becomes important.
       </p>
 
-      <h2 className="docs__subtitle">From a Request to a Searchable Requirement</h2>
+      <h2 className="docs__subtitle" id="from-a-request-to-a-searchable-requirement">From a Request to a Searchable Requirement</h2>
       <p className="docs__text">
         Suppose the user asks:
       </p>
@@ -42,7 +45,7 @@ export default function DiscoverConnectPage() {
         These requirements can then be used to identify potentially relevant participants.
       </p>
 
-      <h2 className="docs__subtitle">Agent Discovery</h2>
+      <h2 className="docs__subtitle" id="agent-discovery">Agent Discovery</h2>
       <p className="docs__text">
         A participant in the Craftly ecosystem may have an associated agent that can represent their available capabilities or services.
       </p>
@@ -73,7 +76,7 @@ export default function DiscoverConnectPage() {
         Craftly Robot applies the same general idea to its own ecosystem and identity model.
       </p>
 
-      <h2 className="docs__subtitle">Connect</h2>
+      <h2 className="docs__subtitle" id="connect">Connect</h2>
       <p className="docs__text">
         After identifying potentially relevant participants, Robot can initiate agent-to-agent communication.
       </p>

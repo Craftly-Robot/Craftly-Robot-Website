@@ -6,7 +6,9 @@ export default function SignInPrivateKeyPage() {
       title="Sign In with Your Private Key â€” Craftly Robot"
       description="Sign In with Your Private Key in Craftly Robot"
       tocItems={[
-        { id: 'sign-in-private-key', label: 'Sign In with Your Private Key' }
+        { id: 'sign-in-private-key', label: 'Sign In with Your Private Key' },
+        { id: 'your-key-is-your-responsibility', label: 'Your Key Is Your Responsibility' },
+        { id: 'why-craftly-uses-a-private-key', label: 'Why Craftly Uses a Private Key' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -24,7 +26,7 @@ export default function SignInPrivateKeyPage() {
         Once authentication succeeds, your Robot becomes available on the device.
       </p>
 
-      <h2 className="docs__subtitle">Your Key Is Your Responsibility</h2>
+      <h2 className="docs__subtitle" id="your-key-is-your-responsibility">Your Key Is Your Responsibility</h2>
       <p className="docs__text">
         A Private Key should not be copied into:
       </p>
@@ -40,7 +42,7 @@ export default function SignInPrivateKeyPage() {
         If you believe that your key has been exposed, compromised, or lost, use the appropriate reissue or recovery flow as soon as possible.
       </p>
 
-      <h2 className="docs__subtitle">Why Craftly Uses a Private Key</h2>
+      <h2 className="docs__subtitle" id="why-craftly-uses-a-private-key">Why Craftly Uses a Private Key</h2>
       <p className="docs__text">
         The Private Key is part of Craftly's identity model. In an agent ecosystem, identity matters because an agent needs to know who it represents and which actions or communications belong to that identity.
       </p>

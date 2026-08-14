@@ -6,7 +6,10 @@ export default function AgentNegotiationGSPage() {
       title="Agent-to-Agent Negotiation â€” Craftly Robot"
       description="Agent-to-Agent Negotiation in Craftly Robot"
       tocItems={[
-        { id: 'agent-to-agent-negotiation', label: 'Agent-to-Agent Negotiation' }
+        { id: 'agent-negotiation', label: 'Agent-to-Agent Negotiation' },
+        { id: 'the-basic-model', label: 'The Basic Model' },
+        { id: 'real-world-example', label: 'Real World Example' },
+        { id: 'human-control', label: 'Human Control' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -21,7 +24,7 @@ export default function AgentNegotiationGSPage() {
         The goal is to allow AI agents to communicate directly with one another so that users do not have to manually coordinate every participant involved in a real-world task.
       </p>
 
-      <h2 className="docs__subtitle">The Basic Model</h2>
+      <h2 className="docs__subtitle" id="the-basic-model">The Basic Model</h2>
       <p className="docs__text">
         Instead of:
       </p>
@@ -41,7 +44,7 @@ export default function AgentNegotiationGSPage() {
         This is closely related to the direction of current agent-interoperability systems, where agents can discover capabilities, exchange messages, maintain task state, and collaborate toward completing a user-requested task.
       </p>
 
-      <h2 className="docs__subtitle">Real World Example</h2>
+      <h2 className="docs__subtitle" id="real-world-example">Real World Example</h2>
       <p className="docs__text">
         Consider the teacher request again:
       </p>
@@ -65,7 +68,7 @@ export default function AgentNegotiationGSPage() {
         If the next step would create a consequential real world commitment, the user remains involved.
       </p>
 
-      <h2 className="docs__subtitle">Human Control</h2>
+      <h2 className="docs__subtitle" id="human-control">Human Control</h2>
       <p className="docs__text">
         Agentic negotiation does not mean giving an agent unlimited authority.
       </p>

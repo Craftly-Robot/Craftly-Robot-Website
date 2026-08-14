@@ -6,7 +6,9 @@ export default function YourFirstRobotPage() {
       title="Your First Robot â€” Craftly Robot"
       description="Your First Robot in Craftly Robot"
       tocItems={[
-        { id: 'your-first-robot', label: 'Your First Robot' }
+        { id: 'your-first-robot', label: 'Your First Robot' },
+        { id: 'robot-as-an-agent', label: 'Robot as an Agent' },
+        { id: 'a-simple-example', label: 'A Simple Example' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -42,7 +44,7 @@ export default function YourFirstRobotPage() {
         The purpose is to allow the conversation to become the beginning of an actual workflow.
       </p>
 
-      <h2 className="docs__subtitle">Robot as an Agent</h2>
+      <h2 className="docs__subtitle" id="robot-as-an-agent">Robot as an Agent</h2>
       <p className="docs__text">
         An AI agent is generally more than a model generating text. Modern agent architectures combine a model with instructions, tools, execution loops, state, and safety controls so the system can perform work rather than only generate responses.
       </p>
@@ -53,7 +55,7 @@ export default function YourFirstRobotPage() {
         Your Robot can use your request as a goal, determine what information is required, identify relevant participants, communicate with other agents, and coordinate the next steps.
       </p>
 
-      <h2 className="docs__subtitle">A Simple Example</h2>
+      <h2 className="docs__subtitle" id="a-simple-example">A Simple Example</h2>
       <p className="docs__text">
         Imagine you say:
       </p>

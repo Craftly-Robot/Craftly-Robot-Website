@@ -6,7 +6,10 @@ export default function BeforeYouStartPage() {
       title="Before You Start â€” Craftly Robot"
       description="Before You Start in Craftly Robot"
       tocItems={[
-        { id: 'before-you-start', label: 'Before You Start' }
+        { id: 'before-you-start', label: 'Before You Start' },
+        { id: 'what-you-need', label: 'What You Need' },
+        { id: 'protect-your-private-key', label: 'Protect Your Private Key' },
+        { id: 'lost-key-recovery', label: 'Lost-Key Recovery' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -24,7 +27,7 @@ export default function BeforeYouStartPage() {
         Your Private Key is the credential you use to authenticate your access to Craftly Robot. It should be treated as highly sensitive information.
       </p>
 
-      <h2 className="docs__subtitle">What You Need</h2>
+      <h2 className="docs__subtitle" id="what-you-need">What You Need</h2>
       <p className="docs__text">
         Before starting, make sure you have:
       </p>
@@ -38,7 +41,7 @@ export default function BeforeYouStartPage() {
         You do not need a dedicated AI server or a separate GPU workstation to begin using Robot. Craftly Robot is designed around device-side inference, allowing the AI experience to run on the user's phone. The exact performance and available capabilities can depend on the device and the current Robot build.
       </p>
 
-      <h2 className="docs__subtitle">Protect Your Private Key</h2>
+      <h2 className="docs__subtitle" id="protect-your-private-key">Protect Your Private Key</h2>
       <p className="docs__text">
         Your Private Key is part of your Craftly identity and should never be treated like an ordinary piece of information.
       </p>
@@ -54,7 +57,7 @@ export default function BeforeYouStartPage() {
         Store it securely and keep a private backup.
       </p>
 
-      <h2 className="docs__subtitle">Lost-Key Recovery</h2>
+      <h2 className="docs__subtitle" id="lost-key-recovery">Lost-Key Recovery</h2>
       <p className="docs__text">
         If you lose your Private Key while you are still authenticated inside Robot, the current profile-based reissue flow may allow you to generate a new key.
       </p>

@@ -6,7 +6,14 @@ export default function NextStepsPage() {
       title="Next Steps â€” Craftly Robot"
       description="Next Steps in Craftly Robot"
       tocItems={[
-        { id: 'next-steps', label: 'Next Steps' }
+        { id: 'next-steps', label: 'Next Steps' },
+        { id: 'explore-robot-architecture', label: 'Explore Robot Architecture' },
+        { id: 'explore-the-agent-model', label: 'Explore the Agent Model' },
+        { id: 'explore-agent-discovery', label: 'Explore Agent Discovery' },
+        { id: 'explore-agent-to-agent-negotiation', label: 'Explore Agent-to-Agent Negotiation' },
+        { id: 'build-with-craftly', label: 'Build with Craftly' },
+        { id: 'explore-the-robot-network', label: 'Explore the Robot Network' },
+        { id: 'the-craftly-robot-experience', label: 'The Craftly Robot Experience' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -18,7 +25,7 @@ export default function NextStepsPage() {
         Once you can sign in, give Robot a meaningful request, and understand the discovery and coordination flow, you can explore the deeper parts of Craftly Robot.
       </p>
 
-      <h2 className="docs__subtitle">Explore Robot Architecture</h2>
+      <h2 className="docs__subtitle" id="explore-robot-architecture">Explore Robot Architecture</h2>
       <p className="docs__text">
         Learn how Robot is structured internally, including its current Mixture of Experts (MoE) architecture with 62 specialized experts and the components responsible for context, memory, agents, tools, execution, and verification.
       </p>
@@ -26,7 +33,7 @@ export default function NextStepsPage() {
         The broader industry direction for agentic systems increasingly emphasizes explicit orchestration, tool execution, handoffs/delegation, guardrails, persistent context, and tracing rather than treating a model call as the entire application.
       </p>
 
-      <h2 className="docs__subtitle">Explore the Agent Model</h2>
+      <h2 className="docs__subtitle" id="explore-the-agent-model">Explore the Agent Model</h2>
       <p className="docs__text">
         Learn:
       </p>
@@ -39,7 +46,7 @@ export default function NextStepsPage() {
         <li>How identity and permissions affect interaction</li>
       </ul>
 
-      <h2 className="docs__subtitle">Explore Agent Discovery</h2>
+      <h2 className="docs__subtitle" id="explore-agent-discovery">Explore Agent Discovery</h2>
       <p className="docs__text">
         Learn how Robot identifies potentially relevant people, services, and capabilities within the Craftly ecosystem.
       </p>
@@ -47,7 +54,7 @@ export default function NextStepsPage() {
         This section can also explain how agent capabilities are described, matched, and selected.
       </p>
 
-      <h2 className="docs__subtitle">Explore Agent-to-Agent Negotiation</h2>
+      <h2 className="docs__subtitle" id="explore-agent-to-agent-negotiation">Explore Agent-to-Agent Negotiation</h2>
       <p className="docs__text">
         Go deeper into how agents:
       </p>
@@ -61,7 +68,7 @@ export default function NextStepsPage() {
         <li>Return results</li>
       </ul>
 
-      <h2 className="docs__subtitle">Build with Craftly</h2>
+      <h2 className="docs__subtitle" id="build-with-craftly">Build with Craftly</h2>
       <p className="docs__text">
         For developers and researchers, explore how to create agents and connect them to tools and external capabilities.
       </p>
@@ -72,7 +79,7 @@ export default function NextStepsPage() {
         Craftly's own development model can build on similar principles while maintaining its own architecture and ecosystem.
       </p>
 
-      <h2 className="docs__subtitle">Explore the Robot Network</h2>
+      <h2 className="docs__subtitle" id="explore-the-robot-network">Explore the Robot Network</h2>
       <p className="docs__text">
         The usefulness of agent-to-agent coordination grows as more people, services, and capabilities become available.
       </p>
@@ -86,7 +93,7 @@ export default function NextStepsPage() {
         People have agents &rarr; Agents have capabilities &rarr; Capabilities become discoverable &rarr; Agents coordinate &rarr; People remain in control
       </div>
 
-      <h2 className="docs__subtitle">The Craftly Robot Experience</h2>
+      <h2 className="docs__subtitle" id="the-craftly-robot-experience">The Craftly Robot Experience</h2>
       <p className="docs__text">
         Craftly Robot can be summarized by one central idea:
       </p>

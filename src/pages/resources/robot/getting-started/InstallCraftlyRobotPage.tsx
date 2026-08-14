@@ -6,7 +6,9 @@ export default function InstallCraftlyRobotPage() {
       title="Install Craftly Robot â€” Craftly Robot"
       description="Install Craftly Robot in Craftly Robot"
       tocItems={[
-        { id: 'install-craftly-robot', label: 'Install Craftly Robot' }
+        { id: 'install-craftly-robot', label: 'Install Craftly Robot' },
+        { id: 'device-side-inference', label: 'Device Side Inference' },
+        { id: 'keep-the-app-updated', label: 'Keep the App Updated' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -27,7 +29,7 @@ export default function InstallCraftlyRobotPage() {
         After installation, open the application and continue to the authentication flow.
       </p>
 
-      <h2 className="docs__subtitle">Device Side Inference</h2>
+      <h2 className="docs__subtitle" id="device-side-inference">Device Side Inference</h2>
       <p className="docs__text">
         Craftly Robot is designed with on device AI inference as an important part of its product direction.
       </p>
@@ -41,7 +43,7 @@ export default function InstallCraftlyRobotPage() {
         The actual speed, memory requirements, model behavior, and available features can vary by device and Robot version.
       </p>
 
-      <h2 className="docs__subtitle">Keep the App Updated</h2>
+      <h2 className="docs__subtitle" id="keep-the-app-updated">Keep the App Updated</h2>
       <p className="docs__text">
         Robot is an actively evolving product. New versions may improve:
       </p>

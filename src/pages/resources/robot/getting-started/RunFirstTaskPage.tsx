@@ -6,7 +6,12 @@ export default function RunFirstTaskPage() {
       title="Run Your First Real-World Task â€” Craftly Robot"
       description="Run Your First Real-World Task in Craftly Robot"
       tocItems={[
-        { id: 'run-first-task', label: 'Run Your First Real-World Task' }
+        { id: 'run-first-task', label: 'Run Your First Real-World Task' },
+        { id: 'structure-of-a-good-request', label: 'Structure of a Good Request' },
+        { id: 'example', label: 'Example' },
+        { id: 'what-happens-after-you-ask', label: 'What Happens After You Ask?' },
+        { id: 'when-robot-needs-clarification', label: 'When Robot Needs Clarification' },
+        { id: 'understanding-the-result', label: 'Understanding the Result' }
       ]}
     >
       <div className="docs__breadcrumb">
@@ -27,7 +32,7 @@ export default function RunFirstTaskPage() {
         <strong>What you want + what matters + what constraints apply.</strong>
       </p>
 
-      <h2 className="docs__subtitle">Structure of a Good Request</h2>
+      <h2 className="docs__subtitle" id="structure-of-a-good-request">Structure of a Good Request</h2>
       <p className="docs__text">
         A useful request usually contains:
       </p>
@@ -40,7 +45,7 @@ export default function RunFirstTaskPage() {
         <li><strong>Preferences:</strong> Are there additional conditions that matter to you?</li>
       </ul>
 
-      <h2 className="docs__subtitle">Example</h2>
+      <h2 className="docs__subtitle" id="example">Example</h2>
       <p className="docs__text">
         Less useful:
       </p>
@@ -57,7 +62,7 @@ export default function RunFirstTaskPage() {
         The second request gives Robot enough context to determine what kind of discovery and coordination is required.
       </p>
 
-      <h2 className="docs__subtitle">What Happens After You Ask?</h2>
+      <h2 className="docs__subtitle" id="what-happens-after-you-ask">What Happens After You Ask?</h2>
       <p className="docs__text">
         A typical workflow can look like:
       </p>
@@ -92,7 +97,7 @@ export default function RunFirstTaskPage() {
         A more complex request may require multiple agents, multiple rounds of communication, and a human decision before any consequential action can occur.
       </p>
 
-      <h2 className="docs__subtitle">When Robot Needs Clarification</h2>
+      <h2 className="docs__subtitle" id="when-robot-needs-clarification">When Robot Needs Clarification</h2>
       <p className="docs__text">
         A good agent should not blindly act on an incomplete instruction.
       </p>
@@ -120,7 +125,7 @@ export default function RunFirstTaskPage() {
         Clarification is not failure. It is how the system avoids making unnecessary assumptions.
       </p>
 
-      <h2 className="docs__subtitle">Understanding the Result</h2>
+      <h2 className="docs__subtitle" id="understanding-the-result">Understanding the Result</h2>
       <p className="docs__text">
         When Robot returns a result, you should be able to understand:
       </p>
