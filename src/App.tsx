@@ -19,10 +19,12 @@ const AgentModelPage = lazy(() => import('./pages/resources/robot/overview/Agent
 const CurrentStatusPage = lazy(() => import('./pages/resources/robot/overview/CurrentStatusPage'));
 const LongTermVisionPage = lazy(() => import('./pages/resources/robot/overview/LongTermVisionPage'));
 
-const RobotPrerequisitesPage = lazy(() => import('./pages/resources/robot/getting-started/PrerequisitesPage'));
-const RobotInstallationPage = lazy(() => import('./pages/resources/robot/getting-started/InstallationPage'));
-const RobotQuickstartPage = lazy(() => import('./pages/resources/robot/getting-started/QuickstartPage'));
-const RobotCreateFirstAgentPage = lazy(() => import('./pages/resources/robot/getting-started/CreateFirstAgentPage'));
+const RobotBeforeYouStartPage = lazy(() => import('./pages/resources/robot/getting-started/BeforeYouStartPage'));
+const RobotInstallCraftlyRobotPage = lazy(() => import('./pages/resources/robot/getting-started/InstallCraftlyRobotPage'));
+const RobotSignInPrivateKeyPage = lazy(() => import('./pages/resources/robot/getting-started/SignInPrivateKeyPage'));
+const RobotYourFirstRobotPage = lazy(() => import('./pages/resources/robot/getting-started/YourFirstRobotPage'));
+const RobotDiscoverConnectPage = lazy(() => import('./pages/resources/robot/getting-started/DiscoverConnectPage'));
+const RobotAgentNegotiationGSPage = lazy(() => import('./pages/resources/robot/getting-started/AgentNegotiationGSPage'));
 const RobotRunFirstTaskPage = lazy(() => import('./pages/resources/robot/getting-started/RunFirstTaskPage'));
 const RobotNextStepsPage = lazy(() => import('./pages/resources/robot/getting-started/NextStepsPage'));
 
@@ -168,10 +170,12 @@ export default function App() {
           <Route path="/resources/documentation/robot/overview/current-status" element={<CurrentStatusPage />} />
           <Route path="/resources/documentation/robot/overview/long-term-vision" element={<LongTermVisionPage />} />
 
-          <Route path="/resources/documentation/robot/getting-started/prerequisites" element={<RobotPrerequisitesPage />} />
-          <Route path="/resources/documentation/robot/getting-started/installation" element={<RobotInstallationPage />} />
-          <Route path="/resources/documentation/robot/getting-started/quickstart" element={<RobotQuickstartPage />} />
-          <Route path="/resources/documentation/robot/getting-started/create-first-agent" element={<RobotCreateFirstAgentPage />} />
+          <Route path="/resources/documentation/robot/getting-started/before-you-start" element={<RobotBeforeYouStartPage />} />
+          <Route path="/resources/documentation/robot/getting-started/install-craftly-robot" element={<RobotInstallCraftlyRobotPage />} />
+          <Route path="/resources/documentation/robot/getting-started/sign-in-private-key" element={<RobotSignInPrivateKeyPage />} />
+          <Route path="/resources/documentation/robot/getting-started/your-first-robot" element={<RobotYourFirstRobotPage />} />
+          <Route path="/resources/documentation/robot/getting-started/discover-and-connect" element={<RobotDiscoverConnectPage />} />
+          <Route path="/resources/documentation/robot/getting-started/agent-to-agent-negotiation" element={<RobotAgentNegotiationGSPage />} />
           <Route path="/resources/documentation/robot/getting-started/run-first-task" element={<RobotRunFirstTaskPage />} />
           <Route path="/resources/documentation/robot/getting-started/next-steps" element={<RobotNextStepsPage />} />
 

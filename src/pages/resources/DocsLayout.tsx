@@ -40,11 +40,13 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/robot/overview/agent-model", label: "Agent Model" },
   { path: "/resources/documentation/robot/overview/current-status", label: "Current Status" },
   { path: "/resources/documentation/robot/overview/long-term-vision", label: "Long-Term Vision" },
-  { path: "/resources/documentation/robot/getting-started/prerequisites", label: "Prerequisites" },
-  { path: "/resources/documentation/robot/getting-started/installation", label: "Installation" },
-  { path: "/resources/documentation/robot/getting-started/quickstart", label: "Quickstart" },
-  { path: "/resources/documentation/robot/getting-started/create-first-agent", label: "Create Your First Agent" },
-  { path: "/resources/documentation/robot/getting-started/run-first-task", label: "Run Your First Task" },
+  { path: "/resources/documentation/robot/getting-started/before-you-start", label: "Before You Start" },
+  { path: "/resources/documentation/robot/getting-started/install-craftly-robot", label: "Install Craftly Robot" },
+  { path: "/resources/documentation/robot/getting-started/sign-in-private-key", label: "Sign In with Your Private Key" },
+  { path: "/resources/documentation/robot/getting-started/your-first-robot", label: "Your First Robot" },
+  { path: "/resources/documentation/robot/getting-started/discover-and-connect", label: "Discover & Connect" },
+  { path: "/resources/documentation/robot/getting-started/agent-to-agent-negotiation", label: "Agent-to-Agent Negotiation" },
+  { path: "/resources/documentation/robot/getting-started/run-first-task", label: "Run Your First Real-World Task" },
   { path: "/resources/documentation/robot/getting-started/next-steps", label: "Next Steps" },
 
   { path: "/resources/documentation/robot/feature-overview/agentic-ai", label: "Agentic AI" },
@@ -370,11 +372,13 @@ export default function DocsLayout({ title, description, tocItems = [], children
               </div>
               {expandedSections.includes('robot-getting-started') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                  <NavLink to="/resources/documentation/robot/getting-started/prerequisites" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Prerequisites</NavLink>
-                  <NavLink to="/resources/documentation/robot/getting-started/installation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Installation</NavLink>
-                  <NavLink to="/resources/documentation/robot/getting-started/quickstart" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Quickstart</NavLink>
-                  <NavLink to="/resources/documentation/robot/getting-started/create-first-agent" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Create Your First Agent</NavLink>
-                  <NavLink to="/resources/documentation/robot/getting-started/run-first-task" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Run Your First Task</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/before-you-start" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Before You Start</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/install-craftly-robot" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Install Craftly Robot</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/sign-in-private-key" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Sign In with Your Private Key</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/your-first-robot" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Your First Robot</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/discover-and-connect" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Discover & Connect</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/agent-to-agent-negotiation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent-to-Agent Negotiation</NavLink>
+                  <NavLink to="/resources/documentation/robot/getting-started/run-first-task" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Run Your First Real-World Task</NavLink>
                   <NavLink to="/resources/documentation/robot/getting-started/next-steps" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Next Steps</NavLink>
                 </div>
               )}
