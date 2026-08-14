@@ -22,21 +22,37 @@
 
 .download-hero-top {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: var(--space-md);
 }
 
+@media (min-width: 768px) {
+  .download-hero-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .btn-previous-releases {
-  padding: 10px 20px;
+  padding: 8px 16px;
   background: #f8f9fa;
   border: 1px solid #e0e0e0;
   border-radius: 99px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: #3c4043;
   transition: all 0.25s ease;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .btn-previous-releases {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 .btn-previous-releases:hover {
