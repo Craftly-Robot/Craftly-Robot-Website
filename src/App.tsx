@@ -30,8 +30,6 @@ const RobotNextStepsPage = lazy(() => import('./pages/resources/robot/getting-st
 
 const RobotAgenticAIPage = lazy(() => import('./pages/resources/robot/feature-overview/AgenticAIPage'));
 const RobotAgentNegotiationPage = lazy(() => import('./pages/resources/robot/feature-overview/AgentNegotiationPage'));
-const RobotMultiAgentCoordinationPage = lazy(() => import('./pages/resources/robot/feature-overview/MultiAgentCoordinationPage'));
-const RobotPrivacyBoundariesPage = lazy(() => import('./pages/resources/robot/feature-overview/PrivacyBoundariesPage'));
 const RobotHumanConfirmationPage = lazy(() => import('./pages/resources/robot/feature-overview/HumanConfirmationPage'));
 const RobotRealWorldTaskCoordinationPage = lazy(() => import('./pages/resources/robot/feature-overview/RealWorldTaskCoordinationPage'));
 
@@ -180,8 +178,6 @@ export default function App() {
 
           <Route path="/resources/documentation/robot/feature-overview/agentic-ai" element={<RobotAgenticAIPage />} />
           <Route path="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation" element={<RobotAgentNegotiationPage />} />
-          <Route path="/resources/documentation/robot/feature-overview/multi-agent-coordination" element={<RobotMultiAgentCoordinationPage />} />
-          <Route path="/resources/documentation/robot/feature-overview/privacy-boundaries" element={<RobotPrivacyBoundariesPage />} />
           <Route path="/resources/documentation/robot/feature-overview/human-confirmation" element={<RobotHumanConfirmationPage />} />
           <Route path="/resources/documentation/robot/feature-overview/real-world-task-coordination" element={<RobotRealWorldTaskCoordinationPage />} />
           <Route path="/resources/blog" element={<BlogPage />} />

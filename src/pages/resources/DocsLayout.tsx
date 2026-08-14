@@ -51,8 +51,6 @@ const DOCS_ROUTES = [
 
   { path: "/resources/documentation/robot/feature-overview/agentic-ai", label: "Agentic AI" },
   { path: "/resources/documentation/robot/feature-overview/agent-to-agent-negotiation", label: "Agent-to-Agent Negotiation" },
-  { path: "/resources/documentation/robot/feature-overview/multi-agent-coordination", label: "Multi-Agent Coordination" },
-  { path: "/resources/documentation/robot/feature-overview/privacy-boundaries", label: "Privacy Boundaries" },
   { path: "/resources/documentation/robot/feature-overview/human-confirmation", label: "Human Confirmation" },
   { path: "/resources/documentation/robot/feature-overview/real-world-task-coordination", label: "Real-World Task Coordination" },
   { path: "/resources/documentation/plan", label: "Craftly Plan" },
@@ -410,8 +408,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
                   <NavLink to="/resources/documentation/robot/feature-overview/agentic-ai" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agentic AI</NavLink>
                   <NavLink to="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent-to-Agent Negotiation</NavLink>
-                  <NavLink to="/resources/documentation/robot/feature-overview/multi-agent-coordination" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Multi-Agent Coordination</NavLink>
-                  <NavLink to="/resources/documentation/robot/feature-overview/privacy-boundaries" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Privacy Boundaries</NavLink>
                   <NavLink to="/resources/documentation/robot/feature-overview/human-confirmation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Human Confirmation</NavLink>
                   <NavLink to="/resources/documentation/robot/feature-overview/real-world-task-coordination" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Real-World Task Coordination</NavLink>
                 </div>
