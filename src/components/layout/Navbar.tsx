@@ -287,7 +287,7 @@ export default function Navbar() {
                     >
                       {child.icon && (
                         <div className="mobile-nav__item-icon">
-                          {child.icon}
+                          <DropdownIcon icon={child.icon} />
                         </div>
                       )}
                       <div className="mobile-nav__item-content">
