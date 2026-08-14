@@ -20,9 +20,16 @@ function TypewriterTitle({ text }: { text: string }) {
     return () => clearInterval(interval);
   }, [text]);
 
+  const lines = displayedText.split('\n');
+
   return (
     <h1 className="changelog-hero__title">
-      {displayedText}
+      {lines.map((line, i) => (
+        <span key={i}>
+          {line}
+          {i < lines.length - 1 && <br />}
+        </span>
+      ))}
       <span className="typewriter-cursor">|</span>
     </h1>
   );
