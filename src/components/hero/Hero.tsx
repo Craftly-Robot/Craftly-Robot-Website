@@ -33,10 +33,14 @@ export default function Hero() {
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 });
 
   useEffect(() => {
-    const userAgent = window.navigator.userAgent;
-    if (userAgent.indexOf("Mac") !== -1) {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    if (/android/i.test(userAgent)) {
+      setOsName("Android");
+    } else if (/iphone|ipad|ipod/i.test(userAgent) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)) {
+      setOsName("iOS");
+    } else if (userAgent.indexOf("mac") !== -1) {
       setOsName("macOS");
-    } else if (userAgent.indexOf("Linux") !== -1) {
+    } else if (userAgent.indexOf("linux") !== -1) {
       setOsName("Linux");
     }
   }, []);

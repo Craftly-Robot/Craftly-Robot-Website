@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-type OS = 'Windows' | 'macOS' | 'Linux' | 'Unknown';
+type OS = 'Windows' | 'macOS' | 'Linux' | 'Android' | 'iOS' | 'Unknown';
 
 export function useOS(): OS {
   const [os, setOS] = useState<OS>('Unknown');
@@ -10,7 +10,11 @@ export function useOS(): OS {
 
     const userAgent = window.navigator.userAgent.toLowerCase();
     
-    if (userAgent.indexOf('win') !== -1) {
+    if (/android/i.test(userAgent)) {
+      setOS('Android');
+    } else if (/iphone|ipad|ipod/i.test(userAgent) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)) {
+      setOS('iOS');
+    } else if (userAgent.indexOf('win') !== -1) {
       setOS('Windows');
     } else if (userAgent.indexOf('mac') !== -1) {
       setOS('macOS');
