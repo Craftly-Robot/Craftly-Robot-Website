@@ -38,12 +38,14 @@ export default function Navbar() {
   const [mobileSection, setMobileSection] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
   const location = useLocation();
+  const clickedCloseRef = useRef<string | null>(null);
 
   // Close mobile nav on route change
   useEffect(() => {
     setMobileOpen(false);
     setMobileSection(null);
     setActiveDropdown(null);
+    clickedCloseRef.current = null;
   }, [location.pathname]);
 
   // Scroll detection
@@ -59,6 +61,7 @@ export default function Navbar() {
     const handler = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setActiveDropdown(null);
+        clickedCloseRef.current = null;
       }
     };
     document.addEventListener('mousedown', handler);
@@ -71,6 +74,7 @@ export default function Navbar() {
       if (e.key === 'Escape') {
         setActiveDropdown(null);
         setMobileOpen(false);
+        clickedCloseRef.current = null;
       }
     };
     document.addEventListener('keydown', handler);
@@ -84,7 +88,14 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   const toggleDropdown = useCallback((label: string) => {
-    setActiveDropdown((prev) => (prev === label ? null : label));
+    setActiveDropdown((prev) => {
+      if (prev === label) {
+        clickedCloseRef.current = label;
+        return null;
+      }
+      clickedCloseRef.current = null;
+      return label;
+    });
   }, []);
 
   const timeoutRef = useRef<number | null>(null);
@@ -94,10 +105,14 @@ export default function Navbar() {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+    if (clickedCloseRef.current === label) {
+      return;
+    }
     setActiveDropdown(label);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
+    clickedCloseRef.current = null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
