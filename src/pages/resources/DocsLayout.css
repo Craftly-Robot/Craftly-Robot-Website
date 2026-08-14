@@ -146,6 +146,7 @@
   cursor: pointer;
   border-left: 3px solid transparent;
   transition: background-color 150ms ease, color 150ms ease;
+  width: 100%;
 }
 
 .docs__nav-link:hover,
@@ -163,6 +164,10 @@
 
 .docs__nav-text {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
 }
 
 .docs__nav-subnav {
