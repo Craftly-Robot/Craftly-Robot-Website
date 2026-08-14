@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import './SupportPage.css';
 
 function TypewriterTitle({ text }: { text: string }) {
@@ -38,9 +39,9 @@ export default function SupportPage() {
       <div className="support-page">
         <div className="support-hero">
           <TypewriterTitle text={`Find answers in our docs\nor go to our community`} />
-          <a href="/docs" className="support-hero__btn">
+          <Link to="/resources/documentation" className="support-hero__btn">
             View docs
-          </a>
+          </Link>
         </div>
 
         <div className="support-cards container">
