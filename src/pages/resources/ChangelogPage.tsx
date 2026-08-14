@@ -197,6 +197,92 @@ const workspaceReleases: ReleaseData[] = [
         ]
       }
     ]
+  },
+  {
+    version: '2.4.0',
+    date: 'July 15, 2026',
+    title: 'New Dashboard UI, Advanced Filters, and Global Search',
+    desc: 'Completely redesigned the main dashboard for better usability. Introduced advanced filtering options and a blazing fast global search across all projects.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 3,
+        items: [
+          "Redesigned the main dashboard for a cleaner, modern look.",
+          "Added advanced filtering capabilities for complex project views.",
+          "Global search is now powered by a faster indexing engine."
+        ]
+      },
+      { type: 'Fixes', count: 0, items: [] },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '2.3.5',
+    date: 'July 2, 2026',
+    title: 'Team Collaboration Enhancements and Webhooks',
+    desc: 'Added real-time cursor presence in collaborative files and introduced custom webhooks for integrating external services seamlessly.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Added real-time cursor presence for team collaboration.",
+          "Introduced custom webhooks for external integrations."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Fixed an issue with user avatars not loading correctly."
+        ]
+      },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '2.3.0',
+    date: 'June 18, 2026',
+    title: 'Custom Roles, Permissions, and API Keys',
+    desc: 'Administrators can now create custom roles with highly granular permissions. API Keys management has also been revamped for better security.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Granular custom roles and permissions system.",
+          "Revamped API keys management interface."
+        ]
+      },
+      { type: 'Fixes', count: 0, items: [] },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '2.2.0',
+    date: 'June 5, 2026',
+    title: 'Dark Mode Support and Performance Upgrades',
+    desc: 'Craftly Workspace now fully supports Dark Mode! We also rolled out major performance upgrades to the underlying state management.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Full Dark Mode support across the entire workspace.",
+          "Major performance upgrades to state management."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 2,
+        items: [
+          "Fixed text contrast issues in certain UI components.",
+          "Resolved sluggish scrolling on very large lists."
+        ]
+      },
+      { type: 'Patches', count: 0, items: [] }
+    ]
   }
 ];
 
@@ -334,6 +420,81 @@ const robotReleases: ReleaseData[] = [
           "Initial general availability of Craftly Robot.",
           "Support for creating and deploying autonomous agents.",
           "Integration with Craftly Workspace for seamless management."
+        ]
+      },
+      { type: 'Fixes', count: 0, items: [] },
+    ]
+  },
+  {
+    version: '0.9.5-beta',
+    date: 'May 28, 2026',
+    title: 'Beta Release: Open API and Custom Tools',
+    desc: 'Craftly Robot enters Beta! You can now connect your own custom tools and use our Open API to interact with the reasoning engine.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Introduced Open API for early access developers.",
+          "Support for connecting custom REST-based tools."
+        ]
+      },
+      {
+        type: 'Fixes',
+        count: 1,
+        items: [
+          "Improved stability of long-running tool executions."
+        ]
+      },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '0.9.0-alpha',
+    date: 'May 10, 2026',
+    title: 'Alpha Release: Initial Agent Architecture',
+    desc: 'First internal alpha release of Craftly Robot, featuring the core agent architecture and basic natural language processing capabilities.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 2,
+        items: [
+          "Core agent architecture deployed to alpha environment.",
+          "Basic NLP capabilities integrated."
+        ]
+      },
+      { type: 'Fixes', count: 0, items: [] },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '0.8.5-alpha',
+    date: 'April 25, 2026',
+    title: 'Preview: Agent Memory and Context',
+    desc: 'Early preview of the agent memory system, allowing robots to maintain context over a short series of interactions.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 1,
+        items: [
+          "Experimental agent memory and context system."
+        ]
+      },
+      { type: 'Fixes', count: 0, items: [] },
+      { type: 'Patches', count: 0, items: [] }
+    ]
+  },
+  {
+    version: '0.8.0-alpha',
+    date: 'April 10, 2026',
+    title: 'Initial Prototype',
+    desc: 'Initial proof-of-concept prototype for Craftly Robot demonstrating autonomous decision making in a sandboxed environment.',
+    accordions: [
+      {
+        type: 'Improvements',
+        count: 1,
+        items: [
+          "Proof-of-concept for autonomous decision making."
         ]
       },
       { type: 'Fixes', count: 0, items: [] },
