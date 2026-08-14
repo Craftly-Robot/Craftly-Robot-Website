@@ -6,7 +6,8 @@ import { ANIMATION } from '../utils/animation';
  * Adds 'revealed' class to elements with 'reveal' class when they enter the viewport.
  */
 export function useScrollReveal(
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit,
+  deps: React.DependencyList = []
 ) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -35,7 +36,7 @@ export function useScrollReveal(
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [handleIntersection, options]);
+  }, [handleIntersection, options, ...deps]);
 
   return containerRef;
 }

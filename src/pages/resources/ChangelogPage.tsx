@@ -345,7 +345,7 @@ const robotReleases: ReleaseData[] = [
 export default function ChangelogPage() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
-  const revealRef = useScrollReveal();
+  const revealRef = useScrollReveal(undefined, [activeTab]);
 
   const toggle = (id: string) => {
     setExpanded(prev => (prev === id ? null : id));
