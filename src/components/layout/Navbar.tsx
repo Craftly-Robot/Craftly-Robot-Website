@@ -285,7 +285,17 @@ export default function Navbar() {
                       className="mobile-nav__item"
                       onClick={() => setMobileOpen(false)}
                     >
-                      {child.title}
+                      {child.icon && (
+                        <div className="mobile-nav__item-icon">
+                          {child.icon}
+                        </div>
+                      )}
+                      <div className="mobile-nav__item-content">
+                        <div className="mobile-nav__item-title">{child.title}</div>
+                        {child.description && (
+                          <div className="mobile-nav__item-desc">{child.description}</div>
+                        )}
+                      </div>
                     </Link>
                   ))}
                 </div>
