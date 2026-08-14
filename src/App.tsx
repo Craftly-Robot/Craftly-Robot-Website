@@ -29,9 +29,6 @@ const RobotRunFirstTaskPage = lazy(() => import('./pages/resources/robot/getting
 const RobotNextStepsPage = lazy(() => import('./pages/resources/robot/getting-started/NextStepsPage'));
 
 const RobotAgenticAIPage = lazy(() => import('./pages/resources/robot/feature-overview/AgenticAIPage'));
-const RobotToolUsePage = lazy(() => import('./pages/resources/robot/feature-overview/ToolUsePage'));
-const RobotPlanningReasoningPage = lazy(() => import('./pages/resources/robot/feature-overview/PlanningReasoningPage'));
-const RobotAgentDiscoveryPage = lazy(() => import('./pages/resources/robot/feature-overview/AgentDiscoveryPage'));
 const RobotAgentNegotiationPage = lazy(() => import('./pages/resources/robot/feature-overview/AgentNegotiationPage'));
 const RobotMultiAgentCoordinationPage = lazy(() => import('./pages/resources/robot/feature-overview/MultiAgentCoordinationPage'));
 const RobotPrivacyBoundariesPage = lazy(() => import('./pages/resources/robot/feature-overview/PrivacyBoundariesPage'));
@@ -182,9 +179,6 @@ export default function App() {
 
 
           <Route path="/resources/documentation/robot/feature-overview/agentic-ai" element={<RobotAgenticAIPage />} />
-          <Route path="/resources/documentation/robot/feature-overview/tool-use" element={<RobotToolUsePage />} />
-          <Route path="/resources/documentation/robot/feature-overview/planning-reasoning" element={<RobotPlanningReasoningPage />} />
-          <Route path="/resources/documentation/robot/feature-overview/agent-discovery" element={<RobotAgentDiscoveryPage />} />
           <Route path="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation" element={<RobotAgentNegotiationPage />} />
           <Route path="/resources/documentation/robot/feature-overview/multi-agent-coordination" element={<RobotMultiAgentCoordinationPage />} />
           <Route path="/resources/documentation/robot/feature-overview/privacy-boundaries" element={<RobotPrivacyBoundariesPage />} />

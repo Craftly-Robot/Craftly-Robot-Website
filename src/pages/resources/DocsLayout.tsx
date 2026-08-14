@@ -50,9 +50,6 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/robot/getting-started/next-steps", label: "Next Steps" },
 
   { path: "/resources/documentation/robot/feature-overview/agentic-ai", label: "Agentic AI" },
-  { path: "/resources/documentation/robot/feature-overview/tool-use", label: "Tool Use" },
-  { path: "/resources/documentation/robot/feature-overview/planning-reasoning", label: "Planning & Reasoning" },
-  { path: "/resources/documentation/robot/feature-overview/agent-discovery", label: "Agent Discovery" },
   { path: "/resources/documentation/robot/feature-overview/agent-to-agent-negotiation", label: "Agent-to-Agent Negotiation" },
   { path: "/resources/documentation/robot/feature-overview/multi-agent-coordination", label: "Multi-Agent Coordination" },
   { path: "/resources/documentation/robot/feature-overview/privacy-boundaries", label: "Privacy Boundaries" },
@@ -392,9 +389,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
               {expandedSections.includes('robot-feature-overview') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
                   <NavLink to="/resources/documentation/robot/feature-overview/agentic-ai" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agentic AI</NavLink>
-                  <NavLink to="/resources/documentation/robot/feature-overview/tool-use" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tool Use</NavLink>
-                  <NavLink to="/resources/documentation/robot/feature-overview/planning-reasoning" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Planning & Reasoning</NavLink>
-                  <NavLink to="/resources/documentation/robot/feature-overview/agent-discovery" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent Discovery</NavLink>
                   <NavLink to="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent-to-Agent Negotiation</NavLink>
                   <NavLink to="/resources/documentation/robot/feature-overview/multi-agent-coordination" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Multi-Agent Coordination</NavLink>
                   <NavLink to="/resources/documentation/robot/feature-overview/privacy-boundaries" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Privacy Boundaries</NavLink>
