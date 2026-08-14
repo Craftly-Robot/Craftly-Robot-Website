@@ -277,15 +277,18 @@ export default function Navbar() {
             </button>
             {item.items && (
               <div className="mobile-nav__items">
-                {item.items.map((child) => (
-                  <Link
-                    key={child.route}
-                    to={child.route}
-                    className="mobile-nav__item"
-                  >
-                    {child.title}
-                  </Link>
-                ))}
+                <div className="mobile-nav__items-inner">
+                  {item.items.map((child) => (
+                    <Link
+                      key={child.route}
+                      to={child.route}
+                      className="mobile-nav__item"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {child.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>

@@ -418,6 +418,12 @@
   transition: grid-template-rows var(--duration-normal) var(--ease-out);
 }
 
+.mobile-nav__items-inner {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .mobile-nav__section--open .mobile-nav__items {
   grid-template-rows: 1fr;
 }
