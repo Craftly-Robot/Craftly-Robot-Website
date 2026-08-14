@@ -26,15 +26,6 @@ const RobotCreateFirstAgentPage = lazy(() => import('./pages/resources/robot/get
 const RobotRunFirstTaskPage = lazy(() => import('./pages/resources/robot/getting-started/RunFirstTaskPage'));
 const RobotNextStepsPage = lazy(() => import('./pages/resources/robot/getting-started/NextStepsPage'));
 
-const RobotAgentsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/AgentsPage'));
-const RobotTasksPage = lazy(() => import('./pages/resources/robot/build-with-craftly/TasksPage'));
-const RobotToolsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/ToolsPage'));
-const RobotWorkflowsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/WorkflowsPage'));
-const RobotContextMemoryPage = lazy(() => import('./pages/resources/robot/build-with-craftly/ContextMemoryPage'));
-const RobotAgentRuntimePage = lazy(() => import('./pages/resources/robot/build-with-craftly/AgentRuntimePage'));
-const RobotIntegrationsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/IntegrationsPage'));
-const RobotCustomAgentsPage = lazy(() => import('./pages/resources/robot/build-with-craftly/CustomAgentsPage'));
-
 const RobotAgenticAIPage = lazy(() => import('./pages/resources/robot/feature-overview/AgenticAIPage'));
 const RobotToolUsePage = lazy(() => import('./pages/resources/robot/feature-overview/ToolUsePage'));
 const RobotPlanningReasoningPage = lazy(() => import('./pages/resources/robot/feature-overview/PlanningReasoningPage'));
@@ -184,14 +175,7 @@ export default function App() {
           <Route path="/resources/documentation/robot/getting-started/run-first-task" element={<RobotRunFirstTaskPage />} />
           <Route path="/resources/documentation/robot/getting-started/next-steps" element={<RobotNextStepsPage />} />
 
-          <Route path="/resources/documentation/robot/build-with-craftly/agents" element={<RobotAgentsPage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/tasks" element={<RobotTasksPage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/tools" element={<RobotToolsPage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/workflows" element={<RobotWorkflowsPage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/context-memory" element={<RobotContextMemoryPage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/agent-runtime" element={<RobotAgentRuntimePage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/integrations" element={<RobotIntegrationsPage />} />
-          <Route path="/resources/documentation/robot/build-with-craftly/custom-agents" element={<RobotCustomAgentsPage />} />
+
 
           <Route path="/resources/documentation/robot/feature-overview/agentic-ai" element={<RobotAgenticAIPage />} />
           <Route path="/resources/documentation/robot/feature-overview/tool-use" element={<RobotToolUsePage />} />

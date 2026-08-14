@@ -46,14 +46,7 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/robot/getting-started/create-first-agent", label: "Create Your First Agent" },
   { path: "/resources/documentation/robot/getting-started/run-first-task", label: "Run Your First Task" },
   { path: "/resources/documentation/robot/getting-started/next-steps", label: "Next Steps" },
-  { path: "/resources/documentation/robot/build-with-craftly/agents", label: "Agents" },
-  { path: "/resources/documentation/robot/build-with-craftly/tasks", label: "Tasks" },
-  { path: "/resources/documentation/robot/build-with-craftly/tools", label: "Tools" },
-  { path: "/resources/documentation/robot/build-with-craftly/workflows", label: "Workflows" },
-  { path: "/resources/documentation/robot/build-with-craftly/context-memory", label: "Context & Memory" },
-  { path: "/resources/documentation/robot/build-with-craftly/agent-runtime", label: "Agent Runtime" },
-  { path: "/resources/documentation/robot/build-with-craftly/integrations", label: "Integrations" },
-  { path: "/resources/documentation/robot/build-with-craftly/custom-agents", label: "Custom Agents" },
+
   { path: "/resources/documentation/robot/feature-overview/agentic-ai", label: "Agentic AI" },
   { path: "/resources/documentation/robot/feature-overview/tool-use", label: "Tool Use" },
   { path: "/resources/documentation/robot/feature-overview/planning-reasoning", label: "Planning & Reasoning" },
@@ -120,7 +113,6 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
     if (path.includes('/robot/overview')) sections.push('robot-overview');
     if (path.includes('/robot/getting-started')) sections.push('robot-getting-started');
-    if (path.includes('/robot/build-with-craftly')) sections.push('robot-build-with-craftly');
     if (path.includes('/robot/feature-overview')) sections.push('robot-feature-overview');
     
     return sections;
@@ -387,22 +379,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
                 </div>
               )}
 
-              <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('robot-build-with-craftly')}>
-                <span>Build with Craftly</span>
-                <ChevronRight isOpen={expandedSections.includes('robot-build-with-craftly')} />
-              </div>
-              {expandedSections.includes('robot-build-with-craftly') && (
-                <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/agents" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agents</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/tasks" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tasks</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/tools" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Tools</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/workflows" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Workflows</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/context-memory" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Context & Memory</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/agent-runtime" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Agent Runtime</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/integrations" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Integrations</NavLink>
-                  <NavLink to="/resources/documentation/robot/build-with-craftly/custom-agents" className={({isActive}) => `docs__nav-subitem ${isActive ? 'docs__nav-subitem--active' : ''}`}>Custom Agents</NavLink>
-                </div>
-              )}
+
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('robot-feature-overview')}>
                 <span>Feature Overview</span>
