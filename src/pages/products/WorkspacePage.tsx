@@ -11,7 +11,7 @@ export default function WorkspacePage() {
   const revealRef = useScrollReveal();
 
   return (
-    <>
+    <div ref={revealRef}>
       <Helmet>
         <title>{product.name} — Craftly</title>
         <meta name="description" content={product.tagline} />
@@ -45,7 +45,7 @@ export default function WorkspacePage() {
         />
       </div>
 
-      <section className="product-features" ref={revealRef}>
+      <section className="product-features">
         <div className="container">
           <div className="product-features__header reveal">
             <h2 className="text-h2">Capabilities</h2>
@@ -68,6 +68,6 @@ export default function WorkspacePage() {
       </section>
 
       <CTASection />
-    </>
+    </div>
   );
 }

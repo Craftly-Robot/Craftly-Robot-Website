@@ -12,7 +12,7 @@ export default function UseCaseLayout({ useCase }: UseCaseLayoutProps) {
   const revealRef = useScrollReveal();
 
   return (
-    <>
+    <div ref={revealRef}>
       <Helmet>
         <title>{useCase.title} — Craftly Use Cases</title>
         <meta name="description" content={useCase.concept} />
@@ -30,7 +30,7 @@ export default function UseCaseLayout({ useCase }: UseCaseLayoutProps) {
         </section>
       </div>
 
-      <section className="use-case-areas" ref={revealRef}>
+      <section className="use-case-areas">
         <div className="container">
           <div className="use-case-areas__header reveal">
             <h2 className="text-h2">Focus Areas</h2>
@@ -49,6 +49,6 @@ export default function UseCaseLayout({ useCase }: UseCaseLayoutProps) {
       </section>
 
       <CTASection />
-    </>
+    </div>
   );
 }
