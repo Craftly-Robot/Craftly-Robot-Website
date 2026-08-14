@@ -162,18 +162,18 @@ export default function ReleasesPage() {
                   <span className="release-item__version-number">{release.version}</span>
                 </div>
 
-                {isExpanded && (
-                  <div className="release-item__content" onClick={(e) => e.stopPropagation()}>
+                 {isExpanded && (
+                  <div className="release-item__content">
                     {/* macOS */}
                     <div className="os-downloads">
                       <h4 className="os-downloads__title">
                         <AppleIcon /> macOS
                       </h4>
                       <div className="os-downloads__links">
-                        <a href={release.macOsAppleSilicon || "#"} className="os-download-link" onClick={(e) => { if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
+                        <a href={release.macOsAppleSilicon || "#"} className="os-download-link" onClick={(e) => { e.stopPropagation(); if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
                           <DownloadIcon /> macOS Apple Silicon (.dmg)
                         </a>
-                        <a href={release.macOsIntel || "#"} className="os-download-link" onClick={(e) => { if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
+                        <a href={release.macOsIntel || "#"} className="os-download-link" onClick={(e) => { e.stopPropagation(); if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
                           <DownloadIcon /> macOS Intel (.dmg)
                         </a>
                       </div>
@@ -185,10 +185,10 @@ export default function ReleasesPage() {
                         <WindowsIcon /> Windows
                       </h4>
                       <div className="os-downloads__links">
-                        <a href={release.windowsX64 || "#"} className="os-download-link" onClick={(e) => { if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
+                        <a href={release.windowsX64 || "#"} className="os-download-link" onClick={(e) => { e.stopPropagation(); if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
                           <DownloadIcon /> Windows x64 (.exe)
                         </a>
-                        <a href={release.windowsArm64 || "#"} className="os-download-link" onClick={(e) => { if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
+                        <a href={release.windowsArm64 || "#"} className="os-download-link" onClick={(e) => { e.stopPropagation(); if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
                           <DownloadIcon /> Windows ARM64 (.exe)
                         </a>
                       </div>
@@ -200,10 +200,10 @@ export default function ReleasesPage() {
                         <LinuxIcon /> Linux
                       </h4>
                       <div className="os-downloads__links">
-                        <a href={release.linuxX64 || "#"} className="os-download-link" onClick={(e) => { if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
+                        <a href={release.linuxX64 || "#"} className="os-download-link" onClick={(e) => { e.stopPropagation(); if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
                           <DownloadIcon /> Linux x64 (.tar.gz)
                         </a>
-                        <a href={release.linuxArm64 || "#"} className="os-download-link" onClick={(e) => { if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
+                        <a href={release.linuxArm64 || "#"} className="os-download-link" onClick={(e) => { e.stopPropagation(); if (e.currentTarget.getAttribute('href') === '#') e.preventDefault(); }}>
                           <DownloadIcon /> Linux ARM64 (.tar.gz)
                         </a>
                       </div>
