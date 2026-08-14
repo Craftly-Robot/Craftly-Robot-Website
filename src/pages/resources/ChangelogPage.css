@@ -37,7 +37,7 @@
   display: inline-block;
   color: #202124;
   animation: blink 1s step-end infinite;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 @keyframes blink {
