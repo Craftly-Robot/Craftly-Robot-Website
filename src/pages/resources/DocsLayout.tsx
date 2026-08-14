@@ -231,24 +231,15 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
       <div className="docs__mobile-header">
         <button 
-          className="docs__mobile-toggle" 
+          className={`docs__mobile-toggle ${mobileSidebarOpen ? 'docs__mobile-toggle--open' : ''}`} 
           onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
         >
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            {mobileSidebarOpen ? (
-              <>
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </>
-            ) : (
-              <>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </>
-            )}
-          </svg>
-          {mobileSidebarOpen ? 'Close Menu' : 'Documentation Menu'}
+          <div className="docs__mobile-toggle-lines">
+            <span className="docs__mobile-toggle-line" />
+            <span className="docs__mobile-toggle-line" />
+            <span className="docs__mobile-toggle-line" />
+          </div>
+          Documentation Menu
         </button>
       </div>
 
