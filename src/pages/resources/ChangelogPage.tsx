@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './ChangelogPage.css';
 
 function TypewriterTitle({ text }: { text: string }) {
@@ -342,11 +343,12 @@ const robotReleases: ReleaseData[] = [
 ];
 
 export default function ChangelogPage() {
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const [expanded, setExpanded] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
+  const revealRef = useScrollReveal();
 
   const toggle = (id: string) => {
-    setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
+    setExpanded(prev => (prev === id ? null : id));
   };
 
   return (
@@ -394,9 +396,9 @@ export default function ChangelogPage() {
             <div className="changelog-col-title">Description</div>
           </div>
 
-          <div className="changelog-list">
+          <div className="changelog-list" ref={revealRef}>
             {(activeTab === 'workspace' ? workspaceReleases : robotReleases).map((release) => (
-              <div className="changelog-item" key={release.version}>
+              <div className="changelog-item reveal" key={release.version}>
                   <div className="changelog-item__left">
                     <div className="cl-version">{release.version}</div>
                     <div className="cl-date">{release.date}</div>
@@ -411,15 +413,15 @@ export default function ChangelogPage() {
                       <div className="changelog-accordions">
                         {release.accordions.map((acc) => {
                           const id = `${release.version}-${acc.type}`;
-                          const isOpen = expanded[id] || false;
+                          const isOpen = expanded === id;
                           return (
                             <div className="cl-accordion" key={acc.type}>
                               <button className="cl-accordion__toggle" onClick={() => toggle(id)}>
                                 <span>{acc.type} ({acc.count})</span>
                                 <ChevronIcon isOpen={isOpen} />
                               </button>
-                              {isOpen && (
-                                <div className="cl-accordion__content" style={{ paddingBottom: acc.items.length === 0 ? '16px' : undefined }}>
+                              <div className={`cl-accordion__content ${isOpen ? 'is-open' : ''}`}>
+                                <div className="cl-accordion__inner" style={{ paddingBottom: acc.items.length === 0 ? '16px' : undefined }}>
                                   {acc.items.length > 0 ? (
                                     <ul>
                                       {acc.items.map((item, idx) => (
@@ -432,7 +434,7 @@ export default function ChangelogPage() {
                                     </div>
                                   )}
                                 </div>
-                              )}
+                              </div>
                             </div>
                           );
                         })}
