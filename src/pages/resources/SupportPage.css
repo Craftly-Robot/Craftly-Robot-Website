@@ -32,7 +32,10 @@
 }
 
 .typewriter-cursor {
-  font-weight: 200;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 0.85em;
+  margin-left: 8px;
   color: var(--color-text);
   animation: blink 1s step-end infinite;
 }

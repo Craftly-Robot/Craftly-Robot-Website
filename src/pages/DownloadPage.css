@@ -48,10 +48,11 @@
 /* Typewriter cursor */
 .typewriter-cursor {
   display: inline-block;
+  font-size: 0.85em;
   font-weight: 300;
+  margin-left: 8px;
   color: var(--color-text);
   animation: cursorBlink 0.7s step-end infinite;
-  margin-left: 2px;
 }
 
 @keyframes cursorBlink {
