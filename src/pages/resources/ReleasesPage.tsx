@@ -122,7 +122,7 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <TypewriterTitle text="Craftly Releases" />
+              <TypewriterTitle text={`Craftly\nReleases`} />
               <p className="releases-hero__desc">
                 Download previous Craftly Workspace and Craftly Robot releases. By default, they auto-update to the latest version. To stay on old versions, you will need to set Update: Mode to manual or none in the settings.
               </p>

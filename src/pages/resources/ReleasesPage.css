@@ -35,6 +35,7 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 24px;
+  white-space: pre-wrap;
 }
 
 @media (min-width: 768px) {
