@@ -93,6 +93,8 @@ export default function DocsLayout({ title, description, tocItems = [], children
   const nextRoute = currentIndex !== -1 && currentIndex < DOCS_ROUTES.length - 1 ? DOCS_ROUTES[currentIndex + 1] : null;
 
   const [activeId, setActiveId] = useState<string>('welcome');
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState<boolean>(false);
+
   
   // Top-level toggles
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(location.pathname.includes('/robot'));
@@ -216,6 +218,10 @@ export default function DocsLayout({ title, description, tocItems = [], children
     return () => clearTimeout(timeoutId);
   }, [location.pathname]);
 
+  useEffect(() => {
+    setMobileSidebarOpen(false);
+  }, [location.pathname]);
+
   return (
     <div className="docs__container">
       <Helmet>
@@ -223,8 +229,31 @@ export default function DocsLayout({ title, description, tocItems = [], children
         <meta name="description" content={description} />
       </Helmet>
 
+      <div className="docs__mobile-header">
+        <button 
+          className="docs__mobile-toggle" 
+          onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {mobileSidebarOpen ? (
+              <>
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </>
+            ) : (
+              <>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </>
+            )}
+          </svg>
+          {mobileSidebarOpen ? 'Close Menu' : 'Documentation Menu'}
+        </button>
+      </div>
+
       {/* Left Sidebar */}
-      <aside className="docs__sidebar docs__sidebar--left" ref={sidebarRef}>
+      <aside className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? 'docs__sidebar--mobile-open' : ''}`} ref={sidebarRef}>
         <nav className="docs__nav">
           <NavLink to="/resources/documentation" className={({isActive}) => `docs__nav-link ${isActive ? 'docs__nav-link--active' : ''}`} end>
             Home
