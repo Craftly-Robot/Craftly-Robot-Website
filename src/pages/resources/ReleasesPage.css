@@ -236,3 +236,35 @@
 .os-download-link:hover img {
   opacity: 1;
 }
+
+@media (max-width: 900px) {
+  .release-item {
+    min-height: auto;
+  }
+  
+  .release-item__header {
+    flex-wrap: wrap;
+  }
+
+  .release-item__version-info {
+    width: auto;
+    flex: 1;
+    padding: 20px 16px 20px 0;
+  }
+
+  .release-item__toggle {
+    padding: 20px 0 20px 16px;
+  }
+
+  .release-item__content {
+    flex-basis: 100%;
+    order: 3;
+    flex-direction: column;
+  }
+
+  .os-downloads {
+    border-left: none;
+    border-top: 1px solid #eaeaeb;
+    padding: 20px 0;
+  }
+}
