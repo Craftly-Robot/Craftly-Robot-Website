@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './ChangelogPage.css';
 
 function TypewriterTitle({ text }: { text: string }) {
@@ -506,7 +505,6 @@ const robotReleases: ReleaseData[] = [
 export default function ChangelogPage() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
-  const revealRef = useScrollReveal(undefined, [activeTab]);
 
   const toggle = (id: string) => {
     setExpanded(prev => (prev === id ? null : id));
@@ -557,9 +555,9 @@ export default function ChangelogPage() {
             <div className="changelog-col-title">Description</div>
           </div>
 
-          <div className="changelog-list" ref={revealRef}>
+          <div className="changelog-list">
             {(activeTab === 'workspace' ? workspaceReleases : robotReleases).map((release) => (
-              <div className="changelog-item reveal" key={release.version}>
+              <div className="changelog-item" key={release.version}>
                   <div className="changelog-item__left">
                     <div className="cl-version">{release.version}</div>
                     <div className="cl-date">{release.date}</div>
