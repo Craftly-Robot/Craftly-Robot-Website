@@ -32,7 +32,7 @@
 }
 
 .typewriter-cursor {
-  display: inline-block;
+  display: inline;
   font-weight: 300;
   font-size: 0.85em;
   margin-left: 8px;

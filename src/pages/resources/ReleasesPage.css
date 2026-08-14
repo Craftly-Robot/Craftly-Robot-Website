@@ -51,7 +51,7 @@
 }
 
 .typewriter-cursor-gradient {
-  display: inline-block;
+  display: inline;
   font-size: 0.85em;
   font-weight: 300;
   margin-left: 8px;
@@ -240,9 +240,6 @@
 @media (max-width: 900px) {
   .release-item {
     min-height: auto;
-  }
-  
-  .release-item__header {
     flex-wrap: wrap;
   }
 

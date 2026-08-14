@@ -47,7 +47,7 @@
 
 /* Typewriter cursor */
 .typewriter-cursor {
-  display: inline-block;
+  display: inline;
   font-size: 0.85em;
   font-weight: 300;
   margin-left: 8px;

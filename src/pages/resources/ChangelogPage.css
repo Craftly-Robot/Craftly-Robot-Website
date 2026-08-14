@@ -34,7 +34,7 @@
 }
 
 .typewriter-cursor {
-  display: inline-block;
+  display: inline;
   color: #202124;
   animation: blink 1s step-end infinite;
   margin-left: 8px;
