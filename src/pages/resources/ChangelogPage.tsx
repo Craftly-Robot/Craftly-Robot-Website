@@ -361,7 +361,7 @@ export default function ChangelogPage() {
           
           <div className="changelog-hero">
             <div className="changelog-hero__top">
-              <TypewriterTitle text="Craftly Changelog" />
+              <TypewriterTitle text={`See what’s new\nacross Craftly.`} />
               <div className="changelog-actions">
                 <Link to="/resources/documentation" className="btn-pill">View docs</Link>
                 <a href="https://x.com/Craftly_robot" target="_blank" rel="noopener noreferrer" className="btn-pill">Follow us on X</a>
