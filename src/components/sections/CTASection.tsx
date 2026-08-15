@@ -27,8 +27,8 @@ export default function CTASection() {
           </div>
           
           <div className="home-cta__content">
-            <h2 className="text-hero-display home-cta__headline reveal reveal-delay-1">
-              Download Craftly
+            <h2 className="home-cta__headline reveal reveal-delay-1">
+              Download Craftly Workspace
             </h2>
             <div className="home-cta__actions reveal reveal-delay-2">
               {(os === 'Windows' || os === 'Linux' || os === 'Unknown OS') && (

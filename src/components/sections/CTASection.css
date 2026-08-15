@@ -57,6 +57,10 @@
   margin-bottom: var(--space-2xl);
   max-width: 600px;
   line-height: 1.1;
+  font-family: 'Outfit', var(--font-sans);
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .home-cta__actions {
@@ -69,8 +73,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2xs);
-  padding: 0.875rem 1.75rem;
-  font-size: var(--text-base);
+  padding: 0.6rem 1.25rem;
+  font-size: 15px;
   font-weight: 500;
   color: #000000;
   background: #FFFFFF;
@@ -96,8 +100,8 @@
 .home-cta__btn-secondary {
   display: inline-flex;
   align-items: center;
-  padding: 0.875rem 1.75rem;
-  font-size: var(--text-base);
+  padding: 0.6rem 1.25rem;
+  font-size: 15px;
   font-weight: 500;
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.1);
