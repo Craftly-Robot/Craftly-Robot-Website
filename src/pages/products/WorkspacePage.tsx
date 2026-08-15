@@ -52,6 +52,25 @@ export default function WorkspacePage() {
         </div>
       </section>
 
+      <section className="abstracted-ui-section">
+        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
+          <div style={{ maxWidth: '1120px', margin: '0 auto' }}>
+            <h2 className="abstracted-ui-title reveal">An Abstracted UI</h2>
+            <p className="abstracted-ui-desc reveal reveal-delay-1">
+              Your AI agents' central command center, providing a unified platform to launch, monitor, and orchestrate their activities.
+            </p>
+            <div className="abstracted-ui-grid">
+              <img src="/assets/Craftly_Workspace/2.png" alt="UI detail 1" className="product-showcase-image reveal reveal-delay-2" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/3.png" alt="UI detail 2" className="product-showcase-image reveal reveal-delay-2" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/4.png" alt="UI detail 3" className="product-showcase-image reveal reveal-delay-3" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/5.png" alt="UI detail 4" className="product-showcase-image reveal reveal-delay-3" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/6.png" alt="UI detail 5" className="product-showcase-image reveal reveal-delay-4" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/7.png" alt="UI detail 6" className="product-showcase-image reveal reveal-delay-4" style={{ margin: 0 }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="product-features">
         <div className="container">
           <div className="product-features__header reveal">
