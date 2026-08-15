@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { products } from '../../data/products';
 import VideoShowcase from '../../components/ui/VideoShowcase';
 import CTASection from '../../components/sections/CTASection';
@@ -17,23 +18,15 @@ export default function WorkspacePage() {
         <meta name="description" content={product.tagline} />
       </Helmet>
       
-      <div className="container" style={{ position: 'relative' }}>
-        <div style={{
-          position: 'absolute',
-          top: '-20%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '100vw',
-          height: '100%',
-          background: 'radial-gradient(ellipse at 50% 0%, hsla(222, 84%, 58%, 0.08) 0%, transparent 60%)',
-          pointerEvents: 'none',
-          zIndex: -1
-        }} />
-        <section className="product-hero">
-          <div className="product-hero__icon">⬡</div>
-          <h1 className="text-display product-hero__title">{product.name}</h1>
-          <p className="product-hero__tagline">{product.tagline}</p>
-          <p className="product-hero__desc">{product.description}</p>
+      <div className="container">
+        <section className="product-hero-clean">
+          <h1 className="product-hero-clean__title">{product.name}</h1>
+          <p className="product-hero-clean__desc">{product.description}</p>
+          <div className="product-hero-clean__actions">
+            <Link to="/download" className="btn-product-download">
+              Download
+            </Link>
+          </div>
         </section>
       </div>
 
