@@ -2,44 +2,44 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import CTASection from '../../components/sections/CTASection';
-import './OperationsPage.css';
+import './UseCaseContent.css';
 
 export default function OperationsPage() {
   const revealRef = useScrollReveal();
 
   return (
-    <div className="operations-page" ref={revealRef}>
+    <div className="uc-content-page" ref={revealRef}>
       <Helmet>
         <title>Company Operations — Craftly</title>
         <meta name="description" content="Run your organization as one connected system." />
       </Helmet>
 
       <div className="container">
-        <section className="operations-hero reveal">
-          <h1 className="operations-hero__title">Run your organization as one connected system.</h1>
-          <p className="operations-hero__desc">
+        <section className="uc-content-hero reveal">
+          <h1 className="uc-content-hero__title">Run your organization as one connected system.</h1>
+          <p className="uc-content-hero__desc">
             Craftly Workspace connects people, work, communication, resources, and operational processes in one structured environment.
           </p>
-          <div className="operations-hero__actions">
+          <div className="uc-content-hero__actions">
             <Link to="/products/workspace" className="btn-primary">Explore Craftly Workspace</Link>
           </div>
         </section>
       </div>
 
-      <div className="operations-content-wrapper">
+      <div className="uc-content-content-wrapper">
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto', padding: 'var(--space-2xl) 0' }}>
           
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 01 — One place for how work gets done</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 01 — One place for how work gets done</h2>
+            <div className="uc-content-section__content">
               <p>Organizations often spread their work across chats, documents, spreadsheets, project tools, and informal communication.</p>
               <p>Craftly Workspace brings those operational pieces together so people can understand <strong>what needs to happen, who is responsible, how work moves, and where to go when something gets blocked.</strong></p>
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 02 — From command to execution</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 02 — From command to execution</h2>
+            <div className="uc-content-section__content">
               <p>Craftly Workspace turns organizational instructions into structured work.</p>
               
               <h3>Command Chain</h3>
@@ -53,9 +53,9 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 03 — Work with accountability</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 03 — Work with accountability</h2>
+            <div className="uc-content-section__content">
               <h3>Tasks</h3>
               <p>Official company tasks can be assigned through the Notice Board or Command Chain.</p>
               <p>Members execute the work and submit the result through the Task Submission system.</p>
@@ -69,9 +69,9 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 04 — Projects that reveal capability</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 04 — Projects that reveal capability</h2>
+            <div className="uc-content-section__content">
               <p>Projects provide practical work environments, particularly within Operations.</p>
               <p>A project can include:</p>
               <ul>
@@ -87,9 +87,9 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 05 — Communication follows responsibility</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 05 — Communication follows responsibility</h2>
+            <div className="uc-content-section__content">
               <p>Craftly uses structured communication based on reporting relationships.</p>
               <p>Members can communicate with the people responsible for guiding, reviewing, or supporting their work.</p>
               <p>The goal is not to restrict communication unnecessarily, but to make sure important communication reaches the right people without becoming fragmented.</p>
@@ -97,9 +97,9 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 06 — Resources where work happens</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 06 — Resources where work happens</h2>
+            <div className="uc-content-section__content">
               <p>Every department has its own working environment inside Workspace.</p>
               <p>Department Resources can include:</p>
               <ul>
@@ -116,9 +116,9 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 07 — People and roles</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 07 — People and roles</h2>
+            <div className="uc-content-section__content">
               <p>Craftly's organizational structure is dynamic.</p>
               <p>Roles can evolve based on:</p>
               <ul>
@@ -133,9 +133,9 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal">
-            <h2 className="operations-section__title">Section 08 — Support when work gets blocked</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal">
+            <h2 className="uc-content-section__title">Section 08 — Support when work gets blocked</h2>
+            <div className="uc-content-section__content">
               <p>Not every problem can be solved alone.</p>
               <p>Workspace provides structured Support Requests for:</p>
               <p><strong>Unit Commander · Technical Issue · Legal or Safety · Attendance Correction · Ethics Report · Suggestions · Private Key Recovery</strong></p>
@@ -143,15 +143,15 @@ export default function OperationsPage() {
             </div>
           </section>
 
-          <section className="operations-section reveal" style={{ borderBottom: 'none' }}>
-            <h2 className="operations-section__title">Section 09 — Built for real organizations</h2>
-            <div className="operations-section__content">
+          <section className="uc-content-section reveal" style={{ borderBottom: 'none' }}>
+            <h2 className="uc-content-section__title">Section 09 — Built for real organizations</h2>
+            <div className="uc-content-section__content">
               <p>Craftly Workspace is designed around a simple principle:</p>
               <blockquote>
                 Every responsibility should have an owner. Every task should have a path. Every important problem should have somewhere to go.
               </blockquote>
               
-              <div className="operations-actions">
+              <div className="uc-content-actions">
                 <Link to="/products/workspace" className="btn-primary">Explore Workspace</Link>
                 <Link to="/resources/docs" className="btn-secondary">Read Documentation</Link>
               </div>
