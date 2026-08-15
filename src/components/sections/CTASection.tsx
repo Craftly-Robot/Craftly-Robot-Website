@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './CTASection.css';
 
-export default function CTASection() {
+interface CTASectionProps {
+  title?: string;
+}
+
+export default function CTASection({ title = "Download Craftly Workspace" }: CTASectionProps) {
   const revealRef = useScrollReveal();
   const [os, setOs] = useState('Windows');
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,7 +46,7 @@ export default function CTASection() {
           
           <div className="home-cta__content">
             <h2 className="home-cta__headline reveal reveal-delay-1">
-              Download Craftly Workspace
+              {title}
             </h2>
             <div className="home-cta__actions reveal reveal-delay-2">
               {(os === 'Windows' || os === 'Linux' || os === 'Unknown OS') && (

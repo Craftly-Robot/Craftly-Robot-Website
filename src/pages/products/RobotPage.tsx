@@ -222,7 +222,7 @@ export default function RobotPage() {
         </div>
       </section>
 
-      <CTASection />
+      <CTASection title="Download Craftly Robot" />
     </div>
   );
 }
