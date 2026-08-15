@@ -25,7 +25,7 @@ export const products: Product[] = [
     name: 'Craftly Robot',
     tagline: 'An agentic AI system for autonomous software engineering.',
     description:
-      'Craftly Robot understands your goals, discovers relevant agents, and helps coordinate real world tasks through agent-to-agent communication and human controlled action.',
+      'Craftly Robot understands your goals, discovers relevant agents, and helps coordinate\nreal world tasks through agent-to-agent communication\nand human controlled action.',
     icon: 'robot',
     route: '/products/robot',
     videoSrc: '/assets/videos/robot.mp4',
