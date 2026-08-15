@@ -36,12 +36,12 @@ export default function RobotPage() {
           {/* Pair 1 */}
           <div className="abstracted-ui-grid">
             <div className="abstracted-ui-feature reveal">
-              <img src="/assets/Craftly_Robot/1.1.jpeg" alt="Robot detail 1.1" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/1.1.jpeg" alt="Robot detail 1.1" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Autonomous Engineering</h3>
               <p className="abstracted-ui-feature__desc">Craftly Robot can autonomously plan and execute complex software engineering tasks.</p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img src="/assets/Craftly_Robot/1.2.jpeg" alt="Robot detail 1.2" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/1.2.jpeg" alt="Robot detail 1.2" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Codebase Intelligence</h3>
               <p className="abstracted-ui-feature__desc">Deeply understands your codebase architecture, patterns, and dependencies.</p>
             </div>
@@ -50,12 +50,12 @@ export default function RobotPage() {
           {/* Pair 2 */}
           <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
             <div className="abstracted-ui-feature reveal">
-              <img src="/assets/Craftly_Robot/2.1.jpeg" alt="Robot detail 2.1" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/2.1.jpeg" alt="Robot detail 2.1" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Smart Refactoring</h3>
               <p className="abstracted-ui-feature__desc">Safely refactor legacy code with AI agents that verify their own work.</p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img src="/assets/Craftly_Robot/2.2.jpeg" alt="Robot detail 2.2" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/2.2.jpeg" alt="Robot detail 2.2" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Test Generation</h3>
               <p className="abstracted-ui-feature__desc">Automatically generate comprehensive unit and integration tests for your modules.</p>
             </div>
@@ -64,12 +64,12 @@ export default function RobotPage() {
           {/* Pair 3 */}
           <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
             <div className="abstracted-ui-feature reveal">
-              <img src="/assets/Craftly_Robot/3.1.jpeg" alt="Robot detail 3.1" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/3.1.jpeg" alt="Robot detail 3.1" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Pull Request Reviews</h3>
               <p className="abstracted-ui-feature__desc">Robot agents review incoming pull requests for security flaws and performance issues.</p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img src="/assets/Craftly_Robot/3.2.jpeg" alt="Robot detail 3.2" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/3.2.jpeg" alt="Robot detail 3.2" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Continuous Integration</h3>
               <p className="abstracted-ui-feature__desc">Seamlessly integrates with your CI/CD pipelines to validate code instantly.</p>
             </div>
@@ -78,12 +78,12 @@ export default function RobotPage() {
           {/* Pair 4 */}
           <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
             <div className="abstracted-ui-feature reveal">
-              <img src="/assets/Craftly_Robot/4.1.jpeg" alt="Robot detail 4.1" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/4.1.jpeg" alt="Robot detail 4.1" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Multi-Agent Coordination</h3>
               <p className="abstracted-ui-feature__desc">Multiple specialized AI agents work together to solve complex engineering problems.</p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img src="/assets/Craftly_Robot/4.2.jpeg" alt="Robot detail 4.2" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/4.2.jpeg" alt="Robot detail 4.2" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Real-time Synchronization</h3>
               <p className="abstracted-ui-feature__desc">Agents sync their state in real-time to avoid merge conflicts and duplicated work.</p>
             </div>
@@ -92,12 +92,12 @@ export default function RobotPage() {
           {/* Pair 5 */}
           <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
             <div className="abstracted-ui-feature reveal">
-              <img src="/assets/Craftly_Robot/5.1.jpeg" alt="Robot detail 5.1" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/5.1.jpeg" alt="Robot detail 5.1" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Security Scanning</h3>
               <p className="abstracted-ui-feature__desc">Proactively scan your repositories for vulnerabilities before they hit production.</p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img src="/assets/Craftly_Robot/5.2.jpeg" alt="Robot detail 5.2" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/5.2.jpeg" alt="Robot detail 5.2" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Dependency Management</h3>
               <p className="abstracted-ui-feature__desc">Automated updates and patches for all your project dependencies.</p>
             </div>
@@ -114,7 +114,7 @@ export default function RobotPage() {
                 src="/assets/Craftly_Robot/6.jpeg"
                 alt="Robot detail 6"
                 className="product-showcase-image reveal reveal-delay-2"
-                style={{ maxWidth: '720px', width: '90%', margin: '0 auto' }}
+                style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }}
               />
             </div>
           </div>
@@ -122,12 +122,12 @@ export default function RobotPage() {
           {/* Pair 7 */}
           <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
             <div className="abstracted-ui-feature reveal">
-              <img src="/assets/Craftly_Robot/7.1.jpeg" alt="Robot detail 7.1" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/7.1.jpeg" alt="Robot detail 7.1" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">System Monitoring</h3>
               <p className="abstracted-ui-feature__desc">Keep an eye on system health metrics and agent performance in real-time.</p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img src="/assets/Craftly_Robot/7.2.jpeg" alt="Robot detail 7.2" className="product-showcase-image" style={{ width: '75%', margin: '0 auto' }} />
+              <img src="/assets/Craftly_Robot/7.2.jpeg" alt="Robot detail 7.2" className="product-showcase-image" style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }} />
               <h3 className="abstracted-ui-feature__title">Performance Optimization</h3>
               <p className="abstracted-ui-feature__desc">Automatically identify bottlenecks and apply performance optimizations.</p>
             </div>
@@ -144,7 +144,7 @@ export default function RobotPage() {
                 src="/assets/Craftly_Robot/8.jpeg"
                 alt="Robot detail 8"
                 className="product-showcase-image reveal reveal-delay-2"
-                style={{ maxWidth: '720px', width: '90%', margin: '0 auto' }}
+                style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }}
               />
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function RobotPage() {
                 src="/assets/Craftly_Robot/9.jpeg"
                 alt="Robot detail 9"
                 className="product-showcase-image reveal reveal-delay-2"
-                style={{ maxWidth: '720px', width: '90%', margin: '0 auto' }}
+                style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }}
               />
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function RobotPage() {
                 src="/assets/Craftly_Robot/10.jpeg"
                 alt="Robot detail 10"
                 className="product-showcase-image reveal reveal-delay-2"
-                style={{ maxWidth: '720px', width: '90%', margin: '0 auto' }}
+                style={{ width: '100%', maxWidth: '480px', margin: '0 auto' }}
               />
             </div>
           </div>
