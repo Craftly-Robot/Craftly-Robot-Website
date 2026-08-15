@@ -66,6 +66,10 @@ export default function WorkspacePage() {
               <img src="/assets/Craftly_Workspace/5.png" alt="UI detail 4" className="product-showcase-image reveal reveal-delay-3" style={{ margin: 0 }} />
               <img src="/assets/Craftly_Workspace/6.png" alt="UI detail 5" className="product-showcase-image reveal reveal-delay-4" style={{ margin: 0 }} />
               <img src="/assets/Craftly_Workspace/7.png" alt="UI detail 6" className="product-showcase-image reveal reveal-delay-4" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/9.png" alt="UI detail 7" className="product-showcase-image reveal reveal-delay-1" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/10.png" alt="UI detail 8" className="product-showcase-image reveal reveal-delay-1" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/11.jpeg" alt="UI detail 9" className="product-showcase-image reveal reveal-delay-2" style={{ margin: 0 }} />
+              <img src="/assets/Craftly_Workspace/12.png" alt="UI detail 10" className="product-showcase-image reveal reveal-delay-2" style={{ margin: 0 }} />
             </div>
           </div>
         </div>
