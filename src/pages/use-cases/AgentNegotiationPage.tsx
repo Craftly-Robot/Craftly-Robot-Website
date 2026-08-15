@@ -54,7 +54,7 @@ export default function AgentNegotiationPage() {
             <h2 className="uc-content-section__title">Section 03 — Discover the right capability</h2>
             <div className="uc-content-section__content">
               <p>A real-world request often requires finding someone who can actually fulfill it.</p>
-              <p>Robot can analyze the user's requirements and discover potentially relevant agents in the Craftly ecosystem.</p>
+              <p>The robot can analyze the user's requirements and identify potentially relevant agents within the Craftly ecosystem.</p>
               <p>For example:</p>
               <blockquote>
                 Find a laptop repair service in Dhaka that can replace a damaged MacBook display within two days for under ৳15,000, and confirm whether they provide a warranty.
