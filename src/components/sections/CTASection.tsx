@@ -24,6 +24,9 @@ export default function CTASection() {
           <div className="home-cta__bg" aria-hidden="true">
             <div className="home-cta__bg-grid" />
             <div className="home-cta__bg-glow" />
+            <div className="home-cta__bg-orb home-cta__bg-orb--1" />
+            <div className="home-cta__bg-orb home-cta__bg-orb--2" />
+            <div className="home-cta__bg-orb home-cta__bg-orb--3" />
           </div>
           
           <div className="home-cta__content">
