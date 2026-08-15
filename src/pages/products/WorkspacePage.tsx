@@ -107,7 +107,7 @@ export default function WorkspacePage() {
                 </svg>
               </div>
               <h3 className="workspace-option__title">Tasks & Operations</h3>
-              <p className="workspace-option__desc">Turn organizational commands into execution. Receive official tasks through the Notice Board or Command Chain, and escalate blockers through the right leadership path.</p>
+              <p className="workspace-option__desc">Turn organizational commands into execution. Receive official tasks through the Notice Board or Command Chain.</p>
             </div>
           </div>
         </div>
