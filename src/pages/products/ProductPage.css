@@ -238,7 +238,7 @@
 .workspace-options-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3xl);
+  gap: 100px;
   padding-inline: var(--page-margin);
 }
 

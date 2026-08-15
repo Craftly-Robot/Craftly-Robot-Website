@@ -86,7 +86,7 @@ export default function WorkspacePage() {
                 </svg>
               </div>
               <h3 className="workspace-option__title">Projects</h3>
-              <p className="workspace-option__desc">Turn real work into measurable projects. Assign practical projects, work with the provided tools and Git workflow, and submit the completed work.</p>
+              <p className="workspace-option__desc">Group your conversations into Projects, which can span multiple folders and support custom settings and scoped permissions.</p>
             </div>
             
             <div className="workspace-option reveal reveal-delay-1">
@@ -98,8 +98,8 @@ export default function WorkspacePage() {
                   <path d="M21 6a8 8 0 0 1 0 12" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Communication</h3>
-              <p className="workspace-option__desc">Stay connected through structured communication. Communicate through your reporting structure, and keep organizational conversations clear.</p>
+              <h3 className="workspace-option__title">Live Voice Transcription</h3>
+              <p className="workspace-option__desc">Speak your prompts. Powered by the latest Gemini Audio models, real-time transcription converts conversational speech into clearly phrased prompts.</p>
             </div>
             
             <div className="workspace-option reveal reveal-delay-2">
@@ -111,8 +111,8 @@ export default function WorkspacePage() {
                   <path d="M14 17.5h7M17.5 14v7" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Tasks & Operations</h3>
-              <p className="workspace-option__desc">Turn organizational commands into execution. Receive official tasks through the Notice Board or Command Chain, and escalate blockers through the right leadership path.</p>
+              <h3 className="workspace-option__title">Extend Customization</h3>
+              <p className="workspace-option__desc">Define global or workspace-specific Skills, MCPs and JSON Hooks to encourage custom agent behavior.</p>
             </div>
           </div>
         </div>
