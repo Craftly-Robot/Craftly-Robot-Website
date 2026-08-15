@@ -80,9 +80,9 @@ export default function WorkspacePage() {
           <div className="workspace-options-grid">
             <div className="workspace-option reveal">
               <div className="workspace-option__icon">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-                  <path d="M4 8v10a2 2 0 0 0 2 2h10" />
+                  <path d="M4 8v10a2 2 0 0 0 2 2h6" />
                 </svg>
               </div>
               <h3 className="workspace-option__title">Projects</h3>
@@ -91,8 +91,11 @@ export default function WorkspacePage() {
             
             <div className="workspace-option reveal reveal-delay-1">
               <div className="workspace-option__icon">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M18 9a4 4 0 0 1 0 6" />
+                  <path d="M21 6a8 8 0 0 1 0 12" />
                 </svg>
               </div>
               <h3 className="workspace-option__title">Communication</h3>
@@ -101,9 +104,11 @@ export default function WorkspacePage() {
             
             <div className="workspace-option reveal reveal-delay-2">
               <div className="workspace-option__icon">
-                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 11l3 3L22 4" />
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="7" height="7" x="3" y="3" rx="1" />
+                  <rect width="7" height="7" x="14" y="3" rx="1" />
+                  <rect width="7" height="7" x="3" y="14" rx="1" />
+                  <path d="M14 17.5h7M17.5 14v7" />
                 </svg>
               </div>
               <h3 className="workspace-option__title">Tasks & Operations</h3>
