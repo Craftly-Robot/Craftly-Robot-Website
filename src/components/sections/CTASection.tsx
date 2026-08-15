@@ -1,17 +1,20 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './CTASection.css';
 
-function ArrowRight({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8h10M9 4l4 4-4 4" />
-    </svg>
-  );
-}
-
 export default function CTASection() {
   const revealRef = useScrollReveal();
+  const [os, setOs] = useState('Windows');
+
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    if (userAgent.includes('win')) setOs('Windows');
+    else if (userAgent.includes('mac')) setOs('macOS');
+    else if (userAgent.includes('android')) setOs('Android');
+    else if (userAgent.includes('iphone') || userAgent.includes('ipad')) setOs('iOS');
+    else if (userAgent.includes('linux')) setOs('Linux');
+  }, []);
 
   return (
     <section className="section section--xl home-cta" ref={revealRef}>
@@ -25,16 +28,34 @@ export default function CTASection() {
           
           <div className="home-cta__content">
             <h2 className="text-hero-display home-cta__headline reveal reveal-delay-1">
-              Build with Craftly.
+              Download Craftly
             </h2>
             <div className="home-cta__actions reveal reveal-delay-2">
-              <Link to="/products/workspace" className="home-cta__btn-primary">
-                Explore Craftly
-                <ArrowRight className="home-cta__btn-arrow" />
-              </Link>
-              <Link to="/download" className="home-cta__btn-secondary">
-                Download Craftly
-              </Link>
+              {(os === 'Windows' || os === 'Linux' || os === 'Unknown OS') && (
+                <>
+                  <Link to="/download" className="home-cta__btn-primary">
+                    Download for {os} x64
+                  </Link>
+                  <Link to="/download" className="home-cta__btn-secondary">
+                    Download for {os} ARM64
+                  </Link>
+                </>
+              )}
+              {os === 'macOS' && (
+                <>
+                  <Link to="/download" className="home-cta__btn-primary">
+                    Download for Mac (Apple Silicon)
+                  </Link>
+                  <Link to="/download" className="home-cta__btn-secondary">
+                    Download for Mac (Intel)
+                  </Link>
+                </>
+              )}
+              {(os === 'Android' || os === 'iOS') && (
+                <Link to="/download" className="home-cta__btn-primary">
+                  Download for {os}
+                </Link>
+              )}
             </div>
           </div>
         </div>

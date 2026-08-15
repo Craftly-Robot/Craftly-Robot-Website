@@ -10,7 +10,7 @@
   background: var(--color-bg-inverse); /* Black */
   padding: var(--space-6xl) var(--page-margin);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -35,25 +35,28 @@
 .home-cta__bg-glow {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(-20%, -50%);
   width: 150%;
   height: 150%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 60%);
+  background: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, transparent 60%);
 }
 
 .home-cta__content {
   position: relative;
   z-index: 1;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 4%;
 }
 
 .home-cta__headline {
   color: #FFFFFF;
   margin-bottom: var(--space-2xl);
+  max-width: 600px;
+  line-height: 1.1;
 }
 
 .home-cta__actions {
