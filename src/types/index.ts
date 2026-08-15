@@ -1,4 +1,3 @@
-/* ── Product Type ── */
 export interface Product {
   id: string;
   name: string;
@@ -11,7 +10,6 @@ export interface Product {
   capabilities: string[];
 }
 
-/* ── Use Case Type ── */
 export interface UseCase {
   id: string;
   number: string;
@@ -23,7 +21,6 @@ export interface UseCase {
   icon: string;
 }
 
-/* ── Resource Type ── */
 export interface Resource {
   id: string;
   title: string;
@@ -33,37 +30,6 @@ export interface Resource {
   external?: boolean;
 }
 
-/* ── Download Type ── */
-export interface Download {
-  id: string;
-  product: string;
-  productId: string;
-  description: string;
-  version: string;
-  platforms: Platform[];
-  releaseDate: string;
-  docsUrl: string;
-}
-
-export interface Platform {
-  name: string;
-  architecture: string;
-  downloadUrl: string;
-  size?: string;
-}
-
-/* ── Navigation Types ── */
-export interface NavItem {
-  label: string;
-  route?: string;
-  children?: NavDropdown;
-}
-
-export interface NavDropdown {
-  type: 'products' | 'useCases' | 'resources';
-  items: NavDropdownItem[];
-}
-
 export interface NavDropdownItem {
   title: string;
   description: string;
@@ -71,7 +37,6 @@ export interface NavDropdownItem {
   route: string;
 }
 
-/* ── Site Content ── */
 export interface SiteContent {
   hero: {
     badge: string;

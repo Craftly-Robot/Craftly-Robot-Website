@@ -1,16 +1,9 @@
-/* ============================================================
-   USE CASE COMPONENTS CSS
-   Strict Black & White Editorial Aesthetic
-   ============================================================ */
-
-/* ── Layout & Wrappers ── */
 .ucc-page-wrapper {
-  background-color: #ffffff; /* Strict white background */
-  color: #000000; /* Strict black text */
+  background-color: #ffffff;
+  color: #000000;
   padding-bottom: var(--space-4xl);
 }
 
-/* ── Hero Component ── */
 .ucc-hero {
   padding-block: var(--space-5xl) var(--space-3xl);
   text-align: center;
@@ -52,7 +45,6 @@
   }
 }
 
-/* ── Feature Section ── */
 .ucc-feature {
   padding-block: var(--space-4xl);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -107,19 +99,23 @@
   line-height: 1.6;
   color: var(--color-text-secondary);
 }
+
 .ucc-feature__desc p {
   margin-bottom: var(--space-md);
 }
+
 .ucc-feature__desc ul {
   list-style: none;
   padding: 0;
   margin-bottom: var(--space-lg);
 }
+
 .ucc-feature__desc li {
   position: relative;
   padding-left: 24px;
   margin-bottom: 12px;
 }
+
 .ucc-feature__desc li::before {
   content: '—';
   position: absolute;
@@ -135,13 +131,13 @@
   }
 }
 
-/* ── 3-Column Grid ── */
 .ucc-grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-2xl);
   margin-top: var(--space-xl);
 }
+
 .ucc-grid-card {
   padding: var(--space-xl);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -155,13 +151,13 @@
   margin-bottom: var(--space-sm);
   font-family: 'Outfit', var(--font-sans);
 }
+
 .ucc-grid-card__desc {
   font-size: 16px;
   color: var(--color-text-secondary);
   line-height: 1.5;
 }
 
-/* ── Example Scenario ── */
 .ucc-scenario {
   margin-block: var(--space-2xl);
   background: rgba(0,0,0,0.02);
@@ -187,11 +183,13 @@
   flex-direction: column;
   gap: var(--space-lg);
 }
+
 .ucc-scenario__step {
   display: flex;
   gap: var(--space-md);
   align-items: flex-start;
 }
+
 .ucc-scenario__step-label {
   font-weight: 500;
   min-width: 150px;
@@ -201,6 +199,7 @@
   color: var(--color-text-secondary);
   padding-top: 4px;
 }
+
 .ucc-scenario__step-content {
   flex: 1;
   font-size: 18px;
@@ -214,7 +213,6 @@
   }
 }
 
-/* ── Status Badge ── */
 .ucc-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -243,7 +241,6 @@
   border: 1px solid var(--color-text-secondary);
 }
 
-/* ── SVG Animations (Monochrome) ── */
 .ucc-svg-flow {
   width: 100%;
   max-width: 800px;
@@ -290,7 +287,6 @@
   }
 }
 
-/* ── Monochrome CTA ── */
 .ucc-cta {
   padding-block: var(--space-5xl);
   text-align: center;
@@ -306,7 +302,8 @@
   margin-bottom: var(--space-xl);
 }
 
-.ucc-btn-primary, .ucc-btn-secondary {
+.ucc-btn-primary,
+.ucc-btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -317,18 +314,21 @@
   transition: transform 0.2s, opacity 0.2s;
   text-decoration: none;
 }
+
 .ucc-btn-primary {
   background: #000;
   color: #fff;
   border: 1px solid #000;
 }
+
 .ucc-btn-secondary {
   background: transparent;
   color: #000;
   border: 1px solid #000;
 }
 
-.ucc-btn-primary:hover, .ucc-btn-secondary:hover {
+.ucc-btn-primary:hover,
+.ucc-btn-secondary:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }

@@ -1,10 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { ANIMATION } from '../utils/animation';
 
-/**
- * IntersectionObserver-based scroll reveal hook.
- * Adds 'revealed' class to elements with 'reveal' class when they enter the viewport.
- */
 export function useScrollReveal(
   options?: IntersectionObserverInit,
   deps: React.DependencyList = []
@@ -39,6 +35,7 @@ export function useScrollReveal(
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [handleIntersection, options, ...deps]);
 
   return containerRef;

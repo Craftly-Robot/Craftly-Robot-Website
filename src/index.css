@@ -1,9 +1,3 @@
-/* ============================================================
-   CRAFTLY DESIGN SYSTEM
-   Complete design token system + global styles
-   ============================================================ */
-
-/* ── CSS Reset ─────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Pacifico&family=Yellowtail&display=swap');
 
 *,
@@ -64,7 +58,6 @@ select {
   font: inherit;
 }
 
-/* Remove default focus, apply custom */
 :focus {
   outline: none;
 }
@@ -75,22 +68,7 @@ select {
   border-radius: 2px;
 }
 
-/* ── Design Tokens ─────────────────────────────────────────── */
-
 :root {
-  /* ── Color System (Dark Theme Default) ── */
-  --color-bg:              hsl(228, 16%, 5%);
-  --color-bg-elevated:     hsl(228, 14%, 9%);
-  --color-bg-subtle:       hsl(228, 12%, 13%);
-  --color-bg-overlay:      hsla(228, 16%, 5%, 0.85);
-  --color-bg-inverse:      hsl(220, 20%, 97%);
-
-  --color-text:            hsl(220, 25%, 96%);
-  --color-text-secondary:  hsl(220, 12%, 65%);
-  --color-text-muted:      hsl(220, 8%, 42%);
-  --color-text-inverse:    hsl(228, 16%, 5%);
-
-  /* ── Color System (Light Theme) ── */
   --color-bg: #FFFFFF;
   --color-bg-elevated: #F8F9FA;
   --color-bg-subtle: #F1F3F5;
@@ -114,16 +92,13 @@ select {
   --color-surface-hover: #F1F3F5;
   --color-surface-active: #E9ECEF;
 
-  /* Semantic */
-  --color-success:         hsl(152, 60%, 48%);
-  --color-warning:         hsl(38, 90%, 55%);
-  --color-error:           hsl(0, 72%, 56%);
+  --color-success: hsl(152, 60%, 48%);
+  --color-warning: hsl(38, 90%, 55%);
+  --color-error: hsl(0, 72%, 56%);
 
-  /* ── Typography ── */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 
-  /* Massive Hero Display Font (Scaling from 48px to 110px) */
   --text-hero-display: clamp(3rem, 7vw, 7rem);
   --text-display: clamp(2.5rem, 5vw, 4.5rem);
   --text-h1: clamp(2rem, 4vw, 3.5rem);
@@ -144,61 +119,53 @@ select {
   --tracking-wide: 0.02em;
   --tracking-wider: 0.05em;
 
-  /* ── Spacing (Fluid) ── */
-  --space-3xs:   0.125rem;
-  --space-2xs:   0.25rem;
-  --space-xs:    0.5rem;
-  --space-sm:    0.75rem;
-  --space-md:    1rem;
-  --space-lg:    1.5rem;
-  --space-xl:    2rem;
-  --space-2xl:   3rem;
-  --space-3xl:   4rem;
-  --space-4xl:   6rem;
-  --space-5xl:   clamp(6rem, 10vw, 10rem);
-  --space-6xl:   clamp(8rem, 15vw, 14rem);
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: clamp(6rem, 10vw, 10rem);
+  --space-6xl: clamp(8rem, 15vw, 14rem);
 
-  /* ── Layout ── */
-  --container-max:    1280px;
-  --container-wide:   1440px;
+  --container-max: 1280px;
+  --container-wide: 1440px;
   --container-narrow: 720px;
-  --page-margin:      clamp(1.25rem, 4vw, 3rem);
-  --nav-height:       56px;
+  --page-margin: clamp(1.25rem, 4vw, 3rem);
+  --nav-height: 56px;
 
-  /* ── Shape ── */
-  --radius-sm:    6px;
-  --radius-md:    10px;
-  --radius-lg:    16px;
-  --radius-xl:    24px;
-  --radius-2xl:   32px;
-  --radius-full:  9999px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
 
-  /* ── Shadows ── */
-  --shadow-sm:    0 1px 2px hsla(0, 0%, 0%, 0.2);
-  --shadow-md:    0 4px 12px hsla(0, 0%, 0%, 0.25);
-  --shadow-lg:    0 8px 30px hsla(0, 0%, 0%, 0.3);
-  --shadow-xl:    0 16px 50px hsla(0, 0%, 0%, 0.35);
-  --shadow-glow:  0 0 40px hsla(222, 84%, 58%, 0.15);
+  --shadow-sm: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  --shadow-md: 0 4px 12px hsla(0, 0%, 0%, 0.25);
+  --shadow-lg: 0 8px 30px hsla(0, 0%, 0%, 0.3);
+  --shadow-xl: 0 16px 50px hsla(0, 0%, 0%, 0.35);
+  --shadow-glow: 0 0 40px hsla(222, 84%, 58%, 0.15);
 
-  /* ── Animation ── */
-  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out:     cubic-bezier(0.45, 0, 0.55, 1);
-  --ease-spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  --duration-fast:   150ms;
+  --duration-fast: 150ms;
   --duration-normal: 300ms;
-  --duration-slow:   500ms;
+  --duration-slow: 500ms;
   --duration-slower: 800ms;
 
-  /* ── Z-Index ── */
-  --z-dropdown:    100;
-  --z-sticky:      200;
-  --z-overlay:     300;
-  --z-modal:       400;
-  --z-toast:       500;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
 }
-
-/* ── Container ─────────────────────────────────────────────── */
 
 .container {
   width: 100%;
@@ -214,8 +181,6 @@ select {
 .container--narrow {
   max-width: var(--container-narrow);
 }
-
-/* ── Typography Classes ────────────────────────────────────── */
 
 .text-hero-display {
   font-size: var(--text-hero-display);
@@ -291,8 +256,6 @@ select {
   color: var(--color-text-muted);
 }
 
-/* ── Section Spacing ───────────────────────────────────────── */
-
 .section {
   padding-block: var(--space-5xl);
 }
@@ -305,8 +268,6 @@ select {
   padding-block: var(--space-6xl);
 }
 
-/* ── Utility ───────────────────────────────────────────────── */
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -318,8 +279,6 @@ select {
   white-space: nowrap;
   border-width: 0;
 }
-
-/* ── Scroll Reveal Animation ───────────────────────────────── */
 
 .reveal {
   opacity: 0;
@@ -340,8 +299,6 @@ select {
 .reveal-delay-4 { transition-delay: 400ms; }
 .reveal-delay-5 { transition-delay: 500ms; }
 
-/* ── Reduced Motion ────────────────────────────────────────── */
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -357,8 +314,6 @@ select {
     transform: none;
   }
 }
-
-/* ── Responsive ────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
   :root {
@@ -382,14 +337,10 @@ select {
   }
 }
 
-/* ── Selection ─────────────────────────────────────────────── */
-
 ::selection {
   background: var(--color-accent-muted);
   color: var(--color-accent);
 }
-
-/* ── Scrollbar ─────────────────────────────────────────────── */
 
 ::-webkit-scrollbar {
   width: 14px;
@@ -410,7 +361,6 @@ select {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Up/Down buttons if needed, usually hidden but requested by screenshot aesthetic */
 ::-webkit-scrollbar-button:single-button {
   background-color: transparent;
   display: block;
@@ -418,14 +368,12 @@ select {
   width: 14px;
 }
 
-/* Up arrow */
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='rgba(0,0,0,0.5)'><path d='M7 3l4 5H3z'/></svg>");
   background-repeat: no-repeat;
   background-position: center 4px;
 }
 
-/* Down arrow */
 ::-webkit-scrollbar-button:single-button:vertical:increment {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='rgba(0,0,0,0.5)'><path d='M7 9l4-5H3z'/></svg>");
   background-repeat: no-repeat;
@@ -439,8 +387,6 @@ select {
 ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='rgba(0,0,0,0.8)'><path d='M7 9l4-5H3z'/></svg>");
 }
-
-/* ── Global Animations ─────────────────────────────────────── */
 
 @keyframes heroFadeUp {
   from {
