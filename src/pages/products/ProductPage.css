@@ -189,10 +189,13 @@
 
 @media (max-width: 768px) {
   .product-hero-clean {
-    padding-block: 80px 40px;
+    padding-block: 60px 40px;
   }
   .product-hero-clean__title {
-    font-size: 40px;
+    font-size: 36px;
+  }
+  .product-hero-clean__desc {
+    white-space: normal;
   }
   .product-hero {
     padding-block: var(--space-2xl);
