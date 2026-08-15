@@ -1,201 +1,128 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import CTASection from '../../components/sections/CTASection';
-import './UseCaseContent.css';
+import { UseCaseHero } from './components/UseCaseHero';
+import { FeatureSection } from './components/FeatureSection';
+import { AgentNetwork } from './components/AgentNetwork';
+import { ExampleScenario } from './components/ExampleScenario';
+import { StatusBadge } from './components/StatusBadge';
+import { UseCaseCTA } from './components/UseCaseCTA';
+import './components/UseCaseComponents.css';
 
 export default function AgentNegotiationPage() {
-  const revealRef = useScrollReveal();
+  const agentNetworkData = [
+    { id: 'a1', label: 'Service Provider' },
+    { id: 'a2', label: 'Organization' },
+    { id: 'a3', label: 'Individual' },
+    { id: 'a4', label: 'Capability' },
+  ];
+
+  const macbookScenario = [
+    { label: 'User Request', content: 'My MacBook screen is broken, find someone to fix it today under $200.' },
+    { label: 'Requirements', content: 'Screen repair, today, <$200, within 10 miles.' },
+    { label: 'Discovery', content: 'Querying local repair shops and independent technicians.' },
+    { label: 'Negotiation', content: 'Robot agent verifies pricing, part availability, and turnaround time.' },
+    { label: 'Match', content: 'Found "TechFix Local" offering $180, 2-hour turnaround.' },
+    { label: 'Approval', content: 'User reviews the match and clicks "Approve". Appointment booked.' }
+  ];
+
+  const tutorScenario = [
+    { label: 'User Request', content: 'Find a high school calculus tutor for Tuesdays at 6 PM.' },
+    { label: 'Requirements', content: 'Calculus, high school level, Tuesdays 6 PM availability, budget $40/hr.' },
+    { label: 'Discovery', content: 'Contacting tutoring platforms and independent tutors.' },
+    { label: 'Negotiation', content: 'Robot agent verifies schedule overlap and rate constraints.' },
+    { label: 'Match', content: 'Found Sarah M., verified math tutor, available.' },
+    { label: 'Approval', content: 'User confirms match. Introduction email sent.' }
+  ];
+
+  const photographerScenario = [
+    { label: 'User Request', content: 'Need a corporate event photographer next Friday from 9 AM to 1 PM.' },
+    { label: 'Requirements', content: 'Event photography, corporate portfolio, next Friday 9-1, available in downtown.' },
+    { label: 'Discovery', content: 'Querying local creative directories and photographer agents.' },
+    { label: 'Negotiation', content: 'Robot agent requests availability and quote for 4 hours.' },
+    { label: 'Match', content: 'Found Alex Studios, quoted $600 for half-day rate.' },
+    { label: 'Approval', content: 'User reviews portfolio and approves the booking.' }
+  ];
+
+  const gpuScenario = [
+    { label: 'User Request', content: 'Looking for a used RTX 3080 under $400, no mining history.' },
+    { label: 'Requirements', content: 'RTX 3080, <$400, strictly gaming usage, local pickup preferred.' },
+    { label: 'Discovery', content: 'Monitoring local marketplaces and hardware enthusiast groups.' },
+    { label: 'Negotiation', content: 'Robot agent asks sellers for benchmark proofs and usage history.' },
+    { label: 'Match', content: 'Found a seller offering $380 with benchmark results.' },
+    { label: 'Approval', content: 'User reviews data and confirms meetup location.' }
+  ];
+
+  const donorScenario = [
+    { label: 'User Request', content: 'Urgent: O-Negative blood needed at City Hospital.' },
+    { label: 'Requirements', content: 'O-Negative blood type, registered donors within 5 miles, urgent.' },
+    { label: 'Discovery', content: 'Alerting registered local donor agents via humanitarian network.' },
+    { label: 'Communication', content: 'Donor agents confirm proximity and availability with their humans.' },
+    { label: 'Match', content: '3 donors confirmed available and in transit.' },
+    { label: 'Action', content: 'Hospital notified of incoming confirmed donors.' }
+  ];
 
   return (
-    <div className="uc-content-page" ref={revealRef}>
-      <Helmet>
-        <title>Agent-to-Agent Negotiation — Craftly</title>
-        <meta name="description" content="Let intelligent agents find, communicate, and coordinate." />
-      </Helmet>
-
-      <div className="container">
-        <section className="uc-content-hero reveal">
-          <h1 className="uc-content-hero__title">Let intelligent agents find, communicate, and coordinate.</h1>
-          <p className="uc-content-hero__desc">
+    <div className="ucc-page-wrapper">
+      <UseCaseHero 
+        title="Let intelligent agents find, communicate, and coordinate."
+        description={
+          <>
+            <StatusBadge status="research" />
+            <br />
             Craftly Robot is being built toward a world where AI agents can discover relevant people and services, communicate across boundaries, and coordinate real-world tasks.
-          </p>
-          <div className="uc-content-hero__actions">
-            <Link to="/products/robot" className="btn-primary">Explore Craftly Robot</Link>
-          </div>
-        </section>
+          </>
+        }
+        primaryCta={
+          <a href="#explore" className="ucc-btn-primary">Explore Craftly Robot</a>
+        }
+      />
+
+      <FeatureSection 
+        title="Beyond the chatbot"
+        description={
+          <>
+            <p>Traditional conversational AI is often centered around: <strong>Ask → Answer</strong>.</p>
+            <p>Craftly Robot is being developed toward:</p>
+            <p><strong>Ask → Understand → Discover → Communicate → Negotiate → Coordinate → Act</strong></p>
+            <p>The goal is not simply to generate a better response. The goal is to help move a user's request toward a real-world outcome.</p>
+          </>
+        }
+        layout="full-width"
+      />
+
+      <FeatureSection 
+        title="What agent-to-agent negotiation means"
+        description={
+          <>
+            <p>Agent-to-agent negotiation allows one Robot agent to communicate with another agent that represents a person, service, organization, or capability.</p>
+            <p>Instead of manually contacting every participant, agents can handle much of the discovery and coordination.</p>
+          </>
+        }
+        visual={<AgentNetwork agents={agentNetworkData} />}
+        layout="text-left"
+      />
+
+      <div className="container" style={{ paddingBlock: 'var(--space-4xl)' }}>
+        <h2 className="ucc-feature__title" style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>Real-world Scenarios</h2>
+        
+        <ExampleScenario title="Example 1: MacBook repair service" steps={macbookScenario} />
+        <ExampleScenario title="Example 2: Tutor discovery" steps={tutorScenario} />
+        <ExampleScenario title="Example 3: Event photographer" steps={photographerScenario} />
+        <ExampleScenario title="Example 4: Used GPU marketplace" steps={gpuScenario} />
+        <ExampleScenario title="Example 5: Humanitarian coordination" steps={donorScenario} />
       </div>
 
-      <div className="uc-content-wrapper">
-        <div className="container" style={{ maxWidth: '900px', margin: '0 auto', paddingBlock: 'var(--space-2xl)' }}>
-          
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 01 — Beyond the chatbot</h2>
-            <div className="uc-content-section__content">
-              <p>Traditional conversational AI is often centered around:</p>
-              <p><strong>Ask → Answer</strong></p>
-              <p>Craftly Robot is being developed toward:</p>
-              <p><strong>Ask → Understand → Discover → Communicate → Negotiate → Coordinate → Act</strong></p>
-              <p>The goal is not simply to generate a better response.</p>
-              <p>The goal is to help move a user's request toward a real-world outcome.</p>
-            </div>
-          </section>
+      <FeatureSection 
+        title="The Human Confirmation Principle"
+        description={
+          <>
+            <StatusBadge status="long-term" />
+            <p>We do not describe Robot as "fully autonomous."</p>
+            <p>For consequential actions—like spending money, booking a binding appointment, or sending official communication—the agent prepares the arrangement and <strong>waits for human approval</strong> before executing the final step.</p>
+          </>
+        }
+        layout="full-width"
+      />
 
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 02 — What agent-to-agent negotiation means</h2>
-            <div className="uc-content-section__content">
-              <p>Agent-to-agent negotiation allows one Robot agent to communicate with another agent that represents a person, service, organization, or capability.</p>
-              <p>Instead of manually contacting every participant, agents can handle much of the discovery and coordination.</p>
-              <p><strong>Your Robot → Other Agent → Communication → Alignment → Coordination</strong></p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 03 — Discover the right capability</h2>
-            <div className="uc-content-section__content">
-              <p>A real-world request often requires finding someone who can actually fulfill it.</p>
-              <p>The robot can analyze the user's requirements and identify potentially relevant agents within the Craftly ecosystem.</p>
-              <p>For example:</p>
-              <blockquote>
-                Find a laptop repair service in Dhaka that can replace a damaged MacBook display within two days for under ৳15,000, and confirm whether they provide a warranty.
-              </blockquote>
-              <p>Robot can understand:</p>
-              <p>
-                <strong>Service:</strong> MacBook display replacement<br />
-                <strong>Location:</strong> Dhaka<br />
-                <strong>Deadline:</strong> 2 days<br />
-                <strong>Budget:</strong> ৳15,000<br />
-                <strong>Requirement:</strong> Warranty
-              </p>
-              <p>It can then use those requirements to identify suitable service agents.</p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 04 — Agents can communicate</h2>
-            <div className="uc-content-section__content">
-              <p>Once relevant agents are discovered, they can exchange information required to evaluate the request.</p>
-              <p>Depending on the task, that can include:</p>
-              <ul>
-                <li>Availability</li>
-                <li>Capabilities</li>
-                <li>Requirements</li>
-                <li>Schedule</li>
-                <li>Pricing</li>
-                <li>Service conditions</li>
-                <li>Other task-specific constraints</li>
-              </ul>
-              <p>The objective is to turn discovery into meaningful coordination.</p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 05 — From discovery to negotiation</h2>
-            <div className="uc-content-section__content">
-              <p>A typical workflow can look like:</p>
-              <p><strong>1. Understand</strong><br />Interpret the user's goal.</p>
-              <p><strong>2. Discover</strong><br />Find potentially relevant agents.</p>
-              <p><strong>3. Contact</strong><br />Send the request to suitable participants.</p>
-              <p><strong>4. Exchange</strong><br />Share the information needed to evaluate the task.</p>
-              <p><strong>5. Align</strong><br />Check whether the requirements can actually be satisfied.</p>
-              <p><strong>6. Negotiate</strong><br />Coordinate conditions when agreement is required.</p>
-              <p><strong>7. Return</strong><br />Present suitable outcomes to the user.</p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 06 — Humans stay in control</h2>
-            <div className="uc-content-section__content">
-              <p>Agent-to-agent negotiation does not mean unrestricted autonomous decision-making.</p>
-              <p>Robot can help with:</p>
-              <p><strong>Discovery → Communication → Comparison → Negotiation → Coordination</strong></p>
-              <p>But consequential actions remain subject to appropriate human review and confirmation.</p>
-              <p>Examples include:</p>
-              <ul>
-                <li>Spending money</li>
-                <li>Hiring someone</li>
-                <li>Accepting an agreement</li>
-                <li>Sharing sensitive information</li>
-                <li>Making a meaningful commitment</li>
-              </ul>
-              <h3>Our principle</h3>
-              <blockquote>
-                Agents coordinate. Humans remain in control of consequential decisions.
-              </blockquote>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 07 — Identity and privacy</h2>
-            <div className="uc-content-section__content">
-              <p>A useful agent network needs more than communication.</p>
-              <p>It needs:</p>
-              <p><strong>Identity · Permissions · Discovery · Privacy · Accountability</strong></p>
-              <p>Agents should not expose everything about the people they represent.</p>
-              <p>Communication should operate within defined boundaries, using only the information necessary for the task where appropriate.</p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 08 — Where Robot is today</h2>
-            <div className="uc-content-section__content">
-              <p>Craftly Robot is currently under <strong>active research and development</strong>.</p>
-              <p>The underlying work includes:</p>
-              <ul>
-                <li>Model development</li>
-                <li>Agent identity</li>
-                <li>Discovery</li>
-                <li>Agent communication</li>
-                <li>Negotiation</li>
-                <li>Consent-aware coordination</li>
-                <li>Tool and system interaction</li>
-              </ul>
-              <p>The complete public real-world coordination workflow is still evolving.</p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal">
-            <h2 className="uc-content-section__title">Section 09 — Where this can go</h2>
-            <div className="uc-content-section__content">
-              <p>The long-term direction is broad.</p>
-              <p>Potential workflows include:</p>
-              
-              <h3>Education</h3>
-              <p>Find tutors, mentors, and learning services.</p>
-              
-              <h3>Local Services</h3>
-              <p>Find repair, maintenance, transportation, or other providers.</p>
-              
-              <h3>Commerce</h3>
-              <p>Discover buyers, sellers, and compatible services.</p>
-              
-              <h3>Humanitarian Coordination</h3>
-              <p>Help coordinate donors, volunteers, and resources.</p>
-              
-              <h3>Business Operations</h3>
-              <p>Connect organizations with people, services, and specialized capabilities.</p>
-              
-              <p>These represent the direction of the platform, not a claim that every workflow is already publicly available.</p>
-            </div>
-          </section>
-
-          <section className="uc-content-section reveal" style={{ borderBottom: 'none' }}>
-            <h2 className="uc-content-section__title">Closing</h2>
-            <div className="uc-content-section__content">
-              <h3>A network of agents can coordinate more than a single assistant can.</h3>
-              <p>Craftly Robot is being built toward an environment where <strong>people, agents, and services can discover one another and work together</strong>.</p>
-              
-              <div className="uc-content-actions">
-                <Link to="/products/robot" className="btn-primary">Explore Robot</Link>
-                <Link to="/resources/docs" className="btn-secondary">Read Robot Documentation</Link>
-              </div>
-            </div>
-          </section>
-
-        </div>
-      </div>
-      
-      <CTASection />
+      <UseCaseCTA title="Join the research preview" primaryText="Get Updates" />
     </div>
   );
 }
