@@ -76,7 +76,7 @@ export default function WorkspacePage() {
       </section>
 
       <section className="workspace-options-section">
-        <div className="container" style={{ maxWidth: '1120px' }}>
+        <div className="container">
           <div className="workspace-options-grid">
             <div className="workspace-option reveal">
               <div className="workspace-option__icon">
