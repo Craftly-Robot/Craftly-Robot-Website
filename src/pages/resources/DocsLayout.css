@@ -146,7 +146,7 @@
   cursor: pointer;
   border-left: 3px solid transparent;
   transition: background-color 150ms ease, color 150ms ease;
-  width: 100%;
+  min-width: 0;
 }
 
 .docs__nav-link:hover,
@@ -175,6 +175,7 @@
   padding-left: 12px;
   margin-top: 4px;
   margin-bottom: 12px;
+  min-width: 0;
 }
 
 .docs__nav-subitem {
@@ -191,7 +192,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
 }
 
 .docs__nav-subitem:hover {
@@ -238,6 +238,7 @@
 /* Main Content */
 .docs__main {
   flex: 1;
+  min-width: 0;
   padding: 40px 24px 60px 24px;
   max-width: 800px;
   font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
