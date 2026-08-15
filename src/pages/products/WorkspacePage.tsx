@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { products } from '../../data/products';
-import VideoShowcase from '../../components/ui/VideoShowcase';
+
 import CTASection from '../../components/sections/CTASection';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './ProductPage.css';
@@ -31,10 +31,10 @@ export default function WorkspacePage() {
       </div>
 
       <div className="product-showcase-large">
-        <VideoShowcase 
-          src={product.videoSrc}
-          poster={product.posterSrc}
-          altText="Craftly Workspace"
+        <img 
+          src="/assets/Craftly_Workspace/1.png"
+          alt="Craftly Workspace Interface"
+          className="product-showcase-image"
         />
       </div>
 
