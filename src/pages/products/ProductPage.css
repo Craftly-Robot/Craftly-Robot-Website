@@ -141,6 +141,7 @@
 }
 
 .product-hero-clean__title {
+  font-family: 'Outfit', var(--font-sans);
   font-size: 56px;
   font-weight: 400;
   color: #000000;
