@@ -27,7 +27,7 @@ export default function AgentNegotiationPage() {
       </div>
 
       <div className="uc-content-wrapper">
-        <div className="container" style={{ maxWidth: '900px', margin: '0 auto', padding: 'var(--space-2xl) 0' }}>
+        <div className="container" style={{ maxWidth: '900px', margin: '0 auto', paddingBlock: 'var(--space-2xl)' }}>
           
           <section className="uc-content-section reveal">
             <h2 className="uc-content-section__title">Section 01 — Beyond the chatbot</h2>
