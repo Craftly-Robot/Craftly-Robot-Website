@@ -194,10 +194,10 @@
 
 .explore-features-section__title {
   font-family: 'Outfit', var(--font-sans);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
   color: #111111;
-  margin-bottom: var(--space-xl);
+  margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
 
@@ -220,6 +220,7 @@
   }
 
   .explore-features-section__title {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 16px;
   }
 }
