@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: 'Craftly Workspace',
     tagline: 'Your intelligent workspace for operating modern organizations.',
     description:
-      'Craftly Workspace brings people, work, and operations together in one connected system. It helps teams coordinate tasks, communicate clearly, manage resources, and keep work moving.',
+      'Craftly Workspace brings people, work, and operations together in one connected system. It helps teams coordinate tasks, communicate clearly, and keep work moving.',
     icon: 'workspace',
     route: '/products/workspace',
     videoSrc: '/assets/videos/workspace.mp4',
