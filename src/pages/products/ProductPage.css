@@ -253,7 +253,7 @@
 
 .workspace-option__title {
   font-family: 'Outfit', var(--font-sans);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   color: #111111;
   margin-bottom: 16px;
@@ -261,8 +261,8 @@
 }
 
 .workspace-option__desc {
-  font-size: 16px;
-  color: #555555;
+  font-size: 18px;
+  color: #666666;
   line-height: 1.6;
 }
 
