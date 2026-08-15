@@ -62,7 +62,7 @@
 
 .product-showcase-image {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1200px;
   height: auto;
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-2xl);
