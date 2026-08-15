@@ -75,8 +75,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2xs);
-  padding: 0.6rem 1.25rem;
-  font-size: 15px;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
   font-weight: 500;
   color: #000000;
   background: #FFFFFF;
@@ -102,8 +102,8 @@
 .home-cta__btn-secondary {
   display: inline-flex;
   align-items: center;
-  padding: 0.6rem 1.25rem;
-  font-size: 15px;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
   font-weight: 500;
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.1);

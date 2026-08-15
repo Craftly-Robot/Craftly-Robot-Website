@@ -14,22 +14,7 @@ function ChevronDown({ className }: { className?: string }) {
 
 
 
-/* ── Icon map for dropdown items ── */
-function DropdownIcon({ icon }: { icon: string }) {
-  const icons: Record<string, string> = {
-    workspace: '⬡',
-    robot: '◈',
-    operations: '⊞',
-    agents: '⟐',
-    ai: '◉',
-    docs: '⊟',
-    blog: '⊡',
-    support: '◎',
-    releases: '⬢',
-    press: '⊕',
-  };
-  return <span>{icons[icon] || '○'}</span>;
-}
+/* ── Icons ── */
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -294,11 +279,7 @@ export default function Navbar() {
                       className="mobile-nav__item"
                       onClick={() => setMobileOpen(false)}
                     >
-                      {item.label === 'Products' && child.icon && (
-                        <div className="mobile-nav__item-icon">
-                          <DropdownIcon icon={child.icon} />
-                        </div>
-                      )}
+                      {/* No icon for products as requested by user */}
                       <div className="mobile-nav__item-content">
                         <div className="mobile-nav__item-title">{child.title}</div>
                       </div>

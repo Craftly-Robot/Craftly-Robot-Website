@@ -53,9 +53,11 @@ export default function CTASection({ title = "Download Craftly Workspace" }: CTA
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
                     Download for x64
+                    <svg className="home-cta__btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </Link>
                   <Link to="/download" className="home-cta__btn-secondary">
                     Download for ARM64
+                    <svg className="home-cta__btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </Link>
                 </>
               )}
@@ -63,15 +65,18 @@ export default function CTASection({ title = "Download Craftly Workspace" }: CTA
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
                     Download for Apple Silicon
+                    <svg className="home-cta__btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </Link>
                   <Link to="/download" className="home-cta__btn-secondary">
                     Download for Intel
+                    <svg className="home-cta__btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </Link>
                 </>
               )}
               {(os === 'Android' || os === 'iOS') && (
                 <Link to="/download" className="home-cta__btn-primary">
                   Download
+                  <svg className="home-cta__btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Link>
               )}
             </div>
