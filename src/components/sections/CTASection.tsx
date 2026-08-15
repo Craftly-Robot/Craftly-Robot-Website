@@ -34,26 +34,26 @@ export default function CTASection() {
               {(os === 'Windows' || os === 'Linux' || os === 'Unknown OS') && (
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
-                    Download for {os} x64
+                    Download for x64
                   </Link>
                   <Link to="/download" className="home-cta__btn-secondary">
-                    Download for {os} ARM64
+                    Download for ARM64
                   </Link>
                 </>
               )}
               {os === 'macOS' && (
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
-                    Download for Mac (Apple Silicon)
+                    Download for Apple Silicon
                   </Link>
                   <Link to="/download" className="home-cta__btn-secondary">
-                    Download for Mac (Intel)
+                    Download for Intel
                   </Link>
                 </>
               )}
               {(os === 'Android' || os === 'iOS') && (
                 <Link to="/download" className="home-cta__btn-primary">
-                  Download for {os}
+                  Download
                 </Link>
               )}
             </div>
