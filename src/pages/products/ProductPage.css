@@ -143,9 +143,9 @@
 .product-hero-clean__title {
   font-size: 56px;
   font-weight: 400;
-  color: #111111;
+  color: #000000;
   margin-bottom: 24px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   line-height: 1.1;
   opacity: 0;
   animation: heroFadeUp 0.8s var(--ease-out) 0.15s forwards;
