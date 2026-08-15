@@ -239,6 +239,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4xl, 80px);
+  padding-inline: 24px;
 }
 
 .workspace-option {
