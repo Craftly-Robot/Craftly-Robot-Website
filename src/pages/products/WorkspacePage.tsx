@@ -75,24 +75,44 @@ export default function WorkspacePage() {
         </div>
       </section>
 
-      <section className="product-features">
-        <div className="container">
-          <div className="product-features__header reveal">
-            <h2 className="text-h2">Capabilities</h2>
-            <p className="text-body-lg" style={{ marginTop: 'var(--space-sm)', color: 'var(--color-text-secondary)' }}>
-              Everything you need to orchestrate modern operations.
-            </p>
-          </div>
-          <div className="product-features__grid">
-            {product.capabilities.map((cap, i) => (
-              <div key={cap} className={`feature-card reveal reveal-delay-${(i % 4) + 1}`}>
-                <div className="feature-card__icon">⬡</div>
-                <h3 className="feature-card__title">{cap}</h3>
-                <p className="feature-card__desc">
-                  Advanced intelligent systems for {cap.toLowerCase()}, designed for scale and performance across your entire organization.
-                </p>
+      <section className="workspace-options-section">
+        <div className="container" style={{ maxWidth: '1120px' }}>
+          <div className="workspace-options-grid">
+            <div className="workspace-option reveal">
+              <div className="workspace-option__icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+                </svg>
               </div>
-            ))}
+              <h3 className="workspace-option__title">Projects</h3>
+              <p className="workspace-option__desc">Group your conversations into Projects, which can span multiple folders and support custom settings and scoped permissions.</p>
+            </div>
+            
+            <div className="workspace-option reveal reveal-delay-1">
+              <div className="workspace-option__icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M19 8v4" />
+                  <path d="M22 6v8" />
+                </svg>
+              </div>
+              <h3 className="workspace-option__title">Live Voice Transcription</h3>
+              <p className="workspace-option__desc">Speak your prompts. Powered by the latest Gemini Audio models, real-time transcription converts conversational speech into clearly phrased prompts.</p>
+            </div>
+            
+            <div className="workspace-option reveal reveal-delay-2">
+              <div className="workspace-option__icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="7" height="7" x="3" y="3" rx="1" />
+                  <rect width="7" height="7" x="14" y="3" rx="1" />
+                  <rect width="7" height="7" x="3" y="14" rx="1" />
+                  <path d="M14 17.5h7M17.5 14v7" />
+                </svg>
+              </div>
+              <h3 className="workspace-option__title">Extend Customization</h3>
+              <p className="workspace-option__desc">Define global or workspace-specific Skills, MCPs and JSON Hooks to encourage custom agent behavior.</p>
+            </div>
           </div>
         </div>
       </section>

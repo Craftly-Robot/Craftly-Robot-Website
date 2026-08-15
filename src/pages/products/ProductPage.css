@@ -424,6 +424,42 @@
   gap: var(--space-xl);
 }
 
+/* Workspace Options Section */
+.workspace-options-section {
+  padding-bottom: var(--space-4xl);
+}
+
+.workspace-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3xl);
+  padding-inline: var(--page-margin);
+}
+
+.workspace-option {
+  text-align: left;
+}
+
+.workspace-option__icon {
+  margin-bottom: 24px;
+  color: #111111;
+}
+
+.workspace-option__title {
+  font-family: 'Outfit', var(--font-sans);
+  font-size: 20px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.workspace-option__desc {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .product-hero-clean {
     padding-block: 60px 40px;
@@ -468,5 +504,14 @@
   .abstracted-ui-grid {
     grid-template-columns: 1fr;
     gap: var(--space-md);
+  }
+
+  .workspace-options-section {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .workspace-options-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
   }
 }
