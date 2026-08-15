@@ -38,6 +38,18 @@ export default function WorkspacePage() {
         />
       </div>
 
+      <section className="explore-features-section">
+        <div className="container" style={{ maxWidth: '1120px' }}>
+          <h2 className="explore-features-section__title reveal">Explore the main features</h2>
+          <img 
+            src="/assets/Craftly_Workspace/8.png"
+            alt="Explore main features"
+            className="product-showcase-image reveal reveal-delay-1"
+            style={{ margin: '0' }}
+          />
+        </div>
+      </section>
+
       <section className="product-features">
         <div className="container">
           <div className="product-features__header reveal">

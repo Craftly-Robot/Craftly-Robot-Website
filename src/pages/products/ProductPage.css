@@ -187,6 +187,20 @@
   background-color: #333333;
 }
 
+/* Explore Features Section */
+.explore-features-section {
+  padding-block: var(--space-4xl) var(--space-2xl);
+}
+
+.explore-features-section__title {
+  font-family: 'Outfit', var(--font-sans);
+  font-size: 32px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: var(--space-xl);
+  letter-spacing: -0.02em;
+}
+
 @media (max-width: 768px) {
   .product-hero-clean {
     padding-block: 60px 40px;
@@ -203,5 +217,9 @@
   
   .product-features__grid {
     grid-template-columns: 1fr;
+  }
+
+  .explore-features-section__title {
+    font-size: 28px;
   }
 }
