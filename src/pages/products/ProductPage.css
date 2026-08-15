@@ -158,6 +158,7 @@
   line-height: 1.6;
   margin-bottom: 32px;
   opacity: 0;
+  white-space: pre-line;
   animation: heroFadeUp 0.8s var(--ease-out) 0.3s forwards;
 }
 
