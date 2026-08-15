@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './CTASection.css';
@@ -6,6 +6,7 @@ import './CTASection.css';
 export default function CTASection() {
   const revealRef = useScrollReveal();
   const [os, setOs] = useState('Windows');
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent.toLowerCase();
@@ -16,17 +17,27 @@ export default function CTASection() {
     else if (userAgent.includes('linux')) setOs('Linux');
   }, []);
 
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    containerRef.current.style.setProperty('--mouse-x', `${x}px`);
+    containerRef.current.style.setProperty('--mouse-y', `${y}px`);
+  };
+
   return (
     <section className="section section--xl home-cta" ref={revealRef}>
       <div className="container container--wide">
-        <div className="home-cta__container reveal">
+        <div 
+          className="home-cta__container reveal"
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+        >
           {/* Subtle monochrome network/particle background using pure CSS gradients */}
           <div className="home-cta__bg" aria-hidden="true">
             <div className="home-cta__bg-grid" />
-            <div className="home-cta__bg-glow" />
-            <div className="home-cta__bg-orb home-cta__bg-orb--1" />
-            <div className="home-cta__bg-orb home-cta__bg-orb--2" />
-            <div className="home-cta__bg-orb home-cta__bg-orb--3" />
+            <div className="home-cta__bg-spotlight" />
           </div>
           
           <div className="home-cta__content">

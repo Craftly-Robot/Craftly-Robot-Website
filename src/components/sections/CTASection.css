@@ -12,6 +12,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
 }
 
 .home-cta__bg {
@@ -115,60 +117,21 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.home-cta__bg-orb {
+.home-cta__bg-spotlight {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.8;
-  mix-blend-mode: screen;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.15),
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
-.home-cta__bg-orb--1 {
-  top: -20%;
-  left: -10%;
-  width: 50vw;
-  height: 50vw;
-  max-width: 600px;
-  max-height: 600px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: floatOrb1 20s ease-in-out infinite alternate;
-}
-
-.home-cta__bg-orb--2 {
-  bottom: -20%;
-  right: -10%;
-  width: 60vw;
-  height: 60vw;
-  max-width: 700px;
-  max-height: 700px;
-  background: radial-gradient(circle, rgba(100, 150, 255, 0.15) 0%, transparent 70%);
-  animation: floatOrb2 25s ease-in-out infinite alternate;
-}
-
-.home-cta__bg-orb--3 {
-  top: 20%;
-  right: 20%;
-  width: 40vw;
-  height: 40vw;
-  max-width: 500px;
-  max-height: 500px;
-  background: radial-gradient(circle, rgba(150, 100, 255, 0.1) 0%, transparent 70%);
-  animation: floatOrb3 18s ease-in-out infinite alternate;
-}
-
-@keyframes floatOrb1 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(100px, 50px) scale(1.2); }
-}
-
-@keyframes floatOrb2 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-80px, -100px) scale(1.1); }
-}
-
-@keyframes floatOrb3 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-50px, 80px) scale(1.3); }
+.home-cta__container:hover .home-cta__bg-spotlight {
+  opacity: 1;
 }
 
 @keyframes bgPan {
