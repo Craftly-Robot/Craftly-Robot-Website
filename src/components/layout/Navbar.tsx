@@ -200,11 +200,7 @@ export default function Navbar() {
                               role="menuitem"
                               onClick={() => setActiveDropdown(null)}
                             >
-                              {item.label === 'Products' && (
-                                <div className="dropdown-item__icon">
-                                  <DropdownIcon icon={child.icon} />
-                                </div>
-                              )}
+                              {/* No icon for products as requested by user */}
                               <div className="dropdown-item__content">
                                 <div className="dropdown-item__title">
                                   {child.title} 
