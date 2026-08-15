@@ -121,9 +121,9 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.15),
-    transparent 50%
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.25) 0%,
+    transparent 600px
   );
   opacity: 0;
   transition: opacity 0.5s ease;
