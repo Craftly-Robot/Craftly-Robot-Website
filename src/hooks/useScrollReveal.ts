@@ -32,7 +32,10 @@ export function useScrollReveal(
       ...options,
     });
 
-    const elements = container.querySelectorAll('.reveal');
+    const elements = Array.from(container.querySelectorAll('.reveal'));
+    if (container.classList.contains('reveal')) {
+      elements.push(container);
+    }
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();

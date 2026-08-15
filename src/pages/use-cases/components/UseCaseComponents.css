@@ -10,13 +10,6 @@
   padding-bottom: var(--space-4xl);
 }
 
-@media (prefers-color-scheme: dark) {
-  .ucc-page-wrapper {
-    background-color: #000000;
-    color: #ffffff;
-  }
-}
-
 /* ── Hero Component ── */
 .ucc-hero {
   padding-block: var(--space-5xl) var(--space-3xl);
@@ -64,11 +57,7 @@
   padding-block: var(--space-4xl);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-feature {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  }
-}
+
 .ucc-feature:last-child {
   border-bottom: none;
 }
@@ -159,11 +148,7 @@
   border-radius: var(--radius-md);
   text-align: left;
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-grid-card {
-    border: 1px solid rgba(255, 255, 255, 0.15);
-  }
-}
+
 .ucc-grid-card__title {
   font-size: 20px;
   font-weight: 500;
@@ -184,21 +169,11 @@
   border-radius: var(--radius-md);
   padding: var(--space-2xl);
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-scenario {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-}
+
 .ucc-scenario__header {
   margin-bottom: var(--space-xl);
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-bottom: var(--space-md);
-}
-@media (prefers-color-scheme: dark) {
-  .ucc-scenario__header {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
 }
 
 .ucc-scenario__title {
@@ -256,23 +231,10 @@
   color: #000;
   border: 1px solid rgba(0,0,0,0.1);
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-badge--available {
-    background: rgba(255,255,255,0.1);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-}
 
 .ucc-badge--research {
   background: #000;
   color: #fff;
-}
-@media (prefers-color-scheme: dark) {
-  .ucc-badge--research {
-    background: #fff;
-    color: #000;
-  }
 }
 
 .ucc-badge--long-term {
@@ -295,12 +257,6 @@
   stroke-width: 2;
   transition: all 0.3s ease;
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-svg-node {
-    fill: #000;
-    stroke: #fff;
-  }
-}
 
 .ucc-svg-node:hover {
   stroke-width: 4;
@@ -314,22 +270,12 @@
   text-anchor: middle;
   dominant-baseline: middle;
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-svg-text {
-    fill: #fff;
-  }
-}
 
 .ucc-svg-line {
   stroke: #000;
   stroke-width: 2;
   stroke-dasharray: 6;
   animation: dash 20s linear infinite;
-}
-@media (prefers-color-scheme: dark) {
-  .ucc-svg-line {
-    stroke: #fff;
-  }
 }
 
 @keyframes dash {
@@ -351,13 +297,6 @@
   border-top: 1px solid rgba(0,0,0,0.1);
   background: #fff;
   color: #000;
-}
-@media (prefers-color-scheme: dark) {
-  .ucc-cta {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    background: #000;
-    color: #fff;
-  }
 }
 
 .ucc-cta__headline {
@@ -388,18 +327,7 @@
   color: #000;
   border: 1px solid #000;
 }
-@media (prefers-color-scheme: dark) {
-  .ucc-btn-primary {
-    background: #fff;
-    color: #000;
-    border: 1px solid #fff;
-  }
-  .ucc-btn-secondary {
-    background: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-  }
-}
+
 .ucc-btn-primary:hover, .ucc-btn-secondary:hover {
   transform: translateY(-2px);
   opacity: 0.9;
