@@ -189,7 +189,8 @@
 
 /* Explore Features Section */
 .explore-features-section {
-  padding-block: var(--space-4xl) var(--space-2xl);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
 }
 
 .explore-features-section__title {
