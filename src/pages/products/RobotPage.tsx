@@ -30,92 +30,161 @@ export default function RobotPage() {
         </section>
       </div>
 
-      <div className="product-showcase-large">
-        <img 
-          src="/assets/Craftly_Workspace/1.png"
-          alt="Craftly Workspace Interface"
-          className="product-showcase-image"
-        />
-      </div>
-
-      <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: '1120px', margin: '0 auto' }}>
-            <h2 className="explore-features-section__title reveal">Explore the main features</h2>
-            <img 
-              src="/assets/Craftly_Workspace/8.png"
-              alt="Explore main features"
-              className="product-showcase-image reveal reveal-delay-1"
-              style={{ margin: 0 }}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-            <h2 className="abstracted-ui-title reveal">An Abstracted UI</h2>
-            <p className="abstracted-ui-desc reveal reveal-delay-1">
-              Your AI agents' central command center, providing a unified platform to launch, monitor, and orchestrate their activities.
-            </p>
-            <div className="abstracted-ui-grid">
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/2.png" alt="UI detail 1" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Work Management</h3>
-                <p className="abstracted-ui-feature__desc">Track presence, task submissions, and manage attendance seamlessly from a unified interface.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/3.png" alt="UI detail 2" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Smart Notifications</h3>
-                <p className="abstracted-ui-feature__desc">Stay updated with workspace decisions, private alerts, and important notifications pushed in real-time.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <img src="/assets/Craftly_Workspace/4.png" alt="UI detail 3" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Team Collaboration</h3>
-                <p className="abstracted-ui-feature__desc">Communicate efficiently with your team members through integrated chat, ensuring seamless information flow.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <img src="/assets/Craftly_Workspace/5.png" alt="UI detail 4" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Direct Messaging</h3>
-                <p className="abstracted-ui-feature__desc">Send direct messages, share updates, and coordinate with specific team units instantly.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <img src="/assets/Craftly_Workspace/6.png" alt="UI detail 5" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Custom Workflows</h3>
-                <p className="abstracted-ui-feature__desc">Design and implement custom workflows tailored to your specific organizational needs.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <img src="/assets/Craftly_Workspace/7.png" alt="UI detail 6" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Resource Allocation</h3>
-                <p className="abstracted-ui-feature__desc">Allocate and manage resources effectively across different teams and projects.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <img src="/assets/Craftly_Workspace/9.png" alt="Dynamic Subagents" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Dynamic Subagents</h3>
-                <p className="abstracted-ui-feature__desc">Subagents are defined and instantiated dynamically to tackle parallel parts of complex problems, leading to faster and better results.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <img src="/assets/Craftly_Workspace/10.png" alt="Scheduled Tasks" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Scheduled Tasks</h3>
-                <p className="abstracted-ui-feature__desc">Automate routine checks with Scheduled Tasks, simply define a cron schedule and the agents start and run autonomously in the background.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/11.jpeg" alt="UI detail 9" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">Performance Analytics</h3>
-                <p className="abstracted-ui-feature__desc">Monitor the performance and efficiency of your AI agents with comprehensive visual analytics.</p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/12.png" alt="UI detail 10" className="product-showcase-image" style={{ margin: 0 }} />
-                <h3 className="abstracted-ui-feature__title">System Integration</h3>
-                <p className="abstracted-ui-feature__desc">Connect your workspace with external tools and APIs for a fully integrated autonomous ecosystem.</p>
-              </div>
+      <section className="abstracted-ui-section" style={{ paddingTop: 'var(--space-xl)' }}>
+        <div className="container" style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          
+          {/* Pair 1 */}
+          <div className="abstracted-ui-grid">
+            <div className="abstracted-ui-feature reveal">
+              <img src="/assets/Craftly_Robot/1.1.jpeg" alt="Robot detail 1.1" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Autonomous Engineering</h3>
+              <p className="abstracted-ui-feature__desc">Craftly Robot can autonomously plan and execute complex software engineering tasks.</p>
+            </div>
+            <div className="abstracted-ui-feature reveal reveal-delay-1">
+              <img src="/assets/Craftly_Robot/1.2.jpeg" alt="Robot detail 1.2" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Codebase Intelligence</h3>
+              <p className="abstracted-ui-feature__desc">Deeply understands your codebase architecture, patterns, and dependencies.</p>
             </div>
           </div>
+
+          {/* Pair 2 */}
+          <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
+            <div className="abstracted-ui-feature reveal">
+              <img src="/assets/Craftly_Robot/2.1.jpeg" alt="Robot detail 2.1" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Smart Refactoring</h3>
+              <p className="abstracted-ui-feature__desc">Safely refactor legacy code with AI agents that verify their own work.</p>
+            </div>
+            <div className="abstracted-ui-feature reveal reveal-delay-1">
+              <img src="/assets/Craftly_Robot/2.2.jpeg" alt="Robot detail 2.2" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Test Generation</h3>
+              <p className="abstracted-ui-feature__desc">Automatically generate comprehensive unit and integration tests for your modules.</p>
+            </div>
+          </div>
+
+          {/* Pair 3 */}
+          <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
+            <div className="abstracted-ui-feature reveal">
+              <img src="/assets/Craftly_Robot/3.1.jpeg" alt="Robot detail 3.1" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Pull Request Reviews</h3>
+              <p className="abstracted-ui-feature__desc">Robot agents review incoming pull requests for security flaws and performance issues.</p>
+            </div>
+            <div className="abstracted-ui-feature reveal reveal-delay-1">
+              <img src="/assets/Craftly_Robot/3.2.jpeg" alt="Robot detail 3.2" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Continuous Integration</h3>
+              <p className="abstracted-ui-feature__desc">Seamlessly integrates with your CI/CD pipelines to validate code instantly.</p>
+            </div>
+          </div>
+
+          {/* Pair 4 */}
+          <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
+            <div className="abstracted-ui-feature reveal">
+              <img src="/assets/Craftly_Robot/4.1.jpeg" alt="Robot detail 4.1" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Multi-Agent Coordination</h3>
+              <p className="abstracted-ui-feature__desc">Multiple specialized AI agents work together to solve complex engineering problems.</p>
+            </div>
+            <div className="abstracted-ui-feature reveal reveal-delay-1">
+              <img src="/assets/Craftly_Robot/4.2.jpeg" alt="Robot detail 4.2" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Real-time Synchronization</h3>
+              <p className="abstracted-ui-feature__desc">Agents sync their state in real-time to avoid merge conflicts and duplicated work.</p>
+            </div>
+          </div>
+
+          {/* Pair 5 */}
+          <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
+            <div className="abstracted-ui-feature reveal">
+              <img src="/assets/Craftly_Robot/5.1.jpeg" alt="Robot detail 5.1" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Security Scanning</h3>
+              <p className="abstracted-ui-feature__desc">Proactively scan your repositories for vulnerabilities before they hit production.</p>
+            </div>
+            <div className="abstracted-ui-feature reveal reveal-delay-1">
+              <img src="/assets/Craftly_Robot/5.2.jpeg" alt="Robot detail 5.2" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Dependency Management</h3>
+              <p className="abstracted-ui-feature__desc">Automated updates and patches for all your project dependencies.</p>
+            </div>
+          </div>
+
+          {/* Single 6 */}
+          <div className="product-showcase-large" style={{ marginTop: 'var(--space-3xl)', marginBottom: 'var(--space-3xl)' }}>
+            <div style={{ maxWidth: '1120px', margin: '0 auto', textAlign: 'center' }}>
+              <h2 className="explore-features-section__title reveal">Architecture Visualization</h2>
+              <p className="abstracted-ui-desc reveal reveal-delay-1" style={{ marginBottom: '32px' }}>
+                Visualize your entire software architecture mapped out by intelligent agents.
+              </p>
+              <img 
+                src="/assets/Craftly_Robot/6.jpeg"
+                alt="Robot detail 6"
+                className="product-showcase-image reveal reveal-delay-2"
+                style={{ margin: '0 auto' }}
+              />
+            </div>
+          </div>
+
+          {/* Pair 7 */}
+          <div className="abstracted-ui-grid" style={{ marginTop: 'var(--space-2xl)' }}>
+            <div className="abstracted-ui-feature reveal">
+              <img src="/assets/Craftly_Robot/7.1.jpeg" alt="Robot detail 7.1" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">System Monitoring</h3>
+              <p className="abstracted-ui-feature__desc">Keep an eye on system health metrics and agent performance in real-time.</p>
+            </div>
+            <div className="abstracted-ui-feature reveal reveal-delay-1">
+              <img src="/assets/Craftly_Robot/7.2.jpeg" alt="Robot detail 7.2" className="product-showcase-image" style={{ margin: 0 }} />
+              <h3 className="abstracted-ui-feature__title">Performance Optimization</h3>
+              <p className="abstracted-ui-feature__desc">Automatically identify bottlenecks and apply performance optimizations.</p>
+            </div>
+          </div>
+
+          {/* Single 8 */}
+          <div className="product-showcase-large" style={{ marginTop: 'var(--space-3xl)', marginBottom: 'var(--space-3xl)' }}>
+            <div style={{ maxWidth: '1120px', margin: '0 auto', textAlign: 'center' }}>
+              <h2 className="explore-features-section__title reveal">Human in the Loop</h2>
+              <p className="abstracted-ui-desc reveal reveal-delay-1" style={{ marginBottom: '32px' }}>
+                Retain full control. Approve major changes and guide the agents on complex tasks.
+              </p>
+              <img 
+                src="/assets/Craftly_Robot/8.jpeg"
+                alt="Robot detail 8"
+                className="product-showcase-image reveal reveal-delay-2"
+                style={{ margin: '0 auto' }}
+              />
+            </div>
+          </div>
+
+          {/* Single 9 */}
+          <div className="product-showcase-large" style={{ marginTop: 'var(--space-3xl)', marginBottom: 'var(--space-3xl)' }}>
+            <div style={{ maxWidth: '1120px', margin: '0 auto', textAlign: 'center' }}>
+              <h2 className="explore-features-section__title reveal">Deploy Anywhere</h2>
+              <p className="abstracted-ui-desc reveal reveal-delay-1" style={{ marginBottom: '32px' }}>
+                Agents can handle deployment steps across any cloud provider or bare metal server.
+              </p>
+              <img 
+                src="/assets/Craftly_Robot/9.jpeg"
+                alt="Robot detail 9"
+                className="product-showcase-image reveal reveal-delay-2"
+                style={{ margin: '0 auto' }}
+              />
+            </div>
+          </div>
+
+          {/* Single 10 */}
+          <div className="product-showcase-large" style={{ marginTop: 'var(--space-3xl)' }}>
+            <div style={{ maxWidth: '1120px', margin: '0 auto', textAlign: 'center' }}>
+              <h2 className="explore-features-section__title reveal">Secure Sandboxing</h2>
+              <p className="abstracted-ui-desc reveal reveal-delay-1" style={{ marginBottom: '32px' }}>
+                All agent actions are safely contained in secure sandboxed environments.
+              </p>
+              <img 
+                src="/assets/Craftly_Robot/10.jpeg"
+                alt="Robot detail 10"
+                className="product-showcase-image reveal reveal-delay-2"
+                style={{ margin: '0 auto' }}
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section className="workspace-options-section">
+      <section className="workspace-options-section" style={{ marginTop: 'var(--space-4xl)' }}>
         <div className="container">
           <div className="workspace-options-grid">
             <div className="workspace-option reveal">
