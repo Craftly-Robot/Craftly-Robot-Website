@@ -85,33 +85,28 @@ export default function WorkspacePage() {
                 </svg>
               </div>
               <h3 className="workspace-option__title">Projects</h3>
-              <p className="workspace-option__desc">Group your conversations into Projects, which can span multiple folders and support custom settings and scoped permissions.</p>
+              <p className="workspace-option__desc">Turn real work into measurable projects. Assign practical projects, work with the provided tools and Git workflow, and submit the completed work.</p>
             </div>
             
             <div className="workspace-option reveal reveal-delay-1">
               <div className="workspace-option__icon">
                 <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M19 8v4" />
-                  <path d="M22 6v8" />
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Live Voice Transcription</h3>
-              <p className="workspace-option__desc">Speak your prompts. Powered by the latest Gemini Audio models, real-time transcription converts conversational speech into clearly phrased prompts.</p>
+              <h3 className="workspace-option__title">Communication</h3>
+              <p className="workspace-option__desc">Stay connected through structured communication. Communicate through your reporting structure, and keep organizational conversations clear.</p>
             </div>
             
             <div className="workspace-option reveal reveal-delay-2">
               <div className="workspace-option__icon">
                 <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="7" height="7" x="3" y="3" rx="1" />
-                  <rect width="7" height="7" x="14" y="3" rx="1" />
-                  <rect width="7" height="7" x="3" y="14" rx="1" />
-                  <path d="M14 17.5h7M17.5 14v7" />
+                  <path d="M9 11l3 3L22 4" />
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Extend Customization</h3>
-              <p className="workspace-option__desc">Define global or workspace-specific Skills, MCPs and JSON Hooks to encourage custom agent behavior.</p>
+              <h3 className="workspace-option__title">Tasks & Operations</h3>
+              <p className="workspace-option__desc">Turn organizational commands into execution. Receive official tasks through the Notice Board or Command Chain, and escalate blockers through the right leadership path.</p>
             </div>
           </div>
         </div>
