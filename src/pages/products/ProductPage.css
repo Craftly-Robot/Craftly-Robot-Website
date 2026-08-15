@@ -230,6 +230,27 @@
   gap: var(--space-xl);
 }
 
+.abstracted-ui-feature {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-2xl);
+}
+
+.abstracted-ui-feature__title {
+  font-family: 'Outfit', var(--font-sans);
+  font-size: 20px;
+  font-weight: 500;
+  color: #111111;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.abstracted-ui-feature__desc {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+}
+
 /* Workspace Options Section */
 .workspace-options-section {
   padding-bottom: var(--space-4xl);
