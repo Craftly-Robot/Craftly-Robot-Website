@@ -195,10 +195,10 @@
 
 .explore-features-section__title {
   font-family: 'Outfit', var(--font-sans);
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 500;
   color: #111111;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   letter-spacing: -0.02em;
 }
 
