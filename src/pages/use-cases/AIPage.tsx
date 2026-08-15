@@ -1,6 +1,6 @@
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
-import { UseCaseCTA } from './components/UseCaseCTA';
+import CTASection from '../../components/sections/CTASection';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './components/UseCaseComponents.css';
 
@@ -97,7 +97,7 @@ export default function AIPage() {
         </div>
       </div>
 
-      <UseCaseCTA />
+      <CTASection />
     </div>
   );
 }

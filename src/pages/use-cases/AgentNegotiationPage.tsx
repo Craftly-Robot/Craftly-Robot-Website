@@ -3,7 +3,7 @@ import { FeatureSection } from './components/FeatureSection';
 import { AgentNetwork } from './components/AgentNetwork';
 import { ExampleScenario } from './components/ExampleScenario';
 import { StatusBadge } from './components/StatusBadge';
-import { UseCaseCTA } from './components/UseCaseCTA';
+import CTASection from '../../components/sections/CTASection';
 import './components/UseCaseComponents.css';
 
 export default function AgentNegotiationPage() {
@@ -122,7 +122,7 @@ export default function AgentNegotiationPage() {
         layout="full-width"
       />
 
-      <UseCaseCTA title="Join the research preview" primaryText="Get Updates" />
+      <CTASection title="Download Craftly Robot" />
     </div>
   );
 }
