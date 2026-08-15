@@ -216,12 +216,25 @@
     padding-block: var(--space-2xl);
   }
   
+  .product-showcase-large {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .product-showcase-image {
+    border-radius: var(--radius-lg);
+  }
+  
+  .explore-features-section {
+    padding-top: var(--space-md);
+  }
+
   .product-features__grid {
     grid-template-columns: 1fr;
   }
 
   .explore-features-section__title {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 24px;
+    margin-bottom: 12px;
+    line-height: 1.2;
   }
 }
