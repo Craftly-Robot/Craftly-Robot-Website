@@ -194,8 +194,8 @@ export default function RobotPage() {
                   <path d="M3 8v12a2 2 0 0 0 2 2h12" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Projects</h3>
-              <p className="workspace-option__desc">Group your conversations into Projects, which can span multiple folders and support custom settings and scoped permissions.</p>
+              <h3 className="workspace-option__title">Agentic AI</h3>
+              <p className="workspace-option__desc">Craftly Robot understands goals, reasons through tasks, and works toward meaningful outcomes. It is being developed to move beyond conversation by combining intelligence with tools, context, and agentic workflows.</p>
             </div>
             
             <div className="workspace-option reveal reveal-delay-1">
@@ -204,8 +204,8 @@ export default function RobotPage() {
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Communication</h3>
-              <p className="workspace-option__desc">Stay connected through structured communication. Communicate through your reporting structure, and keep organizational conversations clear.</p>
+              <h3 className="workspace-option__title">Discover & Connect</h3>
+              <p className="workspace-option__desc">Robot can discover relevant people, services, and other agents within the Craftly network. It uses the requirements of a request to identify capabilities that may be relevant and connect with the right participants.</p>
             </div>
             
             <div className="workspace-option reveal reveal-delay-2">
@@ -215,8 +215,8 @@ export default function RobotPage() {
                   <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
                 </svg>
               </div>
-              <h3 className="workspace-option__title">Tasks & Operations</h3>
-              <p className="workspace-option__desc">Turn organizational commands into execution. Receive official tasks through the Notice Board or Command Chain.</p>
+              <h3 className="workspace-option__title">Agent-to-Agent Negotiation</h3>
+              <p className="workspace-option__desc">Robot agents can communicate with one another to exchange requirements, check alignment, and coordinate possible solutions. This allows complex real world tasks to move from a user's request toward practical action while keeping consequential decisions under human control.</p>
             </div>
           </div>
         </div>
