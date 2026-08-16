@@ -4,28 +4,28 @@
 }
 
 .ucc-hero {
-  padding-block: var(--space-5xl) var(--space-3xl);
+  padding-block: var(--space-4xl) var(--space-2xl);
   text-align: center;
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .ucc-hero__title {
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(36px, 5vw, 56px);
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
   font-family: 'Outfit', var(--font-sans);
-  line-height: 1.1;
+  line-height: 1.15;
   color: inherit;
 }
 
 .ucc-hero__desc {
-  font-size: clamp(18px, 3vw, 24px);
+  font-size: clamp(16px, 2vw, 20px);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-xl);
   line-height: 1.5;
-  max-width: 700px;
+  max-width: 600px;
   margin-inline: auto;
 }
 
