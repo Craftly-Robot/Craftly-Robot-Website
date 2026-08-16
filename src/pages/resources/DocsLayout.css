@@ -122,6 +122,18 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
+  
+  /* Hide scrollbars for sidebars */
+  .docs__sidebar--left,
+  .docs__sidebar--right {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .docs__sidebar--left::-webkit-scrollbar,
+  .docs__sidebar--right::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Nav links in left sidebar */
