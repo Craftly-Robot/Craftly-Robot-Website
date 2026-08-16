@@ -78,10 +78,18 @@ export default function SalaryCompensationPage() {
       <p className="docs__text">
         A future workflow may look like:
       </p>
-      <div className="docs__card" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-        <p className="docs__card-description" style={{ textAlign: 'center', fontWeight: '500' }}>
-          Verified Member → Active Role → Compensation Eligibility → Payment Profile → Payment Method → Salary Payment
-        </p>
+      <div className="docs__workflow">
+        <div className="docs__workflow-step">Verified Member</div>
+        <div className="docs__workflow-arrow">→</div>
+        <div className="docs__workflow-step">Active Role</div>
+        <div className="docs__workflow-arrow">→</div>
+        <div className="docs__workflow-step">Compensation Eligibility</div>
+        <div className="docs__workflow-arrow">→</div>
+        <div className="docs__workflow-step">Payment Profile</div>
+        <div className="docs__workflow-arrow">→</div>
+        <div className="docs__workflow-step">Payment Method</div>
+        <div className="docs__workflow-arrow">→</div>
+        <div className="docs__workflow-step">Salary Payment</div>
       </div>
 
       <h2 className="docs__heading" id="compensation-is-based-on-real-contribution">Compensation Is Based on Real Contribution</h2>
