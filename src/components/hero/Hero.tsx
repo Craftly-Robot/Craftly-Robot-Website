@@ -67,7 +67,7 @@ export default function Hero() {
         <div className="hero__content">
           
           <h1 className="text-hero-display hero__title">
-            Experience liftoff with the next-gen AI platform
+            Hello World From Bangladesh <span aria-label="Bangladesh flag" role="img">🇧🇩</span>
           </h1>
 
           <div className="hero__cta-group">
