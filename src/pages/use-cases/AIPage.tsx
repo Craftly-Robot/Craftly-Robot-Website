@@ -64,7 +64,12 @@ export default function AIPage() {
   return (
     <div className="ucc-page-wrapper">
       <UseCaseHero 
-        title="Put AI to work on real problems."
+        title={
+          <>
+            Put AI to work <br />
+            on real problems
+          </>
+        }
         description="Craftly builds intelligent systems that can understand complex requests, reason through them, use available capabilities, and help people accomplish meaningful work."
         primaryCta={
           <Link to="/products/robot" className="ucc-btn-secondary">Explore product</Link>

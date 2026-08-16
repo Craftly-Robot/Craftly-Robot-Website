@@ -36,8 +36,8 @@ export default function OperationsPage() {
       <UseCaseHero 
         title={
           <>
-            Run your organization as <br />
-            one connected system.
+            Run your organization <br />
+            as one connected system
           </>
         }
         description={

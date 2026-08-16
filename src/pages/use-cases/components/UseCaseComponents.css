@@ -24,7 +24,7 @@
   font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
-  font-family: 'Outfit', var(--font-sans);
+  font-family: var(--font-sans);
   line-height: 1.15;
   color: inherit;
   text-align: left;

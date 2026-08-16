@@ -63,7 +63,12 @@ export default function AgentNegotiationPage() {
   return (
     <div className="ucc-page-wrapper">
       <UseCaseHero 
-        title="Let intelligent agents find, communicate, and coordinate."
+        title={
+          <>
+            Let intelligent agents find, <br />
+            communicate, and coordinate
+          </>
+        }
         description={
           <>
             <StatusBadge status="research" />
