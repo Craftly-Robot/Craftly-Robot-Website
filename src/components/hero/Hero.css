@@ -42,9 +42,9 @@
 .hero__btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  gap: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #fff;
   background: #111;
@@ -61,8 +61,8 @@
 .hero__btn-secondary {
   display: inline-flex;
   align-items: center;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #111;
   background: #f1f3f5;
