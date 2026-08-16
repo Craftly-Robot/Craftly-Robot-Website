@@ -65,15 +65,18 @@ export default function AgentNegotiationPage() {
       <UseCaseHero 
         title={
           <>
-            Let intelligent agents find, <br />
-            communicate, and coordinate
+            Let intelligent agents <br />
+            find, communicate, <br />
+            and coordinate
           </>
         }
         description={
           <>
             <StatusBadge status="research" />
             <br />
-            Craftly Robot is being built toward a world where AI agents can discover relevant people and services, communicate across boundaries, and coordinate real-world tasks.
+            Craftly Robot is being built toward a world where AI agents can <br />
+            discover relevant people and services, communicate across boundaries, <br />
+            and coordinate real world tasks.
           </>
         }
         primaryCta={
