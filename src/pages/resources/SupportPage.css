@@ -32,12 +32,14 @@
 }
 
 .typewriter-cursor {
-  display: inline;
-  font-size: 0.7em;
-  font-weight: 200;
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background-color: currentColor;
   margin-left: 4px;
   color: var(--color-text);
   animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
 }
 
 @keyframes blink {

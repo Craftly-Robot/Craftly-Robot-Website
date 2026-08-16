@@ -155,7 +155,7 @@ function TypewriterTitle() {
           }} 
         />
       )}
-      {!showFlag && <span className="typewriter-cursor">|</span>}
+      {!showFlag && <span className="typewriter-cursor"></span>}
     </h1>
   );
 }

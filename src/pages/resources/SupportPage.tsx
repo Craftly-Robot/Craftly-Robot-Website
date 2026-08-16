@@ -30,7 +30,7 @@ function TypewriterTitle({ text }: { text: string }) {
           {i < lines.length - 1 && <br />}
         </span>
       ))}
-      <span className="typewriter-cursor">|</span>
+      <span className="typewriter-cursor"></span>
     </h1>
   );
 }
