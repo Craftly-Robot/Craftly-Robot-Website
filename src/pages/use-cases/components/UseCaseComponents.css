@@ -20,12 +20,12 @@
 }
 
 .ucc-hero__title {
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
   margin-bottom: var(--space-md);
   font-family: var(--font-sans);
-  line-height: 1.15;
+  line-height: 1.1;
   color: inherit;
   text-align: left;
 }
