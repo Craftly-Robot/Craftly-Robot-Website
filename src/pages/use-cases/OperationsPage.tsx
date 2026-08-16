@@ -34,8 +34,19 @@ export default function OperationsPage() {
   return (
     <div className="ucc-page-wrapper">
       <UseCaseHero 
-        title="Run your organization as one connected system."
-        description="Craftly Workspace connects people, work, communication, resources, and operational processes in one structured environment."
+        title={
+          <>
+            Run your organization as <br />
+            one connected system.
+          </>
+        }
+        description={
+          <>
+            Craftly Workspace connects people, work, <br />
+            communication, resources, and operational <br />
+            processes in one structured environment.
+          </>
+        }
         primaryCta={
           <Link to="/products/workspace" className="ucc-btn-secondary">Explore product</Link>
         }
