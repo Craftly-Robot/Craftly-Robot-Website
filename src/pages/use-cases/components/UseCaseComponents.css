@@ -325,7 +325,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 32px;
+  padding: 12px 32px;
+  min-width: 220px;
   font-size: 16px;
   font-weight: 500;
   border-radius: 999px;
