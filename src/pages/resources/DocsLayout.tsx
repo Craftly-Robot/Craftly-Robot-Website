@@ -54,6 +54,7 @@ const DOCS_ROUTES = [
   { path: "/resources/documentation/robot/feature-overview/human-confirmation", label: "Human Confirmation" },
   { path: "/resources/documentation/robot/feature-overview/real-world-task-coordination", label: "Real-World Task Coordination" },
   { path: "/resources/documentation/plan", label: "Craftly Plan" },
+  { path: "/resources/documentation/salary-compensation", label: "Salary & Compensation" },
   { path: "/resources/documentation/faq", label: "FAQ" }
 ];
 
@@ -417,6 +418,10 @@ export default function DocsLayout({ title, description, tocItems = [], children
           
           <NavLink to="/resources/documentation/plan" className={({isActive}) => `docs__nav-item ${isActive ? 'docs__nav-link--active' : ''}`}>
             <span className="docs__nav-text">Craftly Plan</span>
+          </NavLink>
+
+          <NavLink to="/resources/documentation/salary-compensation" className={({isActive}) => `docs__nav-item ${isActive ? 'docs__nav-link--active' : ''}`}>
+            <span className="docs__nav-text">Salary & Compensation</span>
           </NavLink>
           
           <NavLink to="/resources/documentation/faq" className={({isActive}) => `docs__nav-item ${isActive ? 'docs__nav-link--active' : ''}`}>

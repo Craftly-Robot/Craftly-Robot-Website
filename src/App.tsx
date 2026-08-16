@@ -12,6 +12,7 @@ const AgentNegotiationPage = lazy(() => import('./pages/use-cases/AgentNegotiati
 const AIPage = lazy(() => import('./pages/use-cases/AIPage'));
 const DocumentationPage = lazy(() => import('./pages/resources/DocumentationPage'));
 const PlanPage = lazy(() => import('./pages/resources/PlanPage'));
+const SalaryCompensationPage = lazy(() => import('./pages/resources/SalaryCompensationPage'));
 const WhatIsRobotPage = lazy(() => import('./pages/resources/robot/overview/WhatIsRobotPage'));
 const RobotArchitecturePage = lazy(() => import('./pages/resources/robot/overview/RobotArchitecturePage'));
 const HowRobotWorksPage = lazy(() => import('./pages/resources/robot/overview/HowRobotWorksPage'));
@@ -117,6 +118,7 @@ export default function App() {
           {/* Resource pages */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
           <Route path="/resources/documentation/plan" element={<PlanPage />} />
+          <Route path="/resources/documentation/salary-compensation" element={<SalaryCompensationPage />} />
           <Route path="/resources/documentation/faq" element={<FAQPage />} />
           
           <Route path="/resources/documentation/workspace/overview/what-is-craftly-workspace" element={<WhatIsWorkspacePage />} />
