@@ -65,7 +65,20 @@ export default function Hero() {
         <div className="hero__content">
           
           <h1 className="text-hero-display hero__title">
-            Hello World From Bangladesh <span aria-label="Bangladesh flag" role="img">🇧🇩</span>
+            Hello World From Bangladesh 
+            <img 
+              src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp" 
+              alt="Bangladesh Flag" 
+              style={{ 
+                height: '0.8em', 
+                width: 'auto', 
+                display: 'inline-block', 
+                verticalAlign: 'baseline', 
+                marginLeft: '12px',
+                borderRadius: '4px',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+              }} 
+            />
           </h1>
 
           <div className="hero__cta-group">
