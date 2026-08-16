@@ -25,9 +25,31 @@
   max-width: 1000px;
   margin-top: 8vh;
   margin-bottom: var(--space-2xl);
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.15s forwards;
+  min-height: 4.5rem;
   color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero__cta-group {

@@ -64,22 +64,8 @@ export default function Hero() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero__content">
           
-          <h1 className="text-hero-display hero__title">
-            Hello World From Bangladesh 
-            <img 
-              src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp" 
-              alt="Bangladesh Flag" 
-              style={{ 
-                height: '0.8em', 
-                width: 'auto', 
-                display: 'inline-block', 
-                verticalAlign: 'baseline', 
-                marginLeft: '12px',
-                borderRadius: '4px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-              }} 
-            />
-          </h1>
+          <TypewriterTitle />
+
 
           <div className="hero__cta-group">
             <Link to="/download" className="hero__btn-primary">
@@ -127,5 +113,49 @@ export default function Hero() {
 
       </div>
     </section>
+  );
+}
+
+function TypewriterTitle() {
+  const text = "Hello World From Bangladesh ";
+  const [displayedText, setDisplayedText] = useState('');
+  const [showFlag, setShowFlag] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1));
+        index++;
+      } else {
+        setShowFlag(true);
+        clearInterval(interval);
+      }
+    }, 45);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <h1 className="text-hero-display hero__title">
+      {displayedText}
+      {showFlag && (
+        <img 
+          src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp" 
+          alt="Bangladesh Flag" 
+          style={{ 
+            height: '0.8em', 
+            width: 'auto', 
+            display: 'inline-block', 
+            verticalAlign: 'baseline', 
+            marginLeft: '12px',
+            borderRadius: '4px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+            animation: 'fadeIn 0.5s ease-out'
+          }} 
+        />
+      )}
+      {!showFlag && <span className="typewriter-cursor">|</span>}
+    </h1>
   );
 }
