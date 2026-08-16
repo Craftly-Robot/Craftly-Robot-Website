@@ -1,6 +1,6 @@
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
-import CTASection from '../../components/sections/CTASection';
+import { UseCaseCTA } from './components/UseCaseCTA';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './components/UseCaseComponents.css';
 
@@ -97,7 +97,7 @@ export default function AIPage() {
         </div>
       </div>
 
-      <CTASection />
+      <UseCaseCTA title="Download Craftly Robot" />
     </div>
   );
 }

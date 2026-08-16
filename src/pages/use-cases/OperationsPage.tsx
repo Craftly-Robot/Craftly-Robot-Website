@@ -1,7 +1,7 @@
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
 import { Workflow } from './components/Workflow';
-import CTASection from '../../components/sections/CTASection';
+import { UseCaseCTA } from './components/UseCaseCTA';
 import './components/UseCaseComponents.css';
 
 export default function OperationsPage() {
@@ -103,7 +103,7 @@ export default function OperationsPage() {
         layout="text-right"
       />
 
-      <CTASection />
+      <UseCaseCTA title="Download Craftly Workspace" />
     </div>
   );
 }

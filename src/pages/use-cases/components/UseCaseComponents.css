@@ -301,6 +301,25 @@
   margin-bottom: var(--space-xl);
 }
 
+.ucc-cta__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .ucc-cta__actions {
+    flex-direction: column;
+    padding-inline: var(--space-xl);
+  }
+  
+  .ucc-cta__actions .ucc-btn-primary,
+  .ucc-cta__actions .ucc-btn-secondary {
+    width: 100%;
+  }
+}
+
 .ucc-btn-primary,
 .ucc-btn-secondary {
   display: inline-flex;
@@ -323,7 +342,7 @@
 .ucc-btn-secondary {
   background: transparent;
   color: #000;
-  border: 1px solid #000;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 .ucc-btn-primary:hover,
