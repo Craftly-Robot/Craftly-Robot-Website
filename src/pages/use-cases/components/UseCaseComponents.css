@@ -20,8 +20,8 @@
 }
 
 .ucc-hero__title {
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 500;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
   font-family: 'Outfit', var(--font-sans);
@@ -31,7 +31,7 @@
 }
 
 .ucc-hero__desc {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(15px, 1.5vw, 18px);
   color: var(--color-text-secondary);
   line-height: 1.5;
   text-align: left;
