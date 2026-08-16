@@ -73,8 +73,8 @@ export default function AgentNegotiationPage() {
         description={
           <>
             Craftly Robot is being built toward a world where AI agents can <br />
-            discover relevant people and services, communicate across boundaries, <br />
-            and coordinate real world tasks.
+            discover relevant people and services, communicate across <br />
+            boundaries, and coordinate real world tasks.
           </>
         }
         primaryCta={
