@@ -72,8 +72,6 @@ export default function AgentNegotiationPage() {
         }
         description={
           <>
-            <StatusBadge status="research" />
-            <br />
             Craftly Robot is being built toward a world where AI agents can <br />
             discover relevant people and services, communicate across boundaries, <br />
             and coordinate real world tasks.
@@ -132,6 +130,10 @@ export default function AgentNegotiationPage() {
       />
 
       <UseCaseCTA title="Download Craftly Robot" />
+
+      <div className="container" style={{ display: 'flex', justifyContent: 'center', paddingBottom: 'var(--space-4xl)' }}>
+        <StatusBadge status="research" />
+      </div>
     </div>
   );
 }
