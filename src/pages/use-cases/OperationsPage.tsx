@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
 import { Workflow } from './components/Workflow';
@@ -36,7 +37,7 @@ export default function OperationsPage() {
         title="Run your organization as one connected system."
         description="Craftly Workspace connects people, work, communication, resources, and operational processes in one structured environment."
         primaryCta={
-          <a href="#explore" className="ucc-btn-primary">Explore Craftly Workspace</a>
+          <Link to="/products/workspace" className="ucc-btn-secondary">Explore product</Link>
         }
       />
 

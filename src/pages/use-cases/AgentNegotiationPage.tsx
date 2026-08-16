@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
 import { AgentNetwork } from './components/AgentNetwork';
@@ -71,7 +72,7 @@ export default function AgentNegotiationPage() {
           </>
         }
         primaryCta={
-          <a href="#explore" className="ucc-btn-primary">Explore Craftly Robot</a>
+          <Link to="/products/robot" className="ucc-btn-secondary">Explore product</Link>
         }
       />
 
