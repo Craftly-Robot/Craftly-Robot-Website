@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../../hooks/useScrollReveal';
 import './UseCaseComponents.css';
@@ -7,10 +8,12 @@ interface UseCaseCTAProps {
   title?: string;
   primaryText?: string;
   primaryLink?: string;
+  children?: ReactNode;
 }
 
 export function UseCaseCTA({ 
-  title = "Start using Craftly Workspace"
+  title = "Start using Craftly Workspace",
+  children
 }: UseCaseCTAProps) {
   const revealRef = useScrollReveal();
   const [os, setOs] = useState('Windows');
@@ -55,6 +58,11 @@ export function UseCaseCTA({
             </Link>
           )}
         </div>
+        {children && (
+          <div style={{ marginTop: 'var(--space-2xl)' }}>
+            {children}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -121,11 +121,11 @@ export default function AgentNegotiationPage() {
         layout="full-width"
       />
 
-      <UseCaseCTA title="Download Craftly Robot" />
-
-      <div className="container" style={{ display: 'flex', justifyContent: 'center', paddingBottom: 'var(--space-4xl)' }}>
-        <StatusBadge status="research" />
-      </div>
+      <UseCaseCTA title="Download Craftly Robot">
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <StatusBadge status="research" />
+        </div>
+      </UseCaseCTA>
     </div>
   );
 }
