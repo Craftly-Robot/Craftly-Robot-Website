@@ -202,3 +202,15 @@
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+@media (max-width: 767px) {
+  .terminal-workflow__window {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    max-width: none;
+  }
+  
+  .terminal-workflow__window-body {
+    padding: 1rem;
+  }
+}
