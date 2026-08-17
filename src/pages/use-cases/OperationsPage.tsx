@@ -33,16 +33,6 @@ export default function OperationsPage() {
         }
       />
 
-      <FeatureSection 
-        title="One place for how work gets done"
-        description={
-          <>
-            <p>Organizations often spread their work across chats, documents, spreadsheets, project tools, and informal communication.</p>
-            <p>Craftly Workspace brings those operational pieces together so people can understand <strong>what needs to happen, who is responsible, how work moves, and where to go when something gets blocked.</strong></p>
-          </>
-        }
-        layout="full-width"
-      />
 
       <FeatureSection 
         title="From command to execution"

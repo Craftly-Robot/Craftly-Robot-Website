@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
-import { FeatureSection } from './components/FeatureSection';
 import { UseCaseCTA } from './components/UseCaseCTA';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './components/UseCaseComponents.css';
@@ -76,16 +75,6 @@ export default function AIPage() {
         }
       />
 
-      <FeatureSection 
-        title="AI that understands context"
-        description={
-          <>
-            <p>Craftly Robot is designed to understand more than isolated prompts.</p>
-            <p>It works with goals, constraints, environmental context, previous information, and task requirements. This makes it possible to work with AI on problems that require more than a single conversational turn.</p>
-          </>
-        }
-        layout="full-width"
-      />
 
       <div className="container" style={{ paddingBlock: 'var(--space-4xl)' }}>
         <h2 className="ucc-feature__title reveal" style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>Exploratory Capabilities</h2>

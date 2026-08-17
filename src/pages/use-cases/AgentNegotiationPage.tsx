@@ -82,18 +82,6 @@ export default function AgentNegotiationPage() {
         }
       />
 
-      <FeatureSection 
-        title="Beyond the chatbot"
-        description={
-          <>
-            <p>Traditional conversational AI is often centered around: <strong>Ask → Answer</strong>.</p>
-            <p>Craftly Robot is being developed toward:</p>
-            <p><strong>Ask → Understand → Discover → Communicate → Negotiate → Coordinate → Act</strong></p>
-            <p>The goal is not simply to generate a better response. The goal is to help move a user's request toward a real-world outcome.</p>
-          </>
-        }
-        layout="full-width"
-      />
 
       <FeatureSection 
         title="What agent-to-agent negotiation means"
