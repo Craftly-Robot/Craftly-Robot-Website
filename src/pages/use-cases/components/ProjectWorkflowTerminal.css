@@ -66,7 +66,7 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  min-height: 350px;
+  height: 400px;
   max-width: 600px;
   width: 100%;
 }
@@ -110,7 +110,13 @@
   flex-direction: column;
   gap: 1rem;
   overflow-y: auto;
-  max-height: 400px;
+  flex: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.terminal-workflow__window-body::-webkit-scrollbar {
+  display: none;
 }
 
 .terminal-workflow__history {
