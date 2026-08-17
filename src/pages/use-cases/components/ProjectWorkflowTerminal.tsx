@@ -19,6 +19,13 @@ export function ProjectWorkflowTerminal() {
   const [inView, setInView] = useState(false);
   const revealRef = useScrollReveal();
   const containerRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [displayedCommand, currentStep, isTyping]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -97,7 +104,7 @@ export function ProjectWorkflowTerminal() {
             <div className="terminal-workflow__window-title">workspace ~ craftly-robot</div>
           </div>
           
-          <div className="terminal-workflow__window-body">
+          <div className="terminal-workflow__window-body" ref={bodyRef}>
             <div className="terminal-workflow__history">
               {WORKFLOW_STEPS.slice(0, currentStep).map((step, index) => (
                 <div key={`history-${index}`} className="terminal-workflow__history-item">
