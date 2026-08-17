@@ -42,7 +42,7 @@ export default function Hero() {
               <MonitorIcon />
               Download for {osName}
             </Link>
-            <Link to="/use-cases" className="hero__btn-secondary">
+            <Link to="/use-cases/operations" className="hero__btn-secondary">
               Explore use cases
             </Link>
           </div>
