@@ -65,7 +65,7 @@ export default function Hero() {
 
         <TechSnake />
 
-        <TypewriterStatement text="Craftly is building a new kind of technology organization, where people, and intelligent agents work together" />
+        <TypewriterStatement text={`Craftly is building a new kind of\ntechnology organization, where\npeople, and intelligent agents work\ntogether.`} />
 
       </div>
     </section>
@@ -137,9 +137,16 @@ function TypewriterStatement({ text }: { text: string }) {
     return () => clearTimeout(startTimeout);
   }, [text]);
 
+  const lines = displayedText.split('\n');
+
   return (
     <div className="hero__statement">
-      {displayedText}
+      {lines.map((line, i) => (
+        <span key={i}>
+          {line}
+          {i < lines.length - 1 && <br />}
+        </span>
+      ))}
       <span className="statement-cursor"></span>
     </div>
   );

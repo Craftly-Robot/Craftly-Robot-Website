@@ -207,7 +207,7 @@
   margin-top: var(--space-4xl);
   margin-bottom: var(--space-6xl); /* large bottom spacing */
   padding-bottom: 120px; /* match the spacing shown in user picture */
-  font-size: 42px; /* reduced size as requested */
+  font-size: 48px; /* increased size */
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.02em;
