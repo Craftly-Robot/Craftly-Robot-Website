@@ -51,7 +51,7 @@ function TypewriterDescription({ text }: { text: string }) {
       } else {
         clearInterval(interval);
       }
-    }, 15);
+    }, 5);
 
     return () => clearInterval(interval);
   }, [text, inView]);
