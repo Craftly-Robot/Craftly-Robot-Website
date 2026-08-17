@@ -110,6 +110,7 @@ export default function OperationsPage() {
         }
         visual={<SupportCategoryMenu />}
         layout="text-right"
+        alignTop={true}
       />
 
       <UseCaseCTA title="Download Craftly Workspace" />
