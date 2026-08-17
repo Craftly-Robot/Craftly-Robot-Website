@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useOS } from '../hooks/useOS';
@@ -200,10 +200,10 @@ export default function DownloadPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Download Craftly — Intelligent Systems</title>
-        <meta name="description" content="Download Craftly Workspace and Craftly Robot for Windows, macOS, and Linux." />
-      </Helmet>
+      <SEO 
+        title="Download Craftly — Intelligent Systems"
+        description="Download Craftly Workspace and Craftly Robot for Windows, macOS, and Linux."
+      />
 
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">

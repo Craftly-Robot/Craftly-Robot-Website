@@ -1,3 +1,4 @@
+import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
@@ -17,6 +18,11 @@ export default function AIPage() {
 
   return (
     <div className="ucc-page-wrapper" ref={revealRef}>
+      <SEO 
+        title="Put AI to work on real problems"
+        description="Craftly builds intelligent systems that can understand complex requests, reason through problems, use available capabilities, and help people accomplish meaningful work."
+      />
+
       {/* 2. PAGE HERO */}
       <UseCaseHero 
         title={

@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../components/SEO';
 import Hero from '../components/hero/Hero';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import ProductShowcase from '../components/sections/ProductShowcase';
@@ -11,11 +11,10 @@ export default function HomePage() {
 
   return (
     <>
-      <Helmet>
-        <title>Craftly — Technology, Intelligence & Organization.</title>
-        <meta name="description" content="Craftly builds intelligent systems for the agentic era. Explore Craftly Workspace and Craftly Robot — tools for operating modern organizations and autonomous software engineering in Bangladesh." />
-        <meta name="keywords" content="Craftly Robot, Craftly Bangladesh, First scratch trained AI in Bangladesh, Decentralized AI Platform building in Bangladesh, Craftly Workspace, Agent to agent negotiation feature building in Bangladesh, Craftly Plan" />
-      </Helmet>
+      <SEO 
+        title="Technology, Intelligence & Organization" 
+        description="Craftly builds intelligent systems for the agentic era. Explore Craftly Workspace and Craftly Robot — tools for operating modern organizations and autonomous software engineering in Bangladesh."
+      />
 
       {/* 02-04 — Hero, Media, and Tech Icon Transition */}
       <Hero />

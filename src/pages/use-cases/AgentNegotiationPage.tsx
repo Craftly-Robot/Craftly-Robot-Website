@@ -1,3 +1,5 @@
+import { SEO } from '../../components/SEO';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
@@ -8,6 +10,8 @@ import { UseCaseCTA } from './components/UseCaseCTA';
 import './components/UseCaseComponents.css';
 
 export default function AgentNegotiationPage() {
+  const revealRef = useScrollReveal();
+  
   const agentNetworkData = [
     { id: 'a1', label: 'Service Provider' },
     { id: 'a2', label: 'Organization' },
@@ -61,7 +65,12 @@ export default function AgentNegotiationPage() {
   ];
 
   return (
-    <div className="ucc-page-wrapper">
+    <div className="ucc-page-wrapper" ref={revealRef}>
+      <SEO 
+        title="Agent Negotiation"
+        description="Complex tasks managed through intelligent agent negotiation."
+      />
+
       <UseCaseHero 
         title={
           <>

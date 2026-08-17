@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 import { products } from '../../data/products';
 
@@ -13,10 +13,10 @@ export default function WorkspacePage() {
 
   return (
     <div ref={revealRef}>
-      <Helmet>
-        <title>{product.name} — Craftly</title>
-        <meta name="description" content={product.tagline} />
-      </Helmet>
+      <SEO 
+        title={`${product.name}`}
+        description={product.tagline}
+      />
       
       <div className="container">
         <section className="product-hero-clean">

@@ -1,3 +1,5 @@
+import { SEO } from '../../components/SEO';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
@@ -11,9 +13,14 @@ import { SupportCategoryMenu } from './components/SupportCategoryMenu';
 import './components/UseCaseComponents.css';
 
 export default function OperationsPage() {
-
+  const revealRef = useScrollReveal();
   return (
-    <div className="ucc-page-wrapper">
+    <div className="ucc-page-wrapper" ref={revealRef}>
+      <SEO 
+        title="Manage Business Operations"
+        description="Craftly helps manage complex business operations smoothly."
+      />
+
       <UseCaseHero 
         title={
           <>
