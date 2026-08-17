@@ -94,6 +94,9 @@ function ScrollToTop() {
   useEffect(() => {
     if (isFirstRun.current) {
       isFirstRun.current = false;
+      if (pathname.startsWith('/resources/documentation')) {
+        window.scrollTo(0, 0);
+      }
       return;
     }
     window.scrollTo(0, 0);
