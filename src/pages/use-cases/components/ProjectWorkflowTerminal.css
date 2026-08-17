@@ -11,7 +11,7 @@
 @media (min-width: 768px) {
   .terminal-workflow__container {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 

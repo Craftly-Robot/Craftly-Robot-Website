@@ -88,7 +88,7 @@ export default function OperationsPage() {
             <p>From reading the initial <code>AGENT.md</code> specification to testing and submission, project workflows become highly transparent processes rather than black boxes.</p>
           </>
         }
-        visual={<ProjectWorkflowTerminal />}
+        visual={<div style={{ marginTop: '60px' }}><ProjectWorkflowTerminal /></div>}
         layout="text-left"
       />
 
