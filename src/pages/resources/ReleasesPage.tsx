@@ -49,8 +49,8 @@ interface ReleaseItem {
   linuxArm64?: string;
 }
 
-const craftlyReleases: ReleaseItem[] = [
-  { version: '2.8.0', macOsAppleSilicon: '#', macOsIntel: '#', windowsX64: '#', windowsArm64: '#', linuxX64: '#', linuxArm64: '#' },
+const robotReleases: ReleaseItem[] = [
+  { version: '1.0.150', macOsAppleSilicon: '#', macOsIntel: '#', windowsX64: '#', windowsArm64: '#', linuxX64: '#', linuxArm64: '#' },
   { version: '2.7.1' },
   { version: '2.6.0' },
   { version: '2.5.0' },
@@ -98,10 +98,10 @@ function TypewriterTitle({ text }: { text: string }) {
 }
 
 export default function ReleasesPage() {
-  const [activeTab, setActiveTab] = useState<'craftly' | 'workspace'>('craftly');
-  const [expandedVersions, setExpandedVersions] = useState<string[]>(['2.8.0']);
+  const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
+  const [expandedVersions, setExpandedVersions] = useState<string[]>(['3.8.5']);
 
-  const releases = activeTab === 'craftly' ? craftlyReleases : workspaceReleases;
+  const releases = activeTab === 'robot' ? robotReleases : workspaceReleases;
 
   const toggleVersion = (version: string) => {
     setExpandedVersions(prev => 
@@ -137,14 +137,14 @@ export default function ReleasesPage() {
 
           <div className="releases-tabs container">
             <button
-              className={`releases-tab ${activeTab === 'craftly' ? 'active' : ''}`}
-              onClick={() => { setActiveTab('craftly'); setExpandedVersions(['2.8.0']); }}
+              className={`releases-tab ${activeTab === 'workspace' ? 'active' : ''}`}
+              onClick={() => { setActiveTab('workspace'); setExpandedVersions(['3.8.5']); }}
             >
               Craftly Workspace
             </button>
             <button
-              className={`releases-tab ${activeTab === 'workspace' ? 'active' : ''}`}
-              onClick={() => { setActiveTab('workspace'); setExpandedVersions(['3.8.5']); }}
+              className={`releases-tab ${activeTab === 'robot' ? 'active' : ''}`}
+              onClick={() => { setActiveTab('robot'); setExpandedVersions(['1.0.150']); }}
             >
               Craftly Robot
             </button>

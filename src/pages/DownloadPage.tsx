@@ -246,7 +246,7 @@ export default function DownloadPage() {
 
         <ProductDownloadSection 
           title="Craftly Robot" 
-          version="1.0.21" 
+          version="1.0.150" 
           id="robot" 
           disabled={false} 
           disabledPlatforms={{ mac: true, windows: true, linux: true, ios: true }} 

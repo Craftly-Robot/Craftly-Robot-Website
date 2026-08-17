@@ -294,7 +294,7 @@ const workspaceReleases: ReleaseData[] = [
 
 const robotReleases: ReleaseData[] = [
   {
-    version: '1.2.0',
+    version: '1.0.150',
     date: 'August 10, 2026',
     title: 'Advanced Reasoning Engine and Custom Agent Skills',
     desc: 'Craftly Robot now features an upgraded reasoning engine capable of breaking down highly complex multi-step workflows autonomously, alongside the ability to define custom skills for specialized tasks.',
