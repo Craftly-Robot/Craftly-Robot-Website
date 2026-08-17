@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Lottie } from 'lottie-react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -5,6 +6,13 @@ import animationData from '../../public/assets/animations/404.json';
 import './NotFoundPage.css';
 
 export default function NotFoundPage() {
+  useEffect(() => {
+    document.body.classList.add('hide-footer');
+    return () => {
+      document.body.classList.remove('hide-footer');
+    };
+  }, []);
+
   return (
     <div className="not-found-page">
       <SEO 
