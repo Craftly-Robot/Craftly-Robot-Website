@@ -12,7 +12,7 @@ export function AgentNetwork({ agents }: AgentNetworkProps) {
 
   return (
     <div className="ucc-svg-flow reveal" ref={revealRef}>
-      <svg viewBox="0 0 600 300" width="100%" height="100%">
+      <svg viewBox="0 -20 600 340" width="100%" height="100%">
         {/* Layer 1: Lines */}
         <line className="ucc-svg-line" x1="100" y1="150" x2="500" y2="150" />
         {agents.map((agent, index) => {
@@ -54,7 +54,7 @@ export function AgentNetwork({ agents }: AgentNetworkProps) {
           const pos = positions[index % positions.length];
           
           // Adjust top node text to sit above the node to avoid overlapping the vertical line
-          const textY = pos.cy === 50 ? pos.cy - 40 : pos.cy + 45;
+          const textY = pos.cy === 50 ? pos.cy - 40 : pos.cy + 40;
 
           return (
             <text key={`text-${agent.id}`} className="ucc-svg-text" x={pos.cx} y={textY}>
