@@ -3,18 +3,10 @@ import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
 import { Workflow } from './components/Workflow';
 import { UseCaseCTA } from './components/UseCaseCTA';
+import { CommandChain } from './components/CommandChain';
 import './components/UseCaseComponents.css';
 
 export default function OperationsPage() {
-  const commandChainNodes = [
-    { id: 'c1', label: 'Chairman' },
-    { id: 'c2', label: 'CEO' },
-    { id: 'c3', label: 'C-Suite' },
-    { id: 'c4', label: 'Senior' },
-    { id: 'c5', label: 'Junior' },
-    { id: 'c6', label: 'Executive' }
-  ];
-
   const taskLifecycleNodes = [
     { id: 't1', label: 'Assigned' },
     { id: 't2', label: 'Execute' },
@@ -71,7 +63,7 @@ export default function OperationsPage() {
             <p>Official instructions can move through the organization's reporting hierarchy. Every level has a clear responsibility for passing work forward, reviewing results, and escalating issues when necessary.</p>
           </>
         }
-        visual={<Workflow nodes={commandChainNodes} />}
+        visual={<CommandChain />}
         layout="text-left"
       />
 
