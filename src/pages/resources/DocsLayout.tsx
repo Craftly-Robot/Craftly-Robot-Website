@@ -253,7 +253,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
           <div className="docs__nav-item docs__nav-item--with-meta" onClick={toggleWorkspace}>
             <span className="docs__nav-text">Craftly Workspace</span>
             <div className="docs__nav-meta">
-              <span className="docs__tag">v1.2.0</span>
+              <span className="docs__tag">v3.8.5</span>
               <ChevronRight isOpen={isWorkspaceOpen} />
             </div>
           </div>
@@ -360,7 +360,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
           <div className="docs__nav-item docs__nav-item--with-meta" onClick={toggleRobot}>
             <span className="docs__nav-text">Craftly Robot</span>
             <div className="docs__nav-meta">
-              <span className="docs__tag">v2.0.1</span>
+              <span className="docs__tag">v1.0.150</span>
               <ChevronRight isOpen={isRobotOpen} />
             </div>
           </div>
