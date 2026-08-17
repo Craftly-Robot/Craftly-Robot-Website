@@ -150,7 +150,7 @@ function TypewriterStatement({ text }: { text: string }) {
       } else {
         clearInterval(interval);
       }
-    }, 20); // Faster typing speed
+    }, 8); // Even faster typing speed (was 20)
 
     return () => clearInterval(interval);
   }, [text, inView]);
