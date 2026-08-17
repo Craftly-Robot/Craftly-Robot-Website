@@ -61,10 +61,11 @@ export default function OperationsPage() {
       <FeatureSection 
         title="Communication Hierarchy"
         description={
-          <>
-            <p>Ensure critical operational messages reach the right owners.</p>
-            <p>Rather than sending unstructured messages, Workspace allows status updates and reports to follow the organizational graph up to the appropriate level of leadership.</p>
-          </>
+          <p style={{ margin: 0 }}>
+            Rather than sending unstructured messages, Workspace allows <br />
+            status updates and reports to follow the organizational graph up <br />
+            to the appropriate level of leadership.
+          </p>
         }
         visual={<ReportingGraphVisual />}
         layout="full-width"
@@ -86,8 +87,13 @@ export default function OperationsPage() {
         title="Department Resources"
         description={
           <>
-            <p>Each department operates with its own specific tools and resources, while remaining connected to the central organization.</p>
-            <p>Switch contexts instantly to see exactly what operations, HR, marketing, or finance teams need to accomplish their goals.</p>
+            <p>
+              Each department operates with its own specific tools and <br />
+              resources, while remaining connected to the central organization.
+            </p>
+            <p>
+              Switch contexts instantly to see exactly what operations, HR, marketing, or finance teams need to accomplish their goals.
+            </p>
           </>
         }
         visual={<DepartmentSelector />}
