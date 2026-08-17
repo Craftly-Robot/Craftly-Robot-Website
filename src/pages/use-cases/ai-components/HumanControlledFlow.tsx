@@ -17,8 +17,6 @@ export function HumanControlledFlow() {
         <rect className="ai-visual-rect" x="320" y="50" width="160" height="50" rx="8" stroke="var(--color-text)" strokeWidth="2" />
         <text className="ai-visual-text" x="400" y="80" textAnchor="middle" fontWeight="600">Human Review</text>
         
-        {/* Pulsing indicator for "Confirm" */}
-        <circle cx="480" cy="50" r="8" fill="var(--color-bg)" stroke="var(--color-text)" strokeWidth="2" className="hc-pulse-circle" />
 
         {/* 3. Action */}
         <rect className="ai-visual-rect" x="590" y="50" width="160" height="50" rx="8" />
