@@ -139,7 +139,7 @@ const ProductDownloadSection = ({ title, version, id, disabled, disabledPlatform
           <a href={links?.androidApk || "#"} className="dl-btn dl-btn--primary" aria-disabled={androidDisabled} style={androidDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download APK
           </a>
-          <a href={links?.androidPlayStore || "#"} className="dl-btn dl-btn--secondary" aria-disabled={androidDisabled} style={androidDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.androidPlayStore || "#"} className="dl-btn dl-btn--secondary" aria-disabled={androidDisabled || !links?.androidPlayStore} style={(androidDisabled || !links?.androidPlayStore) ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Get it on Google Play
           </a>
           
