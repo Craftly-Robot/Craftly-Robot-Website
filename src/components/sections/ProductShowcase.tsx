@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import VideoShowcase from '../ui/VideoShowcase';
+import './ProductShowcase.css';
 
 interface ProductShowcaseProps {
   product: {
