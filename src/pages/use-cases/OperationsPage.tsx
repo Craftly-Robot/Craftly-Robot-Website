@@ -6,7 +6,7 @@ import { CommandChain } from './components/CommandChain';
 import { TaskLifecycle } from './components/TaskLifecycle';
 import { ProjectWorkflowTerminal } from './components/ProjectWorkflowTerminal';
 import { ReportingGraphVisual } from './components/ReportingGraphVisual';
-import { DepartmentSelector } from './components/DepartmentSelector';
+
 import { SupportCategoryMenu } from './components/SupportCategoryMenu';
 import './components/UseCaseComponents.css';
 
@@ -81,23 +81,6 @@ export default function OperationsPage() {
         }
         visual={<div style={{ marginTop: '60px' }}><ProjectWorkflowTerminal /></div>}
         layout="text-left"
-      />
-
-      <FeatureSection 
-        title="Department Resources"
-        description={
-          <>
-            <p>
-              Each department operates with its own specific tools and <br />
-              resources, while remaining connected to the central organization.
-            </p>
-            <p>
-              Switch contexts instantly to see exactly what operations, HR, marketing, or finance teams need to accomplish their goals.
-            </p>
-          </>
-        }
-        visual={<DepartmentSelector />}
-        layout="full-width"
       />
 
       <FeatureSection 
