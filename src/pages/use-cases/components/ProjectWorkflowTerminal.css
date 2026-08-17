@@ -91,6 +91,18 @@
   background-color: #444;
 }
 
+.terminal-workflow__window-dots span:nth-child(1) {
+  background-color: #ff5f56;
+}
+
+.terminal-workflow__window-dots span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.terminal-workflow__window-dots span:nth-child(3) {
+  background-color: #27c93f;
+}
+
 .terminal-workflow__window-title {
   flex: 1;
   text-align: center;
