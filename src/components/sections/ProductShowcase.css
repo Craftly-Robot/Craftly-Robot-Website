@@ -1,46 +1,37 @@
 .product-showcase {
   position: relative;
   background: var(--color-bg);
+  padding: var(--space-4xl) 0;
 }
 
 .product-showcase--alt {
   background: var(--color-bg-elevated);
 }
 
-.product-showcase__stack {
-  display: flex;
-  flex-direction: column;
+.product-showcase__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
   gap: var(--space-4xl);
+  align-items: center;
 }
 
 .product-showcase__content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.product-showcase__label {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-md);
-  color: var(--color-text-secondary);
+  text-align: left;
+  max-width: 480px;
 }
 
 .product-showcase__title {
+  font-size: var(--text-h2);
   margin-bottom: var(--space-lg);
   color: var(--color-text);
+  font-weight: 500;
 }
 
 .product-showcase__description {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
-  max-width: 680px;
-  margin: 0 auto var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 .product-showcase__cta {
@@ -51,8 +42,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  padding: 0.625rem 1.25rem;
-  font-size: var(--text-sm);
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-base);
   font-weight: 500;
   color: var(--color-text-inverse);
   background: var(--color-text);
@@ -65,40 +56,28 @@
   opacity: 0.9;
 }
 
-.product-showcase__cta-arrow {
-  width: 16px;
-  height: 16px;
-  transition: transform var(--duration-fast) var(--ease-out);
-}
-
-.product-showcase__cta-link:hover .product-showcase__cta-arrow {
-  transform: translateX(2px);
-}
-
 .product-showcase__visual {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: var(--radius-xl);
+  border-radius: 24px;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10; /* Make it slightly taller like the reference image */
   background: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Similar to the shadow in the Antigravity 2.0 image */
 }
 
-@media (max-width: 768px) {
-  .product-showcase__stack {
+@media (max-width: 1024px) {
+  .product-showcase__grid {
+    grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
 
   .product-showcase__content {
-    text-align: left;
-    align-items: flex-start;
-  }
-  
-  .product-showcase__description {
-    margin: 0 0 var(--space-lg) 0;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
