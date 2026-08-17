@@ -65,9 +65,7 @@ export default function Hero() {
 
         <TechSnake />
 
-        <div className="hero__statement">
-          Craftly is building a new kind of technology organization, where people, and intelligent agents work together<span className="gradient-cursor"></span>
-        </div>
+        <TypewriterStatement text="Craftly is building a new kind of technology organization, where people, and intelligent agents work together" />
 
       </div>
     </section>
@@ -115,5 +113,34 @@ function TypewriterTitle() {
       )}
       {!showFlag && <span className="typewriter-cursor"></span>}
     </h1>
+  );
+}
+
+function TypewriterStatement({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    // Wait for the hero section animation to finish before starting typing
+    const startTimeout = setTimeout(() => {
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < text.length) {
+          setDisplayedText(text.slice(0, index + 1));
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 45); // Adjust typing speed here
+      return () => clearInterval(interval);
+    }, 800); // 800ms delay
+
+    return () => clearTimeout(startTimeout);
+  }, [text]);
+
+  return (
+    <div className="hero__statement">
+      {displayedText}
+      <span className="statement-cursor"></span>
+    </div>
   );
 }

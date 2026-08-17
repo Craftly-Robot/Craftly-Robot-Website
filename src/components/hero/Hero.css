@@ -207,8 +207,8 @@
   margin-top: var(--space-4xl);
   margin-bottom: var(--space-6xl); /* large bottom spacing */
   padding-bottom: 120px; /* match the spacing shown in user picture */
-  font-size: 56px;
-  line-height: 1.15;
+  font-size: 42px; /* reduced size as requested */
+  line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--color-text);
@@ -219,18 +219,18 @@
 
 @media (max-width: 768px) {
   .hero__statement {
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: var(--space-4xl);
     padding-bottom: 60px;
   }
 }
 
-.gradient-cursor {
+.statement-cursor {
   display: inline-block;
-  width: 5px;
+  width: 4px;
   height: 0.9em;
-  background: linear-gradient(180deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
-  margin-left: 12px;
+  background: var(--color-accent); /* brand color */
+  margin-left: 8px;
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
 }
