@@ -15,13 +15,6 @@ interface ProductShowcaseProps {
   altLayout?: boolean;
 }
 
-function ArrowRight({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8h10M9 4l4 4-4 4" />
-    </svg>
-  );
-}
 
 export default function ProductShowcase({ product, altLayout = false }: ProductShowcaseProps) {
   return (
@@ -52,7 +45,6 @@ export default function ProductShowcase({ product, altLayout = false }: ProductS
                 <div className="product-showcase__cta">
                   <Link to={product.route} className="product-showcase__cta-link">
                     Explore {product.name.split(' ')[1] || product.name}
-                    <ArrowRight className="product-showcase__cta-arrow" />
                   </Link>
                 </div>
               </div>
@@ -74,7 +66,6 @@ export default function ProductShowcase({ product, altLayout = false }: ProductS
                 <div className="product-showcase__cta">
                   <Link to={product.route} className="product-showcase__cta-link">
                     Explore {product.name.split(' ')[1] || product.name}
-                    <ArrowRight className="product-showcase__cta-arrow" />
                   </Link>
                 </div>
               </div>
