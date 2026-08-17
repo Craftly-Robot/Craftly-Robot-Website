@@ -57,9 +57,9 @@
 }
 
 .terminal-workflow__sidebar-item.is-completed .terminal-workflow__sidebar-icon {
-  background-color: #000;
-  border-color: #000;
-  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+  color: #000;
 }
 
 .terminal-workflow__sidebar-item.is-active .terminal-workflow__sidebar-icon {
