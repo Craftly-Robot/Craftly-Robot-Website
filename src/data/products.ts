@@ -28,8 +28,8 @@ export const products: Product[] = [
       'Craftly Robot understands your goals, discovers relevant agents, and helps coordinate\nreal world tasks through agent-to-agent communication\nand human controlled action.',
     icon: 'robot',
     route: '/products/robot',
-    videoSrc: '/assets/videos/robot.mp4',
-    posterSrc: '/assets/posters/robot.webp',
+    videoSrc: '',
+    posterSrc: '/assets/Craftly_Robot/new.jpg',
     capabilities: [
       'Agentic Coding',
       'Multi-Agent Systems',
