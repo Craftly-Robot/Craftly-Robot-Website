@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import DropdownIcon from '../../components/ui/DropdownIcon';
 import './ChangelogPage.css';
 
 function TypewriterTitle({ text }: { text: string }) {
@@ -44,11 +45,6 @@ const InfoIcon = () => (
   </svg>
 );
 
-const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <svg className={`cl-chevron ${isOpen ? 'open' : ''}`} viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-);
 
 type AccordionData = {
   type: string;
@@ -584,7 +580,7 @@ export default function ChangelogPage() {
                             <div className="cl-accordion" key={acc.type}>
                               <button className="cl-accordion__toggle" onClick={() => toggle(id)}>
                                 <span>{acc.type} ({acc.count})</span>
-                                <ChevronIcon isOpen={isOpen} />
+                                <DropdownIcon isOpen={isOpen} size={16} />
                               </button>
                               <div className={`cl-accordion__content ${isOpen ? 'is-open' : ''}`}>
                                 <div className="cl-accordion__inner" style={{ paddingBottom: acc.items.length === 0 ? '16px' : undefined }}>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import DropdownIcon from '../../components/ui/DropdownIcon';
 import './ReleasesPage.css';
 
 const AppleIcon = () => (
@@ -27,17 +28,6 @@ const DownloadIcon = () => (
   </svg>
 );
 
-const ChevronDownIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-);
-
-const ChevronUpIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="18 15 12 9 6 15" />
-  </svg>
-);
 
 interface ReleaseItem {
   version: string;
@@ -212,7 +202,7 @@ export default function ReleasesPage() {
                 )}
 
                 <div className="release-item__toggle">
-                  {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                  <DropdownIcon isOpen={isExpanded} size={20} />
                 </div>
               </div>
             );

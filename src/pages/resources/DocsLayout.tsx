@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import DropdownIcon from '../../components/ui/DropdownIcon';
 import './DocsLayout.css';
 
 const DOCS_ROUTES = [
@@ -59,22 +60,6 @@ const DOCS_ROUTES = [
 ];
 
 let globalSidebarScroll = 0;
-
-interface ChevronRightProps {
-  isOpen?: boolean;
-}
-
-const ChevronRight = ({ isOpen }: ChevronRightProps) => (
-  <svg 
-    className={`docs__sidebar-chevron ${isOpen ? 'docs__sidebar-chevron--open' : ''}`}
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2"
-  >
-    <polyline points="9 18 15 12 9 6"></polyline>
-  </svg>
-);
 
 interface DocsLayoutProps {
   title: string;
@@ -254,7 +239,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <span className="docs__nav-text">Craftly Workspace</span>
             <div className="docs__nav-meta">
               <span className="docs__tag">v3.8.5</span>
-              <ChevronRight isOpen={isWorkspaceOpen} />
+              <DropdownIcon isOpen={isWorkspaceOpen} size={18} />
             </div>
           </div>
           
@@ -262,7 +247,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <div className="docs__nav-subnav">
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-overview')}>
                 <span>Overview</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-overview')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-overview')} size={16} />
               </div>
               {expandedSections.includes('ws-overview') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -277,7 +262,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-organization')}>
                 <span>Organization</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-organization')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-organization')} size={16} />
               </div>
               {expandedSections.includes('ws-organization') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -289,7 +274,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-people-roles')}>
                 <span>People & Roles</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-people-roles')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-people-roles')} size={16} />
               </div>
               {expandedSections.includes('ws-people-roles') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -303,7 +288,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-tasks-operations')}>
                 <span>Tasks & Operations</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-tasks-operations')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-tasks-operations')} size={16} />
               </div>
               {expandedSections.includes('ws-tasks-operations') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -318,7 +303,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-communication')}>
                 <span>Communication</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-communication')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-communication')} size={16} />
               </div>
               {expandedSections.includes('ws-communication') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -330,7 +315,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-resources')}>
                 <span>Resources</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-resources')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-resources')} size={16} />
               </div>
               {expandedSections.includes('ws-resources') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -342,7 +327,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('ws-onboarding')}>
                 <span>Onboarding</span>
-                <ChevronRight isOpen={expandedSections.includes('ws-onboarding')} />
+                <DropdownIcon isOpen={expandedSections.includes('ws-onboarding')} size={16} />
               </div>
               {expandedSections.includes('ws-onboarding') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -361,7 +346,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <span className="docs__nav-text">Craftly Robot</span>
             <div className="docs__nav-meta">
               <span className="docs__tag">v1.0.150</span>
-              <ChevronRight isOpen={isRobotOpen} />
+              <DropdownIcon isOpen={isRobotOpen} size={18} />
             </div>
           </div>
           
@@ -369,7 +354,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
             <div className="docs__nav-subnav">
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('robot-overview')}>
                 <span>Overview</span>
-                <ChevronRight isOpen={expandedSections.includes('robot-overview')} />
+                <DropdownIcon isOpen={expandedSections.includes('robot-overview')} size={16} />
               </div>
               {expandedSections.includes('robot-overview') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -384,7 +369,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('robot-getting-started')}>
                 <span>Getting Started</span>
-                <ChevronRight isOpen={expandedSections.includes('robot-getting-started')} />
+                <DropdownIcon isOpen={expandedSections.includes('robot-getting-started')} size={16} />
               </div>
               {expandedSections.includes('robot-getting-started') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>
@@ -403,7 +388,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
               <div className="docs__nav-subitem docs__nav-subitem--toggle" onClick={() => toggleSection('robot-feature-overview')}>
                 <span>Feature Overview</span>
-                <ChevronRight isOpen={expandedSections.includes('robot-feature-overview')} />
+                <DropdownIcon isOpen={expandedSections.includes('robot-feature-overview')} size={16} />
               </div>
               {expandedSections.includes('robot-feature-overview') && (
                 <div className="docs__nav-subnav" style={{ marginLeft: '12px', marginTop: '0', marginBottom: '0', paddingLeft: '4px' }}>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navigation } from '../../data/navigation';
+import DropdownIcon from '../ui/DropdownIcon';
 import './Navbar.css';
 
 /* ── Icons ── */
@@ -267,7 +268,7 @@ export default function Navbar() {
               aria-expanded={mobileSection === item.label}
             >
               {item.label}
-              <ChevronDown className="mobile-nav__section-chevron" />
+              <DropdownIcon isOpen={mobileSection === item.label} size={20} />
             </button>
             {item.items && (
               <div className="mobile-nav__items">

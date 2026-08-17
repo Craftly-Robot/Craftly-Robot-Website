@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useScrollReveal } from '../../../hooks/useScrollReveal';
+import DropdownIcon from '../../../components/ui/DropdownIcon';
 import './SupportCategoryMenu.css';
 
 const CATEGORIES = [
@@ -33,13 +34,7 @@ export function SupportCategoryMenu() {
               >
                 <span className="support-menu__title">{category.title}</span>
                 <span className="support-menu__icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    {isExpanded ? (
-                      <polyline points="18 15 12 9 6 15"></polyline>
-                    ) : (
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    )}
-                  </svg>
+                  <DropdownIcon isOpen={isExpanded} size={22} />
                 </span>
               </button>
               <div 
@@ -57,3 +52,4 @@ export function SupportCategoryMenu() {
     </div>
   );
 }
+
