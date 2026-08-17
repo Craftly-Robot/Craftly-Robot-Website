@@ -1,8 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/hero/Hero';
-import { products } from '../data/products';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import ProductShowcase from '../components/sections/ProductShowcase';
 import DownloadSection from '../components/sections/DownloadSection';
 import './HomePage.css';
 
@@ -21,19 +19,6 @@ export default function HomePage() {
       <Hero />
 
       <div ref={revealRef}>
-        {/* 05 — Craftly Introduction */}
-        <section className="section section--xl home-intro" id="intro">
-          <div className="container">
-            <h2 className="text-display home-intro__statement reveal">
-              Craftly is an intelligent technology ecosystem designed to help people and organizations build, operate, and coordinate with AI.
-            </h2>
-          </div>
-        </section>
-
-        {/* 06/07 — Product Ecosystem (Workspace -> Robot) */}
-        <ProductShowcase product={products[0]} />
-        <ProductShowcase product={products[1]} altLayout />
-
         {/* Final Download CTA */}
         <DownloadSection hideVisual={true} />
       </div>
