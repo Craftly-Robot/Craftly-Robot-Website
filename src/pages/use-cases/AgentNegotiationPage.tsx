@@ -114,8 +114,7 @@ export default function AgentNegotiationPage() {
         description={
           <>
             <StatusBadge status="long-term" />
-            <p>We do not describe Robot as "fully autonomous."</p>
-            <p>For consequential actions—like spending money, booking a binding appointment, or sending official communication—the agent prepares the arrangement and <strong>waits for human approval</strong> before executing the final step.</p>
+            <p>For consequential actions like spending money, booking a binding appointment, or sending official communication the agent prepares the arrangement and waits for human approval before executing the final step.</p>
           </>
         }
         layout="full-width"
