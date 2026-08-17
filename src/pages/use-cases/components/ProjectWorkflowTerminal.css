@@ -49,9 +49,10 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  color: transparent; /* Hide stroke by default for inactive */
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: transparent;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .terminal-workflow__sidebar-item.is-completed .terminal-workflow__sidebar-icon {
@@ -61,8 +62,9 @@
 }
 
 .terminal-workflow__sidebar-item.is-active .terminal-workflow__sidebar-icon {
+  background-color: #000;
   border-color: #000;
-  color: #000;
+  color: #fff;
 }
 
 /* Terminal Window */
@@ -74,7 +76,8 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 450px;
+  min-height: 450px;
   max-width: 600px;
   width: 100%;
 }
