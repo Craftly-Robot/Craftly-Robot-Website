@@ -74,10 +74,11 @@ export default function OperationsPage() {
       <FeatureSection 
         title="Project Workflow"
         description={
-          <>
-            <p>Projects combine people, agents, codebase context, and requirements.</p>
-            <p>From reading the initial <code>AGENT.md</code> specification to testing and submission, project workflows become highly transparent processes rather than black boxes.</p>
-          </>
+          <p style={{ margin: 0 }}>
+            Projects combine people, agents, codebase context, and requirements.<br /><br />
+            From reading the initial <code>AGENT.md</code> specification to testing and submission, project <br />
+            workflows become highly transparent processes rather than black boxes.
+          </p>
         }
         visual={<div style={{ marginTop: '60px', width: '100%', maxWidth: '1000px', margin: '60px auto 0' }}><ProjectWorkflowTerminal /></div>}
         layout="full-width"
