@@ -61,8 +61,7 @@ export function ReportingGraphVisual() {
                 </div>
                 {index < NODES.length - 1 && (
                   <div className="reporting-graph__edge">
-                    <div className="reporting-graph__edge-fill" style={{
-                      transform: activeNode > index ? 'scaleY(1)' : 'scaleY(0)',
+                    <div className={`reporting-graph__edge-fill ${activeNode > index ? 'is-active' : ''}`} style={{
                       transitionDelay: activeNode > index ? '0s' : '0.5s'
                     }} />
                     

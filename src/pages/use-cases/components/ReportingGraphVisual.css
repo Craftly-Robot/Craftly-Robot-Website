@@ -30,15 +30,16 @@
 }
 
 .reporting-graph__node {
-  width: 240px;
-  padding: 1rem;
+  min-width: 160px;
+  padding: 0.8rem 1.5rem;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: 999px; /* Pill shape for premium feel */
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .reporting-graph__node-label {
@@ -54,7 +55,7 @@
 
 .reporting-graph__node-wrapper.is-current .reporting-graph__node {
   border-color: var(--color-text);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .reporting-graph__node-wrapper.is-current .reporting-graph__node-label {
@@ -64,7 +65,7 @@
 
 .reporting-graph__edge {
   width: 2px;
-  height: 40px;
+  height: 30px;
   background-color: var(--color-border);
   position: relative;
 }
@@ -78,6 +79,10 @@
   transition: transform 0.5s ease;
 }
 
+.reporting-graph__edge-fill.is-active {
+  transform: scaleY(1);
+}
+
 .reporting-graph__message-dot {
   position: absolute;
   width: 8px;
@@ -87,15 +92,69 @@
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  animation: moveMessage 0.5s ease forwards;
+  animation: moveMessageY 0.5s ease forwards;
 }
 
-@keyframes moveMessage {
+@keyframes moveMessageY {
   from {
     top: 0;
   }
   to {
     top: 100%;
+  }
+}
+
+/* Desktop Horizontal Layout */
+@media (min-width: 1024px) {
+  .reporting-graph__visualization {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* allow wrapping on smaller desktops if needed */
+    gap: 0;
+  }
+
+  .reporting-graph__node-wrapper {
+    flex-direction: row;
+  }
+
+  .reporting-graph__node {
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  .reporting-graph__node-label {
+    font-size: 13px;
+  }
+
+  .reporting-graph__edge {
+    width: 30px;
+    height: 2px;
+  }
+
+  .reporting-graph__edge-fill {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  .reporting-graph__edge-fill.is-active {
+    transform: scaleX(1);
+  }
+
+  .reporting-graph__message-dot {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moveMessageX 0.5s ease forwards;
+  }
+}
+
+@keyframes moveMessageX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }
 
@@ -106,10 +165,11 @@
   max-width: 240px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .reporting-graph__info {
-    margin-top: 0;
-    margin-left: 4rem;
+    margin-top: 3rem;
+    max-width: 300px;
+    text-align: center;
   }
 }
 
