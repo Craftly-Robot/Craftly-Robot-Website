@@ -25,7 +25,7 @@ export default function DownloadSection({ hideVisual = false }: DownloadSectionP
               Download Craftly
             </h2>
             <p className="download-section__desc">
-              Experience the power of local autonomous agents. Available for Windows, macOS, and Linux.
+              Experience the power of local autonomous agents. Available for Windows, macOS, Linux, iOS, and Android.
             </p>
             
             <div className="download-section__actions">
