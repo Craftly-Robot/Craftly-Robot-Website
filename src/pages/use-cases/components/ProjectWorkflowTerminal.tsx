@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useScrollReveal } from '../../../hooks/useScrollReveal';
+import { Lottie } from "lottie-react";
+import tikAnimation from "../../../assets/tik_animation.json";
 import './ProjectWorkflowTerminal.css';
 
 const WORKFLOW_STEPS = [
@@ -89,9 +91,7 @@ export function ProjectWorkflowTerminal() {
             >
               <span className="terminal-workflow__sidebar-icon">
                 {index < currentStep ? (
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
+                  <Lottie src={tikAnimation} loop={false} style={{ width: 16, height: 16, marginTop: '-2px' }} />
                 ) : index === currentStep ? (
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
