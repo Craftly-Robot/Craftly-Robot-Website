@@ -39,7 +39,9 @@ export default function VideoShowcase({ src, poster, altText }: VideoShowcasePro
 
   return (
     <div className="video-showcase">
-      {error || reducedMotion ? (
+      {!src ? (
+        <img src={poster} alt={altText || 'Showcase visual'} className="video-showcase__image" />
+      ) : error || reducedMotion ? (
         <VideoPlaceholder label={altText || src.split('/').pop() || 'Video'} />
       ) : (
         <video

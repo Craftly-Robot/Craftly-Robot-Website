@@ -9,8 +9,8 @@ export const products: Product[] = [
       'Craftly Workspace brings people, work, and operations together in one connected system.\nIt helps teams coordinate tasks, communicate clearly,\nand keep work moving.',
     icon: 'workspace',
     route: '/products/workspace',
-    videoSrc: '/assets/videos/workspace.mp4',
-    posterSrc: '/assets/posters/workspace.webp',
+    videoSrc: '',
+    posterSrc: '/assets/Craftly_Workspace/1.png',
     capabilities: [
       'Organizational Structure',
       'Task Management',
