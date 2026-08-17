@@ -33,6 +33,13 @@ interface ProductSectionProps {
   version: string;
   id: string;
   disabled?: boolean;
+  disabledPlatforms?: {
+    mac?: boolean;
+    windows?: boolean;
+    linux?: boolean;
+    android?: boolean;
+    ios?: boolean;
+  };
   links?: {
     macAppleSilicon?: string;
     macIntel?: string;
@@ -46,7 +53,13 @@ interface ProductSectionProps {
   };
 }
 
-const ProductDownloadSection = ({ title, version, id, disabled, links }: ProductSectionProps) => {
+const ProductDownloadSection = ({ title, version, id, disabled, disabledPlatforms, links }: ProductSectionProps) => {
+  const macDisabled = disabled || disabledPlatforms?.mac;
+  const winDisabled = disabled || disabledPlatforms?.windows;
+  const linuxDisabled = disabled || disabledPlatforms?.linux;
+  const androidDisabled = disabled || disabledPlatforms?.android;
+  const iosDisabled = disabled || disabledPlatforms?.ios;
+
   return (
     <div className="download-section" id={id}>
       <div className="section-header">
@@ -60,10 +73,10 @@ const ProductDownloadSection = ({ title, version, id, disabled, links }: Product
           <h3 className="os-title">
             <AppleIcon /> macOS
           </h3>
-          <a href={links?.macAppleSilicon || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.macAppleSilicon || "#"} className="dl-btn dl-btn--primary" aria-disabled={macDisabled} style={macDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for Apple Silicon
           </a>
-          <a href={links?.macIntel || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.macIntel || "#"} className="dl-btn dl-btn--secondary" aria-disabled={macDisabled} style={macDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for Intel
           </a>
           
@@ -80,10 +93,10 @@ const ProductDownloadSection = ({ title, version, id, disabled, links }: Product
           <h3 className="os-title">
             <WindowsIcon /> Windows
           </h3>
-          <a href={links?.winX64 || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.winX64 || "#"} className="dl-btn dl-btn--primary" aria-disabled={winDisabled} style={winDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for x64
           </a>
-          <a href={links?.winArm64 || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.winArm64 || "#"} className="dl-btn dl-btn--secondary" aria-disabled={winDisabled} style={winDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for ARM64
           </a>
           
@@ -100,10 +113,10 @@ const ProductDownloadSection = ({ title, version, id, disabled, links }: Product
           <h3 className="os-title">
             <LinuxIcon /> Linux
           </h3>
-          <a href={links?.linuxX64 || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.linuxX64 || "#"} className="dl-btn dl-btn--primary" aria-disabled={linuxDisabled} style={linuxDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for x64
           </a>
-          <a href={links?.linuxArm64 || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.linuxArm64 || "#"} className="dl-btn dl-btn--secondary" aria-disabled={linuxDisabled} style={linuxDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download for ARM64
           </a>
 
@@ -123,10 +136,10 @@ const ProductDownloadSection = ({ title, version, id, disabled, links }: Product
           <h3 className="os-title">
             <AndroidIcon /> Android
           </h3>
-          <a href={links?.androidApk || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.androidApk || "#"} className="dl-btn dl-btn--primary" aria-disabled={androidDisabled} style={androidDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download APK
           </a>
-          <a href={links?.androidPlayStore || "#"} className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.androidPlayStore || "#"} className="dl-btn dl-btn--secondary" aria-disabled={androidDisabled} style={androidDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Get it on Google Play
           </a>
           
@@ -143,10 +156,10 @@ const ProductDownloadSection = ({ title, version, id, disabled, links }: Product
           <h3 className="os-title">
             <AppleIcon /> iOS
           </h3>
-          <a href={links?.iosAppStore || "#"} className="dl-btn dl-btn--primary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
+          <a href={links?.iosAppStore || "#"} className="dl-btn dl-btn--primary" aria-disabled={iosDisabled} style={iosDisabled ? { pointerEvents: 'none', opacity: 0.5 } : {}}>
             Download on the App Store
           </a>
-          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={disabled} style={disabled ? { pointerEvents: 'none', opacity: 0.5, visibility: 'hidden' } : { visibility: 'hidden' }}>
+          <a href="#" className="dl-btn dl-btn--secondary" aria-disabled={iosDisabled} style={iosDisabled ? { pointerEvents: 'none', opacity: 0.5, visibility: 'hidden' } : { visibility: 'hidden' }}>
             Placeholder
           </a>
           
@@ -231,7 +244,16 @@ export default function DownloadPage() {
         {/* Divider */}
         <hr style={{ border: 'none', borderTop: '1px solid var(--color-border-subtle)', margin: '48px 0' }} />
 
-        <ProductDownloadSection title="Craftly Robot" version="1.0.21" id="robot" disabled={true} />
+        <ProductDownloadSection 
+          title="Craftly Robot" 
+          version="1.0.21" 
+          id="robot" 
+          disabled={false} 
+          disabledPlatforms={{ mac: true, windows: true, linux: true, ios: true }} 
+          links={{
+            androidApk: "/assets/downloads/craftly-robot.apk"
+          }}
+        />
       </div>
     </>
   );
