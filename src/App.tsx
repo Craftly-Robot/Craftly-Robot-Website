@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
@@ -89,8 +89,13 @@ function PageLoader() {
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const isFirstRun = useRef(true);
 
   useEffect(() => {
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
+    }
     window.scrollTo(0, 0);
   }, [pathname]);
 
