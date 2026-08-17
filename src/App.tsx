@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout';
 
 /* â”€â”€ Lazy-loaded pages for code splitting â”€â”€ */
 const HomePage = lazy(() => import('./pages/HomePage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const DownloadPage = lazy(() => import('./pages/DownloadPage'));
 const WorkspacePage = lazy(() => import('./pages/products/WorkspacePage'));
 const RobotPage = lazy(() => import('./pages/products/RobotPage'));
@@ -231,6 +232,9 @@ export default function App() {
           <Route path="/resources/releases" element={<ReleasesPage />} />
           <Route path="/resources/changelog" element={<ChangelogPage />} />
           <Route path="/resources/press" element={<PressPage />} />
+          
+          {/* Catch-all route for 404 Not Found */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </Layout>
