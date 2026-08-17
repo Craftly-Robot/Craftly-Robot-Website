@@ -1,6 +1,7 @@
 .snake-container {
   width: 100%;
-  padding-block: var(--space-4xl);
+  margin-top: var(--space-4xl);
+  padding-block: var(--space-3xl);
   overflow: hidden;
   position: relative;
   /* Add subtle gradient masks to fade out edges */
@@ -13,13 +14,13 @@
   align-items: center;
   gap: var(--space-2xl);
   width: max-content;
-  animation: snakeScroll 25s linear infinite;
+  animation: snakeScroll 50s linear infinite;
 }
 
 .snake-item {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
