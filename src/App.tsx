@@ -91,15 +91,49 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   const prevPathname = useRef(pathname);
 
+  // Set manual scroll restoration to prevent browser from clamping during Suspense
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  // Save scroll position before reload
+  useEffect(() => {
+    const saveScroll = () => {
+      sessionStorage.setItem('scroll-pos', window.scrollY.toString());
+    };
+    window.addEventListener('beforeunload', saveScroll);
+    return () => window.removeEventListener('beforeunload', saveScroll);
+  }, []);
+
   useEffect(() => {
     if (pathname !== prevPathname.current) {
       // Path changed due to navigation
       window.scrollTo(0, 0);
       prevPathname.current = pathname;
+      sessionStorage.removeItem('scroll-pos');
     } else {
       // Initial load (or StrictMode re-run)
       if (pathname.startsWith('/resources/documentation')) {
         window.scrollTo(0, 0);
+      } else {
+        const saved = sessionStorage.getItem('scroll-pos');
+        if (saved) {
+          const targetY = parseInt(saved, 10);
+          let attempts = 0;
+          
+          // Retry loop to wait for Suspense to inject content
+          const tryRestore = () => {
+            if (document.documentElement.scrollHeight >= targetY + window.innerHeight || attempts > 20) {
+              window.scrollTo(0, targetY);
+            } else {
+              attempts++;
+              setTimeout(tryRestore, 50);
+            }
+          };
+          tryRestore();
+        }
       }
     }
   }, [pathname]);
