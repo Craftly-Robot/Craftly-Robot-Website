@@ -104,19 +104,22 @@
   }
 }
 
-/* Desktop Horizontal Layout */
+/* Desktop S-Shape Grid Layout */
 @media (min-width: 1024px) {
+  .reporting-graph__node-wrapper {
+    display: contents; /* Allows nodes and edges to be direct grid children */
+  }
+
   .reporting-graph__visualization {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap; /* allow wrapping on smaller desktops if needed */
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-items: center;
     gap: 0;
   }
 
-  .reporting-graph__node-wrapper {
-    flex-direction: row;
-  }
-
+  /* Node configurations */
   .reporting-graph__node {
     min-width: 120px;
     padding: 0.75rem 1rem;
@@ -127,11 +130,46 @@
     font-size: 13px;
   }
 
+  /* Map Nodes and Edges to Grid */
+  /* Node 0 (Chairman) */
+  .reporting-graph__node-wrapper:nth-child(1) .reporting-graph__node { grid-column: 1; grid-row: 1; }
+  .reporting-graph__node-wrapper:nth-child(1) .reporting-graph__edge { grid-column: 2; grid-row: 1; }
+  
+  /* Node 1 (MD) */
+  .reporting-graph__node-wrapper:nth-child(2) .reporting-graph__node { grid-column: 3; grid-row: 1; }
+  .reporting-graph__node-wrapper:nth-child(2) .reporting-graph__edge { grid-column: 4; grid-row: 1; }
+  
+  /* Node 2 (C-Suite) */
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__node { grid-column: 5; grid-row: 1; }
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge { 
+    grid-column: 5; grid-row: 2; 
+    width: 2px; height: 60px; /* Vertical gap between rows */
+  }
+  
+  /* Node 3 (Senior) */
+  .reporting-graph__node-wrapper:nth-child(4) .reporting-graph__node { grid-column: 5; grid-row: 3; }
+  .reporting-graph__node-wrapper:nth-child(4) .reporting-graph__edge { 
+    grid-column: 4; grid-row: 3; 
+    transform: rotate(180deg); /* Left edge */
+  }
+  
+  /* Node 4 (Junior) */
+  .reporting-graph__node-wrapper:nth-child(5) .reporting-graph__node { grid-column: 3; grid-row: 3; }
+  .reporting-graph__node-wrapper:nth-child(5) .reporting-graph__edge { 
+    grid-column: 2; grid-row: 3; 
+    transform: rotate(180deg); /* Left edge */
+  }
+  
+  /* Node 5 (Executive) */
+  .reporting-graph__node-wrapper:nth-child(6) .reporting-graph__node { grid-column: 1; grid-row: 3; }
+  
+  /* Desktop Edge Base Styles */
   .reporting-graph__edge {
-    width: 30px;
+    width: 50px; /* Base horizontal edge width */
     height: 2px;
   }
 
+  /* Horizontal Edge Fill */
   .reporting-graph__edge-fill {
     transform-origin: left;
     transform: scaleX(0);
@@ -140,12 +178,30 @@
   .reporting-graph__edge-fill.is-active {
     transform: scaleX(1);
   }
+  
+  /* Vertical Edge Fill (override for node 2) */
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge-fill {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge-fill.is-active {
+    transform: scaleY(1);
+  }
 
+  /* Horizontal Message Dot */
   .reporting-graph__message-dot {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     animation: moveMessageX 0.5s ease forwards;
+  }
+  
+  /* Vertical Message Dot (override for node 2) */
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__message-dot {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    animation: moveMessageY 0.5s ease forwards;
   }
 }
 
