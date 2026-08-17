@@ -61,14 +61,13 @@
 .product-showcase__visual {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Don't let it get too massive */
+  max-width: 600px;
   margin-left: auto;
-  border-radius: 32px; /* Smoother, larger border radius */
+  border-radius: 32px;
   overflow: hidden;
-  aspect-ratio: 1 / 1; /* Make it square-ish like the Antigravity SDK image */
   background: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.12); /* Pronounced shadow */
+  box-shadow: 0 24px 48px rgba(0,0,0,0.12);
 }
 
 @media (max-width: 768px) {
