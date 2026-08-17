@@ -1,0 +1,193 @@
+.task-lifecycle {
+  width: 100%;
+}
+
+.task-lifecycle__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+/* Progress Bar */
+.task-lifecycle__progress-bar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.task-lifecycle__progress-line {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+.task-lifecycle__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+  width: 60px;
+}
+
+.task-lifecycle__step-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.task-lifecycle__step.is-active .task-lifecycle__step-dot {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.task-lifecycle__step.is-current .task-lifecycle__step-dot {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-lifecycle__step-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.task-lifecycle__step.is-active .task-lifecycle__step-label {
+  color: var(--color-text);
+}
+
+/* Task Card */
+.task-lifecycle__card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.task-lifecycle__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.task-lifecycle__card-id {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+}
+
+.task-lifecycle__card-status {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background-color: #fafafa;
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.task-lifecycle__card-status.status-0 { /* Assigned */ }
+.task-lifecycle__card-status.status-1 { /* In Progress */
+  border-color: #888;
+  color: var(--color-text);
+}
+.task-lifecycle__card-status.status-2 { /* Submission */
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+.task-lifecycle__card-status.status-3 { /* Review */
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+.task-lifecycle__card-status.status-4 { /* Completed */
+  background-color: transparent;
+  border-color: transparent;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.task-lifecycle__card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.task-lifecycle__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-lifecycle__card-line {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.task-lifecycle__card-line.short {
+  width: 60%;
+}
+
+/* Evidence */
+.task-lifecycle__evidence {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #fafafa;
+  margin-top: 1rem;
+  
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.task-lifecycle__evidence.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.task-lifecycle__evidence-icon {
+  color: var(--color-text-secondary);
+}
+
+.task-lifecycle__evidence-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-lifecycle__evidence-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.task-lifecycle__evidence-meta {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}

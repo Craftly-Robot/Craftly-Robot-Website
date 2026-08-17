@@ -1,0 +1,174 @@
+.terminal-workflow {
+  width: 100%;
+}
+
+.terminal-workflow__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .terminal-workflow__container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Sidebar */
+.terminal-workflow__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+.terminal-workflow__sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  transition: all 0.3s ease;
+}
+
+.terminal-workflow__sidebar-item.is-active {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.terminal-workflow__sidebar-item.is-completed {
+  color: var(--color-text-secondary);
+}
+
+.terminal-workflow__sidebar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.terminal-workflow__sidebar-item.is-active .terminal-workflow__sidebar-icon {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-text);
+}
+
+/* Terminal Window */
+.terminal-workflow__window {
+  flex: 1;
+  background-color: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.terminal-workflow__window-header {
+  background-color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-workflow__window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-workflow__window-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #444;
+}
+
+.terminal-workflow__window-title {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #888;
+  padding-right: 48px; /* Offset for dots to keep centered */
+}
+
+.terminal-workflow__window-body {
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.terminal-workflow__history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.terminal-workflow__history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0.7;
+}
+
+.terminal-workflow__line {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.terminal-workflow__current-line {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.terminal-workflow__prompt {
+  color: #888;
+}
+
+.terminal-workflow__command {
+  color: #fff;
+}
+
+.terminal-workflow__output {
+  color: #aaa;
+  white-space: pre-wrap;
+  padding-left: 1.25rem;
+}
+
+.terminal-workflow__output--reveal {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.terminal-workflow__cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #fff;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

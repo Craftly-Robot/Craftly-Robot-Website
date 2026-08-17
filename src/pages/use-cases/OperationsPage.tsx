@@ -1,27 +1,16 @@
 import { Link } from 'react-router-dom';
 import { UseCaseHero } from './components/UseCaseHero';
 import { FeatureSection } from './components/FeatureSection';
-import { Workflow } from './components/Workflow';
 import { UseCaseCTA } from './components/UseCaseCTA';
 import { CommandChain } from './components/CommandChain';
+import { TaskLifecycle } from './components/TaskLifecycle';
+import { ProjectWorkflowTerminal } from './components/ProjectWorkflowTerminal';
+import { ReportingGraphVisual } from './components/ReportingGraphVisual';
+import { DepartmentSelector } from './components/DepartmentSelector';
+import { SupportCategoryMenu } from './components/SupportCategoryMenu';
 import './components/UseCaseComponents.css';
 
 export default function OperationsPage() {
-  const taskLifecycleNodes = [
-    { id: 't1', label: 'Assigned' },
-    { id: 't2', label: 'Execute' },
-    { id: 't3', label: 'Submit' },
-    { id: 't4', label: 'Review' },
-    { id: 't5', label: 'Complete' }
-  ];
-
-  const projectWorkflowNodes = [
-    { id: 'p1', label: 'Project' },
-    { id: 'p2', label: 'AGENT.md' },
-    { id: 'p3', label: 'Work' },
-    { id: 'p4', label: 'Git' },
-    { id: 'p5', label: 'Submission' }
-  ];
 
   return (
     <div className="ucc-page-wrapper">
@@ -75,35 +64,55 @@ export default function OperationsPage() {
             <p>This strict lifecycle prevents work from being silently dropped and ensures accountability at every handoff.</p>
           </>
         }
-        visual={<Workflow nodes={taskLifecycleNodes} />}
+        visual={<TaskLifecycle />}
         layout="text-right"
+      />
+
+      <FeatureSection 
+        title="Communication Hierarchy"
+        description={
+          <>
+            <p>Ensure critical operational messages reach the right owners.</p>
+            <p>Rather than sending unstructured messages, Workspace allows status updates and reports to follow the organizational graph up to the appropriate level of leadership.</p>
+          </>
+        }
+        visual={<ReportingGraphVisual />}
+        layout="full-width"
       />
 
       <FeatureSection 
         title="Project Workflow"
         description={
           <>
-            <p>Define standard workflows to ensure all projects meet the required quality baseline.</p>
+            <p>Projects combine people, agents, codebase context, and requirements.</p>
+            <p>From reading the initial <code>AGENT.md</code> specification to testing and submission, project workflows become highly transparent processes rather than black boxes.</p>
           </>
         }
-        visual={<Workflow nodes={projectWorkflowNodes} />}
+        visual={<ProjectWorkflowTerminal />}
         layout="text-left"
       />
 
       <FeatureSection 
-        title="Notice Board & Support"
+        title="Department Resources"
         description={
           <>
-            <p><strong>Notice Board:</strong> Important announcements are broadcast clearly, replacing fragmented chat updates.</p>
-            <p><strong>Support Requests:</strong> Operational blocking issues are handled cleanly through structured categories:</p>
-            <ul>
-              <li>General inquiry</li>
-              <li>Technical support</li>
-              <li>HR inquiry</li>
-              <li>Operational block</li>
-            </ul>
+            <p>Each department operates with its own specific tools and resources, while remaining connected to the central organization.</p>
+            <p>Switch contexts instantly to see exactly what operations, HR, marketing, or finance teams need to accomplish their goals.</p>
           </>
         }
+        visual={<DepartmentSelector />}
+        layout="full-width"
+      />
+
+      <FeatureSection 
+        title="Support & Escalation"
+        description={
+          <>
+            <p><strong>Structured Escalation:</strong> Operational blocking issues are handled cleanly through defined channels.</p>
+            <p>Rather than sending an open-ended message, team members select the specific category of support they need, ensuring the request reaches the person actually equipped to solve it.</p>
+          </>
+        }
+        visual={<SupportCategoryMenu />}
         layout="text-right"
       />
 
