@@ -88,7 +88,16 @@ export function ProjectWorkflowTerminal() {
               className={`terminal-workflow__sidebar-item ${index === currentStep ? 'is-active' : ''} ${index < currentStep ? 'is-completed' : ''}`}
             >
               <span className="terminal-workflow__sidebar-icon">
-                {index < currentStep ? '✓' : index === currentStep ? '→' : '○'}
+                {index < currentStep ? (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                ) : index === currentStep ? (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                ) : null}
               </span>
               <span className="terminal-workflow__sidebar-label">{step.label}</span>
             </div>
