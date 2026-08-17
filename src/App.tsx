@@ -89,17 +89,19 @@ function PageLoader() {
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  const isFirstRun = useRef(true);
+  const prevPathname = useRef(pathname);
 
   useEffect(() => {
-    if (isFirstRun.current) {
-      isFirstRun.current = false;
+    if (pathname !== prevPathname.current) {
+      // Path changed due to navigation
+      window.scrollTo(0, 0);
+      prevPathname.current = pathname;
+    } else {
+      // Initial load (or StrictMode re-run)
       if (pathname.startsWith('/resources/documentation')) {
         window.scrollTo(0, 0);
       }
-      return;
     }
-    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
