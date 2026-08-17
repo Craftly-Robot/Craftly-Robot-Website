@@ -1,6 +1,7 @@
 .support-menu {
   width: 100%;
   max-width: 500px;
+  min-height: 560px;
 }
 
 .support-menu__list {
