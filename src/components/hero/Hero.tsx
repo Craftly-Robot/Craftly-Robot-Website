@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import TechSnake from './TechSnake';
 import './Hero.css';
 
 function MonitorIcon({ className }: { className?: string }) {
@@ -12,23 +13,8 @@ function MonitorIcon({ className }: { className?: string }) {
   );
 }
 
-// Conceptual monochrome technology symbols
-const TECH_ICONS = [
-  { id: 'workspace', icon: '⬡' },
-  { id: 'robot', icon: '◈' },
-  { id: 'agents', icon: '⟐' },
-  { id: 'code', icon: '⟨ ⟩' },
-  { id: 'security', icon: '⊞' },
-  { id: 'memory', icon: '◉' },
-  { id: 'tools', icon: '⊟' },
-  { id: 'execution', icon: '⚡' },
-  { id: 'verification', icon: '✓' }
-];
-
 export default function Hero() {
   const [osName, setOsName] = useState('Windows');
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 });
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent.toLowerCase();
@@ -42,21 +28,6 @@ export default function Hero() {
       setOsName("Linux");
     }
   }, []);
-
-  const handleMouseEnter = (e: React.MouseEvent, index: number) => {
-    const el = e.currentTarget as HTMLElement;
-    setIndicatorStyle({
-      left: el.offsetLeft - 8,
-      width: el.offsetWidth + 16,
-      opacity: 1
-    });
-    setHoveredIndex(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-    setIndicatorStyle(prev => ({ ...prev, opacity: 0 }));
-  };
 
   return (
     <section className="hero">
@@ -92,29 +63,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="hero__tech-row">
-          <div className="hero__tech-track" onMouseLeave={handleMouseLeave}>
-            <div 
-              className="hero__tech-indicator" 
-              style={{
-                left: indicatorStyle.left,
-                width: indicatorStyle.width,
-                opacity: indicatorStyle.opacity
-              }} 
-            />
-            {TECH_ICONS.map((tech, i) => (
-              <div 
-                key={tech.id} 
-                className={`tech-icon ${hoveredIndex === i ? 'tech-icon--hovered' : ''}`}
-                aria-label={tech.id} 
-                title={tech.id}
-                onMouseEnter={(e) => handleMouseEnter(e, i)}
-              >
-                {tech.icon}
-              </div>
-            ))}
-          </div>
-        </div>
+        <TechSnake />
 
       </div>
     </section>

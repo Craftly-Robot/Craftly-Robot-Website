@@ -1,0 +1,57 @@
+.snake-container {
+  width: 100%;
+  padding-block: var(--space-4xl);
+  overflow: hidden;
+  position: relative;
+  /* Add subtle gradient masks to fade out edges */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.snake-track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  width: max-content;
+  animation: snakeScroll 25s linear infinite;
+}
+
+.snake-item {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  /* The snake wave effect */
+  animation: snakeWave 4s ease-in-out infinite;
+  /* Stagger animation based on item index to create wave */
+  animation-delay: calc(var(--index) * -0.4s);
+}
+
+@keyframes snakeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate exactly half since we duplicate the array */
+    transform: translateX(calc(-50% - (var(--space-2xl) / 2)));
+  }
+}
+
+@keyframes snakeWave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-25px);
+  }
+  75% {
+    transform: translateY(25px);
+  }
+}
