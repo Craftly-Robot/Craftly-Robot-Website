@@ -187,19 +187,7 @@ export default function AIPage() {
         </div>
       </div>
 
-      {/* 17. FINAL CTA */}
-      <section style={{ backgroundColor: 'var(--color-text)', color: 'var(--color-bg)', paddingBlock: '120px' }}>
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2 style={{ fontSize: '48px', fontWeight: 500, marginBottom: 'var(--space-lg)' }}>AI should help you accomplish more.</h2>
-          <p style={{ fontSize: '20px', maxWidth: '800px', margin: '0 auto', opacity: 0.8, lineHeight: 1.6, marginBottom: 'var(--space-2xl)' }}>
-            Craftly is building intelligent systems that can understand what people need, reason through complex problems, connect useful capabilities, and help turn goals into outcomes.
-          </p>
-          <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center' }}>
-            <Link to="/products/robot" className="ucc-btn-primary" style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}>Explore Craftly Robot</Link>
-            <Link to="/resources/documentation" className="ucc-btn-secondary" style={{ borderColor: 'var(--color-bg)', color: 'var(--color-bg)' }}>Read Documentation</Link>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }
