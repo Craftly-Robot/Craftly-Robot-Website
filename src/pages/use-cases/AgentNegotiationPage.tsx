@@ -15,49 +15,49 @@ export default function AgentNegotiationPage() {
     { id: 'a4', label: 'Capability' },
   ];
 
-  const macbookScenario = [
-    { label: 'User Request', content: 'My MacBook screen is broken, find someone to fix it today under $200.' },
-    { label: 'Requirements', content: 'Screen repair, today, <$200, within 10 miles.' },
-    { label: 'Discovery', content: 'Querying local repair shops and independent technicians.' },
-    { label: 'Negotiation', content: 'Robot agent verifies pricing, part availability, and turnaround time.' },
-    { label: 'Match', content: 'Found "TechFix Local" offering $180, 2-hour turnaround.' },
-    { label: 'Approval', content: 'User reviews the match and clicks "Approve". Appointment booked.' }
-  ];
-
   const tutorScenario = [
-    { label: 'User Request', content: 'Find a high school calculus tutor for Tuesdays at 6 PM.' },
-    { label: 'Requirements', content: 'Calculus, high school level, Tuesdays 6 PM availability, budget $40/hr.' },
-    { label: 'Discovery', content: 'Contacting tutoring platforms and independent tutors.' },
-    { label: 'Negotiation', content: 'Robot agent verifies schedule overlap and rate constraints.' },
-    { label: 'Match', content: 'Found Sarah M., verified math tutor, available.' },
-    { label: 'Approval', content: 'User confirms match. Introduction email sent.' }
-  ];
-
-  const photographerScenario = [
-    { label: 'User Request', content: 'Need a corporate event photographer next Friday from 9 AM to 1 PM.' },
-    { label: 'Requirements', content: 'Event photography, corporate portfolio, next Friday 9-1, available in downtown.' },
-    { label: 'Discovery', content: 'Querying local creative directories and photographer agents.' },
-    { label: 'Negotiation', content: 'Robot agent requests availability and quote for 4 hours.' },
-    { label: 'Match', content: 'Found Alex Studios, quoted $600 for half-day rate.' },
-    { label: 'Approval', content: 'User reviews portfolio and approves the booking.' }
-  ];
-
-  const gpuScenario = [
-    { label: 'User Request', content: 'Looking for a used RTX 3080 under $400, no mining history.' },
-    { label: 'Requirements', content: 'RTX 3080, <$400, strictly gaming usage, local pickup preferred.' },
-    { label: 'Discovery', content: 'Monitoring local marketplaces and hardware enthusiast groups.' },
-    { label: 'Negotiation', content: 'Robot agent asks sellers for benchmark proofs and usage history.' },
-    { label: 'Match', content: 'Found a seller offering $380 with benchmark results.' },
-    { label: 'Approval', content: 'User reviews data and confirms meetup location.' }
+    { label: 'User Request', content: 'Find a good tutor for a Class 9 student who can teach Math and Physics.' },
+    { label: 'Requirements', content: 'Class 9, Math + Physics, suitable teaching experience, available schedule, reasonable monthly budget.' },
+    { label: 'Discovery', content: 'Discovering tutor agents matching the subject, student level, and availability.' },
+    { label: 'Negotiation', content: 'Robot agents compare teaching experience, schedule, availability, and expected monthly fee.' },
+    { label: 'Match', content: 'Found a tutor matching the required subjects, schedule, and budget.' },
+    { label: 'Approval', content: 'User reviews the match and approves the tutor before any final arrangement is made.' }
   ];
 
   const donorScenario = [
-    { label: 'User Request', content: 'Urgent: O-Negative blood needed at City Hospital.' },
-    { label: 'Requirements', content: 'O-Negative blood type, registered donors within 5 miles, urgent.' },
-    { label: 'Discovery', content: 'Alerting registered local donor agents via humanitarian network.' },
-    { label: 'Communication', content: 'Donor agents confirm proximity and availability with their humans.' },
-    { label: 'Match', content: '3 donors confirmed available and in transit.' },
-    { label: 'Action', content: 'Hospital notified of incoming confirmed donors.' }
+    { label: 'User Request', content: 'Find a B+ blood donor near me who is available right now.' },
+    { label: 'Requirements', content: 'B+ blood group, nearby location, currently available, suitable donation eligibility.' },
+    { label: 'Discovery', content: 'Searching the available donor network for agents representing nearby matching donors.' },
+    { label: 'Negotiation', content: 'Agents communicate to confirm current availability, location, and whether the donor can respond to the request.' },
+    { label: 'Match', content: 'Found a nearby available donor matching the requested blood group.' },
+    { label: 'Approval', content: 'User reviews the available donor information and confirms the next step through the appropriate channel.' }
+  ];
+
+  const flightScenario = [
+    { label: 'User Request', content: 'Find the cheapest flight from Dhaka to London for next month and compare the best options.' },
+    { label: 'Requirements', content: 'Dhaka → London, next month, lowest practical price, suitable dates, compare available options.' },
+    { label: 'Discovery', content: 'Searching relevant flight and travel-service agents for available routes and fares.' },
+    { label: 'Negotiation', content: 'Agents compare prices, schedules, baggage conditions, stopovers, and other relevant travel details.' },
+    { label: 'Match', content: 'Found several suitable flight options ranked by price and overall fit.' },
+    { label: 'Approval', content: 'User reviews the options and selects the preferred flight before any booking or payment is made.' }
+  ];
+
+  const laptopScenario = [
+    { label: 'User Request', content: 'Find a laptop under ৳80,000 that is good for programming and AI development.' },
+    { label: 'Requirements', content: 'Budget under ৳80,000, suitable CPU, sufficient RAM, capable GPU where possible, good for programming and AI workloads.' },
+    { label: 'Discovery', content: 'Searching relevant product and seller agents for laptops that match the technical requirements.' },
+    { label: 'Negotiation', content: 'Agents compare specifications, pricing, stock, warranty, and seller conditions.' },
+    { label: 'Match', content: 'Found laptops that fit the budget and provide the strongest balance of programming and AI-development capability.' },
+    { label: 'Approval', content: 'User compares the final options and chooses whether to proceed with a purchase.' }
+  ];
+
+  const hospitalScenario = [
+    { label: 'User Request', content: 'Find a good hospital near me that has a specialist for this problem and tell me how I can book an appointment.' },
+    { label: 'Requirements', content: 'Nearby hospital, relevant specialist, current availability, appointment process, suitable service.' },
+    { label: 'Discovery', content: 'Searching hospital and healthcare-service agents for facilities and specialists that match the request.' },
+    { label: 'Negotiation', content: 'Agents can communicate about specialist availability, appointment times, booking requirements, and relevant hospital information.' },
+    { label: 'Match', content: 'Found suitable hospitals with relevant specialists and available appointment options.' },
+    { label: 'Approval', content: 'User reviews the options and decides whether to contact the hospital or proceed with an appointment.' }
   ];
 
   return (
@@ -98,11 +98,15 @@ export default function AgentNegotiationPage() {
       <div className="container" style={{ paddingBlock: 'var(--space-4xl)' }}>
         <h2 className="ucc-feature__title" style={{ textAlign: 'center', marginBottom: 'var(--space-2xl)' }}>Real-world Scenarios</h2>
         
-        <ExampleScenario title="Example 1: MacBook repair service" steps={macbookScenario} />
-        <ExampleScenario title="Example 2: Tutor discovery" steps={tutorScenario} />
-        <ExampleScenario title="Example 3: Event photographer" steps={photographerScenario} />
-        <ExampleScenario title="Example 4: Used GPU marketplace" steps={gpuScenario} />
-        <ExampleScenario title="Example 5: Humanitarian coordination" steps={donorScenario} />
+        <ExampleScenario title="Example 1: Tutor Discovery" steps={tutorScenario} />
+        <ExampleScenario title="Example 2: Blood Donor Discovery" steps={donorScenario} />
+        <ExampleScenario title="Example 3: Flight Search" steps={flightScenario} />
+        <ExampleScenario title="Example 4: Laptop Discovery" steps={laptopScenario} />
+        <ExampleScenario title="Example 5: Hospital Discovery" steps={hospitalScenario} />
+
+        <p style={{ marginTop: 'var(--space-2xl)', color: 'var(--color-text-secondary)', fontSize: '15px', lineHeight: 1.6, textAlign: 'center', maxWidth: '800px', marginInline: 'auto' }}>
+          These scenarios illustrate how agent-to-agent coordination can move a request from understanding and discovery toward a practical, reviewable outcome. Availability and actual execution depend on the agents, services, integrations, and permissions available at the time.
+        </p>
       </div>
 
       <FeatureSection 
