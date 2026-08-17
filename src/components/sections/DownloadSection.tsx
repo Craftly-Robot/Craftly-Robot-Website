@@ -3,13 +3,6 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import VideoPlaceholder from '../common/VideoPlaceholder';
 import './DownloadSection.css';
 
-function ArrowRight({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 8h10M9 4l4 4-4 4" />
-    </svg>
-  );
-}
 
 export default function DownloadSection() {
   const revealRef = useScrollReveal();
@@ -33,7 +26,6 @@ export default function DownloadSection() {
             <div className="download-section__actions">
               <Link to="/download" className="download-section__btn-primary">
                 Download Craftly
-                <ArrowRight className="download-section__btn-arrow" />
               </Link>
               <Link to="/download" className="download-section__btn-secondary">
                 View all downloads
