@@ -91,7 +91,7 @@ export function ProjectWorkflowTerminal() {
             >
               <span className="terminal-workflow__sidebar-icon">
                 {index < currentStep ? (
-                  <Lottie src={tikAnimation} loop={false} style={{ width: 16, height: 16, marginTop: '-2px' }} />
+                  <Lottie src={tikAnimation} loop={false} autoplay={true} style={{ width: 16, height: 16, marginTop: '-2px', filter: 'invert(1) brightness(2)' }} />
                 ) : index === currentStep ? (
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
