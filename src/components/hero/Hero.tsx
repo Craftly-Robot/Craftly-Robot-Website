@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import TechSnake from './TechSnake';
 import './Hero.css';
@@ -118,29 +118,47 @@ function TypewriterTitle() {
 
 function TypewriterStatement({ text }: { text: string }) {
   const [displayedText, setDisplayedText] = useState('');
+  const [inView, setInView] = useState(false);
+  const statementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Wait for the hero section animation to finish before starting typing
-    const startTimeout = setTimeout(() => {
-      let index = 0;
-      const interval = setInterval(() => {
-        if (index < text.length) {
-          setDisplayedText(text.slice(0, index + 1));
-          index++;
-        } else {
-          clearInterval(interval);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
         }
-      }, 45); // Adjust typing speed here
-      return () => clearInterval(interval);
-    }, 800); // 800ms delay
+      },
+      { threshold: 0.5 }
+    );
 
-    return () => clearTimeout(startTimeout);
-  }, [text]);
+    if (statementRef.current) {
+      observer.observe(statementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return;
+
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 20); // Faster typing speed
+
+    return () => clearInterval(interval);
+  }, [text, inView]);
 
   const lines = displayedText.split('\n');
 
   return (
-    <div className="hero__statement">
+    <div className="hero__statement" ref={statementRef}>
       {lines.map((line, i) => (
         <span key={i}>
           {line}
