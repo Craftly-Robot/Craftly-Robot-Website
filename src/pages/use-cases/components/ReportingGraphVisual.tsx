@@ -3,14 +3,16 @@ import { useScrollReveal } from '../../../hooks/useScrollReveal';
 import './ReportingGraphVisual.css';
 
 const NODES = [
+  { id: 'chairman', label: 'Chairman' },
+  { id: 'md', label: 'MD' },
   { id: 'csuite', label: 'C-Suite' },
   { id: 'senior', label: 'Senior' },
-  { id: 'leader', label: 'Unit Leader' },
-  { id: 'member', label: 'Member' }
+  { id: 'junior', label: 'Junior' },
+  { id: 'executive', label: 'Executive' }
 ];
 
 export function ReportingGraphVisual() {
-  const [activeNode, setActiveNode] = useState(3);
+  const [activeNode, setActiveNode] = useState(5);
   const [inView, setInView] = useState(false);
   const revealRef = useScrollReveal();
   const containerRef = useRef<HTMLDivElement>(null);
