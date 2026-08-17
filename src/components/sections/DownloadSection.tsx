@@ -3,17 +3,22 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import VideoPlaceholder from '../common/VideoPlaceholder';
 import './DownloadSection.css';
 
+interface DownloadSectionProps {
+  hideVisual?: boolean;
+}
 
-export default function DownloadSection() {
+export default function DownloadSection({ hideVisual = false }: DownloadSectionProps) {
   const revealRef = useScrollReveal();
 
   return (
     <section className="section section--xl download-section" ref={revealRef}>
       <div className="container container--wide">
         <div className="download-section__content reveal">
-          <div className="download-section__visual">
-            <VideoPlaceholder label="Craftly Environment" />
-          </div>
+          {!hideVisual && (
+            <div className="download-section__visual">
+              <VideoPlaceholder label="Craftly Environment" />
+            </div>
+          )}
           
           <div className="download-section__text">
             <h2 className="text-display download-section__title">

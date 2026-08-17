@@ -6,6 +6,7 @@ import ProductShowcase from '../components/sections/ProductShowcase';
 import CapabilitiesSection from '../components/sections/CapabilitiesSection';
 import ArchitectureVisualization from '../components/sections/ArchitectureVisualization';
 import DevOrgSection from '../components/sections/DevOrgSection';
+import DownloadSection from '../components/sections/DownloadSection';
 import './HomePage.css';
 
 export default function HomePage() {
@@ -45,6 +46,8 @@ export default function HomePage() {
         {/* 10 — Developers & Organizations */}
         <DevOrgSection />
 
+        {/* Final Download CTA */}
+        <DownloadSection hideVisual={true} />
       </div>
     </>
   );
