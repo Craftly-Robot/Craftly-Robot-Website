@@ -65,6 +65,10 @@ export default function Hero() {
 
         <TechSnake />
 
+        <div className="hero__statement">
+          Craftly is building a new kind of technology organization, where people, and intelligent agents work together<span className="gradient-cursor"></span>
+        </div>
+
       </div>
     </section>
   );
