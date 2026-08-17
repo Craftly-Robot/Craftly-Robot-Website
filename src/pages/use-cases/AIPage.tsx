@@ -16,7 +16,7 @@ export default function AIPage() {
   const revealRef = useScrollReveal();
 
   return (
-    <div className="ucc-page-wrapper">
+    <div className="ucc-page-wrapper" ref={revealRef}>
       {/* 2. PAGE HERO */}
       <UseCaseHero 
         title={
@@ -105,7 +105,7 @@ export default function AIPage() {
       />
 
       {/* 12. HUMANITARIAN COORDINATION */}
-      <div className="container reveal" ref={revealRef} style={{ paddingBlock: 'var(--space-4xl)' }}>
+      <div className="container reveal" style={{ paddingBlock: 'var(--space-4xl)' }}>
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto', marginBottom: 'var(--space-2xl)' }}>
           <StatusBadge status="long-term" />
           <h2 className="ucc-feature__title" style={{ marginTop: 'var(--space-md)' }}>Help people coordinate when it matters most.</h2>
