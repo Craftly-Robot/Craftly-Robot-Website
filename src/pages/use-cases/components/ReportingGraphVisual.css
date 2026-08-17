@@ -73,7 +73,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--color-text);
-  transform-origin: bottom;
+  transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.5s ease;
 }
@@ -86,16 +86,16 @@
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
-  animation: moveMessageUp 0.5s ease forwards;
+  top: 0;
+  animation: moveMessage 0.5s ease forwards;
 }
 
-@keyframes moveMessageUp {
+@keyframes moveMessage {
   from {
-    bottom: 0;
+    top: 0;
   }
   to {
-    bottom: 100%;
+    top: 100%;
   }
 }
 

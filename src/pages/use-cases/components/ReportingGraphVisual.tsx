@@ -12,7 +12,7 @@ const NODES = [
 ];
 
 export function ReportingGraphVisual() {
-  const [activeNode, setActiveNode] = useState(5);
+  const [activeNode, setActiveNode] = useState(0);
   const [inView, setInView] = useState(false);
   const revealRef = useScrollReveal();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,10 +40,7 @@ export function ReportingGraphVisual() {
     if (!inView) return;
 
     const interval = setInterval(() => {
-      setActiveNode((prev) => {
-        if (prev < 0) return NODES.length - 1;
-        return prev - 1;
-      });
+      setActiveNode((prev) => (prev + 1) % (NODES.length + 1));
     }, 1500);
 
     return () => clearInterval(interval);
@@ -54,7 +51,7 @@ export function ReportingGraphVisual() {
       <div className="reporting-graph__container" ref={containerRef}>
         <div className="reporting-graph__visualization">
           {NODES.map((node, index) => {
-            const isCompleted = activeNode < index;
+            const isCompleted = activeNode > index;
             const isCurrent = activeNode === index;
             
             return (
@@ -65,8 +62,8 @@ export function ReportingGraphVisual() {
                 {index < NODES.length - 1 && (
                   <div className="reporting-graph__edge">
                     <div className="reporting-graph__edge-fill" style={{
-                      transform: activeNode <= index ? 'scaleY(1)' : 'scaleY(0)',
-                      transitionDelay: activeNode <= index ? '0s' : '0.5s'
+                      transform: activeNode > index ? 'scaleY(1)' : 'scaleY(0)',
+                      transitionDelay: activeNode > index ? '0s' : '0.5s'
                     }} />
                     
                     {activeNode === index && (
@@ -83,9 +80,9 @@ export function ReportingGraphVisual() {
           <div className="reporting-graph__info-card">
             <span className="reporting-graph__info-label">Current Location</span>
             <span className="reporting-graph__info-value">
-              {activeNode >= 0 ? NODES[activeNode].label : 'Resolution'}
+              {activeNode < NODES.length ? NODES[activeNode].label : 'Resolution'}
             </span>
-            {activeNode === -1 && (
+            {activeNode === NODES.length && (
               <span className="reporting-graph__info-status">Message reached destination</span>
             )}
           </div>
