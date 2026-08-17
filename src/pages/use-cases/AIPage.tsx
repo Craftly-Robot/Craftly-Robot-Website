@@ -21,9 +21,8 @@ export default function AIPage() {
       <UseCaseHero 
         title={
           <>
-            USE CASES <br />
-            Put AI to work <br />
-            on real problems.
+            USE CASES Put AI to <br />
+            work on real problems.
           </>
         }
         description="Craftly builds intelligent systems that can understand complex requests, reason through problems, use available capabilities, and help people accomplish meaningful work."
