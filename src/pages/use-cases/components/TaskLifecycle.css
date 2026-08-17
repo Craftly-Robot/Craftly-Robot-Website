@@ -22,8 +22,8 @@
 .task-lifecycle__progress-line {
   position: absolute;
   top: 6px;
-  left: 0;
-  right: 0;
+  left: 30px;
+  right: 30px;
   height: 2px;
   background-color: var(--color-border);
   z-index: 1;
