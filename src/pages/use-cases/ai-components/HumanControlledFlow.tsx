@@ -24,7 +24,7 @@ export function HumanControlledFlow() {
 
         {/* Lines */}
         <line x1="210" y1="75" x2="320" y2="75" stroke="var(--color-border)" strokeWidth="2" markerEnd="url(#arrow)" />
-        <line className="hc-action-line" x1="480" y1="75" x2="590" y2="75" stroke="var(--color-border)" strokeWidth="2" markerEnd="url(#arrow)" />
+        <line x1="480" y1="75" x2="590" y2="75" stroke="var(--color-border)" strokeWidth="2" markerEnd="url(#arrow)" />
 
         <defs>
           <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">

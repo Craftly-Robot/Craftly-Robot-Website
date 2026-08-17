@@ -21,7 +21,7 @@ export default function AIPage() {
       <UseCaseHero 
         title={
           <>
-            <span className="ucc-hero__eyebrow">USE CASES</span><br />
+            USE CASES <br />
             Put AI to work <br />
             on real problems.
           </>
