@@ -13,28 +13,33 @@ export function AIStickyScroll() {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '-30% 0px -50% 0px', // Triggers when element is near middle of screen
-      threshold: 0,
-    };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const index = itemRefs.current.findIndex((el) => el === entry.target);
+          const index = itemRefs.current.findIndex((el) => el === (entry.target as unknown as HTMLDivElement));
           if (index !== -1) {
             setActiveIndex(index);
           }
         }
       });
-    }, options);
+    }, {
+      root: null,
+      rootMargin: '-30% 0px -50% 0px',
+      threshold: 0,
+    });
 
-    itemRefs.current.forEach((el) => {
+    // Store the current refs to cleanup properly
+    const currentRefs = itemRefs.current;
+    currentRefs.forEach((el) => {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    return () => {
+      currentRefs.forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+      observer.disconnect();
+    };
   }, []);
 
   const sections = [
