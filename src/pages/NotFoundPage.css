@@ -1,10 +1,46 @@
 .not-found-page {
   min-height: calc(100vh - 80px); /* Adjust based on navbar height */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px 24px;
   background-color: var(--color-bg);
+  position: relative;
+}
+
+.not-found-header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: calc(100% - 48px);
+  display: flex;
+  align-items: center;
+}
+
+.not-found-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: var(--color-bg-subtle);
+  transition: all 0.2s ease;
+}
+
+.not-found-back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.not-found-back:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
 }
 
 .not-found-content {
