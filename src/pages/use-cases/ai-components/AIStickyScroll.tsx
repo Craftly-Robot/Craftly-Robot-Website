@@ -93,7 +93,7 @@ export function AIStickyScroll() {
 
   return (
     <div className="ai-sticky-container" ref={containerRef}>
-      <div className="container" style={{ position: 'relative', display: 'flex', gap: 'var(--space-4xl)', alignItems: 'flex-start' }}>
+      <div className="container ai-sticky-layout">
         
         {/* Left column: Scrolling Text */}
         <div className="ai-sticky-text-col">
