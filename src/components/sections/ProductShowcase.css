@@ -21,7 +21,7 @@
 }
 
 .product-showcase__title {
-  font-size: clamp(36px, 5vw, 48px);
+  font-size: clamp(28px, 4vw, 48px);
   line-height: 1.1;
   margin-bottom: var(--space-lg);
   color: var(--color-text);
@@ -90,6 +90,10 @@
 
   .product-showcase__content {
     max-width: 100%;
+  }
+
+  .product-showcase__title {
+    font-size: 32px;
   }
   
   .product-showcase__visual {
