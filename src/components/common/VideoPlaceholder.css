@@ -98,7 +98,7 @@
 .mock-line--lg { width: 80%; height: 16px; margin-bottom: 8px; }
 .mock-line--md { width: 60%; }
 .mock-line--sm { width: 40%; }
-.mock-line--code { font-family: monospace; height: 6px; background: #E9ECEF; margin-bottom: 2px; }
+.mock-line--code { font-family: var(--font-mono); height: 6px; background: #E9ECEF; margin-bottom: 2px; }
 
 .mock-box {
   flex: 1;
