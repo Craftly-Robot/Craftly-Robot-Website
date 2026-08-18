@@ -212,7 +212,7 @@ export default function Navbar() {
         </nav>
         </div>
 
-        {/* Download Button */}
+        {/* Mobile Toggle */}
         <div className="navbar__right">
           <Link to="/download" className="navbar__download">
             Download
@@ -230,21 +230,20 @@ export default function Navbar() {
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
           </Link>
+          
+          <button
+            className={`navbar__mobile-toggle ${mobileOpen ? 'navbar__mobile-toggle--open' : ''}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+          >
+            <div className="navbar__mobile-toggle-lines">
+              <span className="navbar__mobile-toggle-line" />
+              <span className="navbar__mobile-toggle-line" />
+              <span className="navbar__mobile-toggle-line" />
+            </div>
+          </button>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className={`navbar__mobile-toggle ${mobileOpen ? 'navbar__mobile-toggle--open' : ''}`}
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={mobileOpen}
-        >
-          <div className="navbar__mobile-toggle-lines">
-            <span className="navbar__mobile-toggle-line" />
-            <span className="navbar__mobile-toggle-line" />
-            <span className="navbar__mobile-toggle-line" />
-          </div>
-        </button>
       </div>
 
       {/* Mobile Navigation */}
