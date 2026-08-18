@@ -32,6 +32,15 @@
   justify-content: center;
 }
 
+.hero__flag {
+  height: 0.8em;
+  width: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-out;
+  margin-left: 12px;
+}
+
 .typewriter-cursor {
   display: inline-block;
   width: 2px;
@@ -181,6 +190,12 @@
 @media (max-width: 768px) {
   .hero__title {
     max-width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero__flag {
+    margin-left: 0;
   }
 
   .hero__tech-track {

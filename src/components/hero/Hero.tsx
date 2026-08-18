@@ -93,26 +93,17 @@ function TypewriterTitle() {
   }, []);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginBottom: 'var(--space-2xl)' }}>
+    <h1 className="text-hero-display hero__title">
+      {displayedText}
+      {!showFlag && <span className="typewriter-cursor"></span>}
       {showFlag && (
         <img 
           src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp" 
           alt="Bangladesh Flag" 
-          style={{ 
-            height: '32px', 
-            width: 'auto', 
-            borderRadius: '4px',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-            animation: 'fadeIn 0.5s ease-out',
-            marginBottom: '12px'
-          }} 
+          className="hero__flag"
         />
       )}
-      <h1 className="text-hero-display hero__title" style={{ margin: 0 }}>
-        {displayedText}
-        {!showFlag && <span className="typewriter-cursor"></span>}
-      </h1>
-    </div>
+    </h1>
   );
 }
 
