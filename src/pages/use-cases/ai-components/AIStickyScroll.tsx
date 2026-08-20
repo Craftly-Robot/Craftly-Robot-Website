@@ -127,6 +127,11 @@ export function AIStickyScroll() {
                 </div>
               )}
 
+              {/* Mobile-only visual (hidden on desktop) */}
+              <div className="ai-sticky-mobile-visual">
+                {section.visual}
+              </div>
+
               {section.examples && (
                 <div style={{ marginTop: 'var(--space-xl)' }}>
                   {section.examples.map((ex, i) => (
