@@ -16,7 +16,7 @@ export function AIStickyScroll() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const index = itemRefs.current.findIndex((el) => el === (entry.target as unknown as HTMLDivElement));
+          const index = itemRefs.current.findIndex((el) => el === entry.target);
           if (index !== -1) {
             setActiveIndex(index);
           }
@@ -28,18 +28,15 @@ export function AIStickyScroll() {
       threshold: 0,
     });
 
-    // Store the current refs to cleanup properly
-    const currentRefs = itemRefs.current;
-    currentRefs.forEach((el) => {
+    const elementsToObserve = itemRefs.current;
+    elementsToObserve.forEach((el) => {
       if (el) observer.observe(el);
     });
 
     return () => {
-      currentRefs.forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
       observer.disconnect();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const sections = [
