@@ -2,7 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
   height: var(--nav-height);
   z-index: var(--z-sticky);
   transition:
@@ -284,10 +285,11 @@
 
 /* ── Download Button ── */
 .navbar__right {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: var(--space-sm);
 }
 
 .navbar__download {

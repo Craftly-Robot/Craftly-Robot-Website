@@ -1,6 +1,7 @@
 .ucc-page-wrapper {
   background-color: #ffffff;
   color: #000000;
+  overflow-x: hidden;
 }
 
 .ucc-hero {
