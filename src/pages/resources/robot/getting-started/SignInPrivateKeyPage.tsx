@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function SignInPrivateKeyPage() {
   return (
     <DocsLayout 
-      title="Sign In with Your Private Key â€” Craftly Robot"
+      title="Sign In with Your Private Key — Craftly Robot"
       description="Sign In with Your Private Key in Craftly Robot"
       tocItems={[
         { id: 'sign-in-private-key', label: 'Sign In with Your Private Key' },

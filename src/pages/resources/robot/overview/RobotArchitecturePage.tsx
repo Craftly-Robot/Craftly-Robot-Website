@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function RobotArchitecturePage() {
   return (
     <DocsLayout 
-      title="Architecture â€” Craftly Robot"
+      title="Architecture — Craftly Robot"
       description="Architecture in Craftly Robot"
       tocItems={[
         { id: 'architecture', label: 'Architecture' }

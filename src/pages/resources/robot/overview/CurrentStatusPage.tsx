@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function CurrentStatusPage() {
   return (
     <DocsLayout 
-      title="Current Status â€” Craftly Robot"
+      title="Current Status — Craftly Robot"
       description="Current Status in Craftly Robot"
       tocItems={[
         { id: 'current-status', label: 'Current Status' }

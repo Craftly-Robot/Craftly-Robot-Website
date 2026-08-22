@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function InstallCraftlyRobotPage() {
   return (
     <DocsLayout 
-      title="Install Craftly Robot â€” Craftly Robot"
+      title="Install Craftly Robot — Craftly Robot"
       description="Install Craftly Robot in Craftly Robot"
       tocItems={[
         { id: 'install-craftly-robot', label: 'Install Craftly Robot' },

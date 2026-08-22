@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function AgentNegotiationGSPage() {
   return (
     <DocsLayout 
-      title="Agent-to-Agent Negotiation â€” Craftly Robot"
+      title="Agent-to-Agent Negotiation — Craftly Robot"
       description="Agent-to-Agent Negotiation in Craftly Robot"
       tocItems={[
         { id: 'agent-negotiation', label: 'Agent-to-Agent Negotiation' },

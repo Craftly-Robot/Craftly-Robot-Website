@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function RolesPage() {
   return (
     <DocsLayout 
-      title="Roles â€” Craftly Workspace"
+      title="Roles — Craftly Workspace"
       description="Roles in Craftly Workspace"
       tocItems={[
         { id: 'roles', label: 'Roles' }

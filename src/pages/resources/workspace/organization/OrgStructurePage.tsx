@@ -3,7 +3,7 @@
 export default function OrgStructurePage() {
   return (
     <DocsLayout 
-      title="Organization Structure â€” Craftly Workspace"
+      title="Organization Structure — Craftly Workspace"
       description="Organization Structure in Craftly Workspace"
       tocItems={[
         { id: 'organization-structure', label: 'Organization Structure' }

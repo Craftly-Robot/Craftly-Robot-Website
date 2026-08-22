@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function BeforeYouStartPage() {
   return (
     <DocsLayout 
-      title="Before You Start â€” Craftly Robot"
+      title="Before You Start — Craftly Robot"
       description="Before You Start in Craftly Robot"
       tocItems={[
         { id: 'before-you-start', label: 'Before You Start' },

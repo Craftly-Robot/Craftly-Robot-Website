@@ -3,7 +3,7 @@
 export default function OrgResourcesPage() {
   return (
     <DocsLayout 
-      title="Organization Resources â€” Craftly Workspace"
+      title="Organization Resources — Craftly Workspace"
       description="Organization Resources in Craftly Workspace"
       tocItems={[
         { id: 'organization-resources', label: 'Organization Resources' }

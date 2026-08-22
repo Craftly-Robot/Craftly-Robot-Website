@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function MembersPage() {
   return (
     <DocsLayout 
-      title="Members â€” Craftly Workspace"
+      title="Members — Craftly Workspace"
       description="Members in Craftly Workspace"
       tocItems={[
         { id: 'members', label: 'Members' },

@@ -4,7 +4,7 @@ import projectImage from '../../../../assets/projects/1.png';
 export default function OperationalWorkflowsPage() {
   return (
     <DocsLayout 
-      title="Projects â€” Craftly Workspace"
+      title="Projects — Craftly Workspace"
       description="Projects in Craftly Workspace"
       tocItems={[
         { id: 'projects', label: 'Projects' },

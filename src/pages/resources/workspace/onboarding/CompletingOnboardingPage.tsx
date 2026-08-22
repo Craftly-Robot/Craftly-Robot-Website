@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function CompletingOnboardingPage() {
   return (
     <DocsLayout 
-      title="Completing Onboarding â€” Craftly Workspace"
+      title="Completing Onboarding — Craftly Workspace"
       description="Completing Onboarding in Craftly Workspace"
       tocItems={[
         { id: 'completing-onboarding', label: 'Completing Onboarding' }

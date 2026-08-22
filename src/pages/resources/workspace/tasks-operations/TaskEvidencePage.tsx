@@ -3,7 +3,7 @@
 export default function TaskEvidencePage() {
   return (
     <DocsLayout 
-      title="Task Evidence â€” Craftly Workspace"
+      title="Task Evidence — Craftly Workspace"
       description="Task Evidence in Craftly Workspace"
       tocItems={[
         { id: 'task-evidence', label: 'Task Evidence' }

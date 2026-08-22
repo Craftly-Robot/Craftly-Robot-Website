@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function WhatIsWorkspacePage() {
   return (
     <DocsLayout 
-      title="What is Craftly Workspace? â€” Craftly Workspace"
+      title="What is Craftly Workspace? — Craftly Workspace"
       description="What is Craftly Workspace? in Craftly Workspace"
       tocItems={[
         { id: 'what-is-craftly-workspace', label: 'What is Craftly Workspace?' }

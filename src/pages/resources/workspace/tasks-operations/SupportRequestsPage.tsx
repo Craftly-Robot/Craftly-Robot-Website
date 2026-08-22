@@ -4,7 +4,7 @@ import supportImage from '../../../../assets/Support Requests/1.png';
 export default function SupportRequestsPage() {
   return (
     <DocsLayout 
-      title="Support Requests â€” Craftly Workspace"
+      title="Support Requests — Craftly Workspace"
       description="Support Requests in Craftly Workspace"
       tocItems={[
         { id: 'support-requests', label: 'Support Requests' },

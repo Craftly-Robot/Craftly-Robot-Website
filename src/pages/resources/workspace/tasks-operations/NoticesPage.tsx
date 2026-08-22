@@ -5,7 +5,7 @@ import notice2 from '../../../../assets/Notice Board/2.jpg';
 export default function NoticesPage() {
   return (
     <DocsLayout 
-      title="Notice Board â€” Craftly Workspace"
+      title="Notice Board — Craftly Workspace"
       description="Notice Board in Craftly Workspace"
       tocItems={[
         { id: 'notice-board', label: 'Notice Board' }

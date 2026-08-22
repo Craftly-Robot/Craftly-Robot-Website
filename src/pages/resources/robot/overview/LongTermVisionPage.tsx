@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function LongTermVisionPage() {
   return (
     <DocsLayout 
-      title="Long-Term Vision â€” Craftly Robot"
+      title="Long-Term Vision — Craftly Robot"
       description="Long-Term Vision in Craftly Robot"
       tocItems={[
         { id: 'long-term-vision', label: 'Long-Term Vision' }

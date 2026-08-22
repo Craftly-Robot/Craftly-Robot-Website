@@ -3,7 +3,7 @@
 export default function TaskAssignmentPage() {
   return (
     <DocsLayout 
-      title="Task Assignment â€” Craftly Workspace"
+      title="Task Assignment — Craftly Workspace"
       description="Task Assignment in Craftly Workspace"
       tocItems={[
         { id: 'task-assignment', label: 'Task Assignment' }

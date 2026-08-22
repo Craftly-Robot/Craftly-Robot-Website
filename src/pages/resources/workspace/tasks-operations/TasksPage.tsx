@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function TasksPage() {
   return (
     <DocsLayout 
-      title="Tasks â€” Craftly Workspace"
+      title="Tasks — Craftly Workspace"
       description="Tasks in Craftly Workspace"
       tocItems={[
         { id: 'tasks', label: 'Tasks' },

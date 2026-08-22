@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function PrivateKeyPage() {
   return (
     <DocsLayout 
-      title="Private Key â€” Craftly Workspace"
+      title="Private Key — Craftly Workspace"
       description="Private Key in Craftly Workspace"
       tocItems={[
         { id: 'private-key', label: 'Private Key' },

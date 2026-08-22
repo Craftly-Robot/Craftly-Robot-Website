@@ -3,7 +3,7 @@
 export default function WorkspaceStructurePage() {
   return (
     <DocsLayout 
-      title="Workspace Structure â€” Craftly Workspace"
+      title="Workspace Structure — Craftly Workspace"
       description="Workspace Structure in Craftly Workspace"
       tocItems={[
         { id: 'workspace-structure', label: 'Workspace Structure' }

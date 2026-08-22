@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function NextStepsPage() {
   return (
     <DocsLayout 
-      title="Next Steps â€” Craftly Robot"
+      title="Next Steps — Craftly Robot"
       description="Next Steps in Craftly Robot"
       tocItems={[
         { id: 'next-steps', label: 'Next Steps' },

@@ -3,7 +3,7 @@
 export default function AccessControlPage() {
   return (
     <DocsLayout 
-      title="Access Control â€” Craftly Workspace"
+      title="Access Control — Craftly Workspace"
       description="Access Control in Craftly Workspace"
       tocItems={[
         { id: 'access-control', label: 'Access Control' }

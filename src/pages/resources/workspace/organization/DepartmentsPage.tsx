@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function DepartmentsPage() {
   return (
     <DocsLayout 
-      title="Departments â€” Craftly Workspace"
+      title="Departments — Craftly Workspace"
       description="Departments in Craftly Workspace"
       tocItems={[
         { id: 'departments', label: 'Departments' },

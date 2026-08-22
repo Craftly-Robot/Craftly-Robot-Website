@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function AgentModelPage() {
   return (
     <DocsLayout 
-      title="Agent Model â€” Craftly Robot"
+      title="Agent Model — Craftly Robot"
       description="Agent Model in Craftly Robot"
       tocItems={[
         { id: 'agent-model', label: 'Agent Model' }

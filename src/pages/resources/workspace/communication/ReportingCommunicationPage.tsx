@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function ReportingCommunicationPage() {
   return (
     <DocsLayout 
-      title="Reporting-Based Communication â€” Craftly Workspace"
+      title="Reporting-Based Communication — Craftly Workspace"
       description="Reporting-Based Communication in Craftly Workspace"
       tocItems={[
         { id: 'reporting-based-communication', label: 'Reporting-Based Communication' }

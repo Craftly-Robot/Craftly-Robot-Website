@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function NotificationsPage() {
   return (
     <DocsLayout 
-      title="Notifications â€” Craftly Workspace"
+      title="Notifications — Craftly Workspace"
       description="Notifications in Craftly Workspace"
       tocItems={[
         { id: 'notifications', label: 'Notifications' }

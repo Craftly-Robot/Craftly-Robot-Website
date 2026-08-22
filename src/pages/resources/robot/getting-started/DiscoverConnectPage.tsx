@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function DiscoverConnectPage() {
   return (
     <DocsLayout 
-      title="Discover & Connect â€” Craftly Robot"
+      title="Discover & Connect — Craftly Robot"
       description="Discover & Connect in Craftly Robot"
       tocItems={[
         { id: 'discover-connect', label: 'Discover & Connect' },

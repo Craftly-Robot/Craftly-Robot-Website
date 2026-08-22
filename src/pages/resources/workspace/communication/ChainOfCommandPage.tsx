@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function ChainOfCommandPage() {
   return (
     <DocsLayout 
-      title="Chain of Command â€” Craftly Workspace"
+      title="Chain of Command — Craftly Workspace"
       description="Chain of Command in Craftly Workspace"
       tocItems={[
         { id: 'chain-of-command', label: 'Chain of Command' }

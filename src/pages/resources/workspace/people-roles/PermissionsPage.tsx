@@ -3,7 +3,7 @@ import DocsLayout from '../../DocsLayout';
 export default function PermissionsPage() {
   return (
     <DocsLayout 
-      title="Permissions â€” Craftly Workspace"
+      title="Permissions — Craftly Workspace"
       description="Permissions in Craftly Workspace"
       tocItems={[
         { id: 'permissions', label: 'Permissions' },
