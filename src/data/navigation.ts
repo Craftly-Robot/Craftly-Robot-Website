@@ -1,19 +1,19 @@
-import { products } from './products';
-import { useCases } from './useCases';
-import { resources } from './resources';
-import type { NavDropdownItem } from '../types';
+import type { NavDropdownItem } from "../types";
+import { products } from "./products";
+import { resources } from "./resources";
+import { useCases } from "./useCases";
 
 export interface NavConfig {
   label: string;
   route?: string;
-  dropdownType?: 'products' | 'useCases' | 'resources';
+  dropdownType?: "products" | "useCases" | "resources";
   items?: NavDropdownItem[];
 }
 
 export const navigation: NavConfig[] = [
   {
-    label: 'Products',
-    dropdownType: 'products',
+    label: "Products",
+    dropdownType: "products",
     items: products.map((p) => ({
       title: p.name,
       description: p.tagline,
@@ -22,8 +22,8 @@ export const navigation: NavConfig[] = [
     })),
   },
   {
-    label: 'Use Cases',
-    dropdownType: 'useCases',
+    label: "Use Cases",
+    dropdownType: "useCases",
     items: useCases.map((uc) => ({
       title: uc.title,
       description: uc.concept,
@@ -32,8 +32,8 @@ export const navigation: NavConfig[] = [
     })),
   },
   {
-    label: 'Resources',
-    dropdownType: 'resources',
+    label: "Resources",
+    dropdownType: "resources",
     items: resources.map((r) => ({
       title: r.title,
       description: r.description,
