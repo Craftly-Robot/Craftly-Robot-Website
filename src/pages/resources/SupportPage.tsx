@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 import './SupportPage.css';
 
@@ -38,10 +38,7 @@ function TypewriterTitle({ text }: { text: string }) {
 export default function SupportPage() {
   return (
     <>
-      <Helmet>
-        <title>Support — Craftly</title>
-        <meta name="description" content="Find answers in our docs or go to our community." />
-      </Helmet>
+      <SEO title="Support" description="Find answers in our docs or go to our community." />
 
       <div className="support-page">
         <div className="support-hero">

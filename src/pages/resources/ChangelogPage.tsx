@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 import DropdownIcon from '../../components/ui/DropdownIcon';
 import './ChangelogPage.css';
@@ -515,10 +515,7 @@ export default function ChangelogPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Changelog | Craftly</title>
-        <meta name="description" content="Latest updates and improvements to Craftly Workspace and Craftly Robot." />
-      </Helmet>
+      <SEO title="Changelog" description="Latest updates and improvements to Craftly Workspace and Craftly Robot." />
 
       <main className="changelog-page">
         <div className="container">

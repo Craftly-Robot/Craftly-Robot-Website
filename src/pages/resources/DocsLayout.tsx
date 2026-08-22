@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../../components/SEO';
 import DropdownIcon from '../../components/ui/DropdownIcon';
 import './DocsLayout.css';
 
@@ -208,10 +208,7 @@ export default function DocsLayout({ title, description, tocItems = [], children
 
   return (
     <div className="docs__container">
-      <Helmet>
-        <title>{title} — Craftly Documentation</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <SEO title={title} description={description} />
 
       <div className="docs__mobile-header">
         <button 

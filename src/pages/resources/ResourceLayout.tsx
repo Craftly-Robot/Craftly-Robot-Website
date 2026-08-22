@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../../components/SEO';
 import CTASection from '../../components/sections/CTASection';
 import type { Resource } from '../../types';
 
@@ -10,10 +10,7 @@ interface ResourceLayoutProps {
 export default function ResourceLayout({ resource, children }: ResourceLayoutProps) {
   return (
     <>
-      <Helmet>
-        <title>{resource.title} — Craftly Resources</title>
-        <meta name="description" content={resource.description} />
-      </Helmet>
+      <SEO title={resource.title} description={resource.description} />
 
       <div className="container">
         <section className="section section--lg" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>

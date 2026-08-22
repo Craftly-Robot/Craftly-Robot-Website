@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 import DropdownIcon from '../../components/ui/DropdownIcon';
 import './ReleasesPage.css';
@@ -103,10 +103,7 @@ export default function ReleasesPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Craftly Releases</title>
-        <meta name="description" content="Download previous Craftly and Craftly Workspace releases." />
-      </Helmet>
+      <SEO title="Craftly Releases" description="Download previous Craftly and Craftly Workspace releases." />
 
       <main className="releases-page">
         <div className="releases-hero-wrapper">
