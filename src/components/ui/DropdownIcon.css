@@ -1,0 +1,33 @@
+.dropdown-icon {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.dropdown-icon__bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  background-color: currentColor;
+  border-radius: 999px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon__bar--horizontal {
+  transform: translate(-50%, -50%);
+}
+
+.dropdown-icon__bar--vertical {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.dropdown-icon--open .dropdown-icon__bar--vertical {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown-icon__bar {
+    transition: none;
+  }
+}

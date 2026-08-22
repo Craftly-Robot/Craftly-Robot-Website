@@ -15,7 +15,7 @@ export function SEO({
   name = "Craftly",
   type = "website",
   url = "https://craftlyrobot.com",
-  image = "https://craftlyrobot.com/og-image.jpg",
+  image = "https://craftlyrobot.com/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
 }: SEOProps) {
   const fullTitle = `${title} | Craftly`;
 
