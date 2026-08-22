@@ -1,19 +1,25 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { navigation } from '../../data/navigation';
-import DropdownIcon from '../ui/DropdownIcon';
-import './Navbar.css';
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { navigation } from "../../data/navigation";
+import DropdownIcon from "../ui/DropdownIcon";
+import "./Navbar.css";
 
 /* ── Icons ── */
 function ChevronDown({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className={className}
+      viewBox="0 0 12 12"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M3 4.5L6 7.5L9 4.5" />
     </svg>
   );
 }
-
-
 
 /* ── Icons ── */
 
@@ -36,9 +42,9 @@ export default function Navbar() {
   // Scroll detection
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // Close dropdown on outside click
@@ -48,26 +54,28 @@ export default function Navbar() {
         setActiveDropdown(null);
       }
     };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
   }, []);
 
   // Close dropdown on Escape
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setActiveDropdown(null);
         setMobileOpen(false);
       }
     };
-    document.addEventListener('keydown', handler);
-    return () => document.removeEventListener('keydown', handler);
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
   }, []);
 
   // Prevent body scroll when mobile nav open
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   const toggleDropdown = useCallback((label: string) => {
@@ -115,7 +123,7 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
+      className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
       role="banner"
     >
       <div className="navbar__inner">
@@ -128,101 +136,126 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-        <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
-          {navigation.map((item) => (
-            <div 
-              key={item.label}
-              onMouseEnter={() => handleMouseEnter(item.label)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                className={`navbar__nav-item ${activeDropdown === item.label ? 'navbar__nav-item--active navbar__nav-item--open' : ''}`}
-                onClick={() => toggleDropdown(item.label)}
-                aria-expanded={activeDropdown === item.label}
-                aria-haspopup="true"
+          <nav
+            className="navbar__nav"
+            role="navigation"
+            aria-label="Main navigation"
+          >
+            {navigation.map((item) => (
+              <div
+                key={item.label}
+                onMouseEnter={() => handleMouseEnter(item.label)}
+                onMouseLeave={handleMouseLeave}
               >
-                {item.label}
-                <ChevronDown className="navbar__nav-chevron" />
-              </button>
+                <button
+                  className={`navbar__nav-item ${activeDropdown === item.label ? "navbar__nav-item--active navbar__nav-item--open" : ""}`}
+                  onClick={() => toggleDropdown(item.label)}
+                  aria-expanded={activeDropdown === item.label}
+                  aria-haspopup="true"
+                >
+                  {item.label}
+                  <ChevronDown className="navbar__nav-chevron" />
+                </button>
 
-              {item.items && (
-                <div className="navbar__dropdown-wrapper">
-                  <div
-                    className={`navbar__dropdown ${activeDropdown === item.label ? 'navbar__dropdown--visible' : ''}`}
-                    role="menu"
-                  >
-                    <div className="navbar__mega">
-                      <div className="navbar__mega-left">
-                        <h2 className="navbar__mega-title">
-                          {item.label === 'Products' && (
-                            <>Explore our <br /> next generation <br /> products</>
+                {item.items && (
+                  <div className="navbar__dropdown-wrapper">
+                    <div
+                      className={`navbar__dropdown ${activeDropdown === item.label ? "navbar__dropdown--visible" : ""}`}
+                      role="menu"
+                    >
+                      <div className="navbar__mega">
+                        <div className="navbar__mega-left">
+                          <h2 className="navbar__mega-title">
+                            {item.label === "Products" && (
+                              <>
+                                Explore our <br /> next generation <br />{" "}
+                                products
+                              </>
+                            )}
+                            {item.label === "Use Cases" && (
+                              <>
+                                Discover solutions <br /> for your specific{" "}
+                                <br /> needs
+                              </>
+                            )}
+                            {item.label === "Resources" && (
+                              <>
+                                Everything you <br /> need to stay <br />{" "}
+                                up-to-date and <br /> get help
+                              </>
+                            )}
+                          </h2>
+                          <Link
+                            to={item.items[0]?.route || "/"}
+                            className="navbar__mega-btn"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            See overview
+                          </Link>
+                        </div>
+
+                        <div className="navbar__mega-right">
+                          {item.label === "Products" && (
+                            <div className="navbar__mega-list-title">
+                              Products
+                            </div>
                           )}
-                          {item.label === 'Use Cases' && (
-                            <>Discover solutions <br /> for your specific <br /> needs</>
-                          )}
-                          {item.label === 'Resources' && (
-                            <>Everything you <br /> need to stay <br /> up-to-date and <br /> get help</>
-                          )}
-                        </h2>
-                        <Link 
-                          to={item.items[0]?.route || '/'} 
-                          className="navbar__mega-btn"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          See overview
-                        </Link>
-                      </div>
-                      
-                      <div className="navbar__mega-right">
-                        {item.label === 'Products' && (
-                          <div className="navbar__mega-list-title">Products</div>
-                        )}
-                        <div className="navbar__mega-grid">
-                          {item.items.map((child) => (
-                            <Link
-                              key={child.route}
-                              to={child.route}
-                              className="dropdown-item"
-                              role="menuitem"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {/* No icon for products as requested by user */}
-                              <div className="dropdown-item__content">
-                                <div className="dropdown-item__title">
-                                  {child.title} 
-                                  {item.label === 'Resources' && child.title === 'Documentation' && (
-                                    <span className="dropdown-item__arrow">
-                                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                      </svg>
-                                    </span>
-                                  )}
+                          <div className="navbar__mega-grid">
+                            {item.items.map((child) => (
+                              <Link
+                                key={child.route}
+                                to={child.route}
+                                className="dropdown-item"
+                                role="menuitem"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                {/* No icon for products as requested by user */}
+                                <div className="dropdown-item__content">
+                                  <div className="dropdown-item__title">
+                                    {child.title}
+                                    {item.label === "Resources" &&
+                                      child.title === "Documentation" && (
+                                        <span className="dropdown-item__arrow">
+                                          <svg
+                                            viewBox="0 0 24 24"
+                                            width="16"
+                                            height="16"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                          >
+                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                          </svg>
+                                        </span>
+                                      )}
+                                  </div>
                                 </div>
-                              </div>
-                            </Link>
-                          ))}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
+                )}
+              </div>
+            ))}
+          </nav>
         </div>
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
           <Link to="/download" className="navbar__download">
             Download
-            <svg 
-              className="navbar__download-icon" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <svg
+              className="navbar__download-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             >
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -230,11 +263,11 @@ export default function Navbar() {
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
           </Link>
-          
+
           <button
-            className={`navbar__mobile-toggle ${mobileOpen ? 'navbar__mobile-toggle--open' : ''}`}
+            className={`navbar__mobile-toggle ${mobileOpen ? "navbar__mobile-toggle--open" : ""}`}
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
             <div className="navbar__mobile-toggle-lines">
@@ -248,20 +281,20 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <nav
-        className={`mobile-nav ${mobileOpen ? 'mobile-nav--open' : ''}`}
+        className={`mobile-nav ${mobileOpen ? "mobile-nav--open" : ""}`}
         role="navigation"
         aria-label="Mobile navigation"
       >
         {navigation.map((item) => (
           <div
             key={item.label}
-            className={`mobile-nav__section ${mobileSection === item.label ? 'mobile-nav__section--open' : ''}`}
+            className={`mobile-nav__section ${mobileSection === item.label ? "mobile-nav__section--open" : ""}`}
           >
             <button
               className="mobile-nav__section-toggle"
               onClick={() =>
                 setMobileSection((prev) =>
-                  prev === item.label ? null : item.label
+                  prev === item.label ? null : item.label,
                 )
               }
               aria-expanded={mobileSection === item.label}
@@ -281,7 +314,9 @@ export default function Navbar() {
                     >
                       {/* No icon for products as requested by user */}
                       <div className="mobile-nav__item-content">
-                        <div className="mobile-nav__item-title">{child.title}</div>
+                        <div className="mobile-nav__item-title">
+                          {child.title}
+                        </div>
                       </div>
                     </Link>
                   ))}
@@ -291,7 +326,11 @@ export default function Navbar() {
           </div>
         ))}
 
-        <Link to="/download" className="mobile-nav__download" onClick={() => setMobileOpen(false)}>
+        <Link
+          to="/download"
+          className="mobile-nav__download"
+          onClick={() => setMobileOpen(false)}
+        >
           Download
         </Link>
       </nav>
