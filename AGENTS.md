@@ -8,8 +8,8 @@ From this point forward, EVERY coding agent working on this repository MUST read
 The purpose of this file is to prevent careless changes, architectural mistakes, visual regressions, broken routes, duplicated components, incorrect assets, and unverified implementations.
 
 ============================================================
-1. HIGHEST PRIORITY RULE
-============================================================
+
+1. # HIGHEST PRIORITY RULE
 
 AGENTS.md is the project's permanent source of truth for engineering behavior.
 
@@ -26,9 +26,7 @@ Before ANY task:
 
 NEVER skip these steps.
 
-============================================================
-2. NEVER ASSUME — INSPECT FIRST
-============================================================
+# ============================================================ 2. NEVER ASSUME — INSPECT FIRST
 
 Never assume how the project works.
 
@@ -57,9 +55,7 @@ If a style/token already exists:
 
 REUSE IT.
 
-============================================================
-3. DO NOT REBUILD WORKING SYSTEMS
-============================================================
+# ============================================================ 3. DO NOT REBUILD WORKING SYSTEMS
 
 Never rewrite working code just because another implementation is easier.
 
@@ -75,9 +71,7 @@ Preserve existing working behavior.
 
 Use minimal, targeted changes.
 
-============================================================
-4. ROUTING RULES
-============================================================
+# ============================================================ 4. ROUTING RULES
 
 The application uses route-based page architecture.
 
@@ -139,9 +133,7 @@ Footer
 
 Never allow Home Hero or Home-only sections to appear on unrelated routes.
 
-============================================================
-5. NAVBAR RULES
-============================================================
+# ============================================================ 5. NAVBAR RULES
 
 Navbar is global.
 
@@ -182,9 +174,7 @@ Dropdown must overlay page content.
 
 Dropdown positioning must be tied to the navbar/navigation system, NOT HomePage/Hero.
 
-============================================================
-6. BRAND / LOGO RULES
-============================================================
+# ============================================================ 6. BRAND / LOGO RULES
 
 The real Craftly brand assets must always be used.
 
@@ -222,9 +212,7 @@ Always preserve:
 - visual quality
 - intended spacing
 
-============================================================
-7. ASSET RULES
-============================================================
+# ============================================================ 7. ASSET RULES
 
 Before creating an image, video, logo, icon, or visual placeholder:
 
@@ -246,9 +234,7 @@ Do NOT hardcode random external video URLs.
 
 Do NOT remove video support just because the actual video has not been supplied yet.
 
-============================================================
-8. DESIGN SYSTEM
-============================================================
+# ============================================================ 8. DESIGN SYSTEM
 
 The website follows a minimal Craftly visual language.
 
@@ -272,9 +258,7 @@ and existing component styles.
 
 Reuse existing tokens whenever possible.
 
-============================================================
-9. VISUAL REFERENCE RULE
-============================================================
+# ============================================================ 9. VISUAL REFERENCE RULE
 
 When the user provides:
 
@@ -307,9 +291,7 @@ Do NOT blindly copy unrelated implementation details.
 
 Recreate the intended visual/interaction behavior using the project's architecture.
 
-============================================================
-10. ANIMATION RULES
-============================================================
+# ============================================================ 10. ANIMATION RULES
 
 Animations must be:
 
@@ -332,9 +314,7 @@ Reuse existing animation utilities/constants when available.
 
 Respect reduced-motion preferences.
 
-============================================================
-11. RESPONSIVE RULES
-============================================================
+# ============================================================ 11. RESPONSIVE RULES
 
 Every UI change must consider:
 
@@ -348,9 +328,7 @@ Mobile navigation should use the existing mobile navigation architecture.
 
 Never break mobile layout while fixing desktop layout.
 
-============================================================
-12. CSS RULES
-============================================================
+# ============================================================ 12. CSS RULES
 
 Avoid CSS hacks.
 
@@ -378,9 +356,7 @@ inspect its:
 
 Fix the underlying layout problem.
 
-============================================================
-13. Z-INDEX / STACKING CONTEXT
-============================================================
+# ============================================================ 13. Z-INDEX / STACKING CONTEXT
 
 Do not solve every layering problem by increasing z-index.
 
@@ -396,9 +372,7 @@ Before changing z-index, inspect:
 
 Use the smallest correct z-index hierarchy.
 
-============================================================
-14. COMPONENT ARCHITECTURE
-============================================================
+# ============================================================ 14. COMPONENT ARCHITECTURE
 
 Prefer reusable components.
 
@@ -420,9 +394,7 @@ Use data-driven components where appropriate.
 
 Keep content separate from presentation whenever the existing architecture supports it.
 
-============================================================
-15. DATA / CONTENT ARCHITECTURE
-============================================================
+# ============================================================ 15. DATA / CONTENT ARCHITECTURE
 
 Marketing content should remain centralized where possible.
 
@@ -441,9 +413,7 @@ for:
 
 Do not scatter repeated marketing copy throughout components unnecessarily.
 
-============================================================
-16. TYPE SAFETY
-============================================================
+# ============================================================ 16. TYPE SAFETY
 
 This is a TypeScript project.
 
@@ -459,9 +429,7 @@ Do not silence TypeScript errors just to make the build pass.
 
 Fix the underlying type problem.
 
-============================================================
-17. ACCESSIBILITY
-============================================================
+# ============================================================ 17. ACCESSIBILITY
 
 Every interactive component must remain accessible.
 
@@ -477,9 +445,7 @@ Consider:
 
 Desktop hover-only behavior must not make navigation inaccessible to keyboard users.
 
-============================================================
-18. PERFORMANCE
-============================================================
+# ============================================================ 18. PERFORMANCE
 
 Do not introduce unnecessary:
 
@@ -494,9 +460,7 @@ Clean up event listeners and timers.
 
 Use existing hooks/utilities where possible.
 
-============================================================
-19. ROUTE SAFETY
-============================================================
+# ============================================================ 19. ROUTE SAFETY
 
 Before modifying a global component such as:
 
@@ -513,17 +477,15 @@ A change to a global component can affect EVERY page.
 After modifying a global component, test at minimum:
 
 /
- /download
- /products/workspace
- /products/robot
- /use-cases/operations
- /resources/documentation
+/download
+/products/workspace
+/products/robot
+/use-cases/operations
+/resources/documentation
 
 Do not assume one page represents the entire application.
 
-============================================================
-20. BROWSER VERIFICATION
-============================================================
+# ============================================================ 20. BROWSER VERIFICATION
 
 For UI changes:
 
@@ -566,9 +528,7 @@ CONTINUE DEBUGGING.
 
 Do NOT report success.
 
-============================================================
-21. BUILD VERIFICATION
-============================================================
+# ============================================================ 21. BUILD VERIFICATION
 
 After code changes:
 
@@ -582,9 +542,7 @@ At minimum verify:
 
 Fix errors before completion.
 
-============================================================
-22. DO NOT CLAIM SUCCESS WITHOUT VERIFICATION
-============================================================
+# ============================================================ 22. DO NOT CLAIM SUCCESS WITHOUT VERIFICATION
 
 NEVER say:
 
@@ -601,9 +559,7 @@ say exactly what could not be tested.
 
 Never fabricate verification.
 
-============================================================
-23. BEFORE/AFTER SAFETY CHECK
-============================================================
+# ============================================================ 23. BEFORE/AFTER SAFETY CHECK
 
 Before modifying code, identify:
 
@@ -628,9 +584,7 @@ global typography
 
 After implementation verify that protected areas remain unchanged.
 
-============================================================
-24. MINIMAL CHANGE PRINCIPLE
-============================================================
+# ============================================================ 24. MINIMAL CHANGE PRINCIPLE
 
 Always prefer:
 
@@ -644,9 +598,7 @@ unless the existing architecture is fundamentally preventing the requested behav
 
 Do not refactor unrelated code during a focused task.
 
-============================================================
-25. WHEN A BUG APPEARS
-============================================================
+# ============================================================ 25. WHEN A BUG APPEARS
 
 Follow this process:
 
@@ -663,9 +615,7 @@ Follow this process:
 
 Never patch symptoms repeatedly without identifying the root cause.
 
-============================================================
-26. WHEN USER PROVIDES A SCREENSHOT
-============================================================
+# ============================================================ 26. WHEN USER PROVIDES A SCREENSHOT
 
 Do not simply say:
 
@@ -686,9 +636,7 @@ Identify:
 
 Then fix the actual implementation.
 
-============================================================
-27. WHEN USER PROVIDES A REFERENCE WEBSITE
-============================================================
+# ============================================================ 27. WHEN USER PROVIDES A REFERENCE WEBSITE
 
 The reference is used to understand:
 
@@ -702,9 +650,7 @@ Do not blindly duplicate source code.
 
 Recreate the relevant behavior in Craftly's own architecture.
 
-============================================================
-28. NO UNREQUESTED FEATURES
-============================================================
+# ============================================================ 28. NO UNREQUESTED FEATURES
 
 Do not add:
 
@@ -720,9 +666,7 @@ Do not add:
 
 unless explicitly requested.
 
-============================================================
-29. BEFORE EVERY TASK — MANDATORY CHECKLIST
-============================================================
+# ============================================================ 29. BEFORE EVERY TASK — MANDATORY CHECKLIST
 
 Before coding, answer internally:
 
@@ -736,9 +680,7 @@ Before coding, answer internally:
 [ ] Am I avoiding unnecessary refactoring?
 [ ] Have I identified what must NOT change?
 
-============================================================
-30. AFTER EVERY TASK — MANDATORY CHECKLIST
-============================================================
+# ============================================================ 30. AFTER EVERY TASK — MANDATORY CHECKLIST
 
 Before reporting completion:
 
@@ -755,9 +697,7 @@ Before reporting completion:
 [ ] Actual assets are being used.
 [ ] The requested behavior matches the user's specification.
 
-============================================================
-31. IMPORTANT PROJECT-SPECIFIC RULE
-============================================================
+# ============================================================ 31. IMPORTANT PROJECT-SPECIFIC RULE
 
 This website is being built carefully section-by-section.
 
@@ -785,9 +725,7 @@ then work ONLY on Download.
 
 Do not modify unrelated sections unless the requested feature genuinely requires it.
 
-============================================================
-32. FINAL AGENT BEHAVIOR
-============================================================
+# ============================================================ 32. FINAL AGENT BEHAVIOR
 
 You are not allowed to treat the user's latest message as the only source of truth.
 
