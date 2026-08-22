@@ -1,5 +1,5 @@
 import DocsLayout from "../../DocsLayout";
-import projectImage from "../../../../assets/projects/1.png";
+import projectImage from "../../../../assets/projects/1.webp";
 
 export default function OperationalWorkflowsPage() {
   return (

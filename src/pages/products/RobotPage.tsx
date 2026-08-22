@@ -39,7 +39,7 @@ export default function RobotPage() {
           <div className="abstracted-ui-grid">
             <div className="abstracted-ui-feature reveal">
               <img
-                src="/assets/Craftly_Robot/1.1.jpeg"
+                src="/assets/Craftly_Robot/1.1.webp"
                 alt="Robot detail 1.1"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -54,7 +54,7 @@ export default function RobotPage() {
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
               <img
-                src="/assets/Craftly_Robot/1.2.jpeg"
+                src="/assets/Craftly_Robot/1.2.webp"
                 alt="Robot detail 1.2"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -76,7 +76,7 @@ export default function RobotPage() {
           >
             <div className="abstracted-ui-feature reveal">
               <img
-                src="/assets/Craftly_Robot/2.1.jpeg"
+                src="/assets/Craftly_Robot/2.1.webp"
                 alt="Robot detail 2.1"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -91,7 +91,7 @@ export default function RobotPage() {
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
               <img
-                src="/assets/Craftly_Robot/2.2.jpeg"
+                src="/assets/Craftly_Robot/2.2.webp"
                 alt="Robot detail 2.2"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -111,7 +111,7 @@ export default function RobotPage() {
           >
             <div className="abstracted-ui-feature reveal">
               <img
-                src="/assets/Craftly_Robot/3.1.jpeg"
+                src="/assets/Craftly_Robot/3.1.webp"
                 alt="Robot detail 3.1"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -126,7 +126,7 @@ export default function RobotPage() {
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
               <img
-                src="/assets/Craftly_Robot/3.2.jpeg"
+                src="/assets/Craftly_Robot/3.2.webp"
                 alt="Robot detail 3.2"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -148,7 +148,7 @@ export default function RobotPage() {
           >
             <div className="abstracted-ui-feature reveal">
               <img
-                src="/assets/Craftly_Robot/4.1.jpeg"
+                src="/assets/Craftly_Robot/4.1.webp"
                 alt="Robot detail 4.1"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -163,7 +163,7 @@ export default function RobotPage() {
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
               <img
-                src="/assets/Craftly_Robot/4.2.jpeg"
+                src="/assets/Craftly_Robot/4.2.webp"
                 alt="Robot detail 4.2"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -185,7 +185,7 @@ export default function RobotPage() {
           >
             <div className="abstracted-ui-feature reveal">
               <img
-                src="/assets/Craftly_Robot/5.1.jpeg"
+                src="/assets/Craftly_Robot/5.1.webp"
                 alt="Robot detail 5.1"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -200,7 +200,7 @@ export default function RobotPage() {
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
               <img
-                src="/assets/Craftly_Robot/5.2.jpeg"
+                src="/assets/Craftly_Robot/5.2.webp"
                 alt="Robot detail 5.2"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -240,7 +240,7 @@ export default function RobotPage() {
                 intelligent agents.
               </p>
               <img
-                src="/assets/Craftly_Robot/6.jpeg"
+                src="/assets/Craftly_Robot/6.webp"
                 alt="Robot detail 6"
                 className="product-showcase-image reveal reveal-delay-2"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -255,7 +255,7 @@ export default function RobotPage() {
           >
             <div className="abstracted-ui-feature reveal">
               <img
-                src="/assets/Craftly_Robot/7.1.jpeg"
+                src="/assets/Craftly_Robot/7.1.webp"
                 alt="Robot detail 7.1"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -270,7 +270,7 @@ export default function RobotPage() {
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
               <img
-                src="/assets/Craftly_Robot/7.2.jpeg"
+                src="/assets/Craftly_Robot/7.2.webp"
                 alt="Robot detail 7.2"
                 className="product-showcase-image"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -311,7 +311,7 @@ export default function RobotPage() {
                 on complex tasks.
               </p>
               <img
-                src="/assets/Craftly_Robot/8.jpeg"
+                src="/assets/Craftly_Robot/8.webp"
                 alt="Robot detail 8"
                 className="product-showcase-image reveal reveal-delay-2"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -345,7 +345,7 @@ export default function RobotPage() {
                 bare metal server.
               </p>
               <img
-                src="/assets/Craftly_Robot/9.jpeg"
+                src="/assets/Craftly_Robot/9.webp"
                 alt="Robot detail 9"
                 className="product-showcase-image reveal reveal-delay-2"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
@@ -376,7 +376,7 @@ export default function RobotPage() {
                 environments.
               </p>
               <img
-                src="/assets/Craftly_Robot/10.jpeg"
+                src="/assets/Craftly_Robot/10.webp"
                 alt="Robot detail 10"
                 className="product-showcase-image reveal reveal-delay-2"
                 style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}

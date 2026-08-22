@@ -69,7 +69,7 @@ export default function CompletingOnboardingPage() {
         }}
       >
         <img
-          src="/assets/aggrements/3.png"
+          src="/assets/agreements/3.webp"
           alt="Completing Onboarding 1"
           style={{ width: "100%", display: "block" }}
         />
@@ -89,7 +89,7 @@ export default function CompletingOnboardingPage() {
         }}
       >
         <img
-          src="/assets/aggrements/4.png"
+          src="/assets/agreements/4.webp"
           alt="Completing Onboarding 2"
           style={{ width: "100%", display: "block" }}
         />

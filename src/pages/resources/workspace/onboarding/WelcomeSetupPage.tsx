@@ -111,13 +111,13 @@ export default function WelcomeSetupPage() {
         }}
       >
         <img
-          src="/assets/onboarding_pic/1.png"
+          src="/assets/onboarding_pic/1.webp"
           alt="Welcome and Setup"
           style={{ width: "100%", display: "block" }}
           onError={(e) => {
             e.currentTarget.style.display = "none";
             e.currentTarget.parentElement!.innerHTML =
-              '<p style="color:#5f6368;font-family:inherit;">Image placeholder: /assets/onboarding_pic/1.png</p>';
+              '<p style="color:#5f6368;font-family:inherit;">Image placeholder: /assets/onboarding_pic/1.webp</p>';
           }}
         />
       </div>

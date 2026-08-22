@@ -50,7 +50,7 @@ export default function MembersPage() {
         style={{ marginTop: "32px", marginBottom: "80px" }}
       >
         <img
-          src="/assets/Members/1.png"
+          src="/assets/Members/1.webp"
           alt="Members"
           className="docs__image"
         />
