@@ -1,8 +1,8 @@
-import { type ReactNode } from 'react';
-import { useLocation } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import './Layout.css';
+import { type ReactNode } from "react";
+import { useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import "./Layout.css";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,7 +10,9 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const location = useLocation();
-  const isDocumentationPage = location.pathname.startsWith('/resources/documentation');
+  const isDocumentationPage = location.pathname.startsWith(
+    "/resources/documentation",
+  );
 
   return (
     <div className="layout">

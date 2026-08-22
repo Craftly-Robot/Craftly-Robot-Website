@@ -23,7 +23,6 @@
   border-bottom: 1px solid var(--color-border);
   transition: background-color var(--duration-fast) var(--ease-out);
   cursor: pointer;
-  group: hover;
 }
 
 .capabilities__row:hover {
@@ -64,7 +63,7 @@
 
 .capabilities__arrow {
   color: var(--color-text-muted);
-  transition: 
+  transition:
     transform var(--duration-fast) var(--ease-out),
     color var(--duration-fast) var(--ease-out);
   margin-left: var(--space-lg);
@@ -81,7 +80,7 @@
     align-items: flex-start;
     gap: var(--space-xs);
   }
-  
+
   .capabilities__item-title {
     width: 100%;
   }
@@ -92,12 +91,12 @@
     padding: var(--space-lg) 0;
     align-items: flex-start;
   }
-  
+
   .capabilities__id {
     width: 40px;
     margin-top: 6px;
   }
-  
+
   .capabilities__arrow {
     display: none;
   }

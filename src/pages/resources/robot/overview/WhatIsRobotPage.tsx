@@ -1,24 +1,30 @@
-import DocsLayout from '../../DocsLayout';
+import DocsLayout from "../../DocsLayout";
 
 export default function WhatIsRobotPage() {
   return (
-    <DocsLayout 
-      title="What is Craftly Robot? â€” Craftly Robot"
+    <DocsLayout
+      title="What is Craftly Robot? — Craftly Robot"
       description="What is Craftly Robot? in Craftly Robot"
       tocItems={[
-        { id: 'what-is-craftly-robot', label: 'What is Craftly Robot?' }
+        { id: "what-is-craftly-robot", label: "What is Craftly Robot?" },
       ]}
     >
       <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt; <strong>What is Craftly Robot?</strong>
+        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
+        <strong>What is Craftly Robot?</strong>
       </div>
 
-      <h1 className="docs__title" id="what-is-craftly-robot">What is Craftly Robot?</h1>
+      <h1 className="docs__title" id="what-is-craftly-robot">
+        What is Craftly Robot?
+      </h1>
       <p className="docs__text">
-        Craftly Robot is an AI system being developed to act as a real-world assistant rather than only a conversational model.
+        Craftly Robot is an AI system being developed to act as a real-world
+        assistant rather than only a conversational model.
       </p>
       <p className="docs__text">
-        Its goal is to help users move from understanding a problem &rarr; finding the right resources &rarr; coordinating actions &rarr; completing the task.
+        Its goal is to help users move from understanding a problem &rarr;
+        finding the right resources &rarr; coordinating actions &rarr;
+        completing the task.
       </p>
       <p className="docs__text">
         Robot is designed around capabilities such as:
@@ -34,7 +40,8 @@ export default function WhatIsRobotPage() {
         <li>Human approval and consent before consequential actions</li>
       </ul>
       <p className="docs__text">
-        Robot is currently under active research and development, so its capabilities and architecture will continue to evolve.
+        Robot is currently under active research and development, so its
+        capabilities and architecture will continue to evolve.
       </p>
     </DocsLayout>
   );

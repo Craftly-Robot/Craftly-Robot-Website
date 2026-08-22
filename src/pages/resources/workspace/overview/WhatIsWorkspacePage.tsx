@@ -1,24 +1,41 @@
-import DocsLayout from '../../DocsLayout';
+import DocsLayout from "../../DocsLayout";
 
 export default function WhatIsWorkspacePage() {
   return (
-    <DocsLayout 
-      title="What is Craftly Workspace? â€” Craftly Workspace"
+    <DocsLayout
+      title="What is Craftly Workspace? — Craftly Workspace"
       description="What is Craftly Workspace? in Craftly Workspace"
       tocItems={[
-        { id: 'what-is-craftly-workspace', label: 'What is Craftly Workspace?' }
+        {
+          id: "what-is-craftly-workspace",
+          label: "What is Craftly Workspace?",
+        },
       ]}
     >
       <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Overview &gt; <strong>What is Craftly Workspace?</strong>
+        Documentation &gt; Craftly Workspace &gt; Overview &gt;{" "}
+        <strong>What is Craftly Workspace?</strong>
       </div>
 
-      <h1 className="docs__title" id="what-is-craftly-workspace">What is Craftly Workspace?</h1>
-      <p className="docs__text">Craftly Workspace is the operational system that powers how Craftly organizes its people, work, communication, resources, and internal processes.</p>
-      
-      <p className="docs__text">Craftly is not only building software products; it is building a technology organization and the systems required to make that organization operate effectively. Workspace is the current working product responsible for that operational layer.</p>
+      <h1 className="docs__title" id="what-is-craftly-workspace">
+        What is Craftly Workspace?
+      </h1>
+      <p className="docs__text">
+        Craftly Workspace is the operational system that powers how Craftly
+        organizes its people, work, communication, resources, and internal
+        processes.
+      </p>
 
-      <p className="docs__text">Workspace provides a structured environment where members can:</p>
+      <p className="docs__text">
+        Craftly is not only building software products; it is building a
+        technology organization and the systems required to make that
+        organization operate effectively. Workspace is the current working
+        product responsible for that operational layer.
+      </p>
+
+      <p className="docs__text">
+        Workspace provides a structured environment where members can:
+      </p>
       <ul className="docs__list">
         <li>Complete onboarding and establish their organizational identity</li>
         <li>Understand their roles and responsibilities</li>
@@ -33,9 +50,16 @@ export default function WhatIsWorkspacePage() {
         <li>Receive important organizational notices</li>
       </ul>
 
-      <p className="docs__text">The goal is to replace scattered communication and disconnected workflows with one structured system for getting work done.</p>
+      <p className="docs__text">
+        The goal is to replace scattered communication and disconnected
+        workflows with one structured system for getting work done.
+      </p>
 
-      <p className="docs__text">Workspace is therefore not simply a dashboard or project-management application. It acts as the operational foundation of the Craftly organization.</p>
+      <p className="docs__text">
+        Workspace is therefore not simply a dashboard or project-management
+        application. It acts as the operational foundation of the Craftly
+        organization.
+      </p>
     </DocsLayout>
   );
 }

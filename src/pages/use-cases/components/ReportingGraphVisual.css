@@ -132,37 +132,65 @@
 
   /* Map Nodes and Edges to Grid */
   /* Node 0 (Chairman) */
-  .reporting-graph__node-wrapper:nth-child(1) .reporting-graph__node { grid-column: 1; grid-row: 1; }
-  .reporting-graph__node-wrapper:nth-child(1) .reporting-graph__edge { grid-column: 2; grid-row: 1; }
-  
+  .reporting-graph__node-wrapper:nth-child(1) .reporting-graph__node {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .reporting-graph__node-wrapper:nth-child(1) .reporting-graph__edge {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   /* Node 1 (MD) */
-  .reporting-graph__node-wrapper:nth-child(2) .reporting-graph__node { grid-column: 3; grid-row: 1; }
-  .reporting-graph__node-wrapper:nth-child(2) .reporting-graph__edge { grid-column: 4; grid-row: 1; }
-  
+  .reporting-graph__node-wrapper:nth-child(2) .reporting-graph__node {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .reporting-graph__node-wrapper:nth-child(2) .reporting-graph__edge {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
   /* Node 2 (C-Suite) */
-  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__node { grid-column: 5; grid-row: 1; }
-  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge { 
-    grid-column: 5; grid-row: 2; 
-    width: 2px; height: 60px; /* Vertical gap between rows */
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__node {
+    grid-column: 5;
+    grid-row: 1;
   }
-  
+  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge {
+    grid-column: 5;
+    grid-row: 2;
+    width: 2px;
+    height: 60px; /* Vertical gap between rows */
+  }
+
   /* Node 3 (Senior) */
-  .reporting-graph__node-wrapper:nth-child(4) .reporting-graph__node { grid-column: 5; grid-row: 3; }
-  .reporting-graph__node-wrapper:nth-child(4) .reporting-graph__edge { 
-    grid-column: 4; grid-row: 3; 
+  .reporting-graph__node-wrapper:nth-child(4) .reporting-graph__node {
+    grid-column: 5;
+    grid-row: 3;
+  }
+  .reporting-graph__node-wrapper:nth-child(4) .reporting-graph__edge {
+    grid-column: 4;
+    grid-row: 3;
     transform: rotate(180deg); /* Left edge */
   }
-  
+
   /* Node 4 (Junior) */
-  .reporting-graph__node-wrapper:nth-child(5) .reporting-graph__node { grid-column: 3; grid-row: 3; }
-  .reporting-graph__node-wrapper:nth-child(5) .reporting-graph__edge { 
-    grid-column: 2; grid-row: 3; 
+  .reporting-graph__node-wrapper:nth-child(5) .reporting-graph__node {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .reporting-graph__node-wrapper:nth-child(5) .reporting-graph__edge {
+    grid-column: 2;
+    grid-row: 3;
     transform: rotate(180deg); /* Left edge */
   }
-  
+
   /* Node 5 (Executive) */
-  .reporting-graph__node-wrapper:nth-child(6) .reporting-graph__node { grid-column: 1; grid-row: 3; }
-  
+  .reporting-graph__node-wrapper:nth-child(6) .reporting-graph__node {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
   /* Desktop Edge Base Styles */
   .reporting-graph__edge {
     width: 50px; /* Base horizontal edge width */
@@ -178,13 +206,14 @@
   .reporting-graph__edge-fill.is-active {
     transform: scaleX(1);
   }
-  
+
   /* Vertical Edge Fill (override for node 2) */
   .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge-fill {
     transform-origin: top;
     transform: scaleY(0);
   }
-  .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__edge-fill.is-active {
+  .reporting-graph__node-wrapper:nth-child(3)
+    .reporting-graph__edge-fill.is-active {
     transform: scaleY(1);
   }
 
@@ -195,7 +224,7 @@
     transform: translateY(-50%);
     animation: moveMessageX 0.5s ease forwards;
   }
-  
+
   /* Vertical Message Dot (override for node 2) */
   .reporting-graph__node-wrapper:nth-child(3) .reporting-graph__message-dot {
     left: 50%;

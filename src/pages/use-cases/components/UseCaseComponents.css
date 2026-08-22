@@ -98,7 +98,7 @@
   font-size: 32px;
   font-weight: 500;
   margin-bottom: var(--space-lg);
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   letter-spacing: -0.01em;
 }
 
@@ -125,7 +125,7 @@
 }
 
 .ucc-feature__desc li::before {
-  content: '—';
+  content: "—";
   position: absolute;
   left: 0;
   color: inherit;
@@ -157,7 +157,7 @@
   font-size: 20px;
   font-weight: 500;
   margin-bottom: var(--space-sm);
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
 }
 
 .ucc-grid-card__desc {
@@ -168,22 +168,22 @@
 
 .ucc-scenario {
   margin-block: var(--space-2xl);
-  background: rgba(0,0,0,0.02);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-md);
   padding: var(--space-2xl);
 }
 
 .ucc-scenario__header {
   margin-bottom: var(--space-xl);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: var(--space-md);
 }
 
 .ucc-scenario__title {
   font-size: 24px;
   font-weight: 500;
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
 }
 
 .ucc-scenario__flow {
@@ -235,7 +235,7 @@
 .ucc-badge--available {
   background: rgba(0, 0, 0, 0.05);
   color: #000;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .ucc-badge--research {
@@ -314,7 +314,7 @@
 .ucc-cta__headline {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 500;
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   margin-bottom: var(--space-xl);
 }
 
@@ -330,7 +330,7 @@
     flex-direction: column;
     padding-inline: var(--space-xl);
   }
-  
+
   .ucc-cta__actions .ucc-btn-primary,
   .ucc-cta__actions .ucc-btn-secondary {
     width: 100%;
@@ -347,7 +347,9 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 999px;
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
   text-decoration: none;
 }
 
@@ -360,7 +362,7 @@
 .ucc-btn-secondary {
   background: transparent;
   color: #000;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .ucc-btn-primary:hover,

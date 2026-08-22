@@ -21,7 +21,7 @@
 }
 
 .download-section__title {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 500;
   margin-bottom: var(--space-md);
   color: var(--color-text);
@@ -93,7 +93,7 @@
     flex-direction: column;
     width: 100%;
   }
-  
+
   .download-section__btn-primary,
   .download-section__btn-secondary {
     width: 100%;

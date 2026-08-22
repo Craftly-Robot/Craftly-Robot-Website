@@ -1,24 +1,27 @@
-import { useState, useEffect, useRef, type MouseEvent } from 'react';
-import { Link } from 'react-router-dom';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import './CTASection.css';
+import { useState, useEffect, useRef, type MouseEvent } from "react";
+import { Link } from "react-router-dom";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
+import "./CTASection.css";
 
 interface CTASectionProps {
   title?: string;
 }
 
-export default function CTASection({ title = "Download Craftly Workspace" }: CTASectionProps) {
+export default function CTASection({
+  title = "Download Craftly Workspace",
+}: CTASectionProps) {
   const revealRef = useScrollReveal();
-  const [os, setOs] = useState('Windows');
+  const [os, setOs] = useState("Windows");
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent.toLowerCase();
-    if (userAgent.includes('win')) setOs('Windows');
-    else if (userAgent.includes('mac')) setOs('macOS');
-    else if (userAgent.includes('android')) setOs('Android');
-    else if (userAgent.includes('iphone') || userAgent.includes('ipad')) setOs('iOS');
-    else if (userAgent.includes('linux')) setOs('Linux');
+    if (userAgent.includes("win")) setOs("Windows");
+    else if (userAgent.includes("mac")) setOs("macOS");
+    else if (userAgent.includes("android")) setOs("Android");
+    else if (userAgent.includes("iphone") || userAgent.includes("ipad"))
+      setOs("iOS");
+    else if (userAgent.includes("linux")) setOs("Linux");
   }, []);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -26,14 +29,14 @@ export default function CTASection({ title = "Download Craftly Workspace" }: CTA
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    containerRef.current.style.setProperty('--mouse-x', `${x}px`);
-    containerRef.current.style.setProperty('--mouse-y', `${y}px`);
+    containerRef.current.style.setProperty("--mouse-x", `${x}px`);
+    containerRef.current.style.setProperty("--mouse-y", `${y}px`);
   };
 
   return (
     <section className="section section--xl home-cta" ref={revealRef}>
       <div className="container container--wide">
-        <div 
+        <div
           className="home-cta__container reveal"
           ref={containerRef}
           onMouseMove={handleMouseMove}
@@ -43,13 +46,13 @@ export default function CTASection({ title = "Download Craftly Workspace" }: CTA
             <div className="home-cta__bg-grid" />
             <div className="home-cta__bg-spotlight" />
           </div>
-          
+
           <div className="home-cta__content">
             <h2 className="home-cta__headline reveal reveal-delay-1">
               {title}
             </h2>
             <div className="home-cta__actions reveal reveal-delay-2">
-              {(os === 'Windows' || os === 'Linux' || os === 'Unknown OS') && (
+              {(os === "Windows" || os === "Linux" || os === "Unknown OS") && (
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
                     Download for x64
@@ -59,7 +62,7 @@ export default function CTASection({ title = "Download Craftly Workspace" }: CTA
                   </Link>
                 </>
               )}
-              {os === 'macOS' && (
+              {os === "macOS" && (
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
                     Download for Apple Silicon
@@ -69,7 +72,7 @@ export default function CTASection({ title = "Download Craftly Workspace" }: CTA
                   </Link>
                 </>
               )}
-              {(os === 'Android' || os === 'iOS') && (
+              {(os === "Android" || os === "iOS") && (
                 <Link to="/download" className="home-cta__btn-primary">
                   Download
                 </Link>

@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-import { useScrollReveal } from '../../../hooks/useScrollReveal';
-import './UseCaseComponents.css';
+import type { ReactNode } from "react";
+import { useScrollReveal } from "../../../hooks/useScrollReveal";
+import "./UseCaseComponents.css";
 
 interface UseCaseHeroProps {
   title: ReactNode;
@@ -9,7 +9,12 @@ interface UseCaseHeroProps {
   secondaryCta?: ReactNode;
 }
 
-export function UseCaseHero({ title, description, primaryCta, secondaryCta }: UseCaseHeroProps) {
+export function UseCaseHero({
+  title,
+  description,
+  primaryCta,
+  secondaryCta,
+}: UseCaseHeroProps) {
   const revealRef = useScrollReveal();
 
   return (

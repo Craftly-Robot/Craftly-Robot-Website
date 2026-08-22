@@ -1,11 +1,21 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import TechSnake from './TechSnake';
-import './Hero.css';
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import TechSnake from "./TechSnake";
+import "./Hero.css";
 
 function MonitorIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
       <line x1="8" y1="21" x2="16" y2="21"></line>
       <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -14,13 +24,17 @@ function MonitorIcon({ className }: { className?: string }) {
 }
 
 export default function Hero() {
-  const [osName, setOsName] = useState('Windows');
+  const [osName, setOsName] = useState("Windows");
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent.toLowerCase();
     if (/android/i.test(userAgent)) {
       setOsName("Android");
-    } else if (/iphone|ipad|ipod/i.test(userAgent) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)) {
+    } else if (
+      /iphone|ipad|ipod/i.test(userAgent) ||
+      (window.navigator.platform === "MacIntel" &&
+        window.navigator.maxTouchPoints > 1)
+    ) {
       setOsName("iOS");
     } else if (userAgent.indexOf("mac") !== -1) {
       setOsName("macOS");
@@ -31,11 +45,9 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero__content">
-          
           <TypewriterTitle />
-
 
           <div className="hero__cta-group">
             <Link to="/download" className="hero__btn-primary">
@@ -46,27 +58,27 @@ export default function Hero() {
               Explore use cases
             </Link>
           </div>
-
         </div>
 
         <div className="hero__media-wrapper">
-          <img 
-            src="/assets/Homepage_Picture/1.png" 
-            alt="Craftly interface" 
-            style={{ 
-              width: '100%', 
-              height: 'auto', 
-              borderRadius: '8px', 
-              boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
-              border: '1px solid rgba(0,0,0,0.05)'
-            }} 
+          <img
+            src="/assets/Homepage_Picture/1.png"
+            alt="Craftly interface"
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "8px",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+              border: "1px solid rgba(0,0,0,0.05)",
+            }}
           />
         </div>
 
         <TechSnake />
 
-        <TypewriterStatement text={`Craftly is building a new kind of\ntechnology organization, where\npeople, and intelligent agents work\ntogether.`} />
-
+        <TypewriterStatement
+          text={`Craftly is building a new kind of\ntechnology organization, where\npeople, and intelligent agents work\ntogether.`}
+        />
       </div>
     </section>
   );
@@ -74,7 +86,7 @@ export default function Hero() {
 
 function TypewriterTitle() {
   const text = "Hello World From Bangladesh ";
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [showFlag, setShowFlag] = useState(false);
 
   useEffect(() => {
@@ -97,9 +109,9 @@ function TypewriterTitle() {
       {displayedText}
       {!showFlag && <span className="typewriter-cursor"></span>}
       {showFlag && (
-        <img 
-          src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp" 
-          alt="Bangladesh Flag" 
+        <img
+          src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp"
+          alt="Bangladesh Flag"
           className="hero__flag"
         />
       )}
@@ -108,7 +120,7 @@ function TypewriterTitle() {
 }
 
 function TypewriterStatement({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [inView, setInView] = useState(false);
   const statementRef = useRef<HTMLDivElement>(null);
 
@@ -120,7 +132,7 @@ function TypewriterStatement({ text }: { text: string }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (statementRef.current) {
@@ -146,7 +158,7 @@ function TypewriterStatement({ text }: { text: string }) {
     return () => clearInterval(interval);
   }, [text, inView]);
 
-  const lines = displayedText.split('\n');
+  const lines = displayedText.split("\n");
 
   return (
     <div className="hero__statement" ref={statementRef}>

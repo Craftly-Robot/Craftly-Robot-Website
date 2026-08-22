@@ -12,7 +12,7 @@
 }
 
 .download-hero__title {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 3.5rem;
   font-weight: 500;
   line-height: 1.1;
@@ -75,8 +75,13 @@
 }
 
 @keyframes cursorBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Product selector tabs — pill-shaped, tight to title */
@@ -107,7 +112,6 @@
   background: #f8f9fa;
   border-color: #bbb;
 }
-
 
 /* Download section */
 .download-section {
@@ -199,7 +203,7 @@
 
 .dl-btn--primary:hover {
   background: #000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .dl-btn--secondary {
@@ -238,15 +242,15 @@
     grid-template-columns: 1fr;
     gap: var(--space-4xl);
   }
-  
+
   .download-columns--mobile .os-column {
     width: 100%;
   }
-  
+
   .os-column {
     padding: 0 !important;
   }
-  
+
   .os-column:not(:last-child) {
     border-right: none;
     border-bottom: 1px solid var(--color-border-subtle);

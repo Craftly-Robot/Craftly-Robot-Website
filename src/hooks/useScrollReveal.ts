@@ -1,9 +1,9 @@
-import { useEffect, useRef, useCallback } from 'react';
-import { ANIMATION } from '../utils/animation';
+import { useCallback, useEffect, useRef } from "react";
+import { ANIMATION } from "../utils/animation";
 
 export function useScrollReveal(
   options?: IntersectionObserverInit,
-  deps: React.DependencyList = []
+  deps: React.DependencyList = [],
 ) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -11,11 +11,11 @@ export function useScrollReveal(
     (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          entry.target.classList.add("revealed");
         }
       });
     },
-    []
+    [],
   );
 
   useEffect(() => {
@@ -28,8 +28,8 @@ export function useScrollReveal(
       ...options,
     });
 
-    const elements = Array.from(container.querySelectorAll('.reveal'));
-    if (container.classList.contains('reveal')) {
+    const elements = Array.from(container.querySelectorAll(".reveal"));
+    if (container.classList.contains("reveal")) {
       elements.push(container);
     }
     elements.forEach((el) => observer.observe(el));

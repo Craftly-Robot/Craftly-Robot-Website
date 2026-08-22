@@ -1,18 +1,18 @@
-import { SEO } from '../components/SEO';
-import Hero from '../components/hero/Hero';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import ProductShowcase from '../components/sections/ProductShowcase';
-import DownloadSection from '../components/sections/DownloadSection';
-import { products } from '../data/products';
-import './HomePage.css';
+import { SEO } from "../components/SEO";
+import Hero from "../components/hero/Hero";
+import { useScrollReveal } from "../hooks/useScrollReveal";
+import ProductShowcase from "../components/sections/ProductShowcase";
+import DownloadSection from "../components/sections/DownloadSection";
+import { products } from "../data/products";
+import "./HomePage.css";
 
 export default function HomePage() {
   const revealRef = useScrollReveal();
 
   return (
     <>
-      <SEO 
-        title="Technology, Intelligence & Organization" 
+      <SEO
+        title="Technology, Intelligence & Organization"
         description="Craftly builds intelligent systems for the agentic era. Explore Craftly Workspace and Craftly Robot — tools for operating modern organizations and autonomous software engineering in Bangladesh."
       />
 

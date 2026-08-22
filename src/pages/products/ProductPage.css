@@ -141,7 +141,7 @@
 }
 
 .product-hero-clean__title {
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   font-size: 56px;
   font-weight: 400;
   color: #000000;
@@ -180,7 +180,9 @@
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn-product-download:hover {
@@ -194,7 +196,7 @@
 }
 
 .explore-features-section__title {
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   font-size: 44px;
   font-weight: 500;
   color: #111111;
@@ -209,7 +211,7 @@
 }
 
 .abstracted-ui-title {
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   font-size: 32px;
   font-weight: 500;
   color: #111111;
@@ -239,7 +241,7 @@
 }
 
 .abstracted-ui-feature__title {
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   font-size: 20px;
   font-weight: 500;
   color: #111111;
@@ -275,7 +277,7 @@
 }
 
 .workspace-option__title {
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   font-size: 24px;
   font-weight: 500;
   color: #111111;
@@ -302,15 +304,15 @@
   .product-hero {
     padding-block: var(--space-2xl);
   }
-  
+
   .product-showcase-large {
     margin-bottom: var(--space-2xl);
   }
-  
+
   .product-showcase-image {
     border-radius: var(--radius-lg);
   }
-  
+
   .explore-features-section {
     padding-top: var(--space-md);
   }

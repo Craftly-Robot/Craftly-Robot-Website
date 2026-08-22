@@ -1,31 +1,34 @@
-import DocsLayout from '../../DocsLayout';
+import DocsLayout from "../../DocsLayout";
 
 export default function CompletingOnboardingPage() {
   return (
-    <DocsLayout 
-      title="Completing Onboarding â€” Craftly Workspace"
+    <DocsLayout
+      title="Completing Onboarding — Craftly Workspace"
       description="Completing Onboarding in Craftly Workspace"
       tocItems={[
-        { id: 'completing-onboarding', label: 'Completing Onboarding' }
+        { id: "completing-onboarding", label: "Completing Onboarding" },
       ]}
     >
       <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt; <strong>Completing Onboarding</strong>
+        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;
+        <strong>Completing Onboarding</strong>
       </div>
 
-      <h1 className="docs__title" id="completing-onboarding">Completing Onboarding</h1>
-      
+      <h1 className="docs__title" id="completing-onboarding">
+        Completing Onboarding
+      </h1>
+
       <p className="docs__text">
         Congratulations your Craftly onboarding is now complete.
       </p>
-      
-      <p className="docs__text">
-        From here, there is nothing else you need to rush. Wait for your organizational position to be assigned and stay ready to begin your responsibilities.
-      </p>
 
       <p className="docs__text">
-        Once you receive your position:
+        From here, there is nothing else you need to rush. Wait for your
+        organizational position to be assigned and stay ready to begin your
+        responsibilities.
       </p>
+
+      <p className="docs__text">Once you receive your position:</p>
 
       <ul className="docs__list">
         <li>Understand your role and responsibilities clearly.</li>
@@ -34,31 +37,61 @@ export default function CompletingOnboardingPage() {
         <li>Stay dedicated and sincere toward your responsibilities.</li>
         <li>Communicate clearly with your team and leadership.</li>
         <li>Ask for help when you are unsure or blocked.</li>
-        <li>Keep improving your skills and understanding of the organization.</li>
-        <li>Maintain better communication, consistency, and professionalism.</li>
+        <li>
+          Keep improving your skills and understanding of the organization.
+        </li>
+        <li>
+          Maintain better communication, consistency, and professionalism.
+        </li>
       </ul>
 
       <p className="docs__text">
-        Your position is not just a title it represents a responsibility within the organization.
+        Your position is not just a title it represents a responsibility within
+        the organization.
       </p>
 
       <p className="docs__text" style={{ fontWeight: 600 }}>
-        Stay active. Understand your work. Stay dedicated. Communicate well. Keep learning. Keep contributing.
+        Stay active. Understand your work. Stay dedicated. Communicate well.
+        Keep learning. Keep contributing.
       </p>
-      
-      <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
-        <img 
-          src="/assets/aggrements/3.png" 
-          alt="Completing Onboarding 1" 
-          style={{ width: '100%', display: 'block' }} 
+
+      <div
+        style={{
+          borderRadius: "8px",
+          overflow: "hidden",
+          border: "1px solid #eaeaeb",
+          backgroundColor: "#f8f9fa",
+          minHeight: "300px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "32px 0",
+        }}
+      >
+        <img
+          src="/assets/aggrements/3.png"
+          alt="Completing Onboarding 1"
+          style={{ width: "100%", display: "block" }}
         />
       </div>
 
-      <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
-        <img 
-          src="/assets/aggrements/4.png" 
-          alt="Completing Onboarding 2" 
-          style={{ width: '100%', display: 'block' }} 
+      <div
+        style={{
+          borderRadius: "8px",
+          overflow: "hidden",
+          border: "1px solid #eaeaeb",
+          backgroundColor: "#f8f9fa",
+          minHeight: "300px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "32px 0",
+        }}
+      >
+        <img
+          src="/assets/aggrements/4.png"
+          alt="Completing Onboarding 2"
+          style={{ width: "100%", display: "block" }}
         />
       </div>
     </DocsLayout>

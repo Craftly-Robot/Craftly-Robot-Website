@@ -5,8 +5,20 @@
   overflow: hidden;
   position: relative;
   /* Add subtle gradient masks to fade out edges */
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 .snake-track {
@@ -46,7 +58,8 @@
 }
 
 @keyframes snakeWave {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   25% {
