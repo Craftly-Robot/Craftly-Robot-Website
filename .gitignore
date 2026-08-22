@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal docs — never commit/push
+IMPLEMENTATION_PLAN.md
