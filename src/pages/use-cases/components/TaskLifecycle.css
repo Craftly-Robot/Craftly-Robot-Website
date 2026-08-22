@@ -106,21 +106,27 @@
   transition: all 0.3s ease;
 }
 
-.task-lifecycle__card-status.status-0 { /* Assigned */ }
-.task-lifecycle__card-status.status-1 { /* In Progress */
+/* .task-lifecycle__card-status.status-0 {
+  Assigned
+} */
+.task-lifecycle__card-status.status-1 {
+  /* In Progress */
   border-color: #888;
   color: var(--color-text);
 }
-.task-lifecycle__card-status.status-2 { /* Submission */
+.task-lifecycle__card-status.status-2 {
+  /* Submission */
   background-color: var(--color-text);
   color: var(--color-bg);
   border-color: var(--color-text);
 }
-.task-lifecycle__card-status.status-3 { /* Review */
+.task-lifecycle__card-status.status-3 {
+  /* Review */
   border-color: var(--color-text);
   color: var(--color-text);
 }
-.task-lifecycle__card-status.status-4 { /* Completed */
+.task-lifecycle__card-status.status-4 {
+  /* Completed */
   background-color: transparent;
   border-color: transparent;
   color: #888;
@@ -160,7 +166,7 @@
   border-radius: var(--radius-sm);
   background-color: #fafafa;
   margin-top: 1rem;
-  
+
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);

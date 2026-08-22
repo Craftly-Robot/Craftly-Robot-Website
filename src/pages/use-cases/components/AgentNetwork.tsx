@@ -1,5 +1,5 @@
-import { useScrollReveal } from '../../../hooks/useScrollReveal';
-import './UseCaseComponents.css';
+import { useScrollReveal } from "../../../hooks/useScrollReveal";
+import "./UseCaseComponents.css";
 
 interface AgentNetworkProps {
   agents: { id: string; label: string }[];
@@ -23,7 +23,16 @@ export function AgentNetwork({ agents }: AgentNetworkProps) {
             { cx: 300, cy: 250 },
           ];
           const pos = positions[index % positions.length];
-          return <line key={`line-${agent.id}`} className="ucc-svg-line" x1={pos.cx} y1={pos.cy} x2="300" y2="150" />;
+          return (
+            <line
+              key={`line-${agent.id}`}
+              className="ucc-svg-line"
+              x1={pos.cx}
+              y1={pos.cy}
+              x2="300"
+              y2="150"
+            />
+          );
         })}
 
         {/* Layer 2: Nodes */}
@@ -36,13 +45,25 @@ export function AgentNetwork({ agents }: AgentNetworkProps) {
             { cx: 300, cy: 250 },
           ];
           const pos = positions[index % positions.length];
-          return <circle key={`node-${agent.id}`} className="ucc-svg-node" cx={pos.cx} cy={pos.cy} r="30" />;
+          return (
+            <circle
+              key={`node-${agent.id}`}
+              className="ucc-svg-node"
+              cx={pos.cx}
+              cy={pos.cy}
+              r="30"
+            />
+          );
         })}
 
         {/* Layer 3: Text */}
         <text className="ucc-svg-text" x="300" y="145">
-          <tspan x="300" dy="0">Craftly</tspan>
-          <tspan x="300" dy="18">Robot</tspan>
+          <tspan x="300" dy="0">
+            Craftly
+          </tspan>
+          <tspan x="300" dy="18">
+            Robot
+          </tspan>
         </text>
         {agents.map((agent, index) => {
           const positions = [
@@ -52,12 +73,17 @@ export function AgentNetwork({ agents }: AgentNetworkProps) {
             { cx: 300, cy: 250 },
           ];
           const pos = positions[index % positions.length];
-          
+
           // Adjust top node text to sit above the node to avoid overlapping the vertical line
           const textY = pos.cy === 50 ? pos.cy - 40 : pos.cy + 40;
 
           return (
-            <text key={`text-${agent.id}`} className="ucc-svg-text" x={pos.cx} y={textY}>
+            <text
+              key={`text-${agent.id}`}
+              className="ucc-svg-text"
+              x={pos.cx}
+              y={textY}
+            >
               {agent.label}
             </text>
           );

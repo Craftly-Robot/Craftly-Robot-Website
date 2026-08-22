@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-import { useScrollReveal } from '../../../hooks/useScrollReveal';
-import './UseCaseComponents.css';
+import type { ReactNode } from "react";
+import { useScrollReveal } from "../../../hooks/useScrollReveal";
+import "./UseCaseComponents.css";
 
 interface Step {
   label: string;
