@@ -1,4 +1,4 @@
-import './VideoPlaceholder.css';
+import "./VideoPlaceholder.css";
 
 interface VideoPlaceholderProps {
   label: string;
@@ -11,7 +11,9 @@ export default function VideoPlaceholder({ label }: VideoPlaceholderProps) {
       <div className="mock-panel mock-panel--main">
         <div className="mock-panel__header">
           <div className="mock-panel__dots">
-            <span /><span /><span />
+            <span />
+            <span />
+            <span />
           </div>
           <div className="mock-panel__title">{label}</div>
         </div>
@@ -30,7 +32,7 @@ export default function VideoPlaceholder({ label }: VideoPlaceholderProps) {
         <div className="mock-panel__body">
           <div className="mock-circle" />
           <div className="mock-line mock-line--sm" />
-          <div className="mock-line mock-line--sm" style={{ width: '40%' }} />
+          <div className="mock-line mock-line--sm" style={{ width: "40%" }} />
         </div>
       </div>
 
@@ -40,8 +42,11 @@ export default function VideoPlaceholder({ label }: VideoPlaceholderProps) {
         </div>
         <div className="mock-panel__body">
           <div className="mock-line mock-line--code" />
-          <div className="mock-line mock-line--code" style={{ width: '70%', marginLeft: '12px' }} />
-          <div className="mock-line mock-line--code" style={{ width: '85%' }} />
+          <div
+            className="mock-line mock-line--code"
+            style={{ width: "70%", marginLeft: "12px" }}
+          />
+          <div className="mock-line mock-line--code" style={{ width: "85%" }} />
         </div>
       </div>
     </div>
