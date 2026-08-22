@@ -43,7 +43,9 @@
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .support-hero__btn {
@@ -89,9 +91,9 @@
   text-decoration: none;
 }
 
-.support-card:hover {
-  /* removed transform translateY */
-}
+/* .support-card:hover {
+  removed transform translateY
+} */
 
 .support-card__icon {
   width: 100px;

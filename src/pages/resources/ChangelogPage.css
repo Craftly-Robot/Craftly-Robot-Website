@@ -45,8 +45,13 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -126,7 +131,6 @@
   color: #202124;
 }
 
-
 .changelog-list-header {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -182,7 +186,6 @@
   font-size: 15px;
   color: #5f6368;
 }
-
 
 .changelog-card {
   background: #f8f9fa;
@@ -260,7 +263,9 @@
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
-  transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+  transition:
+    grid-template-rows 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .cl-accordion__content.is-open {
@@ -292,7 +297,7 @@
 }
 
 .cl-accordion__content li::before {
-  content: '•';
+  content: "•";
   position: absolute;
   left: 0;
   top: 0;

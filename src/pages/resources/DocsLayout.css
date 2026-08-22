@@ -64,9 +64,15 @@
     top 0.2s ease-out;
 }
 
-.docs__mobile-toggle-line:nth-child(1) { top: 0; }
-.docs__mobile-toggle-line:nth-child(2) { top: 6px; }
-.docs__mobile-toggle-line:nth-child(3) { top: 12px; }
+.docs__mobile-toggle-line:nth-child(1) {
+  top: 0;
+}
+.docs__mobile-toggle-line:nth-child(2) {
+  top: 6px;
+}
+.docs__mobile-toggle-line:nth-child(3) {
+  top: 12px;
+}
 
 .docs__mobile-toggle--open .docs__mobile-toggle-line:nth-child(1) {
   top: 6px;
@@ -101,7 +107,7 @@
   .docs__sidebar {
     display: block;
   }
-  
+
   .docs__sidebar--left {
     width: 300px;
     flex-shrink: 0;
@@ -112,7 +118,7 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
-  
+
   .docs__sidebar--right {
     width: 260px;
     flex-shrink: 0;
@@ -122,14 +128,14 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
-  
+
   /* Hide scrollbars for sidebars */
   .docs__sidebar--left,
   .docs__sidebar--right {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .docs__sidebar--left::-webkit-scrollbar,
   .docs__sidebar--right::-webkit-scrollbar {
     display: none;
@@ -157,7 +163,9 @@
   text-decoration: none;
   cursor: pointer;
   border-left: 3px solid transparent;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
   min-width: 0;
 }
 
@@ -199,7 +207,9 @@
   border-radius: 0 6px 6px 0;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
   border-left: 3px solid transparent;
   white-space: nowrap;
   overflow: hidden;
@@ -369,9 +379,9 @@
 }
 
 /* Right Sidebar TOC */
-.docs__toc {
-  /* Removed sticky here since parent sidebar is sticky */
-}
+/* .docs__toc {
+  Removed sticky here since parent sidebar is sticky
+} */
 
 .docs__toc-title {
   font-size: 15px;
@@ -411,7 +421,7 @@
 }
 
 .docs__toc-item--active a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -1px; /* overlap border */
   top: 0;
@@ -476,7 +486,7 @@
   scroll-margin-top: 100px;
 }
 
- /* Tables */
+/* Tables */
 .docs__table-container {
   overflow-x: auto;
   margin-bottom: 24px;
