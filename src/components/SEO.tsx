@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 interface SEOProps {
   title: string;
@@ -9,22 +9,22 @@ interface SEOProps {
   image?: string;
 }
 
-export function SEO({ 
-  title, 
-  description, 
-  name = "Craftly", 
+export function SEO({
+  title,
+  description,
+  name = "Craftly",
   type = "website",
   url = "https://craftlyrobot.com",
-  image = "https://craftlyrobot.com/og-image.jpg" 
+  image = "https://craftlyrobot.com/og-image.jpg",
 }: SEOProps) {
   const fullTitle = `${title} | Craftly`;
-  
+
   return (
     <Helmet>
       {/* Standard metadata tags */}
       <title>{fullTitle}</title>
-      <meta name='description' content={description} />
-      
+      <meta name="description" content={description} />
+
       {/* OpenGraph tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
@@ -32,7 +32,7 @@ export function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={name} />
       <meta property="og:image" content={image} />
-      
+
       {/* Twitter tags */}
       <meta name="twitter:creator" content={name} />
       <meta name="twitter:card" content="summary_large_image" />

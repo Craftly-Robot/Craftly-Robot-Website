@@ -1,6 +1,6 @@
-import { useRef, useEffect } from 'react';
-import { Lottie, LottieSubscription, type LottieHandle } from 'lottie-react';
-import dropdownAnimation from '../../assets/animations/dropdown.json';
+import { useRef, useEffect } from "react";
+import { Lottie, LottieSubscription, type LottieHandle } from "lottie-react";
+import dropdownAnimation from "../../assets/animations/dropdown.json";
 
 interface DropdownIconProps {
   isOpen: boolean;
@@ -11,12 +11,16 @@ interface DropdownIconProps {
 /**
  * Animated dropdown toggle icon using Lottie.
  * Animates between plus (+) and minus (−) states.
- * 
+ *
  * Animation segments:
  *   0 → 60:  Plus collapses → Minus appears  (opening)
  *  60 → 120: Minus collapses → Plus appears  (closing)
  */
-export default function DropdownIcon({ isOpen, size = 24, className = '' }: DropdownIconProps) {
+export default function DropdownIcon({
+  isOpen,
+  size = 24,
+  className = "",
+}: DropdownIconProps) {
   const lottieRef = useRef<LottieHandle>(null);
   const hasInitialized = useRef(false);
   const prevOpen = useRef(isOpen);
@@ -47,7 +51,12 @@ export default function DropdownIcon({ isOpen, size = 24, className = '' }: Drop
       autoplay={false}
       loop={false}
       className={`dropdown-icon ${className}`}
-      style={{ width: size, height: size, display: 'inline-flex', flexShrink: 0 }}
+      style={{
+        width: size,
+        height: size,
+        display: "inline-flex",
+        flexShrink: 0,
+      }}
       subscriptions={{
         [LottieSubscription.ready]: () => {
           const lottie = lottieRef.current;
@@ -59,7 +68,7 @@ export default function DropdownIcon({ isOpen, size = 24, className = '' }: Drop
             lottie.seek({ frame: 0 });
           }
           hasInitialized.current = true;
-        }
+        },
       }}
     />
   );
