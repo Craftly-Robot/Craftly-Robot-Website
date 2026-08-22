@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Internal docs — never commit/push
-IMPLEMENTATION_PLAN.md
+# Internal planning docs — never commit/push
+plans/
