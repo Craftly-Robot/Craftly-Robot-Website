@@ -26,7 +26,7 @@
 .home-cta__bg-grid {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -41,7 +41,11 @@
   transform: translate(-20%, -50%);
   width: 150%;
   height: 150%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 60%
+  );
 }
 
 .home-cta__content {
@@ -55,11 +59,11 @@
 }
 
 .home-cta__headline {
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: var(--space-2xl);
   max-width: 600px;
   line-height: 1.1;
-  font-family: 'Outfit', var(--font-sans);
+  font-family: "Outfit", var(--font-sans);
   font-size: 42px;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -79,7 +83,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #000000;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: var(--radius-full);
   text-decoration: none;
   transition: background-color var(--duration-fast) var(--ease-out);
@@ -105,7 +109,7 @@
   padding: 0.75rem 1.5rem;
   font-size: 16px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
@@ -148,7 +152,7 @@
     flex-direction: column;
     width: 100%;
   }
-  
+
   .home-cta__btn-primary,
   .home-cta__btn-secondary {
     width: 100%;

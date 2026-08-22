@@ -79,7 +79,7 @@
   aspect-ratio: 1 / 1;
   background: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 768px) {
@@ -95,7 +95,7 @@
   .product-showcase__title {
     font-size: 32px;
   }
-  
+
   .product-showcase__visual {
     margin: 0 auto;
     aspect-ratio: 16 / 10;
