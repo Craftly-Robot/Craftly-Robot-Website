@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function CurrentStatusPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Current Status — Craftly Robot"
       description="Current Status in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Overview", "Current Status"]}
+      pageId="current-status"
+      pageTitle="Current Status"
       tocItems={[{ id: "current-status", label: "Current Status" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
-        <strong>Current Status</strong>
-      </div>
-
-      <h1 className="docs__title" id="current-status">
-        Current Status
-      </h1>
       <p className="docs__text">
         Craftly Robot is currently an active research and development project.
       </p>
@@ -28,6 +23,6 @@ export default function CurrentStatusPage() {
         components are experimental and may change significantly as development
         progresses.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

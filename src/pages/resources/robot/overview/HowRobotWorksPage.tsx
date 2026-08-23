@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function HowRobotWorksPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="How Robot Works — Craftly Robot"
       description="How Robot Works in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Overview", "How Robot Works"]}
+      pageId="how-robot-works"
+      pageTitle="How Robot Works"
       tocItems={[{ id: "how-robot-works", label: "How Robot Works" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
-        <strong>How Robot Works</strong>
-      </div>
-
-      <h1 className="docs__title" id="how-robot-works">
-        How Robot Works
-      </h1>
       <p className="docs__text">
         Robot is designed around a multi step agentic workflow.
       </p>
@@ -61,6 +56,6 @@ export default function HowRobotWorksPage() {
         Robot provides the user with the result, relevant evidence, and the
         status of the completed action.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

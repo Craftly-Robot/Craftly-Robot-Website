@@ -1,22 +1,17 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function WhatIsRobotPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="What is Craftly Robot? — Craftly Robot"
       description="What is Craftly Robot? in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Overview", "What is Craftly Robot?"]}
+      pageId="what-is-craftly-robot"
+      pageTitle="What is Craftly Robot?"
       tocItems={[
         { id: "what-is-craftly-robot", label: "What is Craftly Robot?" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
-        <strong>What is Craftly Robot?</strong>
-      </div>
-
-      <h1 className="docs__title" id="what-is-craftly-robot">
-        What is Craftly Robot?
-      </h1>
       <p className="docs__text">
         Craftly Robot is an AI system being developed to act as a real-world
         assistant rather than only a conversational model.
@@ -43,6 +38,6 @@ export default function WhatIsRobotPage() {
         Robot is currently under active research and development, so its
         capabilities and architecture will continue to evolve.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

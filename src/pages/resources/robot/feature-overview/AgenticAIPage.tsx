@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function AgenticAIPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Agentic AI — Craftly Robot"
       description="Agentic AI in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Feature Overview", "Agentic AI"]}
+      pageId="agentic-ai"
+      pageTitle="Agentic AI"
       tocItems={[
         { id: "agentic-ai", label: "Agentic AI" },
         {
@@ -18,14 +21,6 @@ export default function AgenticAIPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Feature Overview &gt;{" "}
-        <strong>Agentic AI</strong>
-      </div>
-
-      <h1 className="docs__title" id="agentic-ai">
-        Agentic AI
-      </h1>
       <p className="docs__text">
         Craftly Robot is being developed toward an agentic AI system—an AI that
         can do more than understand and respond to a user.
@@ -119,6 +114,6 @@ export default function AgenticAIPage() {
         combine models with tools, state, orchestration, and safety mechanisms
         to support this kind of behavior.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

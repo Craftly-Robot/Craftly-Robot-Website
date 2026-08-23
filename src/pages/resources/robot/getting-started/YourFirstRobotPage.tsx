@@ -1,24 +1,19 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function YourFirstRobotPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Your First Robot — Craftly Robot"
       description="Your First Robot in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Your First Robot"]}
+      pageId="your-first-robot"
+      pageTitle="Your First Robot"
       tocItems={[
         { id: "your-first-robot", label: "Your First Robot" },
         { id: "robot-as-an-agent", label: "Robot as an Agent" },
         { id: "a-simple-example", label: "A Simple Example" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Your First Robot</strong>
-      </div>
-
-      <h1 className="docs__title" id="your-first-robot">
-        Your First Robot
-      </h1>
       <p className="docs__text">
         After signing in, you can start interacting with your Robot.
       </p>
@@ -98,6 +93,6 @@ export default function YourFirstRobotPage() {
           required to pursue it.
         </strong>
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

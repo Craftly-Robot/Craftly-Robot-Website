@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function HumanConfirmationPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Human Confirmation — Craftly Robot"
       description="Human Confirmation in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Feature Overview", "Human Confirmation"]}
+      pageId="human-confirmation"
+      pageTitle="Human Confirmation"
       tocItems={[
         { id: "human-confirmation", label: "Human Confirmation" },
         { id: "what-robot-can-do", label: "What Robot Can Do" },
@@ -19,14 +22,6 @@ export default function HumanConfirmationPage() {
         { id: "craftlys-principle", label: "Craftly's Principle" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Feature Overview &gt;{" "}
-        <strong>Human Confirmation</strong>
-      </div>
-
-      <h1 className="docs__title" id="human-confirmation">
-        Human Confirmation
-      </h1>
       <p className="docs__text">
         Craftly Robot is designed to help automate coordination without removing
         people from important decisions.
@@ -126,6 +121,6 @@ export default function HumanConfirmationPage() {
         Let AI handle the coordination. Keep humans in control of consequential
         decisions.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

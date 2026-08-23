@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function RobotArchitecturePage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Architecture — Craftly Robot"
       description="Architecture in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Overview", "Architecture"]}
+      pageId="architecture"
+      pageTitle="Architecture"
       tocItems={[{ id: "architecture", label: "Architecture" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
-        <strong>Architecture</strong>
-      </div>
-
-      <h1 className="docs__title" id="architecture">
-        Architecture
-      </h1>
       <p className="docs__text">
         Craftly Robot currently uses a Mixture-of-Experts (MoE) architecture
         designed to allow the system to dynamically route different tasks to
@@ -51,6 +46,6 @@ export default function RobotArchitecturePage() {
         specialized experts and stronger routing, coordination, and agentic
         capabilities.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

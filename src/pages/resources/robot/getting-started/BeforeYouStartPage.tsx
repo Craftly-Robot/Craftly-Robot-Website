@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function BeforeYouStartPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Before You Start — Craftly Robot"
       description="Before You Start in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Before You Start"]}
+      pageId="before-you-start"
+      pageTitle="Before You Start"
       tocItems={[
         { id: "before-you-start", label: "Before You Start" },
         { id: "what-you-need", label: "What You Need" },
@@ -12,14 +15,6 @@ export default function BeforeYouStartPage() {
         { id: "lost-key-recovery", label: "Lost-Key Recovery" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Before You Start</strong>
-      </div>
-
-      <h1 className="docs__title" id="before-you-start">
-        Before You Start
-      </h1>
       <p className="docs__text">
         Before you can use Craftly Robot, you need to establish your identity
         within the Craftly ecosystem and have the credentials required to access
@@ -99,6 +94,6 @@ export default function BeforeYouStartPage() {
       <p className="docs__text">
         <strong>Do not lose your Private Key, and never share it.</strong>
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }
