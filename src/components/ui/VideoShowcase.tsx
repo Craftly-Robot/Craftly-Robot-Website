@@ -60,6 +60,7 @@ export default function VideoShowcase({
           muted
           loop
           playsInline
+          preload="metadata"
           onError={() => setError(true)}
         />
       )}

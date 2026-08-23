@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { useScrollReveal } from "../../../hooks/useScrollReveal";
-import { Lottie } from "lottie-react";
-import tikAnimation from "../../../assets/tik_animation.json";
 import "./ProjectWorkflowTerminal.css";
 
 const WORKFLOW_STEPS = [
@@ -130,12 +128,20 @@ export function ProjectWorkflowTerminal() {
             >
               <span className="terminal-workflow__sidebar-icon">
                 {index < currentStep ? (
-                  <Lottie
-                    src={tikAnimation}
-                    loop={false}
-                    autoplay={true}
-                    style={{ width: 30, height: 30, flexShrink: 0 }}
-                  />
+                  <svg
+                    className="terminal-workflow__check"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 ) : index === currentStep ? (
                   <svg
                     width="14"

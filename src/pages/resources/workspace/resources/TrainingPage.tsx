@@ -39,7 +39,7 @@ export default function TrainingPage() {
 
       <div style={{ marginBottom: "32px" }}>
         <img
-          src="/assets/training_participation/1.png"
+          src="/assets/training_participation/1.webp"
           alt="Training Participation"
           style={{
             width: "100%",

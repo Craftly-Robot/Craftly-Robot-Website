@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal planning docs — never commit/push
+plans/
+
+test-results
+playwright-report

@@ -29,7 +29,7 @@ export default function WorkspacePage() {
 
       <div className="product-showcase-large">
         <img
-          src="/assets/Craftly_Workspace/1.png"
+          src="/assets/Craftly_Workspace/1.webp"
           alt="Craftly Workspace Interface"
           className="product-showcase-image"
         />
@@ -42,7 +42,7 @@ export default function WorkspacePage() {
               Explore the main features
             </h2>
             <img
-              src="/assets/Craftly_Workspace/8.png"
+              src="/assets/Craftly_Workspace/8.webp"
               alt="Explore main features"
               className="product-showcase-image reveal reveal-delay-1"
               style={{ margin: 0 }}
@@ -62,7 +62,7 @@ export default function WorkspacePage() {
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-2">
                 <img
-                  src="/assets/Craftly_Workspace/2.png"
+                  src="/assets/Craftly_Workspace/2.webp"
                   alt="UI detail 1"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -77,7 +77,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
                 <img
-                  src="/assets/Craftly_Workspace/3.png"
+                  src="/assets/Craftly_Workspace/3.webp"
                   alt="UI detail 2"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -92,7 +92,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
                 <img
-                  src="/assets/Craftly_Workspace/4.png"
+                  src="/assets/Craftly_Workspace/4.webp"
                   alt="UI detail 3"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -107,7 +107,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
                 <img
-                  src="/assets/Craftly_Workspace/5.png"
+                  src="/assets/Craftly_Workspace/5.webp"
                   alt="UI detail 4"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -122,7 +122,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-4">
                 <img
-                  src="/assets/Craftly_Workspace/6.png"
+                  src="/assets/Craftly_Workspace/6.webp"
                   alt="UI detail 5"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -137,7 +137,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-4">
                 <img
-                  src="/assets/Craftly_Workspace/7.png"
+                  src="/assets/Craftly_Workspace/7.webp"
                   alt="UI detail 6"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -152,7 +152,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-1">
                 <img
-                  src="/assets/Craftly_Workspace/9.png"
+                  src="/assets/Craftly_Workspace/9.webp"
                   alt="Dynamic Subagents"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -168,7 +168,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-1">
                 <img
-                  src="/assets/Craftly_Workspace/10.png"
+                  src="/assets/Craftly_Workspace/10.webp"
                   alt="Scheduled Tasks"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -184,7 +184,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
                 <img
-                  src="/assets/Craftly_Workspace/11.jpeg"
+                  src="/assets/Craftly_Workspace/11.webp"
                   alt="UI detail 9"
                   className="product-showcase-image"
                   style={{ margin: 0 }}
@@ -199,7 +199,7 @@ export default function WorkspacePage() {
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
                 <img
-                  src="/assets/Craftly_Workspace/12.png"
+                  src="/assets/Craftly_Workspace/12.webp"
                   alt="UI detail 10"
                   className="product-showcase-image"
                   style={{ margin: 0 }}

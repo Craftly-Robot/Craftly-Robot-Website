@@ -1150,8 +1150,9 @@ export default function OnboardingQuestionsPage() {
               }}
             >
               <img
-                src={`/assets/onboarding_pic/${q.id}.png`}
+                src={`/assets/onboarding_pic/${q.id}.webp`}
                 alt={`Onboarding Question ${q.id}`}
+                loading="lazy"
                 style={{ width: "100%", display: "block" }}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";

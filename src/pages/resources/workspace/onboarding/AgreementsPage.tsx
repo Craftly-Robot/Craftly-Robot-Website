@@ -94,7 +94,7 @@ export default function AgreementsPage() {
         }}
       >
         <img
-          src="/assets/aggrements/1.png"
+          src="/assets/agreements/1.webp"
           alt="Agreements"
           style={{ width: "100%", display: "block" }}
         />
@@ -114,7 +114,7 @@ export default function AgreementsPage() {
         }}
       >
         <img
-          src="/assets/aggrements/2.png"
+          src="/assets/agreements/2.webp"
           alt="Digital Signatures"
           style={{ width: "100%", display: "block" }}
         />

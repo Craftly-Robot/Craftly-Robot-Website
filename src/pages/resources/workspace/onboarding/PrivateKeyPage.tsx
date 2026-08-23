@@ -52,7 +52,7 @@ export default function PrivateKeyPage() {
         }}
       >
         <img
-          src="/assets/private_key/1.png"
+          src="/assets/private_key/1.webp"
           alt="Private Key"
           style={{ maxWidth: "200px", width: "100%", display: "block" }}
         />

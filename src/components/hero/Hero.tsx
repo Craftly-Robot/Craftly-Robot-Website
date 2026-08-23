@@ -62,7 +62,7 @@ export default function Hero() {
 
         <div className="hero__media-wrapper">
           <img
-            src="/assets/Homepage_Picture/1.png"
+            src="/assets/Homepage_Picture/1.webp"
             alt="Craftly interface"
             style={{
               width: "100%",

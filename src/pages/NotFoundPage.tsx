@@ -1,9 +1,12 @@
-import { useEffect } from "react";
-import { Lottie } from "lottie-react";
+import { useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { SEO } from "../components/SEO";
 import animationData from "../../public/assets/animations/404.json";
 import "./NotFoundPage.css";
+
+const Lottie = lazy(() =>
+  import("lottie-react").then((m) => ({ default: m.Lottie })),
+);
 
 export default function NotFoundPage() {
   useEffect(() => {
@@ -37,7 +40,9 @@ export default function NotFoundPage() {
       />
       <div className="not-found-content">
         <div className="not-found-animation">
-          <Lottie src={animationData} loop={true} autoplay={true} />
+          <Suspense fallback={null}>
+            <Lottie src={animationData} loop={true} autoplay={true} />
+          </Suspense>
         </div>
         <h1 className="not-found-title">Page not found</h1>
         <p className="not-found-text">

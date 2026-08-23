@@ -1,5 +1,5 @@
 import DocsLayout from "../../DocsLayout";
-import supportImage from "../../../../assets/Support Requests/1.png";
+import supportImage from "../../../../assets/Support Requests/1.webp";
 
 export default function SupportRequestsPage() {
   return (

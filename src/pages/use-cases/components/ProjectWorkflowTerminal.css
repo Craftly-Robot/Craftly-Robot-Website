@@ -62,6 +62,27 @@
   color: #000;
 }
 
+.terminal-workflow__check polyline {
+  stroke-dasharray: 30;
+  animation: terminal-check-draw 0.4s ease forwards;
+}
+
+@keyframes terminal-check-draw {
+  from {
+    stroke-dashoffset: 30;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-workflow__check polyline {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
 .terminal-workflow__sidebar-item.is-active .terminal-workflow__sidebar-icon {
   background-color: #000;
   border-color: #000;

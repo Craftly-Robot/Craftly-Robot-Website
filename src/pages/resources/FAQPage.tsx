@@ -1,8 +1,118 @@
+import { Helmet } from "react-helmet-async";
 import DocsLayout from "./DocsLayout";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "1. What is Craftly Workspace?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Craftly Workspace is the central system Craftly uses to coordinate people, work, communication, resources, and day-to-day operations.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "2. How do I join Craftly?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Start the onboarding process through the official Craftly joining system and complete the required questions and steps. After onboarding is completed, you will receive your Private Key, Workspace and Craftly Robot acess.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "3. What is the Private Key?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Your Private Key is a sensitive part of your Craftly identity and is required to log in to Craftly Workspace. Keep it secure and never share it with anyone.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "4. What happens if I lose my Private Key?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If you are still logged in to Workspace, you can request a new key from your Profile. If you are logged out, recovery may require the account recovery or verification process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "5. Can I share my Private Key with someone else?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Your Private Key should remain private. Never send it to another member, post it publicly, or store it somewhere insecure.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "6. What happens after I complete onboarding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "After completing onboarding, you wait for your organizational position to be assigned. Once your position is active, you can begin your responsibilities within Craftly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "7. What is the Command Chain?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Command Chain is Craftly's hierarchical system for passing official commands, instructions, and tasks through the organization.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "8. How are official tasks assigned?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Official tasks can be distributed through the Notice Board or through the Command Chain, depending on the nature of the work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "9. What is the Notice Board?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Notice Board is the official place for organizational announcements, important messages, updates, instructions, and other information that needs to be communicated to members.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "10. How do I submit a completed task?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Use the Task Submission option associated with the task. You can submit up to 5 files, including images, PDF, text, JSON, or CSV.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "11. What if I cannot complete my task?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If you are unable to complete an assigned task, contact your Unit Leader and explain the problem or blocker instead of leaving the task unresolved.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "12. What are Projects in Workspace?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Projects are practical work assignments, primarily used within Operations, that help members demonstrate their ability to understand requirements, solve problems, use technical tools, and deliver real results.",
+      },
+    },
+  ],
+};
 
 export default function FAQPage() {
   return (
-    <DocsLayout
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
+      <DocsLayout
       title="FAQ"
       description="Frequently asked questions about Craftly Workspace and Robot."
       tocItems={[
@@ -1443,5 +1553,6 @@ export default function FAQPage() {
         </p>
       </div>
     </DocsLayout>
+    </>
   );
 }
