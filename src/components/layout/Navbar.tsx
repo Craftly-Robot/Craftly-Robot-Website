@@ -125,7 +125,7 @@ export default function Navbar() {
     }
     timeoutRef.current = window.setTimeout(() => {
       setActiveDropdown(null);
-    }, 150);
+    }, 200);
   }, []);
 
   // Cleanup timeout on unmount
