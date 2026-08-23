@@ -4,10 +4,12 @@ import DocsLayout from "./DocsLayout";
 interface DocPageProps {
   title: string;
   description: string;
-  /** Breadcrumb segments after "Documentation", last one rendered bold. */
+  /** Breadcrumb segments after rootLabel, last one rendered bold. */
   crumbs: string[];
   pageId: string;
   pageTitle: string;
+  /** First breadcrumb segment. Defaults to "Documentation". */
+  rootLabel?: string;
   tocItems?: { id: string; label: string }[];
   children?: React.ReactNode;
 }
@@ -18,13 +20,14 @@ export default function DocPage({
   crumbs,
   pageId,
   pageTitle,
+  rootLabel = "Documentation",
   tocItems,
   children,
 }: DocPageProps) {
   return (
     <DocsLayout title={title} description={description} tocItems={tocItems}>
       <div className="docs__breadcrumb">
-        Documentation &gt;{" "}
+        {rootLabel} &gt;{" "}
         {crumbs.map((crumb, index) => (
           <Fragment key={index}>
             {index === crumbs.length - 1 ? (
