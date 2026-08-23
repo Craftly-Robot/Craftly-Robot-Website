@@ -1,23 +1,17 @@
-import DocsLayout from "../../DocsLayout";
 import notice1 from "../../../../assets/Notice Board/1.webp";
 import notice2 from "../../../../assets/Notice Board/2.webp";
+import DocPage from "../../DocPage";
 
 export default function NoticesPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Notice Board — Craftly Workspace"
       description="Notice Board in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Notice Board"]}
+      pageId="notice-board"
+      pageTitle="Notice Board"
       tocItems={[{ id: "notice-board", label: "Notice Board" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt;{" "}
-        <strong>Notice Board</strong>
-      </div>
-
-      <h1 className="docs__title" id="notice-board">
-        Notice Board
-      </h1>
-
       <p className="docs__text">
         The Notice Board is the official place for sharing organizational
         notices and messages.
@@ -76,6 +70,6 @@ export default function NoticesPage() {
           />
         </div>
       </div>
-    </DocsLayout>
+    </DocPage>
   );
 }

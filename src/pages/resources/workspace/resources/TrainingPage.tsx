@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function TrainingPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Training — Craftly Workspace"
       description="Training in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Resources", "Training"]}
+      pageId="training"
+      pageTitle="Training"
       tocItems={[
         { id: "training", label: "Training" },
         {
@@ -28,15 +31,6 @@ export default function TrainingPage() {
         { id: "important", label: "Important" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Resources &gt;{" "}
-        <strong>Training</strong>
-      </div>
-
-      <h1 className="docs__title" id="training">
-        Training
-      </h1>
-
       <div style={{ marginBottom: "32px" }}>
         <img
           src="/assets/training_participation/1.webp"
@@ -301,6 +295,6 @@ export default function TrainingPage() {
         provider's current terms determine the actual availability of their free
         resources.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

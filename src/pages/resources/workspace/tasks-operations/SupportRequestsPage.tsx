@@ -1,11 +1,14 @@
-import DocsLayout from "../../DocsLayout";
 import supportImage from "../../../../assets/Support Requests/1.webp";
+import DocPage from "../../DocPage";
 
 export default function SupportRequestsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Support Requests — Craftly Workspace"
       description="Support Requests in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Support Requests"]}
+      pageId="support-requests"
+      pageTitle="Support Requests"
       tocItems={[
         { id: "support-requests", label: "Support Requests" },
         {
@@ -20,15 +23,6 @@ export default function SupportRequestsPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt;{" "}
-        <strong>Support Requests</strong>
-      </div>
-
-      <h1 className="docs__title" id="support-requests">
-        Support Requests
-      </h1>
-
       <p className="docs__text">
         Craftly Workspace provides a Support Request system for situations where
         a member needs help, needs to report an issue, or needs to bring
@@ -231,6 +225,6 @@ export default function SupportRequestsPage() {
         disappear. Create a Support Request and give the right person a chance
         to help.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }
