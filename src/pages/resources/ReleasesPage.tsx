@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import DropdownIcon from "../../components/ui/DropdownIcon";
@@ -92,27 +92,17 @@ const workspaceReleases: ReleaseItem[] = [
   { version: "3.8.0" },
 ];
 
-function TypewriterTitle({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, [text]);
+function ReleasesTitle({ text }: { text: string }) {
+  const lines = text.split("\n");
 
   return (
     <h1 className="releases-hero__title">
-      {displayedText}
-      <span className="typewriter-cursor-gradient">|</span>
+      {lines.map((line, i) => (
+        <span key={i}>
+          {line}
+          {i < lines.length - 1 && <br />}
+        </span>
+      ))}
     </h1>
   );
 }
@@ -144,7 +134,7 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <TypewriterTitle text={`Craftly\nReleases`} />
+              <ReleasesTitle text={`Craftly\nReleases`} />
               <p className="releases-hero__desc">
                 Download previous Craftly Workspace and Craftly Robot releases.
                 By default, they auto-update to the latest version. To stay on

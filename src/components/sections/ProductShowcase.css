@@ -34,17 +34,6 @@
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: var(--space-xl);
-  min-height: 96px; /* prevent layout shift while typing */
-}
-
-.product-showcase__cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1em;
-  background-color: currentColor;
-  margin-left: 4px;
-  animation: blink 1s step-end infinite;
-  vertical-align: text-bottom;
 }
 
 .product-showcase__cta {

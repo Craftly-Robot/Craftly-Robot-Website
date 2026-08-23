@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { SEO } from "../components/SEO";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
@@ -249,24 +248,8 @@ const ProductDownloadSection = ({
   );
 };
 
-function TypewriterTitle({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, [text]);
-
-  const lines = displayedText.split("\n");
+function DownloadTitle({ text }: { text: string }) {
+  const lines = text.split("\n");
 
   return (
     <h1 className="download-hero__title">
@@ -276,7 +259,6 @@ function TypewriterTitle({ text }: { text: string }) {
           {i < lines.length - 1 && <br />}
         </span>
       ))}
-      <span className="typewriter-cursor"></span>
     </h1>
   );
 }
@@ -295,7 +277,7 @@ export default function DownloadPage() {
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">
           <div className="download-hero-top">
-            <TypewriterTitle text={`Download Craftly\nfor ${osName}`} />
+            <DownloadTitle text={`Download Craftly\nfor ${osName}`} />
             <Link to="/resources/releases" className="btn-previous-releases">
               View previous releases
             </Link>

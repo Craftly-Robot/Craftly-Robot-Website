@@ -17,8 +17,9 @@
   font-weight: 500;
   line-height: 1.1;
   margin: 0;
-  min-height: 8rem;
   white-space: pre-wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.1s forwards;
 }
 
 .download-hero-top {
@@ -60,28 +61,6 @@
   background: #f0f1f3;
   border-color: #bbb;
   color: #111;
-}
-
-/* Typewriter cursor */
-.typewriter-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.9em;
-  background-color: currentColor;
-  margin-left: 4px;
-  color: var(--color-text);
-  animation: cursorBlink 0.7s step-end infinite;
-  vertical-align: text-bottom;
-}
-
-@keyframes cursorBlink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
 }
 
 /* Product selector tabs — pill-shaped, tight to title */
