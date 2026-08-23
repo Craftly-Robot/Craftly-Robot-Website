@@ -1,6 +1,6 @@
 import DocsLayout from "../../DocsLayout";
-import notice1 from "../../../../assets/Notice Board/1.jpg";
-import notice2 from "../../../../assets/Notice Board/2.jpg";
+import notice1 from "../../../../assets/Notice Board/1.webp";
+import notice2 from "../../../../assets/Notice Board/2.webp";
 
 export default function NoticesPage() {
   return (

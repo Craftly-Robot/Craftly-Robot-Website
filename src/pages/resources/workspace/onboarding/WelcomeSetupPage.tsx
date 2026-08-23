@@ -1,6 +1,8 @@
+import { useState } from "react";
 import DocsLayout from "../../DocsLayout";
 
 export default function WelcomeSetupPage() {
+  const [imgError, setImgError] = useState(false);
   return (
     <DocsLayout
       title="Welcome & Setup — Craftly Workspace"
@@ -110,16 +112,18 @@ export default function WelcomeSetupPage() {
           justifyContent: "center",
         }}
       >
-        <img
-          src="/assets/onboarding_pic/1.webp"
-          alt="Welcome and Setup"
-          style={{ width: "100%", display: "block" }}
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-            e.currentTarget.parentElement!.innerHTML =
-              '<p style="color:#5f6368;font-family:inherit;">Image placeholder: /assets/onboarding_pic/1.webp</p>';
-          }}
-        />
+        {imgError ? (
+          <p style={{ color: "#5f6368", fontFamily: "inherit" }}>
+            Image placeholder: /assets/onboarding_pic/1.webp
+          </p>
+        ) : (
+          <img
+            src="/assets/onboarding_pic/1.webp"
+            alt="Welcome and Setup"
+            style={{ width: "100%", display: "block" }}
+            onError={() => setImgError(true)}
+          />
+        )}
       </div>
 
       {/* Empty space for future text */}
