@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function DepartmentsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Departments — Craftly Workspace"
       description="Departments in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Organization", "Departments"]}
+      pageId="departments"
+      pageTitle="Departments"
       tocItems={[
         { id: "departments", label: "Departments" },
         { id: "current-departments", label: "Current Functional Departments" },
@@ -12,14 +15,6 @@ export default function DepartmentsPage() {
         { id: "placement", label: "How Department Placement Works" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Organization &gt;{" "}
-        <strong>Departments</strong>
-      </div>
-
-      <h1 className="docs__title" id="departments">
-        Departments
-      </h1>
       <p className="docs__text">
         Craftly organizes its work through functional departments and areas of
         responsibility rather than a rigid, traditional corporate structure.
@@ -157,6 +152,6 @@ export default function DepartmentsPage() {
         As Craftly evolves, its departments, roles, and responsibilities may
         also evolve with it.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

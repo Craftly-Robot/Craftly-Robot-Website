@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function ReportingStructurePage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Reporting Structure — Craftly Workspace"
       description="Reporting Structure in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Organization", "Reporting Structure"]}
+      pageId="reporting-structure"
+      pageTitle="Reporting Structure"
       tocItems={[
         { id: "reporting-structure", label: "Reporting Structure" },
         { id: "how-structure-works", label: "How the Structure Works" },
@@ -13,14 +16,6 @@ export default function ReportingStructurePage() {
         { id: "hierarchy-not-blind-obedience", label: "Hierarchy" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Organization &gt;{" "}
-        <strong>Reporting Structure</strong>
-      </div>
-
-      <h1 className="docs__title" id="reporting-structure">
-        Reporting Structure
-      </h1>
       <p className="docs__text">
         Craftly uses a manager-based reporting structure to keep responsibility,
         communication, task assignment, review, and escalation clear.
@@ -161,6 +156,6 @@ export default function ReportingStructurePage() {
         help you, and where a decision can be reviewed it is not a requirement
         to follow instructions without understanding or accountability.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }
