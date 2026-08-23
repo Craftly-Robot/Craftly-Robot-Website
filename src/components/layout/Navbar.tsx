@@ -78,6 +78,12 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
+
+  const activeNavConfig = navigation.find(
+    (item) => item.label === (activeDropdown || displayedDropdown),
+  );
+
   const toggleDropdown = useCallback((label: string) => {
     setActiveDropdown((prev) => {
       if (prev === label) {
@@ -87,6 +93,7 @@ export default function Navbar() {
         }, 300);
         return null;
       }
+      setDisplayedDropdown(label);
       return label;
     });
   }, []);
@@ -101,7 +108,15 @@ export default function Navbar() {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+    setDisplayedDropdown(label);
     setActiveDropdown(label);
+  }, []);
+
+  const handleDropdownMouseEnter = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -156,90 +171,6 @@ export default function Navbar() {
                   {item.label}
                   <ChevronDown className="navbar__nav-chevron" />
                 </button>
-
-                {item.items && (
-                  <div className="navbar__dropdown-wrapper">
-                    <div
-                      className={`navbar__dropdown ${activeDropdown === item.label ? "navbar__dropdown--visible" : ""}`}
-                      role="menu"
-                    >
-                      <div className="navbar__mega">
-                        <div className="navbar__mega-left">
-                          <h2 className="navbar__mega-title">
-                            {item.label === "Products" && (
-                              <>
-                                Explore our <br /> next generation <br />{" "}
-                                products
-                              </>
-                            )}
-                            {item.label === "Use Cases" && (
-                              <>
-                                Discover solutions <br /> for your specific{" "}
-                                <br /> needs
-                              </>
-                            )}
-                            {item.label === "Resources" && (
-                              <>
-                                Everything you <br /> need to stay <br />{" "}
-                                up-to-date and <br /> get help
-                              </>
-                            )}
-                          </h2>
-                          <Link
-                            to={item.items[0]?.route || "/"}
-                            className="navbar__mega-btn"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            See overview
-                          </Link>
-                        </div>
-
-                        <div className="navbar__mega-right">
-                          {item.label === "Products" && (
-                            <div className="navbar__mega-list-title">
-                              Products
-                            </div>
-                          )}
-                          <div className="navbar__mega-grid">
-                            {item.items.map((child) => (
-                              <Link
-                                key={child.route}
-                                to={child.route}
-                                className="dropdown-item"
-                                role="menuitem"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                {/* No icon for products as requested by user */}
-                                <div className="dropdown-item__content">
-                                  <div className="dropdown-item__title">
-                                    {child.title}
-                                    {item.label === "Resources" &&
-                                      child.title === "Documentation" && (
-                                        <span className="dropdown-item__arrow">
-                                          <svg
-                                            viewBox="0 0 24 24"
-                                            width="16"
-                                            height="16"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="1.5"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                          >
-                                            <polyline points="9 18 15 12 9 6"></polyline>
-                                          </svg>
-                                        </span>
-                                      )}
-                                  </div>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </nav>
@@ -276,6 +207,90 @@ export default function Navbar() {
               <span className="navbar__mobile-toggle-line" />
             </div>
           </button>
+        </div>
+      </div>
+
+      {/* Unified Desktop Mega Dropdown */}
+      <div
+        className="navbar__dropdown-wrapper"
+        onMouseEnter={handleDropdownMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div
+          className={`navbar__dropdown ${activeDropdown ? "navbar__dropdown--visible" : ""}`}
+          role="menu"
+        >
+          {activeNavConfig && (
+            <div className="navbar__mega" key={activeNavConfig.label}>
+              <div className="navbar__mega-left">
+                <h2 className="navbar__mega-title">
+                  {activeNavConfig.label === "Products" && (
+                    <>
+                      Explore our <br /> next generation <br /> products
+                    </>
+                  )}
+                  {activeNavConfig.label === "Use Cases" && (
+                    <>
+                      Discover solutions <br /> for your specific <br /> needs
+                    </>
+                  )}
+                  {activeNavConfig.label === "Resources" && (
+                    <>
+                      Everything you <br /> need to stay <br /> up-to-date and <br /> get help
+                    </>
+                  )}
+                </h2>
+                <Link
+                  to={activeNavConfig.items?.[0]?.route || "/"}
+                  className="navbar__mega-btn"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  See overview
+                </Link>
+              </div>
+
+              <div className="navbar__mega-right">
+                {activeNavConfig.label === "Products" && (
+                  <div className="navbar__mega-list-title">Products</div>
+                )}
+                <div className="navbar__mega-grid">
+                  {activeNavConfig.items?.map((child) => (
+                    <Link
+                      key={child.route}
+                      to={child.route}
+                      className="dropdown-item"
+                      role="menuitem"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      {/* No icon for products as requested by user */}
+                      <div className="dropdown-item__content">
+                        <div className="dropdown-item__title">
+                          {child.title}
+                          {activeNavConfig.label === "Resources" &&
+                            child.title === "Documentation" && (
+                              <span className="dropdown-item__arrow">
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  width="16"
+                                  height="16"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                >
+                                  <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                              </span>
+                            )}
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

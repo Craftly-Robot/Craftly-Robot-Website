@@ -108,7 +108,7 @@
 }
 
 .navbar__dropdown {
-  pointer-events: auto;
+  pointer-events: none;
   background: #ffffff;
   border: 1px solid var(--color-border);
   border-top: none;
@@ -132,6 +132,7 @@
 }
 
 .navbar__dropdown--visible {
+  pointer-events: auto;
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
