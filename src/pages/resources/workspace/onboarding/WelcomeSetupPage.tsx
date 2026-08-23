@@ -1,22 +1,17 @@
 import { useState } from "react";
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function WelcomeSetupPage() {
   const [imgError, setImgError] = useState(false);
   return (
-    <DocsLayout
+    <DocPage
       title="Welcome & Setup — Craftly Workspace"
       description="Welcome & Setup in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Welcome & Setup"]}
+      pageId="welcome-and-setup"
+      pageTitle="Welcome & Setup"
       tocItems={[{ id: "welcome-and-setup", label: "Welcome & Setup" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;{" "}
-        <strong>Welcome & Setup</strong>
-      </div>
-
-      <h1 className="docs__title" id="welcome-and-setup">
-        Welcome & Setup
-      </h1>
       <h2
         className="docs__subtitle"
         style={{
@@ -131,6 +126,6 @@ export default function WelcomeSetupPage() {
         className="docs__text-placeholder"
         style={{ minHeight: "24px" }}
       ></div>
-    </DocsLayout>
+    </DocPage>
   );
 }

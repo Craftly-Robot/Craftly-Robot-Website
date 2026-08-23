@@ -1,15 +1,16 @@
 import { useState } from "react";
-import DocsLayout from "../../DocsLayout";
 import { onboardingQuestions } from "../../../../data/docs/onboarding-questions";
+import DocPage from "../../DocPage";
 
 export default function OnboardingQuestionsPage() {
   const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({});
-  const questionsData = onboardingQuestions;
-
   return (
-    <DocsLayout
+    <DocPage
       title="Onboarding Questions — Craftly Workspace"
       description="Onboarding Questions in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Onboarding Questions"]}
+      pageId="onboarding-questions"
+      pageTitle="Onboarding Questions"
       tocItems={[
         { id: "onboarding-questions", label: "Onboarding Questions" },
         { id: "q-1", label: "1. Full Legal Name" },
@@ -36,15 +37,6 @@ export default function OnboardingQuestionsPage() {
         { id: "q-22", label: "20. Onboarding Questions Completed" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;{" "}
-        <strong>Onboarding Questions</strong>
-      </div>
-
-      <h1 className="docs__title" id="onboarding-questions">
-        Onboarding Questions
-      </h1>
-
       <h2
         className="docs__subtitle"
         style={{
@@ -72,7 +64,7 @@ export default function OnboardingQuestionsPage() {
           margin: "32px 0",
         }}
       >
-        {questionsData.map((q) => (
+        {onboardingQuestions.map((q) => (
           <div
             key={q.id}
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
@@ -128,6 +120,6 @@ export default function OnboardingQuestionsPage() {
           </div>
         ))}
       </div>
-    </DocsLayout>
+    </DocPage>
   );
 }

@@ -1,23 +1,17 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function CompletingOnboardingPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Completing Onboarding — Craftly Workspace"
       description="Completing Onboarding in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Completing Onboarding"]}
+      pageId="completing-onboarding"
+      pageTitle="Completing Onboarding"
       tocItems={[
         { id: "completing-onboarding", label: "Completing Onboarding" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;
-        <strong>Completing Onboarding</strong>
-      </div>
-
-      <h1 className="docs__title" id="completing-onboarding">
-        Completing Onboarding
-      </h1>
-
       <p className="docs__text">
         Congratulations your Craftly onboarding is now complete.
       </p>
@@ -94,6 +88,6 @@ export default function CompletingOnboardingPage() {
           style={{ width: "100%", display: "block" }}
         />
       </div>
-    </DocsLayout>
+    </DocPage>
   );
 }

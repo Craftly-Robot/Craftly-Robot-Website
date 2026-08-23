@@ -1,24 +1,18 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function AgreementsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Agreements — Craftly Workspace"
       description="Agreements in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Agreements"]}
+      pageId="agreements"
+      pageTitle="Agreements"
       tocItems={[
         { id: "agreements", label: "Agreements" },
         { id: "read-before-joining", label: "Read Before Joining" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;{" "}
-        <strong>Agreements</strong>
-      </div>
-
-      <h1 className="docs__title" id="agreements">
-        Agreements
-      </h1>
-
       <p className="docs__text">
         After completing the onboarding process, you will receive your Private
         Key and access to Craftly Workspace.
@@ -119,6 +113,6 @@ export default function AgreementsPage() {
           style={{ width: "100%", display: "block" }}
         />
       </div>
-    </DocsLayout>
+    </DocPage>
   );
 }
