@@ -1,23 +1,18 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function PermissionsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Permissions — Craftly Workspace"
       description="Permissions in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Permissions"]}
+      pageId="permissions"
+      pageTitle="Permissions"
       tocItems={[
         { id: "permissions", label: "Permissions" },
         { id: "accountability", label: "Accountability" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; People &amp; Roles &gt;{" "}
-        <strong>Permissions</strong>
-      </div>
-
-      <h1 className="docs__title" id="permissions">
-        Permissions
-      </h1>
       <p className="docs__text">
         Permissions define what a member is allowed to access or do within
         Craftly Workspace.
@@ -77,6 +72,6 @@ export default function PermissionsPage() {
         Roles define what you are responsible for. Permissions define what you
         are allowed to access or do.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

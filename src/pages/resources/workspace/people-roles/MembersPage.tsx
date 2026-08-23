@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function MembersPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Members — Craftly Workspace"
       description="Members in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "People & Roles", "Members"]}
+      pageId="members"
+      pageTitle="Members"
       tocItems={[
         { id: "members", label: "Members" },
         { id: "department-member-ranking", label: "Department Member Ranking" },
@@ -24,14 +27,6 @@ export default function MembersPage() {
         { id: "whatsapp-contact", label: "WhatsApp Contact" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; People & Roles &gt;{" "}
-        <strong>Members</strong>
-      </div>
-
-      <h1 className="docs__title" id="members">
-        Members
-      </h1>
       <p className="docs__text">
         The Members section in Craftly Workspace gives you a live view of the
         people working across your department.
@@ -324,6 +319,6 @@ export default function MembersPage() {
         When you need to reach someone outside your access level, follow the
         reporting structure rather than bypassing it.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

@@ -1,21 +1,16 @@
-﻿import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function AccessControlPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Access Control — Craftly Workspace"
       description="Access Control in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "People & Roles", "Access Control"]}
+      pageId="access-control"
+      pageTitle="Access Control"
       tocItems={[{ id: "access-control", label: "Access Control" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; People & Roles &gt;{" "}
-        <strong>Access Control</strong>
-      </div>
-
-      <h1 className="docs__title" id="access-control">
-        Access Control
-      </h1>
       <p className="docs__text">Content coming soon...</p>
-    </DocsLayout>
+    </DocPage>
   );
 }

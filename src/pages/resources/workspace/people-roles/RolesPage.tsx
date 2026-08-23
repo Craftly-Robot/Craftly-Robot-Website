@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function RolesPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Roles — Craftly Workspace"
       description="Roles in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Roles"]}
+      pageId="roles"
+      pageTitle="Roles"
       tocItems={[{ id: "roles", label: "Roles" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; People &amp; Roles &gt;{" "}
-        <strong>Roles</strong>
-      </div>
-
-      <h1 className="docs__title" id="roles">
-        Roles
-      </h1>
       <p className="docs__text">
         A role defines a member's position, responsibilities, and place within
         Craftly's organizational structure.
@@ -61,6 +56,6 @@ export default function RolesPage() {
         A role is not simply a title. It represents a member's current
         responsibility and contribution within Craftly.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }
