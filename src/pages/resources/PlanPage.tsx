@@ -1,10 +1,13 @@
-import DocsLayout from "./DocsLayout";
+import DocPage from "./DocPage";
 
 export default function PlanPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Craftly Plan — Craftly Documentation"
       description="Craftly Plan - Workspace, Robot, and Glass."
+      crumbs={["Documentation", "Craftly Plan"]}
+      pageId="craftly-plan"
+      pageTitle="Craftly Plan"
       tocItems={[
         { id: "craftly-plan", label: "Craftly Plan" },
         { id: "what-works-today", label: "What works today" },
@@ -13,13 +16,6 @@ export default function PlanPage() {
         { id: "why-were-building-it", label: "Why we're building it" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; <strong>Craftly Plan</strong>
-      </div>
-
-      <h1 className="docs__title" id="craftly-plan">
-        Craftly Plan
-      </h1>
       <p className="docs__text">
         Craftly is being built step by step. Our first priority is to build the
         organization itself and create the systems that allow people to work
@@ -96,6 +92,6 @@ export default function PlanPage() {
           world.
         </p>
       </div>
-    </DocsLayout>
+    </DocPage>
   );
 }
