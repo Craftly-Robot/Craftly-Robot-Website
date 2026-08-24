@@ -1,24 +1,19 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function InstallCraftlyRobotPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Install Craftly Robot — Craftly Robot"
       description="Install Craftly Robot in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Install Craftly Robot"]}
+      pageId="install-craftly-robot"
+      pageTitle="Install Craftly Robot"
       tocItems={[
         { id: "install-craftly-robot", label: "Install Craftly Robot" },
         { id: "device-side-inference", label: "Device Side Inference" },
         { id: "keep-the-app-updated", label: "Keep the App Updated" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Install Craftly Robot</strong>
-      </div>
-
-      <h1 className="docs__title" id="install-craftly-robot">
-        Install Craftly Robot
-      </h1>
       <p className="docs__text">
         Once your onboarding is complete and your Private Key is safely stored,
         install Craftly Robot from the official Craftly website:
@@ -85,6 +80,6 @@ export default function InstallCraftlyRobotPage() {
         Use the official Craftly distribution channel to obtain the latest
         supported version.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

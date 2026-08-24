@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function ChainOfCommandPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Chain of Command — Craftly Workspace"
       description="Chain of Command in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Communication", "Chain of Command"]}
+      pageId="chain-of-command"
+      pageTitle="Chain of Command"
       tocItems={[{ id: "chain-of-command", label: "Chain of Command" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Communication &gt;{" "}
-        <strong>Chain of Command</strong>
-      </div>
-
-      <h1 className="docs__title" id="chain-of-command">
-        Chain of Command
-      </h1>
       <p className="docs__text">
         The Chain of Command is Craftly's formal hierarchy for passing
         instructions, responsibilities, and decisions through the organization.
@@ -40,6 +35,6 @@ export default function ChainOfCommandPage() {
         responsibilities clear, make decisions traceable, and ensure that every
         task has an accountable owner.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

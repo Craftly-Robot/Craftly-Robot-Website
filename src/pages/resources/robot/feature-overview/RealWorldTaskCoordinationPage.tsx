@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function RealWorldTaskCoordinationPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Real-World Task Coordination — Craftly Robot"
       description="Real-World Task Coordination in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Feature Overview", "Real-World Task Coordination"]}
+      pageId="real-world-task-coordination"
+      pageTitle="Real-World Task Coordination"
       tocItems={[
         {
           id: "real-world-task-coordination",
@@ -17,14 +20,6 @@ export default function RealWorldTaskCoordinationPage() {
         { id: "the-long-term-goal", label: "The Long Term Goal" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Feature Overview &gt;{" "}
-        <strong>Real-World Task Coordination</strong>
-      </div>
-
-      <h1 className="docs__title" id="real-world-task-coordination">
-        Real-World Task Coordination
-      </h1>
       <p className="docs__text">
         The long term purpose of Craftly Robot is not simply to answer
         questions—it is to help people coordinate real work in the real world.
@@ -250,6 +245,6 @@ export default function RealWorldTaskCoordinationPage() {
         The goal is not AI that simply knows the world. The goal is AI that can
         help coordinate with the world.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

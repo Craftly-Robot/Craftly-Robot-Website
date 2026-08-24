@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function CoreConceptsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Core Concepts — Craftly Workspace"
       description="Core Concepts in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Overview", "Core Concepts"]}
+      pageId="core-concepts"
+      pageTitle="Core Concepts"
       tocItems={[
         { id: "core-concepts", label: "Core Concepts" },
         { id: "organization", label: "1. Organization" },
@@ -24,15 +27,6 @@ export default function CoreConceptsPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Overview &gt;{" "}
-        <strong>Core Concepts</strong>
-      </div>
-
-      <h1 className="docs__title" id="core-concepts">
-        Core Concepts
-      </h1>
-
       <h2 className="docs__subtitle" id="organization">
         1. Organization
       </h2>
@@ -184,6 +178,6 @@ export default function CoreConceptsPage() {
         organization can accomplish.
       </p>
       <p className="docs__text">Glass remains a long term direction.</p>
-    </DocsLayout>
+    </DocPage>
   );
 }

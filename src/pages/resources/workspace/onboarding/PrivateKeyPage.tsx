@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function PrivateKeyPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Private Key — Craftly Workspace"
       description="Private Key in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Private Key"]}
+      pageId="private-key"
+      pageTitle="Private Key"
       tocItems={[
         { id: "private-key", label: "Private Key" },
         { id: "keep-your-key-safe", label: "Keep Your Key Safe" },
@@ -19,15 +22,6 @@ export default function PrivateKeyPage() {
         { id: "important", label: "Important" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;{" "}
-        <strong>Private Key</strong>
-      </div>
-
-      <h1 className="docs__title" id="private-key">
-        Private Key
-      </h1>
-
       <p className="docs__text">
         Your Private Key is one of the most important parts of your Craftly
         identity.
@@ -118,6 +112,6 @@ export default function PrivateKeyPage() {
         and more convenient while still protecting the identity of Craftly
         members.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

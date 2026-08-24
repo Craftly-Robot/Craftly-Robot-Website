@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function AgentNegotiationGSPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Agent-to-Agent Negotiation — Craftly Robot"
       description="Agent-to-Agent Negotiation in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Agent-to-Agent Negotiation"]}
+      pageId="agent-negotiation"
+      pageTitle="Agent-to-Agent Negotiation"
       tocItems={[
         { id: "agent-negotiation", label: "Agent-to-Agent Negotiation" },
         { id: "the-basic-model", label: "The Basic Model" },
@@ -12,14 +15,6 @@ export default function AgentNegotiationGSPage() {
         { id: "human-control", label: "Human Control" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Agent-to-Agent Negotiation</strong>
-      </div>
-
-      <h1 className="docs__title" id="agent-negotiation">
-        Agent-to-Agent Negotiation
-      </h1>
       <p className="docs__text">
         Agent-to-agent negotiation is one of the defining capabilities of
         Craftly Robot.
@@ -139,6 +134,6 @@ export default function AgentNegotiationGSPage() {
           decisions.
         </strong>
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function WhatIsWorkspacePage() {
   return (
-    <DocsLayout
+    <DocPage
       title="What is Craftly Workspace? — Craftly Workspace"
       description="What is Craftly Workspace? in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Overview", "What is Craftly Workspace?"]}
+      pageId="what-is-craftly-workspace"
+      pageTitle="What is Craftly Workspace?"
       tocItems={[
         {
           id: "what-is-craftly-workspace",
@@ -12,14 +15,6 @@ export default function WhatIsWorkspacePage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Overview &gt;{" "}
-        <strong>What is Craftly Workspace?</strong>
-      </div>
-
-      <h1 className="docs__title" id="what-is-craftly-workspace">
-        What is Craftly Workspace?
-      </h1>
       <p className="docs__text">
         Craftly Workspace is the operational system that powers how Craftly
         organizes its people, work, communication, resources, and internal
@@ -60,6 +55,6 @@ export default function WhatIsWorkspacePage() {
         application. It acts as the operational foundation of the Craftly
         organization.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

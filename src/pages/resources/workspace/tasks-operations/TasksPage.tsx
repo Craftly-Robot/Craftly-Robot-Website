@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function TasksPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Tasks — Craftly Workspace"
       description="Tasks in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Tasks"]}
+      pageId="tasks"
+      pageTitle="Tasks"
       tocItems={[
         { id: "tasks", label: "Tasks" },
         { id: "what-is-command-chain", label: "What Is the Command Chain?" },
@@ -19,15 +22,6 @@ export default function TasksPage() {
         { id: "why-craftly-uses-this", label: "Why Craftly Uses This System" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt;{" "}
-        <strong>Tasks</strong>
-      </div>
-
-      <h1 className="docs__title" id="tasks">
-        Tasks
-      </h1>
-
       <p className="docs__text">
         Craftly Workspace provides a structured system for issuing,
         distributing, executing, and submitting official company tasks.
@@ -409,6 +403,6 @@ export default function TasksPage() {
         That is how Craftly Workspace turns organizational instructions into
         structured, accountable execution.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

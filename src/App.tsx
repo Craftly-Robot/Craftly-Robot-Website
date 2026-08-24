@@ -181,6 +181,7 @@ const CompletingOnboardingPage = lazy(
     import("./pages/resources/workspace/onboarding/CompletingOnboardingPage"),
 );
 const BlogPage = lazy(() => import("./pages/resources/BlogPage"));
+const BlogArticlePage = lazy(() => import("./pages/resources/BlogArticlePage"));
 const SupportPage = lazy(() => import("./pages/resources/SupportPage"));
 const ReleasesPage = lazy(() => import("./pages/resources/ReleasesPage"));
 const FAQPage = lazy(() => import("./pages/resources/FAQPage"));
@@ -484,6 +485,7 @@ export default function App() {
             element={<RobotRealWorldTaskCoordinationPage />}
           />
           <Route path="/resources/blog" element={<BlogPage />} />
+          <Route path="/resources/blog/:slug" element={<BlogArticlePage />} />
           <Route path="/resources/support" element={<SupportPage />} />
           <Route path="/resources/releases" element={<ReleasesPage />} />
           <Route path="/resources/changelog" element={<ChangelogPage />} />

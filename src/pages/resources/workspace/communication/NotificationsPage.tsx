@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function NotificationsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Notifications — Craftly Workspace"
       description="Notifications in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Communication", "Notifications"]}
+      pageId="notifications"
+      pageTitle="Notifications"
       tocItems={[{ id: "notifications", label: "Notifications" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Communication &gt;{" "}
-        <strong>Notifications</strong>
-      </div>
-
-      <h1 className="docs__title" id="notifications">
-        Notifications
-      </h1>
       <p className="docs__text">
         The Notifications system keeps members informed about important activity
         inside Craftly Workspace.
@@ -41,6 +36,6 @@ export default function NotificationsPage() {
         Notifications are an important part of staying active, informed, and
         responsive within Craftly.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

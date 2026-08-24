@@ -1,20 +1,17 @@
-import DocsLayout from "../../DocsLayout";
+import { useState } from "react";
+import DocPage from "../../DocPage";
 
 export default function WelcomeSetupPage() {
+  const [imgError, setImgError] = useState(false);
   return (
-    <DocsLayout
+    <DocPage
       title="Welcome & Setup — Craftly Workspace"
       description="Welcome & Setup in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Welcome & Setup"]}
+      pageId="welcome-and-setup"
+      pageTitle="Welcome & Setup"
       tocItems={[{ id: "welcome-and-setup", label: "Welcome & Setup" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Onboarding &gt;{" "}
-        <strong>Welcome & Setup</strong>
-      </div>
-
-      <h1 className="docs__title" id="welcome-and-setup">
-        Welcome & Setup
-      </h1>
       <h2
         className="docs__subtitle"
         style={{
@@ -110,16 +107,18 @@ export default function WelcomeSetupPage() {
           justifyContent: "center",
         }}
       >
-        <img
-          src="/assets/onboarding_pic/1.webp"
-          alt="Welcome and Setup"
-          style={{ width: "100%", display: "block" }}
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-            e.currentTarget.parentElement!.innerHTML =
-              '<p style="color:#5f6368;font-family:inherit;">Image placeholder: /assets/onboarding_pic/1.webp</p>';
-          }}
-        />
+        {imgError ? (
+          <p style={{ color: "#5f6368", fontFamily: "inherit" }}>
+            Image placeholder: /assets/onboarding_pic/1.webp
+          </p>
+        ) : (
+          <img
+            src="/assets/onboarding_pic/1.webp"
+            alt="Welcome and Setup"
+            style={{ width: "100%", display: "block" }}
+            onError={() => setImgError(true)}
+          />
+        )}
       </div>
 
       {/* Empty space for future text */}
@@ -127,6 +126,6 @@ export default function WelcomeSetupPage() {
         className="docs__text-placeholder"
         style={{ minHeight: "24px" }}
       ></div>
-    </DocsLayout>
+    </DocPage>
   );
 }

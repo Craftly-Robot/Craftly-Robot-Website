@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function NextStepsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Next Steps — Craftly Robot"
       description="Next Steps in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Next Steps"]}
+      pageId="next-steps"
+      pageTitle="Next Steps"
       tocItems={[
         { id: "next-steps", label: "Next Steps" },
         {
@@ -25,14 +28,6 @@ export default function NextStepsPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Next Steps</strong>
-      </div>
-
-      <h1 className="docs__title" id="next-steps">
-        Next Steps
-      </h1>
       <p className="docs__text">
         Once you can sign in, give Robot a meaningful request, and understand
         the discovery and coordination flow, you can explore the deeper parts of
@@ -171,6 +166,6 @@ export default function NextStepsPage() {
         <li>Agents discover and coordinate the right capabilities.</li>
         <li>You remain in control when the outcome matters.</li>
       </ul>
-    </DocsLayout>
+    </DocPage>
   );
 }

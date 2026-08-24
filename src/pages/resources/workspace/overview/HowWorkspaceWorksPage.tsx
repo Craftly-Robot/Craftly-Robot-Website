@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function HowWorkspaceWorksPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="How Workspace Works? — Craftly Workspace"
       description="How Workspace Works? in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Overview", "How Workspace Works?"]}
+      pageId="how-workspace-works"
+      pageTitle="How Workspace Works?"
       tocItems={[
         { id: "how-workspace-works", label: "How Workspace Works?" },
         { id: "identity", label: "1. Identity & Onboarding" },
@@ -15,14 +18,6 @@ export default function HowWorkspaceWorksPage() {
         { id: "feedback", label: "6. Operational Feedback Loop" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Overview &gt;{" "}
-        <strong>How Workspace Works?</strong>
-      </div>
-
-      <h1 className="docs__title" id="how-workspace-works">
-        How Workspace Works?
-      </h1>
       <p className="docs__text">
         Workspace works by connecting people, roles, work, communication, and
         resources into a single organizational system.
@@ -181,6 +176,6 @@ export default function HowWorkspaceWorksPage() {
         The purpose is not merely to store information, but to make the
         organization increasingly capable of executing work in a structured way.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

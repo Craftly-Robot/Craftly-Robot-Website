@@ -1,10 +1,13 @@
-import DocsLayout from "./DocsLayout";
+import DocPage from "./DocPage";
 
 export default function SalaryCompensationPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Salary & Compensation — Craftly Documentation"
       description="Information regarding salary and compensation at Craftly."
+      crumbs={["Documentation", "Salary & Compensation"]}
+      pageId="salary-compensation"
+      pageTitle="Salary & Compensation"
       tocItems={[
         { id: "salary-compensation", label: "Salary & Compensation" },
         { id: "who-is-eligible", label: "Who Is Eligible?" },
@@ -20,13 +23,6 @@ export default function SalaryCompensationPage() {
         { id: "current-status", label: "Current Status" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; <strong>Salary & Compensation</strong>
-      </div>
-
-      <h1 className="docs__title" id="salary-compensation">
-        Salary & Compensation
-      </h1>
       <p className="docs__text">
         Craftly is currently operating as a non profit organization, so regular
         salary payments are not yet available across the organization.
@@ -163,6 +159,6 @@ export default function SalaryCompensationPage() {
         Compensation will be introduced as Craftly's funding and organizational
         infrastructure mature.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

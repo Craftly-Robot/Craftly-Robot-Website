@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function AgentModelPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Agent Model — Craftly Robot"
       description="Agent Model in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Overview", "Agent Model"]}
+      pageId="agent-model"
+      pageTitle="Agent Model"
       tocItems={[{ id: "agent-model", label: "Agent Model" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
-        <strong>Agent Model</strong>
-      </div>
-
-      <h1 className="docs__title" id="agent-model">
-        Agent Model
-      </h1>
       <p className="docs__text">
         Craftly Robot uses an agent based architecture where different agents
         can specialize in different tasks.
@@ -43,6 +38,6 @@ export default function AgentModelPage() {
         and external services can discover each other and coordinate work
         through trusted identity and explicit permissions.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

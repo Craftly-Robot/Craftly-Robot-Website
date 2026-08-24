@@ -1,21 +1,16 @@
-﻿import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function TaskEvidencePage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Task Evidence — Craftly Workspace"
       description="Task Evidence in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Task Evidence"]}
+      pageId="task-evidence"
+      pageTitle="Task Evidence"
       tocItems={[{ id: "task-evidence", label: "Task Evidence" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt;{" "}
-        <strong>Task Evidence</strong>
-      </div>
-
-      <h1 className="docs__title" id="task-evidence">
-        Task Evidence
-      </h1>
       <p className="docs__text">Content coming soon...</p>
-    </DocsLayout>
+    </DocPage>
   );
 }

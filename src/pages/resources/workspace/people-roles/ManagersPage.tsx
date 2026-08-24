@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function ManagersPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Managers — Craftly Workspace"
       description="Managers in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Managers"]}
+      pageId="managers"
+      pageTitle="Managers"
       tocItems={[
         { id: "managers", label: "Managers" },
         { id: "management-structure", label: "The Management Structure" },
@@ -19,14 +22,6 @@ export default function ManagersPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; People &amp; Roles &gt;{" "}
-        <strong>Managers</strong>
-      </div>
-
-      <h1 className="docs__title" id="managers">
-        Managers
-      </h1>
       <p className="docs__text">
         In Craftly, a Manager is the person responsible for leading,
         coordinating, guiding, and reviewing the members directly under them.
@@ -137,6 +132,6 @@ export default function ManagersPage() {
         listen, understand, communicate, and make a genuine effort to carry out
         legitimate responsibilities.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

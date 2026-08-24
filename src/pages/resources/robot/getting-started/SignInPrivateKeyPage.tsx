@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function SignInPrivateKeyPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Sign In with Your Private Key — Craftly Robot"
       description="Sign In with Your Private Key in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Sign In with Your Private Key"]}
+      pageId="sign-in-private-key"
+      pageTitle="Sign In with Your Private Key"
       tocItems={[
         { id: "sign-in-private-key", label: "Sign In with Your Private Key" },
         {
@@ -17,14 +20,6 @@ export default function SignInPrivateKeyPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Sign In with Your Private Key</strong>
-      </div>
-
-      <h1 className="docs__title" id="sign-in-private-key">
-        Sign In with Your Private Key
-      </h1>
       <p className="docs__text">
         Open Craftly Robot and provide the Private Key you received after
         completing onboarding.
@@ -78,6 +73,6 @@ export default function SignInPrivateKeyPage() {
           should be protected.
         </strong>
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

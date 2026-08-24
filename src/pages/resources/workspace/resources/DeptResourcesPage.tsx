@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function DeptResourcesPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Department Resources — Craftly Workspace"
       description="Department Resources in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Resources", "Department Resources"]}
+      pageId="department-resources"
+      pageTitle="Department Resources"
       tocItems={[
         { id: "department-resources", label: "Department Resources" },
         {
@@ -22,14 +25,6 @@ export default function DeptResourcesPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Resources &gt;{" "}
-        <strong>Department Resources</strong>
-      </div>
-
-      <h1 className="docs__title" id="department-resources">
-        Department Resources
-      </h1>
       <p className="docs__text">
         The Department Resources section is the central resource area for each
         department inside Craftly Workspace. It contains the information, tools,
@@ -242,6 +237,6 @@ export default function DeptResourcesPage() {
         the right tools, information, and working environment needed to perform
         its responsibilities effectively.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

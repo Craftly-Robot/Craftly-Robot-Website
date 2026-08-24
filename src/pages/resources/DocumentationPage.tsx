@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import DocsLayout from "./DocsLayout";
+import DocPage from "./DocPage";
 
 export default function DocumentationPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Welcome to Craftly"
       description="Documentation home for Craftly Workspace and Craftly Robot"
+      crumbs={["Documentation", "Home"]}
+      pageId="welcome"
+      pageTitle="Welcome to Craftly"
       tocItems={[
         { id: "welcome", label: "Welcome to Craftly" },
         { id: "choose-surface", label: "Choose Your Surface" },
@@ -15,13 +18,6 @@ export default function DocumentationPage() {
         { id: "craftly-platform", label: "The Craftly Platform" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; <strong>Home</strong>
-      </div>
-
-      <h1 className="docs__title" id="welcome">
-        Welcome to Craftly
-      </h1>
       <p className="docs__text">
         Craftly is building the systems that connect people, work, and
         intelligent agents.
@@ -289,6 +285,6 @@ export default function DocumentationPage() {
         Build the organization. Build the intelligence. Connect them to the
         world.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

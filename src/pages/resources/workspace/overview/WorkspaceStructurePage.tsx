@@ -1,21 +1,16 @@
-﻿import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function WorkspaceStructurePage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Workspace Structure — Craftly Workspace"
       description="Workspace Structure in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Overview", "Workspace Structure"]}
+      pageId="workspace-structure"
+      pageTitle="Workspace Structure"
       tocItems={[{ id: "workspace-structure", label: "Workspace Structure" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Overview &gt;{" "}
-        <strong>Workspace Structure</strong>
-      </div>
-
-      <h1 className="docs__title" id="workspace-structure">
-        Workspace Structure
-      </h1>
       <p className="docs__text">Content coming soon...</p>
-    </DocsLayout>
+    </DocPage>
   );
 }

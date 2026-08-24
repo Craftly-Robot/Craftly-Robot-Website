@@ -1,20 +1,15 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function LongTermVisionPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Long-Term Vision — Craftly Robot"
       description="Long-Term Vision in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Overview", "Long-Term Vision"]}
+      pageId="long-term-vision"
+      pageTitle="Long-Term Vision"
       tocItems={[{ id: "long-term-vision", label: "Long-Term Vision" }]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Overview &gt;{" "}
-        <strong>Long-Term Vision</strong>
-      </div>
-
-      <h1 className="docs__title" id="long-term-vision">
-        Long-Term Vision
-      </h1>
       <p className="docs__text">
         The long term vision for Craftly Robot is to build a general-purpose AI
         coordination layer for the real world.
@@ -36,6 +31,6 @@ export default function LongTermVisionPage() {
         infrastructure where people, AI agents, and services can safely
         discover, communicate, negotiate, and work together.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

@@ -1,11 +1,14 @@
-import DocsLayout from "../../DocsLayout";
 import projectImage from "../../../../assets/projects/1.webp";
+import DocPage from "../../DocPage";
 
 export default function OperationalWorkflowsPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Projects — Craftly Workspace"
       description="Projects in Craftly Workspace"
+      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Projects"]}
+      pageId="projects"
+      pageTitle="Projects"
       tocItems={[
         { id: "projects", label: "Projects" },
         { id: "why-projects-matter", label: "Why Projects Matter" },
@@ -18,15 +21,6 @@ export default function OperationalWorkflowsPage() {
         },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Workspace &gt; Tasks & Operations &gt;{" "}
-        <strong>Projects</strong>
-      </div>
-
-      <h1 className="docs__title" id="projects">
-        Projects
-      </h1>
-
       <p className="docs__text">
         Craftly Workspace's Projects section provides practical, real world
         projects primarily designed for the Operations Department.
@@ -251,6 +245,6 @@ export default function OperationalWorkflowsPage() {
         problem, following the requirements, building a reliable solution, and
         delivering work you can stand behind.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function RunFirstTaskPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Run Your First Real-World Task — Craftly Robot"
       description="Run Your First Real-World Task in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Run Your First Real-World Task"]}
+      pageId="run-first-task"
+      pageTitle="Run Your First Real-World Task"
       tocItems={[
         { id: "run-first-task", label: "Run Your First Real-World Task" },
         {
@@ -23,14 +26,6 @@ export default function RunFirstTaskPage() {
         { id: "understanding-the-result", label: "Understanding the Result" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Run Your First Real-World Task</strong>
-      </div>
-
-      <h1 className="docs__title" id="run-first-task">
-        Run Your First Real-World Task
-      </h1>
       <p className="docs__text">
         The best way to understand Craftly Robot is to give it a real objective.
       </p>
@@ -180,6 +175,6 @@ export default function RunFirstTaskPage() {
         This makes the transition from AI output &rarr; real-world action
         understandable and reviewable.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }

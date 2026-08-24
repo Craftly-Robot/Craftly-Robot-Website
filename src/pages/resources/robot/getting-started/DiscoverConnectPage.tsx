@@ -1,10 +1,13 @@
-import DocsLayout from "../../DocsLayout";
+import DocPage from "../../DocPage";
 
 export default function DiscoverConnectPage() {
   return (
-    <DocsLayout
+    <DocPage
       title="Discover & Connect — Craftly Robot"
       description="Discover & Connect in Craftly Robot"
+      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Discover & Connect"]}
+      pageId="discover-connect"
+      pageTitle="Discover & Connect"
       tocItems={[
         { id: "discover-connect", label: "Discover & Connect" },
         {
@@ -15,14 +18,6 @@ export default function DiscoverConnectPage() {
         { id: "connect", label: "Connect" },
       ]}
     >
-      <div className="docs__breadcrumb">
-        Documentation &gt; Craftly Robot &gt; Getting Started &gt;{" "}
-        <strong>Discover & Connect</strong>
-      </div>
-
-      <h1 className="docs__title" id="discover-connect">
-        Discover & Connect
-      </h1>
       <p className="docs__text">
         Once Robot understands a request, it can determine whether other people,
         services, capabilities, or agents may be needed.
@@ -128,6 +123,6 @@ export default function DiscoverConnectPage() {
         Only information relevant to the task should be exposed, subject to the
         identity, privacy, and permission rules of the participating agents.
       </p>
-    </DocsLayout>
+    </DocPage>
   );
 }
