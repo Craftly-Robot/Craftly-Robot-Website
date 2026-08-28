@@ -1,27 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import "./ChangelogPage.css";
 
-function TypewriterTitle({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, [text]);
-
-  const lines = displayedText.split("\n");
+function ChangelogTitle({ text }: { text: string }) {
+  const lines = text.split("\n");
 
   return (
     <h1 className="changelog-hero__title">
@@ -31,7 +15,6 @@ function TypewriterTitle({ text }: { text: string }) {
           {i < lines.length - 1 && <br />}
         </span>
       ))}
-      <span className="typewriter-cursor"></span>
     </h1>
   );
 }
@@ -512,7 +495,7 @@ export default function ChangelogPage() {
         <div className="container">
           <div className="changelog-hero">
             <div className="changelog-hero__top">
-              <TypewriterTitle text={`See what’s new\nacross Craftly`} />
+              <ChangelogTitle text={`See what’s new\nacross Craftly`} />
               <div className="changelog-actions">
                 <Link to="/resources/documentation" className="btn-pill">
                   View docs

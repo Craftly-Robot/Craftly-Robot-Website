@@ -25,11 +25,12 @@
   max-width: 1000px;
   margin-top: 8vh;
   margin-bottom: var(--space-2xl);
-  min-height: 5rem;
   color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.1s forwards;
 }
 
 .hero__flag {
@@ -37,39 +38,9 @@
   width: auto;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-out;
   margin-left: 12px;
-}
-
-.typewriter-cursor {
   display: inline-block;
-  width: 2px;
-  height: 1em;
-  background-color: currentColor;
-  margin-left: 4px;
-  animation: blink 1s step-end infinite;
   vertical-align: middle;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .hero__cta-group {
@@ -242,33 +213,11 @@
   letter-spacing: -0.02em;
   color: var(--color-text);
   text-align: left;
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.8s forwards;
 }
 
 @media (max-width: 768px) {
   .hero__statement {
     font-size: 28px;
     margin-bottom: var(--space-3xl);
-  }
-}
-
-.statement-cursor {
-  display: inline-block;
-  width: 4px;
-  height: 0.9em;
-  background: var(--color-accent); /* brand color */
-  margin-left: 8px;
-  vertical-align: text-bottom;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import TechSnake from "./TechSnake";
 import "./Hero.css";
@@ -47,7 +47,7 @@ export default function Hero() {
     <section className="hero">
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero__content">
-          <TypewriterTitle />
+          <HeroTitle />
 
           <div className="hero__cta-group">
             <Link to="/download" className="hero__btn-primary">
@@ -76,7 +76,7 @@ export default function Hero() {
 
         <TechSnake />
 
-        <TypewriterStatement
+        <HeroStatement
           text={`Craftly is building a new kind of\ntechnology organization, where\npeople, and intelligent agents work\ntogether.`}
         />
       </div>
@@ -84,91 +84,30 @@ export default function Hero() {
   );
 }
 
-function TypewriterTitle() {
-  const text = "Hello World From Bangladesh ";
-  const [displayedText, setDisplayedText] = useState("");
-  const [showFlag, setShowFlag] = useState(false);
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        setShowFlag(true);
-        clearInterval(interval);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, []);
-
+function HeroTitle() {
   return (
     <h1 className="text-hero-display hero__title">
-      {displayedText}
-      {!showFlag && <span className="typewriter-cursor"></span>}
-      {showFlag && (
-        <img
-          src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp"
-          alt="Bangladesh Flag"
-          className="hero__flag"
-        />
-      )}
+      <span>Hello World From Bangladesh</span>
+      <img
+        src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp"
+        alt="Bangladesh Flag"
+        className="hero__flag"
+      />
     </h1>
   );
 }
 
-function TypewriterStatement({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState("");
-  const [inView, setInView] = useState(false);
-  const statementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 },
-    );
-
-    if (statementRef.current) {
-      observer.observe(statementRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!inView) return;
-
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 8); // Even faster typing speed (was 20)
-
-    return () => clearInterval(interval);
-  }, [text, inView]);
-
-  const lines = displayedText.split("\n");
+function HeroStatement({ text }: { text: string }) {
+  const lines = text.split("\n");
 
   return (
-    <div className="hero__statement" ref={statementRef}>
+    <div className="hero__statement reveal">
       {lines.map((line, i) => (
         <span key={i}>
           {line}
           {i < lines.length - 1 && <br />}
         </span>
       ))}
-      <span className="statement-cursor"></span>
     </div>
   );
 }
