@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "python3 scripts/generate-blog-sitemap.py",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "test:e2e": "playwright test",
