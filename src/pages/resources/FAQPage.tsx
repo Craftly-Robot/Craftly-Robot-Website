@@ -41,7 +41,7 @@ export default function FAQPage() {
           Frequently Asked Questions
         </h1>
 
-        {faqEntries.map((entry, index) => (
+        {faqEntries.map((entry) => (
           <Fragment key={entry.id}>
             <h3
               id={entry.id}

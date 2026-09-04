@@ -57,7 +57,6 @@ export default function RobotPage() {
 
           {/* Pair 2 */}
           <div
-            className="abstracted-ui-grid"
             className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
@@ -82,7 +81,6 @@ export default function RobotPage() {
 
           {/* Pair 3 */}
           <div
-            className="abstracted-ui-grid"
             className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
@@ -109,7 +107,6 @@ export default function RobotPage() {
 
           {/* Pair 4 */}
           <div
-            className="abstracted-ui-grid"
             className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
@@ -136,7 +133,6 @@ export default function RobotPage() {
 
           {/* Pair 5 */}
           <div
-            className="abstracted-ui-grid"
             className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
