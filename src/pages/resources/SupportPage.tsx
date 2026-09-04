@@ -1,21 +1,7 @@
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
+import SectionTitle from "../../components/ui/SectionTitle";
 import "./SupportPage.css";
-
-function SupportTitle({ text }: { text: string }) {
-  const lines = text.split("\n");
-
-  return (
-    <h1 className="support-hero__title">
-      {lines.map((line, i) => (
-        <span key={i}>
-          {line}
-          {i < lines.length - 1 && <br />}
-        </span>
-      ))}
-    </h1>
-  );
-}
 
 export default function SupportPage() {
   return (
@@ -27,8 +13,9 @@ export default function SupportPage() {
 
       <div className="support-page">
         <div className="support-hero">
-          <SupportTitle
+          <SectionTitle
             text={`Find answers in our docs\nor go to our community`}
+            className="support-hero__title"
           />
           <Link to="/resources/documentation" className="support-hero__btn">
             View docs
