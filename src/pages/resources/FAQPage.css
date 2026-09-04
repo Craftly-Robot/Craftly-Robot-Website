@@ -1,0 +1,31 @@
+.faq__question-first {
+  font-size: 18px;
+  margin-top: 32px;
+}
+
+.faq__question {
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.faq__bold {
+  font-weight: 500;
+}
+
+.faq__bold-no-margin {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.faq__contact-box {
+  margin-top: 48px;
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eaeaeb;
+}
+
+.faq__contact-title {
+  font-size: 18px;
+  margin-top: 0;
+}

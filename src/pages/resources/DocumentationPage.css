@@ -1,0 +1,50 @@
+.docs__section-title--large {
+  font-size: 24px;
+}
+
+.docs__subtitle {
+  font-style: italic;
+  color: #5f6368;
+  margin-bottom: 24px;
+}
+
+.docs__section--with-margin {
+  margin-top: 40px;
+}
+
+.docs__cta-group {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.docs__capabilities {
+  margin-top: 32px;
+}
+
+.docs__capability-title {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.docs__platform-title {
+  margin-top: 48px;
+}
+
+.docs__highlight-list {
+  list-style-type: none;
+  border-left: 3px solid #111;
+  padding-left: 16px;
+  margin: 24px 0;
+}
+
+.docs__highlight-item {
+  margin-bottom: 12px;
+}
+
+.docs__tagline {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  margin-top: 32px;
+}

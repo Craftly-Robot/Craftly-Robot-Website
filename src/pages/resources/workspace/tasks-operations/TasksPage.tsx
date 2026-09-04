@@ -1,9 +1,10 @@
 import DocsLayout from '../../DocsLayout';
+import './TasksPage.css';
 
 export default function TasksPage() {
   return (
     <DocsLayout 
-      title="Tasks â€” Craftly Workspace"
+      title="Tasks — Craftly Workspace"
       description="Tasks in Craftly Workspace"
       tocItems={[
         { id: 'tasks', label: 'Tasks' },
@@ -51,7 +52,7 @@ export default function TasksPage() {
       
       <p className="docs__text">The hierarchy follows:</p>
       
-      <div className="docs__code-block" style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center', fontWeight: '500', marginBottom: '32px' }}>
+      <div className="docs__code-block tasks__flow-box">
         Chairman &rarr; CEO &rarr; C-Suite &rarr; Senior &rarr; Junior &rarr; Executive
       </div>
       
@@ -67,7 +68,7 @@ export default function TasksPage() {
         The Command Chain therefore provides a clear relationship between:
       </p>
       
-      <div className="docs__code-block" style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center', fontWeight: '500', marginBottom: '32px' }}>
+      <div className="docs__code-block tasks__flow-box">
         Who issued the command &rarr; Who received it &rarr; Who is responsible &rarr; Who executes it
       </div>
       
@@ -101,7 +102,7 @@ export default function TasksPage() {
       </p>
       <p className="docs__text">For example:</p>
       
-      <div className="docs__code-block" style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center', fontWeight: '500', marginBottom: '32px' }}>
+      <div className="docs__code-block tasks__flow-box">
         CEO &rarr; C-Suites &rarr; Senior &rarr; Junior &rarr; Executive
       </div>
 
@@ -148,7 +149,7 @@ export default function TasksPage() {
       </p>
       <p className="docs__text">For example:</p>
 
-      <div className="docs__code-block" style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center', fontWeight: '500', marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div className="docs__code-block tasks__flow-box tasks__flow-box--column">
         <div>Task Assigned</div>
         <div>&darr;</div>
         <div>Work Completed</div>
@@ -186,7 +187,7 @@ export default function TasksPage() {
       </p>
       <p className="docs__text">The process becomes:</p>
 
-      <div className="docs__code-block" style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center', fontWeight: '500', marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div className="docs__code-block tasks__flow-box tasks__flow-box--column">
         <div>Task Assigned</div>
         <div>&darr;</div>
         <div>Work Begins</div>
@@ -211,7 +212,7 @@ export default function TasksPage() {
         The complete Craftly task system can be understood as:
       </p>
       
-      <div className="docs__code-block" style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center', fontWeight: '500', marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div className="docs__code-block tasks__flow-box tasks__flow-box--column">
         <div>Task Issued</div>
         <div>&darr;</div>
         <div>Notice Board or Command Chain</div>
@@ -222,9 +223,9 @@ export default function TasksPage() {
         <div>&darr;</div>
         <div>Completed?</div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #eaeaeb' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ fontWeight: '600', color: '#1a73e8' }}>If Yes</div>
+        <div className="tasks__decision-grid">
+          <div className="tasks__decision-col">
+            <div className="tasks__decision-yes">If Yes</div>
             <div>Prepare Output</div>
             <div>&darr;</div>
             <div>Task Submission</div>
@@ -233,8 +234,8 @@ export default function TasksPage() {
             <div>&darr;</div>
             <div>Task Completed / Recorded</div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ fontWeight: '600', color: '#d93025' }}>If No</div>
+          <div className="tasks__decision-col">
+            <div className="tasks__decision-no">If No</div>
             <div>Identify Blocker</div>
             <div>&darr;</div>
             <div>Contact Unit Leader</div>
@@ -262,8 +263,8 @@ export default function TasksPage() {
       <p className="docs__text">
         This creates a simple principle:
       </p>
-      <div style={{ padding: '24px', backgroundColor: '#f8f9fa', borderRadius: '12px', borderLeft: '4px solid #111111', marginBottom: '32px' }}>
-        <p className="docs__text" style={{ margin: 0, fontStyle: 'italic', fontWeight: '500' }}>
+      <div className="tasks__summary-box">
+        <p className="docs__text tasks__summary-text">
           Commands should have a clear path. Work should have a clear owner. Completed work should have a verifiable submission. Problems should have a clear path to resolution.
         </p>
       </div>

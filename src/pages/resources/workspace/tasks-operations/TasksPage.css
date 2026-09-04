@@ -1,0 +1,53 @@
+.tasks__flow-box {
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.tasks__flow-box--column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tasks__decision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeaeb;
+}
+
+.tasks__decision-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tasks__decision-yes {
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+.tasks__decision-no {
+  font-weight: 600;
+  color: #d93025;
+}
+
+.tasks__summary-box {
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #111111;
+  margin-bottom: 32px;
+}
+
+.tasks__summary-text {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+}
