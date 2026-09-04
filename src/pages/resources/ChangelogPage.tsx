@@ -481,7 +481,10 @@ export default function ChangelogPage() {
         <div className="container">
           <div className="changelog-hero">
             <div className="changelog-hero__top">
-              <SectionTitle text={`See what’s new\nacross Craftly`} className="changelog-hero__title" />
+              <SectionTitle
+                text={`See what’s new\nacross Craftly`}
+                className="changelog-hero__title"
+              />
               <div className="changelog-actions">
                 <Link to="/resources/documentation" className="btn-pill">
                   View docs

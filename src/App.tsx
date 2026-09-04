@@ -262,241 +262,244 @@ export default function App() {
       <ErrorBoundary>
         <Suspense fallback={<PageLoader />}>
           <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/download" element={<DownloadPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/download" element={<DownloadPage />} />
 
-          {/* Product pages */}
-          <Route path="/products/workspace" element={<WorkspacePage />} />
-          <Route path="/products/robot" element={<RobotPage />} />
+            {/* Product pages */}
+            <Route path="/products/workspace" element={<WorkspacePage />} />
+            <Route path="/products/robot" element={<RobotPage />} />
 
-          {/* Use case pages */}
-          <Route path="/use-cases/operations" element={<OperationsPage />} />
-          <Route
-            path="/use-cases/agent-negotiation"
-            element={<AgentNegotiationPage />}
-          />
-          <Route path="/use-cases/ai" element={<AIPage />} />
+            {/* Use case pages */}
+            <Route path="/use-cases/operations" element={<OperationsPage />} />
+            <Route
+              path="/use-cases/agent-negotiation"
+              element={<AgentNegotiationPage />}
+            />
+            <Route path="/use-cases/ai" element={<AIPage />} />
 
-          {/* Resource pages */}
-          <Route
-            path="/resources/documentation"
-            element={<DocumentationPage />}
-          />
-          <Route path="/resources/documentation/plan" element={<PlanPage />} />
-          <Route
-            path="/resources/documentation/salary-compensation"
-            element={<SalaryCompensationPage />}
-          />
-          <Route path="/resources/documentation/faq" element={<FAQPage />} />
+            {/* Resource pages */}
+            <Route
+              path="/resources/documentation"
+              element={<DocumentationPage />}
+            />
+            <Route
+              path="/resources/documentation/plan"
+              element={<PlanPage />}
+            />
+            <Route
+              path="/resources/documentation/salary-compensation"
+              element={<SalaryCompensationPage />}
+            />
+            <Route path="/resources/documentation/faq" element={<FAQPage />} />
 
-          <Route
-            path="/resources/documentation/workspace/overview/what-is-craftly-workspace"
-            element={<WhatIsWorkspacePage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/overview/how-workspace-works"
-            element={<HowWorkspaceWorksPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/overview/workspace-structure"
-            element={<WorkspaceStructurePage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/overview/core-concepts"
-            element={<CoreConceptsPage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/overview/what-is-craftly-workspace"
+              element={<WhatIsWorkspacePage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/overview/how-workspace-works"
+              element={<HowWorkspaceWorksPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/overview/workspace-structure"
+              element={<WorkspaceStructurePage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/overview/core-concepts"
+              element={<CoreConceptsPage />}
+            />
 
-          <Route
-            path="/resources/documentation/workspace/organization/org-structure"
-            element={<OrgStructurePage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/organization/departments"
-            element={<DepartmentsPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/organization/reporting-structure"
-            element={<ReportingStructurePage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/organization/org-structure"
+              element={<OrgStructurePage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/organization/departments"
+              element={<DepartmentsPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/organization/reporting-structure"
+              element={<ReportingStructurePage />}
+            />
 
-          <Route
-            path="/resources/documentation/workspace/people-roles/members"
-            element={<MembersPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/people-roles/roles"
-            element={<RolesPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/people-roles/permissions"
-            element={<PermissionsPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/people-roles/managers"
-            element={<ManagersPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/people-roles/access-control"
-            element={<AccessControlPage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/people-roles/members"
+              element={<MembersPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/people-roles/roles"
+              element={<RolesPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/people-roles/permissions"
+              element={<PermissionsPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/people-roles/managers"
+              element={<ManagersPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/people-roles/access-control"
+              element={<AccessControlPage />}
+            />
 
-          <Route
-            path="/resources/documentation/workspace/tasks-operations/tasks"
-            element={<TasksPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/tasks-operations/task-assignment"
-            element={<TaskAssignmentPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/tasks-operations/task-evidence"
-            element={<TaskEvidencePage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/tasks-operations/support-requests"
-            element={<SupportRequestsPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/tasks-operations/notices"
-            element={<NoticesPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/tasks-operations/operational-workflows"
-            element={<OperationalWorkflowsPage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/tasks-operations/tasks"
+              element={<TasksPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/tasks-operations/task-assignment"
+              element={<TaskAssignmentPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/tasks-operations/task-evidence"
+              element={<TaskEvidencePage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/tasks-operations/support-requests"
+              element={<SupportRequestsPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/tasks-operations/notices"
+              element={<NoticesPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/tasks-operations/operational-workflows"
+              element={<OperationalWorkflowsPage />}
+            />
 
-          <Route
-            path="/resources/documentation/workspace/communication/chain-of-command"
-            element={<ChainOfCommandPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/communication/reporting-communication"
-            element={<ReportingCommunicationPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/communication/notifications"
-            element={<NotificationsPage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/communication/chain-of-command"
+              element={<ChainOfCommandPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/communication/reporting-communication"
+              element={<ReportingCommunicationPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/communication/notifications"
+              element={<NotificationsPage />}
+            />
 
-          <Route
-            path="/resources/documentation/workspace/resources/org-resources"
-            element={<OrgResourcesPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/resources/dept-resources"
-            element={<DeptResourcesPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/resources/training"
-            element={<TrainingPage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/resources/org-resources"
+              element={<OrgResourcesPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/resources/dept-resources"
+              element={<DeptResourcesPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/resources/training"
+              element={<TrainingPage />}
+            />
 
-          <Route
-            path="/resources/documentation/workspace/onboarding/welcome-setup"
-            element={<WelcomeSetupPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/onboarding/onboarding-questions"
-            element={<OnboardingQuestionsPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/onboarding/agreements"
-            element={<AgreementsPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/onboarding/private-key"
-            element={<PrivateKeyPage />}
-          />
-          <Route
-            path="/resources/documentation/workspace/onboarding/completing-onboarding"
-            element={<CompletingOnboardingPage />}
-          />
+            <Route
+              path="/resources/documentation/workspace/onboarding/welcome-setup"
+              element={<WelcomeSetupPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/onboarding/onboarding-questions"
+              element={<OnboardingQuestionsPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/onboarding/agreements"
+              element={<AgreementsPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/onboarding/private-key"
+              element={<PrivateKeyPage />}
+            />
+            <Route
+              path="/resources/documentation/workspace/onboarding/completing-onboarding"
+              element={<CompletingOnboardingPage />}
+            />
 
-          <Route
-            path="/resources/documentation/robot/overview/what-is-craftly-robot"
-            element={<WhatIsRobotPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/overview/architecture"
-            element={<RobotArchitecturePage />}
-          />
-          <Route
-            path="/resources/documentation/robot/overview/how-robot-works"
-            element={<HowRobotWorksPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/overview/agent-model"
-            element={<AgentModelPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/overview/current-status"
-            element={<CurrentStatusPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/overview/long-term-vision"
-            element={<LongTermVisionPage />}
-          />
+            <Route
+              path="/resources/documentation/robot/overview/what-is-craftly-robot"
+              element={<WhatIsRobotPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/overview/architecture"
+              element={<RobotArchitecturePage />}
+            />
+            <Route
+              path="/resources/documentation/robot/overview/how-robot-works"
+              element={<HowRobotWorksPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/overview/agent-model"
+              element={<AgentModelPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/overview/current-status"
+              element={<CurrentStatusPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/overview/long-term-vision"
+              element={<LongTermVisionPage />}
+            />
 
-          <Route
-            path="/resources/documentation/robot/getting-started/before-you-start"
-            element={<RobotBeforeYouStartPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/install-craftly-robot"
-            element={<RobotInstallCraftlyRobotPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/sign-in-private-key"
-            element={<RobotSignInPrivateKeyPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/your-first-robot"
-            element={<RobotYourFirstRobotPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/discover-and-connect"
-            element={<RobotDiscoverConnectPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/agent-to-agent-negotiation"
-            element={<RobotAgentNegotiationGSPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/run-first-task"
-            element={<RobotRunFirstTaskPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/getting-started/next-steps"
-            element={<RobotNextStepsPage />}
-          />
+            <Route
+              path="/resources/documentation/robot/getting-started/before-you-start"
+              element={<RobotBeforeYouStartPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/install-craftly-robot"
+              element={<RobotInstallCraftlyRobotPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/sign-in-private-key"
+              element={<RobotSignInPrivateKeyPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/your-first-robot"
+              element={<RobotYourFirstRobotPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/discover-and-connect"
+              element={<RobotDiscoverConnectPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/agent-to-agent-negotiation"
+              element={<RobotAgentNegotiationGSPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/run-first-task"
+              element={<RobotRunFirstTaskPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/getting-started/next-steps"
+              element={<RobotNextStepsPage />}
+            />
 
-          <Route
-            path="/resources/documentation/robot/feature-overview/agentic-ai"
-            element={<RobotAgenticAIPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation"
-            element={<RobotAgentNegotiationPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/feature-overview/human-confirmation"
-            element={<RobotHumanConfirmationPage />}
-          />
-          <Route
-            path="/resources/documentation/robot/feature-overview/real-world-task-coordination"
-            element={<RobotRealWorldTaskCoordinationPage />}
-          />
-          <Route path="/resources/blog" element={<BlogPage />} />
-          <Route path="/resources/blog/:slug" element={<BlogArticlePage />} />
-          <Route path="/resources/support" element={<SupportPage />} />
-          <Route path="/resources/releases" element={<ReleasesPage />} />
-          <Route path="/resources/changelog" element={<ChangelogPage />} />
-          <Route path="/resources/press" element={<PressPage />} />
+            <Route
+              path="/resources/documentation/robot/feature-overview/agentic-ai"
+              element={<RobotAgenticAIPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation"
+              element={<RobotAgentNegotiationPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/feature-overview/human-confirmation"
+              element={<RobotHumanConfirmationPage />}
+            />
+            <Route
+              path="/resources/documentation/robot/feature-overview/real-world-task-coordination"
+              element={<RobotRealWorldTaskCoordinationPage />}
+            />
+            <Route path="/resources/blog" element={<BlogPage />} />
+            <Route path="/resources/blog/:slug" element={<BlogArticlePage />} />
+            <Route path="/resources/support" element={<SupportPage />} />
+            <Route path="/resources/releases" element={<ReleasesPage />} />
+            <Route path="/resources/changelog" element={<ChangelogPage />} />
+            <Route path="/resources/press" element={<PressPage />} />
 
-          {/* Catch-all route for 404 Not Found */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+            {/* Catch-all route for 404 Not Found */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </ErrorBoundary>
     </Layout>
   );

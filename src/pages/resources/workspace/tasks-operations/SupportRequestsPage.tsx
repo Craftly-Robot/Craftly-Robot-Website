@@ -7,7 +7,12 @@ export default function SupportRequestsPage() {
     <DocPage
       title="Support Requests — Craftly Workspace"
       description="Support Requests in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Support Requests"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Tasks & Operations",
+        "Support Requests",
+      ]}
       pageId="support-requests"
       pageTitle="Support Requests"
       tocItems={[

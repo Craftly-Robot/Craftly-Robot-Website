@@ -19,13 +19,13 @@ const WindowsIcon = () => (
 );
 
 const LinuxIcon = () => (
-    <ImageWithFallback
-      src="/assets/brand/linux-logo.png"
-      alt="Linux"
-      width="16"
-      height="16"
-      style={{ objectFit: "contain" }}
-    />
+  <ImageWithFallback
+    src="/assets/brand/linux-logo.png"
+    alt="Linux"
+    width="16"
+    height="16"
+    style={{ objectFit: "contain" }}
+  />
 );
 
 const DownloadIcon = () => (
@@ -121,7 +121,10 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <SectionTitle text={`Craftly\nReleases`} className="releases-hero__title" />
+              <SectionTitle
+                text={`Craftly\nReleases`}
+                className="releases-hero__title"
+              />
               <p className="releases-hero__desc">
                 Download previous Craftly Workspace and Craftly Robot releases.
                 By default, they auto-update to the latest version. To stay on

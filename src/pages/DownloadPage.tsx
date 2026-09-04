@@ -20,13 +20,13 @@ const WindowsIcon = () => (
 
 /* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
-    <ImageWithFallback
-      src="/assets/brand/linux-logo.png"
-      alt="Linux"
-      width="20"
-      height="20"
-      style={{ objectFit: "contain" }}
-    />
+  <ImageWithFallback
+    src="/assets/brand/linux-logo.png"
+    alt="Linux"
+    width="20"
+    height="20"
+    style={{ objectFit: "contain" }}
+  />
 );
 
 const AndroidIcon = () => (
@@ -264,7 +264,10 @@ export default function DownloadPage() {
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">
           <div className="download-hero-top">
-            <SectionTitle text={`Download Craftly\nfor ${osName}`} className="download-hero__title" />
+            <SectionTitle
+              text={`Download Craftly\nfor ${osName}`}
+              className="download-hero__title"
+            />
             <Link to="/resources/releases" className="btn-previous-releases">
               View previous releases
             </Link>

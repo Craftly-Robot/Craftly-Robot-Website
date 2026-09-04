@@ -5,7 +5,12 @@ export default function DeptResourcesPage() {
     <DocPage
       title="Department Resources — Craftly Workspace"
       description="Department Resources in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Resources", "Department Resources"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Resources",
+        "Department Resources",
+      ]}
       pageId="department-resources"
       pageTitle="Department Resources"
       tocItems={[
