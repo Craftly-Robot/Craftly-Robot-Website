@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "../../../hooks/useScrollReveal";
+import { useOS } from "../../../hooks/useOS";
 import "./UseCaseComponents.css";
 
 interface UseCaseCTAProps {
@@ -16,24 +16,14 @@ export function UseCaseCTA({
   children,
 }: UseCaseCTAProps) {
   const revealRef = useScrollReveal();
-  const [os, setOs] = useState("Windows");
-
-  useEffect(() => {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    if (userAgent.includes("win")) setOs("Windows");
-    else if (userAgent.includes("mac")) setOs("macOS");
-    else if (userAgent.includes("android")) setOs("Android");
-    else if (userAgent.includes("iphone") || userAgent.includes("ipad"))
-      setOs("iOS");
-    else if (userAgent.includes("linux")) setOs("Linux");
-  }, []);
+  const os = useOS();
 
   return (
     <section className="ucc-cta reveal" ref={revealRef}>
       <div className="container">
         <h2 className="ucc-cta__headline">{title}</h2>
         <div className="ucc-cta__actions">
-          {(os === "Windows" || os === "Linux" || os === "Unknown OS") && (
+          {(os === "Windows" || os === "Linux" || os === "Unknown") && (
             <>
               <Link to="/download" className="ucc-btn-primary">
                 Download for x64
