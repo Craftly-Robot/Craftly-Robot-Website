@@ -61,216 +61,32 @@
 .product-showcase__visual {
   position: relative;
   width: 100%;
-}
-
-.product-showcase__visual--desktop {
-  max-width: 640px;
+  max-width: 600px;
   margin-left: auto;
-}
-
-.product-showcase__visual--mobile {
-  max-width: 540px;
-  margin-left: auto;
-}
-
-/* -------------------------------------------------------------
-   Desktop Window Chrome (Antigravity Minimal App Frame)
-   ------------------------------------------------------------- */
-.product-showcase__window {
-  width: 100%;
-  border-radius: 20px;
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
-  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
-}
-
-.product-showcase__window:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 28px 56px -12px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.product-showcase__window-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
-  background: #f8f9fa;
-  border-bottom: 1px solid var(--color-border);
-  user-select: none;
-}
-
-.product-showcase__window-dots {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.product-showcase__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.product-showcase__dot--red {
-  background-color: #ff5f56;
-  border: 0.5px solid rgba(0, 0, 0, 0.15);
-}
-
-.product-showcase__dot--yellow {
-  background-color: #ffbd2e;
-  border: 0.5px solid rgba(0, 0, 0, 0.15);
-}
-
-.product-showcase__dot--green {
-  background-color: #27c93f;
-  border: 0.5px solid rgba(0, 0, 0, 0.15);
-}
-
-.product-showcase__window-title {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  letter-spacing: -0.01em;
-}
-
-.product-showcase__window-spacer {
-  width: 44px; /* visually counter-balance window dots */
-}
-
-.product-showcase__window-body {
-  position: relative;
-  width: 100%;
-  background: #ffffff;
-  line-height: 0;
-}
-
-.product-showcase__window-body .video-showcase,
-.product-showcase__window-body .video-showcase__image,
-.product-showcase__window-body .video-showcase__video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  image-rendering: -webkit-optimize-contrast;
-}
-
-/* -------------------------------------------------------------
-   Smartphone Chassis Frame (Antigravity Mobile Showcase)
-   ------------------------------------------------------------- */
-.product-showcase__phone-canvas {
-  width: 100%;
-  border-radius: 28px;
-  background: radial-gradient(circle at 50% 45%, rgba(0, 0, 0, 0.02) 0%, transparent 70%), var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  padding: 36px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.06);
-}
-
-.product-showcase__phone-chassis {
-  width: 100%;
-  max-width: 290px;
-  position: relative;
-  border-radius: 40px;
-  background: #000000;
-  padding: 10px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  border: 2px solid #222327;
-  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
-}
-
-.product-showcase__phone-chassis:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.12);
-}
-
-.product-showcase__phone-notch {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 68px;
-  height: 16px;
-  background: #000000;
-  border-radius: 10px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
-}
-
-.product-showcase__phone-camera {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #151821;
-  box-shadow: inset 0 0 1px #2b3040;
-}
-
-.product-showcase__phone-screen {
   border-radius: 32px;
   overflow: hidden;
-  position: relative;
-  background: #000000;
-  line-height: 0;
-}
-
-.product-showcase__phone-screen .video-showcase,
-.product-showcase__phone-screen .video-showcase__image,
-.product-showcase__phone-screen .video-showcase__video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  image-rendering: -webkit-optimize-contrast;
-}
-
-/* -------------------------------------------------------------
-   Responsive Breakpoints
-   ------------------------------------------------------------- */
-@media (max-width: 992px) {
-  .product-showcase__grid {
-    gap: var(--space-4xl);
-  }
+  aspect-ratio: 1 / 1;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 768px) {
   .product-showcase__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-3xl);
+    gap: var(--space-4xl);
   }
 
   .product-showcase__content {
     max-width: 100%;
-    text-align: center;
   }
 
   .product-showcase__title {
     font-size: 32px;
   }
 
-  .product-showcase__cta {
-    display: flex;
-    justify-content: center;
-  }
-
-  .product-showcase__visual--desktop,
-  .product-showcase__visual--mobile {
+  .product-showcase__visual {
     margin: 0 auto;
-    max-width: 100%;
-  }
-
-  .product-showcase__phone-canvas {
-    padding: 24px 16px;
-  }
-
-  .product-showcase__phone-chassis {
-    max-width: 250px;
+    aspect-ratio: 16 / 10;
   }
 }
