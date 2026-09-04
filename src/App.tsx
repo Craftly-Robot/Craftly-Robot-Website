@@ -2,18 +2,70 @@ import { lazy, Suspense, useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
-/* â”€â”€ Lazy-loaded pages for code splitting â”€â”€ */
+/* — Lazy-loaded pages for code splitting — */
 const HomePage = lazy(() => import('./pages/HomePage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const DownloadPage = lazy(() => import('./pages/DownloadPage'));
+
+// Products
 const WorkspacePage = lazy(() => import('./pages/products/WorkspacePage'));
 const RobotPage = lazy(() => import('./pages/products/RobotPage'));
+
+// Use Cases
 const OperationsPage = lazy(() => import('./pages/use-cases/OperationsPage'));
 const AgentNegotiationPage = lazy(() => import('./pages/use-cases/AgentNegotiationPage'));
 const AIPage = lazy(() => import('./pages/use-cases/AIPage'));
+
+// Resources - Documentation
 const DocumentationPage = lazy(() => import('./pages/resources/DocumentationPage'));
 const PlanPage = lazy(() => import('./pages/resources/PlanPage'));
 const SalaryCompensationPage = lazy(() => import('./pages/resources/SalaryCompensationPage'));
+const FAQPage = lazy(() => import('./pages/resources/FAQPage'));
+
+// Resources - Documentation > Workspace > Overview
+const WhatIsWorkspacePage = lazy(() => import('./pages/resources/workspace/overview/WhatIsWorkspacePage'));
+const HowWorkspaceWorksPage = lazy(() => import('./pages/resources/workspace/overview/HowWorkspaceWorksPage'));
+const WorkspaceStructurePage = lazy(() => import('./pages/resources/workspace/overview/WorkspaceStructurePage'));
+const CoreConceptsPage = lazy(() => import('./pages/resources/workspace/overview/CoreConceptsPage'));
+
+// Resources - Documentation > Workspace > Organization
+const OrgStructurePage = lazy(() => import('./pages/resources/workspace/organization/OrgStructurePage'));
+const DepartmentsPage = lazy(() => import('./pages/resources/workspace/organization/DepartmentsPage'));
+const ReportingStructurePage = lazy(() => import('./pages/resources/workspace/organization/ReportingStructurePage'));
+
+// Resources - Documentation > Workspace > People & Roles
+const MembersPage = lazy(() => import('./pages/resources/workspace/people-roles/MembersPage'));
+const RolesPage = lazy(() => import('./pages/resources/workspace/people-roles/RolesPage'));
+const PermissionsPage = lazy(() => import('./pages/resources/workspace/people-roles/PermissionsPage'));
+const ManagersPage = lazy(() => import('./pages/resources/workspace/people-roles/ManagersPage'));
+const AccessControlPage = lazy(() => import('./pages/resources/workspace/people-roles/AccessControlPage'));
+
+// Resources - Documentation > Workspace > Tasks & Operations
+const TasksPage = lazy(() => import('./pages/resources/workspace/tasks-operations/TasksPage'));
+const TaskAssignmentPage = lazy(() => import('./pages/resources/workspace/tasks-operations/TaskAssignmentPage'));
+const TaskEvidencePage = lazy(() => import('./pages/resources/workspace/tasks-operations/TaskEvidencePage'));
+const SupportRequestsPage = lazy(() => import('./pages/resources/workspace/tasks-operations/SupportRequestsPage'));
+const NoticesPage = lazy(() => import('./pages/resources/workspace/tasks-operations/NoticesPage'));
+const OperationalWorkflowsPage = lazy(() => import('./pages/resources/workspace/tasks-operations/OperationalWorkflowsPage'));
+
+// Resources - Documentation > Workspace > Communication
+const ChainOfCommandPage = lazy(() => import('./pages/resources/workspace/communication/ChainOfCommandPage'));
+const ReportingCommunicationPage = lazy(() => import('./pages/resources/workspace/communication/ReportingCommunicationPage'));
+const NotificationsPage = lazy(() => import('./pages/resources/workspace/communication/NotificationsPage'));
+
+// Resources - Documentation > Workspace > Resources
+const OrgResourcesPage = lazy(() => import('./pages/resources/workspace/resources/OrgResourcesPage'));
+const DeptResourcesPage = lazy(() => import('./pages/resources/workspace/resources/DeptResourcesPage'));
+const TrainingPage = lazy(() => import('./pages/resources/workspace/resources/TrainingPage'));
+
+// Resources - Documentation > Workspace > Onboarding
+const WelcomeSetupPage = lazy(() => import('./pages/resources/workspace/onboarding/WelcomeSetupPage'));
+const OnboardingQuestionsPage = lazy(() => import('./pages/resources/workspace/onboarding/OnboardingQuestionsPage'));
+const AgreementsPage = lazy(() => import('./pages/resources/workspace/onboarding/AgreementsPage'));
+const PrivateKeyPage = lazy(() => import('./pages/resources/workspace/onboarding/PrivateKeyPage'));
+const CompletingOnboardingPage = lazy(() => import('./pages/resources/workspace/onboarding/CompletingOnboardingPage'));
+
+// Resources - Documentation > Robot > Overview
 const WhatIsRobotPage = lazy(() => import('./pages/resources/robot/overview/WhatIsRobotPage'));
 const RobotArchitecturePage = lazy(() => import('./pages/resources/robot/overview/RobotArchitecturePage'));
 const HowRobotWorksPage = lazy(() => import('./pages/resources/robot/overview/HowRobotWorksPage'));
@@ -21,6 +73,7 @@ const AgentModelPage = lazy(() => import('./pages/resources/robot/overview/Agent
 const CurrentStatusPage = lazy(() => import('./pages/resources/robot/overview/CurrentStatusPage'));
 const LongTermVisionPage = lazy(() => import('./pages/resources/robot/overview/LongTermVisionPage'));
 
+// Resources - Documentation > Robot > Getting Started
 const RobotBeforeYouStartPage = lazy(() => import('./pages/resources/robot/getting-started/BeforeYouStartPage'));
 const RobotInstallCraftlyRobotPage = lazy(() => import('./pages/resources/robot/getting-started/InstallCraftlyRobotPage'));
 const RobotSignInPrivateKeyPage = lazy(() => import('./pages/resources/robot/getting-started/SignInPrivateKeyPage'));
@@ -30,55 +83,18 @@ const RobotAgentNegotiationGSPage = lazy(() => import('./pages/resources/robot/g
 const RobotRunFirstTaskPage = lazy(() => import('./pages/resources/robot/getting-started/RunFirstTaskPage'));
 const RobotNextStepsPage = lazy(() => import('./pages/resources/robot/getting-started/NextStepsPage'));
 
+// Resources - Documentation > Robot > Feature Overview
 const RobotAgenticAIPage = lazy(() => import('./pages/resources/robot/feature-overview/AgenticAIPage'));
 const RobotAgentNegotiationPage = lazy(() => import('./pages/resources/robot/feature-overview/AgentNegotiationPage'));
 const RobotHumanConfirmationPage = lazy(() => import('./pages/resources/robot/feature-overview/HumanConfirmationPage'));
 const RobotRealWorldTaskCoordinationPage = lazy(() => import('./pages/resources/robot/feature-overview/RealWorldTaskCoordinationPage'));
 
-
-const WhatIsWorkspacePage = lazy(() => import('./pages/resources/workspace/overview/WhatIsWorkspacePage'));
-const HowWorkspaceWorksPage = lazy(() => import('./pages/resources/workspace/overview/HowWorkspaceWorksPage'));
-const WorkspaceStructurePage = lazy(() => import('./pages/resources/workspace/overview/WorkspaceStructurePage'));
-const CoreConceptsPage = lazy(() => import('./pages/resources/workspace/overview/CoreConceptsPage'));
-
-
-
-const OrgStructurePage = lazy(() => import('./pages/resources/workspace/organization/OrgStructurePage'));
-const DepartmentsPage = lazy(() => import('./pages/resources/workspace/organization/DepartmentsPage'));
-const ReportingStructurePage = lazy(() => import('./pages/resources/workspace/organization/ReportingStructurePage'));
-const MembersPage = lazy(() => import('./pages/resources/workspace/people-roles/MembersPage'));
-const RolesPage = lazy(() => import('./pages/resources/workspace/people-roles/RolesPage'));
-const PermissionsPage = lazy(() => import('./pages/resources/workspace/people-roles/PermissionsPage'));
-const ManagersPage = lazy(() => import('./pages/resources/workspace/people-roles/ManagersPage'));
-const AccessControlPage = lazy(() => import('./pages/resources/workspace/people-roles/AccessControlPage'));
-
-const TasksPage = lazy(() => import('./pages/resources/workspace/tasks-operations/TasksPage'));
-const TaskAssignmentPage = lazy(() => import('./pages/resources/workspace/tasks-operations/TaskAssignmentPage'));
-const TaskEvidencePage = lazy(() => import('./pages/resources/workspace/tasks-operations/TaskEvidencePage'));
-const SupportRequestsPage = lazy(() => import('./pages/resources/workspace/tasks-operations/SupportRequestsPage'));
-const NoticesPage = lazy(() => import('./pages/resources/workspace/tasks-operations/NoticesPage'));
-const OperationalWorkflowsPage = lazy(() => import('./pages/resources/workspace/tasks-operations/OperationalWorkflowsPage'));
-
-const ChainOfCommandPage = lazy(() => import('./pages/resources/workspace/communication/ChainOfCommandPage'));
-const ReportingCommunicationPage = lazy(() => import('./pages/resources/workspace/communication/ReportingCommunicationPage'));
-const NotificationsPage = lazy(() => import('./pages/resources/workspace/communication/NotificationsPage'));
-
-const OrgResourcesPage = lazy(() => import('./pages/resources/workspace/resources/OrgResourcesPage'));
-const DeptResourcesPage = lazy(() => import('./pages/resources/workspace/resources/DeptResourcesPage'));
-const TrainingPage = lazy(() => import('./pages/resources/workspace/resources/TrainingPage'));
-
-
-const WelcomeSetupPage = lazy(() => import('./pages/resources/workspace/onboarding/WelcomeSetupPage'));
-const OnboardingQuestionsPage = lazy(() => import('./pages/resources/workspace/onboarding/OnboardingQuestionsPage'));
-const AgreementsPage = lazy(() => import('./pages/resources/workspace/onboarding/AgreementsPage'));
-const PrivateKeyPage = lazy(() => import('./pages/resources/workspace/onboarding/PrivateKeyPage'));
-const CompletingOnboardingPage = lazy(() => import('./pages/resources/workspace/onboarding/CompletingOnboardingPage'));
+// Resources - Other
 const BlogPage = lazy(() => import('./pages/resources/BlogPage'));
 const SupportPage = lazy(() => import('./pages/resources/SupportPage'));
 const ReleasesPage = lazy(() => import('./pages/resources/ReleasesPage'));
-const FAQPage = lazy(() => import('./pages/resources/FAQPage'));
-const PressPage = lazy(() => import('./pages/resources/PressPage'));
 const ChangelogPage = lazy(() => import('./pages/resources/ChangelogPage'));
+const PressPage = lazy(() => import('./pages/resources/PressPage'));
 
 function PageLoader() {
   return (
@@ -92,14 +108,12 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   const prevPathname = useRef(pathname);
 
-  // Set manual scroll restoration to prevent browser from clamping during Suspense
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
   }, []);
 
-  // Save scroll position before reload
   useEffect(() => {
     const saveScroll = () => {
       sessionStorage.setItem('scroll-pos', window.scrollY.toString());
@@ -110,12 +124,10 @@ function ScrollToTop() {
 
   useEffect(() => {
     if (pathname !== prevPathname.current) {
-      // Path changed due to navigation
       window.scrollTo(0, 0);
       prevPathname.current = pathname;
       sessionStorage.removeItem('scroll-pos');
     } else {
-      // Initial load (or StrictMode re-run)
       if (pathname.startsWith('/resources/documentation')) {
         window.scrollTo(0, 0);
       } else {
@@ -124,7 +136,6 @@ function ScrollToTop() {
           const targetY = parseInt(saved, 10);
           let attempts = 0;
           
-          // Retry loop to wait for Suspense to inject content
           const tryRestore = () => {
             if (document.documentElement.scrollHeight >= targetY + window.innerHeight || attempts > 20) {
               window.scrollTo(0, targetY);
@@ -148,41 +159,44 @@ export default function App() {
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
         <Routes>
+          {/* Top-level pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/download" element={<DownloadPage />} />
 
-          {/* Product pages */}
+          {/* Products */}
           <Route path="/products/workspace" element={<WorkspacePage />} />
           <Route path="/products/robot" element={<RobotPage />} />
 
-          {/* Use case pages */}
+          {/* Use Cases */}
           <Route path="/use-cases/operations" element={<OperationsPage />} />
           <Route path="/use-cases/agent-negotiation" element={<AgentNegotiationPage />} />
           <Route path="/use-cases/ai" element={<AIPage />} />
 
-          {/* Resource pages */}
+          {/* Resources - Documentation Home */}
           <Route path="/resources/documentation" element={<DocumentationPage />} />
           <Route path="/resources/documentation/plan" element={<PlanPage />} />
           <Route path="/resources/documentation/salary-compensation" element={<SalaryCompensationPage />} />
           <Route path="/resources/documentation/faq" element={<FAQPage />} />
-          
+
+          {/* Resources - Documentation > Workspace > Overview */}
           <Route path="/resources/documentation/workspace/overview/what-is-craftly-workspace" element={<WhatIsWorkspacePage />} />
           <Route path="/resources/documentation/workspace/overview/how-workspace-works" element={<HowWorkspaceWorksPage />} />
           <Route path="/resources/documentation/workspace/overview/workspace-structure" element={<WorkspaceStructurePage />} />
           <Route path="/resources/documentation/workspace/overview/core-concepts" element={<CoreConceptsPage />} />
 
-
-
+          {/* Resources - Documentation > Workspace > Organization */}
           <Route path="/resources/documentation/workspace/organization/org-structure" element={<OrgStructurePage />} />
           <Route path="/resources/documentation/workspace/organization/departments" element={<DepartmentsPage />} />
           <Route path="/resources/documentation/workspace/organization/reporting-structure" element={<ReportingStructurePage />} />
 
+          {/* Resources - Documentation > Workspace > People & Roles */}
           <Route path="/resources/documentation/workspace/people-roles/members" element={<MembersPage />} />
           <Route path="/resources/documentation/workspace/people-roles/roles" element={<RolesPage />} />
           <Route path="/resources/documentation/workspace/people-roles/permissions" element={<PermissionsPage />} />
           <Route path="/resources/documentation/workspace/people-roles/managers" element={<ManagersPage />} />
           <Route path="/resources/documentation/workspace/people-roles/access-control" element={<AccessControlPage />} />
 
+          {/* Resources - Documentation > Workspace > Tasks & Operations */}
           <Route path="/resources/documentation/workspace/tasks-operations/tasks" element={<TasksPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/task-assignment" element={<TaskAssignmentPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/task-evidence" element={<TaskEvidencePage />} />
@@ -190,21 +204,24 @@ export default function App() {
           <Route path="/resources/documentation/workspace/tasks-operations/notices" element={<NoticesPage />} />
           <Route path="/resources/documentation/workspace/tasks-operations/operational-workflows" element={<OperationalWorkflowsPage />} />
 
+          {/* Resources - Documentation > Workspace > Communication */}
           <Route path="/resources/documentation/workspace/communication/chain-of-command" element={<ChainOfCommandPage />} />
           <Route path="/resources/documentation/workspace/communication/reporting-communication" element={<ReportingCommunicationPage />} />
           <Route path="/resources/documentation/workspace/communication/notifications" element={<NotificationsPage />} />
 
+          {/* Resources - Documentation > Workspace > Resources */}
           <Route path="/resources/documentation/workspace/resources/org-resources" element={<OrgResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/dept-resources" element={<DeptResourcesPage />} />
           <Route path="/resources/documentation/workspace/resources/training" element={<TrainingPage />} />
 
-
+          {/* Resources - Documentation > Workspace > Onboarding */}
           <Route path="/resources/documentation/workspace/onboarding/welcome-setup" element={<WelcomeSetupPage />} />
           <Route path="/resources/documentation/workspace/onboarding/onboarding-questions" element={<OnboardingQuestionsPage />} />
           <Route path="/resources/documentation/workspace/onboarding/agreements" element={<AgreementsPage />} />
           <Route path="/resources/documentation/workspace/onboarding/private-key" element={<PrivateKeyPage />} />
           <Route path="/resources/documentation/workspace/onboarding/completing-onboarding" element={<CompletingOnboardingPage />} />
 
+          {/* Resources - Documentation > Robot > Overview */}
           <Route path="/resources/documentation/robot/overview/what-is-craftly-robot" element={<WhatIsRobotPage />} />
           <Route path="/resources/documentation/robot/overview/architecture" element={<RobotArchitecturePage />} />
           <Route path="/resources/documentation/robot/overview/how-robot-works" element={<HowRobotWorksPage />} />
@@ -212,6 +229,7 @@ export default function App() {
           <Route path="/resources/documentation/robot/overview/current-status" element={<CurrentStatusPage />} />
           <Route path="/resources/documentation/robot/overview/long-term-vision" element={<LongTermVisionPage />} />
 
+          {/* Resources - Documentation > Robot > Getting Started */}
           <Route path="/resources/documentation/robot/getting-started/before-you-start" element={<RobotBeforeYouStartPage />} />
           <Route path="/resources/documentation/robot/getting-started/install-craftly-robot" element={<RobotInstallCraftlyRobotPage />} />
           <Route path="/resources/documentation/robot/getting-started/sign-in-private-key" element={<RobotSignInPrivateKeyPage />} />
@@ -221,18 +239,19 @@ export default function App() {
           <Route path="/resources/documentation/robot/getting-started/run-first-task" element={<RobotRunFirstTaskPage />} />
           <Route path="/resources/documentation/robot/getting-started/next-steps" element={<RobotNextStepsPage />} />
 
-
-
+          {/* Resources - Documentation > Robot > Feature Overview */}
           <Route path="/resources/documentation/robot/feature-overview/agentic-ai" element={<RobotAgenticAIPage />} />
           <Route path="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation" element={<RobotAgentNegotiationPage />} />
           <Route path="/resources/documentation/robot/feature-overview/human-confirmation" element={<RobotHumanConfirmationPage />} />
           <Route path="/resources/documentation/robot/feature-overview/real-world-task-coordination" element={<RobotRealWorldTaskCoordinationPage />} />
+
+          {/* Resources - Other */}
           <Route path="/resources/blog" element={<BlogPage />} />
           <Route path="/resources/support" element={<SupportPage />} />
           <Route path="/resources/releases" element={<ReleasesPage />} />
           <Route path="/resources/changelog" element={<ChangelogPage />} />
           <Route path="/resources/press" element={<PressPage />} />
-          
+
           {/* Catch-all route for 404 Not Found */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -240,5 +259,3 @@ export default function App() {
     </Layout>
   );
 }
-
-
