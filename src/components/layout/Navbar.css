@@ -49,11 +49,10 @@
   align-items: center;
 }
 
-.navbar__logo-text {
-  font-family: "Pacifico", cursive;
-  font-size: 28px;
-  color: var(--color-text);
-  line-height: 1;
+.navbar__logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 /* ── Desktop Nav ── */

@@ -23,7 +23,11 @@ export default function HomePage() {
       <div ref={revealRef}>
         {/* Workspace & Robot Sections */}
         <ProductShowcase product={products[0]} />
-        <ProductShowcase product={products[1]} altLayout visual={<RobotDemo />} />
+        <ProductShowcase
+          product={products[1]}
+          altLayout
+          visual={<RobotDemo />}
+        />
 
         {/* Final Download CTA */}
         <DownloadSection hideVisual={true} />

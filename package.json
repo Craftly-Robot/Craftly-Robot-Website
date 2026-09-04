@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.46.0",
     "@types/three": "^0.185.4",
     "lottie-react": "^3.1.0",
     "react": "^19.2.8",

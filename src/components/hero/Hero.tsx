@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { products } from "../../data/products";
 import HeroParticles from "./HeroParticles";
+import ProductVisual from "../product/ProductVisual";
 import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
 import "./Hero.css";
@@ -65,11 +66,15 @@ export default function Hero() {
         </div>
 
         <div className="hero__media-wrapper">
-          <VideoShowcase
-            src=""
-            poster={products[0].posterSrc}
-            altText="Craftly Workspace dashboard"
-          />
+          {products[0].videoSrc ? (
+            <VideoShowcase
+              src={products[0].videoSrc}
+              poster={products[0].posterSrc}
+              altText="Craftly Workspace showcase"
+            />
+          ) : (
+            <ProductVisual variant="overview" />
+          )}
         </div>
 
         <TechSnake />

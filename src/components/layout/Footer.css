@@ -10,7 +10,7 @@
 .footer__top {
   display: flex;
   flex-direction: column;
-  padding: 20px 48px;
+  padding: 20px 48px 56px;
   max-width: var(--container-wide);
   margin: 0 auto;
 }
@@ -19,7 +19,7 @@
   .footer__top {
     flex-direction: row;
     justify-content: flex-start;
-    padding: 20px 80px 40px;
+    padding: 20px 80px 72px;
     align-items: flex-start;
   }
 }
@@ -89,24 +89,10 @@
   opacity: 0.7;
 }
 
-/* ── Middle Section ── */
-.footer__middle {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 40px 60px;
-}
-
 .footer__wordmark {
   display: block;
   height: auto;
   object-fit: contain;
-}
-
-.footer__wordmark--large {
-  width: min(100%, 350px);
-  max-height: 185px;
 }
 
 .footer__wordmark--small {
