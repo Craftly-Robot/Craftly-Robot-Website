@@ -22,7 +22,6 @@ export default function Footer() {
           
           <div className="footer__column">
             <h3 className="footer__column-title">Resources</h3>
-            <Link to="/pricing" className="footer__link">Pricing</Link>
             <Link to="/use-cases/operations" className="footer__link">Use Cases</Link>
           </div>
         </div>
@@ -41,10 +40,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="footer__bottom-right">
-          <Link to="/about" className="footer__bottom-link">About Craftly</Link>
-          <Link to="/products" className="footer__bottom-link">Craftly Products</Link>
-          <Link to="/privacy" className="footer__bottom-link">Privacy</Link>
-          <Link to="/terms" className="footer__bottom-link">Terms</Link>
+          <Link to="/products/workspace" className="footer__bottom-link">Products</Link>
         </div>
       </div>
     </footer>
