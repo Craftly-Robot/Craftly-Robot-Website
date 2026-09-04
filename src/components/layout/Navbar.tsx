@@ -155,7 +155,10 @@ export default function Navbar() {
         >
           <div ref={megaRef} className="navbar__dropdown-inner">
             {activeNavConfig && (
-              <div className="navbar__mega" key={`${activeNavConfig.label}-${animationKey}`}>
+              <div
+                className="navbar__mega"
+                key={`${activeNavConfig.label}-${animationKey}`}
+              >
                 <div className="navbar__mega-left">
                   <h2 className="navbar__mega-title">
                     {activeNavConfig.label === "Products" && (
@@ -170,7 +173,8 @@ export default function Navbar() {
                     )}
                     {activeNavConfig.label === "Resources" && (
                       <>
-                        Everything you <br /> need to stay <br /> up-to-date and <br /> get help
+                        Everything you <br /> need to stay <br /> up-to-date and{" "}
+                        <br /> get help
                       </>
                     )}
                   </h2>

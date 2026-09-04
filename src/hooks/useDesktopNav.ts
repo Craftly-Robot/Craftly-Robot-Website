@@ -1,11 +1,21 @@
-import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { useLocation } from "react-router-dom";
 import { navigation } from "../data/navigation";
 
 export function useDesktopNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
-  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(undefined);
+  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(
+    null,
+  );
+  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(
+    undefined,
+  );
   const [animationKey, setAnimationKey] = useState(0);
   const navRef = useRef<HTMLElement>(null);
   const megaRef = useRef<HTMLDivElement>(null);
