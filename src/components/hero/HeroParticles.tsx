@@ -403,7 +403,7 @@ void main() {
 }
 `;
 
-export default function HeroParticles() {
+export default function HeroParticles({ className = "" }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reducedMotion = useReducedMotion();
@@ -780,7 +780,11 @@ export default function HeroParticles() {
   }
 
   return (
-    <div ref={containerRef} className="hero-visual" aria-hidden="true">
+    <div
+      ref={containerRef}
+      className={`hero-visual ${className}`.trim()}
+      aria-hidden="true"
+    >
       <canvas ref={canvasRef} className="hero-visual__canvas" />
     </div>
   );

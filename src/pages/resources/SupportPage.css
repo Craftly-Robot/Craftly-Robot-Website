@@ -1,16 +1,17 @@
 .support-page {
+  position: relative;
+  overflow: hidden;
   padding-block: var(--space-4xl) var(--space-xl);
   min-height: 100vh;
-  /* Dotted background pattern */
-  background-image: radial-gradient(#dcdcdc 1px, transparent 1px);
-  background-size: 32px 32px;
-  background-position: 0 0;
+  background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .support-hero {
+  position: relative;
+  z-index: 1;
   text-align: center;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-4xl);
@@ -52,6 +53,8 @@
 }
 
 .support-cards {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-lg);

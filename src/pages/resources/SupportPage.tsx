@@ -1,5 +1,6 @@
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
+import HeroParticles from "../../components/hero/HeroParticles";
 import SectionTitle from "../../components/ui/SectionTitle";
 import "./SupportPage.css";
 
@@ -12,6 +13,7 @@ export default function SupportPage() {
       />
 
       <div className="support-page">
+        <HeroParticles className="support-particles" />
         <div className="support-hero">
           <SectionTitle
             text={`Find answers in our docs\nor go to our community`}
