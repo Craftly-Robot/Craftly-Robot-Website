@@ -52,6 +52,7 @@ export default function VideoShowcase({ src, poster, altText }: VideoShowcasePro
           muted
           loop
           playsInline
+          preload="metadata"
           onError={() => setError(true)}
         />
       )}
