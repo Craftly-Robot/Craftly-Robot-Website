@@ -14,6 +14,9 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="layout">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Navbar />
       <main className="layout__main" id="main-content">
         {children}
