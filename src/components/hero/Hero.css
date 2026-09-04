@@ -97,7 +97,7 @@
 .hero__media-wrapper {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: clamp(280px, 35vh, 400px) auto 0;
   opacity: 0;
   animation: heroFadeUp 0.8s var(--ease-out) 0.45s forwards;
 }
