@@ -5,7 +5,12 @@ export default function SignInPrivateKeyPage() {
     <DocPage
       title="Sign In with Your Private Key — Craftly Robot"
       description="Sign In with Your Private Key in Craftly Robot"
-      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Sign In with Your Private Key"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Robot",
+        "Getting Started",
+        "Sign In with Your Private Key",
+      ]}
       pageId="sign-in-private-key"
       pageTitle="Sign In with Your Private Key"
       tocItems={[

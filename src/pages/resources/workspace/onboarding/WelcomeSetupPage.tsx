@@ -7,7 +7,12 @@ export default function WelcomeSetupPage() {
     <DocPage
       title="Welcome & Setup — Craftly Workspace"
       description="Welcome & Setup in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Welcome & Setup"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Onboarding",
+        "Welcome & Setup",
+      ]}
       pageId="welcome-and-setup"
       pageTitle="Welcome & Setup"
       tocItems={[{ id: "welcome-and-setup", label: "Welcome & Setup" }]}

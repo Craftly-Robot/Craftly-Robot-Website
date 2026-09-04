@@ -5,7 +5,12 @@ export default function HowWorkspaceWorksPage() {
     <DocPage
       title="How Workspace Works? — Craftly Workspace"
       description="How Workspace Works? in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Overview", "How Workspace Works?"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Overview",
+        "How Workspace Works?",
+      ]}
       pageId="how-workspace-works"
       pageTitle="How Workspace Works?"
       tocItems={[

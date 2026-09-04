@@ -5,7 +5,12 @@ export default function HumanConfirmationPage() {
     <DocPage
       title="Human Confirmation — Craftly Robot"
       description="Human Confirmation in Craftly Robot"
-      crumbs={["Documentation", "Craftly Robot", "Feature Overview", "Human Confirmation"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Robot",
+        "Feature Overview",
+        "Human Confirmation",
+      ]}
       pageId="human-confirmation"
       pageTitle="Human Confirmation"
       tocItems={[

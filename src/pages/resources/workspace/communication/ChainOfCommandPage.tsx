@@ -5,7 +5,12 @@ export default function ChainOfCommandPage() {
     <DocPage
       title="Chain of Command — Craftly Workspace"
       description="Chain of Command in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Communication", "Chain of Command"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Communication",
+        "Chain of Command",
+      ]}
       pageId="chain-of-command"
       pageTitle="Chain of Command"
       tocItems={[{ id: "chain-of-command", label: "Chain of Command" }]}
