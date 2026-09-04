@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ImageWithFallback from "../common/ImageWithFallback";
 import "./IntroOverlay.css";
 
 const INTRO_KEY = "craftly-intro-seen";
@@ -122,7 +123,7 @@ export default function IntroOverlay() {
   return (
     <div className="intro" aria-hidden="true">
       <div className="intro__sheet" />
-      <img
+      <ImageWithFallback
         ref={markRef}
         className="intro__mark"
         src="/assets/brand/craftly-wordmark-intro.svg"

@@ -1,4 +1,5 @@
 import DocPage from "../../DocPage";
+import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
 export default function CompletingOnboardingPage() {
   return (
@@ -62,7 +63,7 @@ export default function CompletingOnboardingPage() {
           margin: "32px 0",
         }}
       >
-        <img
+        <ImageWithFallback
           src="/assets/agreements/3.webp"
           alt="Completing Onboarding 1"
           style={{ width: "100%", display: "block" }}
@@ -82,7 +83,7 @@ export default function CompletingOnboardingPage() {
           margin: "32px 0",
         }}
       >
-        <img
+        <ImageWithFallback
           src="/assets/agreements/4.webp"
           alt="Completing Onboarding 2"
           style={{ width: "100%", display: "block" }}

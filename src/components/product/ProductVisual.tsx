@@ -41,6 +41,7 @@ import {
   type ProductSceneId,
 } from "../../data/productVisuals";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
+import ImageWithFallback from "../common/ImageWithFallback";
 import "./ProductVisual.css";
 
 const icons = {
@@ -170,7 +171,7 @@ function TrainingOverview({
     >
       <aside className="pv-sidebar" aria-label="Illustrative Workspace sidebar">
         <div className="pv-brand">
-          <img
+          <ImageWithFallback
             src="/assets/brand/craftly-wordmark.svg"
             alt="Craftly"
             width="105"
@@ -207,7 +208,7 @@ function TrainingOverview({
           <div className="pv-compute">
             <ComputeNodes cloud={false} />
             <div className="pv-compute__network">
-              <img
+              <ImageWithFallback
                 src="/assets/product-visuals/training-network.webp"
                 alt=""
                 width="1024"

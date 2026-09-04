@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useOS } from "../hooks/useOS";
 import SectionTitle from "../components/ui/SectionTitle";
+import ImageWithFallback from "../components/common/ImageWithFallback";
 import "./DownloadPage.css";
 
 const AppleIcon = () => (
@@ -19,13 +20,13 @@ const WindowsIcon = () => (
 
 /* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
-  <img
-    src="/assets/brand/linux-logo.png"
-    alt="Linux"
-    width="20"
-    height="20"
-    style={{ objectFit: "contain" }}
-  />
+    <ImageWithFallback
+      src="/assets/brand/linux-logo.png"
+      alt="Linux"
+      width="20"
+      height="20"
+      style={{ objectFit: "contain" }}
+    />
 );
 
 const AndroidIcon = () => (

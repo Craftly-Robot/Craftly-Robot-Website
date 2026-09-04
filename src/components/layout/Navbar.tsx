@@ -2,6 +2,7 @@ import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react
 import { Link, useLocation } from "react-router-dom";
 import { navigation } from "../../data/navigation";
 import DropdownIcon from "../ui/DropdownIcon";
+import ImageWithFallback from "../common/ImageWithFallback";
 import "./Navbar.css";
 
 /* ── Icons ── */
@@ -202,7 +203,7 @@ export default function Navbar() {
         <div className="navbar__left">
           <Link to="/" className="navbar__logo" aria-label="Craftly Home">
             <div className="navbar__logo-container">
-              <img
+              <ImageWithFallback
                 src="/assets/brand/craftly-wordmark-intro.svg"
                 alt="Craftly"
                 className="navbar__logo-img"

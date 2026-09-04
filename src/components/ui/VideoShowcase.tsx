@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import VideoPlaceholder from "../common/VideoPlaceholder";
+import ImageWithFallback from "../common/ImageWithFallback";
 import "./VideoShowcase.css";
 
 interface VideoShowcaseProps {
@@ -55,7 +56,7 @@ export default function VideoShowcase({
   return (
     <div className="video-showcase">
       {!src ? (
-        <img
+        <ImageWithFallback
           src={poster}
           alt={altText || "Showcase visual"}
           className="video-showcase__image"

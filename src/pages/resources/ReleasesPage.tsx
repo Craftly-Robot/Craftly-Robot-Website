@@ -3,6 +3,7 @@ import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import SectionTitle from "../../components/ui/SectionTitle";
+import ImageWithFallback from "../../components/common/ImageWithFallback";
 import "./ReleasesPage.css";
 
 const AppleIcon = () => (
@@ -18,13 +19,13 @@ const WindowsIcon = () => (
 );
 
 const LinuxIcon = () => (
-  <img
-    src="/assets/brand/linux-logo.png"
-    alt="Linux"
-    width="16"
-    height="16"
-    style={{ objectFit: "contain" }}
-  />
+    <ImageWithFallback
+      src="/assets/brand/linux-logo.png"
+      alt="Linux"
+      width="16"
+      height="16"
+      style={{ objectFit: "contain" }}
+    />
 );
 
 const DownloadIcon = () => (

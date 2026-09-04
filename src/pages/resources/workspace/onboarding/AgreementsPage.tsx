@@ -1,4 +1,5 @@
 import DocPage from "../../DocPage";
+import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
 export default function AgreementsPage() {
   return (
@@ -87,7 +88,7 @@ export default function AgreementsPage() {
           margin: "32px 0",
         }}
       >
-        <img
+        <ImageWithFallback
           src="/assets/agreements/1.webp"
           alt="Agreements"
           style={{ width: "100%", display: "block" }}
@@ -107,7 +108,7 @@ export default function AgreementsPage() {
           margin: "32px 0",
         }}
       >
-        <img
+        <ImageWithFallback
           src="/assets/agreements/2.webp"
           alt="Digital Signatures"
           style={{ width: "100%", display: "block" }}

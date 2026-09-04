@@ -5,6 +5,7 @@ import ProductVisual from "../product/ProductVisual";
 import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
 import { useOS } from "../../hooks/useOS";
+import ImageWithFallback from "../common/ImageWithFallback";
 import "./Hero.css";
 
 function MonitorIcon({ className }: { className?: string }) {
@@ -74,7 +75,7 @@ function HeroTitle() {
   return (
     <h1 className="text-hero-display hero__title">
       <span>Hello World From Bangladesh</span>
-      <img
+      <ImageWithFallback
         src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp"
         alt="Bangladesh Flag"
         className="hero__flag"
