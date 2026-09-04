@@ -42,16 +42,21 @@ export default function Footer() {
       </div>
 
       <div className="footer__middle">
-        <div className="footer__huge-text">
-          Craftly Rob<span className="footer__special-o">o</span>
-          <span className="footer__special-t">t</span>
-        </div>
+        <img
+          className="footer__wordmark footer__wordmark--large"
+          src="/assets/brand/craftly-wordmark.svg"
+          alt="Craftly"
+        />
       </div>
 
       <div className="footer__bottom">
         <div className="footer__bottom-left">
           <Link to="/" className="footer__bottom-logo">
-            Craftly
+            <img
+              className="footer__wordmark footer__wordmark--small"
+              src="/assets/brand/craftly-wordmark.svg"
+              alt="Craftly"
+            />
           </Link>
         </div>
         <div className="footer__bottom-right">

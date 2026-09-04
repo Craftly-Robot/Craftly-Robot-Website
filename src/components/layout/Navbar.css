@@ -76,8 +76,8 @@
   border: none;
   cursor: pointer;
   transition:
-    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
-    color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    background-color var(--duration-normal) var(--ease-in-out),
+    color var(--duration-normal) var(--ease-in-out);
 }
 
 .navbar__nav-item:hover,
@@ -89,7 +89,7 @@
 .navbar__nav-chevron {
   width: 12px;
   height: 12px;
-  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform var(--duration-slow) var(--ease-in-out);
 }
 
 .navbar__nav-item--open .navbar__nav-chevron {
@@ -141,6 +141,9 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
+  /* Ease into opening and menu-height changes; retain the faster exit above. */
+  transition-duration: var(--duration-slow);
+  transition-timing-function: var(--ease-in-out);
 }
 
 .navbar__dropdown-inner {
@@ -183,7 +186,7 @@
   letter-spacing: -0.02em;
   color: #000000;
   max-width: none;
-  animation: navItemGlideIn 320ms cubic-bezier(0.16, 1, 0.3, 1) 0ms backwards;
+  animation: navItemGlideIn var(--duration-slow) var(--ease-out) 0ms backwards;
   will-change: opacity, transform;
 }
 
@@ -198,11 +201,11 @@
   border: none;
   border-radius: 9999px;
   text-decoration: none;
-  animation: navItemGlideIn 320ms cubic-bezier(0.16, 1, 0.3, 1) 60ms backwards;
+  animation: navItemGlideIn var(--duration-slow) var(--ease-out) 60ms backwards;
   will-change: opacity, transform;
   transition:
-    background-color 180ms ease,
-    color 180ms ease;
+    background-color var(--duration-normal) var(--ease-in-out),
+    color var(--duration-normal) var(--ease-in-out);
 }
 
 .navbar__mega-btn:hover {
@@ -223,7 +226,7 @@
   margin-bottom: 16px;
   padding-left: 12px;
   font-weight: 400;
-  animation: navItemGlideIn 300ms cubic-bezier(0.16, 1, 0.3, 1) 90ms backwards;
+  animation: navItemGlideIn var(--duration-slow) var(--ease-out) 90ms backwards;
   will-change: opacity, transform;
 }
 
@@ -243,11 +246,11 @@
   text-decoration: none;
   color: #000000;
   width: fit-content;
-  animation: navItemGlideIn 320ms cubic-bezier(0.16, 1, 0.3, 1) calc(110ms + var(--item-index, 0) * 35ms) backwards;
+  animation: navItemGlideIn var(--duration-slow) var(--ease-out) calc(110ms + var(--item-index, 0) * 35ms) backwards;
   will-change: opacity, transform;
   transition:
-    background-color 180ms ease,
-    color 180ms ease;
+    background-color var(--duration-normal) var(--ease-in-out),
+    color var(--duration-normal) var(--ease-in-out);
 }
 
 /* Stagger fallback delays */
@@ -522,7 +525,7 @@
 .dropdown-item__arrow {
   display: inline-flex;
   align-items: center;
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-normal) var(--ease-in-out);
   margin-left: 6px;
   color: #000000;
 }
@@ -552,10 +555,15 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition-duration: var(--duration-slow);
+  transition-timing-function: var(--ease-in-out);
 }
 
 /* ── Accessibility: Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
+  .navbar__nav-item,
+  .navbar__nav-chevron,
+  .dropdown-item__arrow,
   .navbar__dropdown,
   .navbar__mega-title,
   .navbar__mega-btn,
@@ -567,4 +575,3 @@
     transform: none !important;
   }
 }
-
