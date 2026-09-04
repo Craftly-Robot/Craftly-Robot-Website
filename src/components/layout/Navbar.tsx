@@ -1,6 +1,8 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navigation } from '../../data/navigation';
+import { useDesktopNav } from '../../hooks/useDesktopNav';
+import { useMobileNav } from '../../hooks/useMobileNav';
 import DropdownIcon from '../ui/DropdownIcon';
 import './Navbar.css';
 
@@ -13,109 +15,21 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
-
-
-/* ── Icons ── */
-
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement>(null);
   const location = useLocation();
-  const hoverLockoutRef = useRef<boolean>(false);
+  const { activeDropdown, setActiveDropdown, navRef, toggleDropdown, handleMouseEnter, handleMouseLeave } = useDesktopNav();
+  const { mobileOpen, mobileSection, toggleMobile, toggleSection, closeMobile } = useMobileNav();
 
   // Close mobile nav on route change
   useEffect(() => {
-    setMobileOpen(false);
-    setMobileSection(null);
+    closeMobile();
     setActiveDropdown(null);
-  }, [location.pathname]);
-
-  // Scroll detection
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null);
-      }
-    };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
-  }, []);
-
-  // Close dropdown on Escape
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActiveDropdown(null);
-        setMobileOpen(false);
-      }
-    };
-    document.addEventListener('keydown', handler);
-    return () => document.removeEventListener('keydown', handler);
-  }, []);
-
-  // Prevent body scroll when mobile nav open
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [mobileOpen]);
-
-  const toggleDropdown = useCallback((label: string) => {
-    setActiveDropdown((prev) => {
-      if (prev === label) {
-        hoverLockoutRef.current = true;
-        setTimeout(() => {
-          hoverLockoutRef.current = false;
-        }, 300);
-        return null;
-      }
-      return label;
-    });
-  }, []);
-
-  const timeoutRef = useRef<number | null>(null);
-
-  const handleMouseEnter = useCallback((label: string) => {
-    if (hoverLockoutRef.current) {
-      return;
-    }
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    setActiveDropdown(label);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    timeoutRef.current = window.setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
-  }, []);
-
-  // Cleanup timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, []);
+  }, [location.pathname, closeMobile, setActiveDropdown]);
 
   return (
     <header
       ref={navRef}
-      className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
+      className={`navbar ${mobileOpen ? 'navbar--scrolled' : ''}`}
       role="banner"
     >
       <div className="navbar__inner">
@@ -128,91 +42,90 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-        <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
-          {navigation.map((item) => (
-            <div 
-              key={item.label}
-              onMouseEnter={() => handleMouseEnter(item.label)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                className={`navbar__nav-item ${activeDropdown === item.label ? 'navbar__nav-item--active navbar__nav-item--open' : ''}`}
-                onClick={() => toggleDropdown(item.label)}
-                aria-expanded={activeDropdown === item.label}
-                aria-haspopup="true"
+          <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
+            {navigation.map((item) => (
+              <div 
+                key={item.label}
+                onMouseEnter={() => handleMouseEnter(item.label)}
+                onMouseLeave={handleMouseLeave}
               >
-                {item.label}
-                <ChevronDown className="navbar__nav-chevron" />
-              </button>
+                <button
+                  className={`navbar__nav-item ${activeDropdown === item.label ? 'navbar__nav-item--active navbar__nav-item--open' : ''}`}
+                  onClick={() => toggleDropdown(item.label)}
+                  aria-expanded={activeDropdown === item.label}
+                  aria-haspopup="true"
+                >
+                  {item.label}
+                  <ChevronDown className="navbar__nav-chevron" />
+                </button>
 
-              {item.items && (
-                <div className="navbar__dropdown-wrapper">
-                  <div
-                    className={`navbar__dropdown ${activeDropdown === item.label ? 'navbar__dropdown--visible' : ''}`}
-                    role="menu"
-                  >
-                    <div className="navbar__mega">
-                      <div className="navbar__mega-left">
-                        <h2 className="navbar__mega-title">
+                {item.items && (
+                  <div className="navbar__dropdown-wrapper">
+                    <div
+                      className={`navbar__dropdown ${activeDropdown === item.label ? 'navbar__dropdown--visible' : ''}`}
+                      role="menu"
+                    >
+                      <div className="navbar__mega">
+                        <div className="navbar__mega-left">
+                          <h2 className="navbar__mega-title">
+                            {item.label === 'Products' && (
+                              <>Explore our <br /> next generation <br /> products</>
+                            )}
+                            {item.label === 'Use Cases' && (
+                              <>Discover solutions <br /> for your specific <br /> needs</>
+                            )}
+                            {item.label === 'Resources' && (
+                              <>Everything you <br /> need to stay <br /> up-to-date and <br /> get help</>
+                            )}
+                          </h2>
+                          <Link 
+                            to={item.items[0]?.route || '/'} 
+                            className="navbar__mega-btn"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            See overview
+                          </Link>
+                        </div>
+                        
+                        <div className="navbar__mega-right">
                           {item.label === 'Products' && (
-                            <>Explore our <br /> next generation <br /> products</>
+                            <div className="navbar__mega-list-title">Products</div>
                           )}
-                          {item.label === 'Use Cases' && (
-                            <>Discover solutions <br /> for your specific <br /> needs</>
-                          )}
-                          {item.label === 'Resources' && (
-                            <>Everything you <br /> need to stay <br /> up-to-date and <br /> get help</>
-                          )}
-                        </h2>
-                        <Link 
-                          to={item.items[0]?.route || '/'} 
-                          className="navbar__mega-btn"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          See overview
-                        </Link>
-                      </div>
-                      
-                      <div className="navbar__mega-right">
-                        {item.label === 'Products' && (
-                          <div className="navbar__mega-list-title">Products</div>
-                        )}
-                        <div className="navbar__mega-grid">
-                          {item.items.map((child) => (
-                            <Link
-                              key={child.route}
-                              to={child.route}
-                              className="dropdown-item"
-                              role="menuitem"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {/* No icon for products as requested by user */}
-                              <div className="dropdown-item__content">
-                                <div className="dropdown-item__title">
-                                  {child.title} 
-                                  {item.label === 'Resources' && child.title === 'Documentation' && (
-                                    <span className="dropdown-item__arrow">
-                                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                      </svg>
-                                    </span>
-                                  )}
+                          <div className="navbar__mega-grid">
+                            {item.items.map((child) => (
+                              <Link
+                                key={child.route}
+                                to={child.route}
+                                className="dropdown-item"
+                                role="menuitem"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <div className="dropdown-item__content">
+                                  <div className="dropdown-item__title">
+                                    {child.title} 
+                                    {item.label === 'Resources' && child.title === 'Documentation' && (
+                                      <span className="dropdown-item__arrow">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                          <polyline points="9 18 15 12 9 6"></polyline>
+                                        </svg>
+                                      </span>
+                                    )}
+                                  </div>
                                 </div>
-                              </div>
-                            </Link>
-                          ))}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
+                )}
+              </div>
+            ))}
+          </nav>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Right Side: Download + Mobile Toggle */}
         <div className="navbar__right">
           <Link to="/download" className="navbar__download">
             Download
@@ -233,7 +146,7 @@ export default function Navbar() {
           
           <button
             className={`navbar__mobile-toggle ${mobileOpen ? 'navbar__mobile-toggle--open' : ''}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={toggleMobile}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
           >
@@ -259,11 +172,7 @@ export default function Navbar() {
           >
             <button
               className="mobile-nav__section-toggle"
-              onClick={() =>
-                setMobileSection((prev) =>
-                  prev === item.label ? null : item.label
-                )
-              }
+              onClick={() => toggleSection(item.label)}
               aria-expanded={mobileSection === item.label}
             >
               {item.label}
@@ -277,9 +186,8 @@ export default function Navbar() {
                       key={child.route}
                       to={child.route}
                       className="mobile-nav__item"
-                      onClick={() => setMobileOpen(false)}
+                      onClick={closeMobile}
                     >
-                      {/* No icon for products as requested by user */}
                       <div className="mobile-nav__item-content">
                         <div className="mobile-nav__item-title">{child.title}</div>
                       </div>
@@ -291,7 +199,7 @@ export default function Navbar() {
           </div>
         ))}
 
-        <Link to="/download" className="mobile-nav__download" onClick={() => setMobileOpen(false)}>
+        <Link to="/download" className="mobile-nav__download" onClick={closeMobile}>
           Download
         </Link>
       </nav>
