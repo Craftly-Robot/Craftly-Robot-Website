@@ -38,7 +38,7 @@ function generatePoissonPoints(
   height: number,
   minDist: number,
   maxDist: number,
-  maxTries = 18
+  maxTries = 18,
 ): [number, number][] {
   const cellSize = minDist / Math.SQRT2;
   const gridWidth = Math.ceil(width / cellSize);
@@ -49,7 +49,9 @@ function generatePoissonPoints(
 
   const p0: [number, number] = [width * 0.5, height * 0.5];
   points.push(p0);
-  grid[Math.floor(p0[0] / cellSize) + Math.floor(p0[1] / cellSize) * gridWidth] = 0;
+  grid[
+    Math.floor(p0[0] / cellSize) + Math.floor(p0[1] / cellSize) * gridWidth
+  ] = 0;
   activeList.push(0);
 
   const distDiff = maxDist - minDist;
@@ -410,7 +412,7 @@ export default function HeroParticles() {
      gone, otherwise the stall lands in the middle of the wordmark's fade and
      freezes it half-way. */
   const [introDone, setIntroDone] = useState(
-    () => !document.documentElement.classList.contains("intro-active")
+    () => !document.documentElement.classList.contains("intro-active"),
   );
 
   useEffect(() => {
@@ -448,7 +450,7 @@ export default function HeroParticles() {
       40,
       container.offsetWidth / container.offsetHeight,
       0.1,
-      1000
+      1000,
     );
     // Position camera so 3D origin frames the hero title and CTA buttons directly
     camera.position.set(0, -0.36, 3.1);
@@ -458,7 +460,7 @@ export default function HeroParticles() {
     // Raycast ground plane for 3D mouse tracking
     const raycastPlane = new THREE.Mesh(
       new THREE.PlaneGeometry(16, 16),
-      new THREE.MeshBasicMaterial({ visible: false, side: THREE.DoubleSide })
+      new THREE.MeshBasicMaterial({ visible: false, side: THREE.DoubleSide }),
     );
     raycastPlane.position.y = camera.position.y;
     scene.add(raycastPlane);
@@ -484,7 +486,7 @@ export default function HeroParticles() {
       size,
       size,
       THREE.RGBAFormat,
-      THREE.FloatType
+      THREE.FloatType,
     );
     posTex.minFilter = THREE.NearestFilter;
     posTex.magFilter = THREE.NearestFilter;
@@ -558,7 +560,10 @@ export default function HeroParticles() {
       seeds[i * 4 + 3] = Math.random();
     }
 
-    renderGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    renderGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(positions, 3),
+    );
     renderGeometry.setAttribute("uv", new THREE.BufferAttribute(uvs, 2));
     renderGeometry.setAttribute("seeds", new THREE.BufferAttribute(seeds, 4));
 
@@ -661,7 +666,7 @@ export default function HeroParticles() {
           isVisible = entry.isIntersecting;
         });
       },
-      { root: null, threshold: 0 }
+      { root: null, threshold: 0 },
     );
     observer.observe(container);
 
@@ -696,17 +701,17 @@ export default function HeroParticles() {
       if (isIntersecting) {
         cursorPos.set(
           intersectionPoint.x * 0.175 + tx * 0.05,
-          (intersectionPoint.y - camera.position.y) * 0.175 + ty * 0.05
+          (intersectionPoint.y - camera.position.y) * 0.175 + ty * 0.05,
         );
         ringPos.set(
           ringPos.x + (cursorPos.x - ringPos.x) * 0.035,
-          ringPos.y + (cursorPos.y - ringPos.y) * 0.035
+          ringPos.y + (cursorPos.y - ringPos.y) * 0.035,
         );
       } else {
         cursorPos.set(tx * 0.2, ty * 0.1);
         ringPos.set(
           ringPos.x + (cursorPos.x - ringPos.x) * 0.012,
-          ringPos.y + (cursorPos.y - ringPos.y) * 0.012
+          ringPos.y + (cursorPos.y - ringPos.y) * 0.012,
         );
       }
 
@@ -717,7 +722,9 @@ export default function HeroParticles() {
         Math.cos(elapsedTime * 3.0) * 0.02;
 
       // Update simulation uniforms
-      simMaterial.uniforms.uPosition.value = everRendered ? rt1.texture : posTex;
+      simMaterial.uniforms.uPosition.value = everRendered
+        ? rt1.texture
+        : posTex;
       simMaterial.uniforms.uTime.value = elapsedTime;
       simMaterial.uniforms.uDeltaTime.value = dt;
       simMaterial.uniforms.uRingRadius.value = ringRadius;
@@ -729,7 +736,9 @@ export default function HeroParticles() {
       renderer.setRenderTarget(null);
 
       // Step 2: Render particle points into screen canvas using RT2
-      renderMaterial.uniforms.uPosition.value = everRendered ? rt2.texture : posTex;
+      renderMaterial.uniforms.uPosition.value = everRendered
+        ? rt2.texture
+        : posTex;
       renderMaterial.uniforms.uTime.value = elapsedTime;
       renderMaterial.uniforms.uRingPos.value.copy(ringPos);
       renderMaterial.uniforms.uParticleScale.value = calcParticleScale();
@@ -771,11 +780,7 @@ export default function HeroParticles() {
   }
 
   return (
-    <div
-      ref={containerRef}
-      className="hero-visual"
-      aria-hidden="true"
-    >
+    <div ref={containerRef} className="hero-visual" aria-hidden="true">
       <canvas ref={canvasRef} className="hero-visual__canvas" />
     </div>
   );

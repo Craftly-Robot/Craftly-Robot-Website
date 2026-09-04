@@ -2,22 +2,8 @@ import { useState } from "react";
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import DropdownIcon from "../../components/ui/DropdownIcon";
+import SectionTitle from "../../components/ui/SectionTitle";
 import "./ChangelogPage.css";
-
-function ChangelogTitle({ text }: { text: string }) {
-  const lines = text.split("\n");
-
-  return (
-    <h1 className="changelog-hero__title">
-      {lines.map((line, i) => (
-        <span key={i}>
-          {line}
-          {i < lines.length - 1 && <br />}
-        </span>
-      ))}
-    </h1>
-  );
-}
 
 // SVG Icons
 const InfoIcon = () => (
@@ -495,7 +481,10 @@ export default function ChangelogPage() {
         <div className="container">
           <div className="changelog-hero">
             <div className="changelog-hero__top">
-              <ChangelogTitle text={`See what’s new\nacross Craftly`} />
+              <SectionTitle
+                text={`See what’s new\nacross Craftly`}
+                className="changelog-hero__title"
+              />
               <div className="changelog-actions">
                 <Link to="/resources/documentation" className="btn-pill">
                   View docs

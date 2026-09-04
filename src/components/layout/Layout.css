@@ -4,6 +4,25 @@
   min-height: 100vh;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 10000;
+  padding: 8px 16px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0 0 6px 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .layout__main {
   flex: 1;
   padding-top: var(--nav-height);

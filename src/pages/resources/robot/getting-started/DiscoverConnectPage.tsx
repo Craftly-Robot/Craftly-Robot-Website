@@ -5,7 +5,12 @@ export default function DiscoverConnectPage() {
     <DocPage
       title="Discover & Connect — Craftly Robot"
       description="Discover & Connect in Craftly Robot"
-      crumbs={["Documentation", "Craftly Robot", "Getting Started", "Discover & Connect"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Robot",
+        "Getting Started",
+        "Discover & Connect",
+      ]}
       pageId="discover-connect"
       pageTitle="Discover & Connect"
       tocItems={[

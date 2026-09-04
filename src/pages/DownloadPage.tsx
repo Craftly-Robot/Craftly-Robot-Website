@@ -2,6 +2,8 @@ import { SEO } from "../components/SEO";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useOS } from "../hooks/useOS";
+import SectionTitle from "../components/ui/SectionTitle";
+import ImageWithFallback from "../components/common/ImageWithFallback";
 import "./DownloadPage.css";
 
 const AppleIcon = () => (
@@ -18,7 +20,7 @@ const WindowsIcon = () => (
 
 /* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
-  <img
+  <ImageWithFallback
     src="/assets/brand/linux-logo.png"
     alt="Linux"
     width="20"
@@ -248,21 +250,6 @@ const ProductDownloadSection = ({
   );
 };
 
-function DownloadTitle({ text }: { text: string }) {
-  const lines = text.split("\n");
-
-  return (
-    <h1 className="download-hero__title">
-      {lines.map((line, i) => (
-        <span key={i}>
-          {line}
-          {i < lines.length - 1 && <br />}
-        </span>
-      ))}
-    </h1>
-  );
-}
-
 export default function DownloadPage() {
   const revealRef = useScrollReveal();
   const osName = useOS();
@@ -277,7 +264,10 @@ export default function DownloadPage() {
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">
           <div className="download-hero-top">
-            <DownloadTitle text={`Download Craftly\nfor ${osName}`} />
+            <SectionTitle
+              text={`Download Craftly\nfor ${osName}`}
+              className="download-hero__title"
+            />
             <Link to="/resources/releases" className="btn-previous-releases">
               View previous releases
             </Link>

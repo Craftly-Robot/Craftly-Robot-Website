@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef, type MouseEvent } from "react";
+import { useRef, type MouseEvent } from "react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { useOS } from "../../hooks/useOS";
 import "./CTASection.css";
 
 interface CTASectionProps {
@@ -11,18 +12,8 @@ export default function CTASection({
   title = "Download Craftly Workspace",
 }: CTASectionProps) {
   const revealRef = useScrollReveal();
-  const [os, setOs] = useState("Windows");
+  const os = useOS();
   const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    if (userAgent.includes("win")) setOs("Windows");
-    else if (userAgent.includes("mac")) setOs("macOS");
-    else if (userAgent.includes("android")) setOs("Android");
-    else if (userAgent.includes("iphone") || userAgent.includes("ipad"))
-      setOs("iOS");
-    else if (userAgent.includes("linux")) setOs("Linux");
-  }, []);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -52,7 +43,7 @@ export default function CTASection({
               {title}
             </h2>
             <div className="home-cta__actions reveal reveal-delay-2">
-              {(os === "Windows" || os === "Linux" || os === "Unknown OS") && (
+              {(os === "Windows" || os === "Linux" || os === "Unknown") && (
                 <>
                   <Link to="/download" className="home-cta__btn-primary">
                     Download for x64

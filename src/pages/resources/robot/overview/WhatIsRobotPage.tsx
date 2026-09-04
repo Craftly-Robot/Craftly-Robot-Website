@@ -5,7 +5,12 @@ export default function WhatIsRobotPage() {
     <DocPage
       title="What is Craftly Robot? — Craftly Robot"
       description="What is Craftly Robot? in Craftly Robot"
-      crumbs={["Documentation", "Craftly Robot", "Overview", "What is Craftly Robot?"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Robot",
+        "Overview",
+        "What is Craftly Robot?",
+      ]}
       pageId="what-is-craftly-robot"
       pageTitle="What is Craftly Robot?"
       tocItems={[

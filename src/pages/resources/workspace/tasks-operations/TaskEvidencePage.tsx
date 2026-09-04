@@ -5,7 +5,12 @@ export default function TaskEvidencePage() {
     <DocPage
       title="Task Evidence — Craftly Workspace"
       description="Task Evidence in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Tasks & Operations", "Task Evidence"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Tasks & Operations",
+        "Task Evidence",
+      ]}
       pageId="task-evidence"
       pageTitle="Task Evidence"
       tocItems={[{ id: "task-evidence", label: "Task Evidence" }]}

@@ -3,18 +3,39 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 import { robotDemo } from "../../data/robotDemo";
 import "./RobotDemo.css";
 
-function Connection({ branch = false, returning = false }: { branch?: boolean; returning?: boolean }) {
+function Connection({
+  branch = false,
+  returning = false,
+}: {
+  branch?: boolean;
+  returning?: boolean;
+}) {
   const paths = branch
     ? returning
-      ? ["M100 0 V16 Q100 32 116 32 H184 Q200 32 200 48 V64", "M300 0 V16 Q300 32 284 32 H216 Q200 32 200 48 V64"]
-      : ["M200 0 V16 Q200 32 184 32 H116 Q100 32 100 48 V64", "M200 0 V16 Q200 32 216 32 H284 Q300 32 300 48 V64"]
+      ? [
+          "M100 0 V16 Q100 32 116 32 H184 Q200 32 200 48 V64",
+          "M300 0 V16 Q300 32 284 32 H216 Q200 32 200 48 V64",
+        ]
+      : [
+          "M200 0 V16 Q200 32 184 32 H116 Q100 32 100 48 V64",
+          "M200 0 V16 Q200 32 216 32 H284 Q300 32 300 48 V64",
+        ]
     : ["M200 0 V64"];
   return (
-    <svg className="robot-demo__connection" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true">
+    <svg
+      className="robot-demo__connection"
+      viewBox="0 0 400 64"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
       {paths.map((path) => (
         <g key={path}>
           <path className="robot-demo__line" d={path} />
-          <path className={`robot-demo__signal robot-demo__signal--${returning ? "return" : branch ? "discovery" : "request"}`} d={path} pathLength="100" />
+          <path
+            className={`robot-demo__signal robot-demo__signal--${returning ? "return" : branch ? "discovery" : "request"}`}
+            d={path}
+            pathLength="100"
+          />
         </g>
       ))}
     </svg>
@@ -28,12 +49,17 @@ export default function RobotDemo() {
   const [scenarioIndex, setScenarioIndex] = useState(0);
   const scenario = robotDemo.scenarios[scenarioIndex];
   const [visible, setVisible] = useState(false);
-  const [tabVisible, setTabVisible] = useState(() => typeof document === "undefined" || !document.hidden);
+  const [tabVisible, setTabVisible] = useState(
+    () => typeof document === "undefined" || !document.hidden,
+  );
 
   useEffect(() => {
     const panel = panelRef.current;
     if (!panel) return;
-    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: 0.25 });
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.25 },
+    );
     const handleVisibility = () => setTabVisible(!document.hidden);
     observer.observe(panel);
     document.addEventListener("visibilitychange", handleVisibility);
@@ -55,17 +81,29 @@ export default function RobotDemo() {
     const tokens = getComputedStyle(panel);
     const border = tokens.getPropertyValue("--color-border").trim();
     const ink = tokens.getPropertyValue("--color-text").trim();
-    const frame = (time: number, values: Keyframe): Keyframe => ({ ...values, offset: time / duration });
+    const frame = (time: number, values: Keyframe): Keyframe => ({
+      ...values,
+      offset: time / duration,
+    });
     const add = (selector: string, frames: Keyframe[]) => {
       panel.querySelectorAll(selector).forEach((element) => {
-        const animation = element.animate(frames, { duration, iterations: 1, fill: "both", easing: "linear" });
+        const animation = element.animate(frames, {
+          duration,
+          iterations: 1,
+          fill: "both",
+          easing: "linear",
+        });
         animation.pause();
         animations.current.push(animation);
       });
     };
     const reveal = (start: number) => [
       frame(0, { opacity: 0, transform: "translateY(4px)" }),
-      frame(start, { opacity: 0, transform: "translateY(4px)", easing: "ease-out" }),
+      frame(start, {
+        opacity: 0,
+        transform: "translateY(4px)",
+        easing: "ease-out",
+      }),
       frame(start + 450, { opacity: 1, transform: "translateY(0)" }),
       frame(reset, { opacity: 1, transform: "translateY(0)" }),
       frame(duration, { opacity: 0, transform: "translateY(4px)" }),
@@ -101,7 +139,8 @@ export default function RobotDemo() {
       frame(duration, { borderColor: border }),
     ]);
     const clock = animations.current[0];
-    clock.onfinish = () => setScenarioIndex((current) => (current + 1) % robotDemo.scenarios.length);
+    clock.onfinish = () =>
+      setScenarioIndex((current) => (current + 1) % robotDemo.scenarios.length);
     return () => {
       clock.onfinish = null;
       animations.current.forEach((animation) => animation.cancel());
@@ -117,7 +156,13 @@ export default function RobotDemo() {
   }, [visible, tabVisible, reducedMotion, scenarioIndex]);
 
   return (
-    <div className="robot-demo" data-scenario={scenario.id} ref={panelRef} role="img" aria-label={robotDemo.description}>
+    <div
+      className="robot-demo"
+      data-scenario={scenario.id}
+      ref={panelRef}
+      role="img"
+      aria-label={robotDemo.description}
+    >
       <div className="robot-demo__header" aria-hidden="true">
         <span className="robot-demo__name">Craftly Robot</span>
         <span className="robot-demo__label">{robotDemo.label}</span>
@@ -127,10 +172,18 @@ export default function RobotDemo() {
         <div className="robot-demo__network">
           <div className="robot-demo__request">{scenario.request}</div>
           <Connection />
-          <div className="robot-demo__agent"><span className="robot-demo__agent-mark">✳</span>{robotDemo.agent}</div>
+          <div className="robot-demo__agent">
+            <span className="robot-demo__agent-mark">✳</span>
+            {robotDemo.agent}
+          </div>
           <Connection branch />
           <div className="robot-demo__peers">
-            {scenario.peers.map((peer) => <div className="robot-demo__peer" key={peer}><span className="robot-demo__peer-dot" />{peer}</div>)}
+            {scenario.peers.map((peer) => (
+              <div className="robot-demo__peer" key={peer}>
+                <span className="robot-demo__peer-dot" />
+                {peer}
+              </div>
+            ))}
           </div>
           <Connection branch returning />
           <div className="robot-demo__result">
@@ -138,7 +191,10 @@ export default function RobotDemo() {
               <p>{scenario.result}</p>
               <span>{scenario.availability}</span>
             </div>
-            <div className="robot-demo__approval"><span aria-hidden="true">○</span>{robotDemo.approval}</div>
+            <div className="robot-demo__approval">
+              <span aria-hidden="true">○</span>
+              {robotDemo.approval}
+            </div>
           </div>
         </div>
       </div>

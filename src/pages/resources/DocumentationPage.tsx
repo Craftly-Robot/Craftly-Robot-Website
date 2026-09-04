@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DocPage from "./DocPage";
+import "./DocumentationPage.css";
 
 export default function DocumentationPage() {
   return (
@@ -48,22 +49,14 @@ export default function DocumentationPage() {
         </strong>
       </p>
 
-      <div style={{ marginTop: "40px" }}>
+      <div className="docs-intro-section">
         <h3
-          className="docs__section-title"
+          className="docs__section-title docs-product-title"
           id="craftly-workspace"
-          style={{ fontSize: "24px" }}
         >
           Craftly Workspace
         </h3>
-        <p
-          className="docs__text"
-          style={{
-            fontStyle: "italic",
-            color: "#5f6368",
-            marginBottom: "24px",
-          }}
-        >
+        <p className="docs__text docs-product-subtitle">
           The place where Craftly works.
         </p>
         <p className="docs__text">
@@ -88,7 +81,7 @@ export default function DocumentationPage() {
             how people and teams use it to coordinate their work.
           </li>
         </ul>
-        <div style={{ marginTop: "24px", marginBottom: "40px" }}>
+        <div className="docs-link-container">
           <Link
             to="/resources/documentation/workspace/overview/what-is-craftly-workspace"
             className="docs__link--black"
@@ -98,22 +91,14 @@ export default function DocumentationPage() {
         </div>
       </div>
 
-      <div style={{ marginTop: "40px" }}>
+      <div className="docs-intro-section">
         <h3
-          className="docs__section-title"
+          className="docs__section-title docs-product-title"
           id="craftly-robot"
-          style={{ fontSize: "24px" }}
         >
           Craftly Robot
         </h3>
-        <p
-          className="docs__text"
-          style={{
-            fontStyle: "italic",
-            color: "#5f6368",
-            marginBottom: "24px",
-          }}
-        >
+        <p className="docs__text docs-product-subtitle">
           The intelligence Craftly is building for the real world.
         </p>
         <p className="docs__text">
@@ -148,7 +133,7 @@ export default function DocumentationPage() {
             we’re building intelligent systems that can work alongside people.
           </li>
         </ul>
-        <div style={{ marginTop: "24px", marginBottom: "40px" }}>
+        <div className="docs-link-container">
           <Link
             to="/resources/documentation/robot/overview/what-is-craftly-robot"
             className="docs__link--black"
@@ -167,11 +152,8 @@ export default function DocumentationPage() {
         work together naturally.
       </p>
 
-      <div style={{ marginTop: "32px" }}>
-        <h3
-          className="docs__section-title"
-          style={{ fontSize: "18px", marginTop: "24px", marginBottom: "12px" }}
-        >
+      <div className="docs-capabilities-section">
+        <h3 className="docs__section-title docs-capability-title">
           People & Organizations
         </h3>
         <p className="docs__text">
@@ -179,10 +161,7 @@ export default function DocumentationPage() {
           coordinate meaningful work across an organization.
         </p>
 
-        <h3
-          className="docs__section-title"
-          style={{ fontSize: "18px", marginTop: "24px", marginBottom: "12px" }}
-        >
+        <h3 className="docs__section-title docs-capability-title">
           Agentic Intelligence
         </h3>
         <p className="docs__text">
@@ -190,10 +169,7 @@ export default function DocumentationPage() {
           problems, use tools, and carry out multi step tasks.
         </p>
 
-        <h3
-          className="docs__section-title"
-          style={{ fontSize: "18px", marginTop: "24px", marginBottom: "12px" }}
-        >
+        <h3 className="docs__section-title docs-capability-title">
           Connected Workflows
         </h3>
         <p className="docs__text">
@@ -201,10 +177,7 @@ export default function DocumentationPage() {
           between them without unnecessary friction.
         </p>
 
-        <h3
-          className="docs__section-title"
-          style={{ fontSize: "18px", marginTop: "24px", marginBottom: "12px" }}
-        >
+        <h3 className="docs__section-title docs-capability-title">
           Agent Discovery
         </h3>
         <p className="docs__text">
@@ -212,10 +185,7 @@ export default function DocumentationPage() {
           may be able to help with a particular request.
         </p>
 
-        <h3
-          className="docs__section-title"
-          style={{ fontSize: "18px", marginTop: "24px", marginBottom: "12px" }}
-        >
+        <h3 className="docs__section-title docs-capability-title">
           Agent-to-Agent Coordination
         </h3>
         <p className="docs__text">
@@ -223,10 +193,7 @@ export default function DocumentationPage() {
           coordinate possible solutions within defined boundaries.
         </p>
 
-        <h3
-          className="docs__section-title"
-          style={{ fontSize: "18px", marginTop: "24px", marginBottom: "12px" }}
-        >
+        <h3 className="docs__section-title docs-capability-title">
           Human Control
         </h3>
         <p className="docs__text">
@@ -237,9 +204,8 @@ export default function DocumentationPage() {
       </div>
 
       <h2
-        className="docs__section-title"
+        className="docs__section-title docs-platform-title"
         id="craftly-platform"
-        style={{ marginTop: "48px" }}
       >
         The Craftly Platform
       </h2>
@@ -250,16 +216,8 @@ export default function DocumentationPage() {
         We’re building the systems around how people and intelligent technology
         work together.
       </p>
-      <ul
-        className="docs__list"
-        style={{
-          listStyleType: "none",
-          borderLeft: "3px solid #111",
-          paddingLeft: "16px",
-          margin: "24px 0",
-        }}
-      >
-        <li style={{ marginBottom: "12px" }}>
+      <ul className="docs__list docs-highlight-list">
+        <li>
           <strong>Workspace</strong> is where people organize and operate.
         </li>
         <li>
@@ -273,15 +231,7 @@ export default function DocumentationPage() {
         work reach more people, while keeping the people behind that work at the
         center.
       </p>
-      <p
-        className="docs__text"
-        style={{
-          fontSize: "18px",
-          fontWeight: "500",
-          color: "#111",
-          marginTop: "32px",
-        }}
-      >
+      <p className="docs__text docs-closing-statement">
         Build the organization. Build the intelligence. Connect them to the
         world.
       </p>

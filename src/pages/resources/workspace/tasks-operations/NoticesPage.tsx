@@ -1,6 +1,7 @@
 import notice1 from "../../../../assets/Notice Board/1.webp";
 import notice2 from "../../../../assets/Notice Board/2.webp";
 import DocPage from "../../DocPage";
+import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
 export default function NoticesPage() {
   return (
@@ -39,7 +40,7 @@ export default function NoticesPage() {
             boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
           }}
         >
-          <img
+          <ImageWithFallback
             src={notice1}
             alt="Notice Board 1"
             style={{
@@ -58,7 +59,7 @@ export default function NoticesPage() {
             boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
           }}
         >
-          <img
+          <ImageWithFallback
             src={notice2}
             alt="Notice Board 2"
             style={{
