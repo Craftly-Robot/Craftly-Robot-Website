@@ -29,7 +29,7 @@ export default function WorkspacePage() {
 
       <div className="product-showcase-large">
         <img
-          src="/assets/Craftly_Workspace/1.webp"
+          src="/assets/Craftly_Workspace/craftly-workspace-dashboard.svg"
           alt="Craftly Workspace Interface"
           className="product-showcase-image"
         />

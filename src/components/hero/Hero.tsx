@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { products } from "../../data/products";
 import HeroParticles from "./HeroParticles";
 import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
@@ -65,9 +66,9 @@ export default function Hero() {
 
         <div className="hero__media-wrapper">
           <VideoShowcase
-            src="/assets/videos/hero.mp4"
-            poster="/assets/posters/hero-poster.webp"
-            altText="Craftly intelligent system interfaces"
+            src=""
+            poster={products[0].posterSrc}
+            altText="Craftly Workspace dashboard"
           />
         </div>
 
