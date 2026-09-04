@@ -17,6 +17,10 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 12px 28px -4px rgba(0, 0, 0, 0.06),
+    0 32px 64px -12px rgba(0, 0, 0, 0.08);
 }
 .pv-sidebar {
   display: flex;
@@ -59,11 +63,49 @@
   background: var(--color-text);
   color: var(--color-text-inverse);
 }
-.pv-sidebar__note {
+.pv-sidebar__profile {
   margin-top: auto;
-  padding: 42px 14px 0;
-  font-size: 11px;
-  color: var(--color-text-secondary);
+  padding: 36px 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.pv-sidebar__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.pv-sidebar__profile-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: left;
+}
+.pv-sidebar__profile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pv-sidebar__profile-role {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.25;
+  margin-top: 1px;
 }
 .pv-dashboard__body {
   min-width: 0;
@@ -460,6 +502,21 @@
   .pv-training__cta {
     padding-inline: 14px;
   }
+  .pv-sidebar__profile {
+    padding: 20px 2px 0;
+    gap: 8px;
+  }
+  .pv-sidebar__avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .pv-sidebar__profile-name {
+    font-size: 11px;
+  }
+  .pv-sidebar__profile-role {
+    font-size: 10px;
+  }
 }
 @container (max-width: 650px) {
   .pv-dashboard {
@@ -480,8 +537,12 @@
     padding: 11px 0;
   }
   .pv-sidebar__items li > span,
-  .pv-sidebar__note {
+  .pv-sidebar__profile-info {
     display: none;
+  }
+  .pv-sidebar__profile {
+    padding: 16px 0 0;
+    justify-content: center;
   }
   .pv-training {
     padding: 22px 18px;

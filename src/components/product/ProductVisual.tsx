@@ -189,7 +189,15 @@ function TrainingOverview({
             </li>
           ))}
         </ul>
-        <span className="pv-sidebar__note">People. Work. Intelligence.</span>
+        <div className="pv-sidebar__profile">
+          <div className="pv-sidebar__avatar" aria-hidden="true">
+            W
+          </div>
+          <div className="pv-sidebar__profile-info">
+            <span className="pv-sidebar__profile-name">Wasif Abdullah Musa</span>
+            <span className="pv-sidebar__profile-role">Chairman</span>
+          </div>
+        </div>
       </aside>
       <div className="pv-dashboard__body">
         <div className="pv-training">
