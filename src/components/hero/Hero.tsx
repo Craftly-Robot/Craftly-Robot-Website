@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import HeroParticles from "./HeroParticles";
 import TechSnake from "./TechSnake";
 import "./Hero.css";
 
@@ -45,6 +46,7 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      <HeroParticles />
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero__content">
           <HeroTitle />

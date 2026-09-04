@@ -1,11 +1,13 @@
 .hero-visual {
   width: 100%;
-  height: 100%;
+  height: min(100vh, 880px);
+  min-height: 600px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .hero-visual__canvas {
