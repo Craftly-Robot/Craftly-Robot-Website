@@ -32,18 +32,4 @@ export const resources: Resource[] = [
     route: "/resources/releases",
     icon: "releases",
   },
-  {
-    id: "blog",
-    title: "Blog",
-    description: "Insights, updates, and stories from the Craftly team.",
-    route: "/resources/blog",
-    icon: "docs",
-  },
-  {
-    id: "press",
-    title: "Press",
-    description: "Press releases, media coverage, and brand resources.",
-    route: "/resources/press",
-    icon: "docs",
-  },
 ];

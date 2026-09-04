@@ -25,9 +25,6 @@ export default function Footer() {
             <Link to="/resources/changelog" className="footer__link">
               Changelog
             </Link>
-            <Link to="/resources/press" className="footer__link">
-              Press
-            </Link>
             <Link to="/resources/releases" className="footer__link">
               Releases
             </Link>
