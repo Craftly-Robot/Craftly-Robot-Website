@@ -25,11 +25,13 @@ export function useDesktopNav() {
   const location = useLocation();
 
   // Close on route change
-  useEffect(() => {
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
     setActiveDropdown(null);
     setDisplayedDropdown(null);
     setDropdownHeight(undefined);
-  }, [location.pathname]);
+  }
 
   // Close on outside click
   useEffect(() => {

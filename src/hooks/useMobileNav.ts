@@ -7,10 +7,12 @@ export function useMobileNav() {
   const location = useLocation();
 
   // Close on route change
-  useEffect(() => {
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
     setMobileOpen(false);
     setMobileSection(null);
-  }, [location.pathname]);
+  }
 
   // Close on Escape
   useEffect(() => {

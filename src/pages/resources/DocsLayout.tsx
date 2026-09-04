@@ -240,6 +240,11 @@ export default function DocsLayout({
 
   const [activeId, setActiveId] = useState<string>("welcome");
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState<boolean>(false);
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
+    setMobileSidebarOpen(false);
+  }
 
   // Top-level toggles
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(
@@ -388,9 +393,6 @@ export default function DocsLayout({
     return () => clearTimeout(timeoutId);
   }, [location.pathname]);
 
-  useEffect(() => {
-    setMobileSidebarOpen(false);
-  }, [location.pathname]);
 
   return (
     <div className="docs__container">
