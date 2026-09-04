@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import TechSnake from './TechSnake';
+import { useOS } from '../../hooks/useOS';
 import './Hero.css';
 
 function MonitorIcon({ className }: { className?: string }) {
@@ -14,20 +15,7 @@ function MonitorIcon({ className }: { className?: string }) {
 }
 
 export default function Hero() {
-  const [osName, setOsName] = useState('Windows');
-
-  useEffect(() => {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    if (/android/i.test(userAgent)) {
-      setOsName("Android");
-    } else if (/iphone|ipad|ipod/i.test(userAgent) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)) {
-      setOsName("iOS");
-    } else if (userAgent.indexOf("mac") !== -1) {
-      setOsName("macOS");
-    } else if (userAgent.indexOf("linux") !== -1) {
-      setOsName("Linux");
-    }
-  }, []);
+  const osName = useOS();
 
   return (
     <section className="hero">
