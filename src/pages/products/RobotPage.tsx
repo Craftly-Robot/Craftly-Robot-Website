@@ -6,6 +6,7 @@ import { products } from "../../data/products";
 import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./ProductPage.css";
+import "./RobotPageOverrides.css";
 
 const product = products.find((p) => p.id === "robot")!;
 
@@ -28,14 +29,8 @@ export default function RobotPage() {
         </section>
       </div>
 
-      <section
-        className="abstracted-ui-section"
-        style={{ paddingTop: "var(--space-xl)" }}
-      >
-        <div
-          className="container"
-          style={{ maxWidth: "1280px", margin: "0 auto" }}
-        >
+      <section className="abstracted-ui-section robot-section-pt">
+        <div className="container robot-container-narrow">
           {/* Pair 1 */}
           <div className="abstracted-ui-grid">
             <div className="abstracted-ui-feature reveal">
@@ -63,7 +58,7 @@ export default function RobotPage() {
           {/* Pair 2 */}
           <div
             className="abstracted-ui-grid"
-            style={{ marginTop: "var(--space-2xl)" }}
+            className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
               <ProductVisual scene="robot-refactoring" />
@@ -88,7 +83,7 @@ export default function RobotPage() {
           {/* Pair 3 */}
           <div
             className="abstracted-ui-grid"
-            style={{ marginTop: "var(--space-2xl)" }}
+            className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
               <ProductVisual scene="robot-reviews" />
@@ -115,7 +110,7 @@ export default function RobotPage() {
           {/* Pair 4 */}
           <div
             className="abstracted-ui-grid"
-            style={{ marginTop: "var(--space-2xl)" }}
+            className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
               <ProductVisual scene="robot-multiagent" />
@@ -142,7 +137,7 @@ export default function RobotPage() {
           {/* Pair 5 */}
           <div
             className="abstracted-ui-grid"
-            style={{ marginTop: "var(--space-2xl)" }}
+            className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
               <ProductVisual scene="robot-security" />
@@ -167,25 +162,14 @@ export default function RobotPage() {
 
           {/* Single 6 */}
           <div
-            className="product-showcase-large"
-            style={{
-              marginTop: "var(--space-3xl)",
-              marginBottom: "var(--space-3xl)",
-            }}
+            className="product-showcase-large robot-mt-3xl-mb-3xl"
           >
-            <div
-              style={{
-                maxWidth: "1120px",
-                margin: "0 auto",
-                textAlign: "center",
-              }}
-            >
+            <div className="robot-center-text">
               <h2 className="explore-features-section__title reveal">
                 Architecture Visualization
               </h2>
               <p
-                className="abstracted-ui-desc reveal reveal-delay-1"
-                style={{ marginBottom: "32px" }}
+                className="abstracted-ui-desc reveal reveal-delay-1 robot-desc-mb-32"
               >
                 Visualize your entire software architecture mapped out by
                 intelligent agents.
@@ -199,8 +183,7 @@ export default function RobotPage() {
 
           {/* Pair 7 */}
           <div
-            className="abstracted-ui-grid"
-            style={{ marginTop: "var(--space-2xl)" }}
+            className="abstracted-ui-grid robot-mt-2xl"
           >
             <div className="abstracted-ui-feature reveal">
               <ProductVisual scene="robot-monitoring" />
@@ -226,25 +209,14 @@ export default function RobotPage() {
 
           {/* Single 8 */}
           <div
-            className="product-showcase-large"
-            style={{
-              marginTop: "var(--space-3xl)",
-              marginBottom: "var(--space-3xl)",
-            }}
+            className="product-showcase-large robot-mt-3xl-mb-3xl"
           >
-            <div
-              style={{
-                maxWidth: "1120px",
-                margin: "0 auto",
-                textAlign: "center",
-              }}
-            >
+            <div className="robot-center-text">
               <h2 className="explore-features-section__title reveal">
                 Human in the Loop
               </h2>
               <p
-                className="abstracted-ui-desc reveal reveal-delay-1"
-                style={{ marginBottom: "32px" }}
+                className="abstracted-ui-desc reveal reveal-delay-1 robot-desc-mb-32"
               >
                 Retain full control. Approve major changes and guide the agents
                 on complex tasks.
@@ -258,25 +230,14 @@ export default function RobotPage() {
 
           {/* Single 9 */}
           <div
-            className="product-showcase-large"
-            style={{
-              marginTop: "var(--space-3xl)",
-              marginBottom: "var(--space-3xl)",
-            }}
+            className="product-showcase-large robot-mt-3xl-mb-3xl"
           >
-            <div
-              style={{
-                maxWidth: "1120px",
-                margin: "0 auto",
-                textAlign: "center",
-              }}
-            >
+            <div className="robot-center-text">
               <h2 className="explore-features-section__title reveal">
                 Deploy Anywhere
               </h2>
               <p
-                className="abstracted-ui-desc reveal reveal-delay-1"
-                style={{ marginBottom: "32px" }}
+                className="abstracted-ui-desc reveal reveal-delay-1 robot-desc-mb-32"
               >
                 Agents can handle deployment steps across any cloud provider or
                 bare metal server.
@@ -290,22 +251,14 @@ export default function RobotPage() {
 
           {/* Single 10 */}
           <div
-            className="product-showcase-large"
-            style={{ marginTop: "var(--space-3xl)" }}
+            className="product-showcase-large robot-mt-3xl"
           >
-            <div
-              style={{
-                maxWidth: "1120px",
-                margin: "0 auto",
-                textAlign: "center",
-              }}
-            >
+            <div className="robot-center-text">
               <h2 className="explore-features-section__title reveal">
                 Secure Sandboxing
               </h2>
               <p
-                className="abstracted-ui-desc reveal reveal-delay-1"
-                style={{ marginBottom: "32px" }}
+                className="abstracted-ui-desc reveal reveal-delay-1 robot-desc-mb-32"
               >
                 All agent actions are safely contained in secure sandboxed
                 environments.
@@ -320,8 +273,7 @@ export default function RobotPage() {
       </section>
 
       <section
-        className="workspace-options-section"
-        style={{ marginTop: "var(--space-4xl)" }}
+        className="workspace-options-section robot-mt-4xl"
       >
         <div className="container">
           <div className="workspace-options-grid">
