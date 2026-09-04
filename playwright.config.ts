@@ -8,7 +8,7 @@ export default defineConfig({
     baseURL: "http://localhost:4173",
   },
   webServer: {
-    command: "bun run build && bun run preview --port 4173",
+    command: "npm run build && npm run preview -- --port 4173",
     port: 4173,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
