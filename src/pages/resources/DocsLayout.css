@@ -190,6 +190,13 @@
   min-width: 0;
 }
 
+.docs__nav-subnav--nested {
+  margin-left: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 4px;
+}
+
 .docs__nav-subitem {
   display: block;
   padding: 8px 12px 8px 16px;
