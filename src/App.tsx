@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/layout/Layout";
+import ErrorBoundary from "./components/common/ErrorBoundary";
 
 /* â”€â”€ Lazy-loaded pages for code splitting â”€â”€ */
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -258,8 +259,9 @@ export default function App() {
   return (
     <Layout>
       <ScrollToTop />
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/download" element={<DownloadPage />} />
 
@@ -495,6 +497,7 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
+      </ErrorBoundary>
     </Layout>
   );
 }
