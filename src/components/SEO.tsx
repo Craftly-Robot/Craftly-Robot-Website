@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
   title: string;
@@ -14,9 +15,15 @@ export function SEO({
   description,
   name = "Craftly",
   type = "website",
-  url = "https://craftlyrobot.com",
+  url,
   image = "https://craftlyrobot.com/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
 }: SEOProps) {
+  const location = useLocation();
+  const canonicalUrl =
+    url ||
+    (location.pathname === "/"
+      ? "https://craftlyrobot.com/"
+      : `https://craftlyrobot.com${location.pathname}`);
   const fullTitle = `${title} | Craftly`;
 
   return (
@@ -24,12 +31,13 @@ export function SEO({
       {/* Standard metadata tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* OpenGraph tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content={name} />
       <meta property="og:image" content={image} />
 

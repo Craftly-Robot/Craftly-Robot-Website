@@ -218,6 +218,8 @@ function ScrollToTop() {
   }, []);
 
   useEffect(() => {
+    let timerId: number | null = null;
+
     if (pathname !== prevPathname.current) {
       // Path changed due to navigation
       window.scrollTo(0, 0);
@@ -243,13 +245,19 @@ function ScrollToTop() {
               window.scrollTo(0, targetY);
             } else {
               attempts++;
-              setTimeout(tryRestore, 50);
+              timerId = window.setTimeout(tryRestore, 50);
             }
           };
           tryRestore();
         }
       }
     }
+
+    return () => {
+      if (timerId !== null) {
+        clearTimeout(timerId);
+      }
+    };
   }, [pathname]);
 
   return null;

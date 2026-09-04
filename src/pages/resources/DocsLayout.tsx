@@ -20,12 +20,18 @@ const DOCS_ROUTES = [
     path: "/resources/documentation/workspace/overview/how-workspace-works",
     label: "How Workspace Works?",
   },
-
+  {
+    path: "/resources/documentation/workspace/overview/workspace-structure",
+    label: "Workspace Structure",
+  },
   {
     path: "/resources/documentation/workspace/overview/core-concepts",
     label: "Core Concepts",
   },
-
+  {
+    path: "/resources/documentation/workspace/organization/org-structure",
+    label: "Organization Structure",
+  },
   {
     path: "/resources/documentation/workspace/organization/departments",
     label: "Departments",
@@ -50,10 +56,21 @@ const DOCS_ROUTES = [
     path: "/resources/documentation/workspace/people-roles/managers",
     label: "Managers",
   },
-
+  {
+    path: "/resources/documentation/workspace/people-roles/access-control",
+    label: "Access Control",
+  },
   {
     path: "/resources/documentation/workspace/tasks-operations/tasks",
     label: "Tasks",
+  },
+  {
+    path: "/resources/documentation/workspace/tasks-operations/task-assignment",
+    label: "Task Assignment",
+  },
+  {
+    path: "/resources/documentation/workspace/tasks-operations/task-evidence",
+    label: "Task Evidence",
   },
 
   {
@@ -81,6 +98,10 @@ const DOCS_ROUTES = [
     label: "Notifications",
   },
 
+  {
+    path: "/resources/documentation/workspace/resources/org-resources",
+    label: "Organization Resources",
+  },
   {
     path: "/resources/documentation/workspace/resources/dept-resources",
     label: "Department Resources",
@@ -455,6 +476,14 @@ export default function DocsLayout({
                   >
                     How Workspace Works?
                   </NavLink>
+                  <NavLink
+                    to="/resources/documentation/workspace/overview/workspace-structure"
+                    className={({ isActive }) =>
+                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                    }
+                  >
+                    Workspace Structure
+                  </NavLink>
 
                   <NavLink
                     to="/resources/documentation/workspace/overview/core-concepts"
@@ -487,6 +516,14 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
+                  <NavLink
+                    to="/resources/documentation/workspace/organization/org-structure"
+                    className={({ isActive }) =>
+                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                    }
+                  >
+                    Organization Structure
+                  </NavLink>
                   <NavLink
                     to="/resources/documentation/workspace/organization/departments"
                     className={({ isActive }) =>
@@ -558,6 +595,14 @@ export default function DocsLayout({
                   >
                     Managers
                   </NavLink>
+                  <NavLink
+                    to="/resources/documentation/workspace/people-roles/access-control"
+                    className={({ isActive }) =>
+                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                    }
+                  >
+                    Access Control
+                  </NavLink>
                 </div>
               )}
 
@@ -588,6 +633,22 @@ export default function DocsLayout({
                     }
                   >
                     Tasks
+                  </NavLink>
+                  <NavLink
+                    to="/resources/documentation/workspace/tasks-operations/task-assignment"
+                    className={({ isActive }) =>
+                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                    }
+                  >
+                    Task Assignment
+                  </NavLink>
+                  <NavLink
+                    to="/resources/documentation/workspace/tasks-operations/task-evidence"
+                    className={({ isActive }) =>
+                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                    }
+                  >
+                    Task Evidence
                   </NavLink>
 
                   <NavLink
@@ -684,6 +745,14 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
+                  <NavLink
+                    to="/resources/documentation/workspace/resources/org-resources"
+                    className={({ isActive }) =>
+                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                    }
+                  >
+                    Organization Resources
+                  </NavLink>
                   <NavLink
                     to="/resources/documentation/workspace/resources/dept-resources"
                     className={({ isActive }) =>
