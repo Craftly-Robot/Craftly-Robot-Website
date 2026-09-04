@@ -58,7 +58,7 @@ export default function AgreementsPage() {
       
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
         <img 
-          src="/assets/aggrements/1.png" 
+          src="/assets/aggrements/1.webp" 
           alt="Agreements" 
           style={{ width: '100%', display: 'block' }} 
         />
@@ -66,7 +66,7 @@ export default function AgreementsPage() {
 
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
         <img 
-          src="/assets/aggrements/2.png" 
+          src="/assets/aggrements/2.webp" 
           alt="Digital Signatures" 
           style={{ width: '100%', display: 'block' }} 
         />

@@ -10,7 +10,7 @@ export const products: Product[] = [
     icon: 'workspace',
     route: '/products/workspace',
     videoSrc: '',
-    posterSrc: '/assets/Craftly_Workspace/1.png',
+    posterSrc: '/assets/Craftly_Workspace/1.webp',
     capabilities: [
       'Organizational Structure',
       'Task Management',
@@ -29,7 +29,7 @@ export const products: Product[] = [
     icon: 'robot',
     route: '/products/robot',
     videoSrc: '',
-    posterSrc: '/assets/Craftly_Robot/new.jpg',
+    posterSrc: '/assets/Craftly_Robot/new.webp',
     capabilities: [
       'Agentic Coding',
       'Multi-Agent Systems',

@@ -24,7 +24,7 @@ export default function MembersPage() {
       <p className="docs__text">Craftly has members contributing across different departments and functional areas. Everyone does not have the same responsibilities, workload, or opportunities, so the ranking is intended to reflect individual contribution and engagement within the member's department, rather than simply showing who joined first or who holds the highest position.</p>
 
       <div className="docs__image-container" style={{ marginTop: '32px', marginBottom: '80px' }}>
-        <img src="/assets/Members/1.png" alt="Members" className="docs__image" />
+        <img src="/assets/Members/1.webp" alt="Members" className="docs__image" />
       </div>
 
       <h2 className="docs__subtitle" id="department-member-ranking">Department Member Ranking</h2>

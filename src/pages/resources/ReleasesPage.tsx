@@ -18,7 +18,7 @@ const WindowsIcon = () => (
 );
 
 const LinuxIcon = () => (
-  <img src="/assets/brand/linux-logo.png" alt="Linux" width="16" height="16" style={{ objectFit: 'contain' }} />
+  <img src="/assets/brand/linux-logo.webp" alt="Linux" width="16" height="16" style={{ objectFit: 'contain' }} />
 );
 
 const DownloadIcon = () => (

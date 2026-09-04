@@ -20,7 +20,7 @@ const WindowsIcon = () => (
 
 /* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
-  <img src="/assets/brand/linux-logo.png" alt="Linux" width="20" height="20" style={{ objectFit: 'contain' }} />
+  <img src="/assets/brand/linux-logo.webp" alt="Linux" width="20" height="20" style={{ objectFit: 'contain' }} />
 );
 
 const AndroidIcon = () => (

@@ -29,7 +29,7 @@ export default function PrivateKeyPage() {
       
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0', padding: '16px' }}>
         <img 
-          src="/assets/private_key/1.png" 
+          src="/assets/private_key/1.webp" 
           alt="Private Key" 
           style={{ maxWidth: '200px', width: '100%', display: 'block' }} 
         />

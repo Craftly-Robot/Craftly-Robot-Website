@@ -32,7 +32,7 @@ export default function WorkspacePage() {
 
       <div className="product-showcase-large">
         <img 
-          src="/assets/Craftly_Workspace/1.png"
+          src="/assets/Craftly_Workspace/1.webp"
           alt="Craftly Workspace Interface"
           className="product-showcase-image"
         />
@@ -43,7 +43,7 @@ export default function WorkspacePage() {
           <div style={{ maxWidth: '1120px', margin: '0 auto' }}>
             <h2 className="explore-features-section__title reveal">Explore the main features</h2>
             <img 
-              src="/assets/Craftly_Workspace/8.png"
+              src="/assets/Craftly_Workspace/8.webp"
               alt="Explore main features"
               className="product-showcase-image reveal reveal-delay-1"
               style={{ margin: 0 }}
@@ -61,52 +61,52 @@ export default function WorkspacePage() {
             </p>
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/2.png" alt="UI detail 1" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/2.webp" alt="UI detail 1" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Work Management</h3>
                 <p className="abstracted-ui-feature__desc">Track presence, task submissions, and manage attendance seamlessly from a unified interface.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/3.png" alt="UI detail 2" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/3.webp" alt="UI detail 2" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Smart Notifications</h3>
                 <p className="abstracted-ui-feature__desc">Stay updated with workspace decisions, private alerts, and important notifications pushed in real-time.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <img src="/assets/Craftly_Workspace/4.png" alt="UI detail 3" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/4.webp" alt="UI detail 3" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Team Collaboration</h3>
                 <p className="abstracted-ui-feature__desc">Communicate efficiently with your team members through integrated chat, ensuring seamless information flow.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <img src="/assets/Craftly_Workspace/5.png" alt="UI detail 4" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/5.webp" alt="UI detail 4" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Direct Messaging</h3>
                 <p className="abstracted-ui-feature__desc">Send direct messages, share updates, and coordinate with specific team units instantly.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <img src="/assets/Craftly_Workspace/6.png" alt="UI detail 5" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/6.webp" alt="UI detail 5" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Custom Workflows</h3>
                 <p className="abstracted-ui-feature__desc">Design and implement custom workflows tailored to your specific organizational needs.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <img src="/assets/Craftly_Workspace/7.png" alt="UI detail 6" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/7.webp" alt="UI detail 6" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Resource Allocation</h3>
                 <p className="abstracted-ui-feature__desc">Allocate and manage resources effectively across different teams and projects.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <img src="/assets/Craftly_Workspace/9.png" alt="Dynamic Subagents" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/9.webp" alt="Dynamic Subagents" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Dynamic Subagents</h3>
                 <p className="abstracted-ui-feature__desc">Subagents are defined and instantiated dynamically to tackle parallel parts of complex problems, leading to faster and better results.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <img src="/assets/Craftly_Workspace/10.png" alt="Scheduled Tasks" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/10.webp" alt="Scheduled Tasks" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Scheduled Tasks</h3>
                 <p className="abstracted-ui-feature__desc">Automate routine checks with Scheduled Tasks, simply define a cron schedule and the agents start and run autonomously in the background.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/11.jpeg" alt="UI detail 9" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/11.webp" alt="UI detail 9" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">Performance Analytics</h3>
                 <p className="abstracted-ui-feature__desc">Monitor the performance and efficiency of your AI agents with comprehensive visual analytics.</p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img src="/assets/Craftly_Workspace/12.png" alt="UI detail 10" className="product-showcase-image" style={{ margin: 0 }} />
+                <img src="/assets/Craftly_Workspace/12.webp" alt="UI detail 10" className="product-showcase-image" style={{ margin: 0 }} />
                 <h3 className="abstracted-ui-feature__title">System Integration</h3>
                 <p className="abstracted-ui-feature__desc">Connect your workspace with external tools and APIs for a fully integrated autonomous ecosystem.</p>
               </div>

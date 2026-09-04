@@ -48,7 +48,7 @@ export default function CompletingOnboardingPage() {
       
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
         <img 
-          src="/assets/aggrements/3.png" 
+          src="/assets/aggrements/3.webp" 
           alt="Completing Onboarding 1" 
           style={{ width: '100%', display: 'block' }} 
         />
@@ -56,7 +56,7 @@ export default function CompletingOnboardingPage() {
 
       <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #eaeaeb', backgroundColor: '#f8f9fa', minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '32px 0' }}>
         <img 
-          src="/assets/aggrements/4.png" 
+          src="/assets/aggrements/4.webp" 
           alt="Completing Onboarding 2" 
           style={{ width: '100%', display: 'block' }} 
         />

@@ -24,7 +24,7 @@ export default function TrainingPage() {
       
       <div style={{ marginBottom: '32px' }}>
         <img 
-          src="/assets/training_participation/1.png" 
+          src="/assets/training_participation/1.webp" 
           alt="Training Participation" 
           style={{ width: '100%', borderRadius: '12px', border: '1px solid var(--color-border)' }} 
         />
