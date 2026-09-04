@@ -10,7 +10,7 @@ export const products: Product[] = [
     icon: "workspace",
     route: "/products/workspace",
     videoSrc: "",
-    posterSrc: "/assets/Craftly_Workspace/1.webp",
+    posterSrc: "/assets/Craftly_Workspace/decentralized_training.webp",
     capabilities: [
       "Organizational Structure",
       "Task Management",
