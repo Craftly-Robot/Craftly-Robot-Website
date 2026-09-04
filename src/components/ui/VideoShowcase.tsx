@@ -22,6 +22,14 @@ export default function VideoShowcase({
     const video = videoRef.current;
     if (!video) return;
 
+    if (video.error) {
+      setError(true);
+      return;
+    }
+
+    const handleError = () => setError(true);
+    video.addEventListener("error", handleError);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -38,7 +46,10 @@ export default function VideoShowcase({
     );
 
     observer.observe(video);
-    return () => observer.disconnect();
+    return () => {
+      video.removeEventListener("error", handleError);
+      observer.disconnect();
+    };
   }, [reducedMotion]);
 
   return (

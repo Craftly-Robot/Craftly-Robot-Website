@@ -4,7 +4,6 @@ import "./ProductShowcase.css";
 
 interface ProductShowcaseProps {
   product: {
-    id?: string;
     name: string;
     tagline: string;
     description: string;
@@ -15,16 +14,12 @@ interface ProductShowcaseProps {
     icon?: string;
   };
   altLayout?: boolean;
-  deviceType?: "desktop" | "mobile";
 }
 
 export default function ProductShowcase({
   product,
   altLayout = false,
-  deviceType,
 }: ProductShowcaseProps) {
-  const isMobile = deviceType === "mobile" || product.id === "robot";
-
   return (
     <section
       className={`section section--xl product-showcase ${altLayout ? "product-showcase--alt" : ""}`}
@@ -45,46 +40,12 @@ export default function ProductShowcase({
           </div>
 
           {/* Visual Right */}
-          <div
-            className={`product-showcase__visual product-showcase__visual--${isMobile ? "mobile" : "desktop"} reveal reveal-delay-2`}
-          >
-            {isMobile ? (
-              <div className="product-showcase__phone-canvas">
-                <div className="product-showcase__phone-chassis">
-                  <div className="product-showcase__phone-notch">
-                    <span className="product-showcase__phone-camera" />
-                  </div>
-                  <div className="product-showcase__phone-screen">
-                    <VideoShowcase
-                      src={product.videoSrc}
-                      poster={product.posterSrc}
-                      altText={`${product.name} interface`}
-                    />
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="product-showcase__window">
-                <div className="product-showcase__window-header">
-                  <div className="product-showcase__window-dots">
-                    <span className="product-showcase__dot product-showcase__dot--red" />
-                    <span className="product-showcase__dot product-showcase__dot--yellow" />
-                    <span className="product-showcase__dot product-showcase__dot--green" />
-                  </div>
-                  <div className="product-showcase__window-title">
-                    Craftly Workspace
-                  </div>
-                  <div className="product-showcase__window-spacer" />
-                </div>
-                <div className="product-showcase__window-body">
-                  <VideoShowcase
-                    src={product.videoSrc}
-                    poster={product.posterSrc}
-                    altText={`${product.name} interface`}
-                  />
-                </div>
-              </div>
-            )}
+          <div className="product-showcase__visual reveal reveal-delay-2">
+            <VideoShowcase
+              src={product.videoSrc}
+              poster={product.posterSrc}
+              altText={`${product.name} video`}
+            />
           </div>
         </div>
       </div>

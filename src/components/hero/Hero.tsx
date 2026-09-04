@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { products } from "../../data/products";
 import HeroParticles from "./HeroParticles";
+import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
 import "./Hero.css";
 
@@ -63,16 +65,10 @@ export default function Hero() {
         </div>
 
         <div className="hero__media-wrapper">
-          <img
-            src="/assets/Homepage_Picture/1.webp"
-            alt="Craftly interface"
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
-              border: "1px solid rgba(0,0,0,0.05)",
-            }}
+          <VideoShowcase
+            src=""
+            poster={products[0].posterSrc}
+            altText="Craftly Workspace dashboard"
           />
         </div>
 

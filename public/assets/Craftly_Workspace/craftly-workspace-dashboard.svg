@@ -1,0 +1,336 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1394 1128" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+      }
+      .font-mono {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      }
+      .card-shadow {
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.04));
+      }
+    </style>
+    
+    <clipPath id="windowClip">
+      <rect x="0" y="0" width="1394" height="1128" rx="20" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Window Background & Border with Rounded Corners -->
+  <g clip-path="url(#windowClip)">
+    <!-- Base Background -->
+    <rect x="0" y="0" width="1394" height="1128" fill="#fdfdfd" />
+
+    <!-- ──────────────────────── SIDEBAR ──────────────────────── -->
+    <!-- Sidebar background -->
+    <rect x="0" y="0" width="311" height="1128" fill="#f4f4f5" />
+    <line x1="311" y1="0" x2="311" y2="1128" stroke="#e4e4e7" stroke-width="1" />
+
+    <!-- Brand Header -->
+    <g transform="translate(36, 56)">
+      <!-- Craftly Wordmark (Pacifico vector path) -->
+      <path d="M2.176 -11.832Q2.176 -16.830000000000002 4.063000000000001 -20.706000000000003Q5.95 -24.582 9.18 -26.707Q12.41 -28.832 16.354000000000003 -28.832Q20.026 -28.832 21.93 -26.945Q23.834000000000003 -25.058000000000003 23.834000000000003 -21.964000000000002Q23.834000000000003 -19.89 23.103 -18.632Q22.372 -17.374000000000002 21.012 -17.374000000000002Q20.060000000000002 -17.374000000000002 19.516000000000002 -17.816000000000003Q18.972 -18.258000000000003 18.972 -19.108Q18.972 -19.414 19.108 -20.23Q19.312 -21.25 19.312 -21.862000000000002Q19.312 -24.956000000000003 16.014000000000003 -24.956000000000003Q13.770000000000001 -24.956000000000003 11.73 -23.494Q9.690000000000001 -22.032 8.432 -19.193Q7.174 -16.354000000000003 7.174 -12.444Q7.174 -8.364 9.452 -6.1370000000000005Q11.73 -3.91 16.184 -3.91Q18.394000000000002 -3.91 20.655 -4.471Q22.916 -5.032 25.67 -6.188000000000001Q26.180000000000003 -6.392 26.520000000000003 -6.392Q27.064000000000004 -6.392 27.336000000000002 -5.984Q27.608 -5.5760000000000005 27.608 -4.930000000000001Q27.608 -2.8560000000000003 25.364 -1.87Q22.950000000000003 -0.8160000000000001 20.349000000000004 -0.323Q17.748 0.17 15.402000000000001 0.17Q11.356000000000002 0.17 8.364 -1.3090000000000002Q5.372000000000001 -2.7880000000000003 3.7740000000000005 -5.508Q2.176 -8.228 2.176 -11.832ZM25.024 -5.542000000000001Q25.024 -9.962000000000002 26.282000000000004 -13.940000000000001Q26.588 -14.926000000000002 27.285000000000004 -15.385000000000002Q27.982000000000003 -15.844000000000001 29.240000000000002 -15.844000000000001Q29.92 -15.844000000000001 30.192 -15.674000000000001Q30.464000000000002 -15.504000000000001 30.464000000000002 -15.028Q30.464000000000002 -14.484000000000002 29.954 -12.58Q29.614 -11.22 29.410000000000004 -10.200000000000001Q29.206000000000003 -9.180000000000001 29.07 -7.684Q30.192 -10.608 31.586000000000002 -12.444Q32.980000000000004 -14.280000000000001 34.32300000000001 -15.062000000000001Q35.666000000000004 -15.844000000000001 36.788000000000004 -15.844000000000001Q38.998000000000005 -15.844000000000001 38.998000000000005 -13.634Q38.998000000000005 -13.192 38.692 -11.492Q38.42 -10.132000000000001 38.42 -9.792000000000002Q38.42 -8.602 39.27 -8.602Q40.222 -8.602 41.718 -10.098Q42.160000000000004 -10.540000000000001 42.636 -10.540000000000001Q43.078 -10.540000000000001 43.333000000000006 -10.149000000000001Q43.58800000000001 -9.758000000000001 43.58800000000001 -9.112Q43.58800000000001 -7.854000000000001 42.908 -7.140000000000001Q41.956 -6.154000000000001 40.681000000000004 -5.457000000000001Q39.406000000000006 -4.760000000000001 37.978 -4.760000000000001Q36.176 -4.760000000000001 35.241 -5.678000000000001Q34.306000000000004 -6.596 34.306000000000004 -8.16Q34.306000000000004 -8.67 34.408 -9.180000000000001Q34.476 -9.860000000000001 34.476 -10.098Q34.476 -10.642000000000001 34.102000000000004 -10.642000000000001Q33.592 -10.642000000000001 32.759 -9.503Q31.926000000000002 -8.364 31.110000000000003 -6.494000000000001Q30.294000000000004 -4.6240000000000006 29.784000000000002 -2.5500000000000003Q29.410000000000004 -0.9520000000000001 28.917 -0.391Q28.424000000000003 0.17 27.37 0.17Q26.078000000000003 0.17 25.551000000000002 -1.1900000000000002Q25.024 -2.5500000000000003 25.024 -5.542000000000001ZM39.984 -5.372000000000001Q39.984 -8.092 41.242000000000004 -10.523Q42.50000000000001 -12.954 44.59100000000001 -14.433Q46.682 -15.912 49.028000000000006 -15.912Q49.776 -15.912 50.031000000000006 -15.623000000000001Q50.286 -15.334000000000001 50.456 -14.586Q51.17 -14.722000000000001 51.952000000000005 -14.722000000000001Q53.61800000000001 -14.722000000000001 53.61800000000001 -13.532000000000002Q53.61800000000001 -12.818000000000001 53.108000000000004 -10.132000000000001Q52.32600000000001 -6.222 52.32600000000001 -4.692Q52.32600000000001 -4.182 52.581 -3.8760000000000003Q52.836000000000006 -3.5700000000000003 53.24400000000001 -3.5700000000000003Q53.89000000000001 -3.5700000000000003 54.80800000000001 -4.4030000000000005Q55.726000000000006 -5.236000000000001 57.290000000000006 -7.106000000000001Q57.69800000000001 -7.582000000000001 58.208000000000006 -7.582000000000001Q58.650000000000006 -7.582000000000001 58.90500000000001 -7.174000000000001Q59.16000000000001 -6.766000000000001 59.16000000000001 -6.0520000000000005Q59.16000000000001 -4.692 58.51400000000001 -3.9440000000000004Q57.120000000000005 -2.21 55.556000000000004 -1.02Q53.992000000000004 0.17 52.53 0.17Q51.408 0.17 50.473 -0.5950000000000001Q49.538000000000004 -1.36 49.062000000000005 -2.6860000000000004Q47.294000000000004 0.17 44.608000000000004 0.17Q42.50000000000001 0.17 41.242000000000004 -1.36Q39.984 -2.89 39.984 -5.372000000000001ZM48.246 -6.494000000000001 49.504000000000005 -12.750000000000002Q48.07600000000001 -12.716000000000001 46.86900000000001 -11.679000000000002Q45.662000000000006 -10.642000000000001 44.94800000000001 -8.942Q44.234 -7.242000000000001 44.234 -5.338Q44.234 -4.284000000000001 44.659000000000006 -3.7740000000000005Q45.084 -3.2640000000000002 45.83200000000001 -3.2640000000000002Q46.580000000000005 -3.2640000000000002 47.260000000000005 -4.148Q47.940000000000005 -5.032 48.246 -6.494000000000001ZM70.924 -8.092Q70.924 -5.406000000000001 66.708 -5.406000000000001Q65.892 -5.406000000000001 64.362 -5.712000000000001Q64.804 -3.604 65.093 -1.037Q65.382 1.53 65.382 3.196Q65.382 6.868 64.19200000000001 8.806000000000001Q63.002 10.744000000000002 61.064 10.744000000000002Q58.616 10.744000000000002 57.579 7.276000000000001Q56.542 3.8080000000000003 56.542 -3.196Q56.542 -9.724 57.953 -16.439Q59.364000000000004 -23.154 61.829 -27.557000000000002Q64.294 -31.96 67.25200000000001 -31.96Q68.85 -31.96 69.751 -30.532000000000004Q70.652 -29.104000000000003 70.652 -26.69Q70.652 -18.700000000000003 61.098 -9.282Q60.758 -5.95 60.758 -3.434Q60.758 0.068 60.996 3.757Q61.234 7.446000000000001 61.778 7.446000000000001Q62.798 7.446000000000001 62.798 3.91Q62.798 1.258 62.441 -1.2240000000000002Q62.084 -3.7060000000000004 61.472 -6.460000000000001Q61.438 -6.902 61.761 -7.582000000000001Q62.084 -8.262 62.56 -8.772Q63.036 -9.282 63.410000000000004 -9.282Q64.09 -9.282 65.042 -9.214Q65.348 -9.180000000000001 65.756 -9.180000000000001Q67.116 -9.180000000000001 68.782 -9.418000000000001Q69.054 -9.452 69.36 -9.486Q69.666 -9.520000000000001 69.97200000000001 -9.520000000000001Q70.924 -9.520000000000001 70.924 -8.092ZM61.71 -13.804Q64.43 -16.898 65.892 -20.247Q67.354 -23.596 67.388 -26.520000000000003Q67.388 -28.594 66.538 -28.594Q65.926 -28.594 65.025 -26.520000000000003Q64.124 -24.446 63.239999999999995 -21.029000000000003Q62.356 -17.612000000000002 61.71 -13.804ZM85.13600000000001 -6.0520000000000005Q85.13600000000001 -4.692 84.49000000000001 -3.9440000000000004Q83.028 -2.1420000000000003 81.29400000000001 -0.9860000000000002Q79.56 0.17 77.316 0.17Q70.38000000000001 0.17 70.38000000000001 -9.588000000000001Q70.38000000000001 -11.084000000000001 70.482 -12.614H69.156Q68.13600000000001 -12.614 67.77900000000001 -12.988Q67.42200000000001 -13.362 67.42200000000001 -14.178Q67.42200000000001 -16.082 68.952 -16.082H70.89Q71.468 -19.822000000000003 72.65800000000002 -22.916000000000004Q73.84800000000001 -26.01 75.531 -27.846000000000004Q77.214 -29.682000000000002 79.152 -29.682000000000002Q80.58000000000001 -29.682000000000002 81.39600000000002 -28.424Q82.212 -27.166 82.212 -25.262Q82.212 -19.992 77.792 -16.082H81.60000000000001Q82.144 -16.082 82.382 -15.844000000000001Q82.62 -15.606000000000002 82.62 -14.96Q82.62 -12.614 78.778 -12.614H74.63000000000001Q74.56200000000001 -10.914000000000001 74.56200000000001 -9.962000000000002Q74.56200000000001 -6.426 75.39500000000001 -4.998Q76.22800000000001 -3.5700000000000003 78.03 -3.5700000000000003Q79.492 -3.5700000000000003 80.614 -4.454000000000001Q81.736 -5.338 83.266 -7.106000000000001Q83.674 -7.582000000000001 84.18400000000001 -7.582000000000001Q84.626 -7.582000000000001 84.881 -7.174000000000001Q85.13600000000001 -6.766000000000001 85.13600000000001 -6.0520000000000005ZM74.97 -16.592000000000002Q76.976 -18.326 77.979 -20.485Q78.982 -22.644000000000002 78.982 -24.412000000000003Q78.982 -26.418000000000003 78.23400000000001 -26.418000000000003Q77.724 -26.418000000000003 77.095 -25.143Q76.46600000000001 -23.868000000000002 75.905 -21.607Q75.34400000000001 -19.346 74.97 -16.592000000000002ZM96.22 -6.0520000000000005Q96.22 -4.692 95.574 -3.9440000000000004Q94.112 -2.1420000000000003 92.395 -0.9860000000000002Q90.678 0.17 88.502 0.17Q85.51 0.17 84.065 -2.5500000000000003Q82.62 -5.2700000000000005 82.62 -9.588000000000001Q82.62 -13.736 83.691 -19.04Q84.762 -24.344 86.85300000000001 -28.152Q88.944 -31.96 91.834 -31.96Q93.46600000000001 -31.96 94.40100000000001 -30.447000000000003Q95.336 -28.934 95.336 -26.112000000000002Q95.336 -22.066000000000003 93.092 -16.728Q90.848 -11.39 87.006 -6.154000000000001Q87.244 -4.760000000000001 87.788 -4.165000000000001Q88.332 -3.5700000000000003 89.21600000000001 -3.5700000000000003Q90.61 -3.5700000000000003 91.664 -4.369Q92.718 -5.168 94.35 -7.106000000000001Q94.758 -7.582000000000001 95.268 -7.582000000000001Q95.71000000000001 -7.582000000000001 95.965 -7.174000000000001Q96.22 -6.766000000000001 96.22 -6.0520000000000005ZM86.768 -10.744000000000002Q89.182 -14.722000000000001 90.61 -18.717000000000002Q92.038 -22.712000000000003 92.038 -26.01Q92.038 -28.594 91.086 -28.594Q90.304 -28.594 89.318 -25.772000000000002Q88.332 -22.950000000000003 87.584 -18.768Q86.836 -14.586 86.768 -10.744000000000002ZM111.82600000000001 -6.018000000000001Q111.82600000000001 -5.236000000000001 111.58800000000001 -4.7940000000000005Q111.35000000000001 -4.352 110.84 -4.0120000000000005L104.31200000000001 0.374Q103.02000000000001 7.412000000000001 100.929 11.441Q98.83800000000001 15.47 95.608 15.47Q93.87400000000001 15.47 92.786 14.399000000000001Q91.69800000000001 13.328000000000001 91.69800000000001 11.594000000000001Q91.69800000000001 9.996 92.429 8.33Q93.16 6.664000000000001 95.149 4.505000000000001Q97.138 2.346 100.77600000000001 -0.44200000000000006L100.878 -1.2240000000000002Q101.116 -2.482 101.422 -4.828Q100.742 -2.3800000000000003 99.518 -1.1050000000000002Q98.29400000000001 0.17 96.934 0.17Q95.404 0.17 94.435 -1.241Q93.46600000000001 -2.652 93.46600000000001 -4.760000000000001Q93.46600000000001 -7.3100000000000005 93.80600000000001 -9.435Q94.146 -11.56 94.928 -13.940000000000001Q95.268 -14.96 95.88 -15.402000000000001Q96.492 -15.844000000000001 97.818 -15.844000000000001Q98.566 -15.844000000000001 98.855 -15.606000000000002Q99.144 -15.368 99.144 -14.892000000000001Q99.144 -14.620000000000001 98.77000000000001 -13.056000000000001Q98.43 -11.798 98.226 -10.778Q97.95400000000001 -9.384 97.75 -8.109Q97.546 -6.8340000000000005 97.546 -6.018000000000001Q97.546 -4.726 98.26 -4.726Q98.77000000000001 -4.726 99.53500000000001 -5.746Q100.30000000000001 -6.766000000000001 101.167 -8.840000000000002Q102.034 -10.914000000000001 102.85000000000001 -13.940000000000001Q103.122 -14.96 103.68299999999999 -15.402000000000001Q104.244 -15.844000000000001 105.366 -15.844000000000001Q106.14800000000001 -15.844000000000001 106.45400000000001 -15.64Q106.76 -15.436000000000002 106.76 -14.96Q106.76 -14.110000000000001 105.876 -9.112L104.992 -3.6380000000000003Q107.61 -5.61 110.09200000000001 -7.242000000000001Q110.534 -7.514 110.87400000000001 -7.514Q111.316 -7.514 111.571 -7.089Q111.82600000000001 -6.664000000000001 111.82600000000001 -6.018000000000001ZM99.994 3.6380000000000003Q97.376 5.848000000000001 96.203 7.667000000000001Q95.03 9.486 95.03 10.846Q95.03 11.424000000000001 95.251 11.798000000000002Q95.47200000000001 12.172 95.982 12.172Q96.83200000000001 12.172 97.886 10.2Q98.94 8.228 99.994 3.6380000000000003Z" fill="#0f172a" />
+      <!-- WORKSPACE text -->
+      <text x="122" y="-9" class="font-sans" font-size="14" font-weight="600" fill="#0f172a" letter-spacing="0.14em">WORKSPACE</text>
+    </g>
+
+    <!-- Sidebar Navigation Items -->
+    <!-- 1. Home -->
+    <g transform="translate(38, 120)">
+      <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1V9.5z" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Home</text>
+    </g>
+
+    <!-- 2. Work -->
+    <g transform="translate(38, 168)">
+      <rect x="3" y="7" width="18" height="14" rx="2" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <line x1="3" y1="12" x2="21" y2="12" stroke="#0f172a" stroke-width="1.5"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Work</text>
+    </g>
+
+    <!-- 3. Notifications -->
+    <g transform="translate(38, 216)">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.73 21a2 2 0 0 1-3.46 0" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Notifications</text>
+    </g>
+
+    <!-- 4. Chat -->
+    <g transform="translate(38, 264)">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Chat</text>
+    </g>
+
+    <!-- 5. Department -->
+    <g transform="translate(38, 312)">
+      <rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <path d="M9 21v-4h6v4" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <line x1="8" y1="7" x2="10" y2="7" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="14" y1="7" x2="16" y2="7" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="8" y1="11" x2="10" y2="11" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="14" y1="11" x2="16" y2="11" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Department</text>
+    </g>
+
+    <!-- 6. Support -->
+    <g transform="translate(38, 360)">
+      <path d="M3 18v-6a9 9 0 0 1 18 0v6" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Support</text>
+    </g>
+
+    <!-- 7. Training (Active item - solid pill) -->
+    <g transform="translate(15, 404)">
+      <rect x="0" y="0" width="281" height="42" rx="9" fill="#0f172a" />
+      <g transform="translate(23, 9)">
+        <circle cx="12" cy="12" r="3" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="36" y="16" class="font-sans" font-size="15" font-weight="500" fill="#ffffff">Training</text>
+      </g>
+    </g>
+
+    <!-- 8. Agent -->
+    <g transform="translate(38, 464)">
+      <rect x="4" y="10" width="16" height="11" rx="2" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <circle cx="12" cy="5" r="2" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+      <line x1="12" y1="7" x2="12" y2="10" stroke="#0f172a" stroke-width="1.8"/>
+      <circle cx="8.5" cy="14.5" r="1" fill="#0f172a"/>
+      <circle cx="15.5" cy="14.5" r="1" fill="#0f172a"/>
+      <line x1="8" y1="17.5" x2="16" y2="17.5" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Agent</text>
+    </g>
+
+    <!-- 9. Feedback -->
+    <g transform="translate(38, 512)">
+      <path d="M22 2L11 13" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="36" y="15" class="font-sans" font-size="15" font-weight="500" fill="#0f172a">Feedback</text>
+    </g>
+
+    <!-- Sidebar Bottom Profile -->
+    <g transform="translate(36, 1048)">
+      <circle cx="21" cy="21" r="21" fill="#0f172a" />
+      <text x="21" y="27" class="font-sans" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">W</text>
+      <text x="56" y="18" class="font-sans" font-size="15" font-weight="600" fill="#0f172a">Wasif Abdullah Musa</text>
+      <text x="56" y="34" class="font-sans" font-size="13" font-weight="400" fill="#64748b">Chairman</text>
+    </g>
+
+    <!-- ──────────────────────── TOP SANDBOX BANNER ──────────────────────── -->
+    <rect x="311" y="0" width="1083" height="46" fill="#fef7d6" />
+    <line x1="311" y1="46" x2="1394" y2="46" stroke="#f6e89d" stroke-width="1" />
+    <text x="852" y="28" class="font-sans" font-size="13" text-anchor="middle">
+      <tspan font-weight="700" fill="#854d0e" letter-spacing="0.06em">SANDBOX</tspan>
+      <tspan fill="#713f12" dx="10">This workspace is separate from production data.</tspan>
+    </text>
+
+    <!-- ──────────────────────── MAIN HEADER ──────────────────────── -->
+    <!-- Header Title & Subtitle -->
+    <text x="348" y="112" class="font-sans" font-size="29" font-weight="700" fill="#0f172a" letter-spacing="-0.02em">Decentralized Model Training</text>
+    <text x="348" y="142" class="font-sans" font-size="15" font-weight="400" fill="#64748b">Contribute hardware acceleration to train Craftly Machine Learning Models</text>
+
+    <!-- NVIDIA Logo (Vector) -->
+    <g transform="translate(1220, 72)">
+      <!-- NVIDIA Claw Emblem -->
+      <g transform="translate(12, 0) scale(2.8)">
+        <path d="M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.398 0-.787-.062-1.158-.185v-4.346c1.528.185 1.837.857 2.747 2.385l2.04-1.714s-1.492-1.952-4-1.952a6.016 6.016 0 0 0-.796.035m0-4.735v2.138l.424-.027c5.45-.185 9.01 4.47 9.01 4.47s-4.08 4.964-8.33 4.964c-.37 0-.733-.035-1.095-.097v1.325c.3.035.61.062.91.062 3.957 0 6.82-2.023 9.593-4.408.459.371 2.34 1.263 2.73 1.652-2.633 2.208-8.772 3.984-12.253 3.984-.335 0-.653-.018-.971-.053v1.864H24V4.063zm0 10.326v1.131c-3.657-.654-4.673-4.46-4.673-4.46s1.758-1.944 4.673-2.262v1.237H8.94c-1.528-.186-2.73 1.245-2.73 1.245s.68 2.412 2.739 3.11M2.456 10.9s2.164-3.197 6.5-3.533V6.201C4.153 6.59 0 10.653 0 10.653s2.35 6.802 8.948 7.42v-1.237c-4.84-.6-6.492-5.936-6.492-5.936z" fill="#76b900"/>
+      </g>
+      <!-- NVIDIA Wordmark -->
+      <g transform="translate(0, 68) scale(0.145)">
+        <path d="M578.2 34v118h33.3V34h-33.3zm-262-.2v118.1h33.6V60.2l26.2.1c8.6 0 14.6 2.1 18.7 6.5 5.3 5.6 7.4 14.7 7.4 31.2v53.9h32.6V86.7c0-46.6-29.7-52.9-58.7-52.9h-59.8zm315.7.2v118h54c28.8 0 38.2-4.8 48.3-15.5 7.2-7.5 11.8-24.1 11.8-42.2 0-16.6-3.9-31.4-10.8-40.6C723 37.2 705.2 34 678.6 34h-46.7zm33 25.6h14.3c20.8 0 34.2 9.3 34.2 33.5s-13.4 33.6-34.2 33.6h-14.3V59.6zM530.2 34l-27.8 93.5L475.8 34h-36l38 118h48l38.4-118h-34zm231.4 118h33.3V34h-33.3v118zM855 34l-46.5 117.9h32.8l7.4-20.9h55l7 20.8h35.7L899.5 34H855zm21.6 21.5l20.2 55.2h-41l20.8-55.2z" fill="#0f172a"/>
+      </g>
+      <!-- Registered mark -->
+      <text x="94" y="77" class="font-sans" font-size="8.5" font-weight="700" fill="#0f172a">®</text>
+    </g>
+
+    <!-- Header Divider Line -->
+    <line x1="311" y1="184" x2="1394" y2="184" stroke="#f1f5f9" stroke-width="1.5" />
+
+    <!-- ──────────────────────── CARD 1: CONTRIBUTE TO MODEL TRAINING ──────────────────────── -->
+    <g transform="translate(348, 218)">
+      <rect x="0" y="0" width="1010" height="118" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+      
+      <text x="28" y="38" class="font-sans" font-size="17" font-weight="600" fill="#0f172a">Contribute to model training</text>
+      <text x="28" y="66" class="font-sans" font-size="14" font-weight="400" fill="#64748b">When you opt-in, your hardware powers up Craftly Machine Learning Model training process. You can opt</text>
+      <text x="28" y="86" class="font-sans" font-size="14" font-weight="400" fill="#64748b">out anytime.</text>
+
+      <!-- Opt In Button -->
+      <g transform="translate(888, 43)">
+        <rect x="0" y="0" width="94" height="38" rx="8" fill="#0f172a" />
+        <text x="47" y="24" class="font-sans" font-size="14" font-weight="500" fill="#ffffff" text-anchor="middle">Opt In</text>
+      </g>
+    </g>
+
+    <!-- ──────────────────────── CARD 2: MODEL TRAINING PROGRESS ──────────────────────── -->
+    <g transform="translate(348, 354)">
+      <rect x="0" y="0" width="1010" height="148" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+
+      <!-- Upper Label & Pill -->
+      <text x="28" y="34" class="font-sans" font-size="12" font-weight="600" fill="#64748b" letter-spacing="0.06em">MODEL TRAINING PROGRESS</text>
+      
+      <g transform="translate(908, 18)">
+        <rect x="0" y="0" width="74" height="28" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+        <text x="37" y="19" class="font-sans" font-size="12.5" font-weight="600" fill="#334155" text-anchor="middle">9h 41m</text>
+      </g>
+
+      <!-- Large Percentage -->
+      <text x="28" y="74" class="font-sans" font-size="34" font-weight="700" fill="#0f172a" letter-spacing="-0.03em">32.93%</text>
+
+      <!-- Progress Bar Track & Fill -->
+      <g transform="translate(28, 92)">
+        <!-- Track -->
+        <rect x="0" y="0" width="954" height="7" rx="3.5" fill="#f1f5f9" />
+        <!-- Filled (32.93% of 954px = 314px) -->
+        <rect x="0" y="0" width="314" height="7" rx="3.5" fill="#0f172a" />
+      </g>
+
+      <!-- Model checkpoint filename -->
+      <text x="28" y="125" class="font-mono" font-size="12" font-weight="400" fill="#64748b">craftly_robot_pretrain_sft_round79_4m_3072shards_runtime_20260630_194026.craftlytrain</text>
+    </g>
+
+    <!-- ──────────────────────── STATS ROW: 4 CARDS ──────────────────────── -->
+    <!-- Card 1: Online Nodes -->
+    <g transform="translate(348, 520)">
+      <rect x="0" y="0" width="239" height="86" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+      <text x="24" y="32" class="font-sans" font-size="11.5" font-weight="600" fill="#64748b" letter-spacing="0.06em">ONLINE NODES</text>
+      <text x="24" y="63" class="font-sans">
+        <tspan font-size="20" font-weight="700" fill="#0f172a">84 </tspan>
+        <tspan font-size="17" font-weight="500" fill="#0f172a">online</tspan>
+      </text>
+    </g>
+
+    <!-- Card 2: Combined GPU RAM -->
+    <g transform="translate(605, 520)">
+      <rect x="0" y="0" width="239" height="86" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+      <text x="24" y="32" class="font-sans" font-size="11.5" font-weight="600" fill="#64748b" letter-spacing="0.06em">COMBINED GPU RAM</text>
+      <text x="24" y="63" class="font-sans">
+        <tspan font-size="20" font-weight="700" fill="#0f172a">1.2 </tspan>
+        <tspan font-size="17" font-weight="500" fill="#0f172a">TB</tspan>
+      </text>
+    </g>
+
+    <!-- Card 3: Total System RAM -->
+    <g transform="translate(862, 520)">
+      <rect x="0" y="0" width="239" height="86" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+      <text x="24" y="32" class="font-sans" font-size="11.5" font-weight="600" fill="#64748b" letter-spacing="0.06em">TOTAL SYSTEM RAM</text>
+      <text x="24" y="63" class="font-sans">
+        <tspan font-size="20" font-weight="700" fill="#0f172a">1.8 </tspan>
+        <tspan font-size="17" font-weight="500" fill="#0f172a">TB</tspan>
+      </text>
+    </g>
+
+    <!-- Card 4: CPU Threads -->
+    <g transform="translate(1119, 520)">
+      <rect x="0" y="0" width="239" height="86" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+      <text x="24" y="32" class="font-sans" font-size="11.5" font-weight="600" fill="#64748b" letter-spacing="0.06em">CPU THREADS</text>
+      <text x="24" y="63" class="font-sans" font-size="20" font-weight="700" fill="#0f172a">354</text>
+    </g>
+
+    <!-- ──────────────────────── BOTTOM ROW: LEADERBOARD & EVENT LOG ──────────────────────── -->
+    <!-- Column 1: Leaderboard -->
+    <g transform="translate(348, 624)">
+      <rect x="0" y="0" width="494" height="504" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+
+      <!-- Section Header -->
+      <g transform="translate(24, 24)">
+        <path d="M5 8H3.5a2.5 2.5 0 0 1 0-5H5" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 8h1.5a2.5 2.5 0 0 0 0-5H15" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 19h14" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M8.5 12.5V15c0 .5-.4 1-.9 1H6c-.5 0-.9.4-.9 1v1c0 .5.4 1 .9 1h8c.5 0 .9-.5.9-1v-1c0-.6-.4-1-.9-1h-1.6c-.5 0-.9-.5-.9-1v-2.5" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 3h10a2 2 0 0 1 2 2v3.5a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V5a2 2 0 0 1 2-2Z" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="28" y="16" class="font-sans" font-size="16" font-weight="600" fill="#0f172a">Leaderboard</text>
+      </g>
+
+      <!-- Item 1: Wasif Abdullah Musa -->
+      <g transform="translate(20, 68)">
+        <rect x="0" y="0" width="454" height="96" rx="8" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1" />
+        <text x="24" y="53" class="font-sans" font-size="14" font-weight="500" fill="#64748b" text-anchor="middle">1</text>
+        
+        <text x="52" y="32" class="font-sans" font-size="15" font-weight="600" fill="#0f172a">Wasif Abdullah Musa</text>
+        <text x="52" y="52" class="font-sans" font-size="12.5" font-weight="400" fill="#64748b">Token Contributed in</text>
+        <text x="52" y="70" class="font-sans" font-size="12.5" font-weight="400" fill="#64748b">Training · Last 14 days · 146 accepted · 30 GPUs</text>
+        
+        <text x="434" y="54" class="font-sans" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="end">859,786,677 tokens</text>
+      </g>
+
+      <!-- Item 2: Mahir Labib Chowdhury -->
+      <g transform="translate(20, 178)">
+        <rect x="0" y="0" width="454" height="114" rx="8" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1" />
+        <text x="24" y="62" class="font-sans" font-size="14" font-weight="500" fill="#64748b" text-anchor="middle">2</text>
+        
+        <text x="52" y="31" class="font-sans" font-size="15" font-weight="600" fill="#0f172a">Mahir Labib</text>
+        <text x="52" y="49" class="font-sans" font-size="15" font-weight="600" fill="#0f172a">Chowdhury</text>
+        <text x="52" y="71" class="font-sans" font-size="12.5" font-weight="400" fill="#64748b">Token Contributed in</text>
+        <text x="52" y="89" class="font-sans" font-size="12.5" font-weight="400" fill="#64748b">Training · Last 14 days · 570 accepted · 25 GPUs</text>
+        
+        <text x="434" y="62" class="font-sans" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="end">671,140,295 tokens</text>
+      </g>
+
+      <!-- Item 3: Ayman Aiden -->
+      <g transform="translate(20, 306)">
+        <rect x="0" y="0" width="454" height="114" rx="8" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1" />
+        <text x="24" y="62" class="font-sans" font-size="14" font-weight="500" fill="#64748b" text-anchor="middle">3</text>
+        
+        <text x="52" y="31" class="font-sans" font-size="15" font-weight="600" fill="#0f172a">Ayman Aiden</text>
+        <text x="52" y="52" class="font-sans" font-size="12.5" font-weight="400" fill="#64748b">Token Contributed in</text>
+        <text x="52" y="70" class="font-sans" font-size="12.5" font-weight="400" fill="#64748b">Training · Last 14 days · 312 accepted · 18 GPUs</text>
+        
+        <text x="434" y="62" class="font-sans" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="end">489,120,840 tokens</text>
+      </g>
+    </g>
+
+    <!-- Column 2: Training Event Log -->
+    <g transform="translate(864, 624)">
+      <rect x="0" y="0" width="494" height="504" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" class="card-shadow" />
+
+      <!-- Section Header -->
+      <g transform="translate(24, 24)">
+        <polyline points="21 10 17 10 14 18 9 2 6 10 2 10" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="28" y="15" class="font-sans" font-size="16" font-weight="600" fill="#0f172a">Training Event Log</text>
+      </g>
+
+      <!-- Event 1: Mahmud Hasan -->
+      <g transform="translate(20, 68)">
+        <rect x="0" y="0" width="454" height="106" rx="8" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1" />
+        
+        <!-- Header row -->
+        <text x="18" y="27" class="font-sans" font-size="14" font-weight="600" fill="#0f172a">Running on Mahmud Hasan</text>
+        <text x="436" y="27" class="font-sans" font-size="11.5" font-weight="400" fill="#64748b" text-anchor="end">7/1/2026, 12:02:53 AM</text>
+        
+        <!-- Monospace log details -->
+        <text x="18" y="50" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">[train] phase=training_progress mode=pretrain_sft.sft</text>
+        <text x="18" y="68" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">step=50 total_steps=116 loss=3.01771</text>
+        <text x="18" y="86" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">token_count=995581 sample_count=1536</text>
+      </g>
+
+      <!-- Event 2: Jayeed Bin Siddique -->
+      <g transform="translate(20, 186)">
+        <rect x="0" y="0" width="454" height="122" rx="8" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1" />
+        
+        <!-- Header row -->
+        <text x="18" y="26" class="font-sans" font-size="14" font-weight="600" fill="#0f172a">Running on Jayeed Bin</text>
+        <text x="18" y="44" class="font-sans" font-size="14" font-weight="600" fill="#0f172a">Siddique</text>
+        <text x="436" y="26" class="font-sans" font-size="11.5" font-weight="400" fill="#64748b" text-anchor="end">7/1/2026, 12:02:51 AM</text>
+        
+        <!-- Monospace log details -->
+        <text x="18" y="68" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">[train] phase=training_progress mode=pretrain_sft.sft</text>
+        <text x="18" y="86" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">step=100 total_steps=116 loss=2.38692</text>
+        <text x="18" y="104" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">token_count=1029224 sample_count=2136</text>
+      </g>
+
+      <!-- Event 3: Top edge peek -->
+      <g transform="translate(20, 320)">
+        <rect x="0" y="0" width="454" height="106" rx="8" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1" />
+        <text x="18" y="27" class="font-sans" font-size="14" font-weight="600" fill="#0f172a">Running on Mahmud Hasan</text>
+        <text x="436" y="27" class="font-sans" font-size="11.5" font-weight="400" fill="#64748b" text-anchor="end">7/1/2026, 12:02:49 AM</text>
+        <text x="18" y="50" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">[train] phase=training_progress mode=pretrain_sft.sft</text>
+        <text x="18" y="68" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">step=116 total_steps=116 loss=1.98412</text>
+        <text x="18" y="86" class="font-mono" font-size="11.5" font-weight="400" fill="#475569">token_count=1054920 sample_count=2280</text>
+      </g>
+    </g>
+
+  </g>
+  <!-- Outer Window Border -->
+  <rect x="0.5" y="0.5" width="1393" height="1127" rx="20" fill="none" stroke="#e2e8f0" stroke-width="1" />
+</svg>
