@@ -1,3 +1,4 @@
+import ProductVisual from "../../components/product/ProductVisual";
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import { products } from "../../data/products";
@@ -38,12 +39,7 @@ export default function RobotPage() {
           {/* Pair 1 */}
           <div className="abstracted-ui-grid">
             <div className="abstracted-ui-feature reveal">
-              <img
-                src="/assets/Craftly_Robot/1.1.webp"
-                alt="Robot detail 1.1"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-engineering" />
               <h3 className="abstracted-ui-feature__title">
                 Autonomous Engineering
               </h3>
@@ -53,12 +49,7 @@ export default function RobotPage() {
               </p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img
-                src="/assets/Craftly_Robot/1.2.webp"
-                alt="Robot detail 1.2"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-codebase" />
               <h3 className="abstracted-ui-feature__title">
                 Codebase Intelligence
               </h3>
@@ -75,12 +66,7 @@ export default function RobotPage() {
             style={{ marginTop: "var(--space-2xl)" }}
           >
             <div className="abstracted-ui-feature reveal">
-              <img
-                src="/assets/Craftly_Robot/2.1.webp"
-                alt="Robot detail 2.1"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-refactoring" />
               <h3 className="abstracted-ui-feature__title">
                 Smart Refactoring
               </h3>
@@ -90,12 +76,7 @@ export default function RobotPage() {
               </p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img
-                src="/assets/Craftly_Robot/2.2.webp"
-                alt="Robot detail 2.2"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-tests" />
               <h3 className="abstracted-ui-feature__title">Test Generation</h3>
               <p className="abstracted-ui-feature__desc">
                 Automatically generate comprehensive unit and integration tests
@@ -110,12 +91,7 @@ export default function RobotPage() {
             style={{ marginTop: "var(--space-2xl)" }}
           >
             <div className="abstracted-ui-feature reveal">
-              <img
-                src="/assets/Craftly_Robot/3.1.webp"
-                alt="Robot detail 3.1"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-reviews" />
               <h3 className="abstracted-ui-feature__title">
                 Pull Request Reviews
               </h3>
@@ -125,12 +101,7 @@ export default function RobotPage() {
               </p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img
-                src="/assets/Craftly_Robot/3.2.webp"
-                alt="Robot detail 3.2"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-ci" />
               <h3 className="abstracted-ui-feature__title">
                 Continuous Integration
               </h3>
@@ -147,12 +118,7 @@ export default function RobotPage() {
             style={{ marginTop: "var(--space-2xl)" }}
           >
             <div className="abstracted-ui-feature reveal">
-              <img
-                src="/assets/Craftly_Robot/4.1.webp"
-                alt="Robot detail 4.1"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-multiagent" />
               <h3 className="abstracted-ui-feature__title">
                 Multi-Agent Coordination
               </h3>
@@ -162,12 +128,7 @@ export default function RobotPage() {
               </p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img
-                src="/assets/Craftly_Robot/4.2.webp"
-                alt="Robot detail 4.2"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-sync" />
               <h3 className="abstracted-ui-feature__title">
                 Real-time Synchronization
               </h3>
@@ -184,12 +145,7 @@ export default function RobotPage() {
             style={{ marginTop: "var(--space-2xl)" }}
           >
             <div className="abstracted-ui-feature reveal">
-              <img
-                src="/assets/Craftly_Robot/5.1.webp"
-                alt="Robot detail 5.1"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-security" />
               <h3 className="abstracted-ui-feature__title">
                 Security Scanning
               </h3>
@@ -199,12 +155,7 @@ export default function RobotPage() {
               </p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img
-                src="/assets/Craftly_Robot/5.2.webp"
-                alt="Robot detail 5.2"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-dependencies" />
               <h3 className="abstracted-ui-feature__title">
                 Dependency Management
               </h3>
@@ -239,11 +190,9 @@ export default function RobotPage() {
                 Visualize your entire software architecture mapped out by
                 intelligent agents.
               </p>
-              <img
-                src="/assets/Craftly_Robot/6.webp"
-                alt="Robot detail 6"
-                className="product-showcase-image reveal reveal-delay-2"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
+              <ProductVisual
+                scene="robot-architecture"
+                className="reveal reveal-delay-2"
               />
             </div>
           </div>
@@ -254,12 +203,7 @@ export default function RobotPage() {
             style={{ marginTop: "var(--space-2xl)" }}
           >
             <div className="abstracted-ui-feature reveal">
-              <img
-                src="/assets/Craftly_Robot/7.1.webp"
-                alt="Robot detail 7.1"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-monitoring" />
               <h3 className="abstracted-ui-feature__title">
                 System Monitoring
               </h3>
@@ -269,12 +213,7 @@ export default function RobotPage() {
               </p>
             </div>
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <img
-                src="/assets/Craftly_Robot/7.2.webp"
-                alt="Robot detail 7.2"
-                className="product-showcase-image"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
-              />
+              <ProductVisual scene="robot-performance" />
               <h3 className="abstracted-ui-feature__title">
                 Performance Optimization
               </h3>
@@ -310,11 +249,9 @@ export default function RobotPage() {
                 Retain full control. Approve major changes and guide the agents
                 on complex tasks.
               </p>
-              <img
-                src="/assets/Craftly_Robot/8.webp"
-                alt="Robot detail 8"
-                className="product-showcase-image reveal reveal-delay-2"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
+              <ProductVisual
+                scene="robot-human-review"
+                className="reveal reveal-delay-2"
               />
             </div>
           </div>
@@ -344,11 +281,9 @@ export default function RobotPage() {
                 Agents can handle deployment steps across any cloud provider or
                 bare metal server.
               </p>
-              <img
-                src="/assets/Craftly_Robot/9.webp"
-                alt="Robot detail 9"
-                className="product-showcase-image reveal reveal-delay-2"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
+              <ProductVisual
+                scene="robot-deployment"
+                className="reveal reveal-delay-2"
               />
             </div>
           </div>
@@ -375,11 +310,9 @@ export default function RobotPage() {
                 All agent actions are safely contained in secure sandboxed
                 environments.
               </p>
-              <img
-                src="/assets/Craftly_Robot/10.webp"
-                alt="Robot detail 10"
-                className="product-showcase-image reveal reveal-delay-2"
-                style={{ width: "100%", maxWidth: "320px", margin: "0 auto" }}
+              <ProductVisual
+                scene="robot-sandbox"
+                className="reveal reveal-delay-2"
               />
             </div>
           </div>

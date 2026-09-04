@@ -1,3 +1,4 @@
+import ProductVisual from "../../components/product/ProductVisual";
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import { products } from "../../data/products";
@@ -28,11 +29,7 @@ export default function WorkspacePage() {
       </div>
 
       <div className="product-showcase-large">
-        <img
-          src="/assets/Craftly_Workspace/craftly-workspace-dashboard.svg"
-          alt="Craftly Workspace Interface"
-          className="product-showcase-image"
-        />
+        <ProductVisual variant="overview" />
       </div>
 
       <section className="explore-features-section">
@@ -41,11 +38,9 @@ export default function WorkspacePage() {
             <h2 className="explore-features-section__title reveal">
               Explore the main features
             </h2>
-            <img
-              src="/assets/Craftly_Workspace/8.webp"
-              alt="Explore main features"
-              className="product-showcase-image reveal reveal-delay-1"
-              style={{ margin: 0 }}
+            <ProductVisual
+              scene="workspace-features"
+              className="reveal reveal-delay-1"
             />
           </div>
         </div>
@@ -61,12 +56,7 @@ export default function WorkspacePage() {
             </p>
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img
-                  src="/assets/Craftly_Workspace/2.webp"
-                  alt="UI detail 1"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-work" />
                 <h3 className="abstracted-ui-feature__title">
                   Work Management
                 </h3>
@@ -76,12 +66,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img
-                  src="/assets/Craftly_Workspace/3.webp"
-                  alt="UI detail 2"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-notifications" />
                 <h3 className="abstracted-ui-feature__title">
                   Smart Notifications
                 </h3>
@@ -91,12 +76,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <img
-                  src="/assets/Craftly_Workspace/4.webp"
-                  alt="UI detail 3"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-collaboration" />
                 <h3 className="abstracted-ui-feature__title">
                   Team Collaboration
                 </h3>
@@ -106,12 +86,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <img
-                  src="/assets/Craftly_Workspace/5.webp"
-                  alt="UI detail 4"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-messaging" />
                 <h3 className="abstracted-ui-feature__title">
                   Direct Messaging
                 </h3>
@@ -121,12 +96,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <img
-                  src="/assets/Craftly_Workspace/6.webp"
-                  alt="UI detail 5"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-workflows" />
                 <h3 className="abstracted-ui-feature__title">
                   Custom Workflows
                 </h3>
@@ -136,12 +106,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <img
-                  src="/assets/Craftly_Workspace/7.webp"
-                  alt="UI detail 6"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-resources" />
                 <h3 className="abstracted-ui-feature__title">
                   Resource Allocation
                 </h3>
@@ -151,12 +116,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <img
-                  src="/assets/Craftly_Workspace/9.webp"
-                  alt="Dynamic Subagents"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-subagents" />
                 <h3 className="abstracted-ui-feature__title">
                   Dynamic Subagents
                 </h3>
@@ -167,12 +127,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <img
-                  src="/assets/Craftly_Workspace/10.webp"
-                  alt="Scheduled Tasks"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-schedule" />
                 <h3 className="abstracted-ui-feature__title">
                   Scheduled Tasks
                 </h3>
@@ -183,12 +138,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img
-                  src="/assets/Craftly_Workspace/11.webp"
-                  alt="UI detail 9"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-analytics" />
                 <h3 className="abstracted-ui-feature__title">
                   Performance Analytics
                 </h3>
@@ -198,12 +148,7 @@ export default function WorkspacePage() {
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <img
-                  src="/assets/Craftly_Workspace/12.webp"
-                  alt="UI detail 10"
-                  className="product-showcase-image"
-                  style={{ margin: 0 }}
-                />
+                <ProductVisual scene="workspace-integrations" />
                 <h3 className="abstracted-ui-feature__title">
                   System Integration
                 </h3>
