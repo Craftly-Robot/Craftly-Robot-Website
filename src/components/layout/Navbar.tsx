@@ -1,8 +1,10 @@
-import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { navigation } from "../../data/navigation";
 import DropdownIcon from "../ui/DropdownIcon";
 import ImageWithFallback from "../common/ImageWithFallback";
+import { useDesktopNav } from "../../hooks/useDesktopNav";
+import { useMobileNav } from "../../hooks/useMobileNav";
 import "./Navbar.css";
 
 /* ── Icons ── */
@@ -22,174 +24,36 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
-/* ── Icons ── */
-
 export default function Navbar() {
+  const {
+    activeDropdown,
+    setActiveDropdown,
+    dropdownHeight,
+    animationKey,
+    navRef,
+    megaRef,
+    activeNavConfig,
+    toggleDropdown,
+    handleMouseEnter,
+    handleDropdownMouseEnter,
+    handleMouseLeave,
+  } = useDesktopNav();
+
+  const {
+    mobileOpen,
+    mobileSection,
+    toggleMobile,
+    toggleSection,
+    closeMobile,
+  } = useMobileNav();
+
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
-  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(undefined);
-  const [animationKey, setAnimationKey] = useState(0);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement>(null);
-  const megaRef = useRef<HTMLDivElement>(null);
-  const location = useLocation();
-  const hoverLockoutRef = useRef<boolean>(false);
-  const timeoutRef = useRef<number | null>(null);
-  const closeCleanupRef = useRef<number | null>(null);
 
-  // Close mobile nav on route change
-  useEffect(() => {
-    setMobileOpen(false);
-    setMobileSection(null);
-    setActiveDropdown(null);
-    setDisplayedDropdown(null);
-    setDropdownHeight(undefined);
-  }, [location.pathname]);
-
-  // Scroll detection
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
-
-  // Close dropdown on Escape
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setActiveDropdown(null);
-        setMobileOpen(false);
-      }
-    };
-    document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
-  }, []);
-
-  // Prevent body scroll when mobile nav open
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
-  const activeNavConfig = navigation.find(
-    (item) => item.label === (activeDropdown || displayedDropdown),
-  );
-
-  // Measure dropdown height dynamically for smooth height interpolation
-  useLayoutEffect(() => {
-    if (activeDropdown && megaRef.current) {
-      setDropdownHeight(megaRef.current.offsetHeight);
-    }
-  }, [activeDropdown, activeNavConfig, animationKey]);
-
-  // Observe content resizing (e.g. dynamic renders or fonts)
-  useEffect(() => {
-    if (!activeDropdown || !megaRef.current) return;
-    const ro = new ResizeObserver(() => {
-      if (megaRef.current) {
-        setDropdownHeight(megaRef.current.offsetHeight);
-      }
-    });
-    ro.observe(megaRef.current);
-    return () => ro.disconnect();
-  }, [activeDropdown, activeNavConfig]);
-
-  const toggleDropdown = useCallback((label: string) => {
-    setActiveDropdown((prev) => {
-      if (prev === label) {
-        hoverLockoutRef.current = true;
-        setTimeout(() => {
-          hoverLockoutRef.current = false;
-        }, 300);
-        if (closeCleanupRef.current) {
-          clearTimeout(closeCleanupRef.current);
-        }
-        closeCleanupRef.current = window.setTimeout(() => {
-          setDisplayedDropdown(null);
-          setDropdownHeight(undefined);
-        }, 300);
-        return null;
-      }
-      if (closeCleanupRef.current) {
-        clearTimeout(closeCleanupRef.current);
-        closeCleanupRef.current = null;
-      }
-      setAnimationKey((k) => k + 1);
-      setDisplayedDropdown(label);
-      return label;
-    });
-  }, []);
-
-  const handleMouseEnter = useCallback((label: string) => {
-    if (hoverLockoutRef.current) {
-      return;
-    }
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    if (closeCleanupRef.current) {
-      clearTimeout(closeCleanupRef.current);
-      closeCleanupRef.current = null;
-    }
-    setDisplayedDropdown(label);
-    setActiveDropdown((prev) => {
-      if (prev !== label) {
-        setAnimationKey((k) => k + 1);
-      }
-      return label;
-    });
-  }, []);
-
-  const handleDropdownMouseEnter = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    if (closeCleanupRef.current) {
-      clearTimeout(closeCleanupRef.current);
-      closeCleanupRef.current = null;
-    }
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    timeoutRef.current = window.setTimeout(() => {
-      setActiveDropdown(null);
-      if (closeCleanupRef.current) {
-        clearTimeout(closeCleanupRef.current);
-      }
-      closeCleanupRef.current = window.setTimeout(() => {
-        setDisplayedDropdown(null);
-        setDropdownHeight(undefined);
-      }, 300);
-    }, 180);
-  }, []);
-
-  // Cleanup timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      if (closeCleanupRef.current) clearTimeout(closeCleanupRef.current);
-    };
   }, []);
 
   return (
@@ -258,7 +122,7 @@ export default function Navbar() {
 
           <button
             className={`navbar__mobile-toggle ${mobileOpen ? "navbar__mobile-toggle--open" : ""}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={toggleMobile}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -333,7 +197,6 @@ export default function Navbar() {
                         role="menuitem"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        {/* No icon for products as requested by user */}
                         <div className="dropdown-item__content">
                           <div className="dropdown-item__title">
                             {child.title}
@@ -379,11 +242,7 @@ export default function Navbar() {
           >
             <button
               className="mobile-nav__section-toggle"
-              onClick={() =>
-                setMobileSection((prev) =>
-                  prev === item.label ? null : item.label,
-                )
-              }
+              onClick={() => toggleSection(item.label)}
               aria-expanded={mobileSection === item.label}
             >
               {item.label}
@@ -397,9 +256,8 @@ export default function Navbar() {
                       key={child.route}
                       to={child.route}
                       className="mobile-nav__item"
-                      onClick={() => setMobileOpen(false)}
+                      onClick={closeMobile}
                     >
-                      {/* No icon for products as requested by user */}
                       <div className="mobile-nav__item-content">
                         <div className="mobile-nav__item-title">
                           {child.title}
@@ -416,7 +274,7 @@ export default function Navbar() {
         <Link
           to="/download"
           className="mobile-nav__download"
-          onClick={() => setMobileOpen(false)}
+          onClick={closeMobile}
         >
           Download
         </Link>
