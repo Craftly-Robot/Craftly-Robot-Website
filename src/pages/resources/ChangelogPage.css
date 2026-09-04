@@ -33,17 +33,6 @@
   line-height: 1.1;
 }
 
-.typewriter-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.9em;
-  background-color: currentColor;
-  margin-left: 4px;
-  color: #202124;
-  animation: blink 1s step-end infinite;
-  vertical-align: text-bottom;
-}
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }

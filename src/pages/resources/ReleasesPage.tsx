@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import DropdownIcon from '../../components/ui/DropdownIcon';
+import TypewriterTitle from '../../components/ui/TypewriterTitle';
 import './ReleasesPage.css';
 
 const AppleIcon = () => (
@@ -62,31 +63,6 @@ const workspaceReleases: ReleaseItem[] = [
   { version: '3.8.0' },
 ];
 
-function TypewriterTitle({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState('');
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, [text]);
-
-  return (
-    <h1 className="releases-hero__title">
-      {displayedText}
-      <span className="typewriter-cursor-gradient">|</span>
-    </h1>
-  );
-}
-
 export default function ReleasesPage() {
   const [activeTab, setActiveTab] = useState<'workspace' | 'robot'>('workspace');
   const [expandedVersions, setExpandedVersions] = useState<string[]>(['3.8.5']);
@@ -112,7 +88,7 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <TypewriterTitle text={`Craftly\nReleases`} />
+              <TypewriterTitle text={`Craftly\nReleases`} className="releases-hero__title" />
               <p className="releases-hero__desc">
                 Download previous Craftly Workspace and Craftly Robot releases. By default, they auto-update to the latest version. To stay on old versions, you will need to set Update: Mode to manual or none in the settings.
               </p>

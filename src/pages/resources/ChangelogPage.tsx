@@ -1,40 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import DropdownIcon from '../../components/ui/DropdownIcon';
+import TypewriterTitle from '../../components/ui/TypewriterTitle';
 import './ChangelogPage.css';
 
-function TypewriterTitle({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState('');
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 45);
-
-    return () => clearInterval(interval);
-  }, [text]);
-
-  const lines = displayedText.split('\n');
-
-  return (
-    <h1 className="changelog-hero__title">
-      {lines.map((line, i) => (
-        <span key={i}>
-          {line}
-          {i < lines.length - 1 && <br />}
-        </span>
-      ))}
-      <span className="typewriter-cursor"></span>
-    </h1>
-  );
-}
 
 // SVG Icons
 const InfoIcon = () => (
@@ -525,7 +495,7 @@ export default function ChangelogPage() {
           
           <div className="changelog-hero">
             <div className="changelog-hero__top">
-              <TypewriterTitle text={`See what’s new\nacross Craftly`} />
+              <TypewriterTitle text={`See what’s new\nacross Craftly`} className="changelog-hero__title" />
               <div className="changelog-actions">
                 <Link to="/resources/documentation" className="btn-pill">View docs</Link>
                 <a href="https://x.com/Craftly_robot" target="_blank" rel="noopener noreferrer" className="btn-pill">Follow us on X</a>
