@@ -18,6 +18,8 @@
 }
 
 .navbar__inner {
+  position: relative;
+  z-index: 2;
   max-width: var(--container-wide);
   margin: 0 auto;
   padding-inline: var(--page-margin);
@@ -113,8 +115,8 @@
   border: 1px solid var(--color-border);
   border-top: none;
   border-radius: 0 0 24px 24px;
-  padding: 40px 48px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  padding: 0;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
   width: max-content;
   min-width: 1200px;
   max-width: var(--container-wide);
@@ -125,11 +127,13 @@
   visibility: hidden;
   transform: translateY(-8px) scale(0.995);
   transition:
-    opacity 260ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
-    visibility 260ms cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    height 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 280ms cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: top center;
-  will-change: opacity, transform;
+  overflow: hidden;
+  will-change: opacity, transform, height;
 }
 
 .navbar__dropdown--visible {
@@ -139,11 +143,17 @@
   transform: translateY(0) scale(1);
 }
 
-/* ── Mega Menu Layout & Content Transition ── */
-@keyframes navbarMegaFadeIn {
+.navbar__dropdown-inner {
+  padding: 40px 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Mega Menu Layout & Content Cascading Transition ── */
+@keyframes navItemGlideIn {
   from {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -154,7 +164,6 @@
 .navbar__mega {
   display: flex;
   gap: 0;
-  animation: navbarMegaFadeIn 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: opacity, transform;
 }
 
@@ -174,6 +183,8 @@
   letter-spacing: -0.02em;
   color: #000000;
   max-width: none;
+  animation: navItemGlideIn 320ms cubic-bezier(0.16, 1, 0.3, 1) 0ms backwards;
+  will-change: opacity, transform;
 }
 
 .navbar__mega-btn {
@@ -187,6 +198,8 @@
   border: none;
   border-radius: 9999px;
   text-decoration: none;
+  animation: navItemGlideIn 320ms cubic-bezier(0.16, 1, 0.3, 1) 60ms backwards;
+  will-change: opacity, transform;
   transition:
     background-color 180ms ease,
     color 180ms ease;
@@ -210,6 +223,8 @@
   margin-bottom: 16px;
   padding-left: 12px;
   font-weight: 400;
+  animation: navItemGlideIn 300ms cubic-bezier(0.16, 1, 0.3, 1) 90ms backwards;
+  will-change: opacity, transform;
 }
 
 .navbar__mega-grid {
@@ -228,10 +243,22 @@
   text-decoration: none;
   color: #000000;
   width: fit-content;
+  animation: navItemGlideIn 320ms cubic-bezier(0.16, 1, 0.3, 1) calc(110ms + var(--item-index, 0) * 35ms) backwards;
+  will-change: opacity, transform;
   transition:
     background-color 180ms ease,
     color 180ms ease;
 }
+
+/* Stagger fallback delays */
+.dropdown-item:nth-child(1) { animation-delay: 110ms; }
+.dropdown-item:nth-child(2) { animation-delay: 145ms; }
+.dropdown-item:nth-child(3) { animation-delay: 180ms; }
+.dropdown-item:nth-child(4) { animation-delay: 215ms; }
+.dropdown-item:nth-child(5) { animation-delay: 250ms; }
+.dropdown-item:nth-child(6) { animation-delay: 285ms; }
+.dropdown-item:nth-child(7) { animation-delay: 320ms; }
+.dropdown-item:nth-child(8) { animation-delay: 355ms; }
 
 .dropdown-item:hover {
   background: #f1f3f4;
@@ -481,8 +508,10 @@
 
 @media (max-width: 1024px) {
   .navbar__nav,
-  .navbar__download {
-    display: none;
+  .navbar__download,
+  .navbar__overlay,
+  .navbar__dropdown-wrapper {
+    display: none !important;
   }
 
   .navbar__mobile-toggle {
@@ -501,3 +530,41 @@
 .dropdown-item:hover .dropdown-item__arrow {
   transform: translateX(8px);
 }
+
+/* ── Dropdown Backdrop Overlay ── */
+.navbar__overlay {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - var(--nav-height));
+  background: rgba(0, 0, 0, 0.07);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar__overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ── Accessibility: Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .navbar__dropdown,
+  .navbar__mega-title,
+  .navbar__mega-btn,
+  .navbar__mega-list-title,
+  .dropdown-item,
+  .navbar__overlay {
+    animation: none !important;
+    transition: opacity 150ms ease !important;
+    transform: none !important;
+  }
+}
+

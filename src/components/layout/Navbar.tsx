@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { navigation } from "../../data/navigation";
 import DropdownIcon from "../ui/DropdownIcon";
@@ -26,17 +26,25 @@ function ChevronDown({ className }: { className?: string }) {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
+  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(undefined);
+  const [animationKey, setAnimationKey] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const megaRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const hoverLockoutRef = useRef<boolean>(false);
+  const timeoutRef = useRef<number | null>(null);
+  const closeCleanupRef = useRef<number | null>(null);
 
   // Close mobile nav on route change
   useEffect(() => {
     setMobileOpen(false);
     setMobileSection(null);
     setActiveDropdown(null);
+    setDisplayedDropdown(null);
+    setDropdownHeight(undefined);
   }, [location.pathname]);
 
   // Scroll detection
@@ -78,11 +86,28 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
-
   const activeNavConfig = navigation.find(
     (item) => item.label === (activeDropdown || displayedDropdown),
   );
+
+  // Measure dropdown height dynamically for smooth height interpolation
+  useLayoutEffect(() => {
+    if (activeDropdown && megaRef.current) {
+      setDropdownHeight(megaRef.current.offsetHeight);
+    }
+  }, [activeDropdown, activeNavConfig, animationKey]);
+
+  // Observe content resizing (e.g. dynamic renders or fonts)
+  useEffect(() => {
+    if (!activeDropdown || !megaRef.current) return;
+    const ro = new ResizeObserver(() => {
+      if (megaRef.current) {
+        setDropdownHeight(megaRef.current.offsetHeight);
+      }
+    });
+    ro.observe(megaRef.current);
+    return () => ro.disconnect();
+  }, [activeDropdown, activeNavConfig]);
 
   const toggleDropdown = useCallback((label: string) => {
     setActiveDropdown((prev) => {
@@ -91,14 +116,24 @@ export default function Navbar() {
         setTimeout(() => {
           hoverLockoutRef.current = false;
         }, 300);
+        if (closeCleanupRef.current) {
+          clearTimeout(closeCleanupRef.current);
+        }
+        closeCleanupRef.current = window.setTimeout(() => {
+          setDisplayedDropdown(null);
+          setDropdownHeight(undefined);
+        }, 300);
         return null;
       }
+      if (closeCleanupRef.current) {
+        clearTimeout(closeCleanupRef.current);
+        closeCleanupRef.current = null;
+      }
+      setAnimationKey((k) => k + 1);
       setDisplayedDropdown(label);
       return label;
     });
   }, []);
-
-  const timeoutRef = useRef<number | null>(null);
 
   const handleMouseEnter = useCallback((label: string) => {
     if (hoverLockoutRef.current) {
@@ -108,14 +143,27 @@ export default function Navbar() {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+    if (closeCleanupRef.current) {
+      clearTimeout(closeCleanupRef.current);
+      closeCleanupRef.current = null;
+    }
     setDisplayedDropdown(label);
-    setActiveDropdown(label);
+    setActiveDropdown((prev) => {
+      if (prev !== label) {
+        setAnimationKey((k) => k + 1);
+      }
+      return label;
+    });
   }, []);
 
   const handleDropdownMouseEnter = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
+    }
+    if (closeCleanupRef.current) {
+      clearTimeout(closeCleanupRef.current);
+      closeCleanupRef.current = null;
     }
   }, []);
 
@@ -125,13 +173,21 @@ export default function Navbar() {
     }
     timeoutRef.current = window.setTimeout(() => {
       setActiveDropdown(null);
-    }, 200);
+      if (closeCleanupRef.current) {
+        clearTimeout(closeCleanupRef.current);
+      }
+      closeCleanupRef.current = window.setTimeout(() => {
+        setDisplayedDropdown(null);
+        setDropdownHeight(undefined);
+      }, 300);
+    }, 180);
   }, []);
 
   // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (closeCleanupRef.current) clearTimeout(closeCleanupRef.current);
     };
   }, []);
 
@@ -210,6 +266,13 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Backdrop Overlay */}
+      <div
+        className={`navbar__overlay ${activeDropdown ? "navbar__overlay--visible" : ""}`}
+        onClick={() => setActiveDropdown(null)}
+        aria-hidden="true"
+      />
+
       {/* Unified Desktop Mega Dropdown */}
       <div
         className="navbar__dropdown-wrapper"
@@ -218,79 +281,83 @@ export default function Navbar() {
       >
         <div
           className={`navbar__dropdown ${activeDropdown ? "navbar__dropdown--visible" : ""}`}
+          style={dropdownHeight ? { height: `${dropdownHeight}px` } : undefined}
           role="menu"
         >
-          {activeNavConfig && (
-            <div className="navbar__mega" key={activeNavConfig.label}>
-              <div className="navbar__mega-left">
-                <h2 className="navbar__mega-title">
-                  {activeNavConfig.label === "Products" && (
-                    <>
-                      Explore our <br /> next generation <br /> products
-                    </>
-                  )}
-                  {activeNavConfig.label === "Use Cases" && (
-                    <>
-                      Discover solutions <br /> for your specific <br /> needs
-                    </>
-                  )}
-                  {activeNavConfig.label === "Resources" && (
-                    <>
-                      Everything you <br /> need to stay <br /> up-to-date and <br /> get help
-                    </>
-                  )}
-                </h2>
-                <Link
-                  to={activeNavConfig.items?.[0]?.route || "/"}
-                  className="navbar__mega-btn"
-                  onClick={() => setActiveDropdown(null)}
-                >
-                  See overview
-                </Link>
-              </div>
+          <div ref={megaRef} className="navbar__dropdown-inner">
+            {activeNavConfig && (
+              <div className="navbar__mega" key={`${activeNavConfig.label}-${animationKey}`}>
+                <div className="navbar__mega-left">
+                  <h2 className="navbar__mega-title">
+                    {activeNavConfig.label === "Products" && (
+                      <>
+                        Explore our <br /> next generation <br /> products
+                      </>
+                    )}
+                    {activeNavConfig.label === "Use Cases" && (
+                      <>
+                        Discover solutions <br /> for your specific <br /> needs
+                      </>
+                    )}
+                    {activeNavConfig.label === "Resources" && (
+                      <>
+                        Everything you <br /> need to stay <br /> up-to-date and <br /> get help
+                      </>
+                    )}
+                  </h2>
+                  <Link
+                    to={activeNavConfig.items?.[0]?.route || "/"}
+                    className="navbar__mega-btn"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    See overview
+                  </Link>
+                </div>
 
-              <div className="navbar__mega-right">
-                {activeNavConfig.label === "Products" && (
-                  <div className="navbar__mega-list-title">Products</div>
-                )}
-                <div className="navbar__mega-grid">
-                  {activeNavConfig.items?.map((child) => (
-                    <Link
-                      key={child.route}
-                      to={child.route}
-                      className="dropdown-item"
-                      role="menuitem"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      {/* No icon for products as requested by user */}
-                      <div className="dropdown-item__content">
-                        <div className="dropdown-item__title">
-                          {child.title}
-                          {activeNavConfig.label === "Resources" &&
-                            child.title === "Documentation" && (
-                              <span className="dropdown-item__arrow">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  width="16"
-                                  height="16"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="1.5"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                >
-                                  <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                              </span>
-                            )}
+                <div className="navbar__mega-right">
+                  {activeNavConfig.label === "Products" && (
+                    <div className="navbar__mega-list-title">Products</div>
+                  )}
+                  <div className="navbar__mega-grid">
+                    {activeNavConfig.items?.map((child, idx) => (
+                      <Link
+                        key={child.route}
+                        to={child.route}
+                        className="dropdown-item"
+                        style={{ "--item-index": idx } as React.CSSProperties}
+                        role="menuitem"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        {/* No icon for products as requested by user */}
+                        <div className="dropdown-item__content">
+                          <div className="dropdown-item__title">
+                            {child.title}
+                            {activeNavConfig.label === "Resources" &&
+                              child.title === "Documentation" && (
+                                <span className="dropdown-item__arrow">
+                                  <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  >
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                  </svg>
+                                </span>
+                              )}
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  ))}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
 
