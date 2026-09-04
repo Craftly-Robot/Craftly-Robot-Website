@@ -71,6 +71,28 @@
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
 }
 
+.product-showcase--custom .product-showcase__visual {
+  aspect-ratio: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: none;
+  background: var(--color-bg);
+}
+
+@media (max-width: 1024px) {
+  .product-showcase--custom .product-showcase__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .product-showcase--custom .product-showcase__visual {
+    margin-inline: auto;
+  }
+
+  .product-showcase--custom .product-showcase__content {
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 768px) {
   .product-showcase__grid {
     grid-template-columns: 1fr;

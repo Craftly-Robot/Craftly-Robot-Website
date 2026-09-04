@@ -2,6 +2,7 @@ import { SEO } from "../components/SEO";
 import Hero from "../components/hero/Hero";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ProductShowcase from "../components/sections/ProductShowcase";
+import RobotDemo from "../components/sections/RobotDemo";
 import DownloadSection from "../components/sections/DownloadSection";
 import { products } from "../data/products";
 import "./HomePage.css";
@@ -22,7 +23,7 @@ export default function HomePage() {
       <div ref={revealRef}>
         {/* Workspace & Robot Sections */}
         <ProductShowcase product={products[0]} />
-        <ProductShowcase product={products[1]} altLayout />
+        <ProductShowcase product={products[1]} altLayout visual={<RobotDemo />} />
 
         {/* Final Download CTA */}
         <DownloadSection hideVisual={true} />

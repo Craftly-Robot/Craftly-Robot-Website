@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap");
-
 .footer {
   background: #ffffff;
   color: #202124;
@@ -100,26 +98,20 @@
   padding: 0 40px 60px;
 }
 
-.footer__huge-text {
-  font-family: "Outfit", sans-serif;
-  font-size: clamp(60px, 15vw, 250px);
-  font-weight: 500;
-  line-height: 1;
-  color: #000000;
-  letter-spacing: -4px;
-  text-align: center;
-  white-space: nowrap;
+.footer__wordmark {
+  display: block;
+  height: auto;
+  object-fit: contain;
 }
 
-/* .footer__special-o {
-  No special styles needed, just here for grouping if necessary
-} */
+.footer__wordmark--large {
+  width: min(100%, 350px);
+  max-height: 185px;
+}
 
-.footer__special-t {
-  display: inline-block;
-  font-size: 1.3em;
-  transform: translateY(-0.05em);
-  margin-left: -2px;
+.footer__wordmark--small {
+  width: 112px;
+  max-width: 100%;
 }
 
 /* ── Bottom Section ── */
@@ -147,12 +139,9 @@
 }
 
 .footer__bottom-logo {
-  font-family: "Pacifico", cursive;
-  font-size: 26px;
-  font-weight: 400;
-  color: #202124;
+  display: block;
+  line-height: 0;
   text-decoration: none;
-  letter-spacing: normal;
 }
 
 .footer__bottom-right {

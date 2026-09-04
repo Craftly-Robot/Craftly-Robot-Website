@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
 import VideoShowcase from "../ui/VideoShowcase";
 import "./ProductShowcase.css";
 
@@ -14,15 +15,17 @@ interface ProductShowcaseProps {
     icon?: string;
   };
   altLayout?: boolean;
+  visual?: ReactNode;
 }
 
 export default function ProductShowcase({
   product,
   altLayout = false,
+  visual,
 }: ProductShowcaseProps) {
   return (
     <section
-      className={`section section--xl product-showcase ${altLayout ? "product-showcase--alt" : ""}`}
+      className={`section section--xl product-showcase ${altLayout ? "product-showcase--alt" : ""} ${visual ? "product-showcase--custom" : ""}`}
     >
       <div className="container container--wide">
         <div className="product-showcase__grid">
@@ -41,11 +44,11 @@ export default function ProductShowcase({
 
           {/* Visual Right */}
           <div className="product-showcase__visual reveal reveal-delay-2">
-            <VideoShowcase
+            {visual ?? <VideoShowcase
               src={product.videoSrc}
               poster={product.posterSrc}
               altText={`${product.name} video`}
-            />
+            />}
           </div>
         </div>
       </div>
