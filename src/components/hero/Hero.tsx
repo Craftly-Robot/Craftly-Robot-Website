@@ -62,19 +62,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero__media-wrapper">
-          <img
-            src="/assets/Homepage_Picture/1.webp"
-            alt="Craftly interface"
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
-              border: "1px solid rgba(0,0,0,0.05)",
-            }}
-          />
-        </div>
 
         <TechSnake />
 
