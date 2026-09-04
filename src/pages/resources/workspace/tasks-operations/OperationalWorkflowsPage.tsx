@@ -1,5 +1,6 @@
 import projectImage from "../../../../assets/projects/1.webp";
 import DocPage from "../../DocPage";
+import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
 export default function OperationalWorkflowsPage() {
   return (
@@ -45,7 +46,7 @@ export default function OperationalWorkflowsPage() {
           boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
         }}
       >
-        <img
+        <ImageWithFallback
           src={projectImage}
           alt="Projects Overview"
           style={{ width: "100%", display: "block" }}

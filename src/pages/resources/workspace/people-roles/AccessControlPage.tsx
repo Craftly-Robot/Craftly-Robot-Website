@@ -5,7 +5,12 @@ export default function AccessControlPage() {
     <DocPage
       title="Access Control — Craftly Workspace"
       description="Access Control in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "People & Roles", "Access Control"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "People & Roles",
+        "Access Control",
+      ]}
       pageId="access-control"
       pageTitle="Access Control"
       tocItems={[{ id: "access-control", label: "Access Control" }]}

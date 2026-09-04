@@ -5,7 +5,12 @@ export default function ReportingCommunicationPage() {
     <DocPage
       title="Reporting-Based Communication — Craftly Workspace"
       description="Reporting-Based Communication in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "Communication", "Reporting-Based Communication"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "Communication",
+        "Reporting-Based Communication",
+      ]}
       pageId="reporting-based-communication"
       pageTitle="Reporting-Based Communication"
       tocItems={[

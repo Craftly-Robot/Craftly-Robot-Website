@@ -3,7 +3,12 @@ export interface ProductScene {
   title: string;
   description: string;
   kind:
-    "workflow" | "network" | "messages" | "schedule" | "review" | "resources";
+    | "workflow"
+    | "network"
+    | "messages"
+    | "schedule"
+    | "review"
+    | "resources";
   steps: readonly [string, string, string];
   icon:
     | "work"

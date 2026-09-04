@@ -5,7 +5,12 @@ export default function ManagersPage() {
     <DocPage
       title="Managers — Craftly Workspace"
       description="Managers in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Managers"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "People &amp; Roles",
+        "Managers",
+      ]}
       pageId="managers"
       pageTitle="Managers"
       tocItems={[

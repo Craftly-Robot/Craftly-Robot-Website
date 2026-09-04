@@ -1,4 +1,5 @@
 import DocPage from "../../DocPage";
+import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
 export default function TrainingPage() {
   return (
@@ -32,7 +33,7 @@ export default function TrainingPage() {
       ]}
     >
       <div style={{ marginBottom: "32px" }}>
-        <img
+        <ImageWithFallback
           src="/assets/training_participation/1.webp"
           alt="Training Participation"
           style={{

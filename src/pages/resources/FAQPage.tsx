@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 import DocsLayout from "./DocsLayout";
 import { faqEntries } from "../../data/docs/faq";
+import "./FAQPage.css";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -40,12 +41,11 @@ export default function FAQPage() {
           Frequently Asked Questions
         </h1>
 
-        {faqEntries.map((entry, index) => (
+        {faqEntries.map((entry) => (
           <Fragment key={entry.id}>
             <h3
               id={entry.id}
-              className="docs__section-title"
-              style={{ fontSize: "18px", marginTop: index === 0 ? "32px" : "24px" }}
+              className="docs__section-title faq-question-title"
             >
               {entry.question}
             </h3>
@@ -53,18 +53,8 @@ export default function FAQPage() {
           </Fragment>
         ))}
 
-        <div
-          className="docs__card"
-          style={{
-            marginTop: "32px",
-            borderRadius: "8px",
-            border: "1px solid #eaeaeb",
-          }}
-        >
-          <h3
-            className="docs__section-title"
-            style={{ fontSize: "18px", marginTop: 0 }}
-          >
+        <div className="docs__card faq-contact-card">
+          <h3 className="docs__section-title">
             Can't find your answer?
           </h3>
           <p className="docs__text">
@@ -72,7 +62,7 @@ export default function FAQPage() {
             Support Request in Craftly Workspace and let the responsible team know
             how they can help.
           </p>
-          <p className="docs__text" style={{ marginBottom: 0, fontWeight: 500 }}>
+          <p className="docs__text">
             When in doubt: read the documentation first, check your project
             instructions, communicate with your Unit Leader, and use Support
             Requests when you need structured assistance.

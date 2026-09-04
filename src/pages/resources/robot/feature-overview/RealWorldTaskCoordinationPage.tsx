@@ -5,7 +5,12 @@ export default function RealWorldTaskCoordinationPage() {
     <DocPage
       title="Real-World Task Coordination — Craftly Robot"
       description="Real-World Task Coordination in Craftly Robot"
-      crumbs={["Documentation", "Craftly Robot", "Feature Overview", "Real-World Task Coordination"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Robot",
+        "Feature Overview",
+        "Real-World Task Coordination",
+      ]}
       pageId="real-world-task-coordination"
       pageTitle="Real-World Task Coordination"
       tocItems={[

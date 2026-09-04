@@ -2,6 +2,8 @@ import { useState } from "react";
 import { SEO } from "../../components/SEO";
 import { Link } from "react-router-dom";
 import DropdownIcon from "../../components/ui/DropdownIcon";
+import SectionTitle from "../../components/ui/SectionTitle";
+import ImageWithFallback from "../../components/common/ImageWithFallback";
 import "./ReleasesPage.css";
 
 const AppleIcon = () => (
@@ -17,7 +19,7 @@ const WindowsIcon = () => (
 );
 
 const LinuxIcon = () => (
-  <img
+  <ImageWithFallback
     src="/assets/brand/linux-logo.png"
     alt="Linux"
     width="16"
@@ -92,21 +94,6 @@ const workspaceReleases: ReleaseItem[] = [
   { version: "3.8.0" },
 ];
 
-function ReleasesTitle({ text }: { text: string }) {
-  const lines = text.split("\n");
-
-  return (
-    <h1 className="releases-hero__title">
-      {lines.map((line, i) => (
-        <span key={i}>
-          {line}
-          {i < lines.length - 1 && <br />}
-        </span>
-      ))}
-    </h1>
-  );
-}
-
 export default function ReleasesPage() {
   const [activeTab, setActiveTab] = useState<"workspace" | "robot">(
     "workspace",
@@ -134,7 +121,10 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <ReleasesTitle text={`Craftly\nReleases`} />
+              <SectionTitle
+                text={`Craftly\nReleases`}
+                className="releases-hero__title"
+              />
               <p className="releases-hero__desc">
                 Download previous Craftly Workspace and Craftly Robot releases.
                 By default, they auto-update to the latest version. To stay on

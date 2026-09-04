@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ImageWithFallback from "../common/ImageWithFallback";
 import "./Footer.css";
 
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="footer__bottom-left">
           <Link to="/" className="footer__bottom-logo">
-            <img
+            <ImageWithFallback
               className="footer__wordmark footer__wordmark--small"
               src="/assets/brand/craftly-wordmark.svg"
               alt="Craftly"

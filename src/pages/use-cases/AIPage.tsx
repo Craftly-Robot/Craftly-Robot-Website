@@ -5,6 +5,7 @@ import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { FeatureSection } from "./components/FeatureSection";
 import { StatusBadge } from "./components/StatusBadge";
 import "./components/UseCaseComponents.css";
+import "./AIPage.css";
 
 // We will build these custom components next
 import { IntelligenceFlow } from "./ai-components/IntelligenceFlow";
@@ -46,12 +47,7 @@ export default function AIPage() {
         secondaryCta={
           <Link
             to="/resources/documentation"
-            className="ucc-btn-primary"
-            style={{
-              background: "transparent",
-              color: "var(--color-text)",
-              border: "none",
-            }}
+            className="ucc-btn-primary ai-hero-link-transparent"
           >
             Read Documentation
           </Link>
@@ -59,7 +55,7 @@ export default function AIPage() {
       />
 
       {/* 3. HERO VISUAL - INTELLIGENCE FLOW */}
-      <div className="container" style={{ paddingBottom: "var(--space-4xl)" }}>
+      <div className="container ai-pb-4xl">
         <IntelligenceFlow />
       </div>
 
@@ -71,7 +67,7 @@ export default function AIPage() {
         title="Connect learners with the right people and resources."
         description={
           <>
-            <div style={{ marginBottom: "var(--space-md)" }}>
+            <div className="ai-status-badge-mb">
               <StatusBadge status="research" />
             </div>
             <p>
@@ -79,26 +75,14 @@ export default function AIPage() {
               study planning, learning-resource organization, mentorship, and
               educational coordination.
             </p>
-            <div style={{ marginTop: "var(--space-xl)" }}>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "14px",
-                  marginBottom: "var(--space-sm)",
-                }}
-              >
+            <div className="ai-example-group">
+              <p className="ai-mono-text-mb-sm">
                 &gt; "Find a reliable mathematics tutor for a Class 10 student."
               </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "14px",
-                  marginBottom: "var(--space-sm)",
-                }}
-              >
+              <p className="ai-mono-text-mb-sm">
                 &gt; "Build a two-week physics study plan around these topics."
               </p>
-              <p style={{ fontFamily: "var(--font-mono)", fontSize: "14px" }}>
+              <p className="ai-mono-text">
                 &gt; "Find learning resources for calculus at beginner level."
               </p>
             </div>
@@ -118,28 +102,16 @@ export default function AIPage() {
               coordinating with service providers. AI can help reduce that
               manual effort.
             </p>
-            <div style={{ marginTop: "var(--space-xl)" }}>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "14px",
-                  marginBottom: "var(--space-sm)",
-                }}
-              >
+            <div className="ai-example-group">
+              <p className="ai-mono-text-mb-sm">
                 &gt; "Find a reliable electrician near me who is available
                 today."
               </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "14px",
-                  marginBottom: "var(--space-sm)",
-                }}
-              >
+              <p className="ai-mono-text-mb-sm">
                 &gt; "Find a laptop repair service that can fix this issue
                 within two days."
               </p>
-              <p style={{ fontFamily: "var(--font-mono)", fontSize: "14px" }}>
+              <p className="ai-mono-text">
                 &gt; "Find a photographer available this Friday within my
                 budget."
               </p>
@@ -160,29 +132,12 @@ export default function AIPage() {
               discover options that match price, specifications, condition,
               availability, and other constraints.
             </p>
-            <div style={{ marginTop: "var(--space-xl)" }}>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "14px",
-                  marginBottom: "var(--space-md)",
-                }}
-              >
+            <div className="ai-example-group">
+              <p className="ai-mono-text-mb-md">
                 &gt; "Find a used RTX 4070 under ৳60,000 with the original box
                 and purchase receipt."
               </p>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "var(--space-sm)",
-                  alignItems: "center",
-                  fontSize: "12px",
-                  color: "var(--color-text-secondary)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                  fontWeight: 500,
-                }}
-              >
+              <div className="ai-flow-row">
                 <span>Requirements</span>
                 <span>→</span>
                 <span>Discovery</span>
@@ -200,21 +155,12 @@ export default function AIPage() {
 
       {/* 12. HUMANITARIAN COORDINATION */}
       <div
-        className="container reveal"
-        style={{ paddingBlock: "var(--space-4xl)" }}
+        className="container reveal ai-padding-block-4xl"
       >
-        <div
-          style={{
-            textAlign: "center",
-            maxWidth: "800px",
-            margin: "0 auto",
-            marginBottom: "var(--space-2xl)",
-          }}
-        >
+        <div className="ai-text-center-800">
           <StatusBadge status="long-term" />
           <h2
-            className="ucc-feature__title"
-            style={{ marginTop: "var(--space-md)" }}
+            className="ucc-feature__title ai-title-mt-md"
           >
             Help people coordinate when it matters most.
           </h2>
@@ -223,35 +169,15 @@ export default function AIPage() {
             volunteer coordination, resource matching, community assistance, and
             emergency service discovery.
           </p>
-          <p
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "14px",
-              marginTop: "var(--space-lg)",
-            }}
-          >
+          <p className="ai-mono-lg-mt-lg">
             &gt; "Find an available blood donor matching this request."
           </p>
         </div>
 
         <HumanitarianVisual />
 
-        <div
-          style={{
-            maxWidth: "800px",
-            margin: "0 auto",
-            padding: "var(--space-xl)",
-            border: "1px solid var(--color-border)",
-            borderRadius: "var(--radius-lg)",
-          }}
-        >
-          <p
-            style={{
-              fontSize: "14px",
-              color: "var(--color-text-secondary)",
-              lineHeight: 1.6,
-            }}
-          >
+        <div className="ai-note-card">
+          <p className="ai-note-text">
             <strong>Important Note:</strong> These workflows involve sensitive
             information and potentially high-stakes decisions. They would
             require stronger identity verification, privacy protection, safety
@@ -272,62 +198,22 @@ export default function AIPage() {
               internal knowledge, workflow automation, project coordination,
               service discovery, decision support, and multi-agent operations.
             </p>
-            <div
-              style={{
-                marginTop: "var(--space-xl)",
-                display: "flex",
-                flexDirection: "column",
-                gap: "var(--space-md)",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  gap: "var(--space-sm)",
-                  alignItems: "center",
-                  fontSize: "12px",
-                  color: "var(--color-text-secondary)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                  fontWeight: 500,
-                }}
-              >
+            <div className="ai-ops-group">
+              <div className="ai-flow-row">
                 <span>Research</span>
                 <span>→</span>
                 <span>Analysis</span>
                 <span>→</span>
                 <span>Decision Support</span>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "var(--space-sm)",
-                  alignItems: "center",
-                  fontSize: "12px",
-                  color: "var(--color-text-secondary)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                  fontWeight: 500,
-                }}
-              >
+              <div className="ai-flow-row">
                 <span>Task</span>
                 <span>→</span>
                 <span>Coordination</span>
                 <span>→</span>
                 <span>Execution</span>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "var(--space-sm)",
-                  alignItems: "center",
-                  fontSize: "12px",
-                  color: "var(--color-text-secondary)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                  fontWeight: 500,
-                }}
-              >
+              <div className="ai-flow-row">
                 <span>Problem</span>
                 <span>→</span>
                 <span>Discovery</span>
@@ -342,42 +228,25 @@ export default function AIPage() {
       />
 
       {/* 14. HUMAN-CONTROLLED AI */}
-      <div className="container reveal" style={{ paddingBlock: "160px" }}>
-        <div
-          style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}
-        >
+      <div className="container reveal ai-padding-block-160">
+        <div className="ai-automation-center">
           <h2
-            className="ucc-feature__title"
-            style={{
-              fontSize: "48px",
-              lineHeight: 1.1,
-              marginBottom: "var(--space-xl)",
-            }}
+            className="ucc-feature__title ai-automation-title"
           >
             Automation without giving up control.
           </h2>
-          <p
-            className="ucc-feature__desc"
-            style={{
-              fontSize: "24px",
-              fontWeight: 500,
-              color: "var(--color-text)",
-            }}
-          >
+          <p className="ucc-feature__desc ai-automation-subtitle">
             AI should handle more of the complexity. People should remain in
             control when the consequences matter.
           </p>
-          <p
-            className="ucc-feature__desc"
-            style={{ marginTop: "var(--space-lg)" }}
-          >
+          <p className="ucc-feature__desc ai-mt-lg">
             Craftly's approach is not unrestricted autonomy. Robot can help with
             reasoning, discovery, communication, comparison, and coordination,
             while consequential actions remain subject to appropriate human
             review and confirmation.
           </p>
 
-          <div style={{ marginTop: "var(--space-3xl)" }}>
+          <div className="ai-mt-3xl">
             <HumanControlledFlow />
           </div>
         </div>
@@ -385,24 +254,14 @@ export default function AIPage() {
 
       {/* 15. WHERE CRAFTLY ROBOT IS GOING */}
       <div
-        className="container reveal"
-        style={{ paddingBlock: "var(--space-4xl)" }}
+        className="container reveal ai-padding-block-4xl"
       >
         <h2
-          className="ucc-feature__title"
-          style={{ textAlign: "center", marginBottom: "var(--space-xl)" }}
+          className="ucc-feature__title ai-title-center-mb"
         >
           From intelligence to action.
         </h2>
-        <p
-          className="ucc-feature__desc"
-          style={{
-            textAlign: "center",
-            maxWidth: "800px",
-            margin: "0 auto",
-            marginBottom: "var(--space-3xl)",
-          }}
-        >
+        <p className="ucc-feature__desc ai-desc-center-800">
           Craftly Robot is currently under active research and development. The
           system is evolving progressively from a strong conversational
           foundation toward deeper agentic capabilities.
@@ -413,40 +272,18 @@ export default function AIPage() {
 
       {/* 16. CURRENT STATUS */}
       <div
-        className="container reveal"
-        style={{ paddingBlock: "var(--space-4xl)", paddingBottom: "120px" }}
+        className="container reveal ai-padding-block-4xl-pb-120"
       >
-        <div
-          style={{
-            maxWidth: "800px",
-            margin: "0 auto",
-            padding: "var(--space-2xl)",
-            border: "1px solid var(--color-border)",
-            borderRadius: "var(--radius-lg)",
-            textAlign: "center",
-          }}
-        >
-          <h3
-            style={{
-              fontSize: "24px",
-              fontWeight: 500,
-              marginBottom: "var(--space-md)",
-            }}
-          >
+        <div className="ai-status-card">
+          <h3 className="ai-status-title">
             Built progressively. Not overclaimed.
           </h3>
-          <p
-            style={{
-              color: "var(--color-text-secondary)",
-              lineHeight: 1.6,
-              marginBottom: "var(--space-md)",
-            }}
-          >
+          <p className="ai-status-desc">
             Craftly Robot is actively evolving. Some capabilities are already
             being researched, tested, or prototyped, while other capabilities
             remain part of the longer-term roadmap.
           </p>
-          <p style={{ color: "var(--color-text-secondary)", lineHeight: 1.6 }}>
+          <p className="ai-status-desc-last">
             The goal is to strengthen each layer of the system before relying on
             it for increasingly complex real-world workflows.
           </p>

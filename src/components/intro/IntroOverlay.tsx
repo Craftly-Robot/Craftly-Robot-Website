@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+
 import "./IntroOverlay.css";
 
 const INTRO_KEY = "craftly-intro-seen";

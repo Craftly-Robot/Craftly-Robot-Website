@@ -1,4 +1,5 @@
 import DocPage from "../../DocPage";
+import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
 export default function PrivateKeyPage() {
   return (
@@ -45,7 +46,7 @@ export default function PrivateKeyPage() {
           padding: "16px",
         }}
       >
-        <img
+        <ImageWithFallback
           src="/assets/private_key/1.webp"
           alt="Private Key"
           style={{ maxWidth: "200px", width: "100%", display: "block" }}

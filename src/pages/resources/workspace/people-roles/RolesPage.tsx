@@ -5,7 +5,12 @@ export default function RolesPage() {
     <DocPage
       title="Roles — Craftly Workspace"
       description="Roles in Craftly Workspace"
-      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Roles"]}
+      crumbs={[
+        "Documentation",
+        "Craftly Workspace",
+        "People &amp; Roles",
+        "Roles",
+      ]}
       pageId="roles"
       pageTitle="Roles"
       tocItems={[{ id: "roles", label: "Roles" }]}
