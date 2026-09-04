@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import "./HeroVisual.css";
@@ -405,9 +405,26 @@ export default function HeroParticles() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reducedMotion = useReducedMotion();
+  /* Compiling the shaders and building the buffers below blocks the main thread
+     for the better part of a second. Run it only after the intro overlay is
+     gone, otherwise the stall lands in the middle of the wordmark's fade and
+     freezes it half-way. */
+  const [introDone, setIntroDone] = useState(
+    () => !document.documentElement.classList.contains("intro-active")
+  );
 
   useEffect(() => {
-    if (reducedMotion) return;
+    if (introDone) return;
+    const html = document.documentElement;
+    const observer = new MutationObserver(() => {
+      if (!html.classList.contains("intro-active")) setIntroDone(true);
+    });
+    observer.observe(html, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, [introDone]);
+
+  useEffect(() => {
+    if (reducedMotion || !introDone) return;
 
     const container = containerRef.current;
     const canvas = canvasRef.current;
@@ -747,7 +764,7 @@ export default function HeroParticles() {
       posTex.dispose();
       renderer.dispose();
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, introDone]);
 
   if (reducedMotion) {
     return null;

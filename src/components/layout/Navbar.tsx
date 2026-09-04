@@ -202,7 +202,11 @@ export default function Navbar() {
         <div className="navbar__left">
           <Link to="/" className="navbar__logo" aria-label="Craftly Home">
             <div className="navbar__logo-container">
-              <span className="navbar__logo-text">Craftly</span>
+              <img
+                src="/assets/brand/craftly-wordmark-intro.svg"
+                alt="Craftly"
+                className="navbar__logo-img"
+              />
             </div>
           </Link>
 

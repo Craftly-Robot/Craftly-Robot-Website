@@ -41,14 +41,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer__middle">
-        <img
-          className="footer__wordmark footer__wordmark--large"
-          src="/assets/brand/craftly-wordmark.svg"
-          alt="Craftly"
-        />
-      </div>
-
       <div className="footer__bottom">
         <div className="footer__bottom-left">
           <Link to="/" className="footer__bottom-logo">
