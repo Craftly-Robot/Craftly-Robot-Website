@@ -22,7 +22,6 @@
   <a href="#technology-stack">Tech Stack</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#project-structure">Project Structure</a> •
-  <a href="#testing--quality">Testing & QA</a> •
   <a href="#deployment">Deployment</a>
 </p>
 
@@ -69,7 +68,6 @@ Craftly's web experience is engineered for performance, aesthetic excellence, an
 - **3D Graphics & Visuals:** [Three.js](https://threejs.org/) + custom WebGL fragment shaders for interactive GPU-driven particle simulations (`HeroParticles`).
 - **Routing & SEO:** [React Router 7](https://reactrouter.com/) + [React Helmet Async](https://github.com/staylor/react-helmet-async) for dynamic page-level OpenGraph and Canonical metadata.
 - **Linter & Code Quality:** [Oxlint](https://oxc.rs/) (0 warnings, 0 errors across 130 files).
-- **End-to-End Testing:** [Playwright](https://playwright.dev/) with automated cross-viewport testing across Mobile (390px), Tablet (818px), and Desktop (1440px).
 
 ---
 
@@ -101,7 +99,6 @@ Craftly-Robot-Website/
 │   ├── App.tsx                 # Centralized routing table & lazy loading boundaries
 │   ├── index.css               # Global CSS design tokens & typography
 │   └── main.tsx                # React DOM root entry
-├── tests/                      # Playwright E2E suites (Smoke tests, responsive viewports)
 ├── AGENTS.md                   # Permanent engineering constitution & architectural rules
 └── package.json
 ```
@@ -143,11 +140,6 @@ npm run lint
 ```
 Runs high-speed Oxlint checks across all files.
 
-### 6. Run End-to-End Tests
-```bash
-npm run test:e2e
-```
-Runs Playwright automated tests on system Chrome verifying responsive layouts, lack of horizontal overflow, and image rendering on Mobile, Tablet, and Desktop.
 
 ---
 
