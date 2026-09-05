@@ -5,7 +5,6 @@ import ProductVisual from "../product/ProductVisual";
 import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
 import { useOS } from "../../hooks/useOS";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./Hero.css";
 
@@ -63,10 +62,6 @@ export default function Hero() {
         </div>
 
         <TechSnake />
-
-        <HeroStatement
-          text={`Craftly is building a new kind of\ntechnology organization, where\npeople, and intelligent agents work\ntogether.`}
-        />
       </div>
     </section>
   );
@@ -82,21 +77,5 @@ function HeroTitle() {
         className="hero__flag"
       />
     </h1>
-  );
-}
-
-function HeroStatement({ text }: { text: string }) {
-  const revealRef = useScrollReveal();
-  const lines = text.split("\n");
-
-  return (
-    <div ref={revealRef} className="hero__statement reveal">
-      {lines.map((line, i) => (
-        <span key={i}>
-          {line}
-          {i < lines.length - 1 && <br />}
-        </span>
-      ))}
-    </div>
   );
 }

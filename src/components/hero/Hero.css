@@ -201,22 +201,3 @@
     flex-shrink: 0;
   }
 }
-
-/* Statement Section */
-.hero__statement {
-  max-width: 960px;
-  margin-block: var(--space-xl);
-  font-size: 50px;
-  line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
-  text-align: left;
-}
-
-@media (max-width: 768px) {
-  .hero__statement {
-    font-size: 28px;
-    margin-block: var(--space-lg);
-  }
-}
