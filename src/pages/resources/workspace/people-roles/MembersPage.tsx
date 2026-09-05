@@ -1,5 +1,6 @@
 import DocPage from "../../DocPage";
-import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
+import { workspaceScreenshots } from "../../../../data/docs/workspaceScreenshots";
 
 export default function MembersPage() {
   return (
@@ -41,16 +42,7 @@ export default function MembersPage() {
         position.
       </p>
 
-      <div
-        className="docs__image-container"
-        style={{ marginTop: "32px", marginBottom: "80px" }}
-      >
-        <ImageWithFallback
-          src="/assets/Members/1.webp"
-          alt="Members"
-          className="docs__image"
-        />
-      </div>
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.members} />
 
       <h2 className="docs__subtitle" id="department-member-ranking">
         Department Member Ranking

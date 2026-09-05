@@ -1,5 +1,6 @@
 import DocPage from "../../DocPage";
-import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
+import { workspaceScreenshots } from "../../../../data/docs/workspaceScreenshots";
 
 export default function TrainingPage() {
   return (
@@ -32,17 +33,7 @@ export default function TrainingPage() {
         { id: "important", label: "Important" },
       ]}
     >
-      <div style={{ marginBottom: "32px" }}>
-        <ImageWithFallback
-          src="/assets/training_participation/1.webp"
-          alt="Training Participation"
-          style={{
-            width: "100%",
-            borderRadius: "12px",
-            border: "1px solid var(--color-border)",
-          }}
-        />
-      </div>
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.training} />
 
       <p className="docs__text">
         Craftly's Training section is where members can contribute computing

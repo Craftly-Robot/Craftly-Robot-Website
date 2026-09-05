@@ -1,6 +1,6 @@
-import projectImage from "../../../../assets/projects/1.webp";
 import DocPage from "../../DocPage";
-import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
+import { workspaceScreenshots } from "../../../../data/docs/workspaceScreenshots";
 
 export default function OperationalWorkflowsPage() {
   return (
@@ -37,21 +37,7 @@ export default function OperationalWorkflowsPage() {
         onboarding answers.
       </p>
 
-      <div
-        className="docs__image-wrapper"
-        style={{
-          margin: "40px 0",
-          borderRadius: "12px",
-          overflow: "hidden",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-        }}
-      >
-        <ImageWithFallback
-          src={projectImage}
-          alt="Projects Overview"
-          style={{ width: "100%", display: "block" }}
-        />
-      </div>
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.projects} />
 
       <h2 className="docs__section-title" id="why-projects-matter">
         Why Projects Matter

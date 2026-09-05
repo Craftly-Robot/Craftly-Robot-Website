@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { onboardingQuestions } from "../../../../data/docs/onboarding-questions";
+import { onboardingScreenshots } from "../../../../data/docs/workspaceScreenshots";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
 import DocPage from "../../DocPage";
 
 export default function OnboardingQuestionsPage() {
-  const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({});
   return (
     <DocPage
       title="Onboarding Questions — Craftly Workspace"
@@ -64,61 +64,44 @@ export default function OnboardingQuestionsPage() {
           margin: "32px 0",
         }}
       >
-        {onboardingQuestions.map((q) => (
-          <div
-            key={q.id}
-            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
-          >
-            {/* Text above the image */}
-            {q.textAbove ? (
-              <div>{q.textAbove}</div>
-            ) : (
-              <div
-                className="docs__text-placeholder"
-                style={{ minHeight: "24px" }}
-              ></div>
-            )}
+        {onboardingQuestions.map((q) => {
+          const screenshot = onboardingScreenshots[q.id];
 
+          return (
             <div
-              style={{
-                borderRadius: "8px",
-                overflow: "hidden",
-                border: "1px solid #eaeaeb",
-                backgroundColor: "#f8f9fa",
-                minHeight: "300px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              key={q.id}
+              style={{ display: "flex", flexDirection: "column", gap: "16px" }}
             >
-              {imgErrors[q.id] ? (
-                <p style={{ color: "#5f6368", fontFamily: "inherit" }}>
-                  Image placeholder: /assets/onboarding_pic/{q.id}.png
-                </p>
+              {/* Text above the image */}
+              {q.textAbove ? (
+                <div>{q.textAbove}</div>
               ) : (
-                <img
-                  src={`/assets/onboarding_pic/${q.id}.webp`}
-                  alt={`Onboarding Question ${q.id}`}
-                  loading="lazy"
-                  style={{ width: "100%", display: "block" }}
-                  onError={() =>
-                    setImgErrors((prev) => ({ ...prev, [q.id]: true }))
-                  }
-                />
+                <div
+                  className="docs__text-placeholder"
+                  style={{ minHeight: "24px" }}
+                ></div>
+              )}
+
+              {screenshot ? (
+                <WorkspaceScreenshot screenshot={screenshot} />
+              ) : (
+                <p className="docs__text">
+                  A screenshot for this step is not available yet. Follow the instructions above to continue.
+                </p>
+              )}
+
+              {/* Text below the image */}
+              {q.textBelow ? (
+                <div>{q.textBelow}</div>
+              ) : (
+                <div
+                  className="docs__text-placeholder"
+                  style={{ minHeight: "24px" }}
+                ></div>
               )}
             </div>
-
-            {/* Text below the image */}
-            {q.textBelow ? (
-              <div>{q.textBelow}</div>
-            ) : (
-              <div
-                className="docs__text-placeholder"
-                style={{ minHeight: "24px" }}
-              ></div>
-            )}
-          </div>
-        ))}
+          );
+        })}
       </div>
     </DocPage>
   );

@@ -1,8 +1,8 @@
-import { useState } from "react";
 import DocPage from "../../DocPage";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
+import { workspaceScreenshots } from "../../../../data/docs/workspaceScreenshots";
 
 export default function WelcomeSetupPage() {
-  const [imgError, setImgError] = useState(false);
   return (
     <DocPage
       title="Welcome & Setup — Craftly Workspace"
@@ -99,32 +99,7 @@ export default function WelcomeSetupPage() {
         <span>Workspace Access</span>
       </div>
 
-      <div
-        style={{
-          margin: "32px 0",
-          borderRadius: "8px",
-          overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
-          minHeight: "300px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {imgError ? (
-          <p style={{ color: "#5f6368", fontFamily: "inherit" }}>
-            Image placeholder: /assets/onboarding_pic/1.webp
-          </p>
-        ) : (
-          <img
-            src="/assets/onboarding_pic/1.webp"
-            alt="Welcome and Setup"
-            style={{ width: "100%", display: "block" }}
-            onError={() => setImgError(true)}
-          />
-        )}
-      </div>
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.welcome} />
 
       {/* Empty space for future text */}
       <div

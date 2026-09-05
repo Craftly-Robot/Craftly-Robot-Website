@@ -1,5 +1,6 @@
 import DocPage from "../../DocPage";
-import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
+import { workspaceScreenshots } from "../../../../data/docs/workspaceScreenshots";
 
 export default function AgreementsPage() {
   return (
@@ -75,45 +76,8 @@ export default function AgreementsPage() {
         <div>Craftly Membership</div>
       </div>
 
-      <div
-        style={{
-          borderRadius: "8px",
-          overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
-          minHeight: "300px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: "32px 0",
-        }}
-      >
-        <ImageWithFallback
-          src="/assets/agreements/1.webp"
-          alt="Agreements"
-          style={{ width: "100%", display: "block" }}
-        />
-      </div>
-
-      <div
-        style={{
-          borderRadius: "8px",
-          overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
-          minHeight: "300px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: "32px 0",
-        }}
-      >
-        <ImageWithFallback
-          src="/assets/agreements/2.webp"
-          alt="Digital Signatures"
-          style={{ width: "100%", display: "block" }}
-        />
-      </div>
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.agreement} />
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.signature} />
     </DocPage>
   );
 }

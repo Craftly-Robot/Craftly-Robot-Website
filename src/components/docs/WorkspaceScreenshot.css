@@ -1,0 +1,195 @@
+.workspace-screenshot {
+  min-width: 0;
+  margin: var(--space-xl) 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.workspace-screenshot__trigger {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.workspace-screenshot__trigger img {
+  width: 100%;
+  height: auto;
+}
+
+.workspace-screenshot__expand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+  min-height: 44px;
+  padding: var(--space-xs) var(--space-md);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.workspace-screenshot__trigger:hover .workspace-screenshot__expand {
+  background: var(--color-bg-elevated);
+}
+
+.workspace-screenshot__trigger:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+.workspace-screenshot__caption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+.workspace-screenshot__title {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.workspace-screenshot__unavailable {
+  padding: var(--space-xl);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.workspace-screenshot-dialog {
+  width: min(calc(100vw - 48px), var(--container-wide));
+  height: calc(100dvh - 48px);
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.workspace-screenshot-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.workspace-screenshot-dialog__layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.workspace-screenshot-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-xs) var(--space-lg);
+}
+
+.workspace-screenshot-dialog__title {
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: var(--leading-normal);
+}
+
+.workspace-screenshot-dialog__close {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+}
+
+.workspace-screenshot-dialog__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: 0 var(--space-lg) var(--space-sm);
+}
+
+.workspace-screenshot-dialog__toolbar button {
+  min-height: 44px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.workspace-screenshot-dialog__toolbar button[aria-pressed="true"] {
+  background: var(--color-text);
+  color: var(--color-text-inverse);
+  border-color: var(--color-text);
+}
+
+.workspace-screenshot-dialog__close:hover,
+.workspace-screenshot-dialog__toolbar button[aria-pressed="false"]:hover {
+  background: var(--color-bg-subtle);
+}
+
+.workspace-screenshot-dialog__viewport {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-block: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.workspace-screenshot-dialog__viewport:focus-visible {
+  outline-offset: -2px;
+}
+
+.workspace-screenshot-dialog__viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.workspace-screenshot-dialog__viewport--actual img {
+  max-width: none;
+}
+
+.workspace-screenshot-dialog__footer {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+.workspace-screenshot-dialog__hint {
+  margin-top: var(--space-xs);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 600px) {
+  .workspace-screenshot-dialog {
+    width: 100vw;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .workspace-screenshot-dialog__header,
+  .workspace-screenshot-dialog__toolbar,
+  .workspace-screenshot-dialog__footer {
+    padding-inline: var(--space-md);
+  }
+
+  .workspace-screenshot-dialog__header {
+    padding-top: max(var(--space-xs), env(safe-area-inset-top));
+  }
+
+  .workspace-screenshot-dialog__footer {
+    padding-bottom: max(var(--space-sm), env(safe-area-inset-bottom));
+  }
+}

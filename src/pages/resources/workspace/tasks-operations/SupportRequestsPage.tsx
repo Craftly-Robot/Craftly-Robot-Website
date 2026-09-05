@@ -1,6 +1,6 @@
-import supportImage from "../../../../assets/Support Requests/1.webp";
 import DocPage from "../../DocPage";
-import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import WorkspaceScreenshot from "../../../../components/docs/WorkspaceScreenshot";
+import { workspaceScreenshots } from "../../../../data/docs/workspaceScreenshots";
 
 export default function SupportRequestsPage() {
   return (
@@ -41,21 +41,7 @@ export default function SupportRequestsPage() {
         respond to it.
       </p>
 
-      <div
-        className="docs__image-wrapper"
-        style={{
-          margin: "40px 0",
-          borderRadius: "12px",
-          overflow: "hidden",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-        }}
-      >
-        <ImageWithFallback
-          src={supportImage}
-          alt="Support Requests Overview"
-          style={{ width: "100%", display: "block" }}
-        />
-      </div>
+      <WorkspaceScreenshot screenshot={workspaceScreenshots.support} />
 
       <h2 className="docs__section-title" id="when-to-create">
         When Should You Create a Support Request?
