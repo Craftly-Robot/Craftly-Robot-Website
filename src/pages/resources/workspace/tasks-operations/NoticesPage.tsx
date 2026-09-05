@@ -1,9 +1,16 @@
-import notice1 from "../../../../assets/Notice Board/1.webp";
-import notice2 from "../../../../assets/Notice Board/2.webp";
+import { IconFileDescription, IconUsers, IconBell } from "@tabler/icons-react";
 import DocPage from "../../DocPage";
-import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import { useScrollReveal } from "../../../../hooks/useScrollReveal";
+import "./NoticesPage.css";
+
+const sampleNotices = [
+  { title: "Workspace update", icon: IconFileDescription },
+  { title: "Team briefing", icon: IconUsers },
+  { title: "Submission reminder", icon: IconBell },
+] as const;
 
 export default function NoticesPage() {
+  const visualRef = useScrollReveal();
   return (
     <DocPage
       title="Notice Board — Craftly Workspace"
@@ -24,52 +31,32 @@ export default function NoticesPage() {
         the Notice Board.
       </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
-          margin: "40px 0",
-        }}
-      >
-        <div
-          className="docs__image-wrapper"
-          style={{
-            borderRadius: "12px",
-            overflow: "hidden",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-          }}
-        >
-          <ImageWithFallback
-            src={notice1}
-            alt="Notice Board 1"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: "block",
-            }}
-          />
-        </div>
-        <div
-          className="docs__image-wrapper"
-          style={{
-            borderRadius: "12px",
-            overflow: "hidden",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-          }}
-        >
-          <ImageWithFallback
-            src={notice2}
-            alt="Notice Board 2"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: "block",
-            }}
-          />
-        </div>
+      <div ref={visualRef} className="notice-preview reveal">
+        <figure aria-labelledby="notice-preview-title" aria-describedby="notice-preview-caption">
+          <figcaption className="notice-preview__header">
+            <h2 id="notice-preview-title">Notice Board</h2>
+            <p id="notice-preview-caption">Sample notices</p>
+          </figcaption>
+          <div className="notice-preview__body">
+            <ul className="notice-preview__list" aria-label="Sample notices">
+              {sampleNotices.map(({ title, icon: Icon }, index) => (
+                <li key={title} className={index === 0 ? "notice-preview__item notice-preview__item--selected" : "notice-preview__item"}>
+                  <Icon size={32} stroke={1.5} aria-hidden="true" />
+                  <span>{title}{index === 0 && <span className="sr-only"> — shown in detail</span>}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="notice-preview__detail">
+              <p className="notice-preview__eyebrow">Organization update</p>
+              <h3>Workspace update</h3>
+              <p className="notice-preview__message">
+                The latest workspace guidance is now available. Review the shared
+                resources before your next task.
+              </p>
+              <p className="notice-preview__audience">For all members</p>
+            </div>
+          </div>
+        </figure>
       </div>
     </DocPage>
   );
