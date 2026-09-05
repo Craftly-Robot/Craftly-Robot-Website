@@ -37,37 +37,3 @@ export interface NavDropdownItem {
   route: string;
 }
 
-export interface SiteContent {
-  hero: {
-    badge: string;
-    headline: string;
-    description: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-  };
-  intro: {
-    label: string;
-    headline: string;
-    description: string;
-  };
-  architecture: {
-    label: string;
-    headline: string;
-    description: string;
-    layers: ArchitectureLayer[];
-  };
-  cta: {
-    headline: string;
-    description: string;
-    buttonText: string;
-  };
-  footer: {
-    tagline: string;
-    copyright: string;
-  };
-}
-
-export interface ArchitectureLayer {
-  label: string;
-  description: string;
-}
