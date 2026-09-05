@@ -434,14 +434,20 @@ export default function HeroParticles({ className = "" }: { className?: string }
 
     // WebGL Renderer setup
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-    const renderer = new THREE.WebGLRenderer({
-      canvas,
-      antialias: true,
-      alpha: true,
-      powerPreference: "high-performance",
-      preserveDrawingBuffer: false,
-      stencil: false,
-    });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: true,
+        alpha: true,
+        powerPreference: "high-performance",
+        preserveDrawingBuffer: false,
+        stencil: false,
+      });
+    } catch (e) {
+      console.warn("WebGL not supported or context lost", e);
+      return;
+    }
     renderer.setPixelRatio(pixelRatio);
     renderer.setSize(container.offsetWidth, container.offsetHeight);
 
