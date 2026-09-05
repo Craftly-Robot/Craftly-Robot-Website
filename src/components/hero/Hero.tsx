@@ -5,6 +5,7 @@ import ProductVisual from "../product/ProductVisual";
 import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
 import { useOS } from "../../hooks/useOS";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./Hero.css";
 
@@ -85,10 +86,11 @@ function HeroTitle() {
 }
 
 function HeroStatement({ text }: { text: string }) {
+  const revealRef = useScrollReveal();
   const lines = text.split("\n");
 
   return (
-    <div className="hero__statement reveal">
+    <div ref={revealRef} className="hero__statement reveal">
       {lines.map((line, i) => (
         <span key={i}>
           {line}
