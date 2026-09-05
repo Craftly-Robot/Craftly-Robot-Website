@@ -12,7 +12,8 @@
 .robot-demo__line { stroke: var(--color-border); }
 .robot-demo__signal { stroke: var(--color-text); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 3 97; opacity: 0; }
 .robot-demo__agent { display: flex; align-items: center; justify-content: center; gap: var(--space-sm); border: 1px solid var(--color-border); padding: var(--space-md) var(--space-lg); border-radius: var(--radius-lg); font-size: var(--text-base); background: var(--color-bg); }
-.robot-demo__agent-mark { font-size: 24px; line-height: 1; }
+.robot-demo__agent-mark { display: inline-flex; align-items: center; justify-content: center; line-height: 1; color: currentColor; }
+.robot-demo__agent-mark svg { display: block; }
 .robot-demo__peers { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
 .robot-demo__peer { min-height: 64px; width: calc(100% - var(--space-md)); justify-self: center; display: flex; align-items: center; justify-content: center; gap: var(--space-sm); padding: var(--space-md) var(--space-xs); border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--text-sm); text-align: center; }
 .robot-demo__peer-dot { width: 6px; height: 6px; background: var(--color-text-secondary); border-radius: var(--radius-full); flex-shrink: 0; }

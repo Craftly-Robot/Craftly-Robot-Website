@@ -42,6 +42,27 @@ function Connection({
   );
 }
 
+function AgentMarkIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="12" y1="2.5" x2="12" y2="21.5" />
+      <line x1="2.5" y1="12" x2="21.5" y2="12" />
+      <line x1="5.28" y1="5.28" x2="18.72" y2="18.72" />
+      <line x1="5.28" y1="18.72" x2="18.72" y2="5.28" />
+    </svg>
+  );
+}
+
 export default function RobotDemo() {
   const reducedMotion = useReducedMotion();
   const panelRef = useRef<HTMLDivElement>(null);
@@ -173,7 +194,9 @@ export default function RobotDemo() {
           <div className="robot-demo__request">{scenario.request}</div>
           <Connection />
           <div className="robot-demo__agent">
-            <span className="robot-demo__agent-mark">✳</span>
+            <span className="robot-demo__agent-mark">
+              <AgentMarkIcon />
+            </span>
             {robotDemo.agent}
           </div>
           <Connection branch />
