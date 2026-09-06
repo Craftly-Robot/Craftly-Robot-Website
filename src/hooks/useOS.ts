@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 
 type OS = "Windows" | "macOS" | "Linux" | "Android" | "iOS" | "Unknown";

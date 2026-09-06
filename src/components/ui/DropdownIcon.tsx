@@ -1,3 +1,5 @@
+"use client";
+
 import "./DropdownIcon.css";
 
 interface DropdownIconProps {

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   useCallback,
   useEffect,
@@ -5,7 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 import { navigation } from "../data/navigation";
 
 export function useDesktopNav() {
@@ -22,12 +24,12 @@ export function useDesktopNav() {
   const hoverLockoutRef = useRef<boolean>(false);
   const timeoutRef = useRef<number | null>(null);
   const closeCleanupRef = useRef<number | null>(null);
-  const location = useLocation();
+  const pathname = usePathname() ?? "/";
 
   // Close on route change
-  const [prevPath, setPrevPath] = useState(location.pathname);
-  if (prevPath !== location.pathname) {
-    setPrevPath(location.pathname);
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (prevPath !== pathname) {
+    setPrevPath(pathname);
     setActiveDropdown(null);
     setDisplayedDropdown(null);
     setDropdownHeight(undefined);
