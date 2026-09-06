@@ -1,167 +1,36 @@
-<p align="center">
-  <a href="https://craftlyrobot.com">
-    <img src="public/assets/brand/craftly-wordmark-intro.svg" alt="Craftly" width="240" />
-  </a>
-</p>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<p align="center">
-  <strong>Intelligent Systems & Decentralized Human-AI Coordination</strong>
-</p>
+## Getting Started
 
-<p align="center">
-  <a href="https://craftlyrobot.com"><img src="https://img.shields.io/badge/Website-craftlyrobot.com-000000?style=for-the-badge" alt="Website" /></a>
-  <img src="https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
-  <img src="https://img.shields.io/badge/TypeScript-7.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vite-8.2-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-</p>
+First, run the development server:
 
-<p align="center">
-  <a href="#about-craftly">About</a> •
-  <a href="#products--vision">Products & Vision</a> •
-  <a href="#technology-stack">Tech Stack</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#project-structure">Project Structure</a> •
-  <a href="#deployment">Deployment</a>
-</p>
-
----
-
-## 🌟 About Craftly
-
-**Craftly** is an advanced platform engineering intelligent systems that enable seamless, verifiable collaboration between people and autonomous AI agents. 
-
-Rather than treating AI as isolated chatbots or rigid single-task tools, Craftly provides an end-to-end organizational operating system where autonomous agents coordinate, negotiate, and execute complex real-world workflows with cryptographic verification and human oversight.
-
----
-
-## 🚀 Products & Vision
-
-Craftly is being constructed section by section under a structured, long-term roadmap:
-
-### 1. 🏢 Craftly Workspace
-*The operational foundation of modern organizations.*
-- **Organizational Architecture:** Structured hierarchy across departments, roles, managers, and members.
-- **Task Evidence & Verification:** Verifiable proof of execution for every operational task.
-- **Agreements & Governance:** Digital keypair-based authorization and cryptographic onboarding.
-- **Decentralized AI Training:** Members contribute computing resources (consumer GPUs or cloud clusters) to train shared AI models.
-
-### 2. 🤖 Craftly Robot
-*Active R&D in real-world AI assistants.*
-- **Agent-to-Agent Negotiation:** Autonomous agents discover capabilities, negotiate terms, and coordinate actions across service boundaries.
-- **Human Confirmation:** Sensitive and irreversible actions require cryptographic human approval.
-- **Multi-Agent Coordination:** Orchestrates parallel tasks with safety and real-world reliability.
-
-### 3. 👓 Craftly Glass (Long-term Vision)
-*The future of ambient computing.*
-- A forward-looking wearable direction designed to bridge intelligent digital systems with physical environments through contextual awareness.
-
----
-
-## 🛠 Technology Stack
-
-Craftly's web experience is engineered for performance, aesthetic excellence, and zero unnecessary runtime bloat:
-
-- **Core Framework:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- **Build System:** [Vite 8](https://vitejs.dev/) with high-speed compilation
-- **Design System:** Pure **Vanilla CSS** tokens (`index.css`), eliminating heavy CSS-in-JS runtimes while delivering ultra-smooth 60fps animations.
-- **3D Graphics & Visuals:** [Three.js](https://threejs.org/) + custom WebGL fragment shaders for interactive GPU-driven particle simulations (`HeroParticles`).
-- **Routing & SEO:** [React Router 7](https://reactrouter.com/) + [React Helmet Async](https://github.com/staylor/react-helmet-async) for dynamic page-level OpenGraph and Canonical metadata.
-- **Linter & Code Quality:** [Oxlint](https://oxc.rs/) (0 warnings, 0 errors across 130 files).
-
----
-
-## 📂 Project Structure
-
-```bash
-Craftly-Robot-Website/
-├── public/                     # Static assets, vector brand logos, sitemap & robots.txt
-│   ├── assets/
-│   │   ├── brand/              # Official Craftly vector wordmarks & brand assets
-│   │   ├── animations/         # Lottie animation vectors
-│   │   └── product-visuals/    # High-resolution UI visuals & diagrams
-│   ├── sitemap.xml             # Search engine sitemap
-│   └── robots.txt              # Crawler instructions
-├── src/
-│   ├── components/
-│   │   ├── common/             # Reusable UI primitives (ErrorBoundary, ImageWithFallback)
-│   │   ├── hero/               # 3D GPU Particle Canvas (Three.js WebGL)
-│   │   ├── layout/             # Global Navbar, Mobile Navigation & Footer
-│   │   ├── product/            # Interactive product visual showcases
-│   │   └── sections/           # High-conversion marketing feature sections
-│   ├── data/                   # Centralized marketing, navigation, & product content
-│   ├── hooks/                  # Custom React hooks (useDesktopNav, useMobileNav, useOS)
-│   ├── pages/                  # Route-based page views
-│   │   ├── products/           # Product pages (Workspace, Robot)
-│   │   ├── use-cases/          # Deep-dive use cases (Operations, AI, Negotiation)
-│   │   └── resources/          # Technical documentation tree, Releases, Support, Changelog
-│   ├── types/                  # Global TypeScript interfaces & data contracts
-│   ├── App.tsx                 # Centralized routing table & lazy loading boundaries
-│   ├── index.css               # Global CSS design tokens & typography
-│   └── main.tsx                # React DOM root entry
-├── AGENTS.md                   # Permanent engineering constitution & architectural rules
-└── package.json
-```
-
----
-
-## 💻 Getting Started
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (version 18.0 or higher)
-- [npm](https://www.npmjs.com/) (or yarn / bun)
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Craftly-Robot/Craftly-Robot-Website.git
-cd Craftly-Robot-Website
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Start Local Development Server
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-The site will immediately be live at `http://localhost:5173/` with lightning-fast Hot Module Replacement (HMR).
 
-### 4. Build for Production
-```bash
-npm run build
-```
-Type checks the codebase with `tsc -b` and outputs optimized, minified static bundles to `dist/`.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 5. Run Linting
-```bash
-npm run lint
-```
-Runs high-speed Oxlint checks across all files.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## ☁️ Deployment
+To learn more about Next.js, take a look at the following resources:
 
-The project is configured for **zero-config, high-performance edge deployment** on [Vercel](https://vercel.com/):
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- Every commit pushed to the `main` branch automatically triggers a fresh production build and instant global deployment.
-- Static assets are cached globally across Vercel's Edge Network for sub-50ms latency worldwide.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 📜 Engineering Constitution
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-All contributors and coding agents must strictly read and adhere to [AGENTS.md](./AGENTS.md) before making architectural or UI changes:
-- Never break mobile or tablet layouts while adjusting desktop views.
-- Reuse existing design tokens in `src/index.css`.
-- Maintain centralized content architecture in `src/data/`.
-- Always verify changes in production builds and browser testing.
-
----
-
-<p align="center">
-  Crafted with precision by the <strong>Craftly</strong> team.
-</p>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
@@ -412,7 +414,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
      gone, otherwise the stall lands in the middle of the wordmark's fade and
      freezes it half-way. */
   const [introDone, setIntroDone] = useState(
-    () => !document.documentElement.classList.contains("intro-active"),
+    () => typeof document === 'undefined' ? true : !document.documentElement.classList.contains("intro-active"),
   );
 
   useEffect(() => {

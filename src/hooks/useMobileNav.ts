@@ -1,15 +1,17 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 export function useMobileNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<string | null>(null);
-  const location = useLocation();
+  const pathname = usePathname() ?? "/";
 
   // Close on route change
-  const [prevPath, setPrevPath] = useState(location.pathname);
-  if (prevPath !== location.pathname) {
-    setPrevPath(location.pathname);
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (prevPath !== pathname) {
+    setPrevPath(pathname);
     setMobileOpen(false);
     setMobileSection(null);
   }

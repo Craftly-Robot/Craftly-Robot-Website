@@ -1,3 +1,5 @@
+"use client";
+
 interface SectionTitleProps {
   text: string;
   className?: string;
