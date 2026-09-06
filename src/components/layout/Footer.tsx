@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./Footer.css";

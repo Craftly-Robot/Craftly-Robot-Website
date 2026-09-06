@@ -38,4 +38,3 @@ next-env.d.ts
 # old Vite project
 dist/
 test-results/
-vercel.json
