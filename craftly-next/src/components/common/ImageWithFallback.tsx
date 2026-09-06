@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 
 interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElement> {

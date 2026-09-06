@@ -1,3 +1,5 @@
+"use client";
+
 import "./Hero.css";
 import "./TechSnake.css";
 

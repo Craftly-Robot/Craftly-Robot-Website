@@ -1,5 +1,6 @@
-import { SEO } from "../components/SEO";
-import { Link } from "@/lib/router-compat";
+"use client";
+
+import Link from "next/link";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useOS } from "../hooks/useOS";
 import SectionTitle from "../components/ui/SectionTitle";
@@ -256,11 +257,6 @@ export default function DownloadPage() {
 
   return (
     <>
-      <SEO
-        title="Download Craftly — Intelligent Systems"
-        description="Download Craftly Workspace and Craftly Robot for Windows, macOS, and Linux."
-      />
-
       <div className="download-page container" ref={revealRef}>
         <div className="download-header">
           <div className="download-hero-top">
@@ -268,7 +264,7 @@ export default function DownloadPage() {
               text={`Download Craftly\nfor ${osName}`}
               className="download-hero__title"
             />
-            <Link to="/resources/releases" className="btn-previous-releases">
+            <Link href="/resources/releases" className="btn-previous-releases">
               View previous releases
             </Link>
           </div>

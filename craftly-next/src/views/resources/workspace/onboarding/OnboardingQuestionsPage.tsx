@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { onboardingQuestions } from "../../../../data/docs/onboarding-questions";
 import DocPage from "../../DocPage";

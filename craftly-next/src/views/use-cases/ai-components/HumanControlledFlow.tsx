@@ -1,3 +1,5 @@
+"use client";
+
 import "./AIVisualComponents.css";
 import { useScrollReveal } from "../../../hooks/useScrollReveal";
 

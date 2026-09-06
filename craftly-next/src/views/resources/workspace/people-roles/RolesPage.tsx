@@ -1,3 +1,5 @@
+"use client";
+
 import DocPage from "../../DocPage";
 
 export default function RolesPage() {

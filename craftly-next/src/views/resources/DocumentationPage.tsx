@@ -1,4 +1,6 @@
-import { Link } from "@/lib/router-compat";
+"use client";
+
+import Link from "next/link";
 import DocPage from "./DocPage";
 import "./DocumentationPage.css";
 
@@ -83,7 +85,7 @@ export default function DocumentationPage() {
         </ul>
         <div className="docs-link-container">
           <Link
-            to="/resources/documentation/workspace/overview/what-is-craftly-workspace"
+            href="/resources/documentation/workspace/overview/what-is-craftly-workspace"
             className="docs__link--black"
           >
             Explore Workspace &rarr;
@@ -135,7 +137,7 @@ export default function DocumentationPage() {
         </ul>
         <div className="docs-link-container">
           <Link
-            to="/resources/documentation/robot/overview/what-is-craftly-robot"
+            href="/resources/documentation/robot/overview/what-is-craftly-robot"
             className="docs__link--black"
           >
             Explore Robot &rarr;

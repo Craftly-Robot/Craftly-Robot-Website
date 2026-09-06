@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useId, useRef, useState } from "react";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import {
   IconHome,
   IconBriefcase,
@@ -143,7 +145,7 @@ export default function ProductVisual(props: ProductVisualProps) {
             <div className="pv-scene__footer">
               <span>{scene.detail}</span>
               {"cta" in scene && scene.cta && (
-                <Link to={scene.cta.to}>
+                <Link href={scene.cta.to}>
                   {scene.cta.label}
                   <IconArrowRight size={16} aria-hidden="true" />
                 </Link>
@@ -239,7 +241,7 @@ function TrainingOverview({
                 <span />
               </div>
             </div>
-            <Link className="pv-training__cta" to={trainingDocs}>
+            <Link className="pv-training__cta" href={trainingDocs}>
               Explore training
               <IconArrowRight size={19} aria-hidden="true" />
             </Link>

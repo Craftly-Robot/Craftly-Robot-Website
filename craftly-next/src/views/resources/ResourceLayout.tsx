@@ -1,4 +1,5 @@
-import { SEO } from "../../components/SEO";
+"use client";
+
 import CTASection from "../../components/sections/CTASection";
 import type { Resource } from "../../types";
 
@@ -13,8 +14,6 @@ export default function ResourceLayout({
 }: ResourceLayoutProps) {
   return (
     <>
-      <SEO title={resource.title} description={resource.description} />
-
       <div className="container">
         <section
           className="section section--lg"

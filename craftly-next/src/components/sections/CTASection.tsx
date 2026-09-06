@@ -1,5 +1,7 @@
+"use client";
+
 import { useRef, type MouseEvent } from "react";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useOS } from "../../hooks/useOS";
 import "./CTASection.css";
@@ -45,26 +47,26 @@ export default function CTASection({
             <div className="home-cta__actions reveal reveal-delay-2">
               {(os === "Windows" || os === "Linux" || os === "Unknown") && (
                 <>
-                  <Link to="/download" className="home-cta__btn-primary">
+                  <Link href="/download" className="home-cta__btn-primary">
                     Download for x64
                   </Link>
-                  <Link to="/download" className="home-cta__btn-secondary">
+                  <Link href="/download" className="home-cta__btn-secondary">
                     Download for ARM64
                   </Link>
                 </>
               )}
               {os === "macOS" && (
                 <>
-                  <Link to="/download" className="home-cta__btn-primary">
+                  <Link href="/download" className="home-cta__btn-primary">
                     Download for Apple Silicon
                   </Link>
-                  <Link to="/download" className="home-cta__btn-secondary">
+                  <Link href="/download" className="home-cta__btn-secondary">
                     Download for Intel
                   </Link>
                 </>
               )}
               {(os === "Android" || os === "iOS") && (
-                <Link to="/download" className="home-cta__btn-primary">
+                <Link href="/download" className="home-cta__btn-primary">
                   Download
                 </Link>
               )}

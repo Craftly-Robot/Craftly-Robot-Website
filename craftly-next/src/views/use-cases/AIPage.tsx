@@ -1,5 +1,6 @@
-import { SEO } from "../../components/SEO";
-import { Link } from "@/lib/router-compat";
+"use client";
+
+import Link from "next/link";
 import { UseCaseHero } from "./components/UseCaseHero";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { FeatureSection } from "./components/FeatureSection";
@@ -25,11 +26,6 @@ export default function AIPage() {
 
   return (
     <div className="ucc-page-wrapper" ref={revealRef}>
-      <SEO
-        title="Put AI to work on real problems"
-        description="Craftly builds intelligent systems that can understand complex requests, reason through problems, use available capabilities, and help people accomplish meaningful work."
-      />
-
       {/* 2. PAGE HERO */}
       <UseCaseHero
         title={
@@ -40,13 +36,13 @@ export default function AIPage() {
         }
         description="Craftly builds intelligent systems that can understand complex requests, reason through problems, use available capabilities, and help people accomplish meaningful work."
         primaryCta={
-          <Link to="/products/robot" className="ucc-btn-secondary">
+          <Link href="/products/robot" className="ucc-btn-secondary">
             Explore Craftly Robot
           </Link>
         }
         secondaryCta={
           <Link
-            to="/resources/documentation"
+            href="/resources/documentation"
             className="ucc-btn-primary ai-hero-link-transparent"
           >
             Read Documentation

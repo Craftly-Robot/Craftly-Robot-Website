@@ -1,3 +1,5 @@
+"use client";
+
 import "./AIVisualComponents.css";
 
 export function RobotConversation() {

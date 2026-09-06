@@ -1,6 +1,7 @@
-import { SEO } from "../../components/SEO";
+"use client";
+
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import { UseCaseHero } from "./components/UseCaseHero";
 import { FeatureSection } from "./components/FeatureSection";
 import { AgentNetwork } from "./components/AgentNetwork";
@@ -185,11 +186,6 @@ export default function AgentNegotiationPage() {
 
   return (
     <div className="ucc-page-wrapper" ref={revealRef}>
-      <SEO
-        title="Agent Negotiation"
-        description="Complex tasks managed through intelligent agent negotiation."
-      />
-
       <UseCaseHero
         title={
           <>
@@ -207,7 +203,7 @@ export default function AgentNegotiationPage() {
           </>
         }
         primaryCta={
-          <Link to="/products/robot" className="ucc-btn-secondary">
+          <Link href="/products/robot" className="ucc-btn-secondary">
             Explore product
           </Link>
         }

@@ -1,3 +1,5 @@
+"use client";
+
 import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 

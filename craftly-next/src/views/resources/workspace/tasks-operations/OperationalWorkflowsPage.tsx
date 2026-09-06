@@ -1,3 +1,5 @@
+"use client";
+
 import projectImage from "../../../../assets/projects/1.webp";
 import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";

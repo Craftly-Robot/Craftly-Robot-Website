@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./ReportingGraphVisual.css";

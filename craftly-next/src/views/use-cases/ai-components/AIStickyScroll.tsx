@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { RobotConversation } from "./RobotConversation";
 import { ResearchWorkspace } from "./ResearchWorkspace";

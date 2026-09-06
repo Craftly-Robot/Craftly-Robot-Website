@@ -1,5 +1,6 @@
-import { Link } from "@/lib/router-compat";
-import { SEO } from "../../components/SEO";
+"use client";
+
+import Link from "next/link";
 import CTASection from "../../components/sections/CTASection";
 import { blogArticles } from "../../data/blog/articles";
 import "./BlogPage.css";
@@ -15,11 +16,6 @@ function formatDate(iso: string) {
 export default function BlogPage() {
   return (
     <>
-      <SEO
-        title="Blog"
-        description="Insights, updates, and stories from the Craftly team."
-      />
-
       <div className="container">
         <section
           className="section section--lg"
@@ -62,7 +58,7 @@ export default function BlogPage() {
             {blogArticles.map((article) => (
               <Link
                 key={article.slug}
-                to={`/resources/blog/${article.slug}`}
+                href={`/resources/blog/${article.slug}`}
                 className="blog-card"
               >
                 <div className="blog-card__meta">

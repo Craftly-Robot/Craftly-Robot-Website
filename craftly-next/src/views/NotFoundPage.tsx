@@ -1,6 +1,7 @@
+"use client";
+
 import { useEffect, lazy, Suspense } from "react";
-import { Link } from "@/lib/router-compat";
-import { SEO } from "../components/SEO";
+import Link from "next/link";
 import animationData from "../../public/assets/animations/404.json";
 import "./NotFoundPage.css";
 
@@ -19,7 +20,7 @@ export default function NotFoundPage() {
   return (
     <div className="not-found-page">
       <div className="not-found-header">
-        <Link to="/" className="not-found-back">
+        <Link href="/" className="not-found-back">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -33,12 +34,7 @@ export default function NotFoundPage() {
           </svg>
           Back to Craftly
         </Link>
-      </div>
-      <SEO
-        title="Page Not Found"
-        description="The page you are looking for does not exist."
-      />
-      <div className="not-found-content">
+      </div>      <div className="not-found-content">
         <div className="not-found-animation">
           <Suspense fallback={null}>
             <Lottie src={animationData} loop={true} autoplay={true} />
@@ -48,7 +44,7 @@ export default function NotFoundPage() {
         <p className="not-found-text">
           The page you are looking for doesn't exist or has been moved.
         </p>
-        <Link to="/" className="not-found-btn">
+        <Link href="/" className="not-found-btn">
           Return to Home
         </Link>
       </div>

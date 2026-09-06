@@ -1,21 +1,9 @@
+"use client";
+
 import { Fragment } from "react";
-import Head from "next/head";
 import DocsLayout from "./DocsLayout";
 import { faqEntries } from "../../data/docs/faq";
 import "./FAQPage.css";
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqEntries.map((entry) => ({
-    "@type": "Question",
-    name: entry.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: entry.answerText,
-    },
-  })),
-};
 
 export default function FAQPage() {
   const tocItems = [
@@ -25,9 +13,6 @@ export default function FAQPage() {
 
   return (
     <>
-      <Head>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Head>
       <DocsLayout
         title="FAQ"
         description="Frequently asked questions about Craftly Workspace and Robot."
@@ -43,31 +28,14 @@ export default function FAQPage() {
 
         {faqEntries.map((entry) => (
           <Fragment key={entry.id}>
-            <h3
-              id={entry.id}
-              className="docs__section-title faq-question-title"
-            >
+            <h2 className="docs__heading" id={entry.id}>
               {entry.question}
-            </h3>
-            {entry.answer}
+            </h2>
+            <div className="docs__text">
+              <p>{entry.answerText}</p>
+            </div>
           </Fragment>
         ))}
-
-        <div className="docs__card faq-contact-card">
-          <h3 className="docs__section-title">
-            Can't find your answer?
-          </h3>
-          <p className="docs__text">
-            If your question or problem isn't covered here, use the appropriate
-            Support Request in Craftly Workspace and let the responsible team know
-            how they can help.
-          </p>
-          <p className="docs__text">
-            When in doubt: read the documentation first, check your project
-            instructions, communicate with your Unit Leader, and use Support
-            Requests when you need structured assistance.
-          </p>
-        </div>
       </DocsLayout>
     </>
   );

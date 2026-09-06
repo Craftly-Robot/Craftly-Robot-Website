@@ -1,6 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { SEO } from "../../components/SEO";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import SectionTitle from "../../components/ui/SectionTitle";
 import ImageWithFallback from "../../components/common/ImageWithFallback";
@@ -112,11 +113,6 @@ export default function ReleasesPage() {
 
   return (
     <>
-      <SEO
-        title="Craftly Releases"
-        description="Download previous Craftly and Craftly Workspace releases."
-      />
-
       <main className="releases-page">
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
@@ -134,7 +130,7 @@ export default function ReleasesPage() {
             </div>
 
             <div className="releases-hero__action">
-              <Link to="/resources/changelog" className="btn-changelog">
+              <Link href="/resources/changelog" className="btn-changelog">
                 View changelog
               </Link>
             </div>

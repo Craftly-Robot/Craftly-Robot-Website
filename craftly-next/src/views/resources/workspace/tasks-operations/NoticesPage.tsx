@@ -1,3 +1,5 @@
+"use client";
+
 import { IconFileDescription, IconUsers, IconBell } from "@tabler/icons-react";
 import DocPage from "../../DocPage";
 import { useScrollReveal } from "../../../../hooks/useScrollReveal";

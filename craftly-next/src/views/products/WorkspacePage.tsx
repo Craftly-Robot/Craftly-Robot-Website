@@ -1,6 +1,7 @@
+"use client";
+
 import ProductVisual from "../../components/product/ProductVisual";
-import { SEO } from "../../components/SEO";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import { products } from "../../data/products";
 
 import CTASection from "../../components/sections/CTASection";
@@ -14,14 +15,12 @@ export default function WorkspacePage() {
 
   return (
     <div ref={revealRef}>
-      <SEO title={`${product.name}`} description={product.tagline} />
-
       <div className="container">
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">{product.name}</h1>
           <p className="product-hero-clean__desc">{product.description}</p>
           <div className="product-hero-clean__actions">
-            <Link to="/download" className="btn-product-download">
+            <Link href="/download" className="btn-product-download">
               Download
             </Link>
           </div>

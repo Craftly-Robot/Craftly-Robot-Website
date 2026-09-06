@@ -1,13 +1,12 @@
 "use client";
 
-import { SEO } from "../../components/SEO";
-import { Link } from "../../lib/router-compat";
+"use client";
+
+import Link from "next/link";
 
 export default function PressPage() {
   return (
-    <>
-      <SEO title="Press" description="Craftly in the press — media coverage, announcements, and news." />
-      <div className="container">
+    <>      <div className="container">
         <section style={{ paddingBlock: "var(--space-5xl)" }}>
           <h1 className="text-display" style={{ marginBottom: "var(--space-lg)" }}>
             Press
@@ -17,7 +16,7 @@ export default function PressPage() {
           </p>
           <div style={{ marginTop: "var(--space-3xl)" }}>
             <Link
-              to="/resources/documentation"
+              href="/resources/documentation"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

@@ -1,6 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { SEO } from "../../components/SEO";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import SectionTitle from "../../components/ui/SectionTitle";
 import "./ChangelogPage.css";
@@ -472,11 +473,6 @@ export default function ChangelogPage() {
 
   return (
     <>
-      <SEO
-        title="Changelog"
-        description="Latest updates and improvements to Craftly Workspace and Craftly Robot."
-      />
-
       <main className="changelog-page">
         <div className="container">
           <div className="changelog-hero">
@@ -486,7 +482,7 @@ export default function ChangelogPage() {
                 className="changelog-hero__title"
               />
               <div className="changelog-actions">
-                <Link to="/resources/documentation" className="btn-pill">
+                <Link href="/resources/documentation" className="btn-pill">
                   View docs
                 </Link>
                 <a

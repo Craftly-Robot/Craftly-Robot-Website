@@ -1,5 +1,7 @@
+"use client";
+
 import type { ReactNode } from "react";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import { useOS } from "../../../hooks/useOS";
 import "./UseCaseComponents.css";
@@ -25,26 +27,26 @@ export function UseCaseCTA({
         <div className="ucc-cta__actions">
           {(os === "Windows" || os === "Linux" || os === "Unknown") && (
             <>
-              <Link to="/download" className="ucc-btn-primary">
+              <Link href="/download" className="ucc-btn-primary">
                 Download for x64
               </Link>
-              <Link to="/download" className="ucc-btn-secondary">
+              <Link href="/download" className="ucc-btn-secondary">
                 Download for ARM64
               </Link>
             </>
           )}
           {os === "macOS" && (
             <>
-              <Link to="/download" className="ucc-btn-primary">
+              <Link href="/download" className="ucc-btn-primary">
                 Download for Apple Silicon
               </Link>
-              <Link to="/download" className="ucc-btn-secondary">
+              <Link href="/download" className="ucc-btn-secondary">
                 Download for Intel
               </Link>
             </>
           )}
           {(os === "Android" || os === "iOS") && (
-            <Link to="/download" className="ucc-btn-primary">
+            <Link href="/download" className="ucc-btn-primary">
               Download
             </Link>
           )}

@@ -1,3 +1,5 @@
+"use client";
+
 import React, {
   useState,
   useEffect,
@@ -5,8 +7,8 @@ import React, {
   useRef,
   type ReactNode,
 } from "react";
-import { NavLink, Link, useLocation } from "@/lib/router-compat";
-import { SEO } from "../../components/SEO";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import "./DocsLayout.css";
 
@@ -226,11 +228,11 @@ export default function DocsLayout({
   tocItems = [],
   children,
 }: DocsLayoutProps) {
-  const location = useLocation();
-  const path = location.pathname ?? "/";
+  const pathname = usePathname() ?? "/";
+  const path = pathname;
 
   const currentIndex = DOCS_ROUTES.findIndex(
-    (r) => r.path === location.pathname,
+    (r) => r.path === pathname,
   );
   const prevRoute = currentIndex > 0 ? DOCS_ROUTES[currentIndex - 1] : null;
   const nextRoute =
@@ -240,18 +242,18 @@ export default function DocsLayout({
 
   const [activeId, setActiveId] = useState<string>("welcome");
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState<boolean>(false);
-  const [prevPath, setPrevPath] = useState(location.pathname);
-  if (prevPath !== location.pathname) {
-    setPrevPath(location.pathname);
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (prevPath !== pathname) {
+    setPrevPath(pathname);
     setMobileSidebarOpen(false);
   }
 
   // Top-level toggles
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(
-    location.pathname.includes("/robot"),
+    pathname.includes("/robot"),
   );
   const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(
-    location.pathname.includes("/workspace"),
+    pathname.includes("/workspace"),
   );
 
   // Nested section toggles
@@ -391,13 +393,11 @@ export default function DocsLayout({
     }, 100);
 
     return () => clearTimeout(timeoutId);
-  }, [location.pathname]);
+  }, [pathname]);
 
 
   return (
     <div className="docs__container">
-      <SEO title={title} description={description} />
-
       <div className="docs__mobile-header">
         <button
           className={`docs__mobile-toggle ${mobileSidebarOpen ? "docs__mobile-toggle--open" : ""}`}
@@ -418,15 +418,12 @@ export default function DocsLayout({
         ref={sidebarRef}
       >
         <nav className="docs__nav">
-          <NavLink
-            to="/resources/documentation"
-            className={({ isActive }) =>
-              `docs__nav-link ${isActive ? "docs__nav-link--active" : ""}`
-            }
-            end
+          <Link
+            href="/resources/documentation"
+            className="docs__nav-link"
           >
             Home
-          </NavLink>
+          </Link>
 
           {/* Workspace */}
           <div
@@ -462,39 +459,31 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/overview/what-is-craftly-workspace"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/overview/what-is-craftly-workspace"
+                    className="docs__nav-subitem"
                   >
                     What is Craftly Workspace?
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/overview/how-workspace-works"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/overview/how-workspace-works"
+                    className="docs__nav-subitem"
                   >
                     How Workspace Works?
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/overview/workspace-structure"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/overview/workspace-structure"
+                    className="docs__nav-subitem"
                   >
                     Workspace Structure
-                  </NavLink>
+                  </Link>
 
-                  <NavLink
-                    to="/resources/documentation/workspace/overview/core-concepts"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/overview/core-concepts"
+                    className="docs__nav-subitem"
                   >
                     Core Concepts
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -518,30 +507,24 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/organization/org-structure"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/organization/org-structure"
+                    className="docs__nav-subitem"
                   >
                     Organization Structure
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/organization/departments"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/organization/departments"
+                    className="docs__nav-subitem"
                   >
                     Departments
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/organization/reporting-structure"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/organization/reporting-structure"
+                    className="docs__nav-subitem"
                   >
                     Reporting Structure
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -565,46 +548,36 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/people-roles/members"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/people-roles/members"
+                    className="docs__nav-subitem"
                   >
                     Members
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/people-roles/roles"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/people-roles/roles"
+                    className="docs__nav-subitem"
                   >
                     Roles
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/people-roles/permissions"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/people-roles/permissions"
+                    className="docs__nav-subitem"
                   >
                     Permissions
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/people-roles/managers"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/people-roles/managers"
+                    className="docs__nav-subitem"
                   >
                     Managers
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/people-roles/access-control"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/people-roles/access-control"
+                    className="docs__nav-subitem"
                   >
                     Access Control
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -628,55 +601,43 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/tasks-operations/tasks"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/tasks-operations/tasks"
+                    className="docs__nav-subitem"
                   >
                     Tasks
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/tasks-operations/task-assignment"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/tasks-operations/task-assignment"
+                    className="docs__nav-subitem"
                   >
                     Task Assignment
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/tasks-operations/task-evidence"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/tasks-operations/task-evidence"
+                    className="docs__nav-subitem"
                   >
                     Task Evidence
-                  </NavLink>
+                  </Link>
 
-                  <NavLink
-                    to="/resources/documentation/workspace/tasks-operations/support-requests"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/tasks-operations/support-requests"
+                    className="docs__nav-subitem"
                   >
                     Support Requests
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/tasks-operations/notices"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/tasks-operations/notices"
+                    className="docs__nav-subitem"
                   >
                     Notice Board
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/tasks-operations/operational-workflows"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/tasks-operations/operational-workflows"
+                    className="docs__nav-subitem"
                   >
                     Projects
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -700,30 +661,24 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/communication/chain-of-command"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/communication/chain-of-command"
+                    className="docs__nav-subitem"
                   >
                     Chain of Command
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/communication/reporting-communication"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/communication/reporting-communication"
+                    className="docs__nav-subitem"
                   >
                     Reporting-Based Communication
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/communication/notifications"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/communication/notifications"
+                    className="docs__nav-subitem"
                   >
                     Notifications
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -747,30 +702,24 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/resources/org-resources"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/resources/org-resources"
+                    className="docs__nav-subitem"
                   >
                     Organization Resources
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/resources/dept-resources"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/resources/dept-resources"
+                    className="docs__nav-subitem"
                   >
                     Department Resources
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/resources/training"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/resources/training"
+                    className="docs__nav-subitem"
                   >
                     Training
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -794,46 +743,36 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/workspace/onboarding/welcome-setup"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/workspace/onboarding/welcome-setup"
+                    className="docs__nav-subitem"
                   >
                     Welcome & Setup
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/onboarding/onboarding-questions"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/onboarding/onboarding-questions"
+                    className="docs__nav-subitem"
                   >
                     Onboarding Questions
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/onboarding/agreements"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/onboarding/agreements"
+                    className="docs__nav-subitem"
                   >
                     Agreements
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/onboarding/private-key"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/onboarding/private-key"
+                    className="docs__nav-subitem"
                   >
                     Private Key
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/workspace/onboarding/completing-onboarding"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/workspace/onboarding/completing-onboarding"
+                    className="docs__nav-subitem"
                   >
                     Completing Onboarding
-                  </NavLink>
+                  </Link>
                 </div>
               )}
             </div>
@@ -873,54 +812,42 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/robot/overview/what-is-craftly-robot"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/robot/overview/what-is-craftly-robot"
+                    className="docs__nav-subitem"
                   >
                     What is Craftly Robot?
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/overview/architecture"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/overview/architecture"
+                    className="docs__nav-subitem"
                   >
                     Architecture
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/overview/how-robot-works"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/overview/how-robot-works"
+                    className="docs__nav-subitem"
                   >
                     How Robot Works
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/overview/agent-model"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/overview/agent-model"
+                    className="docs__nav-subitem"
                   >
                     Agent Model
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/overview/current-status"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/overview/current-status"
+                    className="docs__nav-subitem"
                   >
                     Current Status
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/overview/long-term-vision"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/overview/long-term-vision"
+                    className="docs__nav-subitem"
                   >
                     Long-Term Vision
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -944,70 +871,54 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/before-you-start"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/robot/getting-started/before-you-start"
+                    className="docs__nav-subitem"
                   >
                     Before You Start
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/install-craftly-robot"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/install-craftly-robot"
+                    className="docs__nav-subitem"
                   >
                     Install Craftly Robot
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/sign-in-private-key"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/sign-in-private-key"
+                    className="docs__nav-subitem"
                   >
                     Sign In with Your Private Key
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/your-first-robot"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/your-first-robot"
+                    className="docs__nav-subitem"
                   >
                     Your First Robot
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/discover-and-connect"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/discover-and-connect"
+                    className="docs__nav-subitem"
                   >
                     Discover & Connect
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/agent-to-agent-negotiation"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/agent-to-agent-negotiation"
+                    className="docs__nav-subitem"
                   >
                     Agent-to-Agent Negotiation
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/run-first-task"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/run-first-task"
+                    className="docs__nav-subitem"
                   >
                     Run Your First Real-World Task
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/getting-started/next-steps"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/getting-started/next-steps"
+                    className="docs__nav-subitem"
                   >
                     Next Steps
-                  </NavLink>
+                  </Link>
                 </div>
               )}
 
@@ -1031,69 +942,55 @@ export default function DocsLayout({
                     paddingLeft: "4px",
                   }}
                 >
-                  <NavLink
-                    to="/resources/documentation/robot/feature-overview/agentic-ai"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  <Link
+                    href="/resources/documentation/robot/feature-overview/agentic-ai"
+                    className="docs__nav-subitem"
                   >
                     Agentic AI
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/feature-overview/agent-to-agent-negotiation"
+                    className="docs__nav-subitem"
                   >
                     Agent-to-Agent Negotiation
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/feature-overview/human-confirmation"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/feature-overview/human-confirmation"
+                    className="docs__nav-subitem"
                   >
                     Human Confirmation
-                  </NavLink>
-                  <NavLink
-                    to="/resources/documentation/robot/feature-overview/real-world-task-coordination"
-                    className={({ isActive }) =>
-                      `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
-                    }
+                  </Link>
+                  <Link
+                    href="/resources/documentation/robot/feature-overview/real-world-task-coordination"
+                    className="docs__nav-subitem"
                   >
                     Real-World Task Coordination
-                  </NavLink>
+                  </Link>
                 </div>
               )}
             </div>
           )}
 
-          <NavLink
-            to="/resources/documentation/plan"
-            className={({ isActive }) =>
-              `docs__nav-item ${isActive ? "docs__nav-link--active" : ""}`
-            }
+          <Link
+            href="/resources/documentation/plan"
+            className="docs__nav-link"
           >
             <span className="docs__nav-text">Craftly Plan</span>
-          </NavLink>
+          </Link>
 
-          <NavLink
-            to="/resources/documentation/salary-compensation"
-            className={({ isActive }) =>
-              `docs__nav-item ${isActive ? "docs__nav-link--active" : ""}`
-            }
+          <Link
+            href="/resources/documentation/salary-compensation"
+            className="docs__nav-link"
           >
             <span className="docs__nav-text">Salary & Compensation</span>
-          </NavLink>
+          </Link>
 
-          <NavLink
-            to="/resources/documentation/faq"
-            className={({ isActive }) =>
-              `docs__nav-item ${isActive ? "docs__nav-link--active" : ""}`
-            }
+          <Link
+            href="/resources/documentation/faq"
+            className="docs__nav-link"
           >
             <span className="docs__nav-text">FAQ</span>
-          </NavLink>
+          </Link>
         </nav>
       </aside>
 
@@ -1105,7 +1002,7 @@ export default function DocsLayout({
           <div className="docs__page-nav">
             {prevRoute ? (
               <Link
-                to={prevRoute.path}
+                href={prevRoute.path}
                 className="docs__page-nav-link docs__page-nav-link--prev"
               >
                 <span className="docs__page-nav-arrow">
@@ -1129,7 +1026,7 @@ export default function DocsLayout({
             )}
             {nextRoute ? (
               <Link
-                to={nextRoute.path}
+                href={nextRoute.path}
                 className="docs__page-nav-link docs__page-nav-link--next"
               >
                 <span className="docs__page-nav-label">{nextRoute.label}</span>

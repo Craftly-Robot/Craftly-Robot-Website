@@ -1,6 +1,7 @@
-import { SEO } from "../../components/SEO";
+"use client";
+
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import { UseCaseHero } from "./components/UseCaseHero";
 import { FeatureSection } from "./components/FeatureSection";
 import { UseCaseCTA } from "./components/UseCaseCTA";
@@ -16,11 +17,6 @@ export default function OperationsPage() {
   const revealRef = useScrollReveal();
   return (
     <div className="ucc-page-wrapper" ref={revealRef}>
-      <SEO
-        title="Manage Business Operations"
-        description="Craftly helps manage complex business operations smoothly."
-      />
-
       <UseCaseHero
         title={
           <>
@@ -36,7 +32,7 @@ export default function OperationsPage() {
           </>
         }
         primaryCta={
-          <Link to="/products/workspace" className="ucc-btn-secondary">
+          <Link href="/products/workspace" className="ucc-btn-secondary">
             Explore product
           </Link>
         }

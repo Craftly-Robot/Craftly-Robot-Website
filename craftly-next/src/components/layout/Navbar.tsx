@@ -1,5 +1,7 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link } from "@/lib/router-compat";
+import Link from "next/link";
 import { navigation } from "../../data/navigation";
 import DropdownIcon from "../ui/DropdownIcon";
 import ImageWithFallback from "../common/ImageWithFallback";
@@ -65,7 +67,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         {/* Left Side: Logo + Nav */}
         <div className="navbar__left">
-          <Link to="/" className="navbar__logo" aria-label="Craftly Home">
+          <Link href="/" className="navbar__logo" aria-label="Craftly Home">
             <div className="navbar__logo-container">
               <ImageWithFallback
                 src="/assets/brand/craftly-wordmark-intro.svg"
@@ -103,7 +105,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
-          <Link to="/download" className="navbar__download">
+          <Link href="/download" className="navbar__download">
             Download
             <svg
               className="navbar__download-icon"
@@ -179,7 +181,7 @@ export default function Navbar() {
                     )}
                   </h2>
                   <Link
-                    to={activeNavConfig.items?.[0]?.route || "/"}
+                    href={activeNavConfig.items?.[0]?.route || "/"}
                     className="navbar__mega-btn"
                     onClick={() => setActiveDropdown(null)}
                   >
@@ -195,7 +197,7 @@ export default function Navbar() {
                     {activeNavConfig.items?.map((child, idx) => (
                       <Link
                         key={child.route}
-                        to={child.route}
+                        href={child.route}
                         className="dropdown-item"
                         style={{ "--item-index": idx } as React.CSSProperties}
                         role="menuitem"
@@ -258,7 +260,7 @@ export default function Navbar() {
                   {item.items.map((child) => (
                     <Link
                       key={child.route}
-                      to={child.route}
+                      href={child.route}
                       className="mobile-nav__item"
                       onClick={closeMobile}
                     >
@@ -276,7 +278,7 @@ export default function Navbar() {
         ))}
 
         <Link
-          to="/download"
+          href="/download"
           className="mobile-nav__download"
           onClick={closeMobile}
         >

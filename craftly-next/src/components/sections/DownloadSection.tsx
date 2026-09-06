@@ -1,4 +1,6 @@
-import { Link } from "@/lib/router-compat";
+"use client";
+
+import Link from "next/link";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import VideoPlaceholder from "../common/VideoPlaceholder";
 import "./DownloadSection.css";
@@ -32,10 +34,10 @@ export default function DownloadSection({
             </p>
 
             <div className="download-section__actions">
-              <Link to="/download" className="download-section__btn-primary">
+              <Link href="/download" className="download-section__btn-primary">
                 Download Craftly
               </Link>
-              <Link to="/download" className="download-section__btn-secondary">
+              <Link href="/download" className="download-section__btn-secondary">
                 View all downloads
               </Link>
             </div>

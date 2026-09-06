@@ -1,5 +1,6 @@
-import { SEO } from "../../components/SEO";
-import { Link } from "@/lib/router-compat";
+"use client";
+
+import Link from "next/link";
 import HeroParticles from "../../components/hero/HeroParticles";
 import SectionTitle from "../../components/ui/SectionTitle";
 import "./SupportPage.css";
@@ -7,11 +8,6 @@ import "./SupportPage.css";
 export default function SupportPage() {
   return (
     <>
-      <SEO
-        title="Support"
-        description="Find answers in our docs or go to our community."
-      />
-
       <div className="support-page">
         <HeroParticles className="support-particles" />
         <div className="support-hero">
@@ -19,7 +15,7 @@ export default function SupportPage() {
             text={`Find answers in our docs\nor go to our community`}
             className="support-hero__title"
           />
-          <Link to="/resources/documentation" className="support-hero__btn">
+          <Link href="/resources/documentation" className="support-hero__btn">
             View docs
           </Link>
         </div>

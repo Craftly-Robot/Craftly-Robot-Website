@@ -1,4 +1,6 @@
-import { Link } from "@/lib/router-compat";
+"use client";
+
+import Link from "next/link";
 import { products } from "../../data/products";
 import HeroParticles from "./HeroParticles";
 import ProductVisual from "../product/ProductVisual";
@@ -39,11 +41,11 @@ export default function Hero() {
           <HeroTitle />
 
           <div className="hero__cta-group">
-            <Link to="/download" className="hero__btn-primary">
+            <Link href="/download" className="hero__btn-primary">
               <MonitorIcon />
               Download for {osName}
             </Link>
-            <Link to="/use-cases/operations" className="hero__btn-secondary">
+            <Link href="/use-cases/operations" className="hero__btn-secondary">
               Explore use cases
             </Link>
           </div>
