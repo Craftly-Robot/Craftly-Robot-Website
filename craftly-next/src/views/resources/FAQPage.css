@@ -1,0 +1,24 @@
+.faq-question-title {
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.faq-question-title:first-of-type {
+  margin-top: 32px;
+}
+
+.faq-contact-card {
+  margin-top: 32px;
+  border-radius: 8px;
+  border: 1px solid #eaeaeb;
+}
+
+.faq-contact-card .docs__section-title {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.faq-contact-card p:last-child {
+  margin-bottom: 0;
+  font-weight: 500;
+}

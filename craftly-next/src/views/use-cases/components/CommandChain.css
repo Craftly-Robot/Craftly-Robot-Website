@@ -1,0 +1,132 @@
+.command-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .command-chain {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.command-chain__visual {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.command-chain__node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.command-chain__node {
+  padding: 1rem 2rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.command-chain__node:hover,
+.command-chain__node.is-active {
+  border-color: var(--color-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.command-chain__node.is-report,
+.command-chain__node.is-manager {
+  border-color: #888;
+  color: #888;
+}
+
+.command-chain__node.is-dimmed {
+  opacity: 0.4;
+  border-color: var(--color-border);
+}
+
+.command-chain__line {
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.command-chain__line.is-active {
+  background-color: var(--color-text);
+  width: 2px;
+}
+
+.command-chain__details {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  min-height: 300px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.command-chain__details.is-visible {
+  opacity: 1;
+}
+
+.command-chain__details-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-align: center;
+}
+
+.command-chain__details-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.command-chain__details-group {
+  margin-bottom: 1.5rem;
+}
+
+.command-chain__details-group:last-child {
+  margin-bottom: 0;
+}
+
+.command-chain__details-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.command-chain__details-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}

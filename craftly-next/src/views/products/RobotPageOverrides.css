@@ -1,0 +1,35 @@
+.robot-section-pt {
+  padding-top: var(--space-xl);
+}
+
+.robot-container-narrow {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.robot-mt-2xl {
+  margin-top: var(--space-2xl);
+}
+
+.robot-mt-3xl {
+  margin-top: var(--space-3xl);
+}
+
+.robot-mt-3xl-mb-3xl {
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.robot-mt-4xl {
+  margin-top: var(--space-4xl);
+}
+
+.robot-center-text {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.robot-desc-mb-32 {
+  margin-bottom: 32px;
+}

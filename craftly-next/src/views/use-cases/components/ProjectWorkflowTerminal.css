@@ -1,0 +1,248 @@
+.terminal-workflow {
+  width: 100%;
+}
+
+.terminal-workflow__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .terminal-workflow__container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Sidebar */
+.terminal-workflow__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.terminal-workflow__sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--color-text-tertiary);
+  transition: all 0.3s ease;
+}
+
+.terminal-workflow__sidebar-item.is-active {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.terminal-workflow__sidebar-item.is-completed {
+  color: var(--color-text-secondary);
+}
+
+.terminal-workflow__sidebar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: transparent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.terminal-workflow__sidebar-item.is-completed .terminal-workflow__sidebar-icon {
+  background-color: transparent;
+  border-color: transparent;
+  color: #000;
+}
+
+.terminal-workflow__check polyline {
+  stroke-dasharray: 30;
+  animation: terminal-check-draw 0.4s ease forwards;
+}
+
+@keyframes terminal-check-draw {
+  from {
+    stroke-dashoffset: 30;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-workflow__check polyline {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.terminal-workflow__sidebar-item.is-active .terminal-workflow__sidebar-icon {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+/* Terminal Window */
+.terminal-workflow__window {
+  flex: 1;
+  background-color: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  min-height: 450px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.terminal-workflow__window-header {
+  background-color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-workflow__window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-workflow__window-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #444;
+}
+
+.terminal-workflow__window-dots span:nth-child(1) {
+  background-color: #ff5f56;
+}
+
+.terminal-workflow__window-dots span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.terminal-workflow__window-dots span:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.terminal-workflow__window-title {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #888;
+  padding-right: 48px; /* Offset for dots to keep centered */
+}
+
+.terminal-workflow__window-body {
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  flex: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.terminal-workflow__window-body::-webkit-scrollbar {
+  display: none;
+}
+
+.terminal-workflow__history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.terminal-workflow__history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0.7;
+}
+
+.terminal-workflow__line {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.terminal-workflow__current-line {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.terminal-workflow__prompt {
+  color: #888;
+}
+
+.terminal-workflow__command {
+  color: #fff;
+}
+
+.terminal-workflow__output {
+  color: #aaa;
+  white-space: pre-wrap;
+  padding-left: 1.25rem;
+}
+
+.terminal-workflow__output--reveal {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.terminal-workflow__cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #fff;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .terminal-workflow__window {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    max-width: none;
+  }
+
+  .terminal-workflow__window-body {
+    padding: 1rem;
+  }
+}
