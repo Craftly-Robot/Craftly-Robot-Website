@@ -33,6 +33,9 @@ export default function Footer() {
             <Link href="/download" className="footer__link">
               Download
             </Link>
+            <Link href="/pricing" className="footer__link">
+              Pricing
+            </Link>
           </div>
 
           <div className="footer__column">
@@ -53,20 +56,14 @@ export default function Footer() {
 
           <div className="footer__column">
             <h3 className="footer__column-title">Company</h3>
-            <Link href="/vision" className="footer__link">
-              Vision
-            </Link>
             <Link href="/about" className="footer__link">
               About
             </Link>
-            <Link href="/pricing" className="footer__link">
-              Pricing
+            <Link href="/vision" className="footer__link">
+              Vision
             </Link>
             <Link href="/use-cases" className="footer__link">
               Use Cases
-            </Link>
-            <Link href="/contact" className="footer__link">
-              Contact
             </Link>
             <Link href="/get-involved" className="footer__link">
               Get Involved
@@ -75,6 +72,12 @@ export default function Footer() {
 
           <div className="footer__column">
             <h3 className="footer__column-title">Connect</h3>
+            <Link href="/contact" className="footer__link">
+              Contact
+            </Link>
+            <Link href="/resources/support" className="footer__link">
+              Support
+            </Link>
             <a
               href="https://github.com/Craftly-Robot"
               className="footer__link"
@@ -83,9 +86,6 @@ export default function Footer() {
             >
               GitHub
             </a>
-            <Link href="/resources/support" className="footer__link">
-              Support
-            </Link>
           </div>
         </div>
       </div>
