@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type OS = "Windows" | "macOS" | "Linux" | "Android" | "iOS" | "Unknown";
 
@@ -29,6 +29,11 @@ function detectOS(): OS {
 }
 
 export function useOS(): OS {
-  const [os] = useState<OS>(detectOS);
+  const [os, setOs] = useState<OS>("Unknown");
+
+  useEffect(() => {
+    setOs(detectOS());
+  }, []);
+
   return os;
 }

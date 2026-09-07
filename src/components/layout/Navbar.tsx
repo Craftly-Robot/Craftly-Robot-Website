@@ -81,6 +81,7 @@ export default function Navbar() {
                 src="/assets/brand/craftly-wordmark-intro.svg"
                 alt="Craftly"
                 className="navbar__logo-img"
+                priority
               />
             </div>
           </Link>
