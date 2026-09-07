@@ -105,7 +105,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
-          <Link href="/get-involved" className="navbar__join">
+          <Link href="https://sandbox-workspace.craftlyrobot.com/" className="navbar__join" target="_blank" rel="noopener noreferrer">
             Join Us
           </Link>
           <Link href="/download" className="navbar__download">
@@ -281,13 +281,15 @@ export default function Navbar() {
           </div>
         ))}
 
-        <Link
-          href="/get-involved"
+        <a
+          href="https://sandbox-workspace.craftlyrobot.com/"
           className="mobile-nav__download mobile-nav__join"
           onClick={closeMobile}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Join Us
-        </Link>
+        </a>
         <Link
           href="/download"
           className="mobile-nav__download"
