@@ -57,6 +57,42 @@ export function useDesktopNav() {
     return () => document.removeEventListener("keydown", handler);
   }, []);
 
+  // Keyboard navigation within dropdown
+  const handleDropdownKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (!activeDropdown) return;
+      const focusableSelector =
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+      const mega = megaRef.current;
+      if (!mega) return;
+      const focusable = Array.from(
+        mega.querySelectorAll<HTMLElement>(focusableSelector),
+      );
+      const currentIndex = focusable.indexOf(
+        document.activeElement as HTMLElement,
+      );
+
+      switch (e.key) {
+        case "ArrowDown":
+          e.preventDefault();
+          focusable[currentIndex + 1]?.focus();
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          focusable[currentIndex - 1]?.focus();
+          break;
+        case "Tab":
+          if (e.shiftKey && currentIndex === 0) {
+            setActiveDropdown(null);
+          } else if (!e.shiftKey && currentIndex === focusable.length - 1) {
+            setActiveDropdown(null);
+          }
+          break;
+      }
+    },
+    [activeDropdown],
+  );
+
   const activeNavConfig = navigation.find(
     (item) => item.label === (activeDropdown || displayedDropdown),
   );
@@ -175,5 +211,6 @@ export function useDesktopNav() {
     handleMouseEnter,
     handleDropdownMouseEnter,
     handleMouseLeave,
+    handleDropdownKeyDown,
   };
 }

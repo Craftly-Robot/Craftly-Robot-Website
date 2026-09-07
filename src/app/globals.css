@@ -568,6 +568,55 @@ select {
   }
 }
 
+/* ── Accessibility ── */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 24px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus-visible for all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ensure minimum touch target size */
+button,
+a,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exception for small inline elements */
+.navbar__nav-item,
+.navbar__logo,
+.mobile-nav__item,
+.footer__link-item {
+  min-height: auto;
+  min-width: auto;
+}
+
 /* ── Micro-Interactions ── */
 
 /* Card tilt on hover */

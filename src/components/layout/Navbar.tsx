@@ -42,6 +42,7 @@ export default function Navbar() {
     handleMouseEnter,
     handleDropdownMouseEnter,
     handleMouseLeave,
+    handleDropdownKeyDown,
   } = useDesktopNav();
 
   const {
@@ -173,6 +174,7 @@ export default function Navbar() {
         className="navbar__dropdown-wrapper"
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onKeyDown={handleDropdownKeyDown}
       >
         <div
           className={`navbar__dropdown ${activeDropdown ? "navbar__dropdown--visible" : ""}`}
