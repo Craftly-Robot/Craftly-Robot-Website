@@ -19,7 +19,7 @@
 }
 
 .hero__title {
-  font-family: "Outfit", var(--font-sans);
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 4.5vw, 3.8rem);
   font-weight: 500;
   line-height: 1.05;
