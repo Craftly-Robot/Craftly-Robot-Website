@@ -30,6 +30,23 @@ export default function Hero() {
               See how it works
             </Link>
           </div>
+
+          <div className="hero__trust-signals">
+            <span className="hero__trust-signal">
+              <span className="hero__trust-icon">🇧🇩</span>
+              Built in Bangladesh
+            </span>
+            <span className="hero__trust-divider" />
+            <span className="hero__trust-signal">
+              <span className="hero__trust-icon">🔓</span>
+              Open Source
+            </span>
+            <span className="hero__trust-divider" />
+            <span className="hero__trust-signal">
+              <span className="hero__trust-icon">✦</span>
+              Free Forever
+            </span>
+          </div>
         </div>
 
         <div className="hero__media-wrapper">
