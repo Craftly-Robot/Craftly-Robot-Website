@@ -8,6 +8,13 @@
   padding: 15vh 24px 0;
 }
 
+@media (min-width: 1024px) {
+  .search-modal {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .search-modal__backdrop {
   position: absolute;
   inset: 0;
