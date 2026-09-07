@@ -239,7 +239,8 @@
 /* Home CTA */
 .home-cta {
   padding: var(--space-6xl) 0;
-  background: var(--color-bg-inverse);
+  background: hsl(228, 16%, 5%);
+  color: #ffffff;
 }
 
 [data-theme="dark"] .home-cta {
@@ -258,14 +259,14 @@
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 500;
-  color: var(--color-text-inverse);
+  color: #ffffff;
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
 .home-cta__desc {
   font-size: 18px;
-  color: var(--color-text-muted);
+  color: #9ba1b0;
   margin-bottom: 40px;
 }
 
@@ -280,8 +281,8 @@
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background: var(--color-text-inverse);
-  color: var(--color-bg-inverse);
+  background: #ffffff;
+  color: hsl(228, 16%, 5%);
   border-radius: 9999px;
   font-size: 15px;
   font-weight: 500;
@@ -290,7 +291,7 @@
 }
 
 .home-cta__btn:hover {
-  background: var(--color-surface-hover);
+  background: #e0e0e0;
 }
 
 @media (max-width: 768px) {
