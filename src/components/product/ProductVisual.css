@@ -78,8 +78,8 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #0f172a;
-  color: #ffffff;
+  background: var(--color-text);
+  color: var(--color-text-inverse);
   font-size: 14px;
   font-weight: 700;
   flex-shrink: 0;
@@ -94,7 +94,7 @@
 .pv-sidebar__profile-name {
   font-size: 13px;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--color-text);
   line-height: 1.25;
   white-space: nowrap;
   overflow: hidden;
@@ -103,7 +103,7 @@
 .pv-sidebar__profile-role {
   font-size: 11.5px;
   font-weight: 400;
-  color: #64748b;
+  color: var(--color-text-muted);
   line-height: 1.25;
   margin-top: 1px;
 }

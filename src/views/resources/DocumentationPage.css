@@ -8,7 +8,7 @@
 
 .docs-product-subtitle {
   font-style: italic;
-  color: #5f6368;
+  color: var(--color-text-muted);
   margin-bottom: 24px;
 }
 
@@ -33,7 +33,7 @@
 
 .docs-highlight-list {
   list-style-type: none;
-  border-left: 3px solid #111;
+  border-left: 3px solid var(--color-text);
   padding-left: 16px;
   margin: 24px 0;
 }
@@ -45,7 +45,7 @@
 .docs-closing-statement {
   font-size: 18px;
   font-weight: 500;
-  color: #111;
+  color: var(--color-text);
   margin-top: 32px;
 }
 
@@ -62,8 +62,8 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: #fafafa;
-  border: 1px solid #eeeeee;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   text-decoration: none;
   transition:
@@ -72,20 +72,20 @@
 }
 
 .docs-card:hover {
-  background: #f1f3f5;
-  border-color: #dddddd;
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
 }
 
 .docs-card__title {
   font-size: 16px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   margin-bottom: 8px;
 }
 
 .docs-card__desc {
   font-size: 14px;
-  color: #666666;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 

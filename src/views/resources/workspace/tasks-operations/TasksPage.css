@@ -1,6 +1,6 @@
 .tasks-code-block {
   padding: 24px;
-  background-color: #f8f9fa;
+  background-color: var(--color-bg-elevated);
   border-radius: 12px;
   text-align: center;
   font-weight: 500;
@@ -9,7 +9,7 @@
 
 .tasks-code-block--vertical {
   padding: 24px;
-  background-color: #f8f9fa;
+  background-color: var(--color-bg-elevated);
   border-radius: 12px;
   text-align: center;
   font-weight: 500;
@@ -25,7 +25,7 @@
   gap: 16px;
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid #eaeaeb;
+  border-top: 1px solid var(--color-border);
 }
 
 .tasks-flow-column {
@@ -36,7 +36,7 @@
 
 .tasks-flow-label--yes {
   font-weight: 600;
-  color: #1a73e8;
+  color: var(--color-accent);
 }
 
 .tasks-flow-label--no {
@@ -46,9 +46,9 @@
 
 .tasks-quote-block {
   padding: 24px;
-  background-color: #f8f9fa;
+  background-color: var(--color-bg-elevated);
   border-radius: 12px;
-  border-left: 4px solid #111111;
+  border-left: 4px solid var(--color-text);
   margin-bottom: 32px;
 }
 

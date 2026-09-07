@@ -39,8 +39,8 @@
   justify-content: center;
   padding: 12px 24px;
   border-radius: 99px;
-  background-color: #f8f9fa;
-  border: 1px solid #e0e0e0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   color: var(--color-text);
   font-weight: 500;
   font-size: 1rem;
@@ -48,8 +48,8 @@
 }
 
 .support-hero__btn:hover {
-  background-color: #f0f1f3;
-  border-color: #bbb;
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
 }
 
 .support-cards {
@@ -64,7 +64,7 @@
 }
 
 .support-card {
-  background-color: #f8f9fa;
+  background-color: var(--color-bg-elevated);
   border-radius: 24px;
   padding: var(--space-xl);
   flex: 1;
@@ -78,15 +78,11 @@
   text-decoration: none;
 }
 
-/* .support-card:hover {
-  removed transform translateY
-} */
-
 .support-card__icon {
   width: 100px;
   height: 100px;
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -95,7 +91,7 @@
 }
 
 .support-card__icon svg {
-  color: #111;
+  color: var(--color-text);
 }
 
 .support-card__content {
@@ -122,7 +118,7 @@
 .support-card__link {
   font-size: 1rem;
   font-weight: 400;
-  color: #111;
+  color: var(--color-text);
   display: flex;
   align-items: center;
   gap: 6px;
