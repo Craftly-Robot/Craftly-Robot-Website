@@ -18,8 +18,8 @@ export default function Hero() {
             The operating system for intelligent organizations
           </h1>
           <p className="hero__subtitle">
-            Craftly connects people, work, and AI agents in one system.
-            Built in Bangladesh. Available today.
+            Craftly connects people, work, and AI agents in one system. Built in
+            Bangladesh. Available today.
           </p>
 
           <div className="hero__cta-group">

@@ -197,7 +197,9 @@ function TrainingOverview({
             W
           </div>
           <div className="pv-sidebar__profile-info">
-            <span className="pv-sidebar__profile-name">Wasif Abdullah Musa</span>
+            <span className="pv-sidebar__profile-name">
+              Wasif Abdullah Musa
+            </span>
             <span className="pv-sidebar__profile-role">Chairman</span>
           </div>
         </div>
