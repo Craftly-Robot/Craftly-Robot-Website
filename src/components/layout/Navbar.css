@@ -41,6 +41,12 @@
   justify-content: space-between;
 }
 
+@media (min-width: 1440px) {
+  .navbar__inner {
+    padding-inline: 80px;
+  }
+}
+
 .navbar__left {
   flex: 1;
   display: flex;
