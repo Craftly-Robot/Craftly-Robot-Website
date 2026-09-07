@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Hero from "../components/hero/Hero";
+import TrustBadges from "../components/ui/TrustBadges";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./HomePage.css";
 
@@ -36,6 +37,13 @@ export default function HomePage() {
                 <span className="proof-strip__label">Products</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Trust Badges */}
+        <section className="trust-badges-section">
+          <div className="container">
+            <TrustBadges />
           </div>
         </section>
 
