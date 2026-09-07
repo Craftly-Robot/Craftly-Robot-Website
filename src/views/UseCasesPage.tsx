@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import CTASection from "../components/sections/CTASection";
+import Breadcrumbs from "../components/ui/Breadcrumbs";
 import "./products/ProductPage.css";
 
 export default function UseCasesPage() {
@@ -10,6 +11,7 @@ export default function UseCasesPage() {
 
   return (
     <div ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Use Cases" }]} />
       <div className="container">
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">Who Craftly is for</h1>

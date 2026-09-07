@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
+import SearchProvider from "@/components/layout/SearchProvider";
 import Providers from "@/components/layout/Providers";
 import "./globals.css";
 
@@ -144,6 +145,7 @@ export default function RootLayout({
             </main>
             <ConditionalFooter />
           </div>
+          <SearchProvider />
         </Providers>
       </body>
     </html>

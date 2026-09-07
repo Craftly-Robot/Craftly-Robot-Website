@@ -5,6 +5,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useOS } from "../hooks/useOS";
 import SectionTitle from "../components/ui/SectionTitle";
 import ImageWithFallback from "../components/common/ImageWithFallback";
+import Breadcrumbs from "../components/ui/Breadcrumbs";
 import "./DownloadPage.css";
 
 const AppleIcon = () => (
@@ -79,6 +80,7 @@ export default function DownloadPage() {
 
   return (
     <div className="download-page container" ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Download" }]} />
       <div className="download-header">
         <div className="download-hero-top">
           <SectionTitle

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Breadcrumbs from "../../components/ui/Breadcrumbs";
 
 import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
@@ -11,6 +12,7 @@ export default function RobotPage() {
 
   return (
     <div ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Products" }, { label: "Robot" }]} />
       <div className="container">
         <section className="product-hero-clean">
           <div className="vision-stage__badge vision-stage__badge--dev">

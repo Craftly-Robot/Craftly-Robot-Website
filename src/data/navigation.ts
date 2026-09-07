@@ -2,7 +2,7 @@ import type { NavConfig } from "../types";
 
 export const navigation: NavConfig[] = [
   {
-    label: "Product",
+    label: "Products",
     dropdownType: "product",
     items: [
       {

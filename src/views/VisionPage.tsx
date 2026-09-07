@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import CTASection from "../components/sections/CTASection";
+import Breadcrumbs from "../components/ui/Breadcrumbs";
 import "./products/ProductPage.css";
 
 export default function VisionPage() {
@@ -10,6 +11,7 @@ export default function VisionPage() {
 
   return (
     <div ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Vision" }]} />
       <div className="container">
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">The Craftly Plan</h1>

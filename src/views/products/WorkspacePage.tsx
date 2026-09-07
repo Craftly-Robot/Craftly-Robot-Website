@@ -2,6 +2,7 @@
 
 import ProductVisual from "../../components/product/ProductVisual";
 import Link from "next/link";
+import Breadcrumbs from "../../components/ui/Breadcrumbs";
 
 import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
@@ -12,6 +13,7 @@ export default function WorkspacePage() {
 
   return (
     <div ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Products" }, { label: "Workspace" }]} />
       <div className="container">
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">Craftly Workspace</h1>
