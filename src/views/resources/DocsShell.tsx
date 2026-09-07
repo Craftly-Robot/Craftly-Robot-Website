@@ -40,20 +40,22 @@ function DocsTOC() {
   if (tocItems.length === 0) return null;
 
   return (
-    <div className="docs__toc">
-      <h4 className="docs__toc-title">On this Page</h4>
-      <ul className="docs__toc-list">
-        {tocItems.map((item) => (
-          <li
-            key={item.id}
-            id={`toc-${item.id}`}
-            className={`docs__toc-item ${activeId === item.id ? "docs__toc-item--active" : ""}`}
-          >
-            <a href={`#${item.id}`}>{item.label}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <aside className="docs__sidebar docs__sidebar--right">
+      <div className="docs__toc">
+        <h4 className="docs__toc-title">On this Page</h4>
+        <ul className="docs__toc-list">
+          {tocItems.map((item) => (
+            <li
+              key={item.id}
+              id={`toc-${item.id}`}
+              className={`docs__toc-item ${activeId === item.id ? "docs__toc-item--active" : ""}`}
+            >
+              <a href={`#${item.id}`}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </aside>
   );
 }
 
@@ -389,9 +391,7 @@ export default function DocsShell({ children }: DocsShellProps) {
       </main>
 
       {/* Right Sidebar - Table of Contents */}
-      <aside className="docs__sidebar docs__sidebar--right">
-        <DocsTOC />
-      </aside>
+      <DocsTOC />
 
       {showBackToTop && (
         <button className="docs__back-to-top" onClick={scrollToTop} aria-label="Back to top">

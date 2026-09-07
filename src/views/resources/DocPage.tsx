@@ -1,7 +1,7 @@
 "use client";
 
-import { Fragment } from "react";
-import { DocsPageProvider } from "../../contexts/DocsPageContext";
+import { Fragment, useEffect } from "react";
+import { useDocsPage } from "../../contexts/DocsPageContext";
 
 interface DocPageProps {
   title: string;
@@ -23,13 +23,20 @@ export default function DocPage({
   pageId,
   pageTitle,
   rootLabel = "Documentation",
-  tocItems,
+  tocItems = [],
   children,
 }: DocPageProps) {
+  const { setTocItems } = useDocsPage();
+
+  useEffect(() => {
+    setTocItems(tocItems);
+    return () => setTocItems([]);
+  }, [tocItems, setTocItems]);
+
   const displayCrumbs = crumbs[0] === rootLabel ? crumbs : [rootLabel, ...crumbs];
 
   return (
-    <DocsPageProvider tocItems={tocItems}>
+    <>
       <div className="docs__breadcrumb">
         {displayCrumbs.map((crumb, index) => (
           <Fragment key={index}>
@@ -48,6 +55,6 @@ export default function DocPage({
       </h1>
 
       {children}
-    </DocsPageProvider>
+    </>
   );
 }
