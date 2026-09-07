@@ -47,10 +47,7 @@ const ICONS = [
     <polyline points="8 16 4 12 8 8" />
     <polyline points="16 8 20 12 16 16" />
   </svg>,
-  <div
-    key="3"
-    style={{ fontWeight: 500, fontSize: "18px", fontFamily: "monospace" }}
-  >
+  <div key="3" style={{ fontWeight: 500, fontSize: "18px", fontFamily: "monospace" }}>
     {"{ }"}
   </div>,
   <svg

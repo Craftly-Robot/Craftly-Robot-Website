@@ -9,12 +9,7 @@ export default function WelcomeSetupPage() {
     <DocPage
       title="Welcome & Setup — Craftly Workspace"
       description="Welcome & Setup in Craftly Workspace"
-      crumbs={[
-        "Documentation",
-        "Craftly Workspace",
-        "Onboarding",
-        "Welcome & Setup",
-      ]}
+      crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Welcome & Setup"]}
       pageId="welcome-and-setup"
       pageTitle="Welcome & Setup"
       tocItems={[{ id: "welcome-and-setup", label: "Welcome & Setup" }]}
@@ -31,17 +26,14 @@ export default function WelcomeSetupPage() {
         Start Your Craftly Journey
       </h2>
 
+      <p className="docs__text">Joining Craftly starts with a short conversation.</p>
       <p className="docs__text">
-        Joining Craftly starts with a short conversation.
+        Our onboarding assistant will guide you through a few questions to understand who you are,
+        what you&apos;re interested in, and how you&apos;d like to contribute to Craftly.
       </p>
       <p className="docs__text">
-        Our onboarding assistant will guide you through a few questions to
-        understand who you are, what you&apos;re interested in, and how
-        you&apos;d like to contribute to Craftly.
-      </p>
-      <p className="docs__text">
-        You don't need to know everything before you start. Just answer
-        honestly, and we'll guide you through the rest.
+        You don't need to know everything before you start. Just answer honestly, and we'll guide
+        you through the rest.
       </p>
       <p className="docs__text" style={{ fontWeight: 600, marginTop: "24px" }}>
         Ready to begin?
@@ -74,8 +66,8 @@ export default function WelcomeSetupPage() {
       </div>
 
       <p className="docs__text">
-        From there, the Craftly Onboarding Assistant will guide you through the
-        process step by step.
+        From there, the Craftly Onboarding Assistant will guide you through the process step by
+        step.
       </p>
 
       <div
@@ -129,10 +121,7 @@ export default function WelcomeSetupPage() {
       </div>
 
       {/* Empty space for future text */}
-      <div
-        className="docs__text-placeholder"
-        style={{ minHeight: "24px" }}
-      ></div>
+      <div className="docs__text-placeholder" style={{ minHeight: "24px" }}></div>
     </DocPage>
   );
 }

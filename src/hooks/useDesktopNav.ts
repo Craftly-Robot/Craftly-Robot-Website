@@ -1,23 +1,13 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { navigation } from "../data/navigation";
 
 export function useDesktopNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(
-    null,
-  );
-  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(
-    undefined,
-  );
+  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
+  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(undefined);
   const [animationKey, setAnimationKey] = useState(0);
   const navRef = useRef<HTMLElement>(null);
   const megaRef = useRef<HTMLDivElement>(null);
@@ -61,16 +51,11 @@ export function useDesktopNav() {
   const handleDropdownKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
       if (!activeDropdown) return;
-      const focusableSelector =
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+      const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
       const mega = megaRef.current;
       if (!mega) return;
-      const focusable = Array.from(
-        mega.querySelectorAll<HTMLElement>(focusableSelector),
-      );
-      const currentIndex = focusable.indexOf(
-        document.activeElement as HTMLElement,
-      );
+      const focusable = Array.from(mega.querySelectorAll<HTMLElement>(focusableSelector));
+      const currentIndex = focusable.indexOf(document.activeElement as HTMLElement);
 
       switch (e.key) {
         case "ArrowDown":

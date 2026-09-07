@@ -2,13 +2,7 @@ export interface ProductScene {
   product: "workspace" | "robot";
   title: string;
   description: string;
-  kind:
-    | "workflow"
-    | "network"
-    | "messages"
-    | "schedule"
-    | "review"
-    | "resources";
+  kind: "workflow" | "network" | "messages" | "schedule" | "review" | "resources";
   steps: readonly [string, string, string];
   icon:
     | "work"
@@ -90,11 +84,7 @@ export const productScenes = {
     "A direct line to your team",
     "messages",
     "chat",
-    [
-      "Request clarification",
-      "Share the relevant context",
-      "Confirm the next step",
-    ],
+    ["Request clarification", "Share the relevant context", "Confirm the next step"],
     "Focused conversations, clear follow-up",
   ),
   "workspace-workflows": scene(

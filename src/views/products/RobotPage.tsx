@@ -15,19 +15,20 @@ export default function RobotPage() {
       <Breadcrumbs items={[{ label: "Products" }, { label: "Robot" }]} />
       <div className="container">
         <section className="product-hero-clean">
-          <div className="vision-stage__badge vision-stage__badge--dev">
-            Coming Soon
-          </div>
+          <div className="vision-stage__badge vision-stage__badge--dev">Coming Soon</div>
           <h1 className="product-hero-clean__title">Craftly Robot</h1>
           <p className="product-hero-clean__desc">
-            An agentic AI system for autonomous software engineering.
-            Currently in active development.
+            An agentic AI system for autonomous software engineering. Currently in active
+            development.
           </p>
           <p className="product-hero-clean__desc text-muted-sm">
             Sign up to be notified when it launches.
           </p>
           <div className="product-hero-clean__actions">
-            <a href="mailto:hello@craftlyrobot.com?subject=Notify me about Craftly Robot" className="btn-product-download">
+            <a
+              href="mailto:hello@craftlyrobot.com?subject=Notify me about Craftly Robot"
+              className="btn-product-download"
+            >
               Join the Waitlist
             </a>
           </div>
@@ -61,8 +62,8 @@ export default function RobotPage() {
                 </div>
                 <h3 className="workspace-option__title">Understands Goals</h3>
                 <p className="workspace-option__desc">
-                  Reads your codebase, understands architecture, and plans
-                  changes. Knows what needs to happen before it starts.
+                  Reads your codebase, understands architecture, and plans changes. Knows what needs
+                  to happen before it starts.
                 </p>
               </div>
 
@@ -87,8 +88,8 @@ export default function RobotPage() {
                 </div>
                 <h3 className="workspace-option__title">Coordinates Agents</h3>
                 <p className="workspace-option__desc">
-                  Multiple specialized agents work together on complex tasks.
-                  Each agent handles what it&apos;s best at.
+                  Multiple specialized agents work together on complex tasks. Each agent handles
+                  what it&apos;s best at.
                 </p>
               </div>
 
@@ -109,8 +110,8 @@ export default function RobotPage() {
                 </div>
                 <h3 className="workspace-option__title">Stays Under Control</h3>
                 <p className="workspace-option__desc">
-                  Human approval for consequential actions. You decide what
-                  matters. The agents do the work.
+                  Human approval for consequential actions. You decide what matters. The agents do
+                  the work.
                 </p>
               </div>
             </div>
@@ -173,12 +174,16 @@ export default function RobotPage() {
               <div className="robot-timeline__stage robot-timeline__stage--complete reveal">
                 <div className="robot-timeline__marker" />
                 <span className="robot-timeline__stage-name">Research</span>
-                <span className="robot-timeline__stage-status robot-timeline__stage-status--done">Done</span>
+                <span className="robot-timeline__stage-status robot-timeline__stage-status--done">
+                  Done
+                </span>
               </div>
               <div className="robot-timeline__stage robot-timeline__stage--progress reveal reveal-delay-1">
                 <div className="robot-timeline__marker" />
                 <span className="robot-timeline__stage-name">Core Engine</span>
-                <span className="robot-timeline__stage-status robot-timeline__stage-status--active">In Progress</span>
+                <span className="robot-timeline__stage-status robot-timeline__stage-status--active">
+                  In Progress
+                </span>
               </div>
               <div className="robot-timeline__stage robot-timeline__stage--future reveal reveal-delay-2">
                 <div className="robot-timeline__marker" />
@@ -201,8 +206,8 @@ export default function RobotPage() {
           <div className="section-content">
             <h2 className="abstracted-ui-title reveal">The Craftly Plan</h2>
             <p className="abstracted-ui-desc reveal reveal-delay-1">
-              Workspace → Robot → Glass. Workspace is the foundation. Robot is
-              the intelligence. Glass is the future.
+              Workspace → Robot → Glass. Workspace is the foundation. Robot is the intelligence.
+              Glass is the future.
             </p>
             <div className="center-action">
               <Link href="/vision" className="btn-product-download">

@@ -3,8 +3,7 @@ import ContactPageView from "@/views/ContactPage";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description:
-    "Get in touch with Craftly. Questions, feedback, or partnership opportunities.",
+  description: "Get in touch with Craftly. Questions, feedback, or partnership opportunities.",
 };
 
 export default function Page() {

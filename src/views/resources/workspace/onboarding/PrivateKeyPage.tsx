@@ -26,13 +26,12 @@ export default function PrivateKeyPage() {
       ]}
     >
       <p className="docs__text">
-        Your Private Key is one of the most important parts of your Craftly
-        identity.
+        Your Private Key is one of the most important parts of your Craftly identity.
       </p>
 
       <p className="docs__text">
-        It is required to log in to Craftly Workspace and Craftly Robot, so keep
-        your Private Key safe and never share it with anyone.
+        It is required to log in to Craftly Workspace and Craftly Robot, so keep your Private Key
+        safe and never share it with anyone.
       </p>
 
       <div
@@ -58,9 +57,7 @@ export default function PrivateKeyPage() {
       <h2 className="docs__section-title" id="keep-your-key-safe">
         Keep Your Key Safe
       </h2>
-      <p className="docs__text">
-        Your Private Key should be treated as a sensitive credential.
-      </p>
+      <p className="docs__text">Your Private Key should be treated as a sensitive credential.</p>
       <ul className="docs__list">
         <li>Do not share it with anyone.</li>
         <li>Do not post it publicly.</li>
@@ -72,31 +69,27 @@ export default function PrivateKeyPage() {
         If You Lose Your Key While Logged In
       </h2>
       <p className="docs__text">
-        If you are still logged in to Craftly Workspace, you can go to your
-        Profile and generate a new Private Key reissue.
+        If you are still logged in to Craftly Workspace, you can go to your Profile and generate a
+        new Private Key reissue.
       </p>
       <p className="docs__text">
-        After the new key is issued, use the new key for your future Workspace
-        logins.
+        After the new key is issued, use the new key for your future Workspace logins.
       </p>
 
       <h2 className="docs__section-title" id="lose-key-logged-out">
         If You Lose Your Key While Logged Out
       </h2>
       <p className="docs__text">
-        If you lose your Private Key while you are already logged out, you
-        cannot immediately reissue it through Workspace because you no longer
-        have an active authenticated session.
+        If you lose your Private Key while you are already logged out, you cannot immediately
+        reissue it through Workspace because you no longer have an active authenticated session.
       </p>
       <p className="docs__text">
-        Craftly is currently developing a verification based recovery system
-        that will allow verified members to recover and generate a new Private
-        Key through the Craftly Robot.
+        Craftly is currently developing a verification based recovery system that will allow
+        verified members to recover and generate a new Private Key through the Craftly Robot.
       </p>
       <p className="docs__text">
-        Until that system is available, losing your key while logged out may
-        require you to go through the appropriate account recovery or
-        re-onboarding process.
+        Until that system is available, losing your key while logged out may require you to go
+        through the appropriate account recovery or re-onboarding process.
       </p>
 
       <h2 className="docs__section-title" id="important">
@@ -106,14 +99,12 @@ export default function PrivateKeyPage() {
         Your Private Key is currently a sensitive part of your Craftly identity.
       </p>
       <p className="docs__text">
-        Stay logged in while requesting a reissue if you have lost your key.
-        Keep your Private Key somewhere safe, and never share it with another
-        person.
+        Stay logged in while requesting a reissue if you have lost your key. Keep your Private Key
+        somewhere safe, and never share it with another person.
       </p>
       <p className="docs__text">
-        The recovery system is being developed to make lost key recovery safer
-        and more convenient while still protecting the identity of Craftly
-        members.
+        The recovery system is being developed to make lost key recovery safer and more convenient
+        while still protecting the identity of Craftly members.
       </p>
     </DocPage>
   );

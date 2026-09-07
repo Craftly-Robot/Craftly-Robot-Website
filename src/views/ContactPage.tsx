@@ -37,9 +37,7 @@ export default function ContactPage() {
             <div className="contact-card reveal reveal-delay-1">
               <div className="contact-card__icon">💬</div>
               <h3 className="contact-card__title">Join the Community</h3>
-              <p className="contact-card__desc">
-                Connect with other users and the Craftly team.
-              </p>
+              <p className="contact-card__desc">Connect with other users and the Craftly team.</p>
               <a
                 href="https://sandbox-workspace.craftlyrobot.com/"
                 className="contact-card__link"

@@ -5,9 +5,7 @@ import Link from "next/link";
 import animationData from "../../public/assets/animations/404.json";
 import "./NotFoundPage.css";
 
-const Lottie = lazy(() =>
-  import("lottie-react").then((m) => ({ default: m.Lottie })),
-);
+const Lottie = lazy(() => import("lottie-react").then((m) => ({ default: m.Lottie })));
 
 export default function NotFoundPage() {
   useEffect(() => {
@@ -34,7 +32,8 @@ export default function NotFoundPage() {
           </svg>
           Back to Craftly
         </Link>
-      </div>      <div className="not-found-content">
+      </div>{" "}
+      <div className="not-found-content">
         <div className="not-found-animation">
           <Suspense fallback={null}>
             <Lottie src={animationData} loop={true} autoplay={true} />

@@ -43,12 +43,7 @@ interface DownloadButtonProps {
   children: React.ReactNode;
 }
 
-const DownloadButton = ({
-  href,
-  disabled,
-  variant = "primary",
-  children,
-}: DownloadButtonProps) => (
+const DownloadButton = ({ href, disabled, variant = "primary", children }: DownloadButtonProps) => (
   <a
     href={href}
     className={`dl-btn dl-btn--${variant}`}
@@ -85,10 +80,7 @@ export default function DownloadPage() {
       <Breadcrumbs items={[{ label: "Download" }]} />
       <div className="download-header">
         <div className="download-hero-top">
-          <SectionTitle
-            text={`Download Craftly\nfor ${osName}`}
-            className="download-hero__title"
-          />
+          <SectionTitle text={`Download Craftly\nfor ${osName}`} className="download-hero__title" />
           <Link href="/resources/releases" className="btn-previous-releases">
             View previous releases
           </Link>
@@ -109,13 +101,13 @@ export default function DownloadPage() {
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
-              <div className="min-reqs__text">
-                macOS 12 (Monterey) or later
-              </div>
+              <div className="min-reqs__text">macOS 12 (Monterey) or later</div>
             </div>
             <div className="install-instructions">
               <div className="install-instructions__title">Installation</div>
-              <div className="install-instructions__text">Open the .dmg file and drag Craftly to Applications</div>
+              <div className="install-instructions__text">
+                Open the .dmg file and drag Craftly to Applications
+              </div>
             </div>
           </PlatformSection>
 
@@ -129,7 +121,9 @@ export default function DownloadPage() {
             </div>
             <div className="install-instructions">
               <div className="install-instructions__title">Installation</div>
-              <div className="install-instructions__text">Run the installer and follow the setup wizard</div>
+              <div className="install-instructions__text">
+                Run the installer and follow the setup wizard
+              </div>
             </div>
           </PlatformSection>
 
@@ -139,20 +133,18 @@ export default function DownloadPage() {
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
-              <div className="min-reqs__text">
-                Ubuntu 20, Debian 10, Fedora 36, RHEL 8 or later
-              </div>
+              <div className="min-reqs__text">Ubuntu 20, Debian 10, Fedora 36, RHEL 8 or later</div>
             </div>
             <div className="install-instructions">
               <div className="install-instructions__title">Installation</div>
-              <div className="install-instructions__text">Extract the archive and run the executable</div>
+              <div className="install-instructions__text">
+                Extract the archive and run the executable
+              </div>
             </div>
           </PlatformSection>
         </div>
 
-        <div
-          className="download-columns download-columns--mobile mt"
-        >
+        <div className="download-columns download-columns--mobile mt">
           <PlatformSection icon={<AndroidIcon />} title="Android">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_android">
               Download for Android
@@ -176,9 +168,7 @@ export default function DownloadPage() {
       </div>
 
       {/* Divider */}
-      <hr
-        className="download-divider"
-      />
+      <hr className="download-divider" />
 
       {/* Sandbox */}
       <div className="download-section" id="sandbox">
@@ -187,7 +177,8 @@ export default function DownloadPage() {
           <span className="version-badge version-badge--dev">Preview</span>
         </div>
         <p className="section-desc">
-          Try the latest preview builds. These may contain experimental features and are not recommended for production use.
+          Try the latest preview builds. These may contain experimental features and are not
+          recommended for production use.
         </p>
 
         <div className="dl-grid">
@@ -212,9 +203,7 @@ export default function DownloadPage() {
       </div>
 
       {/* Divider */}
-      <hr
-        className="download-divider"
-      />
+      <hr className="download-divider" />
 
       {/* Robot — Coming Soon */}
       <div className="download-section" id="robot">

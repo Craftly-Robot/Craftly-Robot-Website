@@ -43,20 +43,26 @@ Rather than treating AI as isolated chatbots or rigid single-task tools, Craftly
 Craftly is being constructed section by section under a structured, long-term roadmap:
 
 ### 1. 🏢 Craftly Workspace
-*The operational foundation of modern organizations.*
+
+_The operational foundation of modern organizations._
+
 - **Organizational Architecture:** Structured hierarchy across departments, roles, managers, and members.
 - **Task Evidence & Verification:** Cryptographically verifiable proof of execution for every operational task.
 - **Agreements & Governance:** Digital keypair-based authorization and cryptographic onboarding.
 - **Decentralized AI Training:** Members contribute computing resources (consumer GPUs or cloud clusters) to train shared AI models.
 
 ### 2. 🤖 Craftly Robot
-*Active R&D in real-world AI assistants.*
+
+_Active R&D in real-world AI assistants._
+
 - **Agent-to-Agent Negotiation:** Autonomous agents discover capabilities, negotiate terms, and coordinate actions across service boundaries.
 - **Human Confirmation:** Sensitive and irreversible actions require cryptographic human approval.
 - **Multi-Agent Coordination:** Orchestrates parallel tasks with safety and real-world reliability.
 
 ### 3. 👓 Craftly Glass (Long-term Vision)
-*The future of ambient computing.*
+
+_The future of ambient computing._
+
 - A forward-looking wearable direction designed to bridge intelligent digital systems with physical environments through contextual awareness.
 
 ---
@@ -118,15 +124,18 @@ Craftly-Robot-Website/
 ## 💻 Getting Started
 
 ### Prerequisites
+
 - [Bun](https://bun.sh/) (version 1.0 or higher) or [Node.js](https://nodejs.org/) (v18+)
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/Craftly-Robot/Craftly-Robot-Website.git
 cd Craftly-Robot-Website
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 bun install
 # or
@@ -134,22 +143,27 @@ npm install
 ```
 
 ### 3. Start Local Development Server
+
 ```bash
 bun run dev
 # or
 npm run dev
 ```
+
 The site will immediately be live at `http://localhost:3000/` with Turbopack Hot Module Replacement (HMR).
 
 ### 4. Build for Production
+
 ```bash
 bun run build
 # or
 npm run build
 ```
+
 Generates an optimized, statically pre-rendered production build (`SSG`) for all 68 routes.
 
 ### 5. Start Production Server Locally
+
 ```bash
 bun run start
 # or
@@ -174,6 +188,7 @@ The project is continuously deployed to **[Vercel](https://vercel.com/)**:
 ## 📜 Engineering Constitution
 
 All contributors and coding agents must strictly read and adhere to [AGENTS.md](./AGENTS.md) before making architectural or UI changes:
+
 - Never break mobile or tablet layouts while adjusting desktop views.
 - Reuse existing design tokens in `app/globals.css`.
 - Maintain centralized marketing content in `src/data/`.

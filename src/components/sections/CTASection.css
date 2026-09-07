@@ -5,7 +5,12 @@
 }
 
 [data-theme="dark"] .cta-section {
-  background: linear-gradient(180deg, var(--color-bg-subtle) 0%, hsl(220, 15%, 12%) 50%, var(--color-bg-subtle) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-subtle) 0%,
+    hsl(220, 15%, 12%) 50%,
+    var(--color-bg-subtle) 100%
+  );
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }

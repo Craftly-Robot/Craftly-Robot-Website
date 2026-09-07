@@ -8,9 +8,7 @@ interface CTASectionProps {
   title?: string;
 }
 
-export default function CTASection({
-  title = "Download Craftly Workspace",
-}: CTASectionProps) {
+export default function CTASection({ title = "Download Craftly Workspace" }: CTASectionProps) {
   const revealRef = useScrollReveal();
 
   return (
@@ -18,14 +16,15 @@ export default function CTASection({
       <div className="container">
         <div className="cta-section__content reveal">
           <h2 className="cta-section__title">{title}</h2>
-          <p className="cta-section__desc">
-            Free. Open. Available on every platform.
-          </p>
+          <p className="cta-section__desc">Free. Open. Available on every platform.</p>
           <div className="cta-section__actions">
             <Link href="/download" className="cta-section__btn">
               Download
             </Link>
-            <Link href="/resources/documentation" className="cta-section__btn cta-section__btn--secondary">
+            <Link
+              href="/resources/documentation"
+              className="cta-section__btn cta-section__btn--secondary"
+            >
               Documentation
             </Link>
           </div>

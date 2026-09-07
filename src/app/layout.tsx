@@ -85,10 +85,7 @@ export const metadata: Metadata = {
     creator: "@Craftly",
   },
   icons: {
-    icon: [
-      { url: "/assets/craftly_logo/favicon.png", type: "image/png" },
-      { url: "/favicon.ico" },
-    ],
+    icon: [{ url: "/assets/craftly_logo/favicon.png", type: "image/png" }, { url: "/favicon.ico" }],
     apple: "/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
   },
 };
@@ -110,11 +107,7 @@ const jsonLd = {
   sameAs: ["https://github.com/Craftly-Robot"],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"

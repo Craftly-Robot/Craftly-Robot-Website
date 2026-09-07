@@ -45,17 +45,11 @@ export default function Navbar() {
     handleDropdownKeyDown,
   } = useDesktopNav();
 
-  const {
-    mobileOpen,
-    mobileSection,
-    toggleMobile,
-    toggleSection,
-    closeMobile,
-  } = useMobileNav();
+  const { mobileOpen, mobileSection, toggleMobile, toggleSection, closeMobile } = useMobileNav();
 
   const [scrolled, setScrolled] = useState(false);
 
-  const isActive = (item: typeof navigation[number]) => {
+  const isActive = (item: (typeof navigation)[number]) => {
     return item.items?.some((child) => pathname.startsWith(child.route)) ?? false;
   };
 
@@ -67,11 +61,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      ref={navRef}
-      className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
-      role="banner"
-    >
+    <header ref={navRef} className={`navbar ${scrolled ? "navbar--scrolled" : ""}`} role="banner">
       <div className="navbar__inner">
         {/* Left Side: Logo + Nav */}
         <div className="navbar__left">
@@ -87,11 +77,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav
-            className="navbar__nav"
-            role="navigation"
-            aria-label="Main navigation"
-          >
+          <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
             {navigation.map((item) => (
               <div
                 key={item.label}
@@ -121,14 +107,28 @@ export default function Navbar() {
             }}
             aria-label="Search (Cmd+K)"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              width="16"
+              height="16"
+            >
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
             <span className="navbar__search-kbd">⌘K</span>
           </button>
           <ThemeToggle />
-          <Link href="https://sandbox-workspace.craftlyrobot.com/" className="navbar__join" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://sandbox-workspace.craftlyrobot.com/"
+            className="navbar__join"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Join Us
           </Link>
           <Link href="/download" className="navbar__download">
@@ -184,10 +184,7 @@ export default function Navbar() {
         >
           <div ref={megaRef} className="navbar__dropdown-inner">
             {activeNavConfig && (
-              <div
-                className="navbar__mega"
-                key={`${activeNavConfig.label}-${animationKey}`}
-              >
+              <div className="navbar__mega" key={`${activeNavConfig.label}-${animationKey}`}>
                 <div className="navbar__mega-left">
                   <h2 className="navbar__mega-title">
                     {activeNavConfig.label === "Products" && (
@@ -230,13 +227,9 @@ export default function Navbar() {
                         onClick={() => setActiveDropdown(null)}
                       >
                         <div className="dropdown-item__content">
-                          <div className="dropdown-item__title">
-                            {child.title}
-                          </div>
+                          <div className="dropdown-item__title">{child.title}</div>
                           {child.description && (
-                            <div className="dropdown-item__desc">
-                              {child.description}
-                            </div>
+                            <div className="dropdown-item__desc">{child.description}</div>
                           )}
                         </div>
                         <span className="dropdown-item__arrow">
@@ -293,13 +286,9 @@ export default function Navbar() {
                       onClick={closeMobile}
                     >
                       <div className="mobile-nav__item-content">
-                        <div className="mobile-nav__item-title">
-                          {child.title}
-                        </div>
+                        <div className="mobile-nav__item-title">{child.title}</div>
                         {child.description && (
-                          <div className="mobile-nav__item-desc">
-                            {child.description}
-                          </div>
+                          <div className="mobile-nav__item-desc">{child.description}</div>
                         )}
                       </div>
                     </Link>
@@ -319,11 +308,7 @@ export default function Navbar() {
         >
           Join Us
         </a>
-        <Link
-          href="/download"
-          className="mobile-nav__download"
-          onClick={closeMobile}
-        >
+        <Link href="/download" className="mobile-nav__download" onClick={closeMobile}>
           Download
         </Link>
       </nav>

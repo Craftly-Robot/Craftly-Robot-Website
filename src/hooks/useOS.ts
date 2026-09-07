@@ -13,8 +13,7 @@ function detectOS(): OS {
     return "Android";
   } else if (
     /iphone|ipad|ipod/i.test(userAgent) ||
-    (window.navigator.platform === "MacIntel" &&
-      window.navigator.maxTouchPoints > 1)
+    (window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1)
   ) {
     return "iOS";
   } else if (userAgent.indexOf("win") !== -1) {

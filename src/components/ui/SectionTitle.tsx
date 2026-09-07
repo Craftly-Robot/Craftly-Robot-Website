@@ -6,11 +6,7 @@ interface SectionTitleProps {
   as?: "h1" | "h2" | "h3";
 }
 
-export default function SectionTitle({
-  text,
-  className,
-  as: Tag = "h1",
-}: SectionTitleProps) {
+export default function SectionTitle({ text, className, as: Tag = "h1" }: SectionTitleProps) {
   const lines = text.split("\n");
 
   return (

@@ -86,7 +86,9 @@
 
 [data-theme="dark"] .support-card:hover {
   border-color: hsla(222, 84%, 58%, 0.2);
-  box-shadow: 0 4px 20px hsla(220, 20%, 3%, 0.4), 0 0 0 1px hsla(222, 84%, 58%, 0.08);
+  box-shadow:
+    0 4px 20px hsla(220, 20%, 3%, 0.4),
+    0 0 0 1px hsla(222, 84%, 58%, 0.08);
 }
 
 .support-card__icon {

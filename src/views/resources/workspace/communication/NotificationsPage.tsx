@@ -13,8 +13,8 @@ export default function NotificationsPage() {
       tocItems={[{ id: "notifications", label: "Notifications" }]}
     >
       <p className="docs__text">
-        The Notifications system keeps members informed about important activity
-        inside Craftly Workspace.
+        The Notifications system keeps members informed about important activity inside Craftly
+        Workspace.
       </p>
 
       <p className="docs__text">Notifications may include:</p>
@@ -29,14 +29,13 @@ export default function NotificationsPage() {
       </ul>
 
       <p className="docs__text">
-        Members are expected to regularly check their notifications so that
-        important instructions, deadlines, and organizational updates are not
-        missed.
+        Members are expected to regularly check their notifications so that important instructions,
+        deadlines, and organizational updates are not missed.
       </p>
 
       <p className="docs__text">
-        Notifications are an important part of staying active, informed, and
-        responsive within Craftly.
+        Notifications are an important part of staying active, informed, and responsive within
+        Craftly.
       </p>
     </DocPage>
   );

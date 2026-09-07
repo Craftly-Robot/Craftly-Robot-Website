@@ -18,7 +18,7 @@ export default function SearchModal() {
     ? searchIndex.filter(
         (item) =>
           item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase())
+          item.description.toLowerCase().includes(query.toLowerCase()),
       )
     : searchIndex.slice(0, 8);
 
@@ -99,7 +99,15 @@ export default function SearchModal() {
       <div className="search-modal__backdrop" />
       <div className="search-modal__container" onClick={(e) => e.stopPropagation()}>
         <div className="search-modal__input-wrapper">
-          <svg className="search-modal__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            className="search-modal__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <circle cx="11" cy="11" r="8" />
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
@@ -139,9 +147,16 @@ export default function SearchModal() {
         </div>
 
         <div className="search-modal__footer">
-          <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
-          <span><kbd>↵</kbd> Open</span>
-          <span><kbd>ESC</kbd> Close</span>
+          <span>
+            <kbd>↑</kbd>
+            <kbd>↓</kbd> Navigate
+          </span>
+          <span>
+            <kbd>↵</kbd> Open
+          </span>
+          <span>
+            <kbd>ESC</kbd> Close
+          </span>
         </div>
       </div>
     </div>

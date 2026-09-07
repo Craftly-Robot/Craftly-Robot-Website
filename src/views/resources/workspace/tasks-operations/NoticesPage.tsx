@@ -23,14 +23,12 @@ export default function NoticesPage() {
       tocItems={[{ id: "notice-board", label: "Notice Board" }]}
     >
       <p className="docs__text">
-        The Notice Board is the official place for sharing organizational
-        notices and messages.
+        The Notice Board is the official place for sharing organizational notices and messages.
       </p>
 
       <p className="docs__text">
-        Any official announcement, important message, update, instruction, or
-        information that needs to be communicated to members can be published on
-        the Notice Board.
+        Any official announcement, important message, update, instruction, or information that needs
+        to be communicated to members can be published on the Notice Board.
       </p>
 
       <div ref={visualRef} className="notice-preview reveal">
@@ -42,9 +40,19 @@ export default function NoticesPage() {
           <div className="notice-preview__body">
             <ul className="notice-preview__list" aria-label="Sample notices">
               {sampleNotices.map(({ title, icon: Icon }, index) => (
-                <li key={title} className={index === 0 ? "notice-preview__item notice-preview__item--selected" : "notice-preview__item"}>
+                <li
+                  key={title}
+                  className={
+                    index === 0
+                      ? "notice-preview__item notice-preview__item--selected"
+                      : "notice-preview__item"
+                  }
+                >
                   <Icon size={32} stroke={1.5} aria-hidden="true" />
-                  <span>{title}{index === 0 && <span className="sr-only"> — shown in detail</span>}</span>
+                  <span>
+                    {title}
+                    {index === 0 && <span className="sr-only"> — shown in detail</span>}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -52,8 +60,8 @@ export default function NoticesPage() {
               <p className="notice-preview__eyebrow">Organization update</p>
               <h3>Workspace update</h3>
               <p className="notice-preview__message">
-                The latest workspace guidance is now available. Review the shared
-                resources before your next task.
+                The latest workspace guidance is now available. Review the shared resources before
+                your next task.
               </p>
               <p className="notice-preview__audience">For all members</p>
             </div>

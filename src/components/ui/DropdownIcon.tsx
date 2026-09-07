@@ -12,11 +12,7 @@ interface DropdownIconProps {
  * Animated dropdown toggle icon.
  * Morphs between plus (+) and minus (−) states using CSS transforms.
  */
-export default function DropdownIcon({
-  isOpen,
-  size = 24,
-  className = "",
-}: DropdownIconProps) {
+export default function DropdownIcon({ isOpen, size = 24, className = "" }: DropdownIconProps) {
   const thickness = Math.max(2, Math.round(size / 12));
 
   return (

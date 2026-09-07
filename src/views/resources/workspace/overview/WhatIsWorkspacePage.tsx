@@ -18,21 +18,17 @@ export default function WhatIsWorkspacePage() {
       ]}
     >
       <p className="docs__text">
-        Craftly Workspace is the operational system that powers how Craftly
-        organizes its people, work, communication, resources, and internal
-        processes.
+        Craftly Workspace is the operational system that powers how Craftly organizes its people,
+        work, communication, resources, and internal processes.
       </p>
 
       <p className="docs__text">
-        Craftly is not only building software products; it is building a
-        technology organization and the systems required to make that
-        organization operate effectively. Workspace is the current working
-        product responsible for that operational layer.
+        Craftly is not only building software products; it is building a technology organization and
+        the systems required to make that organization operate effectively. Workspace is the current
+        working product responsible for that operational layer.
       </p>
 
-      <p className="docs__text">
-        Workspace provides a structured environment where members can:
-      </p>
+      <p className="docs__text">Workspace provides a structured environment where members can:</p>
       <ul className="docs__list">
         <li>Complete onboarding and establish their organizational identity</li>
         <li>Understand their roles and responsibilities</li>
@@ -48,14 +44,13 @@ export default function WhatIsWorkspacePage() {
       </ul>
 
       <p className="docs__text">
-        The goal is to replace scattered communication and disconnected
-        workflows with one structured system for getting work done.
+        The goal is to replace scattered communication and disconnected workflows with one
+        structured system for getting work done.
       </p>
 
       <p className="docs__text">
-        Workspace is therefore not simply a dashboard or project-management
-        application. It acts as the operational foundation of the Craftly
-        organization.
+        Workspace is therefore not simply a dashboard or project-management application. It acts as
+        the operational foundation of the Craftly organization.
       </p>
     </DocPage>
   );

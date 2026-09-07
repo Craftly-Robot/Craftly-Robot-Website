@@ -15,9 +15,7 @@ export default function Footer() {
               alt="Craftly"
             />
           </Link>
-          <p className="footer__tagline">
-            The operating system for intelligent organizations.
-          </p>
+          <p className="footer__tagline">The operating system for intelligent organizations.</p>
         </div>
 
         {/* Middle: Links */}

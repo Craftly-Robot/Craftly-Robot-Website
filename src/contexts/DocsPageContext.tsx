@@ -23,9 +23,5 @@ export function DocsPageProvider({
   value: DocsPageData;
   children: ReactNode;
 }) {
-  return (
-    <DocsPageContext.Provider value={value}>
-      {children}
-    </DocsPageContext.Provider>
-  );
+  return <DocsPageContext.Provider value={value}>{children}</DocsPageContext.Provider>;
 }

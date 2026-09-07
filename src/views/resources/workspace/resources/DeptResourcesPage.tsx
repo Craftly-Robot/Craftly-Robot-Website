@@ -7,12 +7,7 @@ export default function DeptResourcesPage() {
     <DocPage
       title="Department Resources — Craftly Workspace"
       description="Department Resources in Craftly Workspace"
-      crumbs={[
-        "Documentation",
-        "Craftly Workspace",
-        "Resources",
-        "Department Resources",
-      ]}
+      crumbs={["Documentation", "Craftly Workspace", "Resources", "Department Resources"]}
       pageId="department-resources"
       pageTitle="Department Resources"
       tocItems={[
@@ -33,49 +28,43 @@ export default function DeptResourcesPage() {
       ]}
     >
       <p className="docs__text">
-        The Department Resources section is the central resource area for each
-        department inside Craftly Workspace. It contains the information, tools,
-        documentation, instructions, files, and working materials that members
-        need to perform their responsibilities.
+        The Department Resources section is the central resource area for each department inside
+        Craftly Workspace. It contains the information, tools, documentation, instructions, files,
+        and working materials that members need to perform their responsibilities.
       </p>
       <p className="docs__text">
-        Department Resources are not identical for every member. What a member
-        can see and use depends on their department, position, responsibilities,
-        and level of access.
+        Department Resources are not identical for every member. What a member can see and use
+        depends on their department, position, responsibilities, and level of access.
       </p>
       <p className="docs__text">
-        The purpose is to give every department its own working environment
-        inside Craftly Workspace rather than forcing every department to use the
-        same structure.
+        The purpose is to give every department its own working environment inside Craftly Workspace
+        rather than forcing every department to use the same structure.
       </p>
 
       <h2 className="docs__subtitle" id="how-department-resources-work">
         How Department Resources Work
       </h2>
       <p className="docs__text">
-        Each department has its own resources based on the type of work it
-        performs.
+        Each department has its own resources based on the type of work it performs.
       </p>
       <p className="docs__text">For example:</p>
       <p className="docs__text">
-        <strong>Operations</strong> → Projects, project instructions, technical
-        resources, project files, tools, and related work materials
+        <strong>Operations</strong> → Projects, project instructions, technical resources, project
+        files, tools, and related work materials
       </p>
       <p className="docs__text">
-        While another department may have completely different resources based
-        on its responsibilities.
+        While another department may have completely different resources based on its
+        responsibilities.
       </p>
       <p className="docs__text">
-        A member will therefore see resources that are relevant to their
-        department and position.
+        A member will therefore see resources that are relevant to their department and position.
       </p>
 
       <h2 className="docs__subtitle" id="department-specific-work">
         Department-Specific Work
       </h2>
       <p className="docs__text">
-        Every department has different responsibilities, so its resources are
-        organized differently.
+        Every department has different responsibilities, so its resources are organized differently.
       </p>
       <p className="docs__text">A department may have:</p>
       <ul className="docs__list">
@@ -92,20 +81,19 @@ export default function DeptResourcesPage() {
         <li>Project or operational resources</li>
       </ul>
       <p className="docs__text">
-        The resources available to a Junior member may therefore be different
-        from those available to a Senior, Unit Leader, or C-Suite member.
+        The resources available to a Junior member may therefore be different from those available
+        to a Senior, Unit Leader, or C-Suite member.
       </p>
 
       <h2 className="docs__subtitle" id="operations-department">
         Operations Department
       </h2>
       <p className="docs__text">
-        For the Operations Department, Projects are one of the primary working
-        resources.
+        For the Operations Department, Projects are one of the primary working resources.
       </p>
       <p className="docs__text">
-        Projects are created to provide members with practical work and evaluate
-        their ability to execute real technical or operational responsibilities.
+        Projects are created to provide members with practical work and evaluate their ability to
+        execute real technical or operational responsibilities.
       </p>
       <p className="docs__text">Each project can contain:</p>
       <ul className="docs__list">
@@ -121,32 +109,30 @@ export default function DeptResourcesPage() {
         <li>Submission requirements</li>
       </ul>
       <p className="docs__text">
-        Members can first read the short description available inside Workspace
-        to understand what the project is about.
+        Members can first read the short description available inside Workspace to understand what
+        the project is about.
       </p>
       <p className="docs__text">
-        For the complete requirements, they can download the provided project
-        package and extract it locally.
+        For the complete requirements, they can download the provided project package and extract it
+        locally.
       </p>
 
       <h2 className="docs__subtitle" id="project-package">
         Project Package
       </h2>
       <p className="docs__text">
-        A project package may contain the complete environment required to work
-        on the project.
+        A project package may contain the complete environment required to work on the project.
       </p>
       <p className="docs__text">
         After extracting the package, members may find resources such as:
       </p>
       <p className="docs__text">
-        <strong>Project Files</strong> → <strong>MCP</strong> →{" "}
-        <strong>Git Configuration</strong> → <strong>AGENT.md</strong> →{" "}
-        <strong>Supporting Resources</strong>
+        <strong>Project Files</strong> → <strong>MCP</strong> → <strong>Git Configuration</strong> →{" "}
+        <strong>AGENT.md</strong> → <strong>Supporting Resources</strong>
       </p>
       <p className="docs__text">
-        The <code>AGENT.md</code> file contains important project specific
-        instructions that the member should read before beginning the work.
+        The <code>AGENT.md</code> file contains important project specific instructions that the
+        member should read before beginning the work.
       </p>
       <p className="docs__text">It can define things such as:</p>
       <ul className="docs__list">
@@ -167,13 +153,11 @@ export default function DeptResourcesPage() {
         Git & Project Submission
       </h2>
       <p className="docs__text">
-        Projects may include a Git-based workflow so that members can work on
-        the project locally and push their completed work to the designated
-        Craftly repository/server.
+        Projects may include a Git-based workflow so that members can work on the project locally
+        and push their completed work to the designated Craftly repository/server.
       </p>
       <p className="docs__text">
-        The project documentation should specify the required repository and
-        workflow.
+        The project documentation should specify the required repository and workflow.
       </p>
       <p className="docs__text">Members should:</p>
       <ul className="docs__list">
@@ -190,9 +174,8 @@ export default function DeptResourcesPage() {
         <li>Submit the required evidence through Workspace.</li>
       </ul>
       <p className="docs__text">
-        This allows Craftly to evaluate not only whether a member completed a
-        task, but also how effectively they can work with a real technical
-        project.
+        This allows Craftly to evaluate not only whether a member completed a task, but also how
+        effectively they can work with a real technical project.
       </p>
 
       <h2 className="docs__subtitle" id="position-based-resources">
@@ -202,9 +185,8 @@ export default function DeptResourcesPage() {
         Department Resources can also change according to a member's position.
       </p>
       <p className="docs__text">
-        For example, a Junior member may primarily receive resources required to
-        execute assigned work, while a Senior or Unit Leader may have additional
-        resources related to:
+        For example, a Junior member may primarily receive resources required to execute assigned
+        work, while a Senior or Unit Leader may have additional resources related to:
       </p>
       <ul className="docs__list">
         <li>Team management</li>
@@ -216,33 +198,31 @@ export default function DeptResourcesPage() {
         <li>Member coordination</li>
       </ul>
       <p className="docs__text">
-        Higher-level positions may therefore have access to additional controls
-        and resources that are necessary for their responsibilities.
+        Higher-level positions may therefore have access to additional controls and resources that
+        are necessary for their responsibilities.
       </p>
 
       <h2 className="docs__subtitle" id="why-department-resources-matter">
         Why Department Resources Matter
       </h2>
       <p className="docs__text">
-        Department Resources provide a structured working environment where
-        members can find the information they need without depending entirely on
-        informal communication.
+        Department Resources provide a structured working environment where members can find the
+        information they need without depending entirely on informal communication.
       </p>
       <p className="docs__text">Instead of asking repeatedly:</p>
       <p className="docs__text">
         <em>"What am I supposed to do?"</em>
       </p>
       <p className="docs__text">
-        members should first check the resources available to their department,
-        position, project, and assigned work.
+        members should first check the resources available to their department, position, project,
+        and assigned work.
       </p>
       <p className="docs__text">
         This makes the organization more self directed, organized, and scalable.
       </p>
       <p className="docs__text">
-        Ultimately, Department Resources are designed to give each department
-        the right tools, information, and working environment needed to perform
-        its responsibilities effectively.
+        Ultimately, Department Resources are designed to give each department the right tools,
+        information, and working environment needed to perform its responsibilities effectively.
       </p>
     </DocPage>
   );

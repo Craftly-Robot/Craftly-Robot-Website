@@ -40,12 +40,8 @@ export default function DocPage({
       <div className="docs__breadcrumb">
         {displayCrumbs.map((crumb, index) => (
           <Fragment key={index}>
-            {index === displayCrumbs.length - 1 ? (
-              <strong>{crumb}</strong>
-            ) : (
-              crumb
-            )}
-            {index < displayCrumbs.length - 1 && <> &gt;{" "}</>}
+            {index === displayCrumbs.length - 1 ? <strong>{crumb}</strong> : crumb}
+            {index < displayCrumbs.length - 1 && <> &gt; </>}
           </Fragment>
         ))}
       </div>

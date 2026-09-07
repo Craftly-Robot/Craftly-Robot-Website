@@ -3,7 +3,8 @@ export const robotDemo = {
   title: "Your goal. Your agent.",
   agent: "Your agent",
   approval: "Waiting for your approval",
-  description: "Illustrative agent workflows for finding A-positive blood, a tutor, or an investor. Your agent discovers relevant agents, gathers potential options, and waits for your approval before contact.",
+  description:
+    "Illustrative agent workflows for finding A-positive blood, a tutor, or an investor. Your agent discovers relevant agents, gathers potential options, and waits for your approval before contact.",
   timing: { request: 1500, discovery: 2000, response: 2000, approval: 2500, reset: 1000 },
   scenarios: [
     {

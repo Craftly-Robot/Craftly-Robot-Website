@@ -33,31 +33,76 @@ export default function PricingPage() {
             </div>
             <div className="pricing-card__features">
               <div className="pricing-card__feature">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span>Unlimited tasks and projects</span>
               </div>
               <div className="pricing-card__feature">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span>Unlimited team members</span>
               </div>
               <div className="pricing-card__feature">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span>All platforms (macOS, Windows, Linux, Android, iOS)</span>
               </div>
               <div className="pricing-card__feature">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span>Full documentation access</span>
               </div>
               <div className="pricing-card__feature">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 <span>Community support</span>
@@ -74,15 +119,24 @@ export default function PricingPage() {
             <h3>Frequently Asked Questions</h3>
             <div className="pricing-faq__item">
               <h4>Is there really no cost?</h4>
-              <p>Yes. Craftly Workspace is completely free. We believe essential software for organizations should be accessible to everyone.</p>
+              <p>
+                Yes. Craftly Workspace is completely free. We believe essential software for
+                organizations should be accessible to everyone.
+              </p>
             </div>
             <div className="pricing-faq__item">
               <h4>What about Craftly Robot?</h4>
-              <p>Craftly Robot is currently in development. Pricing details will be announced before launch.</p>
+              <p>
+                Craftly Robot is currently in development. Pricing details will be announced before
+                launch.
+              </p>
             </div>
             <div className="pricing-faq__item">
               <h4>Are there any limits?</h4>
-              <p>No. Unlimited tasks, projects, team members, and everything else. No artificial limits.</p>
+              <p>
+                No. Unlimited tasks, projects, team members, and everything else. No artificial
+                limits.
+              </p>
             </div>
           </div>
         </div>

@@ -140,7 +140,9 @@
   border-radius: var(--radius-xl);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .abstracted-ui-feature:hover {
@@ -327,7 +329,12 @@
 }
 
 [data-theme="dark"] .how-it-works {
-  background: linear-gradient(180deg, var(--color-bg) 0%, hsla(220, 15%, 6%, 0.3) 50%, var(--color-bg) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    hsla(220, 15%, 6%, 0.3) 50%,
+    var(--color-bg) 100%
+  );
 }
 
 .how-it-works__title {
@@ -512,7 +519,12 @@
 }
 
 [data-theme="dark"] .robot-architecture {
-  background: linear-gradient(180deg, var(--color-bg) 0%, hsla(220, 15%, 6%, 0.3) 50%, var(--color-bg) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    hsla(220, 15%, 6%, 0.3) 50%,
+    var(--color-bg) 100%
+  );
 }
 
 .robot-architecture__title {
@@ -551,7 +563,9 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   min-width: 100px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 [data-theme="dark"] .robot-architecture__node {
@@ -842,7 +856,9 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   text-align: center;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .contact-card:hover {

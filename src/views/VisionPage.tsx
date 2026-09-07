@@ -16,8 +16,7 @@ export default function VisionPage() {
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">The Craftly Plan</h1>
           <p className="product-hero-clean__desc">
-            Workspace → Robot → Glass. Building the operating system for
-            intelligent organizations.
+            Workspace → Robot → Glass. Building the operating system for intelligent organizations.
           </p>
         </section>
       </div>
@@ -30,9 +29,8 @@ export default function VisionPage() {
               <div className="vision-stage__badge">Current</div>
               <h2 className="vision-stage__title">Craftly Workspace</h2>
               <p className="vision-stage__desc">
-                Your intelligent workspace for operating modern organizations.
-                Connects people, work, communication, and resources in one
-                structured environment.
+                Your intelligent workspace for operating modern organizations. Connects people,
+                work, communication, and resources in one structured environment.
               </p>
               <p className="vision-stage__version">Version 3.8.5 — Available on 5 platforms</p>
               <Link href="/products/workspace" className="btn-product-download">
@@ -51,10 +49,9 @@ export default function VisionPage() {
               <div className="vision-stage__badge vision-stage__badge--dev">In Development</div>
               <h2 className="vision-stage__title">Craftly Robot</h2>
               <p className="vision-stage__desc">
-                An agentic AI system for autonomous software engineering.
-                Understands your goals, discovers relevant agents, and helps
-                coordinate real world tasks through agent-to-agent communication
-                and human controlled action.
+                An agentic AI system for autonomous software engineering. Understands your goals,
+                discovers relevant agents, and helps coordinate real world tasks through
+                agent-to-agent communication and human controlled action.
               </p>
               <Link href="/products/robot" className="btn-product-download">
                 Learn More
@@ -71,9 +68,9 @@ export default function VisionPage() {
             <div className="vision-stage__badge vision-stage__badge--future">Future Vision</div>
             <h2 className="vision-stage__title">Craftly Glass</h2>
             <p className="vision-stage__desc">
-              Our long-term vision for an augmented-reality wearable. Bringing
-              intelligent systems closer to the physical world. The final step
-              in connecting people, work, and AI agents.
+              Our long-term vision for an augmented-reality wearable. Bringing intelligent systems
+              closer to the physical world. The final step in connecting people, work, and AI
+              agents.
             </p>
           </div>
         </div>
@@ -87,10 +84,9 @@ export default function VisionPage() {
               Bangladesh&apos;s first AI company
             </h2>
             <p className="vision-stage__desc text-lg reveal reveal-delay-1">
-              We&apos;re building the future of work in Bangladesh and beyond.
-              Technology should help people coordinate, create, and accomplish
-              meaningful work at scale without losing sight of the people doing
-              that work.
+              We&apos;re building the future of work in Bangladesh and beyond. Technology should
+              help people coordinate, create, and accomplish meaningful work at scale without losing
+              sight of the people doing that work.
             </p>
           </div>
         </div>
@@ -105,22 +101,22 @@ export default function VisionPage() {
               <div className="abstracted-ui-feature reveal reveal-delay-1">
                 <h3 className="abstracted-ui-feature__title">For Organizations</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Run your organization as one connected system. Manage tasks,
-                  communication, and resources through structured workflows.
+                  Run your organization as one connected system. Manage tasks, communication, and
+                  resources through structured workflows.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
                 <h3 className="abstracted-ui-feature__title">For Developers</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Build with intelligent agents. Agent-to-agent negotiation,
-                  autonomous coding, and real-world task coordination.
+                  Build with intelligent agents. Agent-to-agent negotiation, autonomous coding, and
+                  real-world task coordination.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
                 <h3 className="abstracted-ui-feature__title">For Bangladesh</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Bangladesh&apos;s first AI company. Building the future of
-                  work in Bangladesh and beyond.
+                  Bangladesh&apos;s first AI company. Building the future of work in Bangladesh and
+                  beyond.
                 </p>
               </div>
             </div>

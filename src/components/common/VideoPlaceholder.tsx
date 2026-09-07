@@ -44,10 +44,7 @@ export default function VideoPlaceholder({ label }: VideoPlaceholderProps) {
         </div>
         <div className="mock-panel__body">
           <div className="mock-line mock-line--code" />
-          <div
-            className="mock-line mock-line--code"
-            style={{ width: "70%", marginLeft: "12px" }}
-          />
+          <div className="mock-line mock-line--code" style={{ width: "70%", marginLeft: "12px" }} />
           <div className="mock-line mock-line--code" style={{ width: "85%" }} />
         </div>
       </div>

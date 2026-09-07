@@ -37,11 +37,7 @@ import {
   IconArrowsExchange,
   IconClock,
 } from "@tabler/icons-react";
-import {
-  productScenes,
-  type ProductScene,
-  type ProductSceneId,
-} from "../../data/productVisuals";
+import { productScenes, type ProductScene, type ProductSceneId } from "../../data/productVisuals";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./ProductVisual.css";
@@ -82,10 +78,7 @@ const trainingDocs = "/resources/documentation/workspace/resources/training";
 
 type ProductVisualProps = {
   className?: string;
-} & (
-  | { variant: "overview"; scene?: never }
-  | { variant?: "feature"; scene: ProductSceneId }
-);
+} & ({ variant: "overview"; scene?: never } | { variant?: "feature"; scene: ProductSceneId });
 
 /** Marketing-only UI: illustrative states, never connected to product data or compute. */
 export default function ProductVisual(props: ProductVisualProps) {
@@ -124,11 +117,7 @@ export default function ProductVisual(props: ProductVisualProps) {
         <TrainingOverview titleId={titleId} descriptionId={descriptionId} />
       ) : (
         scene && (
-          <figure
-            className="pv-scene"
-            aria-labelledby={titleId}
-            aria-describedby={descriptionId}
-          >
+          <figure className="pv-scene" aria-labelledby={titleId} aria-describedby={descriptionId}>
             <figcaption className="pv-scene__header">
               <span className="pv-eyebrow">
                 Craftly {scene.product === "workspace" ? "Workspace" : "Robot"}
@@ -158,19 +147,9 @@ export default function ProductVisual(props: ProductVisualProps) {
   );
 }
 
-function TrainingOverview({
-  titleId,
-  descriptionId,
-}: {
-  titleId: string;
-  descriptionId: string;
-}) {
+function TrainingOverview({ titleId, descriptionId }: { titleId: string; descriptionId: string }) {
   return (
-    <section
-      className="pv-dashboard"
-      aria-labelledby={titleId}
-      aria-describedby={descriptionId}
-    >
+    <section className="pv-dashboard" aria-labelledby={titleId} aria-describedby={descriptionId}>
       <aside className="pv-sidebar" aria-label="Illustrative Workspace sidebar">
         <div className="pv-brand">
           <ImageWithFallback
@@ -183,10 +162,7 @@ function TrainingOverview({
         </div>
         <ul className="pv-sidebar__items">
           {sidebar.map(([label, Icon]) => (
-            <li
-              key={label}
-              className={label === "Training" ? "pv-sidebar__active" : ""}
-            >
+            <li key={label} className={label === "Training" ? "pv-sidebar__active" : ""}>
               <Icon size={21} stroke={1.65} aria-hidden="true" />
               <span>{label}</span>
             </li>
@@ -197,9 +173,7 @@ function TrainingOverview({
             W
           </div>
           <div className="pv-sidebar__profile-info">
-            <span className="pv-sidebar__profile-name">
-              Wasif Abdullah Musa
-            </span>
+            <span className="pv-sidebar__profile-name">Wasif Abdullah Musa</span>
             <span className="pv-sidebar__profile-role">Chairman</span>
           </div>
         </div>
@@ -212,10 +186,9 @@ function TrainingOverview({
           </div>
           <h2 id={titleId}>Decentralized model training</h2>
           <p className="sr-only" id={descriptionId}>
-            Members contribute personal or cloud GPU compute to a shared
-            training workload. Below: chain of command and reporting, task
-            evidence and review, and department communication. This is an
-            illustration, not live training data.
+            Members contribute personal or cloud GPU compute to a shared training workload. Below:
+            chain of command and reporting, task evidence and review, and department communication.
+            This is an illustration, not live training data.
           </p>
           <div className="pv-compute">
             <ComputeNodes cloud={false} />
@@ -323,11 +296,7 @@ function MiniSteps({
             </span>
             <span>{label}</span>
             {i < items.length - 1 && (
-              <IconArrowRight
-                className="pv-steps__arrow"
-                size={15}
-                aria-hidden="true"
-              />
+              <IconArrowRight className="pv-steps__arrow" size={15} aria-hidden="true" />
             )}
           </li>
         );
@@ -345,9 +314,7 @@ function SceneContent({ scene }: { scene: ProductScene }) {
           <div key={step} className="pv-message">
             <IconMessageCircle size={20} stroke={1.5} aria-hidden="true" />
             <div>
-              <span>
-                {i === 0 ? "Team channel" : i === 1 ? "Update" : "Follow-up"}
-              </span>
+              <span>{i === 0 ? "Team channel" : i === 1 ? "Update" : "Follow-up"}</span>
               <strong>{step}</strong>
             </div>
           </div>
@@ -411,10 +378,7 @@ function SceneContent({ scene }: { scene: ProductScene }) {
           <Icon size={38} stroke={1.4} aria-hidden="true" />
           <span>Connected context</span>
         </div>
-        <MiniSteps
-          items={scene.steps}
-          symbols={[IconSitemap, IconArrowsExchange, IconUsers]}
-        />
+        <MiniSteps items={scene.steps} symbols={[IconSitemap, IconArrowsExchange, IconUsers]} />
       </div>
     );
   return (

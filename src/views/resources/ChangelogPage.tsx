@@ -109,9 +109,7 @@ const workspaceReleases: ReleaseData[] = [
       {
         type: "Fixes",
         count: 1,
-        items: [
-          "Improved custom hooks and subagents behavior for better reliability.",
-        ],
+        items: ["Improved custom hooks and subagents behavior for better reliability."],
       },
       {
         type: "Patches",
@@ -123,8 +121,7 @@ const workspaceReleases: ReleaseData[] = [
   {
     version: "2.5.0",
     date: "July 31, 2026",
-    title:
-      "Enterprise sign-in: Craftly Enterprise accounts and Workforce Identity Federation",
+    title: "Enterprise sign-in: Craftly Enterprise accounts and Workforce Identity Federation",
     desc: "Added enterprise sign-in support for Craftly Enterprise user accounts (with admin controls) and Workforce Identity Federation via Advanced SSO.",
     accordions: [
       {
@@ -149,8 +146,7 @@ const workspaceReleases: ReleaseData[] = [
   {
     version: "2.4.3",
     date: "July 28, 2026",
-    title:
-      "Preview tabs, MCP timeouts, file attachments, and performance fixes",
+    title: "Preview tabs, MCP timeouts, file attachments, and performance fixes",
     desc: "Added preview tabs, attachment support for .json, .md, and .csv files, MCP timeouts, keyboard shortcuts, and various bug fixes and improvements.",
     accordions: [
       {
@@ -332,9 +328,7 @@ const robotReleases: ReleaseData[] = [
       {
         type: "Fixes",
         count: 1,
-        items: [
-          "Fixed an issue where department routing failed on edge cases.",
-        ],
+        items: ["Fixed an issue where department routing failed on edge cases."],
       },
       {
         type: "Patches",
@@ -360,9 +354,7 @@ const robotReleases: ReleaseData[] = [
       {
         type: "Fixes",
         count: 1,
-        items: [
-          "Fixed an issue where some logs were dropped under heavy load.",
-        ],
+        items: ["Fixed an issue where some logs were dropped under heavy load."],
       },
       {
         type: "Patches",
@@ -463,9 +455,7 @@ const robotReleases: ReleaseData[] = [
 
 export default function ChangelogPage() {
   const [expanded, setExpanded] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<"workspace" | "robot">(
-    "workspace",
-  );
+  const [activeTab, setActiveTab] = useState<"workspace" | "robot">("workspace");
 
   const toggle = (id: string) => {
     setExpanded((prev) => (prev === id ? null : id));
@@ -515,8 +505,7 @@ export default function ChangelogPage() {
           <div className="changelog-banner">
             <InfoIcon />
             <span>
-              New versions are rolled out gradually and may take a few days to
-              reach all users.
+              New versions are rolled out gradually and may take a few days to reach all users.
             </span>
           </div>
 
@@ -526,10 +515,7 @@ export default function ChangelogPage() {
           </div>
 
           <div className="changelog-list">
-            {(activeTab === "workspace"
-              ? workspaceReleases
-              : robotReleases
-            ).map((release) => (
+            {(activeTab === "workspace" ? workspaceReleases : robotReleases).map((release) => (
               <div className="changelog-item" key={release.version}>
                 <div className="changelog-item__left">
                   <div className="cl-version">{release.version}</div>
@@ -548,23 +534,17 @@ export default function ChangelogPage() {
                         const isOpen = expanded === id;
                         return (
                           <div className="cl-accordion" key={acc.type}>
-                            <button
-                              className="cl-accordion__toggle"
-                              onClick={() => toggle(id)}
-                            >
+                            <button className="cl-accordion__toggle" onClick={() => toggle(id)}>
                               <span>
                                 {acc.type} ({acc.count})
                               </span>
                               <DropdownIcon isOpen={isOpen} size={16} />
                             </button>
-                            <div
-                              className={`cl-accordion__content ${isOpen ? "is-open" : ""}`}
-                            >
+                            <div className={`cl-accordion__content ${isOpen ? "is-open" : ""}`}>
                               <div
                                 className="cl-accordion__inner"
                                 style={{
-                                  paddingBottom:
-                                    acc.items.length === 0 ? "16px" : undefined,
+                                  paddingBottom: acc.items.length === 0 ? "16px" : undefined,
                                 }}
                               >
                                 {acc.items.length > 0 ? (

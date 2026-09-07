@@ -36,8 +36,7 @@ export default function ImageWithFallback({
 
   if (error) {
     const isSmall =
-      (typeof width === "number" && width <= 48) ||
-      (typeof height === "number" && height <= 48);
+      (typeof width === "number" && width <= 48) || (typeof height === "number" && height <= 48);
 
     if (isSmall || !fallback) {
       return (

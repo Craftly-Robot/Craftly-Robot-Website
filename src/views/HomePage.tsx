@@ -53,9 +53,8 @@ export default function HomePage() {
             <div className="product-showcase__header reveal">
               <h2 className="product-showcase__title">Two products. One vision.</h2>
               <p className="product-showcase__desc">
-                Workspace is the operating system for organizations. Robot is the
-                autonomous engineering intelligence. Together, they define the
-                future of work.
+                Workspace is the operating system for organizations. Robot is the autonomous
+                engineering intelligence. Together, they define the future of work.
               </p>
             </div>
 
@@ -80,12 +79,13 @@ export default function HomePage() {
               {activeTab === "workspace" && (
                 <div className="product-showcase__panel reveal">
                   <div className="product-showcase__panel-content">
-                    <span className="product-showcase__badge product-showcase__badge--live">Available Now</span>
+                    <span className="product-showcase__badge product-showcase__badge--live">
+                      Available Now
+                    </span>
                     <h3 className="product-showcase__panel-title">Craftly Workspace</h3>
                     <p className="product-showcase__panel-desc">
-                      Your intelligent workspace for operating modern organizations.
-                      Connects people, work, communication, and resources in one
-                      structured environment.
+                      Your intelligent workspace for operating modern organizations. Connects
+                      people, work, communication, and resources in one structured environment.
                     </p>
                     <div className="product-showcase__features">
                       <div className="product-showcase__feature">
@@ -111,11 +111,13 @@ export default function HomePage() {
               {activeTab === "robot" && (
                 <div className="product-showcase__panel reveal">
                   <div className="product-showcase__panel-content">
-                    <span className="product-showcase__badge product-showcase__badge--dev">In Development</span>
+                    <span className="product-showcase__badge product-showcase__badge--dev">
+                      In Development
+                    </span>
                     <h3 className="product-showcase__panel-title">Craftly Robot</h3>
                     <p className="product-showcase__panel-desc">
-                      An agentic AI system for autonomous software engineering.
-                      Currently in active development.
+                      An agentic AI system for autonomous software engineering. Currently in active
+                      development.
                     </p>
                     <div className="product-showcase__features">
                       <div className="product-showcase__feature">
@@ -147,8 +149,8 @@ export default function HomePage() {
             <div className="vision-preview__content reveal">
               <h2 className="vision-preview__title">Building the intelligence</h2>
               <p className="vision-preview__desc">
-                Craftly is a three-stage vision. Workspace is the foundation.
-                Robot is the intelligence. Glass is the future.
+                Craftly is a three-stage vision. Workspace is the foundation. Robot is the
+                intelligence. Glass is the future.
               </p>
 
               <div className="roadmap-timeline">
@@ -160,7 +162,9 @@ export default function HomePage() {
                   <div className="roadmap-timeline__stage roadmap-timeline__stage--complete">
                     <div className="roadmap-timeline__marker" />
                     <div className="roadmap-timeline__card">
-                      <span className="roadmap-timeline__badge roadmap-timeline__badge--live">Live</span>
+                      <span className="roadmap-timeline__badge roadmap-timeline__badge--live">
+                        Live
+                      </span>
                       <h3 className="roadmap-timeline__name">Workspace</h3>
                       <p className="roadmap-timeline__desc">Operating system for organizations</p>
                     </div>
@@ -169,7 +173,9 @@ export default function HomePage() {
                   <div className="roadmap-timeline__stage roadmap-timeline__stage--progress">
                     <div className="roadmap-timeline__marker" />
                     <div className="roadmap-timeline__card">
-                      <span className="roadmap-timeline__badge roadmap-timeline__badge--dev">In Progress</span>
+                      <span className="roadmap-timeline__badge roadmap-timeline__badge--dev">
+                        In Progress
+                      </span>
                       <h3 className="roadmap-timeline__name">Robot</h3>
                       <p className="roadmap-timeline__desc">Autonomous AI engineering</p>
                     </div>
@@ -178,7 +184,9 @@ export default function HomePage() {
                   <div className="roadmap-timeline__stage roadmap-timeline__stage--future">
                     <div className="roadmap-timeline__marker" />
                     <div className="roadmap-timeline__card">
-                      <span className="roadmap-timeline__badge roadmap-timeline__badge--future">Planned</span>
+                      <span className="roadmap-timeline__badge roadmap-timeline__badge--future">
+                        Planned
+                      </span>
                       <h3 className="roadmap-timeline__name">Glass</h3>
                       <p className="roadmap-timeline__desc">The next interface</p>
                     </div>
@@ -201,17 +209,25 @@ export default function HomePage() {
               <div className="use-case-grid__card reveal reveal-delay-1">
                 <div className="use-case-grid__card-icon">⬡</div>
                 <h3>For Organizations</h3>
-                <p>Manage operations, coordinate teams, and track tasks across departments. Built for teams of 5 to 5,000.</p>
+                <p>
+                  Manage operations, coordinate teams, and track tasks across departments. Built for
+                  teams of 5 to 5,000.
+                </p>
               </div>
               <div className="use-case-grid__card reveal reveal-delay-2">
                 <div className="use-case-grid__card-icon">◎</div>
                 <h3>For Developers</h3>
-                <p>Build with AI agents, code intelligence, and autonomous workflows. Ship faster with less overhead.</p>
+                <p>
+                  Build with AI agents, code intelligence, and autonomous workflows. Ship faster
+                  with less overhead.
+                </p>
               </div>
               <div className="use-case-grid__card reveal reveal-delay-3">
                 <div className="use-case-grid__card-icon">🇧🇩</div>
                 <h3>For Bangladesh</h3>
-                <p>Bangladesh&apos;s first AI company. Built locally, designed for global ambition.</p>
+                <p>
+                  Bangladesh&apos;s first AI company. Built locally, designed for global ambition.
+                </p>
               </div>
             </div>
           </div>
@@ -221,17 +237,16 @@ export default function HomePage() {
         <section className="home-cta">
           <div className="container">
             <div className="home-cta__content reveal">
-              <h2 className="home-cta__title">
-                Start building with Craftly today
-              </h2>
-              <p className="home-cta__desc">
-                Free. Open. Available on every platform.
-              </p>
+              <h2 className="home-cta__title">Start building with Craftly today</h2>
+              <p className="home-cta__desc">Free. Open. Available on every platform.</p>
               <div className="home-cta__actions">
                 <Link href="/download" className="home-cta__btn home-cta__btn--primary">
                   Download Craftly
                 </Link>
-                <Link href="/resources/documentation" className="home-cta__btn home-cta__btn--secondary">
+                <Link
+                  href="/resources/documentation"
+                  className="home-cta__btn home-cta__btn--secondary"
+                >
                   Read the Docs
                 </Link>
               </div>

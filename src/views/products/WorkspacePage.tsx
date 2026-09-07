@@ -18,9 +18,8 @@ export default function WorkspacePage() {
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">Craftly Workspace</h1>
           <p className="product-hero-clean__desc">
-            Your intelligent workspace for operating modern organizations.
-            Connects people, work, communication, and resources in one
-            structured environment.
+            Your intelligent workspace for operating modern organizations. Connects people, work,
+            communication, and resources in one structured environment.
           </p>
           <div className="product-hero-clean__actions">
             <Link href="/download" className="btn-product-download">
@@ -60,8 +59,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Organizational Structure</h3>
                 <p className="workspace-option__desc">
-                  Define departments, roles, and reporting chains. Build your
-                  organization chart and keep it clear.
+                  Define departments, roles, and reporting chains. Build your organization chart and
+                  keep it clear.
                 </p>
               </div>
 
@@ -83,8 +82,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Task Management</h3>
                 <p className="workspace-option__desc">
-                  Assign, track, and complete work with clear ownership and
-                  accountability. Every task has an owner.
+                  Assign, track, and complete work with clear ownership and accountability. Every
+                  task has an owner.
                 </p>
               </div>
 
@@ -105,8 +104,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Team Communication</h3>
                 <p className="workspace-option__desc">
-                  Structured messaging through the reporting hierarchy.
-                  Keep organizational conversations clear and focused.
+                  Structured messaging through the reporting hierarchy. Keep organizational
+                  conversations clear and focused.
                 </p>
               </div>
 
@@ -128,8 +127,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Resource Management</h3>
                 <p className="workspace-option__desc">
-                  Allocate and track resources across teams and projects.
-                  Know where everything is and who has it.
+                  Allocate and track resources across teams and projects. Know where everything is
+                  and who has it.
                 </p>
               </div>
             </div>
@@ -150,21 +149,30 @@ export default function WorkspacePage() {
                 <div className="how-it-works__step-number">1</div>
                 <div className="how-it-works__step-content">
                   <h3>Define your structure</h3>
-                  <p>Set up departments, roles, and reporting chains. Mirror your real organization in minutes.</p>
+                  <p>
+                    Set up departments, roles, and reporting chains. Mirror your real organization
+                    in minutes.
+                  </p>
                 </div>
               </div>
               <div className="how-it-works__step reveal reveal-delay-1">
                 <div className="how-it-works__step-number">2</div>
                 <div className="how-it-works__step-content">
                   <h3>Assign and track work</h3>
-                  <p>Create tasks, assign owners, and track progress. Every piece of work has clear accountability.</p>
+                  <p>
+                    Create tasks, assign owners, and track progress. Every piece of work has clear
+                    accountability.
+                  </p>
                 </div>
               </div>
               <div className="how-it-works__step reveal reveal-delay-2">
                 <div className="how-it-works__step-number">3</div>
                 <div className="how-it-works__step-content">
                   <h3>Communicate through hierarchy</h3>
-                  <p>Messages and updates flow through your reporting structure. No more scattered conversations.</p>
+                  <p>
+                    Messages and updates flow through your reporting structure. No more scattered
+                    conversations.
+                  </p>
                 </div>
               </div>
             </div>
@@ -208,28 +216,24 @@ export default function WorkspacePage() {
             <h2 className="abstracted-ui-title reveal">Built for real work</h2>
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <h3 className="abstracted-ui-feature__title">
-                  Operations Teams
-                </h3>
+                <h3 className="abstracted-ui-feature__title">Operations Teams</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Run daily operations through structured workflows. From task
-                  delegation to resource planning, keep everything moving.
+                  Run daily operations through structured workflows. From task delegation to
+                  resource planning, keep everything moving.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <h3 className="abstracted-ui-feature__title">
-                  Project Teams
-                </h3>
+                <h3 className="abstracted-ui-feature__title">Project Teams</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Coordinate people, tasks, and deliverables. Track progress
-                  and keep projects on schedule.
+                  Coordinate people, tasks, and deliverables. Track progress and keep projects on
+                  schedule.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
                 <h3 className="abstracted-ui-feature__title">Leadership</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Track performance and make decisions with data. See what&apos;s
-                  happening across your organization.
+                  Track performance and make decisions with data. See what&apos;s happening across
+                  your organization.
                 </p>
               </div>
             </div>

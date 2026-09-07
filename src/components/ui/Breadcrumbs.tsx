@@ -21,7 +21,16 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         </Link>
         {items.map((item, idx) => (
           <span key={idx} className="breadcrumbs__separator">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              width="14"
+              height="14"
+            >
               <polyline points="9 18 15 12 9 6" />
             </svg>
             {item.href ? (
@@ -29,9 +38,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 {item.label}
               </Link>
             ) : (
-              <span className="breadcrumbs__item breadcrumbs__item--current">
-                {item.label}
-              </span>
+              <span className="breadcrumbs__item breadcrumbs__item--current">{item.label}</span>
             )}
           </span>
         ))}

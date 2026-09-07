@@ -51,11 +51,10 @@ export default function OnboardingQuestionsPage() {
         How the Onboarding Questions Work
       </h2>
       <p className="docs__text">
-        Once you choose “I want to join”, the Craftly onboarding assistant will
-        guide you through a series of questions one step at a time. Answer each
-        question clearly and follow the format requested by the assistant. After
-        some answers, the assistant may ask you to confirm the information
-        before continuing.
+        Once you choose “I want to join”, the Craftly onboarding assistant will guide you through a
+        series of questions one step at a time. Answer each question clearly and follow the format
+        requested by the assistant. After some answers, the assistant may ask you to confirm the
+        information before continuing.
       </p>
 
       <div
@@ -67,18 +66,12 @@ export default function OnboardingQuestionsPage() {
         }}
       >
         {onboardingQuestions.map((q) => (
-          <div
-            key={q.id}
-            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
-          >
+          <div key={q.id} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {/* Text above the image */}
             {q.textAbove ? (
               <div>{q.textAbove}</div>
             ) : (
-              <div
-                className="docs__text-placeholder"
-                style={{ minHeight: "24px" }}
-              ></div>
+              <div className="docs__text-placeholder" style={{ minHeight: "24px" }}></div>
             )}
 
             <div
@@ -103,9 +96,7 @@ export default function OnboardingQuestionsPage() {
                   alt={`Onboarding Question ${q.id}`}
                   loading="lazy"
                   style={{ width: "100%", display: "block" }}
-                  onError={() =>
-                    setImgErrors((prev) => ({ ...prev, [q.id]: true }))
-                  }
+                  onError={() => setImgErrors((prev) => ({ ...prev, [q.id]: true }))}
                 />
               )}
             </div>
@@ -114,10 +105,7 @@ export default function OnboardingQuestionsPage() {
             {q.textBelow ? (
               <div>{q.textBelow}</div>
             ) : (
-              <div
-                className="docs__text-placeholder"
-                style={{ minHeight: "24px" }}
-              ></div>
+              <div className="docs__text-placeholder" style={{ minHeight: "24px" }}></div>
             )}
           </div>
         ))}

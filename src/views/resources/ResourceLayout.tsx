@@ -8,16 +8,11 @@ interface ResourceLayoutProps {
   children?: React.ReactNode;
 }
 
-export default function ResourceLayout({
-  resource,
-  children,
-}: ResourceLayoutProps) {
+export default function ResourceLayout({ resource, children }: ResourceLayoutProps) {
   return (
     <>
       <div className="container">
-        <section
-          className="section section--lg section-content"
-        >
+        <section className="section section--lg section-content">
           <span
             className="text-label"
             style={{
