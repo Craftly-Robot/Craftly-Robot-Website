@@ -44,13 +44,8 @@ export default function Hero() {
             </span>
             <span className="hero__trust-divider" />
             <span className="hero__trust-signal">
-              <span className="hero__trust-icon">🔓</span>
-              Open Source
-            </span>
-            <span className="hero__trust-divider" />
-            <span className="hero__trust-signal">
-              <span className="hero__trust-icon">✦</span>
-              Free Forever
+              <span className="hero__trust-icon">🌍</span>
+              Global Ambition
             </span>
           </div>
         </div>

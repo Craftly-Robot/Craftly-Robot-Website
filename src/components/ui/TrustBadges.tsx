@@ -3,8 +3,6 @@
 import "./TrustBadges.css";
 
 const badges = [
-  { icon: "🔓", label: "Open Source" },
-  { icon: "🆓", label: "Free Forever" },
   { icon: "🇧🇩", label: "Made in Bangladesh" },
   { icon: "🌍", label: "Global Ambition" },
 ];
