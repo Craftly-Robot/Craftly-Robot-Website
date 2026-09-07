@@ -26,6 +26,11 @@ export default function RobotPage() {
           <p className="product-hero-clean__desc text-muted-sm">
             Sign up to be notified when it launches.
           </p>
+          <div className="product-hero-clean__actions">
+            <a href="mailto:hello@craftlyrobot.com?subject=Notify me about Craftly Robot" className="btn-product-download">
+              Join the Waitlist
+            </a>
+          </div>
         </section>
       </div>
 
@@ -107,6 +112,83 @@ export default function RobotPage() {
                   Human approval for consequential actions. You decide what
                   matters. The agents do the work.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture Diagram */}
+      <section className="robot-architecture">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="robot-architecture__title reveal">How Robot thinks</h2>
+            <p className="robot-architecture__desc reveal">
+              A simplified view of the agent architecture.
+            </p>
+            <div className="robot-architecture__diagram reveal">
+              <div className="robot-architecture__node robot-architecture__node--input">
+                <span className="robot-architecture__node-icon">📋</span>
+                <span className="robot-architecture__node-label">Task Input</span>
+              </div>
+              <div className="robot-architecture__connector" />
+              <div className="robot-architecture__node robot-architecture__node--brain">
+                <span className="robot-architecture__node-icon">🧠</span>
+                <span className="robot-architecture__node-label">Planning Agent</span>
+              </div>
+              <div className="robot-architecture__connector" />
+              <div className="robot-architecture__agents">
+                <div className="robot-architecture__node robot-architecture__node--agent">
+                  <span className="robot-architecture__node-icon">💻</span>
+                  <span className="robot-architecture__node-label">Code Agent</span>
+                </div>
+                <div className="robot-architecture__node robot-architecture__node--agent">
+                  <span className="robot-architecture__node-icon">🔍</span>
+                  <span className="robot-architecture__node-label">Review Agent</span>
+                </div>
+                <div className="robot-architecture__node robot-architecture__node--agent">
+                  <span className="robot-architecture__node-icon">✅</span>
+                  <span className="robot-architecture__node-label">Verify Agent</span>
+                </div>
+              </div>
+              <div className="robot-architecture__connector" />
+              <div className="robot-architecture__node robot-architecture__node--output">
+                <span className="robot-architecture__node-icon">🚀</span>
+                <span className="robot-architecture__node-label">Shipped Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Development Timeline */}
+      <section className="robot-timeline">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="robot-timeline__title reveal">Development progress</h2>
+            <div className="robot-timeline__track">
+              <div className="robot-timeline__progress robot-timeline__progress--40" />
+            </div>
+            <div className="robot-timeline__stages">
+              <div className="robot-timeline__stage robot-timeline__stage--complete reveal">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Research</span>
+                <span className="robot-timeline__stage-status robot-timeline__stage-status--done">Done</span>
+              </div>
+              <div className="robot-timeline__stage robot-timeline__stage--progress reveal reveal-delay-1">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Core Engine</span>
+                <span className="robot-timeline__stage-status robot-timeline__stage-status--active">In Progress</span>
+              </div>
+              <div className="robot-timeline__stage robot-timeline__stage--future reveal reveal-delay-2">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Agent Coordination</span>
+                <span className="robot-timeline__stage-status">Upcoming</span>
+              </div>
+              <div className="robot-timeline__stage robot-timeline__stage--future reveal reveal-delay-3">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Public Beta</span>
+                <span className="robot-timeline__stage-status">Upcoming</span>
               </div>
             </div>
           </div>

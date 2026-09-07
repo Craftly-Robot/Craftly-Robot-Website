@@ -62,14 +62,16 @@ const DownloadButton = ({
 interface PlatformSectionProps {
   icon: React.ReactNode;
   title: string;
+  fileSize?: string;
   children: React.ReactNode;
 }
 
-const PlatformSection = ({ icon, title, children }: PlatformSectionProps) => (
+const PlatformSection = ({ icon, title, fileSize, children }: PlatformSectionProps) => (
   <div className="os-column">
     <h3 className="os-title">
       {icon} {title}
     </h3>
+    {fileSize && <div className="os-file-size">{fileSize}</div>}
     {children}
   </div>
 );
@@ -101,7 +103,7 @@ export default function DownloadPage() {
         </div>
 
         <div className="download-columns">
-          <PlatformSection icon={<AppleIcon />} title="macOS">
+          <PlatformSection icon={<AppleIcon />} title="macOS" fileSize="~180 MB">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_macOS">
               Download for macOS
             </DownloadButton>
@@ -111,9 +113,13 @@ export default function DownloadPage() {
                 macOS 12 (Monterey) or later
               </div>
             </div>
+            <div className="install-instructions">
+              <div className="install-instructions__title">Installation</div>
+              <div className="install-instructions__text">Open the .dmg file and drag Craftly to Applications</div>
+            </div>
           </PlatformSection>
 
-          <PlatformSection icon={<WindowsIcon />} title="Windows">
+          <PlatformSection icon={<WindowsIcon />} title="Windows" fileSize="~150 MB">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_windows">
               Download for Windows
             </DownloadButton>
@@ -121,9 +127,13 @@ export default function DownloadPage() {
               <div className="min-reqs__title">Minimum Requirements</div>
               <div className="min-reqs__text">Windows 10 (64 bit)</div>
             </div>
+            <div className="install-instructions">
+              <div className="install-instructions__title">Installation</div>
+              <div className="install-instructions__text">Run the installer and follow the setup wizard</div>
+            </div>
           </PlatformSection>
 
-          <PlatformSection icon={<LinuxIcon />} title="Linux">
+          <PlatformSection icon={<LinuxIcon />} title="Linux" fileSize="~160 MB">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_linux">
               Download for Linux
             </DownloadButton>
@@ -132,6 +142,10 @@ export default function DownloadPage() {
               <div className="min-reqs__text">
                 Ubuntu 20, Debian 10, Fedora 36, RHEL 8 or later
               </div>
+            </div>
+            <div className="install-instructions">
+              <div className="install-instructions__title">Installation</div>
+              <div className="install-instructions__text">Extract the archive and run the executable</div>
             </div>
           </PlatformSection>
         </div>

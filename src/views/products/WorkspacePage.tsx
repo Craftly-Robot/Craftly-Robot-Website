@@ -137,6 +137,70 @@ export default function WorkspacePage() {
         </div>
       </section>
 
+      {/* How It Works — Step by Step */}
+      <section className="how-it-works">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="how-it-works__title reveal">How it works</h2>
+            <p className="how-it-works__desc reveal">
+              Three steps to transform how your organization operates.
+            </p>
+            <div className="how-it-works__steps">
+              <div className="how-it-works__step reveal">
+                <div className="how-it-works__step-number">1</div>
+                <div className="how-it-works__step-content">
+                  <h3>Define your structure</h3>
+                  <p>Set up departments, roles, and reporting chains. Mirror your real organization in minutes.</p>
+                </div>
+              </div>
+              <div className="how-it-works__step reveal reveal-delay-1">
+                <div className="how-it-works__step-number">2</div>
+                <div className="how-it-works__step-content">
+                  <h3>Assign and track work</h3>
+                  <p>Create tasks, assign owners, and track progress. Every piece of work has clear accountability.</p>
+                </div>
+              </div>
+              <div className="how-it-works__step reveal reveal-delay-2">
+                <div className="how-it-works__step-number">3</div>
+                <div className="how-it-works__step-content">
+                  <h3>Communicate through hierarchy</h3>
+                  <p>Messages and updates flow through your reporting structure. No more scattered conversations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before vs After */}
+      <section className="comparison-section">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="comparison__title reveal">Before Craftly vs After Craftly</h2>
+            <div className="comparison__grid">
+              <div className="comparison__column comparison__column--before reveal">
+                <span className="comparison__badge comparison__badge--before">Before</span>
+                <ul className="comparison__list">
+                  <li>Scattered tools for tasks, communication, and docs</li>
+                  <li>No clear ownership or accountability</li>
+                  <li>Meetings to coordinate what a dashboard could show</li>
+                  <li>Information lost in chat threads</li>
+                </ul>
+              </div>
+              <div className="comparison__column comparison__column--after reveal reveal-delay-1">
+                <span className="comparison__badge comparison__badge--after">After</span>
+                <ul className="comparison__list">
+                  <li>One workspace for people, tasks, and communication</li>
+                  <li>Clear roles, reporting chains, and task ownership</li>
+                  <li>Real-time visibility without extra meetings</li>
+                  <li>Structured information flows through hierarchy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How Teams Use It */}
       <section className="abstracted-ui-section">
         <div className="product-showcase-large product-showcase-large--no-margin">
