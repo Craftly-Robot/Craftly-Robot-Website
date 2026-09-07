@@ -57,8 +57,8 @@ export default function UseCasesPage() {
               </div>
             </div>
             <div style={{ textAlign: "center", marginTop: "32px" }}>
-              <Link href="/use-cases/operations" className="btn-product-download">
-                Read more
+              <Link href="/products/workspace" className="btn-product-download">
+                Explore Workspace
               </Link>
             </div>
           </div>
@@ -102,8 +102,8 @@ export default function UseCasesPage() {
               </div>
             </div>
             <div style={{ textAlign: "center", marginTop: "32px" }}>
-              <Link href="/use-cases/agent-negotiation" className="btn-product-download">
-                Read more
+              <Link href="/products/robot" className="btn-product-download">
+                Explore Robot
               </Link>
             </div>
           </div>
