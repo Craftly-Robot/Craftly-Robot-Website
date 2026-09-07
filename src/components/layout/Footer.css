@@ -58,8 +58,9 @@
 .footer__links {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, auto);
+  gap: 48px;
+  justify-content: end;
 }
 
 @media (min-width: 768px) {
