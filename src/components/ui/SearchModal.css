@@ -5,7 +5,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 15vh;
+  padding: 15vh 24px 0;
 }
 
 .search-modal__backdrop {
@@ -35,6 +35,12 @@
 @media (min-width: 1024px) {
   .search-modal__container {
     max-width: 680px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .search-modal__container {
+    max-width: 800px;
   }
 }
 
