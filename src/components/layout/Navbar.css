@@ -4,9 +4,8 @@
   left: 0;
   width: 100vw;
   max-width: 100%;
-  height: var(--nav-height);
-  padding-top: 6px;
-  padding-bottom: 6px;
+  min-height: var(--nav-height);
+  padding: 8px 0;
   z-index: var(--z-sticky);
   transition:
     background-color var(--duration-normal) var(--ease-out),
