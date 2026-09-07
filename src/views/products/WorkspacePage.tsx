@@ -2,13 +2,10 @@
 
 import ProductVisual from "../../components/product/ProductVisual";
 import Link from "next/link";
-import { products } from "../../data/products";
 
 import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./ProductPage.css";
-
-const product = products.find((p) => p.id === "workspace")!;
 
 export default function WorkspacePage() {
   const revealRef = useScrollReveal();
@@ -17,8 +14,12 @@ export default function WorkspacePage() {
     <div ref={revealRef}>
       <div className="container">
         <section className="product-hero-clean">
-          <h1 className="product-hero-clean__title">{product.name}</h1>
-          <p className="product-hero-clean__desc">{product.description}</p>
+          <h1 className="product-hero-clean__title">Craftly Workspace</h1>
+          <p className="product-hero-clean__desc">
+            Your intelligent workspace for operating modern organizations.
+            Connects people, work, communication, and resources in one
+            structured environment.
+          </p>
           <div className="product-hero-clean__actions">
             <Link href="/download" className="btn-product-download">
               Download
@@ -31,206 +32,140 @@ export default function WorkspacePage() {
         <ProductVisual variant="overview" />
       </div>
 
+      {/* Key Features — 4, not 10 */}
       <section className="explore-features-section">
         <div className="product-showcase-large" style={{ marginBottom: 0 }}>
           <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
             <h2 className="explore-features-section__title reveal">
-              Explore the main features
+              Everything your organization needs
             </h2>
-            <ProductVisual
-              scene="workspace-features"
-              className="reveal reveal-delay-1"
-            />
+            <div className="workspace-options-grid">
+              <div className="workspace-option reveal">
+                <div className="workspace-option__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="48"
+                    height="48"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+                    <path d="M3 8v12a2 2 0 0 0 2 2h12" />
+                  </svg>
+                </div>
+                <h3 className="workspace-option__title">Organizational Structure</h3>
+                <p className="workspace-option__desc">
+                  Define departments, roles, and reporting chains. Build your
+                  organization chart and keep it clear.
+                </p>
+              </div>
+
+              <div className="workspace-option reveal reveal-delay-1">
+                <div className="workspace-option__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="48"
+                    height="48"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 11l3 3L22 4" />
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                  </svg>
+                </div>
+                <h3 className="workspace-option__title">Task Management</h3>
+                <p className="workspace-option__desc">
+                  Assign, track, and complete work with clear ownership and
+                  accountability. Every task has an owner.
+                </p>
+              </div>
+
+              <div className="workspace-option reveal reveal-delay-2">
+                <div className="workspace-option__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="48"
+                    height="48"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
+                </div>
+                <h3 className="workspace-option__title">Team Communication</h3>
+                <p className="workspace-option__desc">
+                  Structured messaging through the reporting hierarchy.
+                  Keep organizational conversations clear and focused.
+                </p>
+              </div>
+
+              <div className="workspace-option reveal reveal-delay-3">
+                <div className="workspace-option__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="48"
+                    height="48"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
+                </div>
+                <h3 className="workspace-option__title">Resource Management</h3>
+                <p className="workspace-option__desc">
+                  Allocate and track resources across teams and projects.
+                  Know where everything is and who has it.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* How Teams Use It */}
       <section className="abstracted-ui-section">
         <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-            <h2 className="abstracted-ui-title reveal">An Abstracted UI</h2>
-            <p className="abstracted-ui-desc reveal reveal-delay-1">
-              Your AI agents' central command center, providing a unified
-              platform to launch, monitor, and orchestrate their activities.
-            </p>
+          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+            <h2 className="abstracted-ui-title reveal">Built for real work</h2>
             <div className="abstracted-ui-grid">
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <ProductVisual scene="workspace-work" />
+              <div className="abstracted-ui-feature reveal reveal-delay-1">
                 <h3 className="abstracted-ui-feature__title">
-                  Work Management
+                  Operations Teams
                 </h3>
                 <p className="abstracted-ui-feature__desc">
-                  Track presence, task submissions, and manage attendance
-                  seamlessly from a unified interface.
+                  Run daily operations through structured workflows. From task
+                  delegation to resource planning, keep everything moving.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <ProductVisual scene="workspace-notifications" />
                 <h3 className="abstracted-ui-feature__title">
-                  Smart Notifications
+                  Project Teams
                 </h3>
                 <p className="abstracted-ui-feature__desc">
-                  Stay updated with workspace decisions, private alerts, and
-                  important notifications pushed in real-time.
+                  Coordinate people, tasks, and deliverables. Track progress
+                  and keep projects on schedule.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <ProductVisual scene="workspace-collaboration" />
-                <h3 className="abstracted-ui-feature__title">
-                  Team Collaboration
-                </h3>
+                <h3 className="abstracted-ui-feature__title">Leadership</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Communicate efficiently with your team members through
-                  integrated chat, ensuring seamless information flow.
+                  Track performance and make decisions with data. See what&apos;s
+                  happening across your organization.
                 </p>
               </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-3">
-                <ProductVisual scene="workspace-messaging" />
-                <h3 className="abstracted-ui-feature__title">
-                  Direct Messaging
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Send direct messages, share updates, and coordinate with
-                  specific team units instantly.
-                </p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <ProductVisual scene="workspace-workflows" />
-                <h3 className="abstracted-ui-feature__title">
-                  Custom Workflows
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Design and implement custom workflows tailored to your
-                  specific organizational needs.
-                </p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-4">
-                <ProductVisual scene="workspace-resources" />
-                <h3 className="abstracted-ui-feature__title">
-                  Resource Allocation
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Allocate and manage resources effectively across different
-                  teams and projects.
-                </p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <ProductVisual scene="workspace-subagents" />
-                <h3 className="abstracted-ui-feature__title">
-                  Dynamic Subagents
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Subagents are defined and instantiated dynamically to tackle
-                  parallel parts of complex problems, leading to faster and
-                  better results.
-                </p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <ProductVisual scene="workspace-schedule" />
-                <h3 className="abstracted-ui-feature__title">
-                  Scheduled Tasks
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Automate routine checks with Scheduled Tasks, simply define a
-                  cron schedule and the agents start and run autonomously in the
-                  background.
-                </p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <ProductVisual scene="workspace-analytics" />
-                <h3 className="abstracted-ui-feature__title">
-                  Performance Analytics
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Monitor the performance and efficiency of your AI agents with
-                  comprehensive visual analytics.
-                </p>
-              </div>
-              <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <ProductVisual scene="workspace-integrations" />
-                <h3 className="abstracted-ui-feature__title">
-                  System Integration
-                </h3>
-                <p className="abstracted-ui-feature__desc">
-                  Connect your workspace with external tools and APIs for a
-                  fully integrated autonomous ecosystem.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="workspace-options-section">
-        <div className="container">
-          <div className="workspace-options-grid">
-            <div className="workspace-option reveal">
-              <div className="workspace-option__icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="48"
-                  height="48"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-                  <path d="M3 8v12a2 2 0 0 0 2 2h12" />
-                </svg>
-              </div>
-              <h3 className="workspace-option__title">Projects</h3>
-              <p className="workspace-option__desc">
-                Group your conversations into Projects, which can span multiple
-                folders and support custom settings and scoped permissions.
-              </p>
-            </div>
-
-            <div className="workspace-option reveal reveal-delay-1">
-              <div className="workspace-option__icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="48"
-                  height="48"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                </svg>
-              </div>
-              <h3 className="workspace-option__title">Communication</h3>
-              <p className="workspace-option__desc">
-                Stay connected through structured communication. Communicate
-                through your reporting structure, and keep organizational
-                conversations clear.
-              </p>
-            </div>
-
-            <div className="workspace-option reveal reveal-delay-2">
-              <div className="workspace-option__icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="48"
-                  height="48"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M9 11l3 3L22 4" />
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-                </svg>
-              </div>
-              <h3 className="workspace-option__title">Tasks & Operations</h3>
-              <p className="workspace-option__desc">
-                Turn organizational commands into execution. Receive official
-                tasks through the Notice Board or Command Chain.
-              </p>
             </div>
           </div>
         </div>
