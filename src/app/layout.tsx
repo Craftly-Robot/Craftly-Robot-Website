@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
+import Providers from "@/components/layout/Providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -130,13 +131,15 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="layout">
-          <Navbar />
-          <main className="layout__main" id="main-content">
-            {children}
-          </main>
-          <ConditionalFooter />
-        </div>
+        <Providers>
+          <div className="layout">
+            <Navbar />
+            <main className="layout__main" id="main-content">
+              {children}
+            </main>
+            <ConditionalFooter />
+          </div>
+        </Providers>
       </body>
     </html>
   );

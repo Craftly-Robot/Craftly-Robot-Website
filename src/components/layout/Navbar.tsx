@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { navigation } from "../../data/navigation";
 import DropdownIcon from "../ui/DropdownIcon";
+import ThemeToggle from "../ui/ThemeToggle";
 import ImageWithFallback from "../common/ImageWithFallback";
 import { useDesktopNav } from "../../hooks/useDesktopNav";
 import { useMobileNav } from "../../hooks/useMobileNav";
@@ -105,6 +106,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
+          <ThemeToggle />
           <Link href="https://sandbox-workspace.craftlyrobot.com/" className="navbar__join" target="_blank" rel="noopener noreferrer">
             Join Us
           </Link>
