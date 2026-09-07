@@ -25,18 +25,19 @@ export default function DocPage({
   tocItems,
   children,
 }: DocPageProps) {
+  const displayCrumbs = crumbs[0] === rootLabel ? crumbs : [rootLabel, ...crumbs];
+
   return (
     <>
       <div className="docs__breadcrumb">
-        {rootLabel} &gt;{" "}
-        {crumbs.map((crumb, index) => (
+        {displayCrumbs.map((crumb, index) => (
           <Fragment key={index}>
-            {index === crumbs.length - 1 ? (
+            {index === displayCrumbs.length - 1 ? (
               <strong>{crumb}</strong>
             ) : (
               crumb
             )}
-            {index < crumbs.length - 1 && <> &gt;{" "}</>}
+            {index < displayCrumbs.length - 1 && <> &gt;{" "}</>}
           </Fragment>
         ))}
       </div>
