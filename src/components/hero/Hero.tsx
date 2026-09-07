@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useOS } from "../../hooks/useOS";
+import HeroParticles from "./HeroParticles";
 import ProductVisual from "../product/ProductVisual";
 import "./Hero.css";
 
@@ -10,6 +11,7 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      <HeroParticles />
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero__content">
           <h1 className="hero__title">

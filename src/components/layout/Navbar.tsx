@@ -205,25 +205,27 @@ export default function Navbar() {
                         <div className="dropdown-item__content">
                           <div className="dropdown-item__title">
                             {child.title}
-                            {activeNavConfig.label === "Docs" &&
-                              child.title === "Documentation" && (
-                                <span className="dropdown-item__arrow">
-                                  <svg
-                                    viewBox="0 0 24 24"
-                                    width="16"
-                                    height="16"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  >
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                  </svg>
-                                </span>
-                              )}
                           </div>
+                          {child.description && (
+                            <div className="dropdown-item__desc">
+                              {child.description}
+                            </div>
+                          )}
                         </div>
+                        <span className="dropdown-item__arrow">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </span>
                       </Link>
                     ))}
                   </div>

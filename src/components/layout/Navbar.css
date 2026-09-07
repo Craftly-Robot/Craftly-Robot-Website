@@ -252,11 +252,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  padding: 4px 12px;
+  padding: 12px 16px;
   border-radius: var(--radius-lg);
   text-decoration: none;
   color: #000000;
   width: fit-content;
+  min-width: 300px;
   animation: navItemGlideIn var(--duration-slow) var(--ease-out) calc(110ms + var(--item-index, 0) * 35ms) backwards;
   will-change: opacity, transform;
   transition:
@@ -295,11 +296,18 @@
 }
 
 .dropdown-item__title {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   color: #000000;
   display: flex;
   align-items: center;
+}
+
+.dropdown-item__desc {
+  font-size: 13px;
+  color: #5f6368;
+  line-height: 1.4;
+  margin-top: 2px;
 }
 
 /* ── Download Button ── */
@@ -537,8 +545,8 @@
   display: inline-flex;
   align-items: center;
   transition: transform var(--duration-normal) var(--ease-in-out);
-  margin-left: 6px;
-  color: #000000;
+  margin-left: auto;
+  color: #999999;
 }
 
 .dropdown-item:hover .dropdown-item__arrow {
