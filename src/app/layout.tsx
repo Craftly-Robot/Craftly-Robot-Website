@@ -131,9 +131,6 @@ export default function RootLayout({
       </head>
       <body>
         <div className="layout">
-          <a href="#main-content" className="skip-link">
-            Skip to content
-          </a>
           <Navbar />
           <main className="layout__main" id="main-content">
             {children}
