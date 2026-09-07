@@ -163,20 +163,19 @@ export default function Navbar() {
               >
                 <div className="navbar__mega-left">
                   <h2 className="navbar__mega-title">
-                    {activeNavConfig.label === "Products" && (
+                    {activeNavConfig.label === "Product" && (
                       <>
-                        Explore our <br /> next generation <br /> products
+                        Build with <br /> intelligent <br /> systems
                       </>
                     )}
-                    {activeNavConfig.label === "Use Cases" && (
+                    {activeNavConfig.label === "Vision" && (
                       <>
-                        Discover solutions <br /> for your specific <br /> needs
+                        The Craftly <br /> plan for the <br /> future of work
                       </>
                     )}
-                    {activeNavConfig.label === "Resources" && (
+                    {activeNavConfig.label === "Docs" && (
                       <>
-                        Everything you <br /> need to stay <br /> up-to-date and{" "}
-                        <br /> get help
+                        Learn how <br /> to use <br /> Craftly
                       </>
                     )}
                   </h2>
@@ -190,8 +189,8 @@ export default function Navbar() {
                 </div>
 
                 <div className="navbar__mega-right">
-                  {activeNavConfig.label === "Products" && (
-                    <div className="navbar__mega-list-title">Products</div>
+                  {activeNavConfig.label === "Product" && (
+                    <div className="navbar__mega-list-title">Product</div>
                   )}
                   <div className="navbar__mega-grid">
                     {activeNavConfig.items?.map((child, idx) => (
@@ -206,7 +205,7 @@ export default function Navbar() {
                         <div className="dropdown-item__content">
                           <div className="dropdown-item__title">
                             {child.title}
-                            {activeNavConfig.label === "Resources" &&
+                            {activeNavConfig.label === "Docs" &&
                               child.title === "Documentation" && (
                                 <span className="dropdown-item__arrow">
                                   <svg

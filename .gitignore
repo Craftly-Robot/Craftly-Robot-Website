@@ -38,3 +38,6 @@ next-env.d.ts
 # old Vite project
 dist/
 test-results/
+
+# Planning docs (local only)
+plans/

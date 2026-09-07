@@ -13,14 +13,21 @@ export default function Footer() {
         <div className="footer__top-right">
           <div className="footer__column">
             <h3 className="footer__column-title">Product</h3>
+            <Link href="/products/workspace" className="footer__link">
+              Workspace
+            </Link>
+            <Link href="/products/robot" className="footer__link">
+              Robot
+            </Link>
             <Link href="/download" className="footer__link">
               Download
             </Link>
-            <Link href="/products/workspace" className="footer__link">
-              Product
-            </Link>
+          </div>
+
+          <div className="footer__column">
+            <h3 className="footer__column-title">Resources</h3>
             <Link href="/resources/documentation" className="footer__link">
-              Docs
+              Documentation
             </Link>
             <Link href="/resources/changelog" className="footer__link">
               Changelog
@@ -28,12 +35,21 @@ export default function Footer() {
             <Link href="/resources/releases" className="footer__link">
               Releases
             </Link>
+            <Link href="/use-cases" className="footer__link">
+              Use Cases
+            </Link>
           </div>
 
           <div className="footer__column">
-            <h3 className="footer__column-title">Resources</h3>
-            <Link href="/use-cases/operations" className="footer__link">
-              Use Cases
+            <h3 className="footer__column-title">Company</h3>
+            <Link href="/vision" className="footer__link">
+              Vision
+            </Link>
+            <Link href="/about" className="footer__link">
+              About
+            </Link>
+            <Link href="/get-involved" className="footer__link">
+              Get Involved
             </Link>
           </div>
         </div>

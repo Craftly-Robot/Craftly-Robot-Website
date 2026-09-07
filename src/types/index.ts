@@ -37,3 +37,9 @@ export interface NavDropdownItem {
   route: string;
 }
 
+export interface NavConfig {
+  label: string;
+  dropdownType: "product" | "vision" | "docs";
+  items?: NavDropdownItem[];
+}
+
