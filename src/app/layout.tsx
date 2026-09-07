@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import SearchProvider from "@/components/layout/SearchProvider";
+import BackToTop from "@/components/ui/BackToTop";
 import Providers from "@/components/layout/Providers";
 import "./globals.css";
 
@@ -146,6 +147,7 @@ export default function RootLayout({
             <ConditionalFooter />
           </div>
           <SearchProvider />
+          <BackToTop />
         </Providers>
       </body>
     </html>
