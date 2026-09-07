@@ -761,10 +761,10 @@ There are TWO remotes:
 When creating branches and pushing:
 
 1. Create branch: `git checkout -b <branch-name>`
-2. Push to COO's fork first: `git push origin <branch-name>`
+2. Push to `company` remote: `git push company <branch-name>`
 3. NEVER push directly to `company/main` — it has protection rules
-4. Create PR from COO's fork to company repo via GitHub
+4. Create PR on GitHub from branch to company/main
 
-NEVER push to `company` remote unless explicitly told to do so.
+NEVER push to `origin` remote — it's only kept for chat history preservation.
 
-Default push target is ALWAYS `origin`.
+Default push target is ALWAYS `company`.
