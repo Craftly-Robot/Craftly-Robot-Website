@@ -1,5 +1,5 @@
 .breadcrumbs {
-  padding: var(--space-lg) 0;
+  padding: calc(var(--nav-height) + var(--space-lg)) 0 var(--space-lg);
 }
 
 .breadcrumbs__inner {
