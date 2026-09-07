@@ -746,3 +746,25 @@ The goal is to produce a stable, maintainable, visually accurate Craftly website
 ============================================================
 END OF AGENTS.md
 ============================================================
+
+# ============================================================ 33. GIT REMOTE RULES
+
+ALWAYS check git remotes before pushing.
+
+Run `git remote -v` before ANY push.
+
+There are TWO remotes:
+
+- `company` → https://github.com/Craftly-Robot/Craftly-Robot-Website.git (company repo)
+- `origin` → https://github.com/iammahmudhasan/Craftly-website-.git (COO's fork)
+
+When creating branches and pushing:
+
+1. Create branch: `git checkout -b <branch-name>`
+2. Push to COO's fork first: `git push origin <branch-name>`
+3. NEVER push directly to `company/main` — it has protection rules
+4. Create PR from COO's fork to company repo via GitHub
+
+NEVER push to `company` remote unless explicitly told to do so.
+
+Default push target is ALWAYS `origin`.
