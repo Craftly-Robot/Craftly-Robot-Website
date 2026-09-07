@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Hero from "../components/hero/Hero";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import CTASection from "../components/sections/CTASection";
 import "./HomePage.css";
 
 export default function HomePage() {

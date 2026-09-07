@@ -22,8 +22,8 @@ export default function AboutPage() {
 
       {/* Mission */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content">
             <h2 className="explore-features-section__title reveal">Our Mission</h2>
             <p className="vision-stage__desc reveal reveal-delay-1" style={{ fontSize: "1.125rem" }}>
               Technology should help people coordinate, create, and accomplish
@@ -36,8 +36,8 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content">
             <h2 className="abstracted-ui-title reveal">Our Story</h2>
             <p className="abstracted-ui-desc reveal reveal-delay-1">
               Craftly was founded in Bangladesh with a simple belief: the future
@@ -59,7 +59,7 @@ export default function AboutPage() {
       {/* Values */}
       <section className="workspace-options-section">
         <div className="container">
-          <h2 className="explore-features-section__title reveal" style={{ textAlign: "center", marginBottom: "48px" }}>
+          <h2 className="explore-features-section__title section-heading--center reveal">
             What We Believe
           </h2>
           <div className="abstracted-ui-grid">
@@ -90,8 +90,8 @@ export default function AboutPage() {
 
       {/* Team */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content">
             <h2 className="abstracted-ui-title reveal">Who We Are</h2>
             <p className="abstracted-ui-desc reveal reveal-delay-1">
               A team of engineers, designers, and builders based in Bangladesh.
@@ -111,11 +111,11 @@ export default function AboutPage() {
               Whether you want to use Craftly, contribute to it, or partner
               with us — we&apos;d love to hear from you.
             </p>
-            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <div className="section-actions">
               <Link href="/download" className="btn-product-download">
                 Download
               </Link>
-              <Link href="/resources/documentation" className="btn-product-download" style={{ background: "transparent", color: "var(--color-text)", border: "1px solid var(--color-border)" }}>
+              <Link href="/resources/documentation" className="btn-product-download btn-product-download--outline">
                 Documentation
               </Link>
             </div>

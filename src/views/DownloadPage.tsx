@@ -135,8 +135,7 @@ export default function DownloadPage() {
         </div>
 
         <div
-          className="download-columns download-columns--mobile"
-          style={{ marginTop: "24px" }}
+          className="download-columns download-columns--mobile mt"
         >
           <PlatformSection icon={<AndroidIcon />} title="Android">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_android">
@@ -162,11 +161,7 @@ export default function DownloadPage() {
 
       {/* Divider */}
       <hr
-        style={{
-          border: "none",
-          borderTop: "1px solid var(--color-border-subtle)",
-          margin: "48px 0",
-        }}
+        className="download-divider"
       />
 
       {/* Sandbox */}
@@ -175,7 +170,7 @@ export default function DownloadPage() {
           <h2 className="section-title">Sandbox</h2>
           <span className="version-badge version-badge--dev">Preview</span>
         </div>
-        <p style={{ fontSize: "16px", color: "var(--color-text-muted)", marginBottom: "24px" }}>
+        <p className="section-desc">
           Try the latest preview builds. These may contain experimental features and are not recommended for production use.
         </p>
 
@@ -202,11 +197,7 @@ export default function DownloadPage() {
 
       {/* Divider */}
       <hr
-        style={{
-          border: "none",
-          borderTop: "1px solid var(--color-border-subtle)",
-          margin: "48px 0",
-        }}
+        className="download-divider"
       />
 
       {/* Robot — Coming Soon */}
@@ -215,7 +206,7 @@ export default function DownloadPage() {
           <h2 className="section-title">Craftly Robot</h2>
           <span className="version-badge version-badge--dev">Coming Soon</span>
         </div>
-        <p style={{ fontSize: "16px", color: "var(--color-text-muted)", marginBottom: "24px" }}>
+        <p className="section-desc">
           Currently in development. Sign up to be notified when it launches.
         </p>
         <a

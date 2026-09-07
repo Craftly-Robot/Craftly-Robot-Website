@@ -16,8 +16,7 @@ export default function ResourceLayout({
     <>
       <div className="container">
         <section
-          className="section section--lg"
-          style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}
+          className="section section--lg section-content"
         >
           <span
             className="text-label"

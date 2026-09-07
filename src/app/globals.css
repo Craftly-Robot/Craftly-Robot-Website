@@ -98,8 +98,6 @@ select {
     var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display:
     var(--font-display), "Space Grotesk", sans-serif;
-  --font-serif:
-    var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono:
     var(--font-mono), "JetBrains Mono", monospace;
 
@@ -247,21 +245,21 @@ select {
 }
 
 .text-h1 {
-  font-size: clamp(var(--text-4xl), 4.5vw, var(--text-6xl));
+  font-size: var(--text-h1);
   font-weight: 600;
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
 }
 
 .text-h2 {
-  font-size: clamp(var(--text-3xl), 3.5vw, var(--text-5xl));
+  font-size: var(--text-h2);
   font-weight: 600;
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
 }
 
 .text-h3 {
-  font-size: clamp(var(--text-2xl), 2.5vw, var(--text-3xl));
+  font-size: var(--text-h3);
   font-weight: 500;
   line-height: var(--leading-snug);
 }
@@ -357,6 +355,71 @@ select {
 }
 .reveal-delay-5 {
   transition-delay: 500ms;
+}
+
+/* Layout utilities */
+.section-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-content--narrow {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-content--wide {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-heading--center {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-actions--mt {
+  margin-top: 32px;
+}
+
+.center-action {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.text-muted-sm {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 32px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

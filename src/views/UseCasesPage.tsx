@@ -23,8 +23,8 @@ export default function UseCasesPage() {
 
       {/* For Organizations */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <div className="vision-stage reveal">
               <h2 className="vision-stage__title">For Organizations</h2>
               <p className="vision-stage__desc">
@@ -56,7 +56,7 @@ export default function UseCasesPage() {
                 </p>
               </div>
             </div>
-            <div style={{ textAlign: "center", marginTop: "32px" }}>
+            <div className="center-action">
               <Link href="/products/workspace" className="btn-product-download">
                 Explore Workspace
               </Link>
@@ -67,8 +67,8 @@ export default function UseCasesPage() {
 
       {/* For Developers */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <div className="vision-stage reveal">
               <div className="vision-stage__badge vision-stage__badge--dev">Coming Soon</div>
               <h2 className="vision-stage__title">For Developers</h2>
@@ -101,7 +101,7 @@ export default function UseCasesPage() {
                 </p>
               </div>
             </div>
-            <div style={{ textAlign: "center", marginTop: "32px" }}>
+            <div className="center-action">
               <Link href="/products/robot" className="btn-product-download">
                 Explore Robot
               </Link>

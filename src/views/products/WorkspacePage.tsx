@@ -34,8 +34,8 @@ export default function WorkspacePage() {
 
       {/* Key Features — 4, not 10 */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="explore-features-section__title reveal">
               Everything your organization needs
             </h2>
@@ -137,8 +137,8 @@ export default function WorkspacePage() {
 
       {/* How Teams Use It */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="abstracted-ui-title reveal">Built for real work</h2>
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-1">

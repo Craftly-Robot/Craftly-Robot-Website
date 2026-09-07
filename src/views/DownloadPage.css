@@ -134,6 +134,16 @@
   justify-content: center;
 }
 
+.download-columns--mobile.mt {
+  margin-top: 24px;
+}
+
+.download-divider {
+  border: none;
+  border-top: 1px solid var(--color-border-subtle);
+  margin: 48px 0;
+}
+
 .download-columns--mobile .os-column {
   width: 33.333%;
 }

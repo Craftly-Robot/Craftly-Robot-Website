@@ -21,7 +21,7 @@ export default function RobotPage() {
             An agentic AI system for autonomous software engineering.
             Currently in active development.
           </p>
-          <p className="product-hero-clean__desc" style={{ fontSize: "14px", color: "var(--color-text-muted)" }}>
+          <p className="product-hero-clean__desc text-muted-sm">
             Sign up to be notified when it launches.
           </p>
         </section>
@@ -29,8 +29,8 @@ export default function RobotPage() {
 
       {/* What It Does — 3 capabilities */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="explore-features-section__title reveal">
               Autonomous software engineering
             </h2>
@@ -113,14 +113,14 @@ export default function RobotPage() {
 
       {/* The Vision */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content">
             <h2 className="abstracted-ui-title reveal">The Craftly Plan</h2>
             <p className="abstracted-ui-desc reveal reveal-delay-1">
               Workspace → Robot → Glass. Workspace is the foundation. Robot is
               the intelligence. Glass is the future.
             </p>
-            <div style={{ marginTop: "32px" }}>
+            <div className="center-action">
               <Link href="/vision" className="btn-product-download">
                 Read the full vision
               </Link>

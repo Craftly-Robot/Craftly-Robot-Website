@@ -22,8 +22,8 @@ export default function VisionPage() {
 
       {/* Where We Are Today */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <div className="vision-stage reveal">
               <div className="vision-stage__badge">Current</div>
               <h2 className="vision-stage__title">Craftly Workspace</h2>
@@ -43,8 +43,8 @@ export default function VisionPage() {
 
       {/* What We're Building Now */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <div className="vision-stage reveal">
               <div className="vision-stage__badge vision-stage__badge--dev">In Development</div>
               <h2 className="vision-stage__title">Craftly Robot</h2>
@@ -79,12 +79,12 @@ export default function VisionPage() {
 
       {/* Why This Matters */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content">
             <h2 className="explore-features-section__title reveal">
               Bangladesh&apos;s first AI company
             </h2>
-            <p className="vision-stage__desc reveal reveal-delay-1" style={{ fontSize: "1.125rem" }}>
+            <p className="vision-stage__desc text-lg reveal reveal-delay-1">
               We&apos;re building the future of work in Bangladesh and beyond.
               Technology should help people coordinate, create, and accomplish
               meaningful work at scale without losing sight of the people doing
@@ -96,8 +96,8 @@ export default function VisionPage() {
 
       {/* Use Cases */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="abstracted-ui-title reveal">Who Craftly is for</h2>
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-1">
