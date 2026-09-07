@@ -4,8 +4,7 @@
   left: 0;
   width: 100vw;
   max-width: 100%;
-  min-height: var(--nav-height);
-  padding: 8px 0;
+  height: var(--nav-height);
   z-index: var(--z-sticky);
   transition:
     background-color var(--duration-normal) var(--ease-out),
@@ -216,7 +215,7 @@
 }
 
 .navbar__dropdown-inner {
-  padding: 48px var(--page-margin) 40px;
+  padding: 40px var(--page-margin);
   max-width: var(--container-wide);
   margin: 0 auto;
   width: 100%;
