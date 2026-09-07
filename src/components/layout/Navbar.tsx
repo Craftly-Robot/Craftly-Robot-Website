@@ -105,6 +105,9 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
+          <Link href="/get-involved" className="navbar__join">
+            Join Us
+          </Link>
           <Link href="/download" className="navbar__download">
             Download
             <svg
@@ -278,6 +281,13 @@ export default function Navbar() {
           </div>
         ))}
 
+        <Link
+          href="/get-involved"
+          className="mobile-nav__download mobile-nav__join"
+          onClick={closeMobile}
+        >
+          Join Us
+        </Link>
         <Link
           href="/download"
           className="mobile-nav__download"
