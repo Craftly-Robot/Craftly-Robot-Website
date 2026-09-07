@@ -48,3 +48,53 @@
   color: #111;
   margin-top: 32px;
 }
+
+/* Card Grid */
+.docs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.docs-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.docs-card:hover {
+  background: #f1f3f5;
+  border-color: #dddddd;
+}
+
+.docs-card__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 8px;
+}
+
+.docs-card__desc {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.docs-card--coming-soon {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .docs-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
