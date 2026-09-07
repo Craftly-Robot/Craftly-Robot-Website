@@ -1,6 +1,6 @@
 .cta-section {
   padding: var(--space-6xl) 0;
-  background: #111111;
+  background: var(--color-bg-inverse);
 }
 
 .cta-section__content {
@@ -13,7 +13,7 @@
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-text-inverse);
   margin-bottom: 16px;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -21,7 +21,7 @@
 
 .cta-section__desc {
   font-size: 18px;
-  color: #888888;
+  color: var(--color-text-muted);
   margin-bottom: 32px;
 }
 
@@ -36,8 +36,8 @@
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background: #ffffff;
-  color: #111111;
+  background: var(--color-text-inverse);
+  color: var(--color-bg-inverse);
   border-radius: 9999px;
   font-size: 15px;
   font-weight: 500;
@@ -46,12 +46,12 @@
 }
 
 .cta-section__btn:hover {
-  background: #f1f3f5;
+  background: var(--color-surface-hover);
 }
 
 .cta-section__btn--secondary {
   background: transparent;
-  color: #ffffff;
+  color: var(--color-text-inverse);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 

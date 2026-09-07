@@ -1,7 +1,7 @@
 /* Proof Strip */
 .proof-strip {
   padding: var(--space-3xl) 0;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .proof-strip__grid {
@@ -21,13 +21,13 @@
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   letter-spacing: -0.02em;
 }
 
 .proof-strip__label {
   font-size: 14px;
-  color: #888888;
+  color: var(--color-text-muted);
 }
 
 /* Product Snapshot */
@@ -45,14 +45,14 @@
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
 .product-snapshot__desc {
   font-size: 18px;
-  color: #555555;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -69,13 +69,13 @@
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   margin-bottom: 8px;
 }
 
 .product-snapshot__feature p {
   font-size: 14px;
-  color: #666666;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
@@ -83,19 +83,19 @@
   display: inline-block;
   font-size: 15px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .product-snapshot__link:hover {
-  color: #555555;
+  color: var(--color-text-secondary);
 }
 
 /* Vision Preview */
 .vision-preview {
   padding: var(--space-4xl) 0;
-  background: #fafafa;
+  background: var(--color-bg-subtle);
 }
 
 .vision-preview__content {
@@ -108,14 +108,14 @@
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
 .vision-preview__desc {
   font-size: 18px;
-  color: #555555;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -136,8 +136,8 @@
 }
 
 .vision-preview__stage--current {
-  background: #111111;
-  color: #ffffff;
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 .vision-preview__stage--dev {
@@ -147,26 +147,26 @@
 
 .vision-preview__stage--future {
   background: transparent;
-  color: #888888;
-  border: 1px solid #dddddd;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
 }
 
 .vision-preview__arrow {
   font-size: 20px;
-  color: #cccccc;
+  color: var(--color-text-muted);
 }
 
 .vision-preview__link {
   display: inline-block;
   font-size: 15px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .vision-preview__link:hover {
-  color: #555555;
+  color: var(--color-text-secondary);
 }
 
 /* Use Case Grid */
@@ -178,7 +178,7 @@
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   text-align: center;
   margin-bottom: 48px;
   letter-spacing: -0.02em;
@@ -192,8 +192,8 @@
 
 .use-case-grid__card {
   padding: var(--space-xl);
-  background: #fafafa;
-  border: 1px solid #eeeeee;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   text-align: center;
 }
@@ -202,20 +202,20 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 500;
-  color: #111111;
+  color: var(--color-text);
   margin-bottom: 12px;
 }
 
 .use-case-grid__card p {
   font-size: 15px;
-  color: #666666;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
 /* Home CTA */
 .home-cta {
   padding: var(--space-6xl) 0;
-  background: #111111;
+  background: var(--color-bg-inverse);
 }
 
 .home-cta__content {
@@ -228,14 +228,14 @@
   font-family: var(--font-display);
   font-size: 44px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-text-inverse);
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
 .home-cta__desc {
   font-size: 18px;
-  color: #aaaaaa;
+  color: var(--color-text-muted);
   margin-bottom: 40px;
 }
 
@@ -250,8 +250,8 @@
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background: #ffffff;
-  color: #111111;
+  background: var(--color-text-inverse);
+  color: var(--color-bg-inverse);
   border-radius: 9999px;
   font-size: 15px;
   font-weight: 500;
@@ -260,7 +260,7 @@
 }
 
 .home-cta__btn:hover {
-  background: #f1f3f5;
+  background: var(--color-surface-hover);
 }
 
 @media (max-width: 768px) {
