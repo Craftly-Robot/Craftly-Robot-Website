@@ -41,3 +41,4 @@ test-results/
 
 # Planning docs (local only)
 plans/
+package-lock.json

@@ -169,6 +169,46 @@ export default function DownloadPage() {
         }}
       />
 
+      {/* Sandbox */}
+      <div className="download-section" id="sandbox">
+        <div className="section-header">
+          <h2 className="section-title">Sandbox</h2>
+          <span className="version-badge version-badge--dev">Preview</span>
+        </div>
+        <p style={{ fontSize: "16px", color: "#666666", marginBottom: "24px" }}>
+          Try the latest preview builds. These may contain experimental features and are not recommended for production use.
+        </p>
+
+        <div className="dl-grid">
+          <PlatformSection icon={<AppleIcon />} title="macOS">
+            <DownloadButton href="https://sandbox-dl.craftlyrobot.com/workspace_macOS">
+              Download for macOS
+            </DownloadButton>
+          </PlatformSection>
+
+          <PlatformSection icon={<WindowsIcon />} title="Windows">
+            <DownloadButton href="https://sandbox-dl.craftlyrobot.com/workspace_windows">
+              Download for Windows
+            </DownloadButton>
+          </PlatformSection>
+
+          <PlatformSection icon={<LinuxIcon />} title="Linux">
+            <DownloadButton href="https://sandbox-dl.craftlyrobot.com/workspace_linux">
+              Download for Linux
+            </DownloadButton>
+          </PlatformSection>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <hr
+        style={{
+          border: "none",
+          borderTop: "1px solid var(--color-border-subtle)",
+          margin: "48px 0",
+        }}
+      />
+
       {/* Robot — Coming Soon */}
       <div className="download-section" id="robot">
         <div className="section-header">
