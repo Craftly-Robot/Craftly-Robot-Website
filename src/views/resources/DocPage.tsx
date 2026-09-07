@@ -1,7 +1,6 @@
 "use client";
 
 import { Fragment } from "react";
-import DocsLayout from "./DocsLayout";
 
 interface DocPageProps {
   title: string;
@@ -27,7 +26,7 @@ export default function DocPage({
   children,
 }: DocPageProps) {
   return (
-    <DocsLayout title={title} description={description} tocItems={tocItems}>
+    <>
       <div className="docs__breadcrumb">
         {rootLabel} &gt;{" "}
         {crumbs.map((crumb, index) => (
@@ -47,6 +46,6 @@ export default function DocPage({
       </h1>
 
       {children}
-    </DocsLayout>
+    </>
   );
 }
