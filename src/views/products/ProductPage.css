@@ -291,6 +291,59 @@
   line-height: 1.6;
 }
 
+/* Vision Page Stages */
+.vision-stage {
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+.vision-stage__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.vision-stage__badge--dev {
+  background: #f59e0b;
+  color: #111111;
+}
+
+.vision-stage__badge--future {
+  background: transparent;
+  color: #555555;
+  border: 1px solid #dddddd;
+}
+
+.vision-stage__title {
+  font-family: "Outfit", var(--font-sans);
+  font-size: 44px;
+  font-weight: 500;
+  color: #111111;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.vision-stage__desc {
+  font-size: 18px;
+  color: #555555;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.vision-stage__version {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 24px;
+}
+
 @media (max-width: 768px) {
   .product-hero-clean {
     padding-block: 60px 40px;
@@ -344,5 +397,9 @@
   .workspace-options-grid {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
+  }
+
+  .vision-stage__title {
+    font-size: 32px;
   }
 }
