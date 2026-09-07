@@ -242,11 +242,29 @@ export default function DocsLayout({
 
   const [activeId, setActiveId] = useState<string>("welcome");
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState<boolean>(false);
+  const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
+  const [scrollProgress, setScrollProgress] = useState<number>(0);
   const [prevPath, setPrevPath] = useState(pathname);
   if (prevPath !== pathname) {
     setPrevPath(pathname);
     setMobileSidebarOpen(false);
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollProgress(progress);
+      setShowBackToTop(scrollTop > 400);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   // Top-level toggles
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(
@@ -398,6 +416,9 @@ export default function DocsLayout({
 
   return (
     <div className="docs__container">
+      {/* Reading Progress Bar */}
+      <div className="docs__progress-bar" style={{ width: `${scrollProgress}%` }} />
+
       <div className="docs__mobile-header">
         <button
           className={`docs__mobile-toggle ${mobileSidebarOpen ? "docs__mobile-toggle--open" : ""}`}
@@ -996,6 +1017,20 @@ export default function DocsLayout({
 
       {/* Main Content Area */}
       <main className="docs__main">
+        <div className="docs__edit-link">
+          <a
+            href={`https://github.com/Craftly-Robot/Craftly-Robot-Website/edit/main${pathname === "/resources/documentation" ? "/src/views/resources/DocumentationPage.tsx" : ""}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            </svg>
+            Edit this page
+          </a>
+        </div>
+
         {children}
 
         {(prevRoute || nextRoute) && (
@@ -1051,6 +1086,15 @@ export default function DocsLayout({
           </div>
         )}
       </main>
+
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button className="docs__back-to-top" onClick={scrollToTop} aria-label="Back to top">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </button>
+      )}
 
       {/* Right Sidebar */}
       <aside className="docs__sidebar docs__sidebar--right">

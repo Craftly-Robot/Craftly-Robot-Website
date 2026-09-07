@@ -552,3 +552,115 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Reading Progress Bar */
+.docs__progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-text);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+[data-theme="dark"] .docs__progress-bar {
+  background: hsla(222, 84%, 58%, 0.8);
+}
+
+/* Edit Link */
+.docs__edit-link {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 0;
+  margin-bottom: 8px;
+}
+
+.docs__edit-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.docs__edit-link a:hover {
+  color: var(--color-text);
+}
+
+/* Back to Top Button */
+.docs__back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text);
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.docs__back-to-top:hover {
+  background: var(--color-surface);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .docs__back-to-top {
+  background: hsla(220, 15%, 12%, 0.9);
+  border-color: hsla(220, 15%, 20%, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Copy Code Button */
+.docs__code-block {
+  position: relative;
+}
+
+.docs__copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.docs__code-block:hover .docs__copy-btn {
+  opacity: 1;
+}
+
+.docs__copy-btn:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .docs__back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}

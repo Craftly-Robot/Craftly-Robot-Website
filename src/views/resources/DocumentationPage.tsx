@@ -13,16 +13,81 @@ export default function DocumentationPage() {
       pageId="documentation"
       pageTitle="Craftly Documentation"
       tocItems={[
+        { id: "whats-new", label: "What's New" },
+        { id: "popular", label: "Popular" },
         { id: "get-started", label: "Get Started" },
         { id: "workspace", label: "Craftly Workspace" },
         { id: "robot", label: "Craftly Robot" },
         { id: "reference", label: "Reference" },
       ]}
     >
-      <p className="docs__text">
-        Learn how to use Craftly products. Whether you&apos;re new to Craftly
-        or looking for specific documentation, start here.
-      </p>
+      {/* Search Prompt */}
+      <div className="docs-search-prompt">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span>Press <kbd>⌘K</kbd> to search documentation</span>
+      </div>
+
+      {/* What's New */}
+      <h2 className="docs__section-title" id="whats-new">
+        What&apos;s New
+      </h2>
+      <div className="docs-announcement">
+        <span className="docs-announcement__badge">New</span>
+        <div className="docs-announcement__content">
+          <h3>Craftly Workspace v3.8.5</h3>
+          <p>Latest update includes performance improvements, bug fixes, and new task management features.</p>
+        </div>
+        <Link href="/resources/changelog" className="docs-announcement__link">
+          View Changelog →
+        </Link>
+      </div>
+
+      {/* Popular */}
+      <h2 className="docs__section-title" id="popular">
+        Popular
+      </h2>
+      <div className="docs-card-grid docs-card-grid--popular">
+        <Link
+          href="/resources/documentation/workspace/overview/what-is-craftly-workspace"
+          className="docs-card docs-card--popular"
+        >
+          <span className="docs-card__popular-icon">📖</span>
+          <h3 className="docs-card__title">What is Craftly?</h3>
+          <p className="docs-card__desc">
+            Understand what Craftly is and how it helps organizations work better.
+          </p>
+        </Link>
+        <Link
+          href="/resources/documentation/workspace/overview/getting-started"
+          className="docs-card docs-card--popular"
+        >
+          <span className="docs-card__popular-icon">🚀</span>
+          <h3 className="docs-card__title">Getting Started</h3>
+          <p className="docs-card__desc">
+            Download, install, and set up your first workspace.
+          </p>
+        </Link>
+        <Link
+          href="/resources/documentation/workspace/tasks-operations/tasks"
+          className="docs-card docs-card--popular"
+        >
+          <span className="docs-card__popular-icon">✅</span>
+          <h3 className="docs-card__title">Task Management</h3>
+          <p className="docs-card__desc">
+            Learn how to create, assign, and track tasks.
+          </p>
+        </Link>
+        <Link href="/resources/documentation/faq" className="docs-card docs-card--popular">
+          <span className="docs-card__popular-icon">❓</span>
+          <h3 className="docs-card__title">FAQ</h3>
+          <p className="docs-card__desc">
+            Answers to common questions about Craftly.
+          </p>
+        </Link>
+      </div>
 
       {/* Get Started */}
       <h2 className="docs__section-title" id="get-started">
