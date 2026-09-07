@@ -48,6 +48,5 @@ export const searchIndex: SearchItem[] = [
   { title: "Agent-to-Agent Negotiation", description: "How AI agents collaborate", route: "/resources/documentation/robot/feature-overview/agent-to-agent-negotiation", category: "docs" },
 
   // Actions
-  { title: "Download Craftly", description: "Download the latest version", route: "/download", category: "actions" },
   { title: "Join Us", description: "Join the Craftly workspace", route: "https://sandbox-workspace.craftlyrobot.com/", category: "actions" },
 ];
