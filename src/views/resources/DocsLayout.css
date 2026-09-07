@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: stretch;
   width: 100%;
+  max-width: var(--container-wide);
+  margin: 0 auto;
   padding-top: var(--nav-height);
   background-color: var(--color-bg);
 }
@@ -11,6 +13,13 @@
   .docs__container {
     flex-direction: row;
     align-items: flex-start;
+    padding-inline: var(--page-margin);
+  }
+}
+
+@media (min-width: 1440px) {
+  .docs__container {
+    padding-inline: 80px;
   }
 }
 
@@ -108,7 +117,7 @@
   }
 
   .docs__sidebar--left {
-    width: 300px;
+    width: 260px;
     flex-shrink: 0;
     border-right: 1px solid var(--color-border);
     position: sticky;
@@ -119,7 +128,7 @@
   }
 
   .docs__sidebar--right {
-    width: 260px;
+    width: 220px;
     flex-shrink: 0;
     position: sticky;
     top: 0;
