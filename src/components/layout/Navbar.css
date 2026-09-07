@@ -12,6 +12,7 @@
     box-shadow var(--duration-normal) var(--ease-out);
   background: transparent;
   border-bottom: 1px solid transparent;
+  font-family: var(--font-display);
 }
 
 .navbar--scrolled {
@@ -436,6 +437,7 @@
     opacity var(--duration-normal) var(--ease-out),
     transform var(--duration-normal) var(--ease-out),
     visibility var(--duration-normal) var(--ease-out);
+  font-family: var(--font-display);
 }
 
 .mobile-nav--open {
