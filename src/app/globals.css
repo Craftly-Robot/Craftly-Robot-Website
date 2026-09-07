@@ -186,6 +186,15 @@ select {
   max-width: var(--container-narrow);
 }
 
+.layout {
+  min-height: 100vh;
+}
+
+.layout__main {
+  position: relative;
+  background: var(--color-bg);
+}
+
 .text-hero-display {
   font-size: var(--text-hero-display);
   font-weight: 600;
