@@ -29,8 +29,8 @@
 
 /* Brand */
 .footer__brand {
-  flex: 1;
-  max-width: 300px;
+  flex: 0 0 260px;
+  max-width: 260px;
 }
 
 .footer__logo {
@@ -56,6 +56,7 @@
 
 /* Links */
 .footer__links {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
