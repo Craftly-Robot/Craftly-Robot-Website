@@ -100,14 +100,8 @@ export default function DownloadPage() {
 
         <div className="download-columns">
           <PlatformSection icon={<AppleIcon />} title="macOS">
-            <DownloadButton href="/assets/downloads/craftly-workspace-mac-arm64.dmg">
-              Download for Apple Silicon
-            </DownloadButton>
-            <DownloadButton
-              href="/assets/downloads/craftly-workspace-mac-x64.dmg"
-              variant="secondary"
-            >
-              Download for Intel
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_macOS">
+              Download for macOS
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
@@ -118,14 +112,8 @@ export default function DownloadPage() {
           </PlatformSection>
 
           <PlatformSection icon={<WindowsIcon />} title="Windows">
-            <DownloadButton href="/assets/downloads/craftly-workspace-win-x64.exe">
-              Download for x64
-            </DownloadButton>
-            <DownloadButton
-              href="/assets/downloads/craftly-workspace-win-arm64.exe"
-              variant="secondary"
-            >
-              Download for ARM64
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_windows">
+              Download for Windows
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
@@ -134,14 +122,8 @@ export default function DownloadPage() {
           </PlatformSection>
 
           <PlatformSection icon={<LinuxIcon />} title="Linux">
-            <DownloadButton href="/assets/downloads/craftly-workspace-linux-x64.AppImage">
-              Download for x64
-            </DownloadButton>
-            <DownloadButton
-              href="/assets/downloads/craftly-workspace-linux-arm64.AppImage"
-              variant="secondary"
-            >
-              Download for ARM64
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_linux">
+              Download for Linux
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
@@ -157,8 +139,8 @@ export default function DownloadPage() {
           style={{ marginTop: "24px" }}
         >
           <PlatformSection icon={<AndroidIcon />} title="Android">
-            <DownloadButton href="/assets/downloads/craftly-workspace.apk">
-              Download APK
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_android">
+              Download for Android
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
