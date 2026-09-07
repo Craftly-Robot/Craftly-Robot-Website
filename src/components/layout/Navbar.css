@@ -59,6 +59,10 @@
   display: block;
 }
 
+[data-theme="dark"] .navbar__logo-img {
+  filter: invert(1);
+}
+
 @media (max-width: 768px) {
   .navbar__logo-img {
     height: 34px;

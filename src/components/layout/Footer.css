@@ -1,6 +1,6 @@
 .footer {
-  background: #111111;
-  color: #ffffff;
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
   font-family: var(--font-display);
 }
 
@@ -35,12 +35,15 @@
 .footer__wordmark {
   height: 28px;
   width: auto;
+}
+
+[data-theme="light"] .footer__wordmark {
   filter: brightness(0) invert(1);
 }
 
 .footer__tagline {
   font-size: 14px;
-  color: #888888;
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
@@ -67,7 +70,7 @@
 .footer__column-title {
   font-size: 13px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-text-inverse);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 4px;
@@ -76,13 +79,13 @@
 .footer__link {
   font-size: 14px;
   font-weight: 400;
-  color: #888888;
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer__link:hover {
-  color: #ffffff;
+  color: var(--color-text-inverse);
 }
 
 /* Bottom */
@@ -99,7 +102,7 @@
 
 .footer__copyright {
   font-size: 13px;
-  color: #666666;
+  color: var(--color-text-muted);
   text-align: center;
 }
 
