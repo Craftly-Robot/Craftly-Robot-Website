@@ -612,7 +612,9 @@ a,
 .navbar__nav-item,
 .navbar__logo,
 .mobile-nav__item,
-.footer__link-item {
+.footer__link-item,
+.breadcrumbs__item,
+.breadcrumbs__separator {
   min-height: auto;
   min-width: auto;
 }
