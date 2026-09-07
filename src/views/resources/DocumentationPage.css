@@ -68,12 +68,23 @@
   text-decoration: none;
   transition:
     background-color 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .docs-card:hover {
   background: var(--color-surface-hover);
   border-color: var(--color-border-hover);
+}
+
+[data-theme="dark"] .docs-card {
+  background: linear-gradient(145deg, var(--color-bg-elevated) 0%, var(--color-bg-subtle) 100%);
+  border-color: hsla(220, 15%, 20%, 0.5);
+}
+
+[data-theme="dark"] .docs-card:hover {
+  border-color: hsla(222, 84%, 58%, 0.2);
+  box-shadow: 0 4px 16px hsla(220, 20%, 3%, 0.4);
 }
 
 .docs-card__title {

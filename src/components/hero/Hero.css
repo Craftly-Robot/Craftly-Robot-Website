@@ -64,12 +64,21 @@
   text-decoration: none;
   transition:
     background-color var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out);
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
 }
 
 .hero__btn-primary:hover {
   background: var(--color-accent-hover);
   transform: translateY(-1px);
+}
+
+[data-theme="dark"] .hero__btn-primary {
+  box-shadow: 0 0 20px hsla(222, 84%, 58%, 0.15), 0 0 6px hsla(222, 84%, 58%, 0.1);
+}
+
+[data-theme="dark"] .hero__btn-primary:hover {
+  box-shadow: 0 0 30px hsla(222, 84%, 58%, 0.25), 0 0 10px hsla(222, 84%, 58%, 0.15);
 }
 
 .hero__btn-secondary {

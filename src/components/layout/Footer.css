@@ -4,6 +4,11 @@
   font-family: var(--font-display);
 }
 
+[data-theme="dark"] .footer {
+  background: linear-gradient(180deg, var(--color-bg-elevated) 0%, hsl(220, 15%, 10%) 100%);
+  border-top: 1px solid var(--color-border);
+}
+
 .footer__inner {
   max-width: var(--container-wide);
   margin: 0 auto;

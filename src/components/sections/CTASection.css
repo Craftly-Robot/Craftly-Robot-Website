@@ -3,6 +3,20 @@
   background: var(--color-bg-inverse);
 }
 
+[data-theme="dark"] .cta-section {
+  background: linear-gradient(180deg, var(--color-bg-subtle) 0%, hsl(220, 15%, 12%) 50%, var(--color-bg-subtle) 100%);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .cta-section__btn--secondary {
+  border-color: hsla(220, 15%, 35%, 0.5);
+}
+
+[data-theme="dark"] .cta-section__btn--secondary:hover {
+  background: hsla(220, 15%, 25%, 0.3);
+}
+
 .cta-section__content {
   text-align: center;
   max-width: 600px;
