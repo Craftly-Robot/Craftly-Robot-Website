@@ -13,6 +13,8 @@ export const searchIndex: SearchItem[] = [
   { title: "Use Cases", description: "Who Craftly is for and how it's used", route: "/use-cases", category: "pages" },
   { title: "About", description: "About Craftly and our mission", route: "/about", category: "pages" },
   { title: "Get Involved", description: "Contribute to Craftly", route: "/get-involved", category: "pages" },
+  { title: "Pricing", description: "Simple, transparent pricing", route: "/pricing", category: "pages" },
+  { title: "Contact", description: "Get in touch with Craftly", route: "/contact", category: "pages" },
   { title: "Workspace", description: "Craftly Workspace — Your intelligent workspace for operating modern organizations", route: "/products/workspace", category: "pages" },
   { title: "Robot", description: "Craftly Robot — An agentic AI system for autonomous software engineering", route: "/products/robot", category: "pages" },
 
@@ -21,16 +23,11 @@ export const searchIndex: SearchItem[] = [
   { title: "Changelog", description: "Track the latest updates and improvements", route: "/resources/changelog", category: "pages" },
   { title: "Releases", description: "Download versions and release notes", route: "/resources/releases", category: "pages" },
   { title: "Support", description: "Get help with Craftly", route: "/resources/support", category: "pages" },
-  { title: "FAQ", description: "Frequently asked questions", route: "/resources/faq", category: "pages" },
+  { title: "FAQ", description: "Frequently asked questions", route: "/resources/documentation/faq", category: "pages" },
   { title: "Blog", description: "Craftly blog — insights and updates", route: "/resources/blog", category: "pages" },
 
   // Documentation Pages
   { title: "What is Craftly Workspace?", description: "Overview of Craftly Workspace", route: "/resources/documentation/workspace/overview/what-is-craftly-workspace", category: "docs" },
-  { title: "Getting Started", description: "Quick start guide for Craftly Workspace", route: "/resources/documentation/workspace/overview/getting-started", category: "docs" },
-  { title: "System Requirements", description: "Minimum requirements for running Craftly", route: "/resources/documentation/workspace/overview/system-requirements", category: "docs" },
-  { title: "Installation", description: "How to install Craftly Workspace", route: "/resources/documentation/workspace/overview/installation", category: "docs" },
-  { title: "Dashboard", description: "Understanding the Craftly dashboard", route: "/resources/documentation/workspace/overview/dashboard", category: "docs" },
-  { title: "Organizational Structure", description: "Setting up departments and roles", route: "/resources/documentation/workspace/people-roles/organizational-structure", category: "docs" },
   { title: "Roles", description: "Managing roles in Craftly", route: "/resources/documentation/workspace/people-roles/roles", category: "docs" },
   { title: "Members", description: "Adding and managing team members", route: "/resources/documentation/workspace/people-roles/members", category: "docs" },
   { title: "Permissions", description: "Access control and permissions", route: "/resources/documentation/workspace/people-roles/permissions", category: "docs" },
