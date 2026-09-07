@@ -102,6 +102,7 @@ export default function ImageWithFallback({
       alt={alt || ""}
       width={typeof width === "number" ? width : parseInt(String(width), 10) || 300}
       height={typeof height === "number" ? height : parseInt(String(height), 10) || 200}
+      sizes={sizes || "100vw"}
       className={className}
       style={style}
       priority={priority}

@@ -1,10 +1,16 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useOS } from "../../hooks/useOS";
-import HeroParticles from "./HeroParticles";
 import ProductVisual from "../product/ProductVisual";
 import "./Hero.css";
+
+const HeroParticles = dynamic(() => import("./HeroParticles"), {
+  ssr: false,
+  loading: () => <div className="hero__particles-placeholder" />,
+});
 
 export default function Hero() {
   const osName = useOS();

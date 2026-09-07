@@ -30,7 +30,13 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero__content {
+.hero__particles-placeholder {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.hero__content {
     animation: heroParallax 0.1s linear;
     animation-timeline: scroll();
     animation-range: 0 500px;
