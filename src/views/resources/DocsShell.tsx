@@ -4,10 +4,57 @@ import { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from "re
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DropdownIcon from "../../components/ui/DropdownIcon";
+import { useDocsPage } from "../../contexts/DocsPageContext";
 import "./DocsLayout.css";
 
 interface DocsShellProps {
   children: ReactNode;
+}
+
+function DocsTOC() {
+  const { tocItems } = useDocsPage();
+  const [activeId, setActiveId] = useState<string>("");
+
+  useEffect(() => {
+    if (tocItems.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-80px 0px -80% 0px" }
+    );
+
+    tocItems.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [tocItems]);
+
+  if (tocItems.length === 0) return null;
+
+  return (
+    <div className="docs__toc">
+      <h4 className="docs__toc-title">On this Page</h4>
+      <ul className="docs__toc-list">
+        {tocItems.map((item) => (
+          <li
+            key={item.id}
+            id={`toc-${item.id}`}
+            className={`docs__toc-item ${activeId === item.id ? "docs__toc-item--active" : ""}`}
+          >
+            <a href={`#${item.id}`}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 let globalSidebarScroll = 0;
@@ -340,6 +387,11 @@ export default function DocsShell({ children }: DocsShellProps) {
       <main className="docs__main">
         {children}
       </main>
+
+      {/* Right Sidebar - Table of Contents */}
+      <aside className="docs__sidebar docs__sidebar--right">
+        <DocsTOC />
+      </aside>
 
       {showBackToTop && (
         <button className="docs__back-to-top" onClick={scrollToTop} aria-label="Back to top">

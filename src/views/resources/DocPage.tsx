@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
+import { DocsPageProvider } from "../../contexts/DocsPageContext";
 
 interface DocPageProps {
   title: string;
@@ -28,7 +29,7 @@ export default function DocPage({
   const displayCrumbs = crumbs[0] === rootLabel ? crumbs : [rootLabel, ...crumbs];
 
   return (
-    <>
+    <DocsPageProvider tocItems={tocItems}>
       <div className="docs__breadcrumb">
         {displayCrumbs.map((crumb, index) => (
           <Fragment key={index}>
@@ -47,6 +48,6 @@ export default function DocPage({
       </h1>
 
       {children}
-    </>
+    </DocsPageProvider>
   );
 }
