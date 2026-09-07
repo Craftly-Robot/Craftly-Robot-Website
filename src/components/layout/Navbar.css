@@ -213,6 +213,14 @@
   padding: 40px var(--page-margin);
   max-width: var(--container-wide);
   margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .navbar__dropdown-inner {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
   width: 100%;
   box-sizing: border-box;
 }
