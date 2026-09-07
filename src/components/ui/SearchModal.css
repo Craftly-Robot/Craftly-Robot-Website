@@ -32,6 +32,12 @@
   animation: searchModalIn 0.2s ease-out;
 }
 
+@media (min-width: 1024px) {
+  .search-modal__container {
+    max-width: 680px;
+  }
+}
+
 [data-theme="dark"] .search-modal__container {
   background: var(--color-bg-elevated);
   border-color: hsla(220, 15%, 20%, 0.5);
