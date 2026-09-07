@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { searchIndex, type SearchItem } from "../../data/searchIndex";
 import "./SearchModal.css";
 
 export default function SearchModal() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -71,6 +73,7 @@ export default function SearchModal() {
       e.preventDefault();
       setSelectedIndex((prev) => Math.max(prev - 1, 0));
     } else if (e.key === "Enter" && filteredResults[selectedIndex]) {
+      router.push(filteredResults[selectedIndex].route);
       handleClose();
     } else if (e.key === "Escape") {
       handleClose();
