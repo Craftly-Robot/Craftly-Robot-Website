@@ -34,10 +34,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -45,7 +45,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -86,10 +86,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -97,7 +97,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -136,10 +136,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -147,7 +147,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -189,10 +189,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -200,7 +200,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -240,10 +240,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -251,7 +251,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -292,10 +292,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         <p className="docs__text">Format: 01XXXXXXXXX</p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -303,7 +303,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -347,10 +347,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -358,7 +358,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -398,10 +398,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -409,7 +409,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -504,10 +504,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -515,7 +515,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -559,10 +559,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -570,7 +570,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -612,10 +612,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -623,7 +623,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -661,10 +661,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -672,7 +672,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -707,10 +707,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -718,7 +718,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -757,10 +757,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -768,7 +768,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -807,10 +807,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -818,7 +818,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -857,10 +857,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -868,7 +868,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -907,10 +907,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -918,7 +918,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -959,10 +959,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -970,7 +970,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}
@@ -1010,10 +1010,10 @@ export const onboardingQuestions: OnboardingQuestion[] = [
         </p>
         <div
           style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "var(--color-bg-elevated)",
             padding: "16px",
             borderRadius: "8px",
-            border: "1px solid #eaeaeb",
+            border: "1px solid var(--color-border)",
             margin: "16px 0",
           }}
         >
@@ -1021,7 +1021,7 @@ export const onboardingQuestions: OnboardingQuestion[] = [
             style={{
               margin: 0,
               fontWeight: 600,
-              color: "#5f6368",
+              color: "var(--color-text-secondary)",
               fontSize: "14px",
               marginBottom: "8px",
             }}

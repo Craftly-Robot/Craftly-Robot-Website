@@ -45,7 +45,7 @@ export default function OperationalWorkflowsPage() {
           margin: "40px 0",
           borderRadius: "12px",
           overflow: "hidden",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          boxShadow: "var(--shadow-md)",
         }}
       >
         <ImageWithFallback
@@ -89,12 +89,12 @@ export default function OperationalWorkflowsPage() {
         className="docs__code-block"
         style={{
           padding: "16px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "8px",
           textAlign: "center",
           fontWeight: "500",
           marginBottom: "16px",
-          color: "#202124",
+          color: "var(--color-text)",
         }}
       >
         Work &rarr; Department &rarr; Projects
@@ -173,7 +173,7 @@ export default function OperationalWorkflowsPage() {
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",

@@ -21,7 +21,7 @@ export default function RobotPage() {
             An agentic AI system for autonomous software engineering.
             Currently in active development.
           </p>
-          <p className="product-hero-clean__desc" style={{ fontSize: "14px", color: "#888888" }}>
+          <p className="product-hero-clean__desc" style={{ fontSize: "14px", color: "var(--color-text-muted)" }}>
             Sign up to be notified when it launches.
           </p>
         </section>

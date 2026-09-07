@@ -66,16 +66,13 @@
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-xl);
 }
 
 .product-showcase--custom .product-showcase__visual {
   max-width: 480px;
   border-radius: var(--radius-xl);
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.03),
-    0 12px 24px -4px rgba(0, 0, 0, 0.06),
-    0 24px 48px -12px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-lg);
   background: var(--color-bg);
 }
 

@@ -39,8 +39,8 @@ export default function PrivateKeyPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

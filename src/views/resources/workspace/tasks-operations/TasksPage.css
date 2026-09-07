@@ -41,7 +41,7 @@
 
 .tasks-flow-label--no {
   font-weight: 600;
-  color: #d93025;
+  color: var(--color-error);
 }
 
 .tasks-quote-block {

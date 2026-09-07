@@ -49,7 +49,7 @@ export default function SupportRequestsPage() {
           margin: "40px 0",
           borderRadius: "12px",
           overflow: "hidden",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          boxShadow: "var(--shadow-md)",
         }}
       >
         <ImageWithFallback
@@ -167,7 +167,7 @@ export default function SupportRequestsPage() {
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",

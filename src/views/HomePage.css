@@ -155,7 +155,7 @@
 
 .vision-preview__stage--dev {
   background: #f59e0b;
-  color: #111111;
+  color: var(--color-text);
 }
 
 .vision-preview__stage--future {

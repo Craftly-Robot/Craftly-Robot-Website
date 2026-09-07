@@ -52,7 +52,7 @@ export default function WelcomeSetupPage() {
           href="https://join.craftlyrobot.com"
           target="_blank"
           rel="noreferrer"
-          style={{ color: "#0066cc", textDecoration: "none" }}
+          style={{ color: "var(--color-accent)", textDecoration: "none" }}
         >
           join.craftlyrobot.com
         </a>{" "}
@@ -62,8 +62,8 @@ export default function WelcomeSetupPage() {
       <div
         style={{
           padding: "16px 24px",
-          backgroundColor: "#f8f9fa",
-          border: "1px solid #eaeaeb",
+          backgroundColor: "var(--color-bg-elevated)",
+          border: "1px solid var(--color-border)",
           borderRadius: "8px",
           margin: "16px 0",
           display: "inline-block",
@@ -86,7 +86,7 @@ export default function WelcomeSetupPage() {
           alignItems: "center",
           margin: "24px 0",
           fontSize: "14px",
-          color: "#5f6368",
+          color: "var(--color-text-secondary)",
           fontWeight: 500,
         }}
       >
@@ -106,8 +106,8 @@ export default function WelcomeSetupPage() {
           margin: "32px 0",
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",
@@ -115,7 +115,7 @@ export default function WelcomeSetupPage() {
         }}
       >
         {imgError ? (
-          <p style={{ color: "#5f6368", fontFamily: "inherit" }}>
+          <p style={{ color: "var(--color-text-secondary)", fontFamily: "inherit" }}>
             Image placeholder: /assets/onboarding_pic/1.webp
           </p>
         ) : (

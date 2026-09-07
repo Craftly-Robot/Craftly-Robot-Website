@@ -85,8 +85,8 @@ export default function OnboardingQuestionsPage() {
               style={{
                 borderRadius: "8px",
                 overflow: "hidden",
-                border: "1px solid #eaeaeb",
-                backgroundColor: "#f8f9fa",
+                border: "1px solid var(--color-border)",
+                backgroundColor: "var(--color-bg-elevated)",
                 minHeight: "300px",
                 display: "flex",
                 alignItems: "center",
@@ -94,7 +94,7 @@ export default function OnboardingQuestionsPage() {
               }}
             >
               {imgErrors[q.id] ? (
-                <p style={{ color: "#5f6368", fontFamily: "inherit" }}>
+                <p style={{ color: "var(--color-text-secondary)", fontFamily: "inherit" }}>
                   Image placeholder: /assets/onboarding_pic/{q.id}.png
                 </p>
               ) : (

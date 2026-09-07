@@ -23,7 +23,7 @@
 
 .blog-card:hover {
   border-color: var(--color-border-hover);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-md);
 }
 
 .blog-card__meta {

@@ -576,7 +576,7 @@ export default function ChangelogPage() {
                                 ) : (
                                   <div
                                     style={{
-                                      color: "#3c4043",
+                                      color: "var(--color-text-secondary)",
                                       fontStyle: "italic",
                                       paddingLeft: "16px",
                                       fontSize: "15px",

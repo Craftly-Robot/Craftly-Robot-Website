@@ -62,10 +62,10 @@ export default function ImageWithFallback({
         className={className}
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "8px",
           textAlign: "center",
-          color: "#5f6368",
+          color: "var(--color-text-secondary)",
           fontSize: "14px",
           width: width || "100%",
           height: height || "auto",

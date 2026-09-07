@@ -17,10 +17,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.02),
-    0 12px 28px -4px rgba(0, 0, 0, 0.06),
-    0 32px 64px -12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-lg);
 }
 .pv-sidebar {
   display: flex;

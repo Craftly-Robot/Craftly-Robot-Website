@@ -54,7 +54,7 @@ export default function AgreementsPage() {
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",
@@ -81,8 +81,8 @@ export default function AgreementsPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",
@@ -101,8 +101,8 @@ export default function AgreementsPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",

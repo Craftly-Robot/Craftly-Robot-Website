@@ -115,7 +115,7 @@ export default function AboutPage() {
               <Link href="/download" className="btn-product-download">
                 Download
               </Link>
-              <Link href="/resources/documentation" className="btn-product-download" style={{ background: "transparent", color: "#111111", border: "1px solid #dddddd" }}>
+              <Link href="/resources/documentation" className="btn-product-download" style={{ background: "transparent", color: "var(--color-text)", border: "1px solid var(--color-border)" }}>
                 Documentation
               </Link>
             </div>
