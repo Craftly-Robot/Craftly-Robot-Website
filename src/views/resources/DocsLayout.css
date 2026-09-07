@@ -259,15 +259,14 @@
 
 /* Main Content */
 .docs__main {
-  flex: 1;
+  flex: 0 0 700px;
   min-width: 0;
   padding: 40px 24px 60px 24px;
-  max-width: 800px;
 }
 
 @media (min-width: 1024px) {
   .docs__main {
-    padding: 40px 64px 60px 64px;
+    padding: 40px 48px 60px 48px;
   }
 }
 
