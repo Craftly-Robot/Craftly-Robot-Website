@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-6xl);
+  margin-bottom: 0;
   opacity: 0;
   animation: heroFadeUp 0.8s var(--ease-out) 0.3s forwards;
 }
@@ -108,10 +108,6 @@
 
   .hero__title {
     max-width: 800px;
-  }
-
-  .hero__cta-group {
-    margin-bottom: var(--space-4xl);
   }
 }
 
