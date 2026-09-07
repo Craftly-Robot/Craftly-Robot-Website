@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  min-height: calc(100vh - 72px);
+  padding-top: var(--nav-height);
   background-color: var(--color-bg);
 }
 
@@ -112,8 +112,8 @@
     flex-shrink: 0;
     border-right: 1px solid var(--color-border);
     position: sticky;
-    top: 80px;
-    max-height: calc(100vh - 80px);
+    top: 0;
+    height: calc(100vh - var(--nav-height));
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -122,8 +122,8 @@
     width: 260px;
     flex-shrink: 0;
     position: sticky;
-    top: 80px;
-    max-height: calc(100vh - 80px);
+    top: 0;
+    height: calc(100vh - var(--nav-height));
     overflow-y: auto;
     overflow-x: hidden;
   }
