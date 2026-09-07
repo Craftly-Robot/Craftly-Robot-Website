@@ -10,6 +10,7 @@ import React, {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DropdownIcon from "../../components/ui/DropdownIcon";
+import DocSearch from "../../components/ui/DocSearch";
 import "./DocsLayout.css";
 
 const DOCS_ROUTES = [
@@ -417,6 +418,9 @@ export default function DocsLayout({
         className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? "docs__sidebar--mobile-open" : ""}`}
         ref={sidebarRef}
       >
+        <div className="docs__sidebar-search">
+          <DocSearch />
+        </div>
         <nav className="docs__nav">
           <Link
             href="/resources/documentation"
