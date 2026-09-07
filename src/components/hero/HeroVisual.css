@@ -1,6 +1,6 @@
 .hero-visual {
   width: 100%;
-  height: min(100vh, 880px);
+  height: 100vh;
   min-height: 600px;
   position: absolute;
   top: 0;

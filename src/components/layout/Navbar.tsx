@@ -105,6 +105,9 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
+          <Link href="https://sandbox-workspace.craftlyrobot.com/" className="navbar__join" target="_blank" rel="noopener noreferrer">
+            Join Us
+          </Link>
           <Link href="/download" className="navbar__download">
             Download
             <svg
@@ -163,20 +166,19 @@ export default function Navbar() {
               >
                 <div className="navbar__mega-left">
                   <h2 className="navbar__mega-title">
-                    {activeNavConfig.label === "Products" && (
+                    {activeNavConfig.label === "Product" && (
                       <>
-                        Explore our <br /> next generation <br /> products
+                        Build with <br /> intelligent <br /> systems
                       </>
                     )}
-                    {activeNavConfig.label === "Use Cases" && (
+                    {activeNavConfig.label === "Vision" && (
                       <>
-                        Discover solutions <br /> for your specific <br /> needs
+                        The Craftly <br /> plan for the <br /> future of work
                       </>
                     )}
-                    {activeNavConfig.label === "Resources" && (
+                    {activeNavConfig.label === "Docs" && (
                       <>
-                        Everything you <br /> need to stay <br /> up-to-date and{" "}
-                        <br /> get help
+                        Learn how <br /> to use <br /> Craftly
                       </>
                     )}
                   </h2>
@@ -190,8 +192,8 @@ export default function Navbar() {
                 </div>
 
                 <div className="navbar__mega-right">
-                  {activeNavConfig.label === "Products" && (
-                    <div className="navbar__mega-list-title">Products</div>
+                  {activeNavConfig.label === "Product" && (
+                    <div className="navbar__mega-list-title">Product</div>
                   )}
                   <div className="navbar__mega-grid">
                     {activeNavConfig.items?.map((child, idx) => (
@@ -206,25 +208,27 @@ export default function Navbar() {
                         <div className="dropdown-item__content">
                           <div className="dropdown-item__title">
                             {child.title}
-                            {activeNavConfig.label === "Resources" &&
-                              child.title === "Documentation" && (
-                                <span className="dropdown-item__arrow">
-                                  <svg
-                                    viewBox="0 0 24 24"
-                                    width="16"
-                                    height="16"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  >
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                  </svg>
-                                </span>
-                              )}
                           </div>
+                          {child.description && (
+                            <div className="dropdown-item__desc">
+                              {child.description}
+                            </div>
+                          )}
                         </div>
+                        <span className="dropdown-item__arrow">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </span>
                       </Link>
                     ))}
                   </div>
@@ -277,6 +281,15 @@ export default function Navbar() {
           </div>
         ))}
 
+        <a
+          href="https://sandbox-workspace.craftlyrobot.com/"
+          className="mobile-nav__download mobile-nav__join"
+          onClick={closeMobile}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join Us
+        </a>
         <Link
           href="/download"
           className="mobile-nav__download"

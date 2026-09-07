@@ -19,7 +19,6 @@ const WindowsIcon = () => (
   </svg>
 );
 
-/* Simple outline diamond/flask icon matching the Antigravity reference */
 const LinuxIcon = () => (
   <ImageWithFallback
     src="/assets/brand/linux-logo.png"
@@ -36,311 +35,197 @@ const AndroidIcon = () => (
   </svg>
 );
 
-interface ProductSectionProps {
-  title: string;
-  version: string;
-  id: string;
+interface DownloadButtonProps {
+  href: string;
   disabled?: boolean;
-  disabledPlatforms?: {
-    mac?: boolean;
-    windows?: boolean;
-    linux?: boolean;
-    android?: boolean;
-    ios?: boolean;
-  };
-  links?: {
-    macAppleSilicon?: string;
-    macIntel?: string;
-    winX64?: string;
-    winArm64?: string;
-    linuxX64?: string;
-    linuxArm64?: string;
-    androidApk?: string;
-    androidPlayStore?: string;
-    iosAppStore?: string;
-  };
+  variant?: "primary" | "secondary";
+  children: React.ReactNode;
 }
 
-const ProductDownloadSection = ({
-  title,
-  version,
-  id,
+const DownloadButton = ({
+  href,
   disabled,
-  disabledPlatforms,
-  links,
-}: ProductSectionProps) => {
-  const macDisabled = disabled || disabledPlatforms?.mac;
-  const winDisabled = disabled || disabledPlatforms?.windows;
-  const linuxDisabled = disabled || disabledPlatforms?.linux;
-  const androidDisabled = disabled || disabledPlatforms?.android;
-  const iosDisabled = disabled || disabledPlatforms?.ios;
+  variant = "primary",
+  children,
+}: DownloadButtonProps) => (
+  <a
+    href={href}
+    className={`dl-btn dl-btn--${variant}`}
+    aria-disabled={disabled}
+    style={disabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
+  >
+    {children}
+  </a>
+);
 
-  return (
-    <div className="download-section" id={id}>
-      <div className="section-header">
-        <h2 className="section-title">{title}</h2>
-        <span className="version-badge">v{version}</span>
-      </div>
+interface PlatformSectionProps {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+}
 
-      <div className="download-columns">
-        {/* macOS Column */}
-        <div className="os-column">
-          <h3 className="os-title">
-            <AppleIcon /> macOS
-          </h3>
-          <a
-            href={links?.macAppleSilicon || "#"}
-            className="dl-btn dl-btn--primary"
-            aria-disabled={macDisabled}
-            style={macDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download for Apple Silicon
-          </a>
-          <a
-            href={links?.macIntel || "#"}
-            className="dl-btn dl-btn--secondary"
-            aria-disabled={macDisabled}
-            style={macDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download for Intel
-          </a>
-
-          <div className="min-reqs">
-            <div className="min-reqs__title">Minimum Requirements</div>
-            <div className="min-reqs__text">
-              macOS versions with Apple security update support. This is
-              typically the current and two previous versions. Min Version 12
-              (Monterey), X86 is not supported
-            </div>
-          </div>
-        </div>
-
-        {/* Windows Column */}
-        <div className="os-column">
-          <h3 className="os-title">
-            <WindowsIcon /> Windows
-          </h3>
-          <a
-            href={links?.winX64 || "#"}
-            className="dl-btn dl-btn--primary"
-            aria-disabled={winDisabled}
-            style={winDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download for x64
-          </a>
-          <a
-            href={links?.winArm64 || "#"}
-            className="dl-btn dl-btn--secondary"
-            aria-disabled={winDisabled}
-            style={winDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download for ARM64
-          </a>
-
-          <div className="min-reqs">
-            <div className="min-reqs__title">Minimum Requirements</div>
-            <div className="min-reqs__text">Windows 10 (64 bit)</div>
-          </div>
-        </div>
-
-        {/* Linux Column */}
-        <div className="os-column">
-          <h3 className="os-title">
-            <LinuxIcon /> Linux
-          </h3>
-          <a
-            href={links?.linuxX64 || "#"}
-            className="dl-btn dl-btn--primary"
-            aria-disabled={linuxDisabled}
-            style={linuxDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download for x64
-          </a>
-          <a
-            href={links?.linuxArm64 || "#"}
-            className="dl-btn dl-btn--secondary"
-            aria-disabled={linuxDisabled}
-            style={linuxDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download for ARM64
-          </a>
-
-          <div className="min-reqs">
-            <div className="min-reqs__title">Minimum Requirements</div>
-            <div className="min-reqs__text">
-              glibc &gt;= 2.28, glibcxx &gt;= 3.4.25 (e.g. Ubuntu 20, Debian 10,
-              Fedora 36, RHEL 8)
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="download-columns download-columns--mobile"
-        style={{ marginTop: "24px" }}
-      >
-        {/* Android Column */}
-        <div className="os-column">
-          <h3 className="os-title">
-            <AndroidIcon /> Android
-          </h3>
-          <a
-            href={links?.androidApk || "#"}
-            className="dl-btn dl-btn--primary"
-            aria-disabled={androidDisabled}
-            style={
-              androidDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}
-            }
-          >
-            Download APK
-          </a>
-          <a
-            href={links?.androidPlayStore || "#"}
-            className="dl-btn dl-btn--secondary"
-            aria-disabled={androidDisabled || !links?.androidPlayStore}
-            style={
-              androidDisabled || !links?.androidPlayStore
-                ? { pointerEvents: "none", opacity: 0.5 }
-                : {}
-            }
-          >
-            Get it on Google Play
-          </a>
-
-          <div className="min-reqs">
-            <div className="min-reqs__title">Minimum Requirements</div>
-            <div className="min-reqs__text">Android 8.0 (Oreo) or later.</div>
-          </div>
-        </div>
-
-        {/* iOS Column */}
-        <div className="os-column">
-          <h3 className="os-title">
-            <AppleIcon /> iOS
-          </h3>
-          <a
-            href={links?.iosAppStore || "#"}
-            className="dl-btn dl-btn--primary"
-            aria-disabled={iosDisabled}
-            style={iosDisabled ? { pointerEvents: "none", opacity: 0.5 } : {}}
-          >
-            Download on the App Store
-          </a>
-          <a
-            href="#"
-            className="dl-btn dl-btn--secondary"
-            aria-disabled={iosDisabled}
-            style={
-              iosDisabled
-                ? { pointerEvents: "none", opacity: 0.5, visibility: "hidden" }
-                : { visibility: "hidden" }
-            }
-          >
-            Placeholder
-          </a>
-
-          <div className="min-reqs">
-            <div className="min-reqs__title">Minimum Requirements</div>
-            <div className="min-reqs__text">
-              iOS 15.0 or later. Compatible with iPhone, iPad, and iPod touch.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+const PlatformSection = ({ icon, title, children }: PlatformSectionProps) => (
+  <div className="os-column">
+    <h3 className="os-title">
+      {icon} {title}
+    </h3>
+    {children}
+  </div>
+);
 
 export default function DownloadPage() {
   const revealRef = useScrollReveal();
   const osName = useOS();
 
   return (
-    <>
-      <div className="download-page container" ref={revealRef}>
-        <div className="download-header">
-          <div className="download-hero-top">
-            <SectionTitle
-              text={`Download Craftly\nfor ${osName}`}
-              className="download-hero__title"
-            />
-            <Link href="/resources/releases" className="btn-previous-releases">
-              View previous releases
-            </Link>
-          </div>
+    <div className="download-page container" ref={revealRef}>
+      <div className="download-header">
+        <div className="download-hero-top">
+          <SectionTitle
+            text={`Download Craftly\nfor ${osName}`}
+            className="download-hero__title"
+          />
+          <Link href="/resources/releases" className="btn-previous-releases">
+            View previous releases
+          </Link>
+        </div>
+      </div>
 
-          <div className="download-product-tabs">
-            <a href="#workspace" className="product-tab product-tab--active">
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M3 9h18" />
-                <path d="M9 21V9" />
-              </svg>
-              Craftly Workspace
-            </a>
-            <a href="#robot" className="product-tab">
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 8V4H8" />
-                <rect width="16" height="12" x="4" y="8" rx="2" />
-                <path d="M2 14h2" />
-                <path d="M20 14h2" />
-                <path d="M15 13v2" />
-                <path d="M9 13v2" />
-              </svg>
-              Craftly Robot
-            </a>
-          </div>
+      {/* Workspace Downloads */}
+      <div className="download-section" id="workspace">
+        <div className="section-header">
+          <h2 className="section-title">Craftly Workspace</h2>
+          <span className="version-badge">v3.8.5</span>
         </div>
 
-        <ProductDownloadSection
-          title="Craftly Workspace"
-          version="3.8.5"
-          id="workspace"
-        />
+        <div className="download-columns">
+          <PlatformSection icon={<AppleIcon />} title="macOS">
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_macOS">
+              Download for macOS
+            </DownloadButton>
+            <div className="min-reqs">
+              <div className="min-reqs__title">Minimum Requirements</div>
+              <div className="min-reqs__text">
+                macOS 12 (Monterey) or later
+              </div>
+            </div>
+          </PlatformSection>
 
-        {/* Divider */}
-        <hr
-          style={{
-            border: "none",
-            borderTop: "1px solid var(--color-border-subtle)",
-            margin: "48px 0",
-          }}
-        />
+          <PlatformSection icon={<WindowsIcon />} title="Windows">
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_windows">
+              Download for Windows
+            </DownloadButton>
+            <div className="min-reqs">
+              <div className="min-reqs__title">Minimum Requirements</div>
+              <div className="min-reqs__text">Windows 10 (64 bit)</div>
+            </div>
+          </PlatformSection>
 
-        <ProductDownloadSection
-          title="Craftly Robot"
-          version="1.0.150"
-          id="robot"
-          disabled={false}
-          disabledPlatforms={{
-            mac: true,
-            windows: true,
-            linux: true,
-            ios: true,
-          }}
-          links={{
-            androidApk: "/assets/downloads/craftly-robot.apk",
-          }}
-        />
+          <PlatformSection icon={<LinuxIcon />} title="Linux">
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_linux">
+              Download for Linux
+            </DownloadButton>
+            <div className="min-reqs">
+              <div className="min-reqs__title">Minimum Requirements</div>
+              <div className="min-reqs__text">
+                Ubuntu 20, Debian 10, Fedora 36, RHEL 8 or later
+              </div>
+            </div>
+          </PlatformSection>
+        </div>
+
+        <div
+          className="download-columns download-columns--mobile"
+          style={{ marginTop: "24px" }}
+        >
+          <PlatformSection icon={<AndroidIcon />} title="Android">
+            <DownloadButton href="https://dl.craftlyrobot.com/workspace_android">
+              Download for Android
+            </DownloadButton>
+            <div className="min-reqs">
+              <div className="min-reqs__title">Minimum Requirements</div>
+              <div className="min-reqs__text">Android 8.0 or later</div>
+            </div>
+          </PlatformSection>
+
+          <PlatformSection icon={<AppleIcon />} title="iOS">
+            <DownloadButton href="https://apps.apple.com/app/craftly-workspace/id1234567890">
+              Download on the App Store
+            </DownloadButton>
+            <div className="min-reqs">
+              <div className="min-reqs__title">Minimum Requirements</div>
+              <div className="min-reqs__text">iOS 15.0 or later</div>
+            </div>
+          </PlatformSection>
+        </div>
       </div>
-    </>
+
+      {/* Divider */}
+      <hr
+        style={{
+          border: "none",
+          borderTop: "1px solid var(--color-border-subtle)",
+          margin: "48px 0",
+        }}
+      />
+
+      {/* Sandbox */}
+      <div className="download-section" id="sandbox">
+        <div className="section-header">
+          <h2 className="section-title">Sandbox</h2>
+          <span className="version-badge version-badge--dev">Preview</span>
+        </div>
+        <p style={{ fontSize: "16px", color: "#666666", marginBottom: "24px" }}>
+          Try the latest preview builds. These may contain experimental features and are not recommended for production use.
+        </p>
+
+        <div className="dl-grid">
+          <PlatformSection icon={<AppleIcon />} title="macOS">
+            <DownloadButton href="https://sandbox-dl.craftlyrobot.com/workspace_macOS">
+              Download for macOS
+            </DownloadButton>
+          </PlatformSection>
+
+          <PlatformSection icon={<WindowsIcon />} title="Windows">
+            <DownloadButton href="https://sandbox-dl.craftlyrobot.com/workspace_windows">
+              Download for Windows
+            </DownloadButton>
+          </PlatformSection>
+
+          <PlatformSection icon={<LinuxIcon />} title="Linux">
+            <DownloadButton href="https://sandbox-dl.craftlyrobot.com/workspace_linux">
+              Download for Linux
+            </DownloadButton>
+          </PlatformSection>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <hr
+        style={{
+          border: "none",
+          borderTop: "1px solid var(--color-border-subtle)",
+          margin: "48px 0",
+        }}
+      />
+
+      {/* Robot — Coming Soon */}
+      <div className="download-section" id="robot">
+        <div className="section-header">
+          <h2 className="section-title">Craftly Robot</h2>
+          <span className="version-badge version-badge--dev">Coming Soon</span>
+        </div>
+        <p style={{ fontSize: "16px", color: "#666666", marginBottom: "24px" }}>
+          Currently in development. Sign up to be notified when it launches.
+        </p>
+        <a
+          href="mailto:hello@craftlyrobot.com?subject=Notify me about Craftly Robot"
+          className="dl-btn dl-btn--primary"
+          style={{ maxWidth: "300px" }}
+        >
+          Get Notified
+        </a>
+      </div>
+    </div>
   );
 }

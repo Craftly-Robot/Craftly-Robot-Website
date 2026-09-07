@@ -461,7 +461,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
       1000,
     );
     // Position camera so 3D origin frames the hero title and CTA buttons directly
-    camera.position.set(0, -0.36, 3.1);
+    camera.position.set(0, -0.2, 3.0);
 
     const scene = new THREE.Scene();
 
@@ -476,15 +476,15 @@ export default function HeroParticles({ className = "" }: { className?: string }
     // Generate dense Poisson distributed points (matching Google Antigravity density)
     const size = 256;
     const length = size * size;
-    const rawPoints = generatePoissonPoints(500, 500, 2.7, 3.6, 18);
+    const rawPoints = generatePoissonPoints(600, 600, 2.4, 3.2, 18);
     const count = rawPoints.length;
 
     // Initialize Reference Positions Texture
     const posData = new Float32Array(length * 4);
     for (let i = 0; i < count; i++) {
       const idx = i * 4;
-      posData[idx + 0] = (rawPoints[i][0] - 250) / 250;
-      posData[idx + 1] = (rawPoints[i][1] - 250) / 250;
+      posData[idx + 0] = (rawPoints[i][0] - 300) / 300;
+      posData[idx + 1] = (rawPoints[i][1] - 300) / 300;
       posData[idx + 2] = 0;
       posData[idx + 3] = 0;
     }
@@ -603,8 +603,8 @@ export default function HeroParticles({ className = "" }: { className?: string }
     });
 
     const particlesMesh = new THREE.Points(renderGeometry, renderMaterial);
-    particlesMesh.position.set(0, 0, 0);
-    particlesMesh.scale.set(5, 5, 5);
+    particlesMesh.position.set(0, -0.5, 0);
+    particlesMesh.scale.set(6, 6, 6);
     scene.add(particlesMesh);
 
     // Mouse Tracking and State

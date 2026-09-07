@@ -59,40 +59,19 @@ interface ReleaseItem {
 const robotReleases: ReleaseItem[] = [
   {
     version: "1.0.150",
-    macOsAppleSilicon: "#",
-    macOsIntel: "#",
-    windowsX64: "#",
-    windowsArm64: "#",
-    linuxX64: "#",
-    linuxArm64: "#",
+    macOsAppleSilicon: "https://dl.craftlyrobot.com/workspace_macOS",
+    windowsX64: "https://dl.craftlyrobot.com/workspace_windows",
+    linuxX64: "https://dl.craftlyrobot.com/workspace_linux",
   },
-  { version: "2.7.1" },
-  { version: "2.6.0" },
-  { version: "2.5.0" },
-  { version: "2.4.3" },
-  { version: "2.3.1" },
-  { version: "2.3.0" },
-  { version: "2.2.1" },
-  { version: "2.1.4" },
-  { version: "2.0.11" },
-  { version: "2.0.10" },
-  { version: "2.0.6" },
-  { version: "2.0.1" },
-  { version: "2.0.0" },
 ];
 
 const workspaceReleases: ReleaseItem[] = [
   {
     version: "3.8.5",
-    macOsAppleSilicon: "#",
-    macOsIntel: "#",
-    windowsX64: "#",
-    windowsArm64: "#",
-    linuxX64: "#",
-    linuxArm64: "#",
+    macOsAppleSilicon: "https://dl.craftlyrobot.com/workspace_macOS",
+    windowsX64: "https://dl.craftlyrobot.com/workspace_windows",
+    linuxX64: "https://dl.craftlyrobot.com/workspace_linux",
   },
-  { version: "3.8.4" },
-  { version: "3.8.0" },
 ];
 
 export default function ReleasesPage() {

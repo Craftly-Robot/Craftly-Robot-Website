@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import "./globals.css";
@@ -10,7 +10,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const outfit = Outfit({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
@@ -25,11 +25,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://craftlyrobot.com"),
   title: {
-    default: "Craftly — Technology, Intelligence & Organization",
+    default: "Craftly — The Operating System for Intelligent Organizations",
     template: "%s — Craftly",
   },
   description:
-    "Craftly builds intelligent systems for the agentic era. Explore Craftly Workspace and Craftly Robot — tools for operating modern organizations and autonomous software engineering in Bangladesh and globally.",
+    "Craftly builds intelligent systems for the agentic era. Craftly Workspace connects people, work, and AI agents in one system. Built in Bangladesh, available globally.",
   keywords: [
     "Craftly Robot",
     "Craftly Bangladesh",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://craftlyrobot.com",
     siteName: "Craftly",
-    title: "Craftly — Technology, Intelligence & Organization",
+    title: "Craftly — The Operating System for Intelligent Organizations",
     description:
-      "Craftly builds intelligent systems for the agentic era. Explore Craftly Workspace and Craftly Robot — tools for operating modern organizations and autonomous software engineering in Bangladesh and globally.",
+      "Craftly builds intelligent systems for the agentic era. Craftly Workspace connects people, work, and AI agents in one system. Built in Bangladesh, available globally.",
     images: [
       {
         url: "/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Craftly — Technology, Intelligence & Organization",
+    title: "Craftly — The Operating System for Intelligent Organizations",
     description:
-      "Craftly builds intelligent systems for the agentic era in Bangladesh and globally.",
+      "Craftly builds intelligent systems for the agentic era. Craftly Workspace connects people, work, and AI agents in one system.",
     images: ["/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg"],
     creator: "@Craftly",
   },
@@ -115,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <link
@@ -131,9 +131,6 @@ export default function RootLayout({
       </head>
       <body>
         <div className="layout">
-          <a href="#main-content" className="skip-link">
-            Skip to content
-          </a>
           <Navbar />
           <main className="layout__main" id="main-content">
             {children}
