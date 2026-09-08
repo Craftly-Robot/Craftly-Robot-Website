@@ -33,8 +33,7 @@
   z-index: 2;
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding-inline: var(--page-margin);
-  height: var(--nav-height);
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,7 +41,8 @@
 
 @media (min-width: 1440px) {
   .navbar__inner {
-    padding-inline: 80px;
+    padding: 0 80px;
+    height: var(--nav-height);
   }
 }
 
