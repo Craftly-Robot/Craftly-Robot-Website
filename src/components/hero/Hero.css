@@ -6,7 +6,6 @@
   padding-top: var(--nav-height);
   justify-content: center;
   background: transparent;
-  overflow: hidden;
   perspective: 1000px;
 }
 
@@ -27,6 +26,7 @@
 
 .hero-visual {
   position: relative;
+  z-index: 1;
   padding: 0 var(--page-margin) 80px;
 }
 
