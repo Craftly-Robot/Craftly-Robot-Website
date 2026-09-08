@@ -610,7 +610,7 @@
   padding: 0;
   cursor: pointer;
   position: relative;
-  z-index: calc(var(--z-sticky) + 2);
+  z-index: calc(var(--z-sticky) + 10);
   align-items: center;
   justify-content: center;
 }
