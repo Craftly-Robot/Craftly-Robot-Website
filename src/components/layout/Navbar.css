@@ -38,7 +38,7 @@
   z-index: 2;
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding: 12px 16px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
