@@ -223,7 +223,7 @@
 }
 
 .docs__nav-link--active {
-  background-color: var(--color-bg-subtle);
+  background-color: transparent;
   color: var(--color-text);
   font-weight: 500;
   border-left: 2px solid var(--color-accent);
@@ -269,7 +269,7 @@
 }
 
 .docs__nav-subitem--active {
-  background-color: var(--color-bg-subtle);
+  background-color: transparent;
   color: var(--color-text);
   font-weight: 500;
   border-left: 2px solid var(--color-accent);
