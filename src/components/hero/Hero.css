@@ -209,12 +209,13 @@
   .hero {
     min-height: 100vh;
     min-height: 100dvh;
-    justify-content: center;
+    padding-top: var(--nav-height);
   }
 
   .hero__content {
-    padding-top: var(--nav-height);
+    padding-top: 0;
     padding-bottom: var(--space-xl);
+    margin-top: calc((100vh - var(--nav-height)) * 0.35);
   }
 
   .hero__title {
