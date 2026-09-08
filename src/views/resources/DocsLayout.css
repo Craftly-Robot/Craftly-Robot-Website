@@ -223,10 +223,10 @@
 }
 
 .docs__nav-link--active {
-  background-color: var(--color-bg-elevated);
+  background-color: var(--color-bg-subtle);
   color: var(--color-text);
-  font-weight: 600;
-  border-left: 3px solid var(--color-text);
+  font-weight: 500;
+  border-left: 2px solid var(--color-accent);
 }
 
 .docs__nav-text {
@@ -269,10 +269,10 @@
 }
 
 .docs__nav-subitem--active {
-  background-color: var(--color-bg-elevated);
+  background-color: var(--color-bg-subtle);
   color: var(--color-text);
-  font-weight: 600;
-  border-left: 3px solid var(--color-text);
+  font-weight: 500;
+  border-left: 2px solid var(--color-accent);
 }
 
 .docs__nav-meta {
