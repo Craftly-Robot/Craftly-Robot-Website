@@ -206,12 +206,28 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    justify-content: center;
+  }
+
+  .hero__content {
+    padding-top: var(--nav-height);
+    padding-bottom: var(--space-xl);
+  }
+
   .hero__title {
     max-width: 100%;
+    margin-top: 0;
   }
 
   .hero__subtitle {
     max-width: 100%;
+  }
+
+  .hero__media-wrapper {
+    display: none;
   }
 
   .hero__trust-signals {
