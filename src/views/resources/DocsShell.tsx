@@ -187,12 +187,9 @@ export default function DocsShell({ children }: DocsShellProps) {
           className={`docs__mobile-toggle ${mobileSidebarOpen ? "docs__mobile-toggle--open" : ""}`}
           onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
         >
-          <div className="docs__mobile-toggle-lines">
-            <span className="docs__mobile-toggle-line" />
-            <span className="docs__mobile-toggle-line" />
-            <span className="docs__mobile-toggle-line" />
-          </div>
-          Documentation Menu
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </button>
       </div>
 
@@ -200,6 +197,11 @@ export default function DocsShell({ children }: DocsShellProps) {
         className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? "docs__sidebar--mobile-open" : ""}`}
         ref={sidebarRef}
       >
+        <button className="docs__mobile-back" onClick={() => setMobileSidebarOpen(false)} aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
         <nav className="docs__nav">
           <Link
             href="/resources/documentation"

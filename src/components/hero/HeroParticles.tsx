@@ -772,8 +772,8 @@ export default function HeroParticles({ className = "" }: { className?: string }
   }
 
   return (
-    <div ref={containerRef} className={`hero-visual ${className}`.trim()} aria-hidden="true">
-      <canvas ref={canvasRef} className="hero-visual__canvas" />
+    <div ref={containerRef} className={`hero-particles ${className}`.trim()} aria-hidden="true">
+      <canvas ref={canvasRef} className="hero-particles__canvas" />
     </div>
   );
 }

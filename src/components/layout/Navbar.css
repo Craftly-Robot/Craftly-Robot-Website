@@ -4,7 +4,6 @@
   left: 0;
   width: 100vw;
   max-width: 100%;
-  height: var(--nav-height);
   z-index: var(--z-sticky);
   transition:
     background-color var(--duration-normal) var(--ease-out),
@@ -13,6 +12,12 @@
   background: transparent;
   border-bottom: 1px solid transparent;
   font-family: var(--font-display);
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: var(--nav-height);
+  }
 }
 
 .navbar--scrolled {
@@ -33,16 +38,23 @@
   z-index: 2;
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding-inline: var(--page-margin);
-  height: var(--nav-height);
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .navbar__inner {
+    padding: 0 var(--page-margin);
+    height: var(--nav-height);
+  }
+}
+
 @media (min-width: 1440px) {
   .navbar__inner {
-    padding-inline: 80px;
+    padding: 0 80px;
+    height: var(--nav-height);
   }
 }
 
@@ -52,6 +64,18 @@
   align-items: center;
   gap: 32px;
   padding-left: 16px;
+}
+
+.navbar__center {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar__center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
 }
 
 .navbar__logo {
@@ -400,7 +424,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 4px;
+}
+
+@media (min-width: 1024px) {
+  .navbar__right {
+    gap: var(--space-sm);
+  }
 }
 
 .navbar__search-trigger {
@@ -417,6 +447,47 @@
   transition: all 0.2s ease;
 }
 
+.navbar__search-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) ease;
+}
+
+.navbar__search-mobile:hover {
+  background: var(--color-accent-muted);
+  color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  .navbar__search-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar__search-trigger {
+    gap: 8px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar__search-trigger {
+    max-width: 320px;
+    padding: 8px 20px;
+  }
+}
+
 .navbar__search-trigger:hover {
   background: var(--color-surface);
   color: var(--color-text);
@@ -430,6 +501,41 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 3px;
+}
+
+.navbar__search-text {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar__search-text {
+    display: inline;
+    flex: 1;
+  }
+
+  .navbar__search-kbd {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar__search-kbd {
+    display: none;
+  }
+
+  .navbar__search-trigger {
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  .navbar__search-trigger:hover {
+    background: var(--color-accent-muted) !important;
+  }
 }
 
 [data-theme="dark"] .navbar__search-trigger {
@@ -499,10 +605,14 @@
   display: none;
   background: none;
   border: none;
-  padding: 8px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   cursor: pointer;
   position: relative;
-  z-index: calc(var(--z-sticky) + 2);
+  z-index: calc(var(--z-sticky) + 10);
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__mobile-toggle-lines {
@@ -568,6 +678,28 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.mobile-nav__close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 8px 16px 8px 0;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: calc(var(--z-sticky) + 3);
+  transition: background var(--duration-fast) ease;
+}
+
+.mobile-nav__close:hover {
+  background: var(--color-bg-subtle);
 }
 
 .mobile-nav__section {
@@ -688,6 +820,7 @@
 @media (max-width: 1024px) {
   .navbar__nav,
   .navbar__download,
+  .navbar__join,
   .navbar__overlay,
   .navbar__dropdown-wrapper {
     display: none !important;
