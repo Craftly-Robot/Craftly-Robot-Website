@@ -105,9 +105,8 @@
 
 .docs__mobile-back {
   position: fixed;
-  top: 50%;
+  top: calc(var(--nav-height) + 12px);
   right: 0;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
