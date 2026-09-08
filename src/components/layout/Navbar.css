@@ -597,9 +597,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: var(--nav-height);
-  padding: 0 var(--page-margin);
+  width: 36px;
+  height: 36px;
+  margin: 8px 16px 8px 0;
   color: var(--color-text);
   background: none;
   border: none;
