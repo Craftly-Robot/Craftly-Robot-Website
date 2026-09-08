@@ -688,6 +688,7 @@
 @media (max-width: 1024px) {
   .navbar__nav,
   .navbar__download,
+  .navbar__join,
   .navbar__overlay,
   .navbar__dropdown-wrapper {
     display: none !important;
