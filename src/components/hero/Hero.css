@@ -3,7 +3,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 0;
+  padding-top: var(--nav-height);
+  justify-content: center;
   background: transparent;
   overflow: hidden;
   perspective: 1000px;
@@ -16,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: calc(var(--nav-height) + 4vh);
+  padding-top: 0;
   will-change: transform;
 }
 
@@ -206,20 +207,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding-top: var(--nav-height);
-    justify-content: center;
-    align-items: stretch;
-  }
-
-  .hero__content {
-    padding-top: 0;
-    margin: 0 auto;
-    flex: none;
-  }
-
   .hero__title {
     max-width: 100%;
     margin-top: 0;
