@@ -135,20 +135,6 @@
   }
 }
 
-.docs__mobile-backdrop {
-  display: none;
-}
-
-@media (max-width: 1023px) {
-  .docs__mobile-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 199;
-  }
-}
-
 @media (min-width: 1024px) {
   .docs__sidebar {
     display: block;

@@ -193,11 +193,6 @@ export default function DocsShell({ children }: DocsShellProps) {
         </button>
       </div>
 
-      {/* Mobile Backdrop */}
-      {mobileSidebarOpen && (
-        <div className="docs__mobile-backdrop" onClick={() => setMobileSidebarOpen(false)} />
-      )}
-
       <aside
         className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? "docs__sidebar--mobile-open" : ""}`}
         ref={sidebarRef}
