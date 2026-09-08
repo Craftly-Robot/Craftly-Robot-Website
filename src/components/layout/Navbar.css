@@ -441,6 +441,31 @@
   transition: all 0.2s ease;
 }
 
+.navbar__search-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) ease;
+}
+
+.navbar__search-mobile:hover {
+  background: var(--color-accent-muted);
+  color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  .navbar__search-mobile {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
   .navbar__search-trigger {
     gap: 8px;

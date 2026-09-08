@@ -127,6 +127,27 @@ export default function Navbar() {
 
         {/* Right Side: CTA */}
         <div className="navbar__right">
+          <button
+            className="navbar__search-mobile"
+            onClick={() => {
+              document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
+            }}
+            aria-label="Search"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              width="18"
+              height="18"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
           <ThemeToggle />
           <Link
             href="https://sandbox-workspace.craftlyrobot.com/"
