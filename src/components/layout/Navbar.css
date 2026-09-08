@@ -591,19 +591,20 @@
 }
 
 .mobile-nav__close {
-  position: absolute;
-  top: var(--nav-height);
-  right: var(--page-margin);
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: var(--nav-height);
+  padding: 0 var(--page-margin);
   color: var(--color-text);
   background: none;
   border: none;
   cursor: pointer;
-  border-radius: var(--radius-md);
+  z-index: calc(var(--z-sticky) + 3);
   transition: background var(--duration-fast) ease;
 }
 
