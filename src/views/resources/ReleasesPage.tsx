@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ImageWithFallback from "../../components/common/ImageWithFallback";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import SectionTitle from "../../components/ui/SectionTitle";
-import ImageWithFallback from "../../components/common/ImageWithFallback";
 import "./ReleasesPage.css";
 
 const AppleIcon = () => (
@@ -75,18 +75,14 @@ const workspaceReleases: ReleaseItem[] = [
 ];
 
 export default function ReleasesPage() {
-  const [activeTab, setActiveTab] = useState<"workspace" | "robot">(
-    "workspace",
-  );
+  const [activeTab, setActiveTab] = useState<"workspace" | "robot">("workspace");
   const [expandedVersions, setExpandedVersions] = useState<string[]>(["3.8.5"]);
 
   const releases = activeTab === "robot" ? robotReleases : workspaceReleases;
 
   const toggleVersion = (version: string) => {
     setExpandedVersions((prev) =>
-      prev.includes(version)
-        ? prev.filter((v) => v !== version)
-        : [...prev, version],
+      prev.includes(version) ? prev.filter((v) => v !== version) : [...prev, version],
     );
   };
 
@@ -96,15 +92,11 @@ export default function ReleasesPage() {
         <div className="releases-hero-wrapper">
           <div className="releases-hero container">
             <div className="releases-hero__content">
-              <SectionTitle
-                text={`Craftly\nReleases`}
-                className="releases-hero__title"
-              />
+              <SectionTitle text={`Craftly\nReleases`} className="releases-hero__title" />
               <p className="releases-hero__desc">
-                Download previous Craftly Workspace and Craftly Robot releases.
-                By default, they auto-update to the latest version. To stay on
-                old versions, you will need to set Update: Mode to manual or
-                none in the settings.
+                Download previous Craftly Workspace and Craftly Robot releases. By default, they
+                auto-update to the latest version. To stay on old versions, you will need to set
+                Update: Mode to manual or none in the settings.
               </p>
             </div>
 
@@ -149,9 +141,7 @@ export default function ReleasesPage() {
               >
                 <div className="release-item__version-info">
                   <span className="release-item__version-label">Version</span>
-                  <span className="release-item__version-number">
-                    {release.version}
-                  </span>
+                  <span className="release-item__version-number">{release.version}</span>
                 </div>
 
                 {isExpanded && (
@@ -167,8 +157,7 @@ export default function ReleasesPage() {
                           className="os-download-link"
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (e.currentTarget.getAttribute("href") === "#")
-                              e.preventDefault();
+                            if (e.currentTarget.getAttribute("href") === "#") e.preventDefault();
                           }}
                         >
                           <DownloadIcon /> macOS Apple Silicon (.dmg)
@@ -178,8 +167,7 @@ export default function ReleasesPage() {
                           className="os-download-link"
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (e.currentTarget.getAttribute("href") === "#")
-                              e.preventDefault();
+                            if (e.currentTarget.getAttribute("href") === "#") e.preventDefault();
                           }}
                         >
                           <DownloadIcon /> macOS Intel (.dmg)
@@ -198,8 +186,7 @@ export default function ReleasesPage() {
                           className="os-download-link"
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (e.currentTarget.getAttribute("href") === "#")
-                              e.preventDefault();
+                            if (e.currentTarget.getAttribute("href") === "#") e.preventDefault();
                           }}
                         >
                           <DownloadIcon /> Windows x64 (.exe)
@@ -209,8 +196,7 @@ export default function ReleasesPage() {
                           className="os-download-link"
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (e.currentTarget.getAttribute("href") === "#")
-                              e.preventDefault();
+                            if (e.currentTarget.getAttribute("href") === "#") e.preventDefault();
                           }}
                         >
                           <DownloadIcon /> Windows ARM64 (.exe)
@@ -229,8 +215,7 @@ export default function ReleasesPage() {
                           className="os-download-link"
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (e.currentTarget.getAttribute("href") === "#")
-                              e.preventDefault();
+                            if (e.currentTarget.getAttribute("href") === "#") e.preventDefault();
                           }}
                         >
                           <DownloadIcon /> Linux x64 (.tar.gz)
@@ -240,8 +225,7 @@ export default function ReleasesPage() {
                           className="os-download-link"
                           onClick={(e) => {
                             e.stopPropagation();
-                            if (e.currentTarget.getAttribute("href") === "#")
-                              e.preventDefault();
+                            if (e.currentTarget.getAttribute("href") === "#") e.preventDefault();
                           }}
                         >
                           <DownloadIcon /> Linux ARM64 (.tar.gz)

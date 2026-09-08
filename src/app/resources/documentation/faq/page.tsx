@@ -17,14 +17,16 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
-  description:
-    "Find answers to common questions about Craftly Workspace and Craftly Robot.",
+  description: "Find answers to common questions about Craftly Workspace and Craftly Robot.",
 };
 
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <FAQPageView />
     </>
   );

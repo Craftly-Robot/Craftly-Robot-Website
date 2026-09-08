@@ -25,44 +25,40 @@ export const blogArticles: BlogArticle[] = [
     content: (
       <>
         <p className="docs__text">
-          Craftly is being built step by step. Our first priority is to build
-          the organization itself and create the systems that allow people to
-          work together effectively. Craftly Workspace is the foundation of that
-          effort — a place to coordinate people, work, communication, and
-          everyday operations.
+          Craftly is being built step by step. Our first priority is to build the organization
+          itself and create the systems that allow people to work together effectively. Craftly
+          Workspace is the foundation of that effort — a place to coordinate people, work,
+          communication, and everyday operations.
         </p>
         <p className="docs__text">
-          As the organization and its systems grow, we are using what we learn
-          to build Craftly Robot: our active research and development direction
-          for a broad real-world AI assistant. Over the long term, these efforts
-          are intended to lead toward Craftly Glass, a much more ambitious
-          vision for how people may interact with intelligent technology.
+          As the organization and its systems grow, we are using what we learn to build Craftly
+          Robot: our active research and development direction for a broad real-world AI assistant.
+          Over the long term, these efforts are intended to lead toward Craftly Glass, a much more
+          ambitious vision for how people may interact with intelligent technology.
         </p>
         <h2 className="docs__subtitle">What works today</h2>
         <p className="docs__text">
-          Craftly Workspace is our current working product. It supports
-          day-to-day operation of the organization, including onboarding,
-          agreements, task evidence, communication, resources, and coordination
-          between people and teams.
+          Craftly Workspace is our current working product. It supports day-to-day operation of the
+          organization, including onboarding, agreements, task evidence, communication, resources,
+          and coordination between people and teams.
         </p>
         <h2 className="docs__subtitle">What we're building now</h2>
         <p className="docs__text">
-          Craftly Robot is under active research and development. We are working
-          toward a broad real-world assistant whose agents can understand
-          requests, discover relevant capabilities, coordinate with other agents
-          or services, and help turn those requests into safe, useful actions.
+          Craftly Robot is under active research and development. We are working toward a broad
+          real-world assistant whose agents can understand requests, discover relevant capabilities,
+          coordinate with other agents or services, and help turn those requests into safe, useful
+          actions.
         </p>
         <h2 className="docs__subtitle">Where we're going</h2>
         <p className="docs__text">
-          Craftly Glass is our long-term vision for an augmented-reality
-          wearable that brings intelligent systems closer to the physical world.
-          It is a future direction rather than a current product.
+          Craftly Glass is our long-term vision for an augmented-reality wearable that brings
+          intelligent systems closer to the physical world. It is a future direction rather than a
+          current product.
         </p>
         <p className="docs__text docs__text--highlight">
           <strong>
-            Technology should help people coordinate, create, and accomplish
-            useful work at scale without losing sight of the people doing that
-            work.
+            Technology should help people coordinate, create, and accomplish useful work at scale
+            without losing sight of the people doing that work.
           </strong>
         </p>
       </>
@@ -78,35 +74,30 @@ export const blogArticles: BlogArticle[] = [
     content: (
       <>
         <p className="docs__text">
-          Most AI assistants today operate alone. They answer questions and
-          complete tasks inside a single product boundary. Real work rarely
-          works that way — it involves finding the right capability, agreeing on
-          scope, and coordinating across systems and people.
+          Most AI assistants today operate alone. They answer questions and complete tasks inside a
+          single product boundary. Real work rarely works that way — it involves finding the right
+          capability, agreeing on scope, and coordinating across systems and people.
         </p>
         <p className="docs__text">
-          That is why agent-to-agent negotiation is one of our core research
-          directions for Craftly Robot. Instead of hard-coding every
-          integration, agents should be able to discover relevant capabilities
-          and negotiate how a task gets done.
+          That is why agent-to-agent negotiation is one of our core research directions for Craftly
+          Robot. Instead of hard-coding every integration, agents should be able to discover
+          relevant capabilities and negotiate how a task gets done.
         </p>
         <h2 className="docs__subtitle">Discovery before coordination</h2>
         <p className="docs__text">
-          The first problem is discovery: an agent needs to find which other
-          agents or services can actually help. The second is coordination: once
-          found, agents must clarify goals, requirements, and constraints before
-          acting.
+          The first problem is discovery: an agent needs to find which other agents or services can
+          actually help. The second is coordination: once found, agents must clarify goals,
+          requirements, and constraints before acting.
         </p>
         <h2 className="docs__subtitle">Safety through confirmation</h2>
         <p className="docs__text">
-          Negotiation does not mean acting without oversight. Human confirmation
-          remains a central part of our design: agents propose, people approve.
-          You can read more in the Robot documentation on human confirmation and
-          real-world task coordination.
+          Negotiation does not mean acting without oversight. Human confirmation remains a central
+          part of our design: agents propose, people approve. You can read more in the Robot
+          documentation on human confirmation and real-world task coordination.
         </p>
         <p className="docs__text docs__text--highlight">
           <strong>
-            Agents should propose and coordinate; people stay in control of what
-            actually happens.
+            Agents should propose and coordinate; people stay in control of what actually happens.
           </strong>
         </p>
       </>

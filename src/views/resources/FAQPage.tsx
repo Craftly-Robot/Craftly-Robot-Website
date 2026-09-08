@@ -1,8 +1,8 @@
 "use client";
 
 import { Fragment } from "react";
-import DocsLayout from "./DocsLayout";
 import { faqEntries } from "../../data/docs/faq";
+import DocPage from "./DocPage";
 import "./FAQPage.css";
 
 export default function FAQPage() {
@@ -12,31 +12,24 @@ export default function FAQPage() {
   ];
 
   return (
-    <>
-      <DocsLayout
-        title="FAQ"
-        description="Frequently asked questions about Craftly Workspace and Robot."
-        tocItems={tocItems}
-      >
-        <div className="docs__breadcrumb">
-          Documentation &gt; <strong>FAQ</strong>
-        </div>
-
-        <h1 className="docs__title" id="faq">
-          Frequently Asked Questions
-        </h1>
-
-        {faqEntries.map((entry) => (
-          <Fragment key={entry.id}>
-            <h2 className="docs__heading" id={entry.id}>
-              {entry.question}
-            </h2>
-            <div className="docs__text">
-              <p>{entry.answerText}</p>
-            </div>
-          </Fragment>
-        ))}
-      </DocsLayout>
-    </>
+    <DocPage
+      title="FAQ"
+      description="Frequently asked questions about Craftly Workspace and Robot."
+      crumbs={["Documentation", "FAQ"]}
+      pageId="faq"
+      pageTitle="Frequently Asked Questions"
+      tocItems={tocItems}
+    >
+      {faqEntries.map((entry) => (
+        <Fragment key={entry.id}>
+          <h2 className="docs__heading" id={entry.id}>
+            {entry.question}
+          </h2>
+          <div className="docs__text">
+            <p>{entry.answerText}</p>
+          </div>
+        </Fragment>
+      ))}
+    </DocPage>
   );
 }

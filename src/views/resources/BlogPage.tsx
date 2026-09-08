@@ -17,10 +17,7 @@ export default function BlogPage() {
   return (
     <>
       <div className="container">
-        <section
-          className="section section--lg"
-          style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}
-        >
+        <section className="section section--lg section-content">
           <span
             className="text-label"
             style={{
@@ -62,13 +59,9 @@ export default function BlogPage() {
                 className="blog-card"
               >
                 <div className="blog-card__meta">
-                  <time dateTime={article.date}>
-                    {formatDate(article.date)}
-                  </time>
+                  <time dateTime={article.date}>{formatDate(article.date)}</time>
                   {article.tags.length > 0 && (
-                    <span className="blog-card__tags">
-                      {article.tags.join(" · ")}
-                    </span>
+                    <span className="blog-card__tags">{article.tags.join(" · ")}</span>
                   )}
                 </div>
                 <h2 className="blog-card__title">{article.title}</h2>

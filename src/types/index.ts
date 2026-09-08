@@ -42,4 +42,3 @@ export interface NavConfig {
   dropdownType: "product" | "vision" | "docs";
   items?: NavDropdownItem[];
 }
-

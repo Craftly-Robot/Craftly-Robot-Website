@@ -7,12 +7,7 @@ export default function ManagersPage() {
     <DocPage
       title="Managers — Craftly Workspace"
       description="Managers in Craftly Workspace"
-      crumbs={[
-        "Documentation",
-        "Craftly Workspace",
-        "People &amp; Roles",
-        "Managers",
-      ]}
+      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Managers"]}
       pageId="managers"
       pageTitle="Managers"
       tocItems={[
@@ -30,26 +25,23 @@ export default function ManagersPage() {
       ]}
     >
       <p className="docs__text">
-        In Craftly, a Manager is the person responsible for leading,
-        coordinating, guiding, and reviewing the members directly under them.
+        In Craftly, a Manager is the person responsible for leading, coordinating, guiding, and
+        reviewing the members directly under them.
       </p>
       <p className="docs__text">
-        In practice, the term Manager generally refers to a member's Team Leader
-        or Unit Leader the person responsible for their day-to-day direction and
-        work.
+        In practice, the term Manager generally refers to a member's Team Leader or Unit Leader the
+        person responsible for their day-to-day direction and work.
       </p>
 
       <h2 className="docs__subtitle" id="management-structure">
         The Management Structure
       </h2>
       <p className="docs__text">
-        Craftly follows a hierarchical management structure where each level is
-        responsible for the level directly below it.
+        Craftly follows a hierarchical management structure where each level is responsible for the
+        level directly below it.
       </p>
       <p className="docs__text">
-        <strong>
-          CEO &rarr; C-Suite &rarr; Senior &rarr; Junior &rarr; Executive
-        </strong>
+        <strong>CEO &rarr; C-Suite &rarr; Senior &rarr; Junior &rarr; Executive</strong>
       </p>
       <p className="docs__text">In this structure:</p>
       <ul className="docs__list">
@@ -59,18 +51,17 @@ export default function ManagersPage() {
         <li>Junior members manage Executives</li>
       </ul>
       <p className="docs__text">
-        The exact structure may vary depending on the department and
-        organizational requirements, but the principle remains the same: every
-        member should have a clear person responsible for guiding and
-        coordinating their work.
+        The exact structure may vary depending on the department and organizational requirements,
+        but the principle remains the same: every member should have a clear person responsible for
+        guiding and coordinating their work.
       </p>
 
       <h2 className="docs__subtitle" id="what-does-manager-do">
         What Does a Manager Do?
       </h2>
       <p className="docs__text">
-        A Manager or Unit Leader is responsible for helping their team
-        understand and complete their responsibilities.
+        A Manager or Unit Leader is responsible for helping their team understand and complete their
+        responsibilities.
       </p>
       <p className="docs__text">Their responsibilities may include:</p>
       <ul className="docs__list">
@@ -85,19 +76,18 @@ export default function ManagersPage() {
         <li>Maintaining coordination within the unit</li>
       </ul>
       <p className="docs__text">
-        A Manager is not simply someone who gives orders. They are responsible
-        for making sure the people under them have the direction, context, and
-        support needed to perform their work properly.
+        A Manager is not simply someone who gives orders. They are responsible for making sure the
+        people under them have the direction, context, and support needed to perform their work
+        properly.
       </p>
 
       <h2 className="docs__subtitle" id="following-instructions">
         Following Manager Instructions
       </h2>
       <p className="docs__text">
-        When a Manager or Unit Leader gives a legitimate organizational
-        instruction or assigns an official task within their responsibility, the
-        assigned member is expected to take it seriously and make a genuine
-        effort to complete it.
+        When a Manager or Unit Leader gives a legitimate organizational instruction or assigns an
+        official task within their responsibility, the assigned member is expected to take it
+        seriously and make a genuine effort to complete it.
       </p>
       <p className="docs__text">Members should:</p>
       <ul className="docs__list">
@@ -108,36 +98,31 @@ export default function ManagersPage() {
         <li>Inform their Manager when the work is completed</li>
       </ul>
       <p className="docs__text">
-        If a member cannot complete a task, they should communicate the reason
-        instead of silently ignoring it.
+        If a member cannot complete a task, they should communicate the reason instead of silently
+        ignoring it.
       </p>
 
       <h2 className="docs__subtitle" id="communication-comes-first">
         Clear Communication Comes First
       </h2>
       <p className="docs__text">
-        Following the management structure does not mean that members should
-        blindly follow unclear instructions.
+        Following the management structure does not mean that members should blindly follow unclear
+        instructions.
       </p>
       <p className="docs__text">If you do not understand:</p>
       <p className="docs__text">
         <strong>
-          What to do &rarr; How to do it &rarr; Where to do it &rarr; Why it is
-          required
+          What to do &rarr; How to do it &rarr; Where to do it &rarr; Why it is required
         </strong>
       </p>
+      <p className="docs__text">you should ask your Manager or Unit Leader for clarification.</p>
       <p className="docs__text">
-        you should ask your Manager or Unit Leader for clarification.
+        If there is a serious concern involving safety, ethics, legality, or inappropriate conduct,
+        the appropriate Support Request or escalation process should be used.
       </p>
       <p className="docs__text">
-        If there is a serious concern involving safety, ethics, legality, or
-        inappropriate conduct, the appropriate Support Request or escalation
-        process should be used.
-      </p>
-      <p className="docs__text">
-        A Manager provides direction and accountability. A member is expected to
-        listen, understand, communicate, and make a genuine effort to carry out
-        legitimate responsibilities.
+        A Manager provides direction and accountability. A member is expected to listen, understand,
+        communicate, and make a genuine effort to carry out legitimate responsibilities.
       </p>
     </DocPage>
   );

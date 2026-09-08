@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-
 import CTASection from "../../components/sections/CTASection";
+import Breadcrumbs from "../../components/ui/Breadcrumbs";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./ProductPage.css";
 
@@ -11,26 +11,33 @@ export default function RobotPage() {
 
   return (
     <div ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Products" }, { label: "Robot" }]} />
       <div className="container">
         <section className="product-hero-clean">
-          <div className="vision-stage__badge vision-stage__badge--dev">
-            Coming Soon
-          </div>
+          <div className="vision-stage__badge vision-stage__badge--dev">Coming Soon</div>
           <h1 className="product-hero-clean__title">Craftly Robot</h1>
           <p className="product-hero-clean__desc">
-            An agentic AI system for autonomous software engineering.
-            Currently in active development.
+            An agentic AI system for autonomous software engineering. Currently in active
+            development.
           </p>
-          <p className="product-hero-clean__desc" style={{ fontSize: "14px", color: "#888888" }}>
+          <p className="product-hero-clean__desc text-muted-sm">
             Sign up to be notified when it launches.
           </p>
+          <div className="product-hero-clean__actions">
+            <a
+              href="mailto:hello@craftlyrobot.com?subject=Notify me about Craftly Robot"
+              className="btn-product-download"
+            >
+              Join the Waitlist
+            </a>
+          </div>
         </section>
       </div>
 
       {/* What It Does — 3 capabilities */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="explore-features-section__title reveal">
               Autonomous software engineering
             </h2>
@@ -54,8 +61,8 @@ export default function RobotPage() {
                 </div>
                 <h3 className="workspace-option__title">Understands Goals</h3>
                 <p className="workspace-option__desc">
-                  Reads your codebase, understands architecture, and plans
-                  changes. Knows what needs to happen before it starts.
+                  Reads your codebase, understands architecture, and plans changes. Knows what needs
+                  to happen before it starts.
                 </p>
               </div>
 
@@ -80,8 +87,8 @@ export default function RobotPage() {
                 </div>
                 <h3 className="workspace-option__title">Coordinates Agents</h3>
                 <p className="workspace-option__desc">
-                  Multiple specialized agents work together on complex tasks.
-                  Each agent handles what it&apos;s best at.
+                  Multiple specialized agents work together on complex tasks. Each agent handles
+                  what it&apos;s best at.
                 </p>
               </div>
 
@@ -102,9 +109,90 @@ export default function RobotPage() {
                 </div>
                 <h3 className="workspace-option__title">Stays Under Control</h3>
                 <p className="workspace-option__desc">
-                  Human approval for consequential actions. You decide what
-                  matters. The agents do the work.
+                  Human approval for consequential actions. You decide what matters. The agents do
+                  the work.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture Diagram */}
+      <section className="robot-architecture">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="robot-architecture__title reveal">How Robot thinks</h2>
+            <p className="robot-architecture__desc reveal">
+              A simplified view of the agent architecture.
+            </p>
+            <div className="robot-architecture__diagram reveal">
+              <div className="robot-architecture__node robot-architecture__node--input">
+                <span className="robot-architecture__node-icon">📋</span>
+                <span className="robot-architecture__node-label">Task Input</span>
+              </div>
+              <div className="robot-architecture__connector" />
+              <div className="robot-architecture__node robot-architecture__node--brain">
+                <span className="robot-architecture__node-icon">🧠</span>
+                <span className="robot-architecture__node-label">Planning Agent</span>
+              </div>
+              <div className="robot-architecture__connector" />
+              <div className="robot-architecture__agents">
+                <div className="robot-architecture__node robot-architecture__node--agent">
+                  <span className="robot-architecture__node-icon">💻</span>
+                  <span className="robot-architecture__node-label">Code Agent</span>
+                </div>
+                <div className="robot-architecture__node robot-architecture__node--agent">
+                  <span className="robot-architecture__node-icon">🔍</span>
+                  <span className="robot-architecture__node-label">Review Agent</span>
+                </div>
+                <div className="robot-architecture__node robot-architecture__node--agent">
+                  <span className="robot-architecture__node-icon">✅</span>
+                  <span className="robot-architecture__node-label">Verify Agent</span>
+                </div>
+              </div>
+              <div className="robot-architecture__connector" />
+              <div className="robot-architecture__node robot-architecture__node--output">
+                <span className="robot-architecture__node-icon">🚀</span>
+                <span className="robot-architecture__node-label">Shipped Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Development Timeline */}
+      <section className="robot-timeline">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="robot-timeline__title reveal">Development progress</h2>
+            <div className="robot-timeline__track">
+              <div className="robot-timeline__progress robot-timeline__progress--40" />
+            </div>
+            <div className="robot-timeline__stages">
+              <div className="robot-timeline__stage robot-timeline__stage--complete reveal">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Research</span>
+                <span className="robot-timeline__stage-status robot-timeline__stage-status--done">
+                  Done
+                </span>
+              </div>
+              <div className="robot-timeline__stage robot-timeline__stage--progress reveal reveal-delay-1">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Core Engine</span>
+                <span className="robot-timeline__stage-status robot-timeline__stage-status--active">
+                  In Progress
+                </span>
+              </div>
+              <div className="robot-timeline__stage robot-timeline__stage--future reveal reveal-delay-2">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Agent Coordination</span>
+                <span className="robot-timeline__stage-status">Upcoming</span>
+              </div>
+              <div className="robot-timeline__stage robot-timeline__stage--future reveal reveal-delay-3">
+                <div className="robot-timeline__marker" />
+                <span className="robot-timeline__stage-name">Public Beta</span>
+                <span className="robot-timeline__stage-status">Upcoming</span>
               </div>
             </div>
           </div>
@@ -113,14 +201,14 @@ export default function RobotPage() {
 
       {/* The Vision */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content">
             <h2 className="abstracted-ui-title reveal">The Craftly Plan</h2>
             <p className="abstracted-ui-desc reveal reveal-delay-1">
-              Workspace → Robot → Glass. Workspace is the foundation. Robot is
-              the intelligence. Glass is the future.
+              Workspace → Robot → Glass. Workspace is the foundation. Robot is the intelligence.
+              Glass is the future.
             </p>
-            <div style={{ marginTop: "32px" }}>
+            <div className="center-action">
               <Link href="/vision" className="btn-product-download">
                 Read the full vision
               </Link>

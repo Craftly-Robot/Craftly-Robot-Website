@@ -1,8 +1,8 @@
 "use client";
 
 import projectImage from "../../../../assets/projects/1.webp";
-import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import DocPage from "../../DocPage";
 
 export default function OperationalWorkflowsPage() {
   return (
@@ -25,18 +25,16 @@ export default function OperationalWorkflowsPage() {
       ]}
     >
       <p className="docs__text">
-        Craftly Workspace's Projects section provides practical, real world
-        projects primarily designed for the Operations Department.
+        Craftly Workspace's Projects section provides practical, real world projects primarily
+        designed for the Operations Department.
       </p>
       <p className="docs__text">
-        These projects give members an opportunity to demonstrate how well they
-        can understand requirements, solve problems, use technical tools, and
-        deliver working results.
+        These projects give members an opportunity to demonstrate how well they can understand
+        requirements, solve problems, use technical tools, and deliver working results.
       </p>
       <p className="docs__text">
-        Projects are designed to provide a practical view of a member's
-        capabilities beyond what can be understood from an application or
-        onboarding answers.
+        Projects are designed to provide a practical view of a member's capabilities beyond what can
+        be understood from an application or onboarding answers.
       </p>
 
       <div
@@ -45,11 +43,11 @@ export default function OperationalWorkflowsPage() {
           margin: "40px 0",
           borderRadius: "12px",
           overflow: "hidden",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+          boxShadow: "var(--shadow-md)",
         }}
       >
         <ImageWithFallback
-          src={typeof projectImage === 'string' ? projectImage : projectImage.src}
+          src={typeof projectImage === "string" ? projectImage : projectImage.src}
           alt="Projects Overview"
           style={{ width: "100%", display: "block" }}
         />
@@ -71,14 +69,12 @@ export default function OperationalWorkflowsPage() {
         <li>How much technical responsibility they can handle</li>
       </ul>
       <p className="docs__text">
-        Project performance can therefore help inform future responsibilities,
-        role progression, and leadership opportunities within the Operations
-        Department.
+        Project performance can therefore help inform future responsibilities, role progression, and
+        leadership opportunities within the Operations Department.
       </p>
       <p className="docs__text">
-        Members who consistently demonstrate strong technical ability, reliable
-        execution, and the ability to handle increasingly complex work may be
-        considered for greater responsibility.
+        Members who consistently demonstrate strong technical ability, reliable execution, and the
+        ability to handle increasingly complex work may be considered for greater responsibility.
       </p>
 
       <h2 className="docs__section-title" id="project-overview">
@@ -89,12 +85,12 @@ export default function OperationalWorkflowsPage() {
         className="docs__code-block"
         style={{
           padding: "16px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "8px",
           textAlign: "center",
           fontWeight: "500",
           marginBottom: "16px",
-          color: "#202124",
+          color: "var(--color-text)",
         }}
       >
         Work &rarr; Department &rarr; Projects
@@ -102,41 +98,37 @@ export default function OperationalWorkflowsPage() {
       <p className="docs__text">
         Each project is presented with a project name and a short description.
       </p>
-      <p className="docs__text">
-        The short description gives you a quick understanding of:
-      </p>
+      <p className="docs__text">The short description gives you a quick understanding of:</p>
       <ul className="docs__list">
         <li>What the project is about</li>
         <li>What needs to be built or completed</li>
         <li>The general objective of the project</li>
       </ul>
       <p className="docs__text">
-        For the complete requirements and technical instructions, members can
-        download the project's ZIP package.
+        For the complete requirements and technical instructions, members can download the project's
+        ZIP package.
       </p>
 
       <h2 className="docs__section-title" id="project-package">
         Project Package
       </h2>
       <p className="docs__text">
-        Each project comes with a structured project package containing the
-        resources required to complete the work.
+        Each project comes with a structured project package containing the resources required to
+        complete the work.
       </p>
       <p className="docs__text">
-        After downloading and extracting the ZIP file, you will find the
-        project's working environment and instructions.
+        After downloading and extracting the ZIP file, you will find the project's working
+        environment and instructions.
       </p>
       <p className="docs__text">A typical project package may include:</p>
 
       <h3 className="docs__subsection-title">Project Files</h3>
-      <p className="docs__text">
-        The actual files and codebase required to work on the project.
-      </p>
+      <p className="docs__text">The actual files and codebase required to work on the project.</p>
 
       <h3 className="docs__subsection-title">AGENT.md</h3>
       <p className="docs__text">
-        The AGENT.md file contains the project-specific instructions and rules
-        that should be followed while working on the project.
+        The AGENT.md file contains the project-specific instructions and rules that should be
+        followed while working on the project.
       </p>
       <p className="docs__text">
         Before starting development, members should read this file carefully.
@@ -154,26 +146,25 @@ export default function OperationalWorkflowsPage() {
 
       <h3 className="docs__subsection-title">MCP Configuration</h3>
       <p className="docs__text">
-        Projects may include the required MCP configuration/tools needed to
-        interact with the project's development environment or services.
+        Projects may include the required MCP configuration/tools needed to interact with the
+        project's development environment or services.
       </p>
       <p className="docs__text">
-        Members should use the provided configuration rather than modifying the
-        project environment unnecessarily.
+        Members should use the provided configuration rather than modifying the project environment
+        unnecessarily.
       </p>
 
       <h3 className="docs__subsection-title">Git Repository</h3>
       <p className="docs__text">
-        The project environment includes a Git setup that allows members to
-        manage their work and push their completed code to the designated
-        Craftly server/repository.
+        The project environment includes a Git setup that allows members to manage their work and
+        push their completed code to the designated Craftly server/repository.
       </p>
       <p className="docs__text">The expected workflow is generally:</p>
       <div
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",
@@ -211,13 +202,11 @@ export default function OperationalWorkflowsPage() {
         <li>The work has been properly tested</li>
         <li>No unnecessary files or changes have been introduced</li>
         <li>The final code has been committed</li>
-        <li>
-          The completed work has been pushed through the provided Git workflow
-        </li>
+        <li>The completed work has been pushed through the provided Git workflow</li>
       </ul>
       <p className="docs__text">
-        The project should then be submitted through the appropriate Task
-        Submission process when required.
+        The project should then be submitted through the appropriate Task Submission process when
+        required.
       </p>
 
       <h2 className="docs__section-title" id="practical-evaluation">
@@ -225,28 +214,23 @@ export default function OperationalWorkflowsPage() {
       </h2>
       <p className="docs__text">Projects are intentionally practical.</p>
       <p className="docs__text">
-        They help Craftly evaluate not only what someone knows, but also what
-        they can actually build and deliver.
+        They help Craftly evaluate not only what someone knows, but also what they can actually
+        build and deliver.
       </p>
       <p className="docs__text">
-        A member may have strong theoretical knowledge but struggle with
-        execution. Another member may have less formal experience but
-        demonstrate excellent problem-solving, learning ability, and practical
-        execution.
+        A member may have strong theoretical knowledge but struggle with execution. Another member
+        may have less formal experience but demonstrate excellent problem-solving, learning ability,
+        and practical execution.
       </p>
+      <p className="docs__text">Projects help reveal that difference through actual work.</p>
       <p className="docs__text">
-        Projects help reveal that difference through actual work.
-      </p>
-      <p className="docs__text">
-        Over time, project performance can help Craftly determine who is ready
-        to take on greater technical responsibility and leadership within
-        Operations, while members who need more experience can receive
-        appropriate guidance and opportunities to improve.
+        Over time, project performance can help Craftly determine who is ready to take on greater
+        technical responsibility and leadership within Operations, while members who need more
+        experience can receive appropriate guidance and opportunities to improve.
       </p>
       <p className="docs__text" style={{ fontWeight: 600 }}>
-        Don't focus only on finishing the project. Focus on understanding the
-        problem, following the requirements, building a reliable solution, and
-        delivering work you can stand behind.
+        Don't focus only on finishing the project. Focus on understanding the problem, following the
+        requirements, building a reliable solution, and delivering work you can stand behind.
       </p>
     </DocPage>
   );

@@ -1,7 +1,7 @@
 "use client";
 
-import { Fragment } from "react";
-import DocsLayout from "./DocsLayout";
+import { Fragment, useEffect } from "react";
+import { useDocsPage } from "../../contexts/DocsPageContext";
 
 interface DocPageProps {
   title: string;
@@ -23,21 +23,25 @@ export default function DocPage({
   pageId,
   pageTitle,
   rootLabel = "Documentation",
-  tocItems,
+  tocItems = [],
   children,
 }: DocPageProps) {
+  const { setTocItems } = useDocsPage();
+
+  useEffect(() => {
+    setTocItems(tocItems);
+    return () => setTocItems([]);
+  }, [tocItems, setTocItems]);
+
+  const displayCrumbs = crumbs[0] === rootLabel ? crumbs : [rootLabel, ...crumbs];
+
   return (
-    <DocsLayout title={title} description={description} tocItems={tocItems}>
+    <>
       <div className="docs__breadcrumb">
-        {rootLabel} &gt;{" "}
-        {crumbs.map((crumb, index) => (
+        {displayCrumbs.map((crumb, index) => (
           <Fragment key={index}>
-            {index === crumbs.length - 1 ? (
-              <strong>{crumb}</strong>
-            ) : (
-              crumb
-            )}
-            {index < crumbs.length - 1 && <> &gt;{" "}</>}
+            {index === displayCrumbs.length - 1 ? <strong>{crumb}</strong> : crumb}
+            {index < displayCrumbs.length - 1 && <> &gt; </>}
           </Fragment>
         ))}
       </div>
@@ -47,6 +51,6 @@ export default function DocPage({
       </h1>
 
       {children}
-    </DocsLayout>
+    </>
   );
 }

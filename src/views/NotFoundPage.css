@@ -11,7 +11,7 @@
 
 .not-found-header {
   position: absolute;
-  top: 24px;
+  top: calc(var(--nav-height) + 16px);
   left: 24px;
   width: calc(100% - 48px);
   display: flex;
@@ -94,7 +94,7 @@
 
 .not-found-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
   opacity: 0.9;
 }
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type OS = "Windows" | "macOS" | "Linux" | "Android" | "iOS" | "Unknown";
 
@@ -13,8 +13,7 @@ function detectOS(): OS {
     return "Android";
   } else if (
     /iphone|ipad|ipod/i.test(userAgent) ||
-    (window.navigator.platform === "MacIntel" &&
-      window.navigator.maxTouchPoints > 1)
+    (window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1)
   ) {
     return "iOS";
   } else if (userAgent.indexOf("win") !== -1) {
@@ -29,6 +28,11 @@ function detectOS(): OS {
 }
 
 export function useOS(): OS {
-  const [os] = useState<OS>(detectOS);
+  const [os, setOs] = useState<OS>("Unknown");
+
+  useEffect(() => {
+    setOs(detectOS());
+  }, []);
+
   return os;
 }

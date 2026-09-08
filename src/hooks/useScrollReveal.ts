@@ -9,16 +9,13 @@ export function useScrollReveal(
 ) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleIntersection = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("revealed");
-        }
-      });
-    },
-    [],
-  );
+  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;

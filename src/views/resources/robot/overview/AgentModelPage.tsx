@@ -13,12 +13,12 @@ export default function AgentModelPage() {
       tocItems={[{ id: "agent-model", label: "Agent Model" }]}
     >
       <p className="docs__text">
-        Craftly Robot uses an agent based architecture where different agents
-        can specialize in different tasks.
+        Craftly Robot uses an agent based architecture where different agents can specialize in
+        different tasks.
       </p>
       <p className="docs__text">
-        Instead of requiring one AI model to perform everything, agents can be
-        assigned specific responsibilities such as:
+        Instead of requiring one AI model to perform everything, agents can be assigned specific
+        responsibilities such as:
       </p>
       <ul className="docs__list">
         <li>Research</li>
@@ -32,13 +32,13 @@ export default function AgentModelPage() {
         <li>Task execution</li>
       </ul>
       <p className="docs__text">
-        Agents can operate independently when appropriate and coordinate with
-        other agents when a task requires multiple capabilities.
+        Agents can operate independently when appropriate and coordinate with other agents when a
+        task requires multiple capabilities.
       </p>
       <p className="docs__text">
-        The long term goal is to create an ecosystem where humans, AI agents,
-        and external services can discover each other and coordinate work
-        through trusted identity and explicit permissions.
+        The long term goal is to create an ecosystem where humans, AI agents, and external services
+        can discover each other and coordinate work through trusted identity and explicit
+        permissions.
       </p>
     </DocPage>
   );

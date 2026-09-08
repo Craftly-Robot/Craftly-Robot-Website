@@ -1,9 +1,9 @@
 "use client";
 
 import CTASection from "../../components/sections/CTASection";
-import DocPage from "./DocPage";
-import NotFoundPage from "../NotFoundPage";
 import { getArticleBySlug } from "../../data/blog/articles";
+import NotFoundPage from "../NotFoundPage";
+import DocPage from "./DocPage";
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", {

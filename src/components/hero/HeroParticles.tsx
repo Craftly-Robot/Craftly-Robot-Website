@@ -51,9 +51,7 @@ function generatePoissonPoints(
 
   const p0: [number, number] = [width * 0.5, height * 0.5];
   points.push(p0);
-  grid[
-    Math.floor(p0[0] / cellSize) + Math.floor(p0[1] / cellSize) * gridWidth
-  ] = 0;
+  grid[Math.floor(p0[0] / cellSize) + Math.floor(p0[1] / cellSize) * gridWidth] = 0;
   activeList.push(0);
 
   const distDiff = maxDist - minDist;
@@ -413,8 +411,10 @@ export default function HeroParticles({ className = "" }: { className?: string }
      for the better part of a second. Run it only after the intro overlay is
      gone, otherwise the stall lands in the middle of the wordmark's fade and
      freezes it half-way. */
-  const [introDone, setIntroDone] = useState(
-    () => typeof document === 'undefined' ? true : !document.documentElement.classList.contains("intro-active"),
+  const [introDone, setIntroDone] = useState(() =>
+    typeof document === "undefined"
+      ? true
+      : !document.documentElement.classList.contains("intro-active"),
   );
 
   useEffect(() => {
@@ -489,13 +489,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
       posData[idx + 3] = 0;
     }
 
-    const posTex = new THREE.DataTexture(
-      posData,
-      size,
-      size,
-      THREE.RGBAFormat,
-      THREE.FloatType,
-    );
+    const posTex = new THREE.DataTexture(posData, size, size, THREE.RGBAFormat, THREE.FloatType);
     posTex.minFilter = THREE.NearestFilter;
     posTex.magFilter = THREE.NearestFilter;
     posTex.generateMipmaps = false;
@@ -568,17 +562,13 @@ export default function HeroParticles({ className = "" }: { className?: string }
       seeds[i * 4 + 3] = Math.random();
     }
 
-    renderGeometry.setAttribute(
-      "position",
-      new THREE.BufferAttribute(positions, 3),
-    );
+    renderGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     renderGeometry.setAttribute("uv", new THREE.BufferAttribute(uvs, 2));
     renderGeometry.setAttribute("seeds", new THREE.BufferAttribute(seeds, 4));
 
     // Particle Scale responsive ratio (matching Google Antigravity)
     const particlesScale = 0.62;
-    const calcParticleScale = () =>
-      (canvas.width / pixelRatio / 2000) * particlesScale;
+    const calcParticleScale = () => (canvas.width / pixelRatio / 2000) * particlesScale;
 
     // Render Material with Craftly Brand Monochrome Black Palette
     const renderMaterial = new THREE.ShaderMaterial({
@@ -725,14 +715,10 @@ export default function HeroParticles({ className = "" }: { className?: string }
 
       // Dynamic breathing ring radius
       const ringRadius =
-        0.175 +
-        Math.sin(elapsedTime * 1.0) * 0.03 +
-        Math.cos(elapsedTime * 3.0) * 0.02;
+        0.175 + Math.sin(elapsedTime * 1.0) * 0.03 + Math.cos(elapsedTime * 3.0) * 0.02;
 
       // Update simulation uniforms
-      simMaterial.uniforms.uPosition.value = everRendered
-        ? rt1.texture
-        : posTex;
+      simMaterial.uniforms.uPosition.value = everRendered ? rt1.texture : posTex;
       simMaterial.uniforms.uTime.value = elapsedTime;
       simMaterial.uniforms.uDeltaTime.value = dt;
       simMaterial.uniforms.uRingRadius.value = ringRadius;
@@ -744,9 +730,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
       renderer.setRenderTarget(null);
 
       // Step 2: Render particle points into screen canvas using RT2
-      renderMaterial.uniforms.uPosition.value = everRendered
-        ? rt2.texture
-        : posTex;
+      renderMaterial.uniforms.uPosition.value = everRendered ? rt2.texture : posTex;
       renderMaterial.uniforms.uTime.value = elapsedTime;
       renderMaterial.uniforms.uRingPos.value.copy(ringPos);
       renderMaterial.uniforms.uParticleScale.value = calcParticleScale();
@@ -788,11 +772,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
   }
 
   return (
-    <div
-      ref={containerRef}
-      className={`hero-visual ${className}`.trim()}
-      aria-hidden="true"
-    >
+    <div ref={containerRef} className={`hero-visual ${className}`.trim()} aria-hidden="true">
       <canvas ref={canvasRef} className="hero-visual__canvas" />
     </div>
   );

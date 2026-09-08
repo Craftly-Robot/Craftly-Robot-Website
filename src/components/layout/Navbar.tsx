@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navigation } from "../../data/navigation";
-import DropdownIcon from "../ui/DropdownIcon";
-import ImageWithFallback from "../common/ImageWithFallback";
 import { useDesktopNav } from "../../hooks/useDesktopNav";
 import { useMobileNav } from "../../hooks/useMobileNav";
+import ImageWithFallback from "../common/ImageWithFallback";
+import DropdownIcon from "../ui/DropdownIcon";
+import ThemeToggle from "../ui/ThemeToggle";
 import "./Navbar.css";
 
 /* ── Icons ── */
@@ -27,6 +29,7 @@ function ChevronDown({ className }: { className?: string }) {
 }
 
 export default function Navbar() {
+  const pathname = usePathname() ?? "/";
   const {
     activeDropdown,
     setActiveDropdown,
@@ -39,17 +42,16 @@ export default function Navbar() {
     handleMouseEnter,
     handleDropdownMouseEnter,
     handleMouseLeave,
+    handleDropdownKeyDown,
   } = useDesktopNav();
 
-  const {
-    mobileOpen,
-    mobileSection,
-    toggleMobile,
-    toggleSection,
-    closeMobile,
-  } = useMobileNav();
+  const { mobileOpen, mobileSection, toggleMobile, toggleSection, closeMobile } = useMobileNav();
 
   const [scrolled, setScrolled] = useState(false);
+
+  const isActive = (item: (typeof navigation)[number]) => {
+    return item.items?.some((child) => pathname.startsWith(child.route)) ?? false;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -59,11 +61,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      ref={navRef}
-      className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
-      role="banner"
-    >
+    <header ref={navRef} className={`navbar ${scrolled ? "navbar--scrolled" : ""}`} role="banner">
       <div className="navbar__inner">
         {/* Left Side: Logo + Nav */}
         <div className="navbar__left">
@@ -73,16 +71,13 @@ export default function Navbar() {
                 src="/assets/brand/craftly-wordmark-intro.svg"
                 alt="Craftly"
                 className="navbar__logo-img"
+                priority
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav
-            className="navbar__nav"
-            role="navigation"
-            aria-label="Main navigation"
-          >
+          <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
             {navigation.map((item) => (
               <div
                 key={item.label}
@@ -90,7 +85,7 @@ export default function Navbar() {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`navbar__nav-item ${activeDropdown === item.label ? "navbar__nav-item--active navbar__nav-item--open" : ""}`}
+                  className={`navbar__nav-item ${activeDropdown === item.label ? "navbar__nav-item--active navbar__nav-item--open" : ""} ${isActive(item) ? "navbar__nav-item--current" : ""}`}
                   onClick={() => toggleDropdown(item.label)}
                   aria-expanded={activeDropdown === item.label}
                   aria-haspopup="true"
@@ -105,7 +100,35 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="navbar__right">
-          <Link href="https://sandbox-workspace.craftlyrobot.com/" className="navbar__join" target="_blank" rel="noopener noreferrer">
+          <button
+            className="navbar__search-trigger"
+            onClick={() => {
+              document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
+            }}
+            aria-label="Search (Cmd+K)"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              width="16"
+              height="16"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span className="navbar__search-kbd">⌘K</span>
+          </button>
+          <ThemeToggle />
+          <Link
+            href="https://sandbox-workspace.craftlyrobot.com/"
+            className="navbar__join"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Join Us
           </Link>
           <Link href="/download" className="navbar__download">
@@ -152,6 +175,7 @@ export default function Navbar() {
         className="navbar__dropdown-wrapper"
         onMouseEnter={handleDropdownMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onKeyDown={handleDropdownKeyDown}
       >
         <div
           className={`navbar__dropdown ${activeDropdown ? "navbar__dropdown--visible" : ""}`}
@@ -160,13 +184,10 @@ export default function Navbar() {
         >
           <div ref={megaRef} className="navbar__dropdown-inner">
             {activeNavConfig && (
-              <div
-                className="navbar__mega"
-                key={`${activeNavConfig.label}-${animationKey}`}
-              >
+              <div className="navbar__mega" key={`${activeNavConfig.label}-${animationKey}`}>
                 <div className="navbar__mega-left">
                   <h2 className="navbar__mega-title">
-                    {activeNavConfig.label === "Product" && (
+                    {activeNavConfig.label === "Products" && (
                       <>
                         Build with <br /> intelligent <br /> systems
                       </>
@@ -192,8 +213,8 @@ export default function Navbar() {
                 </div>
 
                 <div className="navbar__mega-right">
-                  {activeNavConfig.label === "Product" && (
-                    <div className="navbar__mega-list-title">Product</div>
+                  {activeNavConfig.label === "Products" && (
+                    <div className="navbar__mega-list-title">Products</div>
                   )}
                   <div className="navbar__mega-grid">
                     {activeNavConfig.items?.map((child, idx) => (
@@ -206,13 +227,9 @@ export default function Navbar() {
                         onClick={() => setActiveDropdown(null)}
                       >
                         <div className="dropdown-item__content">
-                          <div className="dropdown-item__title">
-                            {child.title}
-                          </div>
+                          <div className="dropdown-item__title">{child.title}</div>
                           {child.description && (
-                            <div className="dropdown-item__desc">
-                              {child.description}
-                            </div>
+                            <div className="dropdown-item__desc">{child.description}</div>
                           )}
                         </div>
                         <span className="dropdown-item__arrow">
@@ -269,9 +286,10 @@ export default function Navbar() {
                       onClick={closeMobile}
                     >
                       <div className="mobile-nav__item-content">
-                        <div className="mobile-nav__item-title">
-                          {child.title}
-                        </div>
+                        <div className="mobile-nav__item-title">{child.title}</div>
+                        {child.description && (
+                          <div className="mobile-nav__item-desc">{child.description}</div>
+                        )}
                       </div>
                     </Link>
                   ))}
@@ -290,11 +308,7 @@ export default function Navbar() {
         >
           Join Us
         </a>
-        <Link
-          href="/download"
-          className="mobile-nav__download"
-          onClick={closeMobile}
-        >
+        <Link href="/download" className="mobile-nav__download" onClick={closeMobile}>
           Download
         </Link>
       </nav>

@@ -1,7 +1,7 @@
 /* ReleasesPage.css */
 .releases-page {
   padding: 80px 0 120px;
-  background-color: #ffffff;
+  background-color: var(--color-bg);
   min-height: 100vh;
 }
 
@@ -31,7 +31,7 @@
 .releases-hero__title {
   font-size: 48px;
   font-weight: 400;
-  color: #000000;
+  color: var(--color-text);
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 24px;
@@ -48,7 +48,7 @@
 
 .releases-hero__desc {
   font-size: 18px;
-  color: #5f6368;
+  color: var(--color-text-muted);
   line-height: 1.6;
   margin: 0;
 }
@@ -58,13 +58,13 @@
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
-  background-color: #f8f9fa;
-  color: #202124;
+  background-color: var(--color-surface);
+  color: var(--color-text);
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
   border-radius: 100px;
-  border: 1px solid #eaeaeb;
+  border: 1px solid var(--color-border);
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
@@ -78,15 +78,15 @@
 }
 
 .btn-changelog:hover {
-  background-color: #f1f3f4;
-  border-color: #dadce0;
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
 }
 
 /* Tabs */
 .releases-tabs {
   display: flex;
   gap: 32px;
-  border-bottom: 1px solid #eaeaeb;
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 0;
 }
 
@@ -95,7 +95,7 @@
   border: none;
   font-size: 16px;
   font-weight: 500;
-  color: #5f6368;
+  color: var(--color-text-muted);
   padding: 0 0 16px 0;
   cursor: pointer;
   position: relative;
@@ -103,11 +103,11 @@
 }
 
 .releases-tab:hover {
-  color: #202124;
+  color: var(--color-text);
 }
 
 .releases-tab.active {
-  color: #000000;
+  color: var(--color-text);
   font-weight: 600;
 }
 
@@ -118,27 +118,27 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #000000;
+  background-color: var(--color-text);
 }
 
 .release-item {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #eaeaeb;
+  border-bottom: 1px solid var(--color-border);
   cursor: pointer;
   transition: background-color 0.2s ease;
   min-height: 80px;
 }
 
 .release-item:hover {
-  background-color: #fafafa;
+  background-color: var(--color-bg-subtle);
 }
 
 .releases-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #eaeaeb;
-  margin-top: 48px; /* Extra gap between tabs and the list box */
+  border-top: 1px solid var(--color-border);
+  margin-top: 48px;
 }
 
 .release-item__version-info {
@@ -151,20 +151,20 @@
 }
 
 .release-item__version-label {
-  color: #000000;
+  color: var(--color-text);
   font-size: 18px;
   font-weight: 500;
   width: 70px;
 }
 
 .release-item__version-number {
-  color: #000000;
+  color: var(--color-text);
   font-size: 18px;
   font-weight: 500;
 }
 
 .release-item__toggle {
-  color: #5f6368;
+  color: var(--color-text-muted);
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -185,7 +185,7 @@
   display: flex;
   flex-direction: column;
   padding: 24px 32px;
-  border-left: 1px solid #eaeaeb;
+  border-left: 1px solid var(--color-border);
 }
 
 .os-downloads__title {
@@ -194,7 +194,7 @@
   gap: 12px;
   font-size: 18px;
   font-weight: 600;
-  color: #000000;
+  color: var(--color-text);
   margin: 0 0 24px 0;
 }
 
@@ -208,14 +208,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #5f6368;
+  color: var(--color-text-muted);
   font-size: 14px;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .os-download-link:hover {
-  color: #202124;
+  color: var(--color-text);
 }
 
 .os-download-link svg,
@@ -254,7 +254,7 @@
 
   .os-downloads {
     border-left: none;
-    border-top: 1px solid #eaeaeb;
+    border-top: 1px solid var(--color-border);
     padding: 20px 0;
   }
 }

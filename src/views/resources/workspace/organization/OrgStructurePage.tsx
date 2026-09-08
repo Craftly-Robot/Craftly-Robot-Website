@@ -10,9 +10,7 @@ export default function OrgStructurePage() {
       crumbs={["Documentation", "Craftly Workspace", "Organization", "Organization Structure"]}
       pageId="organization-structure"
       pageTitle="Organization Structure"
-      tocItems={[
-        { id: "organization-structure", label: "Organization Structure" },
-      ]}
+      tocItems={[{ id: "organization-structure", label: "Organization Structure" }]}
     >
       <p className="docs__text">Content coming soon...</p>
     </DocPage>

@@ -1,13 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Hero from "../components/hero/Hero";
+import TrustBadges from "../components/ui/TrustBadges";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import CTASection from "../components/sections/CTASection";
 import "./HomePage.css";
 
 export default function HomePage() {
   const revealRef = useScrollReveal();
+  const [activeTab, setActiveTab] = useState<"workspace" | "robot">("workspace");
 
   return (
     <>
@@ -38,59 +40,160 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Product Snapshot — Workspace */}
-        <section className="product-snapshot">
+        {/* Trust Badges */}
+        <section className="trust-badges-section">
           <div className="container">
-            <div className="product-snapshot__content reveal">
-              <h2 className="product-snapshot__title">Craftly Workspace</h2>
-              <p className="product-snapshot__desc">
-                Your intelligent workspace for operating modern organizations.
-                Connects people, work, communication, and resources in one
-                structured environment.
+            <TrustBadges />
+          </div>
+        </section>
+
+        {/* Product Showcase — Tabbed */}
+        <section className="product-showcase">
+          <div className="container">
+            <div className="product-showcase__header reveal">
+              <h2 className="product-showcase__title">Two products. One vision.</h2>
+              <p className="product-showcase__desc">
+                Workspace is the operating system for organizations. Robot is the autonomous
+                engineering intelligence. Together, they define the future of work.
               </p>
-              <div className="product-snapshot__features">
-                <div className="product-snapshot__feature">
-                  <h3>Organizational Structure</h3>
-                  <p>Define departments, roles, and reporting chains</p>
+            </div>
+
+            <div className="product-showcase__tabs reveal">
+              <button
+                className={`product-showcase__tab ${activeTab === "workspace" ? "product-showcase__tab--active" : ""}`}
+                onClick={() => setActiveTab("workspace")}
+              >
+                <span className="product-showcase__tab-icon">⬡</span>
+                Workspace
+              </button>
+              <button
+                className={`product-showcase__tab ${activeTab === "robot" ? "product-showcase__tab--active" : ""}`}
+                onClick={() => setActiveTab("robot")}
+              >
+                <span className="product-showcase__tab-icon">◎</span>
+                Robot
+              </button>
+            </div>
+
+            <div className="product-showcase__panels">
+              {activeTab === "workspace" && (
+                <div className="product-showcase__panel reveal">
+                  <div className="product-showcase__panel-content">
+                    <span className="product-showcase__badge product-showcase__badge--live">
+                      Available Now
+                    </span>
+                    <h3 className="product-showcase__panel-title">Craftly Workspace</h3>
+                    <p className="product-showcase__panel-desc">
+                      Your intelligent workspace for operating modern organizations. Connects
+                      people, work, communication, and resources in one structured environment.
+                    </p>
+                    <div className="product-showcase__features">
+                      <div className="product-showcase__feature">
+                        <h4>Organizational Structure</h4>
+                        <p>Define departments, roles, and reporting chains</p>
+                      </div>
+                      <div className="product-showcase__feature">
+                        <h4>Task Management</h4>
+                        <p>Assign, track, and complete work with clear ownership</p>
+                      </div>
+                      <div className="product-showcase__feature">
+                        <h4>Team Communication</h4>
+                        <p>Structured messaging through the reporting hierarchy</p>
+                      </div>
+                    </div>
+                    <Link href="/products/workspace" className="product-showcase__link">
+                      Explore Workspace →
+                    </Link>
+                  </div>
                 </div>
-                <div className="product-snapshot__feature">
-                  <h3>Task Management</h3>
-                  <p>Assign, track, and complete work with clear ownership</p>
+              )}
+
+              {activeTab === "robot" && (
+                <div className="product-showcase__panel reveal">
+                  <div className="product-showcase__panel-content">
+                    <span className="product-showcase__badge product-showcase__badge--dev">
+                      In Development
+                    </span>
+                    <h3 className="product-showcase__panel-title">Craftly Robot</h3>
+                    <p className="product-showcase__panel-desc">
+                      An agentic AI system for autonomous software engineering. Currently in active
+                      development.
+                    </p>
+                    <div className="product-showcase__features">
+                      <div className="product-showcase__feature">
+                        <h4>Autonomous Engineering</h4>
+                        <p>AI agents that understand context and execute tasks</p>
+                      </div>
+                      <div className="product-showcase__feature">
+                        <h4>Code Intelligence</h4>
+                        <p>Deep understanding of codebases and architecture</p>
+                      </div>
+                      <div className="product-showcase__feature">
+                        <h4>Agent Workflows</h4>
+                        <p>Multi-step reasoning and collaborative AI systems</p>
+                      </div>
+                    </div>
+                    <Link href="/products/robot" className="product-showcase__link">
+                      Learn about Robot →
+                    </Link>
+                  </div>
                 </div>
-                <div className="product-snapshot__feature">
-                  <h3>Team Communication</h3>
-                  <p>Structured messaging through the reporting hierarchy</p>
-                </div>
-              </div>
-              <Link href="/products/workspace" className="product-snapshot__link">
-                Explore Workspace →
-              </Link>
+              )}
             </div>
           </div>
         </section>
 
-        {/* The Vision — Robot → Glass */}
+        {/* The Vision — Roadmap Timeline */}
         <section className="vision-preview">
           <div className="container">
             <div className="vision-preview__content reveal">
               <h2 className="vision-preview__title">Building the intelligence</h2>
               <p className="vision-preview__desc">
-                Craftly Robot is an agentic AI system for autonomous software
-                engineering. Currently in active development.
+                Craftly is a three-stage vision. Workspace is the foundation. Robot is the
+                intelligence. Glass is the future.
               </p>
-              <div className="vision-preview__roadmap">
-                <span className="vision-preview__stage vision-preview__stage--current">
-                  Workspace
-                </span>
-                <span className="vision-preview__arrow">→</span>
-                <span className="vision-preview__stage vision-preview__stage--dev">
-                  Robot
-                </span>
-                <span className="vision-preview__arrow">→</span>
-                <span className="vision-preview__stage vision-preview__stage--future">
-                  Glass
-                </span>
+
+              <div className="roadmap-timeline">
+                <div className="roadmap-timeline__track">
+                  <div className="roadmap-timeline__progress roadmap-timeline__progress--33" />
+                </div>
+
+                <div className="roadmap-timeline__stages">
+                  <div className="roadmap-timeline__stage roadmap-timeline__stage--complete">
+                    <div className="roadmap-timeline__marker" />
+                    <div className="roadmap-timeline__card">
+                      <span className="roadmap-timeline__badge roadmap-timeline__badge--live">
+                        Live
+                      </span>
+                      <h3 className="roadmap-timeline__name">Workspace</h3>
+                      <p className="roadmap-timeline__desc">Operating system for organizations</p>
+                    </div>
+                  </div>
+
+                  <div className="roadmap-timeline__stage roadmap-timeline__stage--progress">
+                    <div className="roadmap-timeline__marker" />
+                    <div className="roadmap-timeline__card">
+                      <span className="roadmap-timeline__badge roadmap-timeline__badge--dev">
+                        In Progress
+                      </span>
+                      <h3 className="roadmap-timeline__name">Robot</h3>
+                      <p className="roadmap-timeline__desc">Autonomous AI engineering</p>
+                    </div>
+                  </div>
+
+                  <div className="roadmap-timeline__stage roadmap-timeline__stage--future">
+                    <div className="roadmap-timeline__marker" />
+                    <div className="roadmap-timeline__card">
+                      <span className="roadmap-timeline__badge roadmap-timeline__badge--future">
+                        Planned
+                      </span>
+                      <h3 className="roadmap-timeline__name">Glass</h3>
+                      <p className="roadmap-timeline__desc">The next interface</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+
               <Link href="/vision" className="vision-preview__link">
                 The Craftly Plan →
               </Link>
@@ -101,19 +204,30 @@ export default function HomePage() {
         {/* Use Cases Grid */}
         <section className="use-case-grid">
           <div className="container">
-            <h2 className="use-case-grid__title reveal">Who Craftly is for</h2>
+            <h2 className="use-case-grid__title reveal">Built for real work</h2>
             <div className="use-case-grid__grid">
               <div className="use-case-grid__card reveal reveal-delay-1">
+                <div className="use-case-grid__card-icon">⬡</div>
                 <h3>For Organizations</h3>
-                <p>Manage operations, coordinate teams, track tasks</p>
+                <p>
+                  Manage operations, coordinate teams, and track tasks across departments. Built for
+                  teams of 5 to 5,000.
+                </p>
               </div>
               <div className="use-case-grid__card reveal reveal-delay-2">
+                <div className="use-case-grid__card-icon">◎</div>
                 <h3>For Developers</h3>
-                <p>Build with AI, agent workflows, code intelligence</p>
+                <p>
+                  Build with AI agents, code intelligence, and autonomous workflows. Ship faster
+                  with less overhead.
+                </p>
               </div>
               <div className="use-case-grid__card reveal reveal-delay-3">
+                <div className="use-case-grid__card-icon">🇧🇩</div>
                 <h3>For Bangladesh</h3>
-                <p>First local AI, made for BD, global ambition</p>
+                <p>
+                  Bangladesh&apos;s first AI company. Built locally, designed for global ambition.
+                </p>
               </div>
             </div>
           </div>
@@ -123,21 +237,17 @@ export default function HomePage() {
         <section className="home-cta">
           <div className="container">
             <div className="home-cta__content reveal">
-              <h2 className="home-cta__title">
-                Start building with Craftly today
-              </h2>
-              <p className="home-cta__desc">
-                Free. Open. Available on every platform.
-              </p>
+              <h2 className="home-cta__title">Start building with Craftly today</h2>
+              <p className="home-cta__desc">Free. Open. Available on every platform.</p>
               <div className="home-cta__actions">
-                <Link href="/download" className="home-cta__btn">
-                  Download for macOS
+                <Link href="/download" className="home-cta__btn home-cta__btn--primary">
+                  Download Craftly
                 </Link>
-                <Link href="/download" className="home-cta__btn">
-                  Download for Windows
-                </Link>
-                <Link href="/download" className="home-cta__btn">
-                  Download for Linux
+                <Link
+                  href="/resources/documentation"
+                  className="home-cta__btn home-cta__btn--secondary"
+                >
+                  Read the Docs
                 </Link>
               </div>
             </div>

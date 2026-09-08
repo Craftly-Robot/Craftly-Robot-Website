@@ -10,10 +10,7 @@ interface ErrorBoundaryState {
   hasError: boolean;
 }
 
-export default class ErrorBoundary extends Component<
-  ErrorBoundaryProps,
-  ErrorBoundaryState
-> {
+export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
@@ -32,14 +29,14 @@ export default class ErrorBoundary extends Component<
       return (
         <div style={{ padding: "40px", textAlign: "center" }}>
           <h2>Something went wrong</h2>
-          <p style={{ color: "#5f6368" }}>Please try refreshing the page.</p>
+          <p style={{ color: "var(--color-text-secondary)" }}>Please try refreshing the page.</p>
           <button
             onClick={() => window.location.reload()}
             style={{
               marginTop: "16px",
               padding: "8px 16px",
-              backgroundColor: "#111",
-              color: "#fff",
+              backgroundColor: "var(--color-text)",
+              color: "var(--color-bg)",
               border: "none",
               borderRadius: "6px",
               cursor: "pointer",

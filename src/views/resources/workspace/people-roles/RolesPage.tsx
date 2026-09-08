@@ -7,29 +7,22 @@ export default function RolesPage() {
     <DocPage
       title="Roles — Craftly Workspace"
       description="Roles in Craftly Workspace"
-      crumbs={[
-        "Documentation",
-        "Craftly Workspace",
-        "People &amp; Roles",
-        "Roles",
-      ]}
+      crumbs={["Documentation", "Craftly Workspace", "People &amp; Roles", "Roles"]}
       pageId="roles"
       pageTitle="Roles"
       tocItems={[{ id: "roles", label: "Roles" }]}
     >
       <p className="docs__text">
-        A role defines a member's position, responsibilities, and place within
-        Craftly's organizational structure.
+        A role defines a member's position, responsibilities, and place within Craftly's
+        organizational structure.
       </p>
       <p className="docs__text">
-        Roles help determine what a member is expected to do, who they report
-        to, what responsibilities they can take on, and who may be responsible
-        for reviewing their work.
+        Roles help determine what a member is expected to do, who they report to, what
+        responsibilities they can take on, and who may be responsible for reviewing their work.
       </p>
       <p className="docs__text">
-        Craftly's roles are not necessarily permanent. They can change as the
-        organization grows and as members demonstrate their ability to take on
-        greater responsibility.
+        Craftly's roles are not necessarily permanent. They can change as the organization grows and
+        as members demonstrate their ability to take on greater responsibility.
       </p>
       <p className="docs__text">Role changes may be based on:</p>
       <ul className="docs__list">
@@ -42,26 +35,22 @@ export default function RolesPage() {
         <li>Organizational needs</li>
       </ul>
       <p className="docs__text">
-        For example, a member may begin in an entry-level position and, through
-        consistent and reliable work, eventually take on senior or leadership
-        responsibilities.
+        For example, a member may begin in an entry-level position and, through consistent and
+        reliable work, eventually take on senior or leadership responsibilities.
       </p>
       <p className="docs__text">
-        The important principle is that a role should reflect the level of
-        responsibility a member is currently trusted to handle.
+        The important principle is that a role should reflect the level of responsibility a member
+        is currently trusted to handle.
       </p>
       <p className="docs__text">
         Roles therefore connect the individual to the wider reporting structure:
       </p>
       <p className="docs__text">
-        <strong>
-          Member &rarr; Role &rarr; Department &rarr; Manager &rarr;
-          Organization
-        </strong>
+        <strong>Member &rarr; Role &rarr; Department &rarr; Manager &rarr; Organization</strong>
       </p>
       <p className="docs__text">
-        A role is not simply a title. It represents a member's current
-        responsibility and contribution within Craftly.
+        A role is not simply a title. It represents a member's current responsibility and
+        contribution within Craftly.
       </p>
     </DocPage>
   );

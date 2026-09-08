@@ -1,9 +1,9 @@
 "use client";
 
-import ProductVisual from "../../components/product/ProductVisual";
 import Link from "next/link";
-
+import ProductVisual from "../../components/product/ProductVisual";
 import CTASection from "../../components/sections/CTASection";
+import Breadcrumbs from "../../components/ui/Breadcrumbs";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./ProductPage.css";
 
@@ -12,13 +12,13 @@ export default function WorkspacePage() {
 
   return (
     <div ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Products" }, { label: "Workspace" }]} />
       <div className="container">
         <section className="product-hero-clean">
           <h1 className="product-hero-clean__title">Craftly Workspace</h1>
           <p className="product-hero-clean__desc">
-            Your intelligent workspace for operating modern organizations.
-            Connects people, work, communication, and resources in one
-            structured environment.
+            Your intelligent workspace for operating modern organizations. Connects people, work,
+            communication, and resources in one structured environment.
           </p>
           <div className="product-hero-clean__actions">
             <Link href="/download" className="btn-product-download">
@@ -34,8 +34,8 @@ export default function WorkspacePage() {
 
       {/* Key Features — 4, not 10 */}
       <section className="explore-features-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="explore-features-section__title reveal">
               Everything your organization needs
             </h2>
@@ -58,8 +58,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Organizational Structure</h3>
                 <p className="workspace-option__desc">
-                  Define departments, roles, and reporting chains. Build your
-                  organization chart and keep it clear.
+                  Define departments, roles, and reporting chains. Build your organization chart and
+                  keep it clear.
                 </p>
               </div>
 
@@ -81,8 +81,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Task Management</h3>
                 <p className="workspace-option__desc">
-                  Assign, track, and complete work with clear ownership and
-                  accountability. Every task has an owner.
+                  Assign, track, and complete work with clear ownership and accountability. Every
+                  task has an owner.
                 </p>
               </div>
 
@@ -103,8 +103,8 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Team Communication</h3>
                 <p className="workspace-option__desc">
-                  Structured messaging through the reporting hierarchy.
-                  Keep organizational conversations clear and focused.
+                  Structured messaging through the reporting hierarchy. Keep organizational
+                  conversations clear and focused.
                 </p>
               </div>
 
@@ -126,9 +126,82 @@ export default function WorkspacePage() {
                 </div>
                 <h3 className="workspace-option__title">Resource Management</h3>
                 <p className="workspace-option__desc">
-                  Allocate and track resources across teams and projects.
-                  Know where everything is and who has it.
+                  Allocate and track resources across teams and projects. Know where everything is
+                  and who has it.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works — Step by Step */}
+      <section className="how-it-works">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="how-it-works__title reveal">How it works</h2>
+            <p className="how-it-works__desc reveal">
+              Three steps to transform how your organization operates.
+            </p>
+            <div className="how-it-works__steps">
+              <div className="how-it-works__step reveal">
+                <div className="how-it-works__step-number">1</div>
+                <div className="how-it-works__step-content">
+                  <h3>Define your structure</h3>
+                  <p>
+                    Set up departments, roles, and reporting chains. Mirror your real organization
+                    in minutes.
+                  </p>
+                </div>
+              </div>
+              <div className="how-it-works__step reveal reveal-delay-1">
+                <div className="how-it-works__step-number">2</div>
+                <div className="how-it-works__step-content">
+                  <h3>Assign and track work</h3>
+                  <p>
+                    Create tasks, assign owners, and track progress. Every piece of work has clear
+                    accountability.
+                  </p>
+                </div>
+              </div>
+              <div className="how-it-works__step reveal reveal-delay-2">
+                <div className="how-it-works__step-number">3</div>
+                <div className="how-it-works__step-content">
+                  <h3>Communicate through hierarchy</h3>
+                  <p>
+                    Messages and updates flow through your reporting structure. No more scattered
+                    conversations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before vs After */}
+      <section className="comparison-section">
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
+            <h2 className="comparison__title reveal">Before Craftly vs After Craftly</h2>
+            <div className="comparison__grid">
+              <div className="comparison__column comparison__column--before reveal">
+                <span className="comparison__badge comparison__badge--before">Before</span>
+                <ul className="comparison__list">
+                  <li>Scattered tools for tasks, communication, and docs</li>
+                  <li>No clear ownership or accountability</li>
+                  <li>Meetings to coordinate what a dashboard could show</li>
+                  <li>Information lost in chat threads</li>
+                </ul>
+              </div>
+              <div className="comparison__column comparison__column--after reveal reveal-delay-1">
+                <span className="comparison__badge comparison__badge--after">After</span>
+                <ul className="comparison__list">
+                  <li>One workspace for people, tasks, and communication</li>
+                  <li>Clear roles, reporting chains, and task ownership</li>
+                  <li>Real-time visibility without extra meetings</li>
+                  <li>Structured information flows through hierarchy</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -137,33 +210,29 @@ export default function WorkspacePage() {
 
       {/* How Teams Use It */}
       <section className="abstracted-ui-section">
-        <div className="product-showcase-large" style={{ marginBottom: 0 }}>
-          <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+        <div className="product-showcase-large product-showcase-large--no-margin">
+          <div className="section-content--wide">
             <h2 className="abstracted-ui-title reveal">Built for real work</h2>
             <div className="abstracted-ui-grid">
               <div className="abstracted-ui-feature reveal reveal-delay-1">
-                <h3 className="abstracted-ui-feature__title">
-                  Operations Teams
-                </h3>
+                <h3 className="abstracted-ui-feature__title">Operations Teams</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Run daily operations through structured workflows. From task
-                  delegation to resource planning, keep everything moving.
+                  Run daily operations through structured workflows. From task delegation to
+                  resource planning, keep everything moving.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-2">
-                <h3 className="abstracted-ui-feature__title">
-                  Project Teams
-                </h3>
+                <h3 className="abstracted-ui-feature__title">Project Teams</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Coordinate people, tasks, and deliverables. Track progress
-                  and keep projects on schedule.
+                  Coordinate people, tasks, and deliverables. Track progress and keep projects on
+                  schedule.
                 </p>
               </div>
               <div className="abstracted-ui-feature reveal reveal-delay-3">
                 <h3 className="abstracted-ui-feature__title">Leadership</h3>
                 <p className="abstracted-ui-feature__desc">
-                  Track performance and make decisions with data. See what&apos;s
-                  happening across your organization.
+                  Track performance and make decisions with data. See what&apos;s happening across
+                  your organization.
                 </p>
               </div>
             </div>

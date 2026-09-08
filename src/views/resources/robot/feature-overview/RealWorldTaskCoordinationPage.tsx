@@ -28,17 +28,14 @@ export default function RealWorldTaskCoordinationPage() {
       ]}
     >
       <p className="docs__text">
-        The long term purpose of Craftly Robot is not simply to answer
-        questions—it is to help people coordinate real work in the real world.
+        The long term purpose of Craftly Robot is not simply to answer questions—it is to help
+        people coordinate real work in the real world.
       </p>
       <p className="docs__text">
-        A real world task may involve multiple people, services, schedules,
-        constraints, and decisions. Today, humans often have to coordinate all
-        of these pieces manually.
+        A real world task may involve multiple people, services, schedules, constraints, and
+        decisions. Today, humans often have to coordinate all of these pieces manually.
       </p>
-      <p className="docs__text">
-        A robot is being developed to reduce that coordination burden.
-      </p>
+      <p className="docs__text">A robot is being developed to reduce that coordination burden.</p>
 
       <h2 className="docs__subtitle" id="from-goal-to-outcome">
         From Goal to Outcome
@@ -46,20 +43,18 @@ export default function RealWorldTaskCoordinationPage() {
       <p className="docs__text">A real world task can be represented as:</p>
       <div className="docs__code-block">
         <pre>
-          Goal → Requirements → Discovery → Communication → Negotiation →
-          Coordination → Human Approval → Outcome
+          Goal → Requirements → Discovery → Communication → Negotiation → Coordination → Human
+          Approval → Outcome
         </pre>
       </div>
       <p className="docs__text">For example, a request such as:</p>
       <blockquote className="docs__quote">
-        “Find a laptop repair service in Dhaka that can replace a damaged
-        MacBook display within two days for under ৳15,000 and confirm whether it
-        includes a warranty.”
+        “Find a laptop repair service in Dhaka that can replace a damaged MacBook display within two
+        days for under ৳15,000 and confirm whether it includes a warranty.”
       </blockquote>
       <p className="docs__text">contains several independent requirements.</p>
       <p className="docs__text">
-        A robot can reason about those requirements and determine that the task
-        may require:
+        A robot can reason about those requirements and determine that the task may require:
       </p>
       <ul className="docs__list">
         <li>Finding suitable service providers</li>
@@ -73,8 +68,7 @@ export default function RealWorldTaskCoordinationPage() {
         <li>Obtaining confirmation before a consequential commitment</li>
       </ul>
       <p className="docs__text">
-        The individual steps can therefore become coordinated parts of a single
-        task.
+        The individual steps can therefore become coordinated parts of a single task.
       </p>
 
       <h2 className="docs__subtitle" id="task-state">
@@ -84,29 +78,25 @@ export default function RealWorldTaskCoordinationPage() {
       <p className="docs__text">A task may be:</p>
       <div className="docs__code-block">
         <pre>
-          Pending → Discovering → Communicating → Negotiating → Waiting → Ready
-          for Approval → Completed
+          Pending → Discovering → Communicating → Negotiating → Waiting → Ready for Approval →
+          Completed
         </pre>
       </div>
       <p className="docs__text">
-        Modern agent-to-agent systems similarly model interactions around tasks,
-        status updates, messages, and resulting artifacts rather than treating
-        every interaction as a single chat response.
+        Modern agent-to-agent systems similarly model interactions around tasks, status updates,
+        messages, and resulting artifacts rather than treating every interaction as a single chat
+        response.
       </p>
       <p className="docs__text">
-        This makes it possible for a user to understand not only the final
-        result, but also where the task currently stands.
+        This makes it possible for a user to understand not only the final result, but also where
+        the task currently stands.
       </p>
 
       <h2 className="docs__subtitle" id="beyond-one-domain">
         Beyond One Domain
       </h2>
-      <p className="docs__text">
-        The long term vision is not limited to one type of service.
-      </p>
-      <p className="docs__text">
-        The same underlying architecture could support tasks involving:
-      </p>
+      <p className="docs__text">The long term vision is not limited to one type of service.</p>
+      <p className="docs__text">The same underlying architecture could support tasks involving:</p>
 
       <h3
         className="text-h3"
@@ -118,8 +108,7 @@ export default function RealWorldTaskCoordinationPage() {
         Education
       </h3>
       <p className="docs__text">
-        Finding tutors, teachers, mentors, or learning services based on
-        specific requirements.
+        Finding tutors, teachers, mentors, or learning services based on specific requirements.
       </p>
 
       <h3
@@ -132,8 +121,8 @@ export default function RealWorldTaskCoordinationPage() {
         Healthcare Coordination
       </h3>
       <p className="docs__text">
-        Helping identify appropriate services or resources while maintaining
-        strict privacy and human control.
+        Helping identify appropriate services or resources while maintaining strict privacy and
+        human control.
       </p>
 
       <h3
@@ -146,8 +135,8 @@ export default function RealWorldTaskCoordinationPage() {
         Local Services
       </h3>
       <p className="docs__text">
-        Finding repair technicians, transportation, delivery, maintenance, or
-        other service providers.
+        Finding repair technicians, transportation, delivery, maintenance, or other service
+        providers.
       </p>
 
       <h3
@@ -160,8 +149,8 @@ export default function RealWorldTaskCoordinationPage() {
         Buying &amp; Selling
       </h3>
       <p className="docs__text">
-        Helping users discover suitable buyers or sellers and coordinate
-        communication around a transaction.
+        Helping users discover suitable buyers or sellers and coordinate communication around a
+        transaction.
       </p>
 
       <h3
@@ -174,8 +163,7 @@ export default function RealWorldTaskCoordinationPage() {
         Humanitarian Coordination
       </h3>
       <p className="docs__text">
-        Tasks such as finding blood donors, locating relevant resources, or
-        coordinating volunteers.
+        Tasks such as finding blood donors, locating relevant resources, or coordinating volunteers.
       </p>
 
       <h3
@@ -188,13 +176,13 @@ export default function RealWorldTaskCoordinationPage() {
         Business Services
       </h3>
       <p className="docs__text">
-        Connecting organizations with people or services that can satisfy a
-        specific operational requirement.
+        Connecting organizations with people or services that can satisfy a specific operational
+        requirement.
       </p>
 
       <p className="docs__text" style={{ marginTop: "var(--space-xl)" }}>
-        These are examples of the direction Craftly Robot is being built toward,
-        not a claim that every category is already publicly available.
+        These are examples of the direction Craftly Robot is being built toward, not a claim that
+        every category is already publicly available.
       </p>
 
       <h2 className="docs__subtitle" id="current-status">
@@ -204,39 +192,33 @@ export default function RealWorldTaskCoordinationPage() {
         Craftly Robot is currently under active research and development.
       </p>
       <p className="docs__text">
-        The foundational systems for model development, agent identity,
-        discovery, communication, and consent aware negotiation are being
-        developed progressively.
+        The foundational systems for model development, agent identity, discovery, communication,
+        and consent aware negotiation are being developed progressively.
       </p>
       <p className="docs__text">
-        Some workflows are already being explored in research environments,
-        while the complete public real world coordination experience is still
-        under development.
+        Some workflows are already being explored in research environments, while the complete
+        public real world coordination experience is still under development.
       </p>
       <p className="docs__text">The product will evolve gradually:</p>
       <div className="docs__code-block">
         <pre>
-          Conversational Intelligence ↓ Reliable Agentic Reasoning ↓ Agent
-          Discovery ↓ Agent-to-Agent Coordination ↓ Real World Task Execution
+          Conversational Intelligence ↓ Reliable Agentic Reasoning ↓ Agent Discovery ↓
+          Agent-to-Agent Coordination ↓ Real World Task Execution
         </pre>
       </div>
       <p className="docs__text">
-        The objective is to build each layer reliably rather than presenting a
-        partially developed system as if it were already a fully autonomous
-        public assistant.
+        The objective is to build each layer reliably rather than presenting a partially developed
+        system as if it were already a fully autonomous public assistant.
       </p>
 
       <h2 className="docs__subtitle" id="the-long-term-goal">
         The Long Term Goal
       </h2>
       <p className="docs__text">
-        Craftly Robot is being built toward a world where a user can describe an
-        objective naturally, and the system can help coordinate the work
-        required to pursue it.
+        Craftly Robot is being built toward a world where a user can describe an objective
+        naturally, and the system can help coordinate the work required to pursue it.
       </p>
-      <p className="docs__text">
-        The user should not necessarily need to know:
-      </p>
+      <p className="docs__text">The user should not necessarily need to know:</p>
       <ul className="docs__list">
         <li>Which person to contact</li>
         <li>Which service to search for</li>
@@ -245,12 +227,12 @@ export default function RealWorldTaskCoordinationPage() {
         <li>How the communication should happen</li>
       </ul>
       <p className="docs__text">
-        The robot should be able to determine much of that coordination itself
-        while keeping the user informed and involved where it matters.
+        The robot should be able to determine much of that coordination itself while keeping the
+        user informed and involved where it matters.
       </p>
       <p className="docs__text">
-        The goal is not AI that simply knows the world. The goal is AI that can
-        help coordinate with the world.
+        The goal is not AI that simply knows the world. The goal is AI that can help coordinate with
+        the world.
       </p>
     </DocPage>
   );

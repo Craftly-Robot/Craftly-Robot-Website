@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
+import Navbar from "@/components/layout/Navbar";
+import Providers from "@/components/layout/Providers";
+import SearchProvider from "@/components/layout/SearchProvider";
+import BackToTop from "@/components/ui/BackToTop";
 import "./globals.css";
 
 const inter = Inter({
@@ -82,10 +85,7 @@ export const metadata: Metadata = {
     creator: "@Craftly",
   },
   icons: {
-    icon: [
-      { url: "/assets/craftly_logo/favicon.png", type: "image/png" },
-      { url: "/favicon.ico" },
-    ],
+    icon: [{ url: "/assets/craftly_logo/favicon.png", type: "image/png" }, { url: "/favicon.ico" }],
     apple: "/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
   },
 };
@@ -107,15 +107,12 @@ const jsonLd = {
   sameAs: ["https://github.com/Craftly-Robot"],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
       <head>
         <link
@@ -125,18 +122,30 @@ export default function RootLayout({
           href="/assets/brand/craftly-wordmark-intro.svg"
         />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('craftly-theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})()`,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>
-        <div className="layout">
-          <Navbar />
-          <main className="layout__main" id="main-content">
-            {children}
-          </main>
-          <ConditionalFooter />
-        </div>
+        <Providers>
+          <a href="#main-content" className="skip-link">
+            Skip to content
+          </a>
+          <div className="layout">
+            <Navbar />
+            <main className="layout__main" id="main-content">
+              {children}
+            </main>
+            <ConditionalFooter />
+          </div>
+          <SearchProvider />
+          <BackToTop />
+        </Providers>
       </body>
     </html>
   );

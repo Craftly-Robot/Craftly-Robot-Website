@@ -1,7 +1,7 @@
 "use client";
 
-import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import DocPage from "../../DocPage";
 
 export default function AgreementsPage() {
   return (
@@ -17,13 +17,13 @@ export default function AgreementsPage() {
       ]}
     >
       <p className="docs__text">
-        After completing the onboarding process, you will receive your Private
-        Key and access to Craftly Workspace.
+        After completing the onboarding process, you will receive your Private Key and access to
+        Craftly Workspace.
       </p>
 
       <p className="docs__text">
-        Use your Private Key to log in to Workspace. After logging in, you will
-        be presented with the Craftly Membership Agreement.
+        Use your Private Key to log in to Workspace. After logging in, you will be presented with
+        the Craftly Membership Agreement.
       </p>
 
       <h2 className="docs__section-title" id="read-before-joining">
@@ -31,30 +31,27 @@ export default function AgreementsPage() {
       </h2>
 
       <p className="docs__text">
-        The agreement contains the terms, responsibilities, expectations, and
-        conditions of joining Craftly.
+        The agreement contains the terms, responsibilities, expectations, and conditions of joining
+        Craftly.
+      </p>
+
+      <p className="docs__text">Please read the entire agreement carefully before proceeding.</p>
+
+      <p className="docs__text">
+        If you understand and agree to the terms and genuinely want to join Craftly, you can
+        complete the agreement by providing your Digital Signature.
       </p>
 
       <p className="docs__text">
-        Please read the entire agreement carefully before proceeding.
-      </p>
-
-      <p className="docs__text">
-        If you understand and agree to the terms and genuinely want to join
-        Craftly, you can complete the agreement by providing your Digital
-        Signature.
-      </p>
-
-      <p className="docs__text">
-        Once the agreement has been signed successfully, you can continue using
-        your Craftly Workspace account as a member.
+        Once the agreement has been signed successfully, you can continue using your Craftly
+        Workspace account as a member.
       </p>
 
       <div
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",
@@ -81,8 +78,8 @@ export default function AgreementsPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",
@@ -101,8 +98,8 @@ export default function AgreementsPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",

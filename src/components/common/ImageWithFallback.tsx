@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 interface ImageWithFallbackProps {
   src: string;
@@ -36,8 +36,7 @@ export default function ImageWithFallback({
 
   if (error) {
     const isSmall =
-      (typeof width === "number" && width <= 48) ||
-      (typeof height === "number" && height <= 48);
+      (typeof width === "number" && width <= 48) || (typeof height === "number" && height <= 48);
 
     if (isSmall || !fallback) {
       return (
@@ -62,10 +61,10 @@ export default function ImageWithFallback({
         className={className}
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-elevated)",
           borderRadius: "8px",
           textAlign: "center",
-          color: "#5f6368",
+          color: "var(--color-text-secondary)",
           fontSize: "14px",
           width: width || "100%",
           height: height || "auto",
@@ -102,6 +101,7 @@ export default function ImageWithFallback({
       alt={alt || ""}
       width={typeof width === "number" ? width : parseInt(String(width), 10) || 300}
       height={typeof height === "number" ? height : parseInt(String(height), 10) || 200}
+      sizes={sizes || "100vw"}
       className={className}
       style={style}
       priority={priority}

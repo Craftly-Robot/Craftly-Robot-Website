@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useScrollReveal } from "../hooks/useScrollReveal";
-import { useOS } from "../hooks/useOS";
-import SectionTitle from "../components/ui/SectionTitle";
 import ImageWithFallback from "../components/common/ImageWithFallback";
+import Breadcrumbs from "../components/ui/Breadcrumbs";
+import SectionTitle from "../components/ui/SectionTitle";
+import { useOS } from "../hooks/useOS";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./DownloadPage.css";
 
 const AppleIcon = () => (
@@ -42,12 +43,7 @@ interface DownloadButtonProps {
   children: React.ReactNode;
 }
 
-const DownloadButton = ({
-  href,
-  disabled,
-  variant = "primary",
-  children,
-}: DownloadButtonProps) => (
+const DownloadButton = ({ href, disabled, variant = "primary", children }: DownloadButtonProps) => (
   <a
     href={href}
     className={`dl-btn dl-btn--${variant}`}
@@ -61,14 +57,16 @@ const DownloadButton = ({
 interface PlatformSectionProps {
   icon: React.ReactNode;
   title: string;
+  fileSize?: string;
   children: React.ReactNode;
 }
 
-const PlatformSection = ({ icon, title, children }: PlatformSectionProps) => (
+const PlatformSection = ({ icon, title, fileSize, children }: PlatformSectionProps) => (
   <div className="os-column">
     <h3 className="os-title">
       {icon} {title}
     </h3>
+    {fileSize && <div className="os-file-size">{fileSize}</div>}
     {children}
   </div>
 );
@@ -79,12 +77,10 @@ export default function DownloadPage() {
 
   return (
     <div className="download-page container" ref={revealRef}>
+      <Breadcrumbs items={[{ label: "Download" }]} />
       <div className="download-header">
         <div className="download-hero-top">
-          <SectionTitle
-            text={`Download Craftly\nfor ${osName}`}
-            className="download-hero__title"
-          />
+          <SectionTitle text={`Download Craftly\nfor ${osName}`} className="download-hero__title" />
           <Link href="/resources/releases" className="btn-previous-releases">
             View previous releases
           </Link>
@@ -99,19 +95,23 @@ export default function DownloadPage() {
         </div>
 
         <div className="download-columns">
-          <PlatformSection icon={<AppleIcon />} title="macOS">
+          <PlatformSection icon={<AppleIcon />} title="macOS" fileSize="~180 MB">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_macOS">
               Download for macOS
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
-              <div className="min-reqs__text">
-                macOS 12 (Monterey) or later
+              <div className="min-reqs__text">macOS 12 (Monterey) or later</div>
+            </div>
+            <div className="install-instructions">
+              <div className="install-instructions__title">Installation</div>
+              <div className="install-instructions__text">
+                Open the .dmg file and drag Craftly to Applications
               </div>
             </div>
           </PlatformSection>
 
-          <PlatformSection icon={<WindowsIcon />} title="Windows">
+          <PlatformSection icon={<WindowsIcon />} title="Windows" fileSize="~150 MB">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_windows">
               Download for Windows
             </DownloadButton>
@@ -119,25 +119,32 @@ export default function DownloadPage() {
               <div className="min-reqs__title">Minimum Requirements</div>
               <div className="min-reqs__text">Windows 10 (64 bit)</div>
             </div>
+            <div className="install-instructions">
+              <div className="install-instructions__title">Installation</div>
+              <div className="install-instructions__text">
+                Run the installer and follow the setup wizard
+              </div>
+            </div>
           </PlatformSection>
 
-          <PlatformSection icon={<LinuxIcon />} title="Linux">
+          <PlatformSection icon={<LinuxIcon />} title="Linux" fileSize="~160 MB">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_linux">
               Download for Linux
             </DownloadButton>
             <div className="min-reqs">
               <div className="min-reqs__title">Minimum Requirements</div>
-              <div className="min-reqs__text">
-                Ubuntu 20, Debian 10, Fedora 36, RHEL 8 or later
+              <div className="min-reqs__text">Ubuntu 20, Debian 10, Fedora 36, RHEL 8 or later</div>
+            </div>
+            <div className="install-instructions">
+              <div className="install-instructions__title">Installation</div>
+              <div className="install-instructions__text">
+                Extract the archive and run the executable
               </div>
             </div>
           </PlatformSection>
         </div>
 
-        <div
-          className="download-columns download-columns--mobile"
-          style={{ marginTop: "24px" }}
-        >
+        <div className="download-columns download-columns--mobile mt">
           <PlatformSection icon={<AndroidIcon />} title="Android">
             <DownloadButton href="https://dl.craftlyrobot.com/workspace_android">
               Download for Android
@@ -161,13 +168,7 @@ export default function DownloadPage() {
       </div>
 
       {/* Divider */}
-      <hr
-        style={{
-          border: "none",
-          borderTop: "1px solid var(--color-border-subtle)",
-          margin: "48px 0",
-        }}
-      />
+      <hr className="download-divider" />
 
       {/* Sandbox */}
       <div className="download-section" id="sandbox">
@@ -175,8 +176,9 @@ export default function DownloadPage() {
           <h2 className="section-title">Sandbox</h2>
           <span className="version-badge version-badge--dev">Preview</span>
         </div>
-        <p style={{ fontSize: "16px", color: "#666666", marginBottom: "24px" }}>
-          Try the latest preview builds. These may contain experimental features and are not recommended for production use.
+        <p className="section-desc">
+          Try the latest preview builds. These may contain experimental features and are not
+          recommended for production use.
         </p>
 
         <div className="dl-grid">
@@ -201,13 +203,7 @@ export default function DownloadPage() {
       </div>
 
       {/* Divider */}
-      <hr
-        style={{
-          border: "none",
-          borderTop: "1px solid var(--color-border-subtle)",
-          margin: "48px 0",
-        }}
-      />
+      <hr className="download-divider" />
 
       {/* Robot — Coming Soon */}
       <div className="download-section" id="robot">
@@ -215,7 +211,7 @@ export default function DownloadPage() {
           <h2 className="section-title">Craftly Robot</h2>
           <span className="version-badge version-badge--dev">Coming Soon</span>
         </div>
-        <p style={{ fontSize: "16px", color: "#666666", marginBottom: "24px" }}>
+        <p className="section-desc">
           Currently in development. Sign up to be notified when it launches.
         </p>
         <a

@@ -28,16 +28,14 @@ export default function SignInPrivateKeyPage() {
       ]}
     >
       <p className="docs__text">
-        Open Craftly Robot and provide the Private Key you received after
-        completing onboarding.
+        Open Craftly Robot and provide the Private Key you received after completing onboarding.
       </p>
       <p className="docs__text">
-        The key authenticates your Craftly identity and connects the application
-        with your Robot environment.
+        The key authenticates your Craftly identity and connects the application with your Robot
+        environment.
       </p>
       <p className="docs__text">
-        Once authentication succeeds, your Robot becomes available on the
-        device.
+        Once authentication succeeds, your Robot becomes available on the device.
       </p>
 
       <h2 className="docs__subtitle" id="your-key-is-your-responsibility">
@@ -53,31 +51,29 @@ export default function SignInPrivateKeyPage() {
         <li>Social media posts</li>
       </ul>
       <p className="docs__text">
-        If you believe that your key has been exposed, compromised, or lost, use
-        the appropriate reissue or recovery flow as soon as possible.
+        If you believe that your key has been exposed, compromised, or lost, use the appropriate
+        reissue or recovery flow as soon as possible.
       </p>
 
       <h2 className="docs__subtitle" id="why-craftly-uses-a-private-key">
         Why Craftly Uses a Private Key
       </h2>
       <p className="docs__text">
-        The Private Key is part of Craftly's identity model. In an agent
-        ecosystem, identity matters because an agent needs to know who it
-        represents and which actions or communications belong to that identity.
+        The Private Key is part of Craftly's identity model. In an agent ecosystem, identity matters
+        because an agent needs to know who it represents and which actions or communications belong
+        to that identity.
       </p>
       <p className="docs__text">
-        Modern agent interoperability systems similarly treat identity,
-        authentication, authorization, and capability discovery as foundational
-        pieces of agent communication.
+        Modern agent interoperability systems similarly treat identity, authentication,
+        authorization, and capability discovery as foundational pieces of agent communication.
       </p>
       <p className="docs__text">
-        Craftly's implementation is designed around its own identity and access
-        model, but the underlying principle is the same:
+        Craftly's implementation is designed around its own identity and access model, but the
+        underlying principle is the same:
       </p>
       <p className="docs__text">
         <strong>
-          Your agent should have a clear identity, and access to that identity
-          should be protected.
+          Your agent should have a clear identity, and access to that identity should be protected.
         </strong>
       </p>
     </DocPage>

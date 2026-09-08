@@ -1,7 +1,7 @@
 "use client";
 
-import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import DocPage from "../../DocPage";
 
 export default function CompletingOnboardingPage() {
   return (
@@ -11,18 +11,13 @@ export default function CompletingOnboardingPage() {
       crumbs={["Documentation", "Craftly Workspace", "Onboarding", "Completing Onboarding"]}
       pageId="completing-onboarding"
       pageTitle="Completing Onboarding"
-      tocItems={[
-        { id: "completing-onboarding", label: "Completing Onboarding" },
-      ]}
+      tocItems={[{ id: "completing-onboarding", label: "Completing Onboarding" }]}
     >
-      <p className="docs__text">
-        Congratulations your Craftly onboarding is now complete.
-      </p>
+      <p className="docs__text">Congratulations your Craftly onboarding is now complete.</p>
 
       <p className="docs__text">
-        From here, there is nothing else you need to rush. Wait for your
-        organizational position to be assigned and stay ready to begin your
-        responsibilities.
+        From here, there is nothing else you need to rush. Wait for your organizational position to
+        be assigned and stay ready to begin your responsibilities.
       </p>
 
       <p className="docs__text">Once you receive your position:</p>
@@ -34,30 +29,25 @@ export default function CompletingOnboardingPage() {
         <li>Stay dedicated and sincere toward your responsibilities.</li>
         <li>Communicate clearly with your team and leadership.</li>
         <li>Ask for help when you are unsure or blocked.</li>
-        <li>
-          Keep improving your skills and understanding of the organization.
-        </li>
-        <li>
-          Maintain better communication, consistency, and professionalism.
-        </li>
+        <li>Keep improving your skills and understanding of the organization.</li>
+        <li>Maintain better communication, consistency, and professionalism.</li>
       </ul>
 
       <p className="docs__text">
-        Your position is not just a title it represents a responsibility within
-        the organization.
+        Your position is not just a title it represents a responsibility within the organization.
       </p>
 
       <p className="docs__text" style={{ fontWeight: 600 }}>
-        Stay active. Understand your work. Stay dedicated. Communicate well.
-        Keep learning. Keep contributing.
+        Stay active. Understand your work. Stay dedicated. Communicate well. Keep learning. Keep
+        contributing.
       </p>
 
       <div
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",
@@ -76,8 +66,8 @@ export default function CompletingOnboardingPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-elevated)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",

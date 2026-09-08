@@ -15,9 +15,7 @@ export default function Footer() {
               alt="Craftly"
             />
           </Link>
-          <p className="footer__tagline">
-            The operating system for intelligent organizations.
-          </p>
+          <p className="footer__tagline">The operating system for intelligent organizations.</p>
         </div>
 
         {/* Middle: Links */}
@@ -32,6 +30,9 @@ export default function Footer() {
             </Link>
             <Link href="/download" className="footer__link">
               Download
+            </Link>
+            <Link href="/pricing" className="footer__link">
+              Pricing
             </Link>
           </div>
 
@@ -53,11 +54,11 @@ export default function Footer() {
 
           <div className="footer__column">
             <h3 className="footer__column-title">Company</h3>
-            <Link href="/vision" className="footer__link">
-              Vision
-            </Link>
             <Link href="/about" className="footer__link">
               About
+            </Link>
+            <Link href="/vision" className="footer__link">
+              Vision
             </Link>
             <Link href="/use-cases" className="footer__link">
               Use Cases
@@ -69,6 +70,12 @@ export default function Footer() {
 
           <div className="footer__column">
             <h3 className="footer__column-title">Connect</h3>
+            <Link href="/contact" className="footer__link">
+              Contact
+            </Link>
+            <Link href="/resources/support" className="footer__link">
+              Support
+            </Link>
             <a
               href="https://github.com/Craftly-Robot"
               className="footer__link"
@@ -77,9 +84,6 @@ export default function Footer() {
             >
               GitHub
             </a>
-            <Link href="/resources/support" className="footer__link">
-              Support
-            </Link>
           </div>
         </div>
       </div>

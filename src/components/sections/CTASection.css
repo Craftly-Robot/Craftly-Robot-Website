@@ -1,6 +1,18 @@
 .cta-section {
   padding: var(--space-6xl) 0;
-  background: #111111;
+  background: hsl(228, 16%, 5%);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .cta-section {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-subtle) 0%,
+    hsl(220, 15%, 12%) 50%,
+    var(--color-bg-subtle) 100%
+  );
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .cta-section__content {
@@ -21,7 +33,7 @@
 
 .cta-section__desc {
   font-size: 18px;
-  color: #888888;
+  color: #9ba1b0;
   margin-bottom: 32px;
 }
 
@@ -37,7 +49,7 @@
   align-items: center;
   padding: 12px 24px;
   background: #ffffff;
-  color: #111111;
+  color: hsl(228, 16%, 5%);
   border-radius: 9999px;
   font-size: 15px;
   font-weight: 500;
@@ -46,7 +58,7 @@
 }
 
 .cta-section__btn:hover {
-  background: #f1f3f5;
+  background: #e0e0e0;
 }
 
 .cta-section__btn--secondary {

@@ -1,0 +1,19 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) ease;
+}
+
+.theme-toggle:hover {
+  background: var(--color-accent-muted);
+  color: var(--color-text);
+}
+
+.theme-toggle svg {
+  flex-shrink: 0;
+}
