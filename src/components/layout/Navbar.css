@@ -439,8 +439,8 @@
 
   .navbar__search-trigger {
     padding: 0;
-    background: transparent;
-    border: none;
+    background: transparent !important;
+    border: none !important;
     border-radius: 0;
     width: 36px;
     height: 36px;
@@ -448,7 +448,7 @@
   }
 
   .navbar__search-trigger:hover {
-    background: var(--color-accent-muted);
+    background: var(--color-accent-muted) !important;
   }
 }
 
