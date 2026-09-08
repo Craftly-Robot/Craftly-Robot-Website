@@ -200,6 +200,14 @@ export default function DocsShell({ children }: DocsShellProps) {
         className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? "docs__sidebar--mobile-open" : ""}`}
         ref={sidebarRef}
       >
+        {mobileSidebarOpen && (
+          <button className="docs__mobile-close" onClick={() => setMobileSidebarOpen(false)} aria-label="Close menu">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        )}
         <nav className="docs__nav">
           <Link
             href="/resources/documentation"

@@ -24,10 +24,12 @@
 }
 
 .docs__mobile-header {
-  display: block;
-  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--page-margin);
   border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-bg-elevated);
+  background-color: var(--color-bg);
   position: sticky;
   top: var(--nav-height);
   z-index: 40;
@@ -42,15 +44,21 @@
 .docs__mobile-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--color-text);
   cursor: pointer;
-  padding: 4px 0;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast) ease;
+}
+
+.docs__mobile-toggle:hover {
+  background: var(--color-bg-subtle);
 }
 
 .docs__mobile-toggle-lines {
@@ -104,11 +112,53 @@
 
 .docs__sidebar--left.docs__sidebar--mobile-open {
   display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  z-index: 200;
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+  padding: calc(var(--nav-height) + 16px) 16px 24px;
+  overflow-y: auto;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.docs__sidebar--left.docs__sidebar--mobile-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100%;
-  max-height: none;
-  border-right: none;
-  border-bottom: 1px solid var(--color-border);
-  padding: 24px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.docs__sidebar--left.docs__sidebar--mobile-open .docs__nav {
+  padding: 0;
+}
+
+.docs__mobile-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--duration-fast) ease;
+}
+
+.docs__mobile-close:hover {
+  background: var(--color-bg-subtle);
 }
 
 @media (min-width: 1024px) {
