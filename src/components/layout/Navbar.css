@@ -66,6 +66,18 @@
   padding-left: 16px;
 }
 
+.navbar__center {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar__center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+}
+
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -433,13 +445,14 @@
   .navbar__search-trigger {
     gap: 8px;
     padding: 8px 16px;
-    min-width: 200px;
+    width: 100%;
+    max-width: 280px;
   }
 }
 
 @media (min-width: 1440px) {
   .navbar__search-trigger {
-    min-width: 240px;
+    max-width: 320px;
     padding: 8px 20px;
   }
 }

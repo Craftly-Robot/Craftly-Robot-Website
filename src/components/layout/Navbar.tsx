@@ -98,8 +98,8 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile Toggle */}
-        <div className="navbar__right">
+        {/* Center: Search */}
+        <div className="navbar__center">
           <button
             className="navbar__search-trigger"
             onClick={() => {
@@ -123,6 +123,10 @@ export default function Navbar() {
             <span className="navbar__search-text">Search...</span>
             <span className="navbar__search-kbd">⌘K</span>
           </button>
+        </div>
+
+        {/* Right Side: CTA */}
+        <div className="navbar__right">
           <ThemeToggle />
           <Link
             href="https://sandbox-workspace.craftlyrobot.com/"
