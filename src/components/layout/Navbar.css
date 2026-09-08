@@ -436,6 +436,20 @@
   .navbar__search-kbd {
     display: none;
   }
+
+  .navbar__search-trigger {
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  .navbar__search-trigger:hover {
+    background: var(--color-accent-muted);
+  }
 }
 
 [data-theme="dark"] .navbar__search-trigger {
