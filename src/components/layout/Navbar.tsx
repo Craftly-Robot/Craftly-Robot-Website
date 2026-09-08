@@ -120,6 +120,7 @@ export default function Navbar() {
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
+            <span className="navbar__search-text">Search...</span>
             <span className="navbar__search-kbd">⌘K</span>
           </button>
           <ThemeToggle />

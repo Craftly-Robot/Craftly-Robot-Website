@@ -429,6 +429,21 @@
   transition: all 0.2s ease;
 }
 
+@media (min-width: 1024px) {
+  .navbar__search-trigger {
+    gap: 8px;
+    padding: 8px 16px;
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar__search-trigger {
+    min-width: 240px;
+    padding: 8px 20px;
+  }
+}
+
 .navbar__search-trigger:hover {
   background: var(--color-surface);
   color: var(--color-text);
@@ -442,6 +457,21 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 3px;
+}
+
+.navbar__search-text {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar__search-text {
+    display: inline;
+    flex: 1;
+  }
+
+  .navbar__search-kbd {
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 1024px) {
