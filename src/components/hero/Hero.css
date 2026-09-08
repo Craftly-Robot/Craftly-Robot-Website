@@ -211,11 +211,13 @@
     min-height: 100dvh;
     padding-top: var(--nav-height);
     justify-content: center;
+    align-items: stretch;
   }
 
   .hero__content {
-    padding: 0;
-    margin: 0;
+    padding-top: 0;
+    margin: 0 auto;
+    flex: none;
   }
 
   .hero__title {
