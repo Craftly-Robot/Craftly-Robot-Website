@@ -193,15 +193,19 @@ export default function DocsShell({ children }: DocsShellProps) {
         </button>
       </div>
 
+      {/* Mobile Backdrop */}
+      {mobileSidebarOpen && (
+        <div className="docs__mobile-backdrop" onClick={() => setMobileSidebarOpen(false)} />
+      )}
+
       <aside
         className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? "docs__sidebar--mobile-open" : ""}`}
         ref={sidebarRef}
       >
         {mobileSidebarOpen && (
-          <button className="docs__mobile-close" onClick={() => setMobileSidebarOpen(false)} aria-label="Close menu">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
+          <button className="docs__mobile-back" onClick={() => setMobileSidebarOpen(false)} aria-label="Close menu">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
         )}
