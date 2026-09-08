@@ -33,15 +33,22 @@
   z-index: 2;
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .navbar__inner {
+    padding: 16px var(--page-margin);
+    height: var(--nav-height);
+  }
+}
+
 @media (min-width: 1440px) {
   .navbar__inner {
-    padding: 0 80px;
+    padding: 16px 80px;
     height: var(--nav-height);
   }
 }
