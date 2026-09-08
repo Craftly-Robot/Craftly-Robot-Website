@@ -6,7 +6,7 @@
   padding-top: var(--nav-height);
   justify-content: center;
   background: transparent;
-  perspective: 1000px;
+  isolation: isolate;
 }
 
 .hero__content {
