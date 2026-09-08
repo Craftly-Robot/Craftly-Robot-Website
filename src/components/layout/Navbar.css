@@ -4,7 +4,6 @@
   left: 0;
   width: 100vw;
   max-width: 100%;
-  height: var(--nav-height);
   z-index: var(--z-sticky);
   transition:
     background-color var(--duration-normal) var(--ease-out),
@@ -13,6 +12,12 @@
   background: transparent;
   border-bottom: 1px solid transparent;
   font-family: var(--font-display);
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: var(--nav-height);
+  }
 }
 
 .navbar--scrolled {
@@ -41,14 +46,14 @@
 
 @media (min-width: 768px) {
   .navbar__inner {
-    padding: 16px var(--page-margin);
+    padding: 0 var(--page-margin);
     height: var(--nav-height);
   }
 }
 
 @media (min-width: 1440px) {
   .navbar__inner {
-    padding: 16px 80px;
+    padding: 0 80px;
     height: var(--nav-height);
   }
 }
