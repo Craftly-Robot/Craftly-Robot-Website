@@ -79,7 +79,7 @@ for (const file of files) {
       /^(\s*)import\s+(type\s+)?(\w+)\s+from\s+(['"])([^'"]+)\4\s*;?\s*$/,
     );
     if (defaultMatch) {
-      const [, indent, typePrefix, name, quote, modulePath] = defaultMatch;
+      const [, , typePrefix, name] = defaultMatch;
       if (typePrefix) continue;
 
       const regex = new RegExp(`\\b${name}\\b`);
