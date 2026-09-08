@@ -424,7 +424,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 4px;
+}
+
+@media (min-width: 1024px) {
+  .navbar__right {
+    gap: var(--space-sm);
+  }
 }
 
 .navbar__search-trigger {
@@ -599,10 +605,14 @@
   display: none;
   background: none;
   border: none;
-  padding: 8px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   cursor: pointer;
   position: relative;
   z-index: calc(var(--z-sticky) + 2);
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__mobile-toggle-lines {
