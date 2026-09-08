@@ -1,10 +1,9 @@
 "use client";
 
-import ProductVisual from "../../components/product/ProductVisual";
 import Link from "next/link";
-import Breadcrumbs from "../../components/ui/Breadcrumbs";
-
+import ProductVisual from "../../components/product/ProductVisual";
 import CTASection from "../../components/sections/CTASection";
+import Breadcrumbs from "../../components/ui/Breadcrumbs";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./ProductPage.css";
 

@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation } from "../../data/navigation";
-import DropdownIcon from "../ui/DropdownIcon";
-import ThemeToggle from "../ui/ThemeToggle";
-import ImageWithFallback from "../common/ImageWithFallback";
 import { useDesktopNav } from "../../hooks/useDesktopNav";
 import { useMobileNav } from "../../hooks/useMobileNav";
+import ImageWithFallback from "../common/ImageWithFallback";
+import DropdownIcon from "../ui/DropdownIcon";
+import ThemeToggle from "../ui/ThemeToggle";
 import "./Navbar.css";
 
 /* ── Icons ── */

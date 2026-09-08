@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, lazy, Suspense } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import Link from "next/link";
 import animationData from "../../public/assets/animations/404.json";
 import "./NotFoundPage.css";

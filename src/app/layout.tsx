@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
+import Navbar from "@/components/layout/Navbar";
+import Providers from "@/components/layout/Providers";
 import SearchProvider from "@/components/layout/SearchProvider";
 import BackToTop from "@/components/ui/BackToTop";
-import Providers from "@/components/layout/Providers";
 import "./globals.css";
 
 const inter = Inter({

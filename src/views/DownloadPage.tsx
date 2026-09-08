@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useScrollReveal } from "../hooks/useScrollReveal";
-import { useOS } from "../hooks/useOS";
-import SectionTitle from "../components/ui/SectionTitle";
 import ImageWithFallback from "../components/common/ImageWithFallback";
 import Breadcrumbs from "../components/ui/Breadcrumbs";
+import SectionTitle from "../components/ui/SectionTitle";
+import { useOS } from "../hooks/useOS";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./DownloadPage.css";
 
 const AppleIcon = () => (

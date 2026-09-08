@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useOS } from "../../hooks/useOS";
 import ProductVisual from "../product/ProductVisual";
 import "./Hero.css";

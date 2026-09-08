@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { searchIndex, type SearchItem } from "../../data/searchIndex";
+import { useRouter } from "next/navigation";
+import { searchIndex } from "../../data/searchIndex";
 import "./SearchModal.css";
 
 export default function SearchModal() {

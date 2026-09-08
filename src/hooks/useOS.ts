@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type OS = "Windows" | "macOS" | "Linux" | "Android" | "iOS" | "Unknown";
 

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Breadcrumbs from "../components/ui/Breadcrumbs";
-import TrustBadges from "../components/ui/TrustBadges";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./products/ProductPage.css";
 

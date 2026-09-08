@@ -1,8 +1,8 @@
 "use client";
 
 import supportImage from "../../../../assets/Support Requests/1.webp";
-import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
+import DocPage from "../../DocPage";
 
 export default function SupportRequestsPage() {
   return (

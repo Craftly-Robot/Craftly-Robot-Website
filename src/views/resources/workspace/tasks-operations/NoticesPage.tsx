@@ -1,8 +1,8 @@
 "use client";
 
-import { IconFileDescription, IconUsers, IconBell } from "@tabler/icons-react";
-import DocPage from "../../DocPage";
+import { IconBell, IconFileDescription, IconUsers } from "@tabler/icons-react";
 import { useScrollReveal } from "../../../../hooks/useScrollReveal";
+import DocPage from "../../DocPage";
 import "./NoticesPage.css";
 
 const sampleNotices = [

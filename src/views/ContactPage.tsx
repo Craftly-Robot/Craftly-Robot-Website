@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Breadcrumbs from "../components/ui/Breadcrumbs";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./products/ProductPage.css";

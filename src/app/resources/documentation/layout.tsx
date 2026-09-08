@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import DocsShell from "@/views/resources/DocsShell";
 import { DocsPageProvider } from "@/contexts/DocsPageContext";
+import DocsShell from "@/views/resources/DocsShell";
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   const [tocItems, setTocItems] = useState<{ id: string; label: string }[]>([]);

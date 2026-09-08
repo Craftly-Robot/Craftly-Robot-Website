@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "fix:imports": "bun run scripts/fix-imports.ts",
+    "fix:all": "bun run fix:imports && bun run format"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.46.0",
@@ -20,11 +22,12 @@
     "three": "^0.185.1"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^26.4.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "knip": "^6.34.0",
     "prettier": "^3.9.6",
-    "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "^7.0.2"
   }
 }

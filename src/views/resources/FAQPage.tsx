@@ -1,8 +1,8 @@
 "use client";
 
 import { Fragment } from "react";
-import DocPage from "./DocPage";
 import { faqEntries } from "../../data/docs/faq";
+import DocPage from "./DocPage";
 import "./FAQPage.css";
 
 export default function FAQPage() {

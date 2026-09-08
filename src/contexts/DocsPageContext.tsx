@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, type ReactNode } from "react";
+import { type ReactNode, createContext, useContext } from "react";
 
 interface DocsPageData {
   tocItems: { id: string; label: string }[];

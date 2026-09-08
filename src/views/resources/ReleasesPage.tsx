@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import ImageWithFallback from "../../components/common/ImageWithFallback";
 import DropdownIcon from "../../components/ui/DropdownIcon";
 import SectionTitle from "../../components/ui/SectionTitle";
-import ImageWithFallback from "../../components/common/ImageWithFallback";
 import "./ReleasesPage.css";
 
 const AppleIcon = () => (
