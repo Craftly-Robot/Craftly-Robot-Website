@@ -22,16 +22,20 @@
 }
 
 .hero__media-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  display: none;
+}
+
+.hero-visual {
+  position: relative;
+  padding: 0 var(--page-margin) 80px;
+}
+
+.hero-visual__wrapper {
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
   opacity: 0;
   animation: heroFadeUp 0.8s var(--ease-out) 0.45s forwards;
-  will-change: transform;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -220,8 +224,8 @@
     max-width: 100%;
   }
 
-  .hero__media-wrapper {
-    display: none;
+  .hero-visual {
+    padding-bottom: 40px;
   }
 
   .hero__trust-signals {

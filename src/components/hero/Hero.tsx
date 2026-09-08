@@ -15,42 +15,48 @@ export default function Hero() {
   const osName = useOS();
 
   return (
-    <section className="hero">
-      <HeroParticles />
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div className="hero__content">
-          <h1 className="hero__title">The operating system for intelligent organizations</h1>
-          <p className="hero__subtitle">
-            Craftly connects people, work, and AI agents in one system. Built in Bangladesh.
-            Available today.
-          </p>
+    <>
+      <section className="hero">
+        <HeroParticles />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <div className="hero__content">
+            <h1 className="hero__title">The operating system for intelligent organizations</h1>
+            <p className="hero__subtitle">
+              Craftly connects people, work, and AI agents in one system. Built in Bangladesh.
+              Available today.
+            </p>
 
-          <div className="hero__cta-group">
-            <Link href="/download" className="hero__btn-primary">
-              Download for {osName}
-            </Link>
-            <Link href="/vision" className="hero__btn-secondary">
-              See how it works
-            </Link>
-          </div>
+            <div className="hero__cta-group">
+              <Link href="/download" className="hero__btn-primary">
+                Download for {osName}
+              </Link>
+              <Link href="/vision" className="hero__btn-secondary">
+                See how it works
+              </Link>
+            </div>
 
-          <div className="hero__trust-signals">
-            <span className="hero__trust-signal">
-              <span className="hero__trust-icon">🇧🇩</span>
-              Built in Bangladesh
-            </span>
-            <span className="hero__trust-divider" />
-            <span className="hero__trust-signal">
-              <span className="hero__trust-icon">🌍</span>
-              Global Ambition
-            </span>
+            <div className="hero__trust-signals">
+              <span className="hero__trust-signal">
+                <span className="hero__trust-icon">🇧🇩</span>
+                Built in Bangladesh
+              </span>
+              <span className="hero__trust-divider" />
+              <span className="hero__trust-signal">
+                <span className="hero__trust-icon">🌍</span>
+                Global Ambition
+              </span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="hero__media-wrapper">
-          <ProductVisual variant="overview" />
+      <section className="hero-visual">
+        <div className="container">
+          <div className="hero-visual__wrapper">
+            <ProductVisual variant="overview" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
