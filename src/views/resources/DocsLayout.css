@@ -28,9 +28,8 @@
   align-items: center;
   padding: 0;
   position: fixed;
-  top: 60%;
+  top: calc(var(--nav-height) + 12px);
   left: 0;
-  transform: translateY(-50%);
   z-index: 100;
 }
 
