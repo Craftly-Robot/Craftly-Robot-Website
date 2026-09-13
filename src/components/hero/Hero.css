@@ -28,7 +28,7 @@
   letter-spacing: -0.04em;
   max-width: 1000px;
   margin-top: 0;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-3xl);
   color: var(--color-text);
   display: flex;
   align-items: center;
@@ -247,7 +247,7 @@
     max-width: 100%;
     flex-direction: column;
     gap: 12px;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xl);
   }
 
   .hero__flag {
