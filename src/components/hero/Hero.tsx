@@ -7,7 +7,6 @@ import HeroParticles from "./HeroParticles";
 import ProductVisual from "../product/ProductVisual";
 import VideoShowcase from "../ui/VideoShowcase";
 import TechSnake from "./TechSnake";
-import { useOS } from "../../hooks/useOS";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./Hero.css";
 
@@ -32,7 +31,6 @@ function MonitorIcon({ className }: { className?: string }) {
 }
 
 export default function Hero() {
-  const osName = useOS();
   const [activeProductId, setActiveProductId] = useState<"workspace" | "robot">("workspace");
 
   const currentProduct = products.find((p) => p.id === activeProductId) || products[0];
