@@ -462,8 +462,8 @@ export default function HeroParticles({ className = "" }: { className?: string }
       0.1,
       1000,
     );
-    // Position camera so 3D origin frames the hero title and CTA buttons directly
-    camera.position.set(0, -0.36, 3.1);
+    // Position camera so 3D origin frames the centered hero title and CTA buttons directly
+    camera.position.set(0, 0, 3.1);
 
     const scene = new THREE.Scene();
 
