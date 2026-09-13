@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import VideoShowcase from "../ui/VideoShowcase";
 import "./ProductShowcase.css";
@@ -36,7 +36,7 @@ export default function ProductShowcase({
               {product.description}
             </p>
             <div className="product-showcase__cta">
-              <Link to={product.route} className="product-showcase__cta-link">
+              <Link href={product.route} className="product-showcase__cta-link">
                 Explore {product.name.split(" ")[1] || product.name}
               </Link>
             </div>

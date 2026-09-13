@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, useEffect } from "react";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import VideoPlaceholder from "../common/VideoPlaceholder";
