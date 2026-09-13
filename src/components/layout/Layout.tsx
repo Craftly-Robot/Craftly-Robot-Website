@@ -1,5 +1,7 @@
+"use client";
+
 import { type ReactNode } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import IntroOverlay from "../intro/IntroOverlay";
@@ -10,10 +12,8 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const location = useLocation();
-  const isDocumentationPage = location.pathname.startsWith(
-    "/resources/documentation",
-  );
+  const pathname = usePathname();
+  const isDocumentationPage = pathname?.startsWith("/resources/documentation");
 
   return (
     <div className="layout">
