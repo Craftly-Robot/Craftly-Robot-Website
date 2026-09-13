@@ -1,21 +1,7 @@
-"use client";
-
 import { useState } from "react";
-import Image from "next/image";
 
-interface ImageWithFallbackProps {
-  src: string;
-  alt: string;
+interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallback?: string;
-  className?: string;
-  style?: React.CSSProperties;
-  width?: number | string;
-  height?: number | string;
-  fill?: boolean;
-  sizes?: string;
-  priority?: boolean;
-  unoptimized?: boolean;
-  [key: string]: unknown;
 }
 
 export default function ImageWithFallback({
@@ -26,17 +12,16 @@ export default function ImageWithFallback({
   style,
   width,
   height,
-  fill = false,
-  sizes,
-  priority = false,
-  unoptimized = false,
   ...props
 }: ImageWithFallbackProps) {
   const [error, setError] = useState(false);
 
   if (error) {
     const isSmall =
-      (typeof width === "number" && width <= 48) || (typeof height === "number" && height <= 48);
+      (typeof width === "number" && width <= 48) ||
+      (typeof height === "number" && height <= 48) ||
+      (typeof width === "string" && parseInt(width, 10) <= 48) ||
+      (typeof height === "string" && parseInt(height, 10) <= 48);
 
     if (isSmall || !fallback) {
       return (
@@ -61,10 +46,10 @@ export default function ImageWithFallback({
         className={className}
         style={{
           padding: "24px",
-          backgroundColor: "var(--color-bg-elevated)",
+          backgroundColor: "#f8f9fa",
           borderRadius: "8px",
           textAlign: "center",
-          color: "var(--color-text-secondary)",
+          color: "#5f6368",
           fontSize: "14px",
           width: width || "100%",
           height: height || "auto",
@@ -78,34 +63,14 @@ export default function ImageWithFallback({
     );
   }
 
-  if (fill) {
-    return (
-      <Image
-        src={src}
-        alt={alt || ""}
-        fill
-        sizes={sizes || "100vw"}
-        className={className}
-        style={style}
-        priority={priority}
-        unoptimized={unoptimized}
-        onError={() => setError(true)}
-        {...props}
-      />
-    );
-  }
-
   return (
-    <Image
+    <img
       src={src}
       alt={alt || ""}
-      width={typeof width === "number" ? width : parseInt(String(width), 10) || 300}
-      height={typeof height === "number" ? height : parseInt(String(height), 10) || 200}
-      sizes={sizes || "100vw"}
       className={className}
       style={style}
-      priority={priority}
-      unoptimized={unoptimized}
+      width={width}
+      height={height}
       onError={() => setError(true)}
       {...props}
     />

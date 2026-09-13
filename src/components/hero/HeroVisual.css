@@ -1,6 +1,6 @@
-.hero-particles {
+.hero-visual {
   width: 100%;
-  height: 100vh;
+  height: min(100vh, 880px);
   min-height: 600px;
   position: absolute;
   top: 0;
@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.hero-particles__canvas {
+.hero-visual__canvas {
   width: 100%;
   height: 100%;
   display: block;

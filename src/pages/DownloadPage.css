@@ -1,0 +1,238 @@
+.download-page {
+  padding-block: var(--space-2xl) var(--space-xl);
+}
+
+.download-header {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.download-hero__title {
+  font-family: "Outfit", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  white-space: pre-wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.1s forwards;
+}
+
+.download-hero-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .download-hero-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.btn-previous-releases {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #3c4043;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .btn-previous-releases {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.btn-previous-releases:hover {
+  background: #f0f1f3;
+  border-color: #bbb;
+  color: #111;
+}
+
+/* Product selector tabs — pill-shaped, tight to title */
+.download-product-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.product-tab {
+  padding: 10px 28px;
+  border-radius: 99px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #3c4043;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-tab:hover {
+  background: #f8f9fa;
+  border-color: #bbb;
+}
+
+/* Download section */
+.download-section {
+  margin-bottom: var(--space-5xl);
+  opacity: 0;
+  animation: heroFadeUp 0.6s var(--ease-out) forwards;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.version-badge {
+  background: #eef0f2;
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.download-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+
+.download-columns--mobile {
+  display: flex;
+  justify-content: center;
+}
+
+.download-columns--mobile .os-column {
+  width: 33.333%;
+}
+
+.os-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 0 20px;
+}
+
+.os-column:not(:last-child) {
+  border-right: 1px solid #dcdcdc;
+}
+
+.os-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.dl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 99px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.dl-btn--primary {
+  background: #111;
+  color: #fff;
+}
+
+.dl-btn--primary:hover {
+  background: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dl-btn--secondary {
+  background: #f8f9fa;
+  color: #111;
+}
+
+.dl-btn--secondary:hover {
+  background: #f1f3f4;
+}
+
+.min-reqs {
+  margin-top: var(--space-xl);
+}
+
+.min-reqs__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.min-reqs__text {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .download-hero__title {
+    font-size: 2rem;
+  }
+
+  .download-columns,
+  .download-columns--mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4xl);
+  }
+
+  .download-columns--mobile .os-column {
+    width: 100%;
+  }
+
+  .os-column {
+    padding: 0 !important;
+  }
+
+  .os-column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding-bottom: var(--space-2xl) !important;
+  }
+}

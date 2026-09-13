@@ -1,0 +1,59 @@
+.tasks-code-block {
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.tasks-code-block--vertical {
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tasks-flow-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeaeb;
+}
+
+.tasks-flow-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tasks-flow-label--yes {
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+.tasks-flow-label--no {
+  font-weight: 600;
+  color: #d93025;
+}
+
+.tasks-quote-block {
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #111111;
+  margin-bottom: 32px;
+}
+
+.tasks-quote-text {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+}

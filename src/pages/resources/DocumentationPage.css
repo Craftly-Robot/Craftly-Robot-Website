@@ -1,0 +1,50 @@
+.docs-intro-section {
+  margin-top: 40px;
+}
+
+.docs-product-title {
+  font-size: 24px;
+}
+
+.docs-product-subtitle {
+  font-style: italic;
+  color: #5f6368;
+  margin-bottom: 24px;
+}
+
+.docs-link-container {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.docs-capabilities-section {
+  margin-top: 32px;
+}
+
+.docs-capability-title {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.docs-platform-title {
+  margin-top: 48px;
+}
+
+.docs-highlight-list {
+  list-style-type: none;
+  border-left: 3px solid #111;
+  padding-left: 16px;
+  margin: 24px 0;
+}
+
+.docs-highlight-list li {
+  margin-bottom: 12px;
+}
+
+.docs-closing-statement {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  margin-top: 32px;
+}

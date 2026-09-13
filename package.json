@@ -1,33 +1,31 @@
 {
-  "name": "craftly-next",
-  "version": "0.1.0",
+  "name": "craftly_robot_website",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "fix:imports": "bun run scripts/fix-imports.ts",
-    "fix:all": "bun run fix:imports && bun run format"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.46.0",
     "@types/three": "^0.185.4",
-    "lottie-react": "^3.1.1",
-    "next": "16.3.4",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "lottie-react": "^3.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^7.18.2",
     "three": "^0.185.1"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^26.4.1",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "knip": "^6.34.0",
-    "prettier": "^3.9.6",
-    "typescript": "^7.0.2"
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "oxlint": "^1.79.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
   }
 }
