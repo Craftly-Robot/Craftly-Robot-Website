@@ -33,6 +33,11 @@ export default function ImageWithFallback({
   ...props
 }: ImageWithFallbackProps) {
   const [error, setError] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const resolvedSrc =
+    basePath && typeof src === "string" && src.startsWith("/") && !src.startsWith(basePath)
+      ? `${basePath}${src}`
+      : src;
 
   if (error) {
     const isSmall =
@@ -81,7 +86,7 @@ export default function ImageWithFallback({
   if (fill) {
     return (
       <Image
-        src={src}
+        src={resolvedSrc}
         alt={alt || ""}
         fill
         sizes={sizes || "100vw"}
@@ -97,7 +102,7 @@ export default function ImageWithFallback({
 
   return (
     <Image
-      src={src}
+      src={resolvedSrc}
       alt={alt || ""}
       width={typeof width === "number" ? width : parseInt(String(width), 10) || 300}
       height={typeof height === "number" ? height : parseInt(String(height), 10) || 200}
