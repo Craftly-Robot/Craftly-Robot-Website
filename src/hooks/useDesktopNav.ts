@@ -1,25 +1,33 @@
-"use client";
-
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
+import { useLocation } from "react-router-dom";
 import { navigation } from "../data/navigation";
 
 export function useDesktopNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(null);
-  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(undefined);
+  const [displayedDropdown, setDisplayedDropdown] = useState<string | null>(
+    null,
+  );
+  const [dropdownHeight, setDropdownHeight] = useState<number | undefined>(
+    undefined,
+  );
   const [animationKey, setAnimationKey] = useState(0);
   const navRef = useRef<HTMLElement>(null);
   const megaRef = useRef<HTMLDivElement>(null);
   const hoverLockoutRef = useRef<boolean>(false);
   const timeoutRef = useRef<number | null>(null);
   const closeCleanupRef = useRef<number | null>(null);
-  const pathname = usePathname() ?? "/";
+  const location = useLocation();
 
   // Close on route change
-  const [prevPath, setPrevPath] = useState(pathname);
-  if (prevPath !== pathname) {
-    setPrevPath(pathname);
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
     setActiveDropdown(null);
     setDisplayedDropdown(null);
     setDropdownHeight(undefined);
@@ -46,37 +54,6 @@ export function useDesktopNav() {
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, []);
-
-  // Keyboard navigation within dropdown
-  const handleDropdownKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (!activeDropdown) return;
-      const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
-      const mega = megaRef.current;
-      if (!mega) return;
-      const focusable = Array.from(mega.querySelectorAll<HTMLElement>(focusableSelector));
-      const currentIndex = focusable.indexOf(document.activeElement as HTMLElement);
-
-      switch (e.key) {
-        case "ArrowDown":
-          e.preventDefault();
-          focusable[currentIndex + 1]?.focus();
-          break;
-        case "ArrowUp":
-          e.preventDefault();
-          focusable[currentIndex - 1]?.focus();
-          break;
-        case "Tab":
-          if (e.shiftKey && currentIndex === 0) {
-            setActiveDropdown(null);
-          } else if (!e.shiftKey && currentIndex === focusable.length - 1) {
-            setActiveDropdown(null);
-          }
-          break;
-      }
-    },
-    [activeDropdown],
-  );
 
   const activeNavConfig = navigation.find(
     (item) => item.label === (activeDropdown || displayedDropdown),
@@ -196,6 +173,5 @@ export function useDesktopNav() {
     handleMouseEnter,
     handleDropdownMouseEnter,
     handleMouseLeave,
-    handleDropdownKeyDown,
   };
 }

@@ -4,7 +4,8 @@ export const resources: Resource[] = [
   {
     id: "documentation",
     title: "Documentation",
-    description: "Technical documentation, API references, and integration guides.",
+    description:
+      "Technical documentation, API references, and integration guides.",
     route: "/resources/documentation",
     icon: "docs",
   },
@@ -18,14 +19,16 @@ export const resources: Resource[] = [
   {
     id: "support",
     title: "Support",
-    description: "Get help with Craftly products — troubleshooting, FAQs, and contact.",
+    description:
+      "Get help with Craftly products — troubleshooting, FAQs, and contact.",
     route: "/resources/support",
     icon: "support",
   },
   {
     id: "releases",
     title: "Releases",
-    description: "Changelogs, version history, and release notes for all Craftly products.",
+    description:
+      "Changelogs, version history, and release notes for all Craftly products.",
     route: "/resources/releases",
     icon: "releases",
   },

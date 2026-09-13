@@ -1,0 +1,80 @@
+/*
+ * Intro beat (homepage, once per session). The clock starts when the wordmark
+ * image has actually decoded — on a cold tab it lands a few hundred ms after
+ * mount, and starting earlier makes it pop in mid-fade instead of fading in.
+ *   0.00s  white sheet, wordmark hidden (image decoded)
+ *   0.00s  wordmark fades + settles in (1400ms)
+ *   1.40s  hold (700ms)
+ *   2.10s  sheet fades out (600ms) · wordmark flies to the header (1000ms, JS-driven)
+ *          hero cascade released
+ *   3.10s  wordmark lands, overlay unmounts, real header logo takes over
+ */
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 900; /* above --z-toast (500) and the navbar's --z-sticky (200) */
+  pointer-events: none;
+}
+
+.intro__sheet {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  animation: introSheetOut 600ms var(--ease-out) 2100ms forwards;
+}
+
+.intro__mark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: clamp(240px, 34vw, 460px);
+  height: auto;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  will-change: transform, opacity;
+  opacity: 0;
+  /* Must live on the base rule: a transition declared alongside the value change
+     it is meant to animate never runs. JS sets the target transform at takeoff. */
+  transition: transform 1000ms var(--ease-in-out);
+}
+
+/* Added by JS once the image has decoded, so the fade is never half over
+   before there are any pixels to fade. */
+.intro__mark--in {
+  animation: introSettle 1400ms var(--ease-in-out) both;
+}
+
+@keyframes introSettle {
+  /* Only opacity + transform, so the settle runs on the compositor and keeps
+     playing through the main-thread stalls of three.js / lazy-chunk startup. */
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes introSheetOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Hold the hero's existing heroFadeUp cascade until the wordmark takes off.
+   animation-play-state freezes an animation during its delay too, so releasing
+   the class replays the cascade from zero — Hero.css needs no changes. */
+html.intro-hold .hero__title,
+html.intro-hold .hero__cta-group,
+html.intro-hold .hero__media-wrapper,
+html.intro-hold .hero__tech-row {
+  animation-play-state: paused;
+}
+
+/* Hide the real header logo until the flying one lands on top of it. */
+html.intro-active .navbar__logo-img {
+  opacity: 0;
+}

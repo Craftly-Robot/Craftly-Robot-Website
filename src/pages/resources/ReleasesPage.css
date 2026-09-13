@@ -1,0 +1,260 @@
+/* ReleasesPage.css */
+.releases-page {
+  padding: 80px 0 120px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.releases-hero-wrapper {
+  margin-bottom: 0;
+}
+
+.releases-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 120px;
+}
+
+@media (min-width: 768px) {
+  .releases-hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.releases-hero__content {
+  max-width: 680px;
+}
+
+.releases-hero__title {
+  font-size: 48px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+  white-space: pre-wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.1s forwards;
+}
+
+@media (min-width: 768px) {
+  .releases-hero__title {
+    font-size: 56px;
+  }
+}
+
+.releases-hero__desc {
+  font-size: 18px;
+  color: #5f6368;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.btn-changelog {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #f8f9fa;
+  color: #202124;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 1px solid #eaeaeb;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .btn-changelog {
+    margin-top: 0;
+  }
+}
+
+.btn-changelog:hover {
+  background-color: #f1f3f4;
+  border-color: #dadce0;
+}
+
+/* Tabs */
+.releases-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #eaeaeb;
+  padding-bottom: 0;
+}
+
+.releases-tab {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5f6368;
+  padding: 0 0 16px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.releases-tab:hover {
+  color: #202124;
+}
+
+.releases-tab.active {
+  color: #000000;
+  font-weight: 600;
+}
+
+.releases-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+.release-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eaeaeb;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-height: 80px;
+}
+
+.release-item:hover {
+  background-color: #fafafa;
+}
+
+.releases-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eaeaeb;
+  margin-top: 48px; /* Extra gap between tabs and the list box */
+}
+
+.release-item__version-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 24px 32px 24px 0;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.release-item__version-label {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  width: 70px;
+}
+
+.release-item__version-number {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.release-item__toggle {
+  color: #5f6368;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 24px 32px 24px 32px;
+  min-width: 48px;
+  margin-left: auto;
+}
+
+/* Expanded Content */
+.release-item__content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.os-downloads {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  border-left: 1px solid #eaeaeb;
+}
+
+.os-downloads__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 24px 0;
+}
+
+.os-downloads__links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.os-download-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #5f6368;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.os-download-link:hover {
+  color: #202124;
+}
+
+.os-download-link svg,
+.os-download-link img {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.os-download-link:hover svg,
+.os-download-link:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .release-item {
+    min-height: auto;
+    flex-wrap: wrap;
+  }
+
+  .release-item__version-info {
+    width: auto;
+    flex: 1;
+    padding: 20px 16px 20px 0;
+  }
+
+  .release-item__toggle {
+    padding: 20px 0 20px 16px;
+  }
+
+  .release-item__content {
+    flex: 0 0 100%;
+    width: 100%;
+    order: 3;
+    flex-direction: column;
+  }
+
+  .os-downloads {
+    border-left: none;
+    border-top: 1px solid #eaeaeb;
+    padding: 20px 0;
+  }
+}

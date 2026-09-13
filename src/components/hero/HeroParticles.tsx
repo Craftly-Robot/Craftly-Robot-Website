@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
@@ -51,7 +49,9 @@ function generatePoissonPoints(
 
   const p0: [number, number] = [width * 0.5, height * 0.5];
   points.push(p0);
-  grid[Math.floor(p0[0] / cellSize) + Math.floor(p0[1] / cellSize) * gridWidth] = 0;
+  grid[
+    Math.floor(p0[0] / cellSize) + Math.floor(p0[1] / cellSize) * gridWidth
+  ] = 0;
   activeList.push(0);
 
   const distDiff = maxDist - minDist;
@@ -411,10 +411,8 @@ export default function HeroParticles({ className = "" }: { className?: string }
      for the better part of a second. Run it only after the intro overlay is
      gone, otherwise the stall lands in the middle of the wordmark's fade and
      freezes it half-way. */
-  const [introDone, setIntroDone] = useState(() =>
-    typeof document === "undefined"
-      ? true
-      : !document.documentElement.classList.contains("intro-active"),
+  const [introDone, setIntroDone] = useState(
+    () => !document.documentElement.classList.contains("intro-active"),
   );
 
   useEffect(() => {
@@ -461,7 +459,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
       1000,
     );
     // Position camera so 3D origin frames the hero title and CTA buttons directly
-    camera.position.set(0, -0.2, 3.0);
+    camera.position.set(0, -0.36, 3.1);
 
     const scene = new THREE.Scene();
 
@@ -476,20 +474,26 @@ export default function HeroParticles({ className = "" }: { className?: string }
     // Generate dense Poisson distributed points (matching Google Antigravity density)
     const size = 256;
     const length = size * size;
-    const rawPoints = generatePoissonPoints(600, 600, 2.4, 3.2, 18);
+    const rawPoints = generatePoissonPoints(500, 500, 2.7, 3.6, 18);
     const count = rawPoints.length;
 
     // Initialize Reference Positions Texture
     const posData = new Float32Array(length * 4);
     for (let i = 0; i < count; i++) {
       const idx = i * 4;
-      posData[idx + 0] = (rawPoints[i][0] - 300) / 300;
-      posData[idx + 1] = (rawPoints[i][1] - 300) / 300;
+      posData[idx + 0] = (rawPoints[i][0] - 250) / 250;
+      posData[idx + 1] = (rawPoints[i][1] - 250) / 250;
       posData[idx + 2] = 0;
       posData[idx + 3] = 0;
     }
 
-    const posTex = new THREE.DataTexture(posData, size, size, THREE.RGBAFormat, THREE.FloatType);
+    const posTex = new THREE.DataTexture(
+      posData,
+      size,
+      size,
+      THREE.RGBAFormat,
+      THREE.FloatType,
+    );
     posTex.minFilter = THREE.NearestFilter;
     posTex.magFilter = THREE.NearestFilter;
     posTex.generateMipmaps = false;
@@ -562,13 +566,17 @@ export default function HeroParticles({ className = "" }: { className?: string }
       seeds[i * 4 + 3] = Math.random();
     }
 
-    renderGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    renderGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(positions, 3),
+    );
     renderGeometry.setAttribute("uv", new THREE.BufferAttribute(uvs, 2));
     renderGeometry.setAttribute("seeds", new THREE.BufferAttribute(seeds, 4));
 
     // Particle Scale responsive ratio (matching Google Antigravity)
     const particlesScale = 0.62;
-    const calcParticleScale = () => (canvas.width / pixelRatio / 2000) * particlesScale;
+    const calcParticleScale = () =>
+      (canvas.width / pixelRatio / 2000) * particlesScale;
 
     // Render Material with Craftly Brand Monochrome Black Palette
     const renderMaterial = new THREE.ShaderMaterial({
@@ -593,8 +601,8 @@ export default function HeroParticles({ className = "" }: { className?: string }
     });
 
     const particlesMesh = new THREE.Points(renderGeometry, renderMaterial);
-    particlesMesh.position.set(0, -0.5, 0);
-    particlesMesh.scale.set(6, 6, 6);
+    particlesMesh.position.set(0, 0, 0);
+    particlesMesh.scale.set(5, 5, 5);
     scene.add(particlesMesh);
 
     // Mouse Tracking and State
@@ -715,10 +723,14 @@ export default function HeroParticles({ className = "" }: { className?: string }
 
       // Dynamic breathing ring radius
       const ringRadius =
-        0.175 + Math.sin(elapsedTime * 1.0) * 0.03 + Math.cos(elapsedTime * 3.0) * 0.02;
+        0.175 +
+        Math.sin(elapsedTime * 1.0) * 0.03 +
+        Math.cos(elapsedTime * 3.0) * 0.02;
 
       // Update simulation uniforms
-      simMaterial.uniforms.uPosition.value = everRendered ? rt1.texture : posTex;
+      simMaterial.uniforms.uPosition.value = everRendered
+        ? rt1.texture
+        : posTex;
       simMaterial.uniforms.uTime.value = elapsedTime;
       simMaterial.uniforms.uDeltaTime.value = dt;
       simMaterial.uniforms.uRingRadius.value = ringRadius;
@@ -730,7 +742,9 @@ export default function HeroParticles({ className = "" }: { className?: string }
       renderer.setRenderTarget(null);
 
       // Step 2: Render particle points into screen canvas using RT2
-      renderMaterial.uniforms.uPosition.value = everRendered ? rt2.texture : posTex;
+      renderMaterial.uniforms.uPosition.value = everRendered
+        ? rt2.texture
+        : posTex;
       renderMaterial.uniforms.uTime.value = elapsedTime;
       renderMaterial.uniforms.uRingPos.value.copy(ringPos);
       renderMaterial.uniforms.uParticleScale.value = calcParticleScale();
@@ -772,8 +786,12 @@ export default function HeroParticles({ className = "" }: { className?: string }
   }
 
   return (
-    <div ref={containerRef} className={`hero-particles ${className}`.trim()} aria-hidden="true">
-      <canvas ref={canvasRef} className="hero-particles__canvas" />
+    <div
+      ref={containerRef}
+      className={`hero-visual ${className}`.trim()}
+      aria-hidden="true"
+    >
+      <canvas ref={canvasRef} className="hero-visual__canvas" />
     </div>
   );
 }
