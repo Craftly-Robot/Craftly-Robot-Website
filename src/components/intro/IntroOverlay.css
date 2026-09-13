@@ -68,6 +68,8 @@
    animation-play-state freezes an animation during its delay too, so releasing
    the class replays the cascade from zero — Hero.css needs no changes. */
 html.intro-hold .hero__title,
+html.intro-hold .hero__product-switcher,
+html.intro-hold .hero__dynamic-tagline,
 html.intro-hold .hero__cta-group,
 html.intro-hold .hero__media-wrapper,
 html.intro-hold .hero__tech-row {

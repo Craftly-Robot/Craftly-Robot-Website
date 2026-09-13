@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { products } from "../../data/products";
 import HeroParticles from "./HeroParticles";
@@ -32,6 +33,9 @@ function MonitorIcon({ className }: { className?: string }) {
 
 export default function Hero() {
   const osName = useOS();
+  const [activeProductId, setActiveProductId] = useState<"workspace" | "robot">("workspace");
+
+  const currentProduct = products.find((p) => p.id === activeProductId) || products[0];
 
   return (
     <section className="hero">
@@ -40,13 +44,60 @@ export default function Hero() {
         <div className="hero__content">
           <HeroTitle />
 
+          {/* Segmented Capsule Switcher */}
+          <div
+            className="hero__product-switcher"
+            role="tablist"
+            aria-label="Select Craftly product"
+          >
+            <button
+              type="button"
+              role="tab"
+              id="tab-workspace"
+              aria-selected={activeProductId === "workspace"}
+              aria-controls="hero-product-tagline"
+              className={`hero__switcher-btn ${activeProductId === "workspace" ? "hero__switcher-btn--active" : ""}`}
+              onClick={() => setActiveProductId("workspace")}
+            >
+              Craftly Workspace
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-robot"
+              aria-selected={activeProductId === "robot"}
+              aria-controls="hero-product-tagline"
+              className={`hero__switcher-btn ${activeProductId === "robot" ? "hero__switcher-btn--active" : ""}`}
+              onClick={() => setActiveProductId("robot")}
+            >
+              Craftly Robot
+            </button>
+          </div>
+
+          {/* Dynamic Micro-Tagline */}
+          <p
+            id="hero-product-tagline"
+            role="tabpanel"
+            aria-labelledby={`tab-${activeProductId}`}
+            className="hero__dynamic-tagline"
+            key={currentProduct.id}
+          >
+            {currentProduct.tagline}
+          </p>
+
           <div className="hero__cta-group">
-            <Link href="/download" className="hero__btn-primary">
+            <Link
+              href={`/download#${activeProductId}`}
+              className="hero__btn-primary"
+            >
               <MonitorIcon />
-              Download for {osName}
+              Download {currentProduct.name}
             </Link>
-            <Link href="/use-cases/operations" className="hero__btn-secondary">
-              Explore use cases
+            <Link
+              href={currentProduct.route}
+              className="hero__btn-secondary"
+            >
+              Explore {activeProductId === "workspace" ? "Workspace" : "Robot"}
             </Link>
           </div>
         </div>
