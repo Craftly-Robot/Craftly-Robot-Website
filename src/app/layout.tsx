@@ -119,7 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="preload"
           as="image"
           type="image/svg+xml"
-          href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/assets/brand/craftly-wordmark-intro.svg`}
+          href="/assets/brand/craftly-wordmark-intro.svg"
         />
         <script
           dangerouslySetInnerHTML={{
