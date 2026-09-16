@@ -276,10 +276,6 @@
   .hero__title {
     max-width: 800px;
   }
-
-  .hero__cta-group {
-    margin-bottom: var(--space-4xl);
-  }
 }
 
 @media (max-width: 768px) {
