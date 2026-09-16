@@ -30,6 +30,26 @@ function MonitorIcon({ className }: { className?: string }) {
   );
 }
 
+function ExternalLinkIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="13"
+      height="13"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M7 17L17 7" />
+      <path d="M7 7h10v10" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   const [activeProductId, setActiveProductId] = useState<"workspace" | "robot">("workspace");
 
@@ -97,6 +117,19 @@ export default function Hero() {
             >
               Explore {activeProductId === "workspace" ? "Workspace" : "Robot"}
             </Link>
+          </div>
+
+          <div className="hero__join-group">
+            <a
+              href="https://sandbox-workspace.craftlyrobot.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero__btn-join"
+              aria-label="Join Us on Sandbox Workspace (opens in new tab)"
+            >
+              <span>Join Us</span>
+              <ExternalLinkIcon className="hero__btn-join-icon" />
+            </a>
           </div>
         </div>
 
