@@ -475,7 +475,8 @@ select {
 
 [data-theme="dark"] .navbar__logo-img,
 [data-theme="dark"] .intro__mark,
-[data-theme="dark"] .footer__wordmark {
+[data-theme="dark"] .footer__wordmark,
+[data-theme="dark"] .pv-brand img {
   filter: invert(1);
 }
 

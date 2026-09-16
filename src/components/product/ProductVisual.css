@@ -219,6 +219,9 @@
   stroke-width: 5;
   fill: #ffffff;
 }
+[data-theme="dark"] .pv-brand img {
+  filter: invert(1);
+}
 [data-theme="dark"] .pv-net-dashed {
   stroke: #475569;
 }

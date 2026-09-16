@@ -17,6 +17,10 @@
   --mouse-y: 50%;
 }
 
+[data-theme="dark"] .home-cta__container {
+  background: var(--color-bg-elevated);
+}
+
 .home-cta__bg {
   position: absolute;
   inset: 0;
