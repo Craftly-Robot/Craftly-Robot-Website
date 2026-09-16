@@ -8,7 +8,7 @@
 
 .docs-product-subtitle {
   font-style: italic;
-  color: #5f6368;
+  color: var(--color-text-secondary);
   margin-bottom: 24px;
 }
 
@@ -33,7 +33,7 @@
 
 .docs-highlight-list {
   list-style-type: none;
-  border-left: 3px solid #111;
+  border-left: 3px solid var(--color-text);
   padding-left: 16px;
   margin: 24px 0;
 }
@@ -45,6 +45,6 @@
 .docs-closing-statement {
   font-size: 18px;
   font-weight: 500;
-  color: #111;
+  color: var(--color-text);
   margin-top: 32px;
 }

@@ -345,6 +345,7 @@ uniform vec3 uColor3;
 uniform vec2 uRingPos;
 uniform vec2 uRez;
 uniform float uAlpha;
+uniform float uVelocityMod;
 uniform float uTime;
 
 ${NOISE_GLSL}
@@ -398,12 +399,28 @@ void main() {
     }
 
     vec3 color = clamp(col, 0.0, 1.0);
-    // Tactile depth modulation: active particles darken subtly for crisp contrast
-    color = mix(color, color * 0.75, clamp(vVelocity * 0.6, 0.0, 1.0));
+    // Tactile depth modulation: active particles adapt based on theme background contrast
+    color = mix(color, color * uVelocityMod, clamp(vVelocity * 0.6, 0.0, 1.0));
 
     gl_FragColor = vec4(color, clamp(a, 0.0, 1.0));
 }
 `;
+
+const LIGHT_THEME_PARTICLES = {
+  c1: new THREE.Color("#08080a"),
+  c2: new THREE.Color("#1a1b22"),
+  c3: new THREE.Color("#353740"),
+  alpha: 0.88,
+  velocityMod: 0.75,
+};
+
+const DARK_THEME_PARTICLES = {
+  c1: new THREE.Color("#ffffff"),
+  c2: new THREE.Color("#e2e8f0"),
+  c3: new THREE.Color("#94a3b8"),
+  alpha: 0.92,
+  velocityMod: 1.35,
+};
 
 export default function HeroParticles({ className = "" }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -582,16 +599,24 @@ export default function HeroParticles({ className = "" }: { className?: string }
     const calcParticleScale = () =>
       (canvas.width / pixelRatio / 2000) * particlesScale;
 
-    // Render Material with Craftly Brand Monochrome Black Palette
+    // Check initial theme
+    const initialIsDark =
+      typeof document !== "undefined" &&
+      document.documentElement.getAttribute("data-theme") === "dark";
+    const initialThemeParams = initialIsDark
+      ? DARK_THEME_PARTICLES
+      : LIGHT_THEME_PARTICLES;
+
+    // Render Material with Craftly Brand Monochrome Palette (Adapts to Dark / Light)
     const renderMaterial = new THREE.ShaderMaterial({
       uniforms: {
         uPosition: { value: posTex },
         uTime: { value: 0 },
-        // Craftly Minimalist Brand Palette (Black / Deep Charcoal)
-        uColor1: { value: new THREE.Color("#08080a") }, // Deep black
-        uColor2: { value: new THREE.Color("#1a1b22") }, // Obsidian graphite
-        uColor3: { value: new THREE.Color("#353740") }, // Slate dark grey
-        uAlpha: { value: 0.88 },
+        uColor1: { value: initialThemeParams.c1.clone() },
+        uColor2: { value: initialThemeParams.c2.clone() },
+        uColor3: { value: initialThemeParams.c3.clone() },
+        uAlpha: { value: initialThemeParams.alpha },
+        uVelocityMod: { value: initialThemeParams.velocityMod },
         uRingPos: { value: new THREE.Vector2(0, 0) },
         uRez: { value: new THREE.Vector2(canvas.width, canvas.height) },
         uParticleScale: { value: calcParticleScale() },
@@ -746,6 +771,20 @@ export default function HeroParticles({ className = "" }: { className?: string }
       renderer.setRenderTarget(null);
 
       // Step 2: Render particle points into screen canvas using RT2
+      const isDarkNow =
+        document.documentElement.getAttribute("data-theme") === "dark";
+      const targetThemeParams = isDarkNow
+        ? DARK_THEME_PARTICLES
+        : LIGHT_THEME_PARTICLES;
+
+      renderMaterial.uniforms.uColor1.value.lerp(targetThemeParams.c1, 0.08);
+      renderMaterial.uniforms.uColor2.value.lerp(targetThemeParams.c2, 0.08);
+      renderMaterial.uniforms.uColor3.value.lerp(targetThemeParams.c3, 0.08);
+      renderMaterial.uniforms.uAlpha.value +=
+        (targetThemeParams.alpha - renderMaterial.uniforms.uAlpha.value) * 0.08;
+      renderMaterial.uniforms.uVelocityMod.value +=
+        (targetThemeParams.velocityMod - renderMaterial.uniforms.uVelocityMod.value) * 0.08;
+
       renderMaterial.uniforms.uPosition.value = everRendered
         ? rt2.texture
         : posTex;

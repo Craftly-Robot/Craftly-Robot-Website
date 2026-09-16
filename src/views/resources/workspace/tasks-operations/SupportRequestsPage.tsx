@@ -165,7 +165,8 @@ export default function SupportRequestsPage() {
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-secondary)",
+          border: "1px solid var(--color-border)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",

@@ -95,6 +95,43 @@ select {
   --color-success: hsl(152, 60%, 48%);
   --color-warning: hsl(38, 90%, 55%);
   --color-error: hsl(0, 72%, 56%);
+}
+
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-bg-elevated: #0d0e11;
+  --color-bg-subtle: #16171b;
+  --color-bg-overlay: hsla(0, 0%, 0%, 0.85);
+  --color-bg-inverse: #ffffff;
+
+  --color-text: #ffffff;
+  --color-text-secondary: #94969d;
+  --color-text-muted: #666973;
+  --color-text-inverse: #000000;
+
+  --color-accent: #ffffff;
+  --color-accent-hover: #e2e8f0;
+  --color-accent-muted: rgba(255, 255, 255, 0.08);
+
+  --color-border: #23252a;
+  --color-border-hover: #33363e;
+  --color-border-subtle: #191b1f;
+
+  --color-surface: #0d0e11;
+  --color-surface-hover: #16171b;
+  --color-surface-active: #22242a;
+
+  --color-success: hsl(152, 60%, 52%);
+  --color-warning: hsl(38, 90%, 58%);
+  --color-error: hsl(0, 72%, 60%);
+
+  --shadow-sm: 0 1px 2px hsla(0, 0%, 0%, 0.6);
+  --shadow-md: 0 4px 12px hsla(0, 0%, 0%, 0.7);
+  --shadow-lg: 0 8px 30px hsla(0, 0%, 0%, 0.8);
+  --shadow-xl: 0 16px 50px hsla(0, 0%, 0%, 0.9);
+}
+
+:root {
 
   --font-sans:
     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -412,3 +449,33 @@ select {
     transform: translateY(0);
   }
 }
+
+/* ── Dark Mode Scrollbar & Assets ── */
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 4px solid var(--color-bg);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='rgba(255,255,255,0.5)'><path d='M7 3l4 5H3z'/></svg>");
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='rgba(255,255,255,0.5)'><path d='M7 9l4-5H3z'/></svg>");
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
+[data-theme="dark"] ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='rgba(255,255,255,0.8)'><path d='M7 3l4 5H3z'/></svg>");
+}
+
+[data-theme="dark"] .navbar__logo-img,
+[data-theme="dark"] .intro__mark,
+[data-theme="dark"] .footer__wordmark {
+  filter: invert(1);
+}
+

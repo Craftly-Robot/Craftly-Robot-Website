@@ -50,7 +50,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--color-border);
   color: transparent;
   transition: all 0.3s ease;
   flex-shrink: 0;
@@ -59,7 +59,7 @@
 .terminal-workflow__sidebar-item.is-completed .terminal-workflow__sidebar-icon {
   background-color: transparent;
   border-color: transparent;
-  color: #000;
+  color: var(--color-text);
 }
 
 .terminal-workflow__check polyline {
@@ -84,9 +84,9 @@
 }
 
 .terminal-workflow__sidebar-item.is-active .terminal-workflow__sidebar-icon {
-  background-color: #000;
-  border-color: #000;
-  color: #fff;
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
 }
 
 /* Terminal Window */

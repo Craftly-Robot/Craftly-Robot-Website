@@ -54,8 +54,8 @@ export default function CompletingOnboardingPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-secondary)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",
@@ -74,8 +74,8 @@ export default function CompletingOnboardingPage() {
         style={{
           borderRadius: "8px",
           overflow: "hidden",
-          border: "1px solid #eaeaeb",
-          backgroundColor: "#f8f9fa",
+          border: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-bg-secondary)",
           minHeight: "300px",
           display: "flex",
           alignItems: "center",
