@@ -10,8 +10,8 @@
   left: 16px;
   z-index: 10000;
   padding: 8px 16px;
-  background: #111;
-  color: #fff;
+  background: var(--color-text);
+  color: var(--color-bg);
   text-decoration: none;
   border-radius: 0 0 6px 6px;
   font-size: 14px;

@@ -87,12 +87,13 @@ export default function OperationalWorkflowsPage() {
         className="docs__code-block"
         style={{
           padding: "16px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-secondary)",
+          border: "1px solid var(--color-border)",
           borderRadius: "8px",
           textAlign: "center",
           fontWeight: "500",
           marginBottom: "16px",
-          color: "#202124",
+          color: "var(--color-text)",
         }}
       >
         Work &rarr; Department &rarr; Projects
@@ -171,7 +172,8 @@ export default function OperationalWorkflowsPage() {
         className="docs__code-block"
         style={{
           padding: "24px",
-          backgroundColor: "#f8f9fa",
+          backgroundColor: "var(--color-bg-secondary)",
+          border: "1px solid var(--color-border)",
           borderRadius: "12px",
           textAlign: "center",
           fontWeight: "500",

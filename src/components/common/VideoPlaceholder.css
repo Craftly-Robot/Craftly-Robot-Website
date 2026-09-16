@@ -4,6 +4,7 @@
   height: 100%;
   min-height: 500px;
   background: #000000;
+  border: 1px solid var(--color-border);
   border-radius: clamp(1rem, 3vw, 2rem);
   overflow: hidden;
   display: flex;
@@ -152,4 +153,44 @@
     width: 85%;
     height: 70%;
   }
+}
+
+[data-theme="dark"] .video-placeholder {
+  background: #090a0d;
+}
+
+[data-theme="dark"] .mock-panel {
+  background: #15171c;
+  border: 1px solid #23262e;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .mock-panel__header {
+  background: #0f1014;
+  border-bottom: 1px solid #23262e;
+}
+
+[data-theme="dark"] .mock-panel__dots span {
+  background: #2c303a;
+}
+
+[data-theme="dark"] .mock-panel__title {
+  color: #717784;
+}
+
+[data-theme="dark"] .mock-line {
+  background: #23262e;
+}
+
+[data-theme="dark"] .mock-line--code {
+  background: #282c35;
+}
+
+[data-theme="dark"] .mock-box {
+  background: #0f1014;
+  border: 1px solid #23262e;
+}
+
+[data-theme="dark"] .mock-circle {
+  background: #23262e;
 }

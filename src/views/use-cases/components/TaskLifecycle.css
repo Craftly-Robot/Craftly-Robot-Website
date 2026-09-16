@@ -101,7 +101,7 @@
   padding: 4px 8px;
   border-radius: 4px;
   border: 1px solid var(--color-border);
-  background-color: #fafafa;
+  background-color: var(--color-bg-secondary);
   color: var(--color-text-secondary);
   transition: all 0.3s ease;
 }
@@ -147,7 +147,7 @@
 
 .task-lifecycle__card-line {
   height: 8px;
-  background-color: #f0f0f0;
+  background-color: var(--color-border);
   border-radius: 4px;
   width: 100%;
 }
@@ -164,7 +164,7 @@
   padding: 1rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background-color: #fafafa;
+  background-color: var(--color-bg-secondary);
   margin-top: 1rem;
 
   opacity: 0;

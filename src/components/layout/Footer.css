@@ -1,9 +1,9 @@
 .footer {
-  background: #ffffff;
-  color: #202124;
+  background: var(--color-bg);
+  color: var(--color-text);
   overflow: hidden;
   position: relative;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 1px solid var(--color-border);
 }
 
 /* ── Top Section ── */
@@ -41,7 +41,7 @@
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.5px;
-  color: #000000;
+  color: var(--color-text);
   margin-top: 0;
 }
 
@@ -72,7 +72,7 @@
 .footer__column-title {
   font-size: 15px;
   font-weight: 500;
-  color: #3c4043;
+  color: var(--color-text-secondary);
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -80,7 +80,7 @@
 .footer__link {
   font-size: 15px;
   font-weight: 500;
-  color: #000000;
+  color: var(--color-text);
   text-decoration: none;
   transition: opacity 150ms ease;
 }
@@ -107,8 +107,8 @@
   align-items: center;
   gap: 24px;
   padding: 32px 48px;
-  background: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
@@ -140,11 +140,11 @@
 .footer__bottom-link {
   font-size: 14px;
   font-weight: 500;
-  color: #3c4043;
+  color: var(--color-text-secondary);
   text-decoration: none;
   transition: color 150ms ease;
 }
 
 .footer__bottom-link:hover {
-  color: #202124;
+  color: var(--color-text);
 }

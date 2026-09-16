@@ -1,6 +1,6 @@
 .ucc-page-wrapper {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   overflow-x: hidden;
 }
 
@@ -55,7 +55,7 @@
 
 .ucc-feature {
   padding-block: var(--space-4xl);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .ucc-feature:last-child {
@@ -148,7 +148,8 @@
 
 .ucc-grid-card {
   padding: var(--space-xl);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
   border-radius: var(--radius-md);
   text-align: left;
 }
@@ -168,15 +169,15 @@
 
 .ucc-scenario {
   margin-block: var(--space-2xl);
-  background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-2xl);
 }
 
 .ucc-scenario__header {
   margin-bottom: var(--space-xl);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: var(--space-md);
 }
 
@@ -233,14 +234,14 @@
 }
 
 .ucc-badge--available {
-  background: rgba(0, 0, 0, 0.05);
-  color: #000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--color-bg-subtle);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
 }
 
 .ucc-badge--research {
-  background: #000;
-  color: #fff;
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 .ucc-badge--long-term {
@@ -257,8 +258,8 @@
 }
 
 .ucc-svg-node {
-  fill: #fff;
-  stroke: #000;
+  fill: var(--color-bg);
+  stroke: var(--color-text);
   stroke-width: 2;
   transition: all 0.3s ease;
 }
@@ -271,13 +272,13 @@
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 500;
-  fill: #000;
+  fill: var(--color-text);
   text-anchor: middle;
   dominant-baseline: middle;
 }
 
 .ucc-svg-line {
-  stroke: #000;
+  stroke: var(--color-text);
   stroke-width: 2;
   stroke-dasharray: 6;
   animation: dash 20s linear infinite;
@@ -306,9 +307,9 @@
 .ucc-cta {
   padding-block: var(--space-5xl);
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  background: #fff;
-  color: #000;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 .ucc-cta__headline {
@@ -354,15 +355,15 @@
 }
 
 .ucc-btn-primary {
-  background: #000;
-  color: #fff;
-  border: 1px solid #000;
+  background: var(--color-text);
+  color: var(--color-bg);
+  border: 1px solid var(--color-text);
 }
 
 .ucc-btn-secondary {
   background: transparent;
-  color: #000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
 }
 
 .ucc-btn-primary:hover,

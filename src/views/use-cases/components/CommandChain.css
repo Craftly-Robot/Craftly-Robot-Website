@@ -76,7 +76,7 @@
 .command-chain__details {
   flex: 1;
   padding: 2rem;
-  background-color: #fafafa;
+  background-color: var(--color-bg-secondary);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   min-height: 300px;
