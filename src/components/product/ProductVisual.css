@@ -183,10 +183,54 @@
   min-width: 0;
   padding-top: 25px;
 }
-.pv-compute__network img {
+.pv-compute__network img,
+.pv-compute__network svg {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+.pv-network-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.pv-net-dashed {
+  stroke: #94a3b8;
+  stroke-width: 2.2;
+  stroke-dasharray: 8 6;
+}
+.pv-net-ring {
+  stroke: #cbd5e1;
+  stroke-width: 2;
+  fill: none;
+}
+.pv-net-green-dots circle {
+  fill: var(--color-success, #22c55e);
+}
+.pv-net-cube-edges line {
+  stroke: #0f172a;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.pv-net-cube-nodes circle {
+  stroke: #0f172a;
+  stroke-width: 5;
+  fill: #ffffff;
+}
+[data-theme="dark"] .pv-net-dashed {
+  stroke: #475569;
+}
+[data-theme="dark"] .pv-net-ring {
+  stroke: rgba(255, 255, 255, 0.16);
+}
+[data-theme="dark"] .pv-net-cube-edges line {
+  stroke: #f1f5f9;
+}
+[data-theme="dark"] .pv-net-cube-nodes circle {
+  stroke: #f1f5f9;
+  fill: var(--color-bg, #000000);
 }
 .pv-compute__network strong {
   display: block;
@@ -631,7 +675,8 @@
     grid-column: 1 / -1;
     padding: 4px 0 0;
   }
-  .pv-compute__network img {
+  .pv-compute__network img,
+  .pv-compute__network svg {
     max-width: 180px;
     margin-inline: auto;
   }

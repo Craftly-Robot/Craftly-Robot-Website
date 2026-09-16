@@ -218,12 +218,7 @@ function TrainingOverview({
           <div className="pv-compute">
             <ComputeNodes cloud={false} />
             <div className="pv-compute__network">
-              <ImageWithFallback
-                src="/assets/product-visuals/training-network.webp"
-                alt=""
-                width="1024"
-                height="1024"
-              />
+              <TrainingNetworkVisual />
               <strong>
                 Shared training
                 <br />
@@ -278,6 +273,59 @@ function TrainingOverview({
         </div>
       </div>
     </section>
+  );
+}
+
+function TrainingNetworkVisual() {
+  return (
+    <svg
+      viewBox="0 0 1024 1024"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="pv-network-svg"
+      aria-hidden="true"
+    >
+      <g className="pv-net-dashed">
+        <path d="M 0 240 L 240 240 C 285 240, 345 350, 379 400" />
+        <path d="M 0 497 L 333 497" />
+        <path d="M 0 768 L 240 768 C 285 768, 345 666, 379 618" />
+        <path d="M 1024 240 L 784 240 C 739 240, 679 350, 647 400" />
+        <path d="M 1024 497 L 691 497" />
+        <path d="M 1024 768 L 784 768 C 739 768, 679 666, 647 618" />
+      </g>
+
+      <circle cx="513" cy="508" r="168" className="pv-net-ring" />
+
+      <g className="pv-net-green-dots">
+        <circle cx="379" cy="400" r="7" />
+        <circle cx="333" cy="497" r="7" />
+        <circle cx="379" cy="618" r="7" />
+        <circle cx="647" cy="400" r="7" />
+        <circle cx="691" cy="497" r="7" />
+        <circle cx="647" cy="618" r="7" />
+      </g>
+
+      <g className="pv-net-cube-edges">
+        <line x1="513" y1="419" x2="436" y2="464" />
+        <line x1="436" y1="464" x2="436" y2="553" />
+        <line x1="436" y1="553" x2="513" y2="598" />
+        <line x1="513" y1="598" x2="590" y2="553" />
+        <line x1="590" y1="553" x2="590" y2="464" />
+        <line x1="590" y1="464" x2="513" y2="419" />
+        <line x1="436" y1="464" x2="513" y2="508" />
+        <line x1="590" y1="464" x2="513" y2="508" />
+        <line x1="513" y1="508" x2="513" y2="598" />
+      </g>
+
+      <g className="pv-net-cube-nodes">
+        <circle cx="513" cy="419" r="13" />
+        <circle cx="436" cy="464" r="13" />
+        <circle cx="590" cy="464" r="13" />
+        <circle cx="436" cy="553" r="13" />
+        <circle cx="590" cy="553" r="13" />
+        <circle cx="513" cy="598" r="13" />
+      </g>
+    </svg>
   );
 }
 
