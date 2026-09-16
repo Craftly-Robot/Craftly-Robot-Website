@@ -71,6 +71,7 @@ html.intro-hold .hero__title,
 html.intro-hold .hero__product-switcher,
 html.intro-hold .hero__dynamic-tagline,
 html.intro-hold .hero__cta-group,
+html.intro-hold .hero__join-group,
 html.intro-hold .hero__media-wrapper,
 html.intro-hold .hero__tech-row {
   animation-play-state: paused;
