@@ -106,13 +106,18 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
+      className={`navbar ${scrolled || mobileOpen ? "navbar--scrolled" : ""}`}
       role="banner"
     >
       <div className="navbar__inner">
         {/* Left Side: Logo + Nav */}
         <div className="navbar__left">
-          <Link href="/" className="navbar__logo" aria-label="Craftly Home">
+          <Link
+            href="/"
+            className="navbar__logo"
+            aria-label="Craftly Home"
+            onClick={closeMobile}
+          >
             <div className="navbar__logo-container">
               <ImageWithFallback
                 src="/assets/brand/craftly-wordmark-intro.svg"
@@ -335,28 +340,6 @@ export default function Navbar() {
             )}
           </div>
         ))}
-
-        <div className="mobile-nav__theme-row">
-          <span className="mobile-nav__theme-label">Appearance</span>
-          <button
-            type="button"
-            className="mobile-nav__theme-btn"
-            onClick={toggleTheme}
-            aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-          >
-            {isDark ? (
-              <>
-                <SunIcon className="mobile-nav__theme-icon mobile-nav__theme-icon--sun" />
-                <span>Light</span>
-              </>
-            ) : (
-              <>
-                <MoonIcon className="mobile-nav__theme-icon mobile-nav__theme-icon--moon" />
-                <span>Dark</span>
-              </>
-            )}
-          </button>
-        </div>
 
         <Link
           href="/download"
