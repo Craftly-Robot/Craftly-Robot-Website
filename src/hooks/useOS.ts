@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import { useSyncExternalStore } from "react";
 
 type OS = "Windows" | "macOS" | "Linux" | "Android" | "iOS" | "Unknown";
 
@@ -28,7 +26,9 @@ function detectOS(): OS {
   return "Unknown";
 }
 
+const emptySubscribe = () => () => {};
+const getServerSnapshot = (): OS => "Unknown";
+
 export function useOS(): OS {
-  const [os] = useState<OS>(detectOS);
-  return os;
+  return useSyncExternalStore(emptySubscribe, detectOS, getServerSnapshot);
 }

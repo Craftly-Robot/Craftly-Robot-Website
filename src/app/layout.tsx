@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
 import Layout from "@/components/layout/Layout";
+import ThemeScript from "@/components/common/ThemeScript";
 import "./globals.css";
 
 const inter = Inter({
@@ -117,13 +118,9 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema),
           }}
         />
+        <ThemeScript />
       </head>
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem("craftly-theme");var t=s==="light"||s==="dark"?s:(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`,
-          }}
-        />
         <Layout>{children}</Layout>
       </body>
     </html>
