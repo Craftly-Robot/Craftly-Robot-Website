@@ -553,10 +553,10 @@ export default function HeroParticles({ className = "" }: { className?: string }
         uPosition: { value: posTex },
         uPosRefs: { value: posTex },
         uRingPos: { value: new THREE.Vector2(0, 0) },
-        uRingRadius: { value: 0.175 },
+        uRingRadius: { value: 0.12 },
         uDeltaTime: { value: 0 },
         uRingWidth: { value: 0.006 },
-        uRingWidth2: { value: 0.107 },
+        uRingWidth2: { value: 0.075 },
         uRingDisplacement: { value: 0.62 },
         uTime: { value: 0 },
       },
@@ -752,9 +752,9 @@ export default function HeroParticles({ className = "" }: { className?: string }
 
       // Dynamic breathing ring radius
       const ringRadius =
-        0.175 +
-        Math.sin(elapsedTime * 1.0) * 0.03 +
-        Math.cos(elapsedTime * 3.0) * 0.02;
+        0.12 +
+        Math.sin(elapsedTime * 1.0) * 0.021 +
+        Math.cos(elapsedTime * 3.0) * 0.014;
 
       // Update simulation uniforms
       simMaterial.uniforms.uPosition.value = everRendered

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 import "./IntroOverlay.css";
 
@@ -27,31 +27,34 @@ function markSeen(): void {
   }
 }
 
-/*
- * ponytail: module-level side effect so the <html> classes land before the first
- * paint. A useEffect runs after paint and the hero cascade would flash a frame.
- * The alternative is an inline script in index.html, which splits the logic
- * across two files.
- */
-const shouldRun =
-  typeof window !== "undefined" &&
-  window.location.pathname === "/" &&
-  !seenThisSession() &&
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-if (shouldRun) {
-  document.documentElement.classList.add("intro-active", "intro-hold");
+function getShouldPlayIntro(): boolean {
+  if (typeof window === "undefined") return false;
+  return (
+    window.location.pathname === "/" &&
+    !seenThisSession() &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
 }
 
+const emptySubscribe = () => () => {};
+const getServerSnapshot = () => false;
+
 export default function IntroOverlay() {
-  const [running, setRunning] = useState(shouldRun);
+  const shouldPlay = useSyncExternalStore(
+    emptySubscribe,
+    getShouldPlayIntro,
+    getServerSnapshot,
+  );
+  const [dismissed, setDismissed] = useState(false);
   const markRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
-    if (!shouldRun) return;
+  const running = shouldPlay && !dismissed;
 
-    /* The module-level add covers the first paint; StrictMode's cleanup strips
-       the classes, so re-assert them on every effect run. */
+  useEffect(() => {
+    if (!running) return;
+
+    /* The inline script in layout.tsx covers the first paint; StrictMode's
+       cleanup strips the classes, so re-assert them on every effect run. */
     document.documentElement.classList.add("intro-active", "intro-hold");
 
     const timers: number[] = [];
@@ -89,7 +92,7 @@ export default function IntroOverlay() {
       timers.forEach(clearTimeout);
       document.documentElement.classList.remove("intro-hold", "intro-active");
       markSeen();
-      setRunning(false);
+      setDismissed(true);
     };
 
     /* Run the fade only once there are pixels to fade: on a cold tab the SVG
@@ -118,7 +121,7 @@ export default function IntroOverlay() {
       events.forEach((e) => window.removeEventListener(e, finish));
       document.documentElement.classList.remove("intro-hold", "intro-active");
     };
-  }, []);
+  }, [running]);
 
   if (!running) return null;
 
