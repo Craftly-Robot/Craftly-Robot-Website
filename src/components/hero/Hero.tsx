@@ -4,9 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { products } from "../../data/products";
 import HeroParticles from "./HeroParticles";
-import ProductVisual from "../product/ProductVisual";
-import VideoShowcase from "../ui/VideoShowcase";
-import TechSnake from "./TechSnake";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./Hero.css";
 
@@ -50,14 +47,14 @@ function ExternalLinkIcon({ className }: { className?: string }) {
   );
 }
 
-export default function Hero() {
+export default function Hero({ hideParticles = false }: { hideParticles?: boolean } = {}) {
   const [activeProductId, setActiveProductId] = useState<"workspace" | "robot">("workspace");
 
   const currentProduct = products.find((p) => p.id === activeProductId) || products[0];
 
   return (
     <section className="hero">
-      <HeroParticles />
+      {!hideParticles && <HeroParticles />}
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero__content">
           <HeroTitle />
@@ -132,20 +129,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        <div className="hero__media-wrapper">
-          {products[0].videoSrc ? (
-            <VideoShowcase
-              src={products[0].videoSrc}
-              poster={products[0].posterSrc}
-              altText="Craftly Workspace showcase"
-            />
-          ) : (
-            <ProductVisual variant="overview" />
-          )}
-        </div>
-
-        <TechSnake />
       </div>
     </section>
   );

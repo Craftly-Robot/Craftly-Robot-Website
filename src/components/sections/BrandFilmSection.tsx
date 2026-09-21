@@ -36,13 +36,13 @@ export default function BrandFilmSection() {
         window.requestAnimationFrame(() => {
           const el = sectionRef.current;
           if (el) {
-            const rect = el.getBoundingClientRect();
             const vh = window.innerHeight;
-            // Expansion begins when section top enters viewport
-            // Reaches full expansion when top reaches 25% of viewport height
-            const start = vh * 0.95;
-            const end = vh * 0.25;
-            const progress = (start - rect.top) / (start - end);
+            // When BrandFilm is directly beneath the hero, calculate expansion smoothly from page top
+            // At scroll 0, progress = 0 (scale 0.80, borderRadius 28px)
+            // As user scrolls down past the hero, progress reaches 1.0 (scale 1.0, borderRadius 12px)
+            const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+            const expansionThreshold = Math.min(500, vh * 0.6);
+            const progress = expansionThreshold > 0 ? scrollY / expansionThreshold : 1;
             setScrollProgress(Math.max(0, Math.min(1, progress)));
           }
           ticking = false;
@@ -177,9 +177,9 @@ export default function BrandFilmSection() {
     video.play().then(() => setIsPlaying(true)).catch(() => {});
   }, []);
 
-  // Compute fluid expansion values
-  const scale = reducedMotion ? 1 : 0.88 + 0.12 * scrollProgress;
-  const borderRadius = reducedMotion ? 16 : Math.round(24 - 14 * scrollProgress);
+  // Compute fluid expansion values: starts comfortably at 0.80, scaling smoothly to 1.0 (20% dynamic zoom)
+  const scale = reducedMotion ? 1 : 0.80 + 0.20 * scrollProgress;
+  const borderRadius = reducedMotion ? 16 : Math.round(28 - 16 * scrollProgress);
 
   return (
     <section

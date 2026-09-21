@@ -1,8 +1,9 @@
 .brand-film {
   position: relative;
   width: 100%;
-  padding: var(--space-xl) 0 var(--space-4xl);
+  padding: 0 0 var(--space-3xl);
   overflow: hidden;
+  background: transparent;
 }
 
 .brand-film__outer {

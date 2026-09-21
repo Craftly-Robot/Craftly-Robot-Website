@@ -1,7 +1,7 @@
 .hero-visual {
   width: 100%;
-  height: calc(100vh - var(--nav-height));
-  min-height: 600px;
+  height: 100%;
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;

@@ -1,3 +1,16 @@
+/* Unified Hero & Brand Film Stage with Continuous Particle Background */
+.home-hero-stage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.home-hero-stage .hero-visual {
+  mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+}
+
 .home-intro {
   background: var(--color-bg);
   padding-block: var(--space-6xl) var(--space-4xl);
@@ -18,5 +31,25 @@
 
   .home-intro__statement {
     text-align: left;
+  }
+}
+
+/* Decentralized Model Training Dashboard Section */
+.home-dashboard-section {
+  position: relative;
+  width: 100%;
+  padding-block: var(--space-xl) var(--space-2xl);
+  background: var(--color-bg);
+}
+
+.home-dashboard-section .container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--page-margin);
+}
+
+@media (max-width: 768px) {
+  .home-dashboard-section {
+    padding-block: var(--space-lg) var(--space-xl);
   }
 }
