@@ -6,6 +6,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import ProductShowcase from "../components/sections/ProductShowcase";
 import RobotDemo from "../components/sections/RobotDemo";
 import DownloadSection from "../components/sections/DownloadSection";
+import BrandFilmSection from "../components/sections/BrandFilmSection";
 import { products } from "../data/products";
 import "./HomePage.css";
 
@@ -21,6 +22,9 @@ export default function HomePage() {
 
       {/* 02-04 — Hero, Media, and Tech Icon Transition */}
       <Hero />
+
+      {/* Brand Film — Cinematic Scroll-Expand Showcase */}
+      <BrandFilmSection />
 
       <div ref={revealRef}>
         {/* Workspace & Robot Sections */}
