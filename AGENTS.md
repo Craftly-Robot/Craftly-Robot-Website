@@ -528,6 +528,12 @@ CONTINUE DEBUGGING.
 
 Do NOT report success.
 
+When automating browser verification with Ego Browser / Ego Lite:
+
+- Always use exactly ONE TaskSpace per task. Do not open multiple task spaces.
+- Always wrap scripts in `try { ... } finally { await task.finish({ keep: [] }); }` to guarantee windows are cleanly closed even if an assertion, locator, or timeout error occurs.
+- Never leave abandoned browser windows open on the desktop.
+
 # ============================================================ 21. BUILD VERIFICATION
 
 After code changes:
