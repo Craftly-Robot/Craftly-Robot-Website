@@ -23,13 +23,42 @@ export default function BrandFilmSection() {
   const [hasEnded, setHasEnded] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [hasTriggeredPlay, setHasTriggeredPlay] = useState(false);
+  const [userManuallyPaused, setUserManuallyPaused] = useState(false);
 
+  const isIntersectingRef = useRef(false);
   const reducedMotion = useReducedMotion();
 
-  // Fluid scroll expansion tracking
-  useEffect(() => {
-    if (reducedMotion) return;
+  // Intro completion observer
+  const [introDone, setIntroDone] = useState(() => {
+    if (typeof document === "undefined") return true;
+    return !document.documentElement.classList.contains("intro-active");
+  });
 
+  useEffect(() => {
+    if (introDone) return;
+
+    const handleIntroDone = () => setIntroDone(true);
+    window.addEventListener("craftly-intro-done", handleIntroDone);
+
+    const observer = new MutationObserver(() => {
+      if (!document.documentElement.classList.contains("intro-active")) {
+        setIntroDone(true);
+      }
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => {
+      window.removeEventListener("craftly-intro-done", handleIntroDone);
+      observer.disconnect();
+    };
+  }, [introDone]);
+
+  // Fluid scroll expansion tracking & scroll-triggered playback
+  useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
@@ -37,13 +66,25 @@ export default function BrandFilmSection() {
           const el = sectionRef.current;
           if (el) {
             const vh = window.innerHeight;
-            // When BrandFilm is directly beneath the hero, calculate expansion smoothly from page top
-            // At scroll 0, progress = 0 (scale 0.80, borderRadius 28px)
-            // As user scrolls down past the hero, progress reaches 1.0 (scale 1.0, borderRadius 12px)
             const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-            const expansionThreshold = Math.min(500, vh * 0.6);
-            const progress = expansionThreshold > 0 ? scrollY / expansionThreshold : 1;
-            setScrollProgress(Math.max(0, Math.min(1, progress)));
+
+            if (!reducedMotion) {
+              const expansionThreshold = Math.min(500, vh * 0.6);
+              const progress = expansionThreshold > 0 ? scrollY / expansionThreshold : 1;
+              setScrollProgress(Math.max(0, Math.min(1, progress)));
+            }
+
+            // Trigger autoplay on scroll when intro is complete and section is in viewport
+            if (introDone && !hasTriggeredPlay && !userManuallyPaused && scrollY > 40 && isIntersectingRef.current) {
+              setHasTriggeredPlay(true);
+              const video = videoRef.current;
+              if (video && !hasEnded) {
+                video
+                  .play()
+                  .then(() => setIsPlaying(true))
+                  .catch(() => {});
+              }
+            }
           }
           ticking = false;
         });
@@ -54,7 +95,23 @@ export default function BrandFilmSection() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [reducedMotion]);
+  }, [reducedMotion, introDone, hasTriggeredPlay, userManuallyPaused, hasEnded]);
+
+  // If page is loaded or refreshed already scrolled down, start when intro finishes
+  useEffect(() => {
+    if (!introDone || hasTriggeredPlay || userManuallyPaused) return;
+    const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    if (scrollY > 40 && isIntersectingRef.current) {
+      setHasTriggeredPlay(true);
+      const video = videoRef.current;
+      if (video && !hasEnded) {
+        video
+          .play()
+          .then(() => setIsPlaying(true))
+          .catch(() => {});
+      }
+    }
+  }, [introDone, hasTriggeredPlay, userManuallyPaused, hasEnded]);
 
   // Fullscreen change listener
   useEffect(() => {
@@ -66,7 +123,7 @@ export default function BrandFilmSection() {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
   }, []);
 
-  // IntersectionObserver: auto-play when in viewport, auto-pause when out
+  // IntersectionObserver: auto-play when in viewport and triggered, auto-pause when out
   useEffect(() => {
     const video = videoRef.current;
     const section = sectionRef.current;
@@ -74,18 +131,31 @@ export default function BrandFilmSection() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        isIntersectingRef.current = entry.isIntersecting;
+
         if (entry.isIntersecting) {
-          if (!hasEnded) {
-            video
-              .play()
-              .then(() => setIsPlaying(true))
-              .catch(() => {
-                // Autoplay policy prevented playback
-              });
+          const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+
+          // Autoplay only if intro is done, not manually paused, and user has either triggered or scrolled
+          if (introDone && !userManuallyPaused && !hasEnded) {
+            if (hasTriggeredPlay || scrollY > 40) {
+              if (!hasTriggeredPlay) {
+                setHasTriggeredPlay(true);
+              }
+              video
+                .play()
+                .then(() => setIsPlaying(true))
+                .catch(() => {
+                  // Autoplay policy prevented playback
+                });
+            }
           }
         } else {
-          video.pause();
-          setIsPlaying(false);
+          // Out of viewport: pause video (unless in fullscreen mode)
+          if (!document.fullscreenElement) {
+            video.pause();
+            setIsPlaying(false);
+          }
         }
       },
       { threshold: 0.2 }
@@ -93,22 +163,27 @@ export default function BrandFilmSection() {
 
     observer.observe(section);
     return () => observer.disconnect();
-  }, [hasEnded]);
+  }, [introDone, hasTriggeredPlay, userManuallyPaused, hasEnded]);
 
   const togglePlay = useCallback(() => {
     const video = videoRef.current;
     if (!video) return;
 
+    setHasTriggeredPlay(true);
+
     if (hasEnded) {
       video.currentTime = 0;
       setHasEnded(false);
+      setUserManuallyPaused(false);
       video.play().then(() => setIsPlaying(true)).catch(() => {});
       return;
     }
 
     if (video.paused) {
+      setUserManuallyPaused(false);
       video.play().then(() => setIsPlaying(true)).catch(() => {});
     } else {
+      setUserManuallyPaused(true);
       video.pause();
       setIsPlaying(false);
     }
@@ -123,6 +198,8 @@ export default function BrandFilmSection() {
     setIsMuted(nextMuted);
 
     if (!nextMuted) {
+      setHasTriggeredPlay(true);
+      setUserManuallyPaused(false);
       if (hasEnded) {
         video.currentTime = 0;
         setHasEnded(false);
@@ -174,6 +251,8 @@ export default function BrandFilmSection() {
     if (!video) return;
     video.currentTime = 0;
     setHasEnded(false);
+    setUserManuallyPaused(false);
+    setHasTriggeredPlay(true);
     video.play().then(() => setIsPlaying(true)).catch(() => {});
   }, []);
 

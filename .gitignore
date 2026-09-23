@@ -33,3 +33,6 @@ playwright-report
 
 # Raw source media
 Company video..mp4
+
+# Graphify knowledge graph
+graphify-out/

@@ -93,6 +93,9 @@ export default function IntroOverlay() {
       document.documentElement.classList.remove("intro-hold", "intro-active");
       markSeen();
       setDismissed(true);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("craftly-intro-done"));
+      }
     };
 
     /* Run the fade only once there are pixels to fade: on a cold tab the SVG
