@@ -101,7 +101,6 @@ function JoinButton({
         </svg>
       </span>
       <span className="jb-label">Join us</span>
-      <span className="jb-shine" />
     </a>
   );
 }
