@@ -70,10 +70,6 @@ html.intro-active .intro__mark {
   }
 }
 
-/* While intro is active, prevent page scrolling */
-html.intro-active {
-  overflow: hidden;
-}
 
 /* Hold the underlying page invisible until takeoff to prevent any flash */
 html.intro-hold .layout__main,
