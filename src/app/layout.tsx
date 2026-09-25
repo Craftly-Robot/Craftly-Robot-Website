@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
 import Layout from "@/components/layout/Layout";
 import ThemeScript from "@/components/common/ThemeScript";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -122,6 +123,7 @@ export default function RootLayout({
       </head>
       <body>
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   );
