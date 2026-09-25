@@ -1,7 +1,7 @@
 .ucc-page-wrapper {
   background-color: var(--color-bg);
   color: var(--color-text);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .ucc-hero {

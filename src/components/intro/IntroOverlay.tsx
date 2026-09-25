@@ -16,6 +16,11 @@ export default function IntroOverlay() {
   const markRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      document.documentElement.classList.remove("intro-hold", "intro-active");
+      return;
+    }
+
     // If intro-active is not on html (e.g. non-home page or reduced motion), no animation needs to run
     if (!document.documentElement.classList.contains("intro-active")) {
       return;
@@ -72,7 +77,7 @@ export default function IntroOverlay() {
       events.forEach((e) => window.removeEventListener(e, finish));
       document.documentElement.classList.remove("intro-hold", "intro-active");
     };
-  }, []);
+  }, [pathname]);
 
   if (dismissed || pathname !== "/") return null;
 
