@@ -29,7 +29,7 @@ html.intro-active .intro {
 }
 
 html.intro-active:not(.intro-hold) .intro__sheet {
-  animation: introSheetOut 600ms var(--ease-out) forwards;
+  animation: introSheetOut 500ms var(--ease-out) forwards;
 }
 
 .intro__mark {
@@ -44,16 +44,14 @@ html.intro-active:not(.intro-hold) .intro__sheet {
   opacity: 0;
   /* Must live on the base rule: a transition declared alongside the value change
      it is meant to animate never runs. JS sets the target transform at takeoff. */
-  transition: transform 1000ms var(--ease-in-out);
+  transition: transform 500ms var(--ease-in-out);
 }
 
 html.intro-active .intro__mark {
-  animation: introSettle 1400ms var(--ease-in-out) both;
+  animation: introSettle 500ms var(--ease-in-out) both;
 }
 
 @keyframes introSettle {
-  /* Only opacity + transform, so the settle runs on the compositor and keeps
-     playing through the main-thread stalls of three.js / lazy-chunk startup. */
   from {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.88);
@@ -68,26 +66,6 @@ html.intro-active .intro__mark {
   to {
     opacity: 0;
   }
-}
-
-
-/* Hold the underlying page invisible until takeoff to prevent any flash */
-html.intro-hold .layout__main,
-html.intro-hold .navbar,
-html.intro-hold .footer {
-  visibility: hidden;
-}
-
-/* Hold the hero's existing heroFadeUp cascade until the wordmark takes off.
-   animation-play-state freezes an animation during its delay too, so releasing
-   the class replays the cascade from zero — Hero.css needs no changes. */
-html.intro-hold .hero__title,
-html.intro-hold .hero__product-switcher,
-html.intro-hold .hero__dynamic-tagline,
-html.intro-hold .hero__cta-group,
-html.intro-hold .hero__media-wrapper,
-html.intro-hold .hero__tech-row {
-  animation-play-state: paused;
 }
 
 /* Hide the real header logo until the flying one lands on top of it. */

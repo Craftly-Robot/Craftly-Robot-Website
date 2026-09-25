@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { products } from "../../data/products";
-import HeroParticles from "./HeroParticles";
 import ImageWithFallback from "../common/ImageWithFallback";
 import "./Hero.css";
+
+const HeroParticles = dynamic(() => import("./HeroParticles"), {
+  ssr: false,
+});
 
 function MonitorIcon({ className }: { className?: string }) {
   return (
@@ -109,6 +113,9 @@ function HeroTitle() {
         src="/assets/Bangladesh_Flag/Flag-Bangladesh.webp"
         alt="Bangladesh Flag"
         className="hero__flag"
+        width={36}
+        height={24}
+        loading="eager"
       />
     </h1>
   );

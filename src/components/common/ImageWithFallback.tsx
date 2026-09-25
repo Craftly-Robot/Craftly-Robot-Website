@@ -74,6 +74,7 @@ export default function ImageWithFallback({
       style={style}
       width={width}
       height={height}
+      decoding="async"
       onError={() => setError(true)}
       {...props}
     />
