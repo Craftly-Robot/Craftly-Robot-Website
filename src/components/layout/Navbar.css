@@ -391,53 +391,32 @@
   border: 1px solid rgba(255, 255, 255, 0.28);
   padding: 0 16px;
   border-radius: 10px;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.2px;
+  letter-spacing: normal;
+  line-height: 1;
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
-  isolation: isolate;
   transition:
-    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.3s ease,
-    background 0.3s ease,
-    letter-spacing 0.3s ease,
-    padding 0.35s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .join-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  border-color: #fff;
+  /* Button stays exact same size & position */
+  border-color: rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.08);
-  letter-spacing: 0.5px;
-  padding-right: 22px;
 }
 
 .join-btn:active {
-  transform: translateY(0) scale(0.98);
-}
-
-/* diagonal shine sweep */
-.jb-shine {
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.12), transparent);
-  transform: skewX(-20deg);
-  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 1;
-}
-
-.join-btn:hover .jb-shine {
-  left: 130%;
+  opacity: 0.9;
 }
 
 .jb-icon {
   position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -448,16 +427,20 @@
   width: 16px;
   height: 16px;
   display: block;
-  stroke: #fff;
+  stroke: currentColor;
 }
 
+/* Only the icon inside animates on hover */
 .join-btn:hover .jb-icon {
-  transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.15);
 }
 
 .jb-label {
   position: relative;
-  z-index: 2;
+  font-family: var(--font-sans), inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 /* Light Theme support for Join Us button */
@@ -470,14 +453,6 @@
 [data-theme="light"] .join-btn:hover {
   border-color: #0a0a0a;
   background: rgba(0, 0, 0, 0.08);
-}
-
-[data-theme="light"] .jb-icon svg {
-  stroke: #0a0a0a;
-}
-
-[data-theme="light"] .jb-shine {
-  background: linear-gradient(115deg, transparent, rgba(0, 0, 0, 0.1), transparent);
 }
 
 /* ── Mobile Nav ── */
