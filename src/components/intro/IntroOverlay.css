@@ -11,6 +11,11 @@
  */
 
 .intro {
+  display: none;
+}
+
+html.intro-active .intro {
+  display: block;
   position: fixed;
   inset: 0;
   z-index: 900; /* above --z-toast (500) and the navbar's --z-sticky (200) */
@@ -21,7 +26,10 @@
   position: absolute;
   inset: 0;
   background: var(--color-bg);
-  animation: introSheetOut 600ms var(--ease-out) 2100ms forwards;
+}
+
+html.intro-active:not(.intro-hold) .intro__sheet {
+  animation: introSheetOut 600ms var(--ease-out) forwards;
 }
 
 .intro__mark {
@@ -39,9 +47,7 @@
   transition: transform 1000ms var(--ease-in-out);
 }
 
-/* Added by JS once the image has decoded, so the fade is never half over
-   before there are any pixels to fade. */
-.intro__mark--in {
+html.intro-active .intro__mark {
   animation: introSettle 1400ms var(--ease-in-out) both;
 }
 
@@ -62,6 +68,18 @@
   to {
     opacity: 0;
   }
+}
+
+/* While intro is active, prevent page scrolling */
+html.intro-active {
+  overflow: hidden;
+}
+
+/* Hold the underlying page invisible until takeoff to prevent any flash */
+html.intro-hold .layout__main,
+html.intro-hold .navbar,
+html.intro-hold .footer {
+  visibility: hidden;
 }
 
 /* Hold the hero's existing heroFadeUp cascade until the wordmark takes off.
