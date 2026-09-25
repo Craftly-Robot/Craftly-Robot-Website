@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import "./IntroOverlay.css";
 
 /* Beat timings (ms), measured from the start of the effect.
-   See the timeline in IntroOverlay.css. */
-const FLIGHT_START = 2100;
-const FLIGHT_DURATION = 1000;
+   Snappy 600ms transition so LCP is instant and users are never delayed */
+const FLIGHT_START = 600;
+const FLIGHT_DURATION = 500;
 
 export default function IntroOverlay() {
   const pathname = usePathname();
@@ -88,7 +88,11 @@ export default function IntroOverlay() {
         ref={markRef}
         className="intro__mark"
         src="/assets/brand/craftly-wordmark-intro.svg"
-        alt=""
+        alt="Craftly"
+        width={460}
+        height={120}
+        loading="eager"
+        decoding="async"
       />
     </div>
   );

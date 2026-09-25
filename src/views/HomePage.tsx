@@ -1,17 +1,38 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { SEO } from "../components/SEO";
 import Hero from "../components/hero/Hero";
-import HeroParticles from "../components/hero/HeroParticles";
 import TechSnake from "../components/hero/TechSnake";
-import ProductVisual from "../components/product/ProductVisual";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import ProductShowcase from "../components/sections/ProductShowcase";
-import RobotDemo from "../components/sections/RobotDemo";
 import DownloadSection from "../components/sections/DownloadSection";
-import BrandFilmSection from "../components/sections/BrandFilmSection";
 import { products } from "../data/products";
 import "./HomePage.css";
+
+// Dynamic client-side components to eliminate initial main-thread blocking
+const HeroParticles = dynamic(
+  () => import("../components/hero/HeroParticles"),
+  {
+    ssr: false,
+    loading: () => <div className="hero-visual" aria-hidden="true" />,
+  }
+);
+
+const BrandFilmSection = dynamic(
+  () => import("../components/sections/BrandFilmSection"),
+  { ssr: false }
+);
+
+const ProductVisual = dynamic(
+  () => import("../components/product/ProductVisual"),
+  { ssr: false }
+);
+
+const RobotDemo = dynamic(
+  () => import("../components/sections/RobotDemo"),
+  { ssr: false }
+);
 
 export default function HomePage() {
   const revealRef = useScrollReveal();
