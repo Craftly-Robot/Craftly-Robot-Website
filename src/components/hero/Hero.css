@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: clamp(3rem, 7vh, 5.5rem);
+  padding-top: clamp(4.75rem, 11vh, 8rem);
   padding-bottom: clamp(4.5rem, 8vh, 6.5rem);
 }
 
