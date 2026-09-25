@@ -152,52 +152,6 @@
 
 .hero__btn-secondary:hover {
   background: var(--color-surface-hover);
-  transform: translateY(-1px);
-}
-
-.hero__join-group {
-  margin-top: var(--space-md);
-  margin-bottom: 0;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.38s forwards;
-}
-
-.hero__btn-join {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0.45rem 1.15rem;
-  font-size: 0.84rem;
-  font-weight: 500;
-  color: var(--color-text);
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition:
-    background-color var(--duration-fast) var(--ease-out),
-    border-color var(--duration-fast) var(--ease-out),
-    box-shadow var(--duration-fast) var(--ease-out),
-    color var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out);
-}
-
-.hero__btn-join:hover {
-  background: var(--color-surface-hover);
-  border-color: var(--color-border-hover);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-}
-
-.hero__btn-join-icon {
-  transition: transform var(--duration-fast) var(--ease-out);
-}
-
-.hero__btn-join:hover .hero__btn-join-icon {
-  transform: translate(1px, -1px);
 }
 
 .hero__media-wrapper {
@@ -317,17 +271,6 @@
 
   .hero__btn-primary,
   .hero__btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero__join-group {
-    width: 100%;
-    max-width: 280px;
-    margin-top: var(--space-sm);
-  }
-
-  .hero__btn-join {
     width: 100%;
     justify-content: center;
   }
