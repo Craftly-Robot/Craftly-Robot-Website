@@ -378,6 +378,108 @@
   opacity: 0.9;
 }
 
+/* ── Join Us Button ── */
+.join-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    background 0.3s ease,
+    letter-spacing 0.3s ease,
+    padding 0.35s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.5px;
+  padding-right: 22px;
+}
+
+.join-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* diagonal shine sweep */
+.jb-shine {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.join-btn:hover .jb-shine {
+  left: 130%;
+}
+
+.jb-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.jb-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  stroke: #fff;
+}
+
+.join-btn:hover .jb-icon {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.jb-label {
+  position: relative;
+  z-index: 2;
+}
+
+/* Light Theme support for Join Us button */
+[data-theme="light"] .join-btn {
+  background: rgba(0, 0, 0, 0.04);
+  color: #0a0a0a;
+  border-color: rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="light"] .join-btn:hover {
+  border-color: #0a0a0a;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .jb-icon svg {
+  stroke: #0a0a0a;
+}
+
+[data-theme="light"] .jb-shine {
+  background: linear-gradient(115deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
 /* ── Mobile Nav ── */
 .navbar__mobile-toggle {
   display: none;
@@ -551,12 +653,22 @@
   line-height: 1.4;
 }
 
-.mobile-nav__download {
+.mobile-nav__join-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-top: var(--space-2xl);
+  height: 46px;
+  font-size: var(--text-base);
+}
+
+.mobile-nav__download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-sm);
   padding: var(--space-md);
   font-size: var(--text-base);
   font-weight: 500;
@@ -568,6 +680,7 @@
 
 @media (max-width: 1024px) {
   .navbar__nav,
+  .navbar__right .join-btn,
   .navbar__download,
   .navbar__overlay,
   .navbar__dropdown-wrapper {

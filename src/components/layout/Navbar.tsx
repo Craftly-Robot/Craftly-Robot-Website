@@ -69,6 +69,43 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
+function JoinButton({
+  className = "",
+  onClick,
+}: {
+  className?: string;
+  onClick?: () => void;
+}) {
+  return (
+    <a
+      href="https://sandbox-workspace.craftlyrobot.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`join-btn ${className}`.trim()}
+      onClick={onClick}
+      aria-label="Join us on Craftly Workspace"
+    >
+      <span className="jb-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          <path d="M2 20c0-3.9 2.7-7 6-7s6 3.1 6 7" />
+          <path d="M17 8v6" />
+          <path d="M14 11h6" />
+        </svg>
+      </span>
+      <span className="jb-label">Join us</span>
+      <span className="jb-shine" />
+    </a>
+  );
+}
+
 export default function Navbar() {
   const {
     activeDropdown,
@@ -168,6 +205,8 @@ export default function Navbar() {
               <MoonIcon className="navbar__theme-icon navbar__theme-icon--moon" />
             )}
           </button>
+
+          <JoinButton />
 
           <Link href="/download" className="navbar__download">
             Download
@@ -340,6 +379,8 @@ export default function Navbar() {
             )}
           </div>
         ))}
+
+        <JoinButton className="mobile-nav__join-btn" onClick={closeMobile} />
 
         <Link
           href="/download"
