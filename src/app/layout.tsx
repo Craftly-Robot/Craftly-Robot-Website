@@ -3,6 +3,7 @@ import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
 import Layout from "@/components/layout/Layout";
 import ThemeScript from "@/components/common/ThemeScript";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -124,6 +125,7 @@ export default function RootLayout({
       <body>
         <Layout>{children}</Layout>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
