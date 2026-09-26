@@ -19,14 +19,7 @@ export default function CloudPage() {
       {/* 1. Hero Section */}
       <section className="cloud-hero">
         <div className="cloud-hero__brand">
-          <ImageWithFallback
-            src="/assets/brand/craftly-wordmark.svg"
-            alt="Craftly"
-            width={110}
-            height={44}
-            className="cloud-hero__wordmark"
-            loading="eager"
-          />
+          <span className="brand-font-pacifico cloud-hero__brand-script">Craftly</span>
           <span className="cloud-hero__brand-tag">Cloud</span>
         </div>
 
@@ -255,13 +248,7 @@ export default function CloudPage() {
           <div className="cloud-footer__grid">
             <div className="cloud-footer__brand-col">
               <div className="cloud-footer__brand">
-                <ImageWithFallback
-                  src="/assets/brand/craftly-wordmark.svg"
-                  alt="Craftly"
-                  width={80}
-                  height={32}
-                  className="cloud-footer__wordmark"
-                />
+                <span className="brand-font-pacifico cloud-footer__brand-script">Craftly</span>
                 <span className="cloud-footer__brand-tag">Cloud</span>
               </div>
               <p className="cloud-footer__tagline">

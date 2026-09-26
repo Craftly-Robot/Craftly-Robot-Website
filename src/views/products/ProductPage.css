@@ -150,6 +150,15 @@
   opacity: 1;
 }
 
+.product-hero-clean__title .brand-font-pacifico {
+  font-family: var(--font-pacifico), "Pacifico", cursive;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-right: 0.25em;
+  display: inline-block;
+  font-size: 1.05em;
+}
+
 .product-hero-clean__desc {
   font-size: 16px;
   color: var(--color-text-secondary);

@@ -25,7 +25,9 @@ export default function RobotPage() {
 
       <div className="container">
         <section className="product-hero-clean">
-          <h1 className="product-hero-clean__title">{product.name}</h1>
+          <h1 className="product-hero-clean__title">
+            <span className="brand-font-pacifico">Craftly</span> Robot
+          </h1>
           <p className="product-hero-clean__desc">{product.description}</p>
           <div className="product-hero-clean__actions">
             <Link href="/download" className="btn-product-download">

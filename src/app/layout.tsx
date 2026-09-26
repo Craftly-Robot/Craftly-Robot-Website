@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
+import { Inter, Outfit, JetBrains_Mono, Pacifico } from "next/font/google";
 import Layout from "@/components/layout/Layout";
 import ThemeScript from "@/components/common/ThemeScript";
 import { Analytics } from "@vercel/analytics/next";
@@ -20,6 +20,13 @@ const outfit = Outfit({
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const pacifico = Pacifico({
+  weight: "400",
+  variable: "--font-pacifico",
   subsets: ["latin"],
   display: "swap",
 });
@@ -157,7 +164,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} ${pacifico.variable}`}
     >
       <head>
         <link
