@@ -206,57 +206,84 @@
 
 .cloud-hero__actions {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 52px;
+  width: 100%;
 }
 
 .cloud-btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  width: 100%;
+  max-width: 290px;
+  height: 48px;
+  padding: 0 24px;
   border-radius: 9999px;
-  background-color: #111827;
+  background-color: #141414;
+  border: 1px solid #141414;
   color: #ffffff;
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
   letter-spacing: -0.01em;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  box-shadow: none;
+  transform: none;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
 }
 
 [data-theme="dark"] .cloud-btn-primary {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #f4f4f5;
+  border-color: #f4f4f5;
+  color: #09090b;
 }
 
 .cloud-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transform: none;
+  box-shadow: none;
+  opacity: 0.92;
 }
 
 .cloud-btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  width: 100%;
+  max-width: 290px;
+  height: 48px;
+  padding: 0 24px;
   border-radius: 9999px;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  font-size: 0.92rem;
-  font-weight: 600;
+  background-color: #ffffff;
+  border: 1px solid #141414;
+  color: #141414;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
   letter-spacing: -0.01em;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  box-shadow: none;
+  transform: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+[data-theme="dark"] .cloud-btn-secondary {
+  background-color: transparent;
+  border-color: #f4f4f5;
+  color: #f4f4f5;
 }
 
 .cloud-btn-secondary:hover {
-  background-color: var(--color-surface-hover);
-  border-color: var(--color-border-hover);
-  transform: translateY(-2px);
+  transform: none;
+  box-shadow: none;
+  background-color: #f4f4f5;
+}
+
+[data-theme="dark"] .cloud-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Skyline Illustration */

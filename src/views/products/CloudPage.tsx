@@ -62,8 +62,8 @@ export default function CloudPage() {
           <Link href="/download" className="cloud-btn-primary">
             Connect Your Computer
           </Link>
-          <Link href="/contact?subject=request-compute" className="cloud-btn-secondary">
-            Request Compute
+          <Link href="/contact?topic=compute" className="cloud-btn-secondary">
+            Build with Craftly
           </Link>
         </div>
 
