@@ -94,11 +94,12 @@ export default function CloudPage() {
         <div className="cloud-pilot-container">
           <div className="cloud-seal-wrapper">
             <ImageWithFallback
-              src="/assets/Craftly_Cloud/bd-seal.svg"
-              alt="Government of the People's Republic of Bangladesh Seal"
-              width={58}
-              height={58}
+              src="/Craftly-Cloud/bangladesh-govt-republic-of-bangladesh-logo-png_seeklogo-406974.png"
+              alt="Government of the People's Republic of Bangladesh Emblem"
+              width={68}
+              height={68}
               className="cloud-seal-img"
+              loading="lazy"
             />
           </div>
 
