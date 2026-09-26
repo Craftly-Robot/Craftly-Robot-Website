@@ -72,8 +72,8 @@ export default function CloudPage() {
           <ImageWithFallback
             src="/assets/Craftly_Cloud/bangladesh-skyline.png"
             alt="Bangladesh Skyline - Jatiya Smriti Soudho and Padma Bridge"
-            width={1024}
-            height={250}
+            width={924}
+            height={166}
             className="cloud-skyline-img"
             loading="eager"
           />
