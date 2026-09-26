@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import "./IntroOverlay.css";
 
 /* Beat timings (ms), measured from the start of the effect.
-   Snappy 600ms transition so LCP is instant and users are never delayed */
-const FLIGHT_START = 600;
-const FLIGHT_DURATION = 500;
+   Balanced timings so the logo is clearly visible, elegant, and finishes smoothly */
+const FLIGHT_START = 1000;
+const FLIGHT_DURATION = 650;
 
 export default function IntroOverlay() {
   const pathname = usePathname();
@@ -92,7 +92,7 @@ export default function IntroOverlay() {
         width={460}
         height={120}
         loading="eager"
-        decoding="async"
+        decoding="sync"
       />
     </div>
   );
