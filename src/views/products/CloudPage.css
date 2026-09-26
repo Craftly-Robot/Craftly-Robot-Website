@@ -49,17 +49,37 @@
 
 .cloud-hero__title {
   font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
-  font-weight: 700;
-  line-height: 1.1;
+  font-size: clamp(2.4rem, 5.6vw, 4.25rem);
+  line-height: 1.12;
   letter-spacing: -0.035em;
-  color: var(--color-text);
   max-width: 900px;
-  margin: 0 auto 24px;
+  margin: 0 auto 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-hero__title-main {
+  font-weight: 600;
+  color: #111827;
+}
+
+[data-theme="dark"] .cloud-hero__title-main {
+  color: #f9fafb;
+}
+
+.cloud-hero__title-sub {
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: -0.025em;
+}
+
+[data-theme="dark"] .cloud-hero__title-sub {
+  color: #9ca3af;
 }
 
 .cloud-hero__stat-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   display: inline-flex;
   align-items: baseline;
   justify-content: center;
@@ -67,61 +87,50 @@
 
 .cloud-hero__stat-value {
   font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(4.5rem, 11vw, 8rem);
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-size: clamp(4.5rem, 9.5vw, 7.25rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
   line-height: 0.95;
-  color: var(--color-text);
+  color: #111827;
+}
+
+[data-theme="dark"] .cloud-hero__stat-value {
+  color: #f9fafb;
 }
 
 .cloud-hero__stat-unit {
   font-family: var(--font-sans);
-  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
-  font-weight: 700;
-  color: var(--color-text-secondary);
+  font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+  font-weight: 500;
+  color: #6b7280;
   margin-left: 8px;
   letter-spacing: -0.02em;
 }
 
-.cloud-hero__pulse-badge {
+[data-theme="dark"] .cloud-hero__stat-unit {
+  color: #9ca3af;
+}
+
+.cloud-hero__about-number {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #10b981;
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  padding: 4px 12px;
-  border-radius: 9999px;
-  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: #71717a;
+  margin-bottom: 28px;
+  user-select: none;
 }
 
-.cloud-pulse-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #10b981;
-  position: relative;
+.cloud-hero__play-icon {
+  font-size: 0.6rem;
+  opacity: 0.8;
+  display: inline-block;
+  transform: translateY(-0.5px);
 }
 
-.cloud-pulse-dot::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 50%;
-  background: rgba(16, 185, 129, 0.4);
-  animation: cloudPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes cloudPulse {
-  0% { transform: scale(0.8); opacity: 1; }
-  100% { transform: scale(2.2); opacity: 0; }
+[data-theme="dark"] .cloud-hero__about-number {
+  color: #9ca3af;
 }
 
 .cloud-hero__desc {

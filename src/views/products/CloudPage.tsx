@@ -31,22 +31,23 @@ export default function CloudPage() {
         </div>
 
         <h1 className="cloud-hero__title">
-          Bangladesh’s national<br />AI compute capacity.
+          <span className="cloud-hero__title-main">Bangladesh’s national</span>
+          <span className="cloud-hero__title-sub">AI compute capacity.</span>
         </h1>
 
         <div className="cloud-hero__stat-wrapper">
-          <span className="cloud-hero__stat-value">199.5</span>
+          <span className="cloud-hero__stat-value">240.5</span>
           <span className="cloud-hero__stat-unit">GB</span>
         </div>
 
-        <div className="cloud-hero__pulse-badge">
-          <span className="cloud-pulse-dot" />
-          <span>Live Nationwide Network</span>
+        <div className="cloud-hero__about-number">
+          <span className="cloud-hero__play-icon">▶</span>
+          <span>About this number</span>
         </div>
 
         <p className="cloud-hero__desc">
-          Craftly is connecting every computer in Bangladesh to show<br />
-          the world what&apos;s possible.
+          Craftly is connecting whole Bangladesh to show<br />
+          the world whats possible.
         </p>
 
         <div className="cloud-hero__actions">
