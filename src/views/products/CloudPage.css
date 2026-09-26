@@ -598,17 +598,22 @@
 }
 
 .cloud-impact-card__preview {
-  background-color: var(--color-surface, #f8fafc);
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
+  background-color: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
   padding: 24px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
-  height: 200px;
+  min-height: 220px;
+  height: 220px;
   margin-bottom: 24px;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+[data-theme="dark"] .cloud-impact-card__preview {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
 }
 
 .cloud-impact-card:hover .cloud-impact-card__preview {
@@ -618,12 +623,15 @@
 
 .cloud-impact-card__svg {
   width: auto;
-  height: 152px;
+  height: 160px;
   max-width: 100%;
-  max-height: 152px;
+  max-height: 160px;
   object-fit: contain;
-  color: var(--color-text);
-  opacity: 0.9;
+  color: #18181b;
+}
+
+[data-theme="dark"] .cloud-impact-card__svg {
+  color: #f4f4f5;
 }
 
 .cloud-impact-card__tag {
