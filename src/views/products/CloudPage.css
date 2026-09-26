@@ -471,11 +471,11 @@
 
 .cloud-pilot__title-main {
   font-weight: 600;
-  color: #111827;
+  color: #33383f;
 }
 
 [data-theme="dark"] .cloud-pilot__title-main {
-  color: #f9fafb;
+  color: #e4e4e7;
 }
 
 .cloud-pilot__title-sub {
