@@ -142,12 +142,13 @@ export default function CloudPage() {
       <section className="cloud-impact-section">
         <div className="cloud-impact-container">
           <div className="cloud-impact__header">
-            <span className="cloud-section-tag">ACCELERATING RESEARCH</span>
+            <span className="cloud-pilot__tag">02 / POSSIBILITIES</span>
             <h2 className="cloud-impact__title">
-              Power for the people<br />moving us forward.
+              <span className="cloud-impact__title-main">Power for the people</span>
+              <span className="cloud-impact__title-sub">moving us forward.</span>
             </h2>
             <p className="cloud-impact__subtitle">
-              Distributed compute driving real impact<br />across every sector in Bangladesh.
+              Our mission is to put computing capacity<br />behind work that matters.
             </p>
           </div>
 

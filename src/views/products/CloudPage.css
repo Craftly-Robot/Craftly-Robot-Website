@@ -544,19 +544,46 @@
 }
 
 .cloud-impact__title {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  color: var(--color-text);
-  margin-bottom: 16px;
+  font-family: var(--font-sans);
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-impact__title-main {
+  font-weight: 400;
+  color: #27272a;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="dark"] .cloud-impact__title-main {
+  color: #e4e4e7;
+}
+
+.cloud-impact__title-sub {
+  font-weight: 400;
+  color: #71717a;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="dark"] .cloud-impact__title-sub {
+  color: #9ca3af;
 }
 
 .cloud-impact__subtitle {
-  font-size: clamp(1rem, 1.6vw, 1.125rem);
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+  font-size: clamp(0.88rem, 1.3vw, 0.96rem);
+  font-weight: 400;
+  color: #52525b;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+[data-theme="dark"] .cloud-impact__subtitle {
+  color: #a1a1aa;
 }
 
 .cloud-impact__grid {
