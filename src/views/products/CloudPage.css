@@ -24,18 +24,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 22px;
 }
 
 .cloud-hero__brand-script {
   font-family: var(--font-pacifico), "Pacifico", cursive;
-  font-size: clamp(2.1rem, 4vw, 2.65rem);
+  font-size: clamp(2.6rem, 5.2vw, 3.4rem);
   font-weight: 400;
   line-height: 1;
-  color: var(--color-text);
+  color: #18181b;
   display: inline-block;
   transform: translateY(-2px);
+}
+
+[data-theme="dark"] .cloud-hero__brand-script {
+  color: #f4f4f5;
 }
 
 .cloud-hero__wordmark {
@@ -50,97 +54,146 @@
 
 .cloud-hero__brand-tag {
   font-family: var(--font-sans);
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-size: clamp(2.2rem, 4.4vw, 2.9rem);
+  font-weight: 400;
   letter-spacing: -0.02em;
-  color: var(--color-text);
+  color: #18181b;
   line-height: 1;
 }
 
+[data-theme="dark"] .cloud-hero__brand-tag {
+  color: #f4f4f5;
+}
+
 .cloud-hero__title {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(2.4rem, 5.6vw, 4.25rem);
-  line-height: 1.12;
-  letter-spacing: -0.035em;
+  font-family: var(--font-sans);
+  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
   max-width: 900px;
-  margin: 0 auto 28px;
+  margin: 0 auto 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .cloud-hero__title-main {
-  font-weight: 600;
-  color: #111827;
+  font-weight: 400;
+  color: #27272a;
+  letter-spacing: -0.02em;
 }
 
 [data-theme="dark"] .cloud-hero__title-main {
-  color: #f9fafb;
+  color: #e4e4e7;
 }
 
 .cloud-hero__title-sub {
   font-weight: 400;
-  color: #6b7280;
-  letter-spacing: -0.025em;
+  color: #71717a;
+  letter-spacing: -0.02em;
 }
 
 [data-theme="dark"] .cloud-hero__title-sub {
-  color: #9ca3af;
+  color: #a1a1aa;
 }
 
 .cloud-hero__stat-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: inline-flex;
   align-items: baseline;
   justify-content: center;
 }
 
 .cloud-hero__stat-value {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(4.5rem, 9.5vw, 7.25rem);
-  font-weight: 500;
-  letter-spacing: -0.04em;
+  font-family: var(--font-sans);
+  font-size: clamp(3.2rem, 6.5vw, 4.75rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
   line-height: 0.95;
-  color: #111827;
+  color: #18181b;
 }
 
 [data-theme="dark"] .cloud-hero__stat-value {
-  color: #f9fafb;
+  color: #f4f4f5;
 }
 
 .cloud-hero__stat-unit {
   font-family: var(--font-sans);
-  font-size: clamp(1.2rem, 2.4vw, 1.85rem);
-  font-weight: 500;
-  color: #6b7280;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 400;
+  color: #71717a;
   margin-left: 8px;
   letter-spacing: -0.02em;
 }
 
 [data-theme="dark"] .cloud-hero__stat-unit {
-  color: #9ca3af;
+  color: #a1a1aa;
 }
 
-.cloud-hero__about-number {
+.cloud-hero__about-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  background: transparent;
+  border: none;
+  padding: 4px 10px;
   font-family: var(--font-sans);
   font-size: 0.8rem;
   color: #71717a;
-  margin-bottom: 28px;
-  user-select: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.cloud-hero__about-btn:hover {
+  color: #27272a;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .cloud-hero__about-btn {
+  color: #a1a1aa;
+}
+
+[data-theme="dark"] .cloud-hero__about-btn:hover {
+  color: #f4f4f5;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .cloud-hero__play-icon {
-  font-size: 0.6rem;
-  opacity: 0.8;
+  font-size: 0.55rem;
+  opacity: 0.85;
   display: inline-block;
   transform: translateY(-0.5px);
+  transition: transform 0.15s ease;
 }
 
-[data-theme="dark"] .cloud-hero__about-number {
-  color: #9ca3af;
+.cloud-hero__about-text {
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 1.6vw, 0.96rem);
+  line-height: 1.55;
+  color: #52525b;
+  max-width: 620px;
+  margin: 0 auto 24px;
+  padding: 0 16px;
+  text-align: center;
+  animation: cloudAboutFadeIn 0.25s ease-out;
+}
+
+[data-theme="dark"] .cloud-hero__about-text {
+  color: #a1a1aa;
+}
+
+@keyframes cloudAboutFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cloud-hero__desc {

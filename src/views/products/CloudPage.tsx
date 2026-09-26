@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { SEO } from "../../components/SEO";
 import ImageWithFallback from "../../components/common/ImageWithFallback";
@@ -8,6 +9,7 @@ import "./CloudPage.css";
 
 export default function CloudPage() {
   const revealRef = useScrollReveal();
+  const [showAboutNumber, setShowAboutNumber] = useState(false);
 
   return (
     <div className="cloud-page-container" ref={revealRef}>
@@ -29,14 +31,27 @@ export default function CloudPage() {
         </h1>
 
         <div className="cloud-hero__stat-wrapper">
-          <span className="cloud-hero__stat-value">240.5</span>
+          <span className="cloud-hero__stat-value">248.9</span>
           <span className="cloud-hero__stat-unit">GB</span>
         </div>
 
-        <div className="cloud-hero__about-number">
-          <span className="cloud-hero__play-icon">▶</span>
+        <button
+          type="button"
+          className="cloud-hero__about-btn"
+          onClick={() => setShowAboutNumber(!showAboutNumber)}
+          aria-expanded={showAboutNumber}
+        >
+          <span className="cloud-hero__play-icon">
+            {showAboutNumber ? "▼" : "▶"}
+          </span>
           <span>About this number</span>
-        </div>
+        </button>
+
+        {showAboutNumber && (
+          <p className="cloud-hero__about-text">
+            Total RAM across recently connected computers, including paused computers. Updates automatically. Available memory for work may be lower.
+          </p>
+        )}
 
         <p className="cloud-hero__desc">
           Craftly is connecting whole Bangladesh to show<br />
