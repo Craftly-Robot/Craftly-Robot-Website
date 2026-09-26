@@ -1,9 +1,13 @@
 "use client";
 
-import ProductVisual from "../../components/product/ProductVisual";
+import dynamic from "next/dynamic";
 import { SEO } from "../../components/SEO";
 import Link from "next/link";
 import { products } from "../../data/products";
+
+const ProductVisual = dynamic(
+  () => import("../../components/product/ProductVisual")
+);
 
 import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";

@@ -30,8 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.1s forwards;
+  opacity: 1;
 }
 
 .hero__flag {

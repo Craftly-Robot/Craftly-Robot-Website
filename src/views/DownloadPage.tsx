@@ -267,7 +267,11 @@ export default function DownloadPage() {
         <div className="download-header">
           <div className="download-hero-top">
             <SectionTitle
-              text={`Download Craftly\nfor ${osName}`}
+              text={
+                osName && osName !== "Unknown"
+                  ? `Download Craftly\nfor ${osName}`
+                  : "Download Craftly"
+              }
               className="download-hero__title"
             />
             <Link href="/resources/releases" className="btn-previous-releases">
