@@ -435,8 +435,8 @@
 }
 
 .cloud-seal-wrapper {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -491,12 +491,12 @@
 }
 
 .cloud-pilot__desc {
-  font-size: clamp(0.88rem, 1.3vw, 0.96rem);
+  font-size: clamp(0.8rem, 1.15vw, 0.88rem);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #52525b;
-  max-width: 680px;
-  margin: 0 auto 44px;
+  max-width: 640px;
+  margin: 0 auto 40px;
   text-wrap: balance;
 }
 

@@ -108,8 +108,8 @@ export default function CloudPage() {
             <ImageWithFallback
               src="/assets/Craftly_Cloud/bangladesh-govt-republic-of-bangladesh-logo-png_seeklogo-406974.png"
               alt="Government of the People's Republic of Bangladesh Emblem"
-              width={72}
-              height={72}
+              width={80}
+              height={80}
               className="cloud-seal-img"
               loading="lazy"
             />
