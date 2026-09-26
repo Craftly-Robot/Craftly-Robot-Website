@@ -21,22 +21,11 @@ export default function CloudPage() {
       {/* Hero Section */}
       <div className="container">
         <section className="product-hero-clean">
-          <div className="cloud-badge">
-            <span className="cloud-badge__dot" />
-            Global Edge Runtime • Active in 38 Regions
-          </div>
-
           <h1 className="product-hero-clean__title">{product.name}</h1>
           <p className="product-hero-clean__desc">{product.description}</p>
           <div className="product-hero-clean__actions">
             <Link href="/download" className="btn-product-download">
-              Deploy with CLI
-            </Link>
-            <Link
-              href="/resources/documentation"
-              className="btn-product-download cloud-actions-secondary"
-            >
-              Cloud Documentation
+              Download
             </Link>
           </div>
         </section>

@@ -1,33 +1,6 @@
 /* Craftly Cloud Product Page Styles */
 
-.cloud-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--color-accent, #3b82f6);
-  margin-bottom: 16px;
-}
 
-.cloud-badge__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #10b981;
-  display: inline-block;
-}
-
-.cloud-actions-secondary {
-  background: transparent;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  margin-left: 12px;
-}
 
 .cloud-showcase-container {
   padding: 0 20px;
@@ -184,9 +157,4 @@
   margin-right: 8px;
 }
 
-@media (max-width: 640px) {
-  .cloud-actions-secondary {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
+
