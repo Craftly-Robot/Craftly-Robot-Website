@@ -667,86 +667,133 @@
    5. "BE PART OF THE NETWORK" 3-STEP SECTION
    ========================================================================== */
 .cloud-network-section {
-  padding: clamp(60px, 9vw, 110px) 0;
+  padding: clamp(80px, 11vw, 130px) 0 clamp(64px, 8vw, 96px);
   background-color: var(--color-bg);
-  border-top: 1px solid var(--color-border);
   text-align: center;
 }
 
 .cloud-network-container {
-  max-width: 1040px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .cloud-network__header {
   max-width: 680px;
-  margin: 0 auto 56px;
+  margin: 0 auto 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cloud-network__title {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-family: var(--font-sans);
+  font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+  font-weight: 450;
+  letter-spacing: -0.025em;
   line-height: 1.15;
   color: var(--color-text);
-  margin-bottom: 14px;
+  margin-top: 14px;
+  margin-bottom: 18px;
 }
 
 .cloud-network__desc {
-  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+  font-size: clamp(0.88rem, 1.2vw, 0.96rem);
+  color: #6b7280;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+[data-theme="dark"] .cloud-network__desc {
+  color: #9ca3af;
 }
 
 .cloud-network__steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 56px;
+  gap: 40px;
+  margin-bottom: 64px;
   text-align: left;
 }
 
 .cloud-step-item {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 32px;
+}
+
+[data-theme="dark"] .cloud-step-item {
+  border-top-color: rgba(255, 255, 255, 0.1);
 }
 
 .cloud-step-item__number {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  margin-bottom: 12px;
-  opacity: 0.6;
+  font-family: var(--font-sans);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #9ca3af;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+[data-theme="dark"] .cloud-step-item__number {
+  color: #71717a;
 }
 
 .cloud-step-item__title {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--font-sans);
+  font-size: 1.18rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   color: var(--color-text);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
 .cloud-step-item__desc {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #71717a;
+}
+
+[data-theme="dark"] .cloud-step-item__desc {
+  color: #a1a1aa;
 }
 
 .cloud-network__cta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+}
+
+.cloud-network__cta .cloud-btn-primary {
+  width: auto;
+  max-width: none;
+  min-width: 200px;
+  height: 48px;
+  padding: 0 32px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: #171717;
+  border-color: #171717;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .cloud-network__cta .cloud-btn-primary {
+  background-color: #f4f4f5;
+  border-color: #f4f4f5;
+  color: #09090b;
 }
 
 .cloud-network__platform-caption {
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .cloud-network__platform-caption {
+  color: #71717a;
 }
 
 /* ==========================================================================

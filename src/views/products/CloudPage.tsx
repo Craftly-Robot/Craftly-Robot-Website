@@ -214,11 +214,11 @@ export default function CloudPage() {
       <section className="cloud-network-section" id="network">
         <div className="cloud-network-container">
           <div className="cloud-network__header">
-            <span className="cloud-section-tag">JOIN THE MOVEMENT</span>
+            <span className="cloud-pilot__tag">03 / YOUR PART</span>
             <h2 className="cloud-network__title">Be Part of the Network</h2>
             <p className="cloud-network__desc">
-              Turn your idle compute into Bangladesh&apos;s future.<br />
-              We match the compute you already have.
+              Help build Bangladesh&apos;s AI compute network.<br />
+              Start with the computer you already have.
             </p>
           </div>
 
@@ -227,7 +227,7 @@ export default function CloudPage() {
               <span className="cloud-step-item__number">01</span>
               <h3 className="cloud-step-item__title">Install Craftly</h3>
               <p className="cloud-step-item__desc">
-                Download our app for your computer.
+                Download the app for your computer.
               </p>
             </div>
 
@@ -235,7 +235,7 @@ export default function CloudPage() {
               <span className="cloud-step-item__number">02</span>
               <h3 className="cloud-step-item__title">Sign in with Google</h3>
               <p className="cloud-step-item__desc">
-                Connect securely in seconds.
+                Sign in securely in your browser.
               </p>
             </div>
 
@@ -243,7 +243,7 @@ export default function CloudPage() {
               <span className="cloud-step-item__number">03</span>
               <h3 className="cloud-step-item__title">Connect your computer</h3>
               <p className="cloud-step-item__desc">
-                Join the network &amp; start contributing.
+                Confirm it, then see its connection and uptime.
               </p>
             </div>
           </div>
