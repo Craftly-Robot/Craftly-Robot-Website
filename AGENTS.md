@@ -784,3 +784,23 @@ When creating branches and pushing:
 NEVER push to `origin` remote — it's only kept for chat history preservation.
 
 Default push target is ALWAYS `company`.
+
+# ============================================================ 34. BUILD EXACTLY TO SPECIFICATION ON FIRST ATTEMPT ("SAME TO SAME")
+
+Whenever the user asks to build, design, implement, or modify ANY feature, component, section, graphic, or layout:
+
+1. **Build Exact ("Same to Same") on the VERY FIRST STEP:**
+   - The implementation MUST match the user's specification, reference image, or prompt 100% accurately right on the first attempt.
+   - Do NOT deliver a rough draft, a lazy MVP, a half-baked approximation, or placeholder-filled mockups hoping to "iterate later".
+
+2. **Take Whatever Time and Effort Is Necessary:**
+   - Speed is secondary to absolute correctness and fidelity.
+   - Take all necessary intermediate steps — detailed image/DOM inspection, mathematical coordinate calculations, crisp vector SVG authoring, precise CSS grid/flexbox tuning, color hex sampling, typography matching, and browser verification — to get it 100% right on step 1.
+
+3. **Zero Quality Compromises:**
+   - NEVER use blurry/pixelated raster upscaling when clean mathematical vectors, crisp SVGs, or high-definition assets are required.
+   - Match every visual detail: aspect ratios, paddings, margins, shadows, borders, hover micro-interactions, dark/light themes, and responsive breakpoints.
+
+4. **Verify Before Declaring Complete:**
+   - Test and compare the result against the user's explicit request and reference materials before declaring the task done.
+   - If something is missing or slightly off, fix it immediately BEFORE showing it to the user.
