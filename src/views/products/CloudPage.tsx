@@ -163,10 +163,10 @@ export default function CloudPage() {
                   className="cloud-impact-card__svg"
                 />
               </div>
-              <span className="cloud-impact-card__tag">FRONTIER HEALTHCARE</span>
+              <span className="cloud-impact-card__tag">01 / SCIENCE &amp; HEALTH</span>
               <h3 className="cloud-impact-card__heading">Cancer research</h3>
               <p className="cloud-impact-card__desc">
-                More compute for researchers working to understand breast and ovarian cancer in patients.
+                More compute for researchers working to understand cancer and develop better treatments.
               </p>
             </div>
 
@@ -181,10 +181,10 @@ export default function CloudPage() {
                   className="cloud-impact-card__svg"
                 />
               </div>
-              <span className="cloud-impact-card__tag">ACADEMIC ADVANCEMENT</span>
+              <span className="cloud-impact-card__tag">02 / RESEARCH &amp; DEVELOPMENT</span>
               <h3 className="cloud-impact-card__heading">University students</h3>
               <p className="cloud-impact-card__desc">
-                Empowering students to train machine learning models on local hardware without cloud costs.
+                Help university students run experiments and develop AI beyond the limits of their own hardware.
               </p>
             </div>
 
@@ -199,10 +199,10 @@ export default function CloudPage() {
                   className="cloud-impact-card__svg"
                 />
               </div>
-              <span className="cloud-impact-card__tag">TECH INDEPENDENCE</span>
+              <span className="cloud-impact-card__tag">03 / ENTREPRENEURSHIP</span>
               <h3 className="cloud-impact-card__heading">Young entrepreneurs</h3>
               <p className="cloud-impact-card__desc">
-                Helping young founders build and launch products without being starved of compute access.
+                Help young founders build and test AI products without buying powerful infrastructure first.
               </p>
             </div>
           </div>
