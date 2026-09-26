@@ -159,8 +159,8 @@ export default function CloudPage() {
                 <ImageWithFallback
                   src="/assets/Craftly_Cloud/cancer-research.svg"
                   alt="Cancer research dot network visualization"
-                  width={240}
-                  height={150}
+                  width={190}
+                  height={164}
                   className="cloud-impact-card__svg"
                 />
               </div>
@@ -177,8 +177,8 @@ export default function CloudPage() {
                 <ImageWithFallback
                   src="/assets/Craftly_Cloud/university-layers.svg"
                   alt="University students machine learning layers"
-                  width={240}
-                  height={150}
+                  width={190}
+                  height={164}
                   className="cloud-impact-card__svg"
                 />
               </div>
@@ -195,8 +195,8 @@ export default function CloudPage() {
                 <ImageWithFallback
                   src="/assets/Craftly_Cloud/young-entrepreneurs.svg"
                   alt="Young entrepreneurs lightbulb sprout"
-                  width={240}
-                  height={150}
+                  width={190}
+                  height={164}
                   className="cloud-impact-card__svg"
                 />
               </div>

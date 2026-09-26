@@ -598,15 +598,16 @@
 }
 
 .cloud-impact-card__preview {
-  background-color: var(--color-surface, #f8f9fa);
+  background-color: var(--color-surface, #f8fafc);
   border: 1px solid var(--color-border);
-  border-radius: 18px;
-  padding: 32px 24px;
+  border-radius: 20px;
+  padding: 24px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 190px;
-  margin-bottom: 20px;
+  min-height: 200px;
+  height: 200px;
+  margin-bottom: 24px;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
@@ -616,35 +617,48 @@
 }
 
 .cloud-impact-card__svg {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
+  width: auto;
+  height: 152px;
+  max-width: 100%;
+  max-height: 152px;
+  object-fit: contain;
   color: var(--color-text);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .cloud-impact-card__tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: 8px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .cloud-impact-card__tag {
+  color: #6b7280;
 }
 
 .cloud-impact-card__heading {
-  font-family: var(--font-display, var(--font-sans));
-  font-size: 1.28rem;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: clamp(1.3rem, 1.8vw, 1.45rem);
+  font-weight: 450;
   letter-spacing: -0.02em;
+  line-height: 1.25;
   color: var(--color-text);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .cloud-impact-card__desc {
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--color-text-secondary);
+  font-size: clamp(0.82rem, 1.1vw, 0.88rem);
+  line-height: 1.6;
+  font-weight: 400;
+  color: #6b7280;
+  max-width: 340px;
+}
+
+[data-theme="dark"] .cloud-impact-card__desc {
+  color: #9ca3af;
 }
 
 /* ==========================================================================

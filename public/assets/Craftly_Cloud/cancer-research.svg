@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="100%" height="100%" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="65 18 190 164" width="100%" height="100%" fill="none">
   <line x1="122.0" y1="35.0" x2="198.0" y2="35.0" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round" />
   <circle cx="122.0" cy="35.0" r="3.5" fill="currentColor" fill-opacity="0.9" />
   <circle cx="198.0" cy="35.0" r="3.5" fill="currentColor" fill-opacity="0.9" />
