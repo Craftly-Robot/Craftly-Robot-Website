@@ -7,6 +7,7 @@ import ImageWithFallback from "../../components/common/ImageWithFallback";
 import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./ProductPage.css";
+import "./CloudPage.css";
 
 const product = products.find((p) => p.id === "cloud")!;
 
@@ -20,30 +21,8 @@ export default function CloudPage() {
       {/* Hero Section */}
       <div className="container">
         <section className="product-hero-clean">
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "4px 12px",
-              borderRadius: "999px",
-              background: "var(--color-bg-subtle)",
-              border: "1px solid var(--color-border)",
-              fontSize: "0.8rem",
-              fontWeight: 500,
-              color: "var(--color-accent, #3b82f6)",
-              marginBottom: "16px",
-            }}
-          >
-            <span
-              style={{
-                width: "8px",
-                height: "8px",
-                borderRadius: "50%",
-                background: "#10b981",
-                display: "inline-block",
-              }}
-            />
+          <div className="cloud-badge">
+            <span className="cloud-badge__dot" />
             Global Edge Runtime • Active in 38 Regions
           </div>
 
@@ -55,13 +34,7 @@ export default function CloudPage() {
             </Link>
             <Link
               href="/resources/documentation"
-              className="btn-product-download"
-              style={{
-                background: "transparent",
-                color: "var(--color-text)",
-                border: "1px solid var(--color-border)",
-                marginLeft: "12px",
-              }}
+              className="btn-product-download cloud-actions-secondary"
             >
               Cloud Documentation
             </Link>
@@ -70,32 +43,22 @@ export default function CloudPage() {
       </div>
 
       {/* Top Architecture Dashboard Mockup */}
-      <div className="product-showcase-large" style={{ padding: "0 20px" }}>
-        <div
-          style={{
-            maxWidth: "1280px",
-            margin: "0 auto",
-            borderRadius: "16px",
-            overflow: "hidden",
-            border: "1px solid var(--color-border)",
-            boxShadow: "var(--shadow-lg, 0 10px 30px rgba(0,0,0,0.15))",
-          }}
-          className="reveal"
-        >
+      <div className="product-showcase-large cloud-showcase-container">
+        <div className="cloud-showcase-wrapper reveal">
           <ImageWithFallback
             src="/assets/Craftly_Cloud/craftly-cloud-overview.svg"
             alt="Craftly Cloud Global Anycast Topology and Real-time Telemetry"
             width={1394}
             height={1128}
             loading="eager"
-            style={{ width: "100%", height: "auto", display: "block" }}
+            className="cloud-showcase-image"
           />
         </div>
       </div>
 
       {/* Core Infrastructure Pillars Grid */}
       <section className="abstracted-ui-section" id="features">
-        <div className="container" style={{ maxWidth: "1280px", margin: "0 auto" }}>
+        <div className="container cloud-features-container">
           <h2 className="abstracted-ui-title reveal">
             Engineered for Autonomous Intelligence
           </h2>
@@ -107,26 +70,8 @@ export default function CloudPage() {
           <div className="abstracted-ui-grid">
             {/* Pillar 1 */}
             <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "16px",
-                }}
-              >
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    background: "rgba(59, 130, 246, 0.12)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#3b82f6",
-                  }}
-                >
+              <div className="cloud-feature-header">
+                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--blue">
                   <svg
                     width="22"
                     height="22"
@@ -142,16 +87,7 @@ export default function CloudPage() {
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                   </svg>
                 </div>
-                <span
-                  style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    padding: "2px 8px",
-                    borderRadius: "999px",
-                    background: "rgba(16, 185, 129, 0.12)",
-                    color: "#10b981",
-                  }}
-                >
+                <span className="cloud-feature-stat cloud-feature-stat--emerald">
                   7.2 ms Latency
                 </span>
               </div>
@@ -166,26 +102,8 @@ export default function CloudPage() {
 
             {/* Pillar 2 */}
             <div className="abstracted-ui-feature reveal reveal-delay-2">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "16px",
-                }}
-              >
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    background: "rgba(168, 85, 247, 0.12)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#a855f7",
-                  }}
-                >
+              <div className="cloud-feature-header">
+                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--purple">
                   <svg
                     width="22"
                     height="22"
@@ -208,16 +126,7 @@ export default function CloudPage() {
                     <line x1="1" y1="14" x2="4" y2="14" />
                   </svg>
                 </div>
-                <span
-                  style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    padding: "2px 8px",
-                    borderRadius: "999px",
-                    background: "rgba(59, 130, 246, 0.12)",
-                    color: "#3b82f6",
-                  }}
-                >
+                <span className="cloud-feature-stat cloud-feature-stat--blue">
                   12ms Cold Start
                 </span>
               </div>
@@ -232,26 +141,8 @@ export default function CloudPage() {
 
             {/* Pillar 3 */}
             <div className="abstracted-ui-feature reveal reveal-delay-3">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "16px",
-                }}
-              >
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    background: "rgba(16, 185, 129, 0.12)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#10b981",
-                  }}
-                >
+              <div className="cloud-feature-header">
+                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--emerald">
                   <svg
                     width="22"
                     height="22"
@@ -265,16 +156,7 @@ export default function CloudPage() {
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </div>
-                <span
-                  style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    padding: "2px 8px",
-                    borderRadius: "999px",
-                    background: "rgba(168, 85, 247, 0.12)",
-                    color: "#a855f7",
-                  }}
-                >
+                <span className="cloud-feature-stat cloud-feature-stat--purple">
                   Hardware mTLS
                 </span>
               </div>
@@ -289,26 +171,8 @@ export default function CloudPage() {
 
             {/* Pillar 4 */}
             <div className="abstracted-ui-feature reveal reveal-delay-4">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "16px",
-                }}
-              >
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    background: "rgba(245, 158, 11, 0.12)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#f59e0b",
-                  }}
-                >
+              <div className="cloud-feature-header">
+                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--amber">
                   <svg
                     width="22"
                     height="22"
@@ -322,16 +186,7 @@ export default function CloudPage() {
                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                   </svg>
                 </div>
-                <span
-                  style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    padding: "2px 8px",
-                    borderRadius: "999px",
-                    background: "rgba(245, 158, 11, 0.12)",
-                    color: "#f59e0b",
-                  }}
-                >
+                <span className="cloud-feature-stat cloud-feature-stat--amber">
                   99.999% SLA
                 </span>
               </div>
@@ -348,79 +203,32 @@ export default function CloudPage() {
       </section>
 
       {/* Developer CLI Section */}
-      <section className="section" style={{ padding: "40px 0" }}>
-        <div className="container" style={{ maxWidth: "1080px", margin: "0 auto" }}>
-          <div
-            style={{
-              background: "var(--color-bg-subtle)",
-              border: "1px solid var(--color-border)",
-              borderRadius: "16px",
-              padding: "clamp(24px, 4vw, 48px)",
-              textAlign: "left",
-            }}
-            className="reveal"
-          >
-            <div
-              style={{
-                display: "inline-block",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                color: "var(--color-text-muted)",
-                marginBottom: "12px",
-              }}
-            >
+      <section className="section cloud-cli-section">
+        <div className="container cloud-cli-container">
+          <div className="cloud-cli-card reveal">
+            <div className="cloud-cli-badge">
               Developer First
             </div>
-            <h2
-              style={{
-                fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)",
-                fontWeight: 600,
-                color: "var(--color-text)",
-                marginBottom: "16px",
-                lineHeight: 1.2,
-              }}
-            >
+            <h2 className="cloud-cli-title">
               Deploy Agent Swarms with a Single Command
             </h2>
-            <p
-              style={{
-                color: "var(--color-text-secondary)",
-                fontSize: "1rem",
-                marginBottom: "28px",
-                maxWidth: "680px",
-                lineHeight: 1.6,
-              }}
-            >
+            <p className="cloud-cli-desc">
               Integrates natively with Craftly Robot and Workspace. Connect your GitHub repository,
               configure your agent policies, and push to production instantly.
             </p>
 
-            <div
-              style={{
-                background: "#080c14",
-                borderRadius: "10px",
-                border: "1px solid #1e293b",
-                padding: "20px 24px",
-                fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
-                fontSize: "0.95rem",
-                color: "#f8fafc",
-                lineHeight: "1.8",
-                overflowX: "auto",
-              }}
-            >
-              <div style={{ color: "#64748b" }}># 1. Install Craftly Cloud CLI</div>
+            <div className="cloud-cli-terminal">
+              <div className="cloud-cli-step-title"># 1. Install Craftly Cloud CLI</div>
               <div>
-                <span style={{ color: "#38bdf8" }}>$</span> npm install -g @craftly/cli
+                <span className="cloud-cli-prompt">$</span> npm install -g @craftly/cli
               </div>
-              <div style={{ color: "#64748b", marginTop: "10px" }}># 2. Authenticate</div>
+              <div className="cloud-cli-step-title cloud-cli-step-title--spaced"># 2. Authenticate</div>
               <div>
-                <span style={{ color: "#38bdf8" }}>$</span> craftly login
+                <span className="cloud-cli-prompt">$</span> craftly login
               </div>
-              <div style={{ color: "#64748b", marginTop: "10px" }}># 3. Deploy multi-agent cluster</div>
+              <div className="cloud-cli-step-title cloud-cli-step-title--spaced"># 3. Deploy multi-agent cluster</div>
               <div>
-                <span style={{ color: "#38bdf8" }}>$</span> craftly cloud deploy --region anycast
+                <span className="cloud-cli-prompt">$</span> craftly cloud deploy --region anycast
               </div>
             </div>
           </div>

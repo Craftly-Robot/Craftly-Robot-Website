@@ -1,0 +1,192 @@
+/* Craftly Cloud Product Page Styles */
+
+.cloud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent, #3b82f6);
+  margin-bottom: 16px;
+}
+
+.cloud-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+}
+
+.cloud-actions-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  margin-left: 12px;
+}
+
+.cloud-showcase-container {
+  padding: 0 20px;
+}
+
+.cloud-showcase-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0, 0, 0, 0.15));
+}
+
+.cloud-showcase-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cloud-features-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cloud-feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.cloud-feature-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud-feature-icon-wrapper--blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.cloud-feature-icon-wrapper--purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #a855f7;
+}
+
+.cloud-feature-icon-wrapper--emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.cloud-feature-icon-wrapper--amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.cloud-feature-stat {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.cloud-feature-stat--emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.cloud-feature-stat--blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.cloud-feature-stat--purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #a855f7;
+}
+
+.cloud-feature-stat--amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.cloud-cli-section {
+  padding: 40px 0;
+}
+
+.cloud-cli-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.cloud-cli-card {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: clamp(24px, 4vw, 48px);
+  text-align: left;
+}
+
+.cloud-cli-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.cloud-cli-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.cloud-cli-desc {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 28px;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.cloud-cli-terminal {
+  background: #080c14;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  padding: 20px 24px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  color: #f8fafc;
+  line-height: 1.8;
+  overflow-x: auto;
+}
+
+.cloud-cli-step-title {
+  color: #64748b;
+}
+
+.cloud-cli-step-title--spaced {
+  margin-top: 10px;
+}
+
+.cloud-cli-prompt {
+  color: #38bdf8;
+  margin-right: 8px;
+}
+
+@media (max-width: 640px) {
+  .cloud-actions-secondary {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

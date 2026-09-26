@@ -87,13 +87,65 @@ export const viewport: Viewport = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Craftly",
-  url: "https://craftlyrobot.com/",
-  logo: "https://craftlyrobot.com/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
-  description:
-    "Craftly builds intelligent systems for the agentic era — Craftly Workspace and Craftly Robot.",
-  sameAs: ["https://github.com/Craftly-Robot"],
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://craftlyrobot.com/#organization",
+      name: "Craftly",
+      url: "https://craftlyrobot.com/",
+      logo: "https://craftlyrobot.com/assets/craftly_logo/photo_2026-08-12_19-27-43.jpg",
+      description:
+        "Craftly builds intelligent systems for the agentic era — Craftly Workspace, Craftly Robot, and Craftly Cloud.",
+      sameAs: ["https://github.com/Craftly-Robot"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://craftlyrobot.com/#website",
+      url: "https://craftlyrobot.com/",
+      name: "Craftly",
+      publisher: {
+        "@id": "https://craftlyrobot.com/#organization",
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Craftly Robot",
+      operatingSystem: "Android, Windows, macOS, Linux",
+      applicationCategory: "DeveloperApplication",
+      description:
+        "An agentic AI system for autonomous software engineering and multi-agent coordination.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Craftly Workspace",
+      operatingSystem: "Windows, macOS, Linux",
+      applicationCategory: "BusinessApplication",
+      description:
+        "Your intelligent workspace for operating modern organizations, task management, and communication.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Craftly Cloud",
+      applicationCategory: "CloudApplication",
+      description:
+        "High-performance edge infrastructure and runtime for intelligent agent clusters.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
