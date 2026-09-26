@@ -70,7 +70,8 @@ export default function CloudPage() {
         {/* Bangladesh National Landmark Skyline */}
         <div className="cloud-skyline-container">
           <ImageWithFallback
-            src="/assets/Craftly_Cloud/bangladesh-skyline.png"
+            src="/assets/Craftly_Cloud/bangladesh-skyline.svg"
+            fallback="/assets/Craftly_Cloud/bangladesh-skyline.png"
             alt="Bangladesh Skyline - Jatiya Smriti Soudho and Padma Bridge"
             width={2300}
             height={413}
