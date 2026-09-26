@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
     ],
   },
   turbopack: {},
+  experimental: {
+    cpus: 2,
+  },
 };
 
 export default nextConfig;

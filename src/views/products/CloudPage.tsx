@@ -82,7 +82,7 @@ export default function CloudPage() {
       </section>
 
       {/* 2. Ribbon / Stat Strip */}
-      <section className="cloud-stat-ribbon">
+      <section className="cloud-stat-ribbon" id="ambition">
         <div className="cloud-stat-ribbon__inner">
           <div className="cloud-stat-ribbon__left">
             <span className="cloud-stat-ribbon__tag">THE NATIONAL AMBITION</span>
@@ -100,7 +100,7 @@ export default function CloudPage() {
       </section>
 
       {/* 3. Ministry Pilot Section */}
-      <section className="cloud-pilot-section">
+      <section className="cloud-pilot-section" id="pilot">
         <div className="cloud-pilot-container">
           <span className="cloud-pilot__tag">01 / OUR BEGINNING</span>
 
@@ -139,7 +139,7 @@ export default function CloudPage() {
       </section>
 
       {/* 4. Power for the People / Research & Impact */}
-      <section className="cloud-impact-section">
+      <section className="cloud-impact-section" id="impact">
         <div className="cloud-impact-container">
           <div className="cloud-impact__header">
             <span className="cloud-pilot__tag">02 / POSSIBILITIES</span>
@@ -211,7 +211,7 @@ export default function CloudPage() {
       </section>
 
       {/* 5. Be Part of the Network */}
-      <section className="cloud-network-section">
+      <section className="cloud-network-section" id="network">
         <div className="cloud-network-container">
           <div className="cloud-network__header">
             <span className="cloud-section-tag">JOIN THE MOVEMENT</span>
@@ -269,33 +269,33 @@ export default function CloudPage() {
                 <span className="cloud-footer__brand-tag">Cloud</span>
               </div>
               <p className="cloud-footer__tagline">
-                Building Bangladesh&apos;s sovereign compute foundation.
+                Building Bangladesh&apos;s AI compute infrastructure
               </p>
             </div>
 
             <div className="cloud-footer__col">
-              <h4 className="cloud-footer__col-title">LEARN MORE</h4>
+              <h4 className="cloud-footer__col-title">Discover Craftly</h4>
               <ul className="cloud-footer__links">
                 <li>
-                  <Link href="/about" className="cloud-footer__link">
-                    Our vision and mission
+                  <Link href="#ambition" className="cloud-footer__link">
+                    Our national ambition
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact?topic=universities" className="cloud-footer__link">
-                    For universities
+                  <Link href="#pilot" className="cloud-footer__link">
+                    The pilot invitation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact?topic=grants" className="cloud-footer__link">
-                    Research funding &amp; grants
+                  <Link href="#impact" className="cloud-footer__link">
+                    Who we&apos;re building for
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="cloud-footer__col">
-              <h4 className="cloud-footer__col-title">SUPPORT</h4>
+              <h4 className="cloud-footer__col-title">Be part of it</h4>
               <ul className="cloud-footer__links">
                 <li>
                   <Link href="/download" className="cloud-footer__link">
@@ -303,8 +303,8 @@ export default function CloudPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact?topic=compute" className="cloud-footer__link">
-                    Request compute
+                  <Link href="/download" className="cloud-footer__link">
+                    Open your dashboard
                   </Link>
                 </li>
                 <li>
@@ -318,12 +318,18 @@ export default function CloudPage() {
 
           <div className="cloud-footer__bottom">
             <span>© 2026 Craftly</span>
-            <span>Proudly engineered in Bangladesh</span>
-            <div className="cloud-footer__legal">
-              <Link href="/privacy" className="cloud-footer__link">
-                Terms &amp; Privacy
-              </Link>
-            </div>
+            <span className="cloud-footer__bottom-center">From Bangladesh. For the world.</span>
+            <button
+              type="button"
+              className="cloud-footer__back-to-top"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            >
+              Back to top
+            </button>
           </div>
         </div>
       </footer>

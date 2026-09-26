@@ -666,9 +666,8 @@
    ========================================================================== */
 .cloud-network-section {
   padding: clamp(60px, 9vw, 110px) 0;
-  background-color: var(--color-surface, #f8f9fa);
+  background-color: var(--color-bg);
   border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
   text-align: center;
 }
 
@@ -752,76 +751,76 @@
    6. DEDICATED SOVEREIGN CLOUD MINIMALIST FOOTER
    ========================================================================== */
 .cloud-footer {
-  padding: 64px 0 40px;
-  background-color: var(--color-bg);
+  padding: 80px 0 44px;
+  background-color: #fafafa;
   border-top: 1px solid var(--color-border);
 }
 
+[data-theme="dark"] .cloud-footer {
+  background-color: var(--color-surface);
+}
+
 .cloud-footer__inner {
-  max-width: 1140px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 48px;
 }
 
 .cloud-footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2.2fr 1fr 1fr;
   gap: 48px;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 
 .cloud-footer__brand-col {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .cloud-footer__brand {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  align-items: baseline;
+  gap: 10px;
 }
 
 .cloud-footer__brand-script {
   font-family: var(--font-pacifico), "Pacifico", cursive;
-  font-size: 1.6rem;
+  font-size: clamp(2.1rem, 2.8vw, 2.5rem);
   font-weight: 400;
   line-height: 1;
   color: var(--color-text);
-  margin-right: 4px;
-}
-
-.cloud-footer__wordmark {
-  height: 28px;
-  width: auto;
-}
-
-[data-theme="dark"] .cloud-footer__wordmark {
-  filter: invert(1);
 }
 
 .cloud-footer__brand-tag {
   font-family: var(--font-sans);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: clamp(1.7rem, 2.3vw, 2rem);
+  font-weight: 450;
   letter-spacing: -0.02em;
+  line-height: 1;
   color: var(--color-text);
 }
 
 .cloud-footer__tagline {
   font-size: 0.88rem;
-  color: var(--color-text-secondary);
-  max-width: 320px;
+  color: #71717a;
   line-height: 1.5;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .cloud-footer__tagline {
+  color: #a1a1aa;
 }
 
 .cloud-footer__col-title {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: 16px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--color-text);
+  margin-bottom: 20px;
 }
 
 .cloud-footer__links {
@@ -830,12 +829,13 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .cloud-footer__link {
   font-size: 0.88rem;
-  color: var(--color-text-secondary);
+  color: #71717a;
+  text-decoration: none;
   transition: color 0.15s ease;
 }
 
@@ -843,16 +843,60 @@
   color: var(--color-text);
 }
 
+[data-theme="dark"] .cloud-footer__link {
+  color: #a1a1aa;
+}
+
+[data-theme="dark"] .cloud-footer__link:hover {
+  color: #f4f4f5;
+}
+
 .cloud-footer__bottom {
-  border-top: 1px solid var(--color-border);
-  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  color: #8e8e93;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+[data-theme="dark"] .cloud-footer__bottom {
+  border-top-color: rgba(255, 255, 255, 0.06);
+  color: #71717a;
+}
+
+.cloud-footer__bottom-center {
+  color: #8e8e93;
+}
+
+[data-theme="dark"] .cloud-footer__bottom-center {
+  color: #71717a;
+}
+
+.cloud-footer__back-to-top {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: #8e8e93;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.cloud-footer__back-to-top:hover {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .cloud-footer__back-to-top {
+  color: #71717a;
+}
+
+[data-theme="dark"] .cloud-footer__back-to-top:hover {
+  color: #f4f4f5;
 }
 
 /* ==========================================================================
@@ -879,9 +923,24 @@
     align-items: center;
   }
 
+  .cloud-footer__inner {
+    padding: 0 24px;
+  }
+
   .cloud-footer__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 36px;
+    margin-bottom: 48px;
+  }
+
+  .cloud-footer__tagline {
+    white-space: normal;
+  }
+
+  .cloud-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
 }
 
