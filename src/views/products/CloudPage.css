@@ -294,10 +294,25 @@
   align-items: center;
 }
 
+.cloud-pilot__tag {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8da2b5;
+  margin-bottom: 28px;
+  display: inline-block;
+}
+
+[data-theme="dark"] .cloud-pilot__tag {
+  color: #94a3b8;
+}
+
 .cloud-seal-wrapper {
-  width: 68px;
-  height: 68px;
-  margin-bottom: 20px;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,20 +336,46 @@
 
 .cloud-pilot__title {
   font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.4rem, 5.2vw, 3.85rem);
   line-height: 1.15;
-  color: var(--color-text);
-  margin-bottom: 20px;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-pilot__title-main {
+  font-weight: 600;
+  color: #111827;
+}
+
+[data-theme="dark"] .cloud-pilot__title-main {
+  color: #f9fafb;
+}
+
+.cloud-pilot__title-sub {
+  font-weight: 400;
+  color: #71717a;
+  letter-spacing: -0.025em;
+}
+
+[data-theme="dark"] .cloud-pilot__title-sub {
+  color: #9ca3af;
 }
 
 .cloud-pilot__desc {
-  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
-  line-height: 1.65;
-  color: var(--color-text-secondary);
-  max-width: 780px;
-  margin: 0 auto 48px;
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: #52525b;
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-wrap: balance;
+}
+
+[data-theme="dark"] .cloud-pilot__desc {
+  color: #a1a1aa;
 }
 
 .cloud-pilot__photo-card {

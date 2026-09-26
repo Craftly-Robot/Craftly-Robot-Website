@@ -92,33 +92,34 @@ export default function CloudPage() {
       {/* 3. Ministry Pilot Section */}
       <section className="cloud-pilot-section">
         <div className="cloud-pilot-container">
+          <span className="cloud-pilot__tag">01 / OUR BEGINNING</span>
+
           <div className="cloud-seal-wrapper">
             <ImageWithFallback
               src="/Craftly-Cloud/bangladesh-govt-republic-of-bangladesh-logo-png_seeklogo-406974.png"
               alt="Government of the People's Republic of Bangladesh Emblem"
-              width={68}
-              height={68}
+              width={72}
+              height={72}
               className="cloud-seal-img"
               loading="lazy"
             />
           </div>
 
-          <span className="cloud-section-tag">A HISTORIC MILESTONE</span>
-
           <h2 className="cloud-pilot__title">
-            Invited to develop<br />a ministry pilot.
+            <span className="cloud-pilot__title-main">Invited to develop</span>
+            <span className="cloud-pilot__title-sub">a ministry pilot.</span>
           </h2>
 
           <p className="cloud-pilot__desc">
-            At Bangladesh Startup Summit 2024, Craftly presented the national sovereign compute vision.
-            Recognized for its potential to deliver sovereign compute capacity without massive capital expenditure, we were presented to
-            and received an official invitation to develop a pilot with the Ministry of Telecommunication &amp; ICT.
+            At Bangladesh Innovation Fair 2026, Craftly presented a national-scale idea: build
+            Bangladesh’s national AI compute capacity, without building data centers. The presentation
+            led to an invitation to develop a pilot with the Ministry of Science and Technology.
           </p>
 
           <div className="cloud-pilot__photo-card">
             <ImageWithFallback
               src="/assets/Craftly_Cloud/ministry-pilot.jpg"
-              alt="Craftly presenting Bangladesh sovereign compute network at Bangladesh Startup Summit 2024 to ICT Ministry leadership"
+              alt="Craftly presenting national sovereign compute pilot at Bangladesh Innovation Fair 2026"
               width={1200}
               height={700}
               className="cloud-pilot__photo"
