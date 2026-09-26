@@ -608,17 +608,11 @@
   min-height: 220px;
   height: 220px;
   margin-bottom: 24px;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
 [data-theme="dark"] .cloud-impact-card__preview {
   background-color: var(--color-surface);
   border-color: var(--color-border);
-}
-
-.cloud-impact-card:hover .cloud-impact-card__preview {
-  transform: translateY(-4px);
-  border-color: var(--color-border-hover);
 }
 
 .cloud-impact-card__svg {
