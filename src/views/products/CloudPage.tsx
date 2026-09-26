@@ -75,7 +75,7 @@ export default function CloudPage() {
       <section className="cloud-stat-ribbon">
         <div className="cloud-stat-ribbon__inner">
           <div className="cloud-stat-ribbon__left">
-            <span className="cloud-stat-ribbon__tag">TECH TALENT ECOSYSTEM</span>
+            <span className="cloud-stat-ribbon__tag">THE NATIONAL AMBITION</span>
             <h2 className="cloud-stat-ribbon__heading">
               Our Computers<br />Powering the World
             </h2>
@@ -83,7 +83,7 @@ export default function CloudPage() {
           <div className="cloud-stat-ribbon__right">
             <span className="cloud-stat-ribbon__amount">$1T</span>
             <p className="cloud-stat-ribbon__label">
-              Estimated economic value for Bangladesh<br />through sovereign AI.
+              Help build a trillion-dollar GDP for Bangladesh<br />through export revenue.
             </p>
           </div>
         </div>

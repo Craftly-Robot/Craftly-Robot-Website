@@ -214,67 +214,85 @@
    2. RIBBON / STAT STRIP ("Our Computers Powering the World" & "$1T")
    ========================================================================== */
 .cloud-stat-ribbon {
-  background-color: var(--color-surface, #f8f9fa);
+  background-color: var(--color-surface, #f7f7f8);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  padding: clamp(32px, 5vw, 48px) 0;
-  margin-top: 20px;
+  padding: clamp(48px, 6vw, 72px) 0;
+  margin-top: 0;
 }
 
 .cloud-stat-ribbon__inner {
-  max-width: 1140px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 clamp(24px, 4vw, 56px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .cloud-stat-ribbon__left {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .cloud-stat-ribbon__tag {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: #8da2b5;
+}
+
+[data-theme="dark"] .cloud-stat-ribbon__tag {
+  color: #94a3b8;
 }
 
 .cloud-stat-ribbon__heading {
   font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
-  font-weight: 700;
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+[data-theme="dark"] .cloud-stat-ribbon__heading {
+  color: #f9fafb;
 }
 
 .cloud-stat-ribbon__right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
 }
 
 .cloud-stat-ribbon__amount {
   font-family: var(--font-display, var(--font-sans));
-  font-size: clamp(3.2rem, 6vw, 4.75rem);
-  font-weight: 800;
+  font-size: clamp(4rem, 7.5vw, 6rem);
+  font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1;
-  color: var(--color-text);
+  color: #000000;
+}
+
+[data-theme="dark"] .cloud-stat-ribbon__amount {
+  color: #ffffff;
 }
 
 .cloud-stat-ribbon__label {
-  font-size: 0.88rem;
-  line-height: 1.45;
-  color: var(--color-text-secondary);
-  max-width: 250px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem);
+  line-height: 1.55;
+  color: #6b7280;
+  max-width: 320px;
+}
+
+[data-theme="dark"] .cloud-stat-ribbon__label {
+  color: #9ca3af;
 }
 
 /* ==========================================================================
