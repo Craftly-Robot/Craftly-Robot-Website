@@ -412,7 +412,7 @@
 }
 
 .join-btn:active {
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .jb-icon {
@@ -420,7 +420,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .jb-icon svg {
@@ -428,11 +427,6 @@
   height: 16px;
   display: block;
   stroke: currentColor;
-}
-
-/* Only the icon inside animates on hover */
-.join-btn:hover .jb-icon {
-  transform: rotate(360deg) scale(1.15);
 }
 
 .jb-label {
