@@ -67,11 +67,11 @@
 
 .cloud-hero__title {
   font-family: var(--font-sans);
-  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
-  line-height: 1.18;
-  letter-spacing: -0.025em;
+  font-size: clamp(2.3rem, 4.6vw, 3.45rem);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
   max-width: 900px;
-  margin: 0 auto 24px;
+  margin: 0 auto 26px;
   display: flex;
   flex-direction: column;
   align-items: center;
