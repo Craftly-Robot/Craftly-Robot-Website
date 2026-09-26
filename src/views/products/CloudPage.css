@@ -405,7 +405,8 @@
    3. MINISTRY PILOT SECTION
    ========================================================================== */
 .cloud-pilot-section {
-  padding: clamp(60px, 9vw, 110px) 0;
+  padding-top: clamp(50px, 7vw, 90px);
+  padding-bottom: clamp(20px, 3vw, 36px);
   text-align: center;
 }
 
@@ -525,7 +526,8 @@
    4. "POWER FOR THE PEOPLE" IMPACT SECTION
    ========================================================================== */
 .cloud-impact-section {
-  padding: clamp(60px, 9vw, 110px) 0;
+  padding-top: clamp(20px, 3vw, 36px);
+  padding-bottom: clamp(60px, 9vw, 110px);
   background-color: var(--color-bg);
 }
 
