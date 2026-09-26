@@ -527,7 +527,7 @@
    ========================================================================== */
 .cloud-impact-section {
   padding-top: clamp(20px, 3vw, 36px);
-  padding-bottom: clamp(60px, 9vw, 110px);
+  padding-bottom: clamp(40px, 5vw, 56px);
   background-color: var(--color-bg);
 }
 
@@ -667,9 +667,14 @@
    5. "BE PART OF THE NETWORK" 3-STEP SECTION
    ========================================================================== */
 .cloud-network-section {
-  padding: clamp(80px, 11vw, 130px) 0 clamp(64px, 8vw, 96px);
+  padding: clamp(48px, 6vw, 68px) 0 clamp(64px, 8vw, 96px);
   background-color: var(--color-bg);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   text-align: center;
+}
+
+[data-theme="dark"] .cloud-network-section {
+  border-top-color: rgba(255, 255, 255, 0.08);
 }
 
 .cloud-network-container {
@@ -686,6 +691,10 @@
   align-items: center;
 }
 
+.cloud-network__header .cloud-pilot__tag {
+  margin-bottom: 14px;
+}
+
 .cloud-network__title {
   font-family: var(--font-sans);
   font-size: clamp(2.3rem, 4.5vw, 3.4rem);
@@ -693,7 +702,7 @@
   letter-spacing: -0.025em;
   line-height: 1.15;
   color: var(--color-text);
-  margin-top: 14px;
+  margin-top: 0;
   margin-bottom: 18px;
 }
 
