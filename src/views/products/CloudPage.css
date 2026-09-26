@@ -291,25 +291,29 @@
 /* Skyline Illustration */
 .cloud-skyline-container {
   width: 100%;
-  max-width: 1060px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(16px, 3vw, 40px);
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  line-height: 0;
 }
 
 .cloud-skyline-img {
   width: 100%;
   height: auto;
-  max-height: 250px;
+  max-height: 290px;
   object-fit: contain;
-  opacity: 0.92;
+  object-position: bottom center;
+  opacity: 0.95;
   display: block;
+  vertical-align: bottom;
 }
 
 [data-theme="dark"] .cloud-skyline-img {
   filter: invert(1);
-  opacity: 0.75;
+  opacity: 0.78;
 }
 
 /* ==========================================================================
