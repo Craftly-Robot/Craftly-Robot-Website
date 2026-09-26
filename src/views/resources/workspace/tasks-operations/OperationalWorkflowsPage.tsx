@@ -1,4 +1,3 @@
-import projectImage from "../../../../assets/projects/1.webp";
 import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
@@ -47,7 +46,7 @@ export default function OperationalWorkflowsPage() {
         }}
       >
         <ImageWithFallback
-          src={typeof projectImage === "string" ? projectImage : projectImage.src}
+          src="/assets/projects/1.webp"
           alt="Projects Overview"
           style={{ width: "100%", display: "block" }}
         />

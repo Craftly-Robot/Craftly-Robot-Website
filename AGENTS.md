@@ -252,7 +252,7 @@ Use the existing design tokens.
 
 Before adding a new visual value, inspect:
 
-src/index.css
+src/app/globals.css
 
 and existing component styles.
 

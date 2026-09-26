@@ -330,10 +330,6 @@ async function run() {
     {
       svg: 'public/assets/Craftly_Cloud/bangladesh-skyline.svg',
       png: 'public/assets/Craftly_Cloud/bangladesh-skyline.png'
-    },
-    {
-      svg: 'public/Craftly-Cloud/bangladesh-skyline.svg',
-      png: 'public/Craftly-Cloud/bangladesh-skyline.png'
     }
   ];
 

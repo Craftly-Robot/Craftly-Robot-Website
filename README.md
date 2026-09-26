@@ -63,12 +63,10 @@ Craftly is being constructed section by section under a structured, long-term ro
 
 Craftly's web experience is engineered for performance, aesthetic excellence, and zero unnecessary runtime bloat:
 
-- **Core Framework:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- **Build System:** [Vite 8](https://vitejs.dev/) with high-speed compilation
-- **Design System:** Pure **Vanilla CSS** tokens (`index.css`), eliminating heavy CSS-in-JS runtimes while delivering ultra-smooth 60fps animations.
+- **Core Framework:** [Next.js 16](https://nextjs.org/) (App Router) + [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Design System:** Pure **Vanilla CSS** tokens (`src/app/globals.css`), eliminating heavy CSS-in-JS runtimes while delivering ultra-smooth 60fps animations.
 - **3D Graphics & Visuals:** [Three.js](https://threejs.org/) + custom WebGL fragment shaders for interactive GPU-driven particle simulations (`HeroParticles`).
-- **Routing & SEO:** [React Router 7](https://reactrouter.com/) + [React Helmet Async](https://github.com/staylor/react-helmet-async) for dynamic page-level OpenGraph and Canonical metadata.
-- **Linter & Code Quality:** [Oxlint](https://oxc.rs/) (0 warnings, 0 errors across 130 files).
+- **Linter & Code Quality:** [Oxlint](https://oxc.rs/) (0 warnings, 0 errors).
 
 ---
 
@@ -157,7 +155,7 @@ The project is configured for **zero-config, high-performance edge deployment** 
 
 All contributors and coding agents must strictly read and adhere to [AGENTS.md](./AGENTS.md) before making architectural or UI changes:
 - Never break mobile or tablet layouts while adjusting desktop views.
-- Reuse existing design tokens in `src/index.css`.
+- Reuse existing design tokens in `src/app/globals.css`.
 - Maintain centralized content architecture in `src/data/`.
 - Always verify changes in production builds and browser testing.
 

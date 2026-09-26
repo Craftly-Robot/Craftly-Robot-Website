@@ -1,4 +1,3 @@
-import supportImage from "../../../../assets/Support Requests/1.webp";
 import DocPage from "../../DocPage";
 import ImageWithFallback from "../../../../components/common/ImageWithFallback";
 
@@ -51,7 +50,7 @@ export default function SupportRequestsPage() {
         }}
       >
         <ImageWithFallback
-          src={typeof supportImage === "string" ? supportImage : supportImage.src}
+          src="/assets/Support Requests/1.webp"
           alt="Support Requests Overview"
           style={{ width: "100%", display: "block" }}
         />
