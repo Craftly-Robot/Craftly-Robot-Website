@@ -42,4 +42,25 @@ export const products: Product[] = [
       "Cybersecurity",
     ],
   },
+  {
+    id: "cloud",
+    name: "Craftly Cloud",
+    tagline: "High-performance edge infrastructure & runtime for intelligent agent clusters.",
+    description:
+      "Craftly Cloud powers global agent orchestration, distributed compute,\nand real-time state synchronization with sub-10ms edge latency.",
+    icon: "cloud",
+    route: "/products/cloud",
+    videoSrc: "",
+    posterSrc: "/assets/Craftly_Cloud/craftly-cloud-overview.svg",
+    capabilities: [
+      "Global Edge Mesh",
+      "Agent Clusters",
+      "Sub-10ms Latency",
+      "Zero-Trust Enclaves",
+      "Distributed State Store",
+      "Auto-Scaling Sandboxes",
+      "Real-time Telemetry",
+      "Enterprise Compliance",
+    ],
+  },
 ];

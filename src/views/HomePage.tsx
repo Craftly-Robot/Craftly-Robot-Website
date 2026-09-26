@@ -65,13 +65,14 @@ export default function HomePage() {
       <TechSnake />
 
       <div ref={revealRef}>
-        {/* Workspace & Robot Sections */}
+        {/* Workspace, Robot & Cloud Sections */}
         <ProductShowcase product={products[0]} />
         <ProductShowcase
           product={products[1]}
           altLayout
           visual={<RobotDemo />}
         />
+        <ProductShowcase product={products[2]} />
 
         {/* Final Download CTA */}
         <DownloadSection hideVisual={true} />

@@ -13,11 +13,17 @@ export default function Footer() {
         <div className="footer__top-right">
           <div className="footer__column">
             <h3 className="footer__column-title">Product</h3>
+            <Link href="/products/workspace" className="footer__link">
+              Craftly Workspace
+            </Link>
+            <Link href="/products/robot" className="footer__link">
+              Craftly Robot
+            </Link>
+            <Link href="/products/cloud" className="footer__link">
+              Craftly Cloud
+            </Link>
             <Link href="/download" className="footer__link">
               Download
-            </Link>
-            <Link href="/products/workspace" className="footer__link">
-              Product
             </Link>
             <Link href="/resources/documentation" className="footer__link">
               Docs

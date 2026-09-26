@@ -245,14 +245,16 @@
 
   .hero__product-switcher {
     width: 100%;
-    max-width: 320px;
+    max-width: 390px;
+    gap: 2px;
   }
 
   .hero__switcher-btn {
     flex: 1;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.4rem 0.45rem;
+    font-size: 0.76rem;
     text-align: center;
+    white-space: nowrap;
   }
 
   .hero__dynamic-tagline {

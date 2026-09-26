@@ -31,8 +31,26 @@ function MonitorIcon({ className }: { className?: string }) {
   );
 }
 
+function CloudIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+    </svg>
+  );
+}
+
 export default function Hero({ hideParticles = false }: { hideParticles?: boolean } = {}) {
-  const [activeProductId, setActiveProductId] = useState<"workspace" | "robot">("workspace");
+  const [activeProductId, setActiveProductId] = useState<"workspace" | "robot" | "cloud">("workspace");
 
   const currentProduct = products.find((p) => p.id === activeProductId) || products[0];
 
@@ -71,6 +89,17 @@ export default function Hero({ hideParticles = false }: { hideParticles?: boolea
             >
               Craftly Robot
             </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-cloud"
+              aria-selected={activeProductId === "cloud"}
+              aria-controls="hero-product-tagline"
+              className={`hero__switcher-btn ${activeProductId === "cloud" ? "hero__switcher-btn--active" : ""}`}
+              onClick={() => setActiveProductId("cloud")}
+            >
+              Craftly Cloud
+            </button>
           </div>
 
           {/* Dynamic Micro-Tagline */}
@@ -86,17 +115,17 @@ export default function Hero({ hideParticles = false }: { hideParticles?: boolea
 
           <div className="hero__cta-group">
             <Link
-              href={`/download#${activeProductId}`}
+              href={activeProductId === "cloud" ? "/products/cloud" : `/download#${activeProductId}`}
               className="hero__btn-primary"
             >
-              <MonitorIcon />
-              Download {currentProduct.name}
+              {activeProductId === "cloud" ? <CloudIcon /> : <MonitorIcon />}
+              {activeProductId === "cloud" ? "Launch Craftly Cloud" : `Download ${currentProduct.name}`}
             </Link>
             <Link
               href={currentProduct.route}
               className="hero__btn-secondary"
             >
-              Explore {activeProductId === "workspace" ? "Workspace" : "Robot"}
+              Explore {activeProductId === "workspace" ? "Workspace" : activeProductId === "robot" ? "Robot" : "Cloud"}
             </Link>
           </div>
         </div>
