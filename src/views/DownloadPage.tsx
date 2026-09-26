@@ -317,6 +317,21 @@ export default function DownloadPage() {
               </svg>
               Craftly Robot
             </a>
+            <a href="#cloud" className="product-tab">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+              </svg>
+              Craftly Cloud
+            </a>
           </div>
         </div>
 
@@ -350,6 +365,106 @@ export default function DownloadPage() {
             androidApk: "/assets/downloads/craftly-robot.apk",
           }}
         />
+
+        {/* Divider */}
+        <hr
+          style={{
+            border: "none",
+            borderTop: "1px solid var(--color-border-subtle)",
+            margin: "48px 0",
+          }}
+        />
+
+        <div id="cloud" style={{ scrollMarginTop: "100px" }}>
+          <div
+            style={{
+              background: "var(--color-bg-subtle)",
+              border: "1px solid var(--color-border)",
+              borderRadius: "16px",
+              padding: "clamp(24px, 4vw, 40px)",
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                flexWrap: "wrap",
+                gap: "12px",
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    marginBottom: "8px",
+                  }}
+                >
+                  <h2 style={{ fontSize: "1.6rem", fontWeight: 600, margin: 0 }}>
+                    Craftly Cloud
+                  </h2>
+                  <span
+                    style={{
+                      fontSize: "0.75rem",
+                      fontWeight: 600,
+                      padding: "2px 8px",
+                      borderRadius: "999px",
+                      background: "var(--color-border)",
+                      color: "var(--color-text-secondary)",
+                    }}
+                  >
+                    v2.4.0
+                  </span>
+                </div>
+                <p
+                  style={{
+                    color: "var(--color-text-secondary)",
+                    margin: 0,
+                    fontSize: "0.95rem",
+                  }}
+                >
+                  Autonomous edge infrastructure and CLI tools for multi-agent clusters.
+                </p>
+              </div>
+              <Link
+                href="/products/cloud"
+                className="btn-product-download"
+                style={{ alignSelf: "flex-start" }}
+              >
+                Open Cloud Console
+              </Link>
+            </div>
+
+            <div
+              style={{
+                background: "#080c14",
+                borderRadius: "8px",
+                border: "1px solid #1e293b",
+                padding: "16px 20px",
+                fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+                fontSize: "0.88rem",
+                color: "#f8fafc",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                flexWrap: "wrap",
+                gap: "10px",
+              }}
+            >
+              <span>
+                <span style={{ color: "#38bdf8" }}>$</span> npm install -g @craftly/cli
+              </span>
+              <span style={{ color: "#64748b", fontSize: "0.8rem" }}>
+                macOS • Linux • Windows
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
