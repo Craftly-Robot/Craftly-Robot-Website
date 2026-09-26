@@ -1,160 +1,689 @@
-/* Craftly Cloud Product Page Styles */
+/* Craftly Cloud - Bangladesh's Sovereign Compute Page Styles */
 
-
-
-.cloud-showcase-container {
-  padding: 0 20px;
-}
-
-.cloud-showcase-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0, 0, 0, 0.15));
-}
-
-.cloud-showcase-image {
+.cloud-page-container {
   width: 100%;
-  height: auto;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.cloud-hero {
+  padding-top: clamp(40px, 8vw, 80px);
+  padding-bottom: 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-hero__brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.cloud-hero__wordmark {
+  height: 38px;
+  width: auto;
   display: block;
 }
 
-.cloud-features-container {
-  max-width: 1280px;
-  margin: 0 auto;
+[data-theme="dark"] .cloud-hero__wordmark {
+  filter: invert(1);
 }
 
-.cloud-feature-header {
+.cloud-hero__brand-tag {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.cloud-hero__title {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: var(--color-text);
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.cloud-hero__stat-wrapper {
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.cloud-hero__stat-value {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(4.5rem, 11vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  color: var(--color-text);
+}
+
+.cloud-hero__stat-unit {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin-left: 8px;
+  letter-spacing: -0.02em;
+}
+
+.cloud-hero__pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 24px;
+}
+
+.cloud-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  position: relative;
+}
+
+.cloud-pulse-dot::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.4);
+  animation: cloudPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes cloudPulse {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.cloud-hero__desc {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+.cloud-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.cloud-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] .cloud-btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.cloud-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cloud-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cloud-btn-secondary:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+}
+
+/* Skyline Illustration */
+.cloud-skyline-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.cloud-skyline-img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  opacity: 0.85;
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .cloud-skyline-img {
+  opacity: 0.55;
+  filter: contrast(1.1);
+}
+
+/* ==========================================================================
+   2. RIBBON / STAT STRIP ("Our Computers Powering the World" & "$1T")
+   ========================================================================== */
+.cloud-stat-ribbon {
+  background-color: var(--color-surface, #f8f9fa);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(32px, 5vw, 48px) 0;
+  margin-top: 20px;
+}
+
+.cloud-stat-ribbon__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
-.cloud-feature-icon-wrapper {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+.cloud-stat-ribbon__left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cloud-stat-ribbon__tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.cloud-stat-ribbon__heading {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.cloud-stat-ribbon__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cloud-stat-ribbon__amount {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(3.2rem, 6vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.cloud-stat-ribbon__label {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+  max-width: 250px;
+}
+
+/* ==========================================================================
+   3. MINISTRY PILOT SECTION
+   ========================================================================== */
+.cloud-pilot-section {
+  padding: clamp(60px, 9vw, 110px) 0;
+  text-align: center;
+}
+
+.cloud-pilot-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-seal-wrapper {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cloud-feature-icon-wrapper--blue {
-  background: rgba(59, 130, 246, 0.12);
-  color: #3b82f6;
+.cloud-seal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.cloud-feature-icon-wrapper--purple {
-  background: rgba(168, 85, 247, 0.12);
-  color: #a855f7;
-}
-
-.cloud-feature-icon-wrapper--emerald {
-  background: rgba(16, 185, 129, 0.12);
-  color: #10b981;
-}
-
-.cloud-feature-icon-wrapper--amber {
-  background: rgba(245, 158, 11, 0.12);
-  color: #f59e0b;
-}
-
-.cloud-feature-stat {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 999px;
-}
-
-.cloud-feature-stat--emerald {
-  background: rgba(16, 185, 129, 0.12);
-  color: #10b981;
-}
-
-.cloud-feature-stat--blue {
-  background: rgba(59, 130, 246, 0.12);
-  color: #3b82f6;
-}
-
-.cloud-feature-stat--purple {
-  background: rgba(168, 85, 247, 0.12);
-  color: #a855f7;
-}
-
-.cloud-feature-stat--amber {
-  background: rgba(245, 158, 11, 0.12);
-  color: #f59e0b;
-}
-
-.cloud-cli-section {
-  padding: 40px 0;
-}
-
-.cloud-cli-container {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.cloud-cli-card {
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: clamp(24px, 4vw, 48px);
-  text-align: left;
-}
-
-.cloud-cli-badge {
-  display: inline-block;
+.cloud-section-tag {
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-bottom: 12px;
+  display: inline-block;
 }
 
-.cloud-cli-title {
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  font-weight: 600;
+.cloud-pilot__title {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.cloud-pilot__desc {
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  max-width: 780px;
+  margin: 0 auto 48px;
+}
+
+.cloud-pilot__photo-card {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  position: relative;
+}
+
+.cloud-pilot__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+/* ==========================================================================
+   4. "POWER FOR THE PEOPLE" IMPACT SECTION
+   ========================================================================== */
+.cloud-impact-section {
+  padding: clamp(60px, 9vw, 110px) 0;
+  background-color: var(--color-bg);
+}
+
+.cloud-impact-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cloud-impact__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.cloud-impact__title {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
   color: var(--color-text);
   margin-bottom: 16px;
-  line-height: 1.2;
 }
 
-.cloud-cli-desc {
+.cloud-impact__subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
   color: var(--color-text-secondary);
-  font-size: 1rem;
-  margin-bottom: 28px;
-  max-width: 680px;
   line-height: 1.6;
 }
 
-.cloud-cli-terminal {
-  background: #080c14;
-  border-radius: 10px;
-  border: 1px solid #1e293b;
-  padding: 20px 24px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.95rem;
-  color: #f8fafc;
-  line-height: 1.8;
-  overflow-x: auto;
+.cloud-impact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.cloud-cli-step-title {
-  color: #64748b;
+.cloud-impact-card {
+  display: flex;
+  flex-direction: column;
 }
 
-.cloud-cli-step-title--spaced {
-  margin-top: 10px;
+.cloud-impact-card__preview {
+  background-color: var(--color-surface, #f8f9fa);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
+  margin-bottom: 20px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
-.cloud-cli-prompt {
-  color: #38bdf8;
-  margin-right: 8px;
+.cloud-impact-card:hover .cloud-impact-card__preview {
+  transform: translateY(-4px);
+  border-color: var(--color-border-hover);
 }
 
+.cloud-impact-card__svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  color: var(--color-text);
+  opacity: 0.85;
+}
 
+.cloud-impact-card__tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.cloud-impact-card__heading {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.cloud-impact-card__desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   5. "BE PART OF THE NETWORK" 3-STEP SECTION
+   ========================================================================== */
+.cloud-network-section {
+  padding: clamp(60px, 9vw, 110px) 0;
+  background-color: var(--color-surface, #f8f9fa);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.cloud-network-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cloud-network__header {
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.cloud-network__title {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.cloud-network__desc {
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.cloud-network__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 56px;
+  text-align: left;
+}
+
+.cloud-step-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cloud-step-item__number {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.cloud-step-item__title {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.cloud-step-item__desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.cloud-network__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cloud-network__platform-caption {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   6. DEDICATED SOVEREIGN CLOUD MINIMALIST FOOTER
+   ========================================================================== */
+.cloud-footer {
+  padding: 64px 0 40px;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.cloud-footer__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cloud-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.cloud-footer__brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cloud-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cloud-footer__wordmark {
+  height: 28px;
+  width: auto;
+}
+
+[data-theme="dark"] .cloud-footer__wordmark {
+  filter: invert(1);
+}
+
+.cloud-footer__brand-tag {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.cloud-footer__tagline {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.cloud-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.cloud-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cloud-footer__link {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  transition: color 0.15s ease;
+}
+
+.cloud-footer__link:hover {
+  color: var(--color-text);
+}
+
+.cloud-footer__bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   RESPONSIVE QUERIES
+   ========================================================================== */
+@media (max-width: 900px) {
+  .cloud-stat-ribbon__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cloud-impact__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .cloud-network__steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .cloud-step-item {
+    align-items: center;
+  }
+
+  .cloud-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cloud-hero__title {
+    font-size: 2.1rem;
+  }
+
+  .cloud-hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cloud-btn-primary,
+  .cloud-btn-secondary {
+    width: 100%;
+  }
+
+  .cloud-stat-ribbon__right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,317 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1394 1128" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+      }
+      .font-mono {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      }
+      .glow-pulse {
+        animation: pulse 3s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+    </style>
+    
+    <linearGradient id="cloudBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14" />
+      <stop offset="50%" stop-color="#0d111c" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161d2d" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f1522" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="latencyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="cloudWindowClip">
+      <rect x="0" y="0" width="1394" height="1128" rx="20" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cloudWindowClip)">
+    <!-- Base Background -->
+    <rect x="0" y="0" width="1394" height="1128" fill="url(#cloudBgGrad)" />
+
+    <!-- Grid lines subtle background -->
+    <g opacity="0.12" stroke="#475569" stroke-width="1" stroke-dasharray="4,8">
+      <line x1="0" y1="180" x2="1394" y2="180" />
+      <line x1="0" y1="360" x2="1394" y2="360" />
+      <line x1="0" y1="540" x2="1394" y2="540" />
+      <line x1="0" y1="720" x2="1394" y2="720" />
+      <line x1="0" y1="900" x2="1394" y2="900" />
+      <line x1="280" y1="0" x2="280" y2="1128" />
+      <line x1="560" y1="0" x2="560" y2="1128" />
+      <line x1="840" y1="0" x2="840" y2="1128" />
+      <line x1="1120" y1="0" x2="1120" y2="1128" />
+    </g>
+
+    <!-- ──────────────────────── TOP NAVIGATION / STATUS BAR ──────────────────────── -->
+    <rect x="0" y="0" width="1394" height="70" fill="#0d121f" />
+    <line x1="0" y1="70" x2="1394" y2="70" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Window dots -->
+    <circle cx="36" cy="35" r="7" fill="#ef4444" opacity="0.85" />
+    <circle cx="58" cy="35" r="7" fill="#f59e0b" opacity="0.85" />
+    <circle cx="80" cy="35" r="7" fill="#10b981" opacity="0.85" />
+
+    <!-- Cloud Logo & Brand in Header -->
+    <g transform="translate(130, 24)">
+      <!-- Cloud Icon -->
+      <path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6L16 6a5 5 0 0 1 1 9.9M15 13l-3-3m0 0l-3 3m3-3v12" 
+            transform="scale(0.85)" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="32" y="16" fill="#f8fafc" font-size="16" font-weight="700" class="font-sans" letter-spacing="-0.3">Craftly Cloud</text>
+      <rect x="145" y="2" width="70" height="20" rx="10" fill="#1e293b" />
+      <circle cx="156" cy="12" r="3.5" fill="#10b981" />
+      <text x="166" y="15" fill="#10b981" font-size="11" font-weight="600" class="font-mono">LIVE</text>
+    </g>
+
+    <!-- Top Right Stats -->
+    <g transform="translate(980, 22)">
+      <text x="0" y="16" fill="#94a3b8" font-size="13" class="font-sans">Global Region:</text>
+      <text x="96" y="16" fill="#f1f5f9" font-size="13" font-weight="600" class="font-mono">edge-anycast-all</text>
+      <rect x="235" y="0" width="135" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="250" y="18" fill="#38bdf8" font-size="12" font-weight="600" class="font-mono">CLI v2.4.0</text>
+    </g>
+
+    <!-- ──────────────────────── HERO METRICS ROW ──────────────────────── -->
+    <g transform="translate(48, 105)">
+      <!-- Metric Card 1: Edge Latency -->
+      <rect x="0" y="0" width="300" height="135" rx="12" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      <circle cx="28" cy="32" r="14" fill="#064e3b" />
+      <path d="M23 32h10M28 27v10" stroke="#34d399" stroke-width="2" stroke-linecap="round" />
+      <text x="52" y="37" fill="#94a3b8" font-size="13" font-weight="500" class="font-sans">Edge Response Latency</text>
+      <text x="24" y="85" fill="#f8fafc" font-size="34" font-weight="700" class="font-mono">7.2 ms</text>
+      <text x="24" y="112" fill="#34d399" font-size="12" font-weight="600" class="font-sans">↓ 42% faster than origin</text>
+
+      <!-- Metric Card 2: Global Clusters -->
+      <rect x="330" y="0" width="300" height="135" rx="12" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      <circle cx="358" cy="32" r="14" fill="#1e3a5f" />
+      <circle cx="358" cy="32" r="6" fill="#38bdf8" />
+      <text x="382" y="37" fill="#94a3b8" font-size="13" font-weight="500" class="font-sans">Active Agent Nodes</text>
+      <text x="354" y="85" fill="#f8fafc" font-size="34" font-weight="700" class="font-mono">14,820</text>
+      <text x="354" y="112" fill="#38bdf8" font-size="12" font-weight="600" class="font-sans">Across 38 Edge PoPs</text>
+
+      <!-- Metric Card 3: Requests / Throughput -->
+      <rect x="660" y="0" width="300" height="135" rx="12" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      <circle cx="688" cy="32" r="14" fill="#312e81" />
+      <path d="M684 32l3 3 6-6" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <text x="712" y="37" fill="#94a3b8" font-size="13" font-weight="500" class="font-sans">Requests / Min</text>
+      <text x="684" y="85" fill="#f8fafc" font-size="34" font-weight="700" class="font-mono">1.84M</text>
+      <text x="684" y="112" fill="#a78bfa" font-size="12" font-weight="600" class="font-sans">100% Error-free delivery</text>
+
+      <!-- Metric Card 4: Security Posture -->
+      <rect x="990" y="0" width="308" height="135" rx="12" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      <circle cx="1018" cy="32" r="14" fill="#4c1d95" />
+      <path d="M1018 25l-6 3v5c0 4 6 7 6 7s6-3 6-7v-5l-6-3z" stroke="#c084fc" stroke-width="1.8" fill="none" />
+      <text x="1042" y="37" fill="#94a3b8" font-size="13" font-weight="500" class="font-sans">Zero-Trust Enclaves</text>
+      <text x="1014" y="85" fill="#f8fafc" font-size="34" font-weight="700" class="font-mono">Isolated</text>
+      <text x="1014" y="112" fill="#c084fc" font-size="12" font-weight="600" class="font-sans">Hardware mTLS Verified</text>
+    </g>
+
+    <!-- ──────────────────────── MAIN VISUAL: GLOBAL MESH & WORKLOAD GRAPH ──────────────────────── -->
+    <g transform="translate(48, 268)">
+      <!-- Left Panel: Global Anycast Mesh Map & Topology -->
+      <rect x="0" y="0" width="790" height="520" rx="14" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      
+      <text x="32" y="44" fill="#f1f5f9" font-size="18" font-weight="600" class="font-sans">Distributed Agent Mesh Topology</text>
+      <text x="32" y="68" fill="#64748b" font-size="13" class="font-sans">Real-time packet routing, edge inference, and cluster coordination</text>
+
+      <!-- Mesh Topology SVG Diagram -->
+      <g transform="translate(40, 100)">
+        <!-- Center Origin Enclave -->
+        <circle cx="355" cy="190" r="48" fill="#1e293b" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3,3" />
+        <circle cx="355" cy="190" r="34" fill="#172554" />
+        <text x="355" y="186" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="700" class="font-mono">CRAFTLY</text>
+        <text x="355" y="202" text-anchor="middle" fill="#93c5fd" font-size="10" font-weight="600" class="font-mono">CORE</text>
+
+        <!-- Connecting Edge Beams -->
+        <g stroke="url(#meshGrad)" stroke-width="1.8" opacity="0.6">
+          <line x1="355" y1="190" x2="100" y2="70" />
+          <line x1="355" y1="190" x2="220" y2="340" />
+          <line x1="355" y1="190" x2="600" y2="80" />
+          <line x1="355" y1="190" x2="620" y2="330" />
+          <line x1="355" y1="190" x2="110" y2="230" />
+          <line x1="355" y1="190" x2="640" y2="200" />
+          <!-- Cross mesh lines -->
+          <line x1="100" y1="70" x2="600" y2="80" opacity="0.3" stroke-dasharray="4,4" />
+          <line x1="220" y1="340" x2="620" y2="330" opacity="0.3" stroke-dasharray="4,4" />
+        </g>
+
+        <!-- Node 1: North America Edge -->
+        <g transform="translate(100, 70)">
+          <circle cx="0" cy="0" r="18" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+          <circle cx="0" cy="0" r="5" fill="#34d399" />
+          <text x="24" y="-4" fill="#f8fafc" font-size="12" font-weight="600" class="font-sans">us-east (Virginia)</text>
+          <text x="24" y="12" fill="#10b981" font-size="10" class="font-mono">3.4 ms • 99.99%</text>
+        </g>
+
+        <!-- Node 2: Europe Edge -->
+        <g transform="translate(600, 80)">
+          <circle cx="0" cy="0" r="18" fill="#0f172a" stroke="#3b82f6" stroke-width="2" />
+          <circle cx="0" cy="0" r="5" fill="#60a5fa" />
+          <text x="-120" y="-4" fill="#f8fafc" font-size="12" font-weight="600" class="font-sans">eu-central (Frankfurt)</text>
+          <text x="-120" y="12" fill="#60a5fa" font-size="10" class="font-mono">8.1 ms • 99.99%</text>
+        </g>
+
+        <!-- Node 3: Asia Pacific Edge (Dhaka / Singapore) -->
+        <g transform="translate(620, 330)">
+          <circle cx="0" cy="0" r="22" fill="#0f172a" stroke="#a855f7" stroke-width="2.5" />
+          <circle cx="0" cy="0" r="7" fill="#c084fc" />
+          <text x="-140" y="-4" fill="#f8fafc" font-size="13" font-weight="700" class="font-sans">ap-south (Dhaka / SG)</text>
+          <text x="-140" y="14" fill="#c084fc" font-size="10" font-weight="600" class="font-mono">4.1 ms • PRIMARY HUB</text>
+        </g>
+
+        <!-- Node 4: Latin America -->
+        <g transform="translate(220, 340)">
+          <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#f59e0b" stroke-width="2" />
+          <circle cx="0" cy="0" r="4" fill="#fbbf24" />
+          <text x="22" y="-4" fill="#f8fafc" font-size="12" font-weight="600" class="font-sans">sa-east (São Paulo)</text>
+          <text x="22" y="12" fill="#f59e0b" font-size="10" class="font-mono">11.8 ms • OK</text>
+        </g>
+
+        <!-- Node 5: Tokyo Edge -->
+        <g transform="translate(640, 200)">
+          <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#06b6d4" stroke-width="2" />
+          <circle cx="0" cy="0" r="4" fill="#22d3ee" />
+          <text x="22" y="3" fill="#f8fafc" font-size="11" font-weight="500" class="font-sans">ap-northeast (Tokyo)</text>
+        </g>
+      </g>
+
+      <!-- Bottom Status Bar inside Panel -->
+      <line x1="0" y1="460" x2="790" y2="460" stroke="#1e293b" stroke-width="1" />
+      <g transform="translate(32, 492)">
+        <circle cx="6" cy="-4" r="4" fill="#10b981" />
+        <text x="18" y="0" fill="#94a3b8" font-size="12" class="font-sans">Anycast BGP Route Optimization:</text>
+        <text x="235" y="0" fill="#34d399" font-size="12" font-weight="600" class="font-mono">AUTOMATIC (38/38 PoPs Active)</text>
+      </g>
+    </g>
+
+    <!-- Right Panel: Live Real-Time Telemetry & Response Time Graph -->
+    <g transform="translate(862, 268)">
+      <rect x="0" y="0" width="484" height="520" rx="14" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      
+      <text x="28" y="44" fill="#f1f5f9" font-size="18" font-weight="600" class="font-sans">Edge Concurrency & Latency</text>
+      <text x="28" y="68" fill="#64748b" font-size="13" class="font-sans">Empirical benchmarks under 10k+ burst load</text>
+
+      <!-- Latency Curve Area Graph -->
+      <g transform="translate(28, 100)">
+        <rect x="0" y="0" width="428" height="200" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+        
+        <!-- Y-Axis Gridlines -->
+        <line x1="0" y1="50" x2="428" y2="50" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,4" />
+        <line x1="0" y1="100" x2="428" y2="100" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,4" />
+        <line x1="0" y1="150" x2="428" y2="150" stroke="#1e293b" stroke-width="1" stroke-dasharray="2,4" />
+        
+        <text x="12" y="46" fill="#64748b" font-size="10" class="font-mono">30ms</text>
+        <text x="12" y="96" fill="#64748b" font-size="10" class="font-mono">15ms</text>
+        <text x="12" y="146" fill="#64748b" font-size="10" class="font-mono">5ms</text>
+
+        <!-- Area fill -->
+        <path d="M 0 170 
+                 L 25 110 
+                 L 60 160 
+                 L 110 155 
+                 L 170 158 
+                 L 230 152 
+                 L 290 155 
+                 L 350 154 
+                 L 428 152 
+                 L 428 200 
+                 L 0 200 Z" fill="url(#latencyGrad)" />
+
+        <!-- Line stroke -->
+        <path d="M 0 170 
+                 L 25 110 
+                 L 60 160 
+                 L 110 155 
+                 L 170 158 
+                 L 230 152 
+                 L 290 155 
+                 L 350 154 
+                 L 428 152" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
+
+        <!-- Highlight Point at 7ms flatline -->
+        <circle cx="290" cy="155" r="4.5" fill="#10b981" stroke="#ffffff" stroke-width="1.5" />
+        <rect x="240" y="105" width="105" height="26" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="252" y="122" fill="#34d399" font-size="11" font-weight="700" class="font-mono">avg: 7.2 ms</text>
+      </g>
+
+      <!-- Live Log Stream Snippet -->
+      <g transform="translate(28, 325)">
+        <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600" class="font-sans">LIVE CLUSTER TELEMETRY</text>
+        
+        <rect x="0" y="12" width="428" height="155" rx="8" fill="#080c14" stroke="#1e293b" stroke-width="1" />
+        
+        <text x="16" y="38" fill="#34d399" font-size="11" class="font-mono">[200 OK]</text>
+        <text x="86" y="38" fill="#94a3b8" font-size="11" class="font-mono">GET /api/agent/deploy (4ms)</text>
+        
+        <text x="16" y="66" fill="#38bdf8" font-size="11" class="font-mono">[MESH]</text>
+        <text x="86" y="66" fill="#94a3b8" font-size="11" class="font-mono">State sync: cluster-asia-east-01 (6ms)</text>
+        
+        <text x="16" y="94" fill="#a78bfa" font-size="11" class="font-mono">[SANDBOX]</text>
+        <text x="86" y="94" fill="#94a3b8" font-size="11" class="font-mono">Container spinup: cold_start = 12ms</text>
+        
+        <text x="16" y="122" fill="#34d399" font-size="11" class="font-mono">[200 OK]</text>
+        <text x="86" y="122" fill="#94a3b8" font-size="11" class="font-mono">Edge cache HIT: anycast-dhaka (3ms)</text>
+
+        <text x="16" y="150" fill="#64748b" font-size="10" class="font-mono">> Streaming telemetry at 166 req/s...</text>
+      </g>
+    </g>
+
+    <!-- ──────────────────────── BOTTOM DEDICATED CAPABILITIES BAR ──────────────────────── -->
+    <g transform="translate(48, 816)">
+      <rect x="0" y="0" width="1298" height="260" rx="14" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1" />
+      
+      <!-- Capability 1 -->
+      <g transform="translate(36, 40)">
+        <circle cx="24" cy="24" r="20" fill="#172554" />
+        <path d="M16 24h16M24 16v16" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" />
+        <text x="58" y="22" fill="#f8fafc" font-size="16" font-weight="600" class="font-sans">Autonomous Orchestration</text>
+        <text x="58" y="44" fill="#94a3b8" font-size="13" class="font-sans">Deploy multi-agent task graphs directly across decentralized edge runtimes.</text>
+      </g>
+
+      <!-- Capability 2 -->
+      <g transform="translate(460, 40)">
+        <circle cx="24" cy="24" r="20" fill="#064e3b" />
+        <path d="M18 24l4 4 8-8" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="58" y="22" fill="#f8fafc" font-size="16" font-weight="600" class="font-sans">Sub-10ms Global Latency</text>
+        <text x="58" y="44" fill="#94a3b8" font-size="13" class="font-sans">Anycast BGP routing caches pre-rendered state within single-digit milliseconds.</text>
+      </g>
+
+      <!-- Capability 3 -->
+      <g transform="translate(884, 40)">
+        <circle cx="24" cy="24" r="20" fill="#3b0764" />
+        <circle cx="24" cy="24" r="8" fill="#c084fc" />
+        <text x="58" y="22" fill="#f8fafc" font-size="16" font-weight="600" class="font-sans">Zero-Trust Enclaves</text>
+        <text x="58" y="44" fill="#94a3b8" font-size="13" class="font-sans">Hardware-isolated microVM sandboxes protect agent memory and credentials.</text>
+      </g>
+
+      <!-- Terminal Command Banner -->
+      <g transform="translate(36, 140)">
+        <rect x="0" y="0" width="1226" height="85" rx="8" fill="#070a11" stroke="#1e293b" stroke-width="1" />
+        <text x="24" y="32" fill="#64748b" font-size="12" font-weight="600" class="font-mono">QUICKSTART DEPLOYMENT</text>
+        
+        <text x="24" y="62" fill="#38bdf8" font-size="15" font-weight="600" class="font-mono">$</text>
+        <text x="44" y="62" fill="#f8fafc" font-size="15" font-weight="500" class="font-mono">curl -fsSL https://craftly.cloud/install.sh | bash &amp;&amp; craftly cloud login</text>
+        
+        <rect x="1090" y="28" width="110" height="34" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="1116" y="50" fill="#e2e8f0" font-size="12" font-weight="600" class="font-sans">Copy CLI</text>
+      </g>
+    </g>
+  </g>
+</svg>

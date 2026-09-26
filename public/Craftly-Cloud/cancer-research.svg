@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke="currentColor">
+  <!-- Symmetrical Dot Network / Flask for Frontier Healthcare & Cancer Research -->
+  <g transform="translate(160, 100)" stroke="currentColor" fill="currentColor">
+    <!-- Center horizontal connection lines -->
+    <line x1="-70" y1="10" x2="70" y2="10" stroke-width="1.2" stroke-dasharray="2 3" opacity="0.4" />
+    <line x1="-90" y1="30" x2="90" y2="30" stroke-width="1.2" opacity="0.3" />
+    <line x1="-80" y1="45" x2="80" y2="45" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.35" />
+    <line x1="-55" y1="60" x2="55" y2="60" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.4" />
+
+    <!-- Vertical / diagonal grid lines -->
+    <path d="M-15 -60 L-15 -35 C-15 -20 -40 0 -75 25 C-95 40 -90 60 -50 68 C-20 73 20 73 50 68 C90 60 95 40 75 25 C40 0 15 -20 15 -35 L15 -60" fill="none" stroke-width="1" stroke-dasharray="3 3" opacity="0.25" />
+
+    <!-- Central nucleus connection -->
+    <circle cx="0" cy="-60" r="3.5" />
+    <circle cx="-15" cy="-60" r="2.5" />
+    <circle cx="15" cy="-60" r="2.5" />
+    <circle cx="-15" cy="-45" r="2.5" />
+    <circle cx="15" cy="-45" r="2.5" />
+    <circle cx="-15" cy="-30" r="2.5" />
+    <circle cx="15" cy="-30" r="2.5" />
+    
+    <!-- Neck Expansion Dots -->
+    <circle cx="-25" cy="-15" r="3" />
+    <circle cx="25" cy="-15" r="3" />
+    <circle cx="-38" cy="0" r="3" />
+    <circle cx="38" cy="0" r="3" />
+    
+    <!-- Body Expansion Dots -->
+    <circle cx="-55" cy="15" r="3.5" />
+    <circle cx="55" cy="15" r="3.5" />
+    <circle cx="-75" cy="30" r="3.5" />
+    <circle cx="75" cy="30" r="3.5" />
+    <circle cx="-90" cy="45" r="4" />
+    <circle cx="90" cy="45" r="4" />
+    <circle cx="-80" cy="58" r="3.5" />
+    <circle cx="80" cy="58" r="3.5" />
+    <circle cx="-60" cy="68" r="3" />
+    <circle cx="60" cy="68" r="3" />
+    <circle cx="-35" cy="74" r="3" />
+    <circle cx="35" cy="74" r="3" />
+    <circle cx="0" cy="76" r="3.5" />
+
+    <!-- Interior nodes -->
+    <circle cx="-35" cy="30" r="2.5" opacity="0.7" />
+    <circle cx="0" cy="30" r="2.5" opacity="0.7" />
+    <circle cx="35" cy="30" r="2.5" opacity="0.7" />
+    <circle cx="-25" cy="45" r="2.5" opacity="0.7" />
+    <circle cx="25" cy="45" r="2.5" opacity="0.7" />
+    <circle cx="0" cy="55" r="2.5" opacity="0.7" />
+  </g>
+</svg>

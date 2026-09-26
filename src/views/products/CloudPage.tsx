@@ -2,230 +2,324 @@
 
 import Link from "next/link";
 import { SEO } from "../../components/SEO";
-import { products } from "../../data/products";
 import ImageWithFallback from "../../components/common/ImageWithFallback";
-import CTASection from "../../components/sections/CTASection";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import "./ProductPage.css";
 import "./CloudPage.css";
-
-const product = products.find((p) => p.id === "cloud")!;
 
 export default function CloudPage() {
   const revealRef = useScrollReveal();
 
   return (
-    <div ref={revealRef}>
-      <SEO title={product.name} description={product.tagline} />
+    <div className="cloud-page-container" ref={revealRef}>
+      <SEO
+        title="Craftly Cloud - Bangladesh’s national AI compute capacity"
+        description="Craftly is connecting every computer in Bangladesh to show the world what's possible."
+      />
 
-      {/* Hero Section */}
-      <div className="container">
-        <section className="product-hero-clean">
-          <h1 className="product-hero-clean__title">{product.name}</h1>
-          <p className="product-hero-clean__desc">{product.description}</p>
-          <div className="product-hero-clean__actions">
-            <Link href="/download" className="btn-product-download">
-              Download
-            </Link>
-          </div>
-        </section>
-      </div>
-
-      {/* Top Architecture Dashboard Mockup */}
-      <div className="product-showcase-large cloud-showcase-container">
-        <div className="cloud-showcase-wrapper reveal">
+      {/* 1. Hero Section */}
+      <section className="cloud-hero">
+        <div className="cloud-hero__brand">
           <ImageWithFallback
-            src="/assets/Craftly_Cloud/craftly-cloud-overview.svg"
-            alt="Craftly Cloud Global Anycast Topology and Real-time Telemetry"
-            width={1394}
-            height={1128}
+            src="/assets/brand/craftly-wordmark.svg"
+            alt="Craftly"
+            width={110}
+            height={44}
+            className="cloud-hero__wordmark"
             loading="eager"
-            className="cloud-showcase-image"
+          />
+          <span className="cloud-hero__brand-tag">Cloud</span>
+        </div>
+
+        <h1 className="cloud-hero__title">
+          Bangladesh’s national<br />AI compute capacity.
+        </h1>
+
+        <div className="cloud-hero__stat-wrapper">
+          <span className="cloud-hero__stat-value">199.5</span>
+          <span className="cloud-hero__stat-unit">GB</span>
+        </div>
+
+        <div className="cloud-hero__pulse-badge">
+          <span className="cloud-pulse-dot" />
+          <span>Live Nationwide Network</span>
+        </div>
+
+        <p className="cloud-hero__desc">
+          Craftly is connecting every computer in Bangladesh to show<br />
+          the world what&apos;s possible.
+        </p>
+
+        <div className="cloud-hero__actions">
+          <Link href="/download" className="cloud-btn-primary">
+            Connect Your Computer
+          </Link>
+          <Link href="/contact?subject=request-compute" className="cloud-btn-secondary">
+            Request Compute
+          </Link>
+        </div>
+
+        {/* Bangladesh National Landmark Skyline */}
+        <div className="cloud-skyline-container">
+          <ImageWithFallback
+            src="/assets/Craftly_Cloud/bangladesh-skyline.svg"
+            alt="Bangladesh Skyline - Jatiya Smriti Soudho, Trees and Padma Bridge"
+            width={1200}
+            height={240}
+            className="cloud-skyline-img"
+            loading="eager"
           />
         </div>
-      </div>
+      </section>
 
-      {/* Core Infrastructure Pillars Grid */}
-      <section className="abstracted-ui-section" id="features">
-        <div className="container cloud-features-container">
-          <h2 className="abstracted-ui-title reveal">
-            Engineered for Autonomous Intelligence
+      {/* 2. Ribbon / Stat Strip */}
+      <section className="cloud-stat-ribbon">
+        <div className="cloud-stat-ribbon__inner">
+          <div className="cloud-stat-ribbon__left">
+            <span className="cloud-stat-ribbon__tag">TECH TALENT ECOSYSTEM</span>
+            <h2 className="cloud-stat-ribbon__heading">
+              Our Computers<br />Powering the World
+            </h2>
+          </div>
+          <div className="cloud-stat-ribbon__right">
+            <span className="cloud-stat-ribbon__amount">$1T</span>
+            <p className="cloud-stat-ribbon__label">
+              Estimated economic value for Bangladesh<br />through sovereign AI.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Ministry Pilot Section */}
+      <section className="cloud-pilot-section">
+        <div className="cloud-pilot-container">
+          <div className="cloud-seal-wrapper">
+            <ImageWithFallback
+              src="/assets/Craftly_Cloud/bd-seal.svg"
+              alt="Government of the People's Republic of Bangladesh Seal"
+              width={58}
+              height={58}
+              className="cloud-seal-img"
+            />
+          </div>
+
+          <span className="cloud-section-tag">A HISTORIC MILESTONE</span>
+
+          <h2 className="cloud-pilot__title">
+            Invited to develop<br />a ministry pilot.
           </h2>
-          <p className="abstracted-ui-desc reveal reveal-delay-1">
-            Built from bare metal up to handle high-frequency agent tool execution,
-            distributed vector memory, and millisecond state synchronization.
+
+          <p className="cloud-pilot__desc">
+            At Bangladesh Startup Summit 2024, Craftly presented the national sovereign compute vision.
+            Recognized for its potential to deliver sovereign compute capacity without massive capital expenditure, we were presented to
+            and received an official invitation to develop a pilot with the Ministry of Telecommunication &amp; ICT.
           </p>
 
-          <div className="abstracted-ui-grid">
-            {/* Pillar 1 */}
-            <div className="abstracted-ui-feature reveal reveal-delay-1">
-              <div className="cloud-feature-header">
-                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--blue">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  </svg>
-                </div>
-                <span className="cloud-feature-stat cloud-feature-stat--emerald">
-                  7.2 ms Latency
-                </span>
-              </div>
-              <h3 className="abstracted-ui-feature__title">
-                Anycast Global Mesh
-              </h3>
-              <p className="abstracted-ui-feature__desc">
-                BGP Anycast routing routes user and agent traffic to the closest
-                edge point of presence in single-digit milliseconds across 38 global hubs.
-              </p>
-            </div>
-
-            {/* Pillar 2 */}
-            <div className="abstracted-ui-feature reveal reveal-delay-2">
-              <div className="cloud-feature-header">
-                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--purple">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                    <rect x="9" y="9" width="6" height="6" />
-                    <line x1="9" y1="1" x2="9" y2="4" />
-                    <line x1="15" y1="1" x2="15" y2="4" />
-                    <line x1="9" y1="20" x2="9" y2="23" />
-                    <line x1="15" y1="20" x2="15" y2="23" />
-                    <line x1="20" y1="9" x2="23" y2="9" />
-                    <line x1="20" y1="14" x2="23" y2="14" />
-                    <line x1="1" y1="9" x2="4" y2="9" />
-                    <line x1="1" y1="14" x2="4" y2="14" />
-                  </svg>
-                </div>
-                <span className="cloud-feature-stat cloud-feature-stat--blue">
-                  12ms Cold Start
-                </span>
-              </div>
-              <h3 className="abstracted-ui-feature__title">
-                MicroVM Agent Sandboxes
-              </h3>
-              <p className="abstracted-ui-feature__desc">
-                Instant container spin-up with isolated kernel spaces. Autonomous
-                agents execute code, inspect repos, and run scripts in strictly sandboxed zones.
-              </p>
-            </div>
-
-            {/* Pillar 3 */}
-            <div className="abstracted-ui-feature reveal reveal-delay-3">
-              <div className="cloud-feature-header">
-                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--emerald">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </div>
-                <span className="cloud-feature-stat cloud-feature-stat--purple">
-                  Hardware mTLS
-                </span>
-              </div>
-              <h3 className="abstracted-ui-feature__title">
-                Zero-Trust Cryptographic Enclaves
-              </h3>
-              <p className="abstracted-ui-feature__desc">
-                End-to-end encryption for agent state, sensitive tokens, and
-                enterprise source code with cryptographic attestation at the hardware level.
-              </p>
-            </div>
-
-            {/* Pillar 4 */}
-            <div className="abstracted-ui-feature reveal reveal-delay-4">
-              <div className="cloud-feature-header">
-                <div className="cloud-feature-icon-wrapper cloud-feature-icon-wrapper--amber">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                  </svg>
-                </div>
-                <span className="cloud-feature-stat cloud-feature-stat--amber">
-                  99.999% SLA
-                </span>
-              </div>
-              <h3 className="abstracted-ui-feature__title">
-                Auto-Healing Cluster Mesh
-              </h3>
-              <p className="abstracted-ui-feature__desc">
-                Fault-tolerant orchestration that re-routes tasks automatically
-                in under 15ms if any region undergoes maintenance or network turbulence.
-              </p>
-            </div>
+          <div className="cloud-pilot__photo-card">
+            <ImageWithFallback
+              src="/assets/Craftly_Cloud/ministry-pilot.jpg"
+              alt="Craftly presenting Bangladesh sovereign compute network at Bangladesh Startup Summit 2024 to ICT Ministry leadership"
+              width={1200}
+              height={700}
+              className="cloud-pilot__photo"
+            />
           </div>
         </div>
       </section>
 
-      {/* Developer CLI Section */}
-      <section className="section cloud-cli-section">
-        <div className="container cloud-cli-container">
-          <div className="cloud-cli-card reveal">
-            <div className="cloud-cli-badge">
-              Developer First
-            </div>
-            <h2 className="cloud-cli-title">
-              Deploy Agent Swarms with a Single Command
+      {/* 4. Power for the People / Research & Impact */}
+      <section className="cloud-impact-section">
+        <div className="cloud-impact-container">
+          <div className="cloud-impact__header">
+            <span className="cloud-section-tag">ACCELERATING RESEARCH</span>
+            <h2 className="cloud-impact__title">
+              Power for the people<br />moving us forward.
             </h2>
-            <p className="cloud-cli-desc">
-              Integrates natively with Craftly Robot and Workspace. Connect your GitHub repository,
-              configure your agent policies, and push to production instantly.
+            <p className="cloud-impact__subtitle">
+              Distributed compute driving real impact<br />across every sector in Bangladesh.
             </p>
+          </div>
 
-            <div className="cloud-cli-terminal">
-              <div className="cloud-cli-step-title"># 1. Install Craftly Cloud CLI</div>
-              <div>
-                <span className="cloud-cli-prompt">$</span> npm install -g @craftly/cli
+          <div className="cloud-impact__grid">
+            {/* Card 1: Cancer Research */}
+            <div className="cloud-impact-card">
+              <div className="cloud-impact-card__preview">
+                <ImageWithFallback
+                  src="/assets/Craftly_Cloud/cancer-research.svg"
+                  alt="Cancer research dot network visualization"
+                  width={240}
+                  height={150}
+                  className="cloud-impact-card__svg"
+                />
               </div>
-              <div className="cloud-cli-step-title cloud-cli-step-title--spaced"># 2. Authenticate</div>
-              <div>
-                <span className="cloud-cli-prompt">$</span> craftly login
+              <span className="cloud-impact-card__tag">FRONTIER HEALTHCARE</span>
+              <h3 className="cloud-impact-card__heading">Cancer research</h3>
+              <p className="cloud-impact-card__desc">
+                More compute for researchers working to understand breast and ovarian cancer in patients.
+              </p>
+            </div>
+
+            {/* Card 2: University Students */}
+            <div className="cloud-impact-card">
+              <div className="cloud-impact-card__preview">
+                <ImageWithFallback
+                  src="/assets/Craftly_Cloud/university-layers.svg"
+                  alt="University students machine learning layers"
+                  width={240}
+                  height={150}
+                  className="cloud-impact-card__svg"
+                />
               </div>
-              <div className="cloud-cli-step-title cloud-cli-step-title--spaced"># 3. Deploy multi-agent cluster</div>
-              <div>
-                <span className="cloud-cli-prompt">$</span> craftly cloud deploy --region anycast
+              <span className="cloud-impact-card__tag">ACADEMIC ADVANCEMENT</span>
+              <h3 className="cloud-impact-card__heading">University students</h3>
+              <p className="cloud-impact-card__desc">
+                Empowering students to train machine learning models on local hardware without cloud costs.
+              </p>
+            </div>
+
+            {/* Card 3: Young Entrepreneurs */}
+            <div className="cloud-impact-card">
+              <div className="cloud-impact-card__preview">
+                <ImageWithFallback
+                  src="/assets/Craftly_Cloud/young-entrepreneurs.svg"
+                  alt="Young entrepreneurs lightbulb sprout"
+                  width={240}
+                  height={150}
+                  className="cloud-impact-card__svg"
+                />
               </div>
+              <span className="cloud-impact-card__tag">TECH INDEPENDENCE</span>
+              <h3 className="cloud-impact-card__heading">Young entrepreneurs</h3>
+              <p className="cloud-impact-card__desc">
+                Helping young founders build and launch products without being starved of compute access.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <CTASection title="Start Building on Craftly Cloud" />
+      {/* 5. Be Part of the Network */}
+      <section className="cloud-network-section">
+        <div className="cloud-network-container">
+          <div className="cloud-network__header">
+            <span className="cloud-section-tag">JOIN THE MOVEMENT</span>
+            <h2 className="cloud-network__title">Be Part of the Network</h2>
+            <p className="cloud-network__desc">
+              Turn your idle compute into Bangladesh&apos;s future.<br />
+              We match the compute you already have.
+            </p>
+          </div>
+
+          <div className="cloud-network__steps">
+            <div className="cloud-step-item">
+              <span className="cloud-step-item__number">01</span>
+              <h3 className="cloud-step-item__title">Install Craftly</h3>
+              <p className="cloud-step-item__desc">
+                Download our app for your computer.
+              </p>
+            </div>
+
+            <div className="cloud-step-item">
+              <span className="cloud-step-item__number">02</span>
+              <h3 className="cloud-step-item__title">Sign in with Google</h3>
+              <p className="cloud-step-item__desc">
+                Connect securely in seconds.
+              </p>
+            </div>
+
+            <div className="cloud-step-item">
+              <span className="cloud-step-item__number">03</span>
+              <h3 className="cloud-step-item__title">Connect your computer</h3>
+              <p className="cloud-step-item__desc">
+                Join the network &amp; start contributing.
+              </p>
+            </div>
+          </div>
+
+          <div className="cloud-network__cta">
+            <Link href="/download" className="cloud-btn-primary">
+              Connect Your Computer
+            </Link>
+            <span className="cloud-network__platform-caption">
+              Available for Mac, Windows and Linux.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Dedicated Sovereign Cloud Minimalist Footer */}
+      <footer className="cloud-footer">
+        <div className="cloud-footer__inner">
+          <div className="cloud-footer__grid">
+            <div className="cloud-footer__brand-col">
+              <div className="cloud-footer__brand">
+                <ImageWithFallback
+                  src="/assets/brand/craftly-wordmark.svg"
+                  alt="Craftly"
+                  width={80}
+                  height={32}
+                  className="cloud-footer__wordmark"
+                />
+                <span className="cloud-footer__brand-tag">Cloud</span>
+              </div>
+              <p className="cloud-footer__tagline">
+                Building Bangladesh&apos;s sovereign compute foundation.
+              </p>
+            </div>
+
+            <div className="cloud-footer__col">
+              <h4 className="cloud-footer__col-title">LEARN MORE</h4>
+              <ul className="cloud-footer__links">
+                <li>
+                  <Link href="/about" className="cloud-footer__link">
+                    Our vision and mission
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact?topic=universities" className="cloud-footer__link">
+                    For universities
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact?topic=grants" className="cloud-footer__link">
+                    Research funding &amp; grants
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="cloud-footer__col">
+              <h4 className="cloud-footer__col-title">SUPPORT</h4>
+              <ul className="cloud-footer__links">
+                <li>
+                  <Link href="/download" className="cloud-footer__link">
+                    Connect your computer
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact?topic=compute" className="cloud-footer__link">
+                    Request compute
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/download" className="cloud-footer__link">
+                    Download Craftly
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="cloud-footer__bottom">
+            <span>© 2026 Craftly</span>
+            <span>Proudly engineered in Bangladesh</span>
+            <div className="cloud-footer__legal">
+              <Link href="/privacy" className="cloud-footer__link">
+                Terms &amp; Privacy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

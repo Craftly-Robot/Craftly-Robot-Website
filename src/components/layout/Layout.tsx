@@ -14,6 +14,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname();
   const isDocumentationPage = pathname?.startsWith("/resources/documentation");
+  const isCloudPage = pathname === "/products/cloud";
 
   return (
     <div className="layout">
@@ -25,7 +26,7 @@ export default function Layout({ children }: LayoutProps) {
       <main className="layout__main" id="main-content">
         {children}
       </main>
-      {!isDocumentationPage && <Footer />}
+      {!isDocumentationPage && !isCloudPage && <Footer />}
     </div>
   );
 }
