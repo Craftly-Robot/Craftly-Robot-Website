@@ -50,8 +50,7 @@
   margin: 0 auto;
   padding-inline: var(--page-margin);
   margin-bottom: var(--space-4xl);
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.6s forwards;
+  opacity: 1;
 }
 
 .product-showcase-large .video-showcase {
@@ -164,16 +163,14 @@
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 32px;
-  opacity: 0;
+  opacity: 1;
   white-space: pre-line;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.3s forwards;
 }
 
 .product-hero-clean__actions {
   display: flex;
   justify-content: center;
-  opacity: 0;
-  animation: heroFadeUp 0.8s var(--ease-out) 0.45s forwards;
+  opacity: 1;
 }
 
 .btn-product-download {
@@ -245,8 +242,6 @@
   align-items: center;
   text-align: center;
   margin-bottom: var(--space-2xl);
-  content-visibility: auto;
-  contain-intrinsic-size: 0 450px;
 }
 
 .abstracted-ui-feature__title {

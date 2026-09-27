@@ -14,8 +14,8 @@ export const ANIMATION = {
   EASE_SPRING: "cubic-bezier(0.34, 1.56, 0.64, 1)",
 
   /* Scroll reveal defaults */
-  REVEAL_THRESHOLD: 0.15,
-  REVEAL_ROOT_MARGIN: "0px 0px -60px 0px",
+  REVEAL_THRESHOLD: 0.05,
+  REVEAL_ROOT_MARGIN: "0px 0px 80px 0px",
 
   /* Stagger delay per item (ms) */
   STAGGER_DELAY: 80,
