@@ -167,6 +167,12 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} ${pacifico.variable}`}
     >
       <head>
+        <link
+          rel="preload"
+          as="image"
+          type="image/svg+xml"
+          href="/assets/brand/craftly-wordmark-intro.svg"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

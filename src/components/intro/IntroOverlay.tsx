@@ -8,21 +8,12 @@ import "./IntroOverlay.css";
 /* Beat timings (ms), measured from the start of the effect.
    Balanced timings so the logo is clearly visible, elegant, and finishes smoothly */
 const FLIGHT_START = 600;
-const FLIGHT_DURATION = 450;
+const FLIGHT_DURATION = 500;
 
 export default function IntroOverlay() {
   const pathname = usePathname();
   const [dismissed, setDismissed] = useState(() => {
     if (typeof window === "undefined") return false;
-    const isMobile =
-      window.innerWidth < 768 ||
-      /Mobi|Android|iPhone|iPad|iPod|FBAN|FBAV|Instagram/i.test(navigator.userAgent);
-    if (isMobile) return true;
-    try {
-      if (sessionStorage.getItem("craftly-intro-seen")) return true;
-    } catch {
-      // Ignore storage errors
-    }
     return !document.documentElement.classList.contains("intro-active");
   });
   const markRef = useRef<HTMLImageElement>(null);
@@ -32,12 +23,6 @@ export default function IntroOverlay() {
       document.documentElement.classList.remove("intro-hold", "intro-active");
       window.dispatchEvent(new CustomEvent("craftly-intro-done"));
       return;
-    }
-
-    try {
-      sessionStorage.setItem("craftly-intro-seen", "true");
-    } catch {
-      // Ignore storage errors
     }
 
     if (!document.documentElement.classList.contains("intro-active")) {
@@ -89,7 +74,7 @@ export default function IntroOverlay() {
     timers.push(window.setTimeout(finish, FLIGHT_START + FLIGHT_DURATION));
 
     /* Never trap the visitor: any input ends the intro immediately. */
-    const events = ["keydown", "pointerdown", "wheel"] as const;
+    const events = ["keydown", "pointerdown", "touchstart", "wheel"] as const;
     events.forEach((e) => window.addEventListener(e, finish, { passive: true }));
 
     return () => {
