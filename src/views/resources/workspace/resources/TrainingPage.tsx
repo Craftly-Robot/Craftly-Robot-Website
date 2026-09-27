@@ -32,12 +32,14 @@ export default function TrainingPage() {
         { id: "important", label: "Important" },
       ]}
     >
-      <div style={{ marginBottom: "32px" }}>
+      <div style={{ marginBottom: "32px", maxWidth: "600px" }}>
         <ImageWithFallback
           src="/assets/training_participation/1.jpeg"
           alt="Training Participation"
           style={{
             width: "100%",
+            height: "auto",
+            display: "block",
             borderRadius: "12px",
             border: "1px solid var(--color-border)",
           }}
