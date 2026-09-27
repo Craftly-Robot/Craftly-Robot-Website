@@ -303,6 +303,28 @@ export default function DocsLayout({
     setMobileSidebarOpen(false);
   }
 
+  // Close mobile sidebar on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileSidebarOpen) {
+        setMobileSidebarOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileSidebarOpen]);
+
+  // Lock body scroll when mobile documentation drawer is open
+  useEffect(() => {
+    if (mobileSidebarOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [mobileSidebarOpen]);
+
   // Top-level toggles
   const [isRobotOpen, setIsRobotOpen] = useState<boolean>(
     path.includes("/robot"),
@@ -465,8 +487,11 @@ export default function DocsLayout({
 
       <div className="docs__mobile-header">
         <button
+          type="button"
           className={`docs__mobile-toggle ${mobileSidebarOpen ? "docs__mobile-toggle--open" : ""}`}
           onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
+          aria-expanded={mobileSidebarOpen}
+          aria-label={mobileSidebarOpen ? "Close documentation menu" : "Open documentation menu"}
         >
           <div className="docs__mobile-toggle-lines">
             <span className="docs__mobile-toggle-line" />
@@ -476,6 +501,15 @@ export default function DocsLayout({
           Documentation Menu
         </button>
       </div>
+
+      {/* Mobile Drawer Backdrop */}
+      {mobileSidebarOpen && (
+        <div
+          className="docs__mobile-backdrop"
+          onClick={() => setMobileSidebarOpen(false)}
+          aria-hidden="true"
+        />
+      )}
 
       {/* Left Sidebar */}
       <aside

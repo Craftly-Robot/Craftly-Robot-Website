@@ -16,18 +16,65 @@
 }
 
 .docs__mobile-header {
-  display: block;
-  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 20px;
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-bg-elevated);
   position: sticky;
-  top: var(--nav-height);
-  z-index: 40;
+  top: var(--nav-height, 48px);
+  z-index: 90;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition:
+    background-color var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
 }
 
 @media (min-width: 1024px) {
   .docs__mobile-header {
     display: none;
+  }
+}
+
+.docs__mobile-backdrop {
+  position: fixed;
+  top: calc(var(--nav-height, 48px) + 52px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 85;
+  animation: docsFadeIn 0.2s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .docs__mobile-backdrop {
+    display: none;
+  }
+}
+
+@keyframes docsFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes docsSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -94,13 +141,27 @@
   padding: 40px 24px;
 }
 
-.docs__sidebar--left.docs__sidebar--mobile-open {
-  display: block;
-  width: 100%;
-  max-height: none;
-  border-right: none;
-  border-bottom: 1px solid var(--color-border);
-  padding: 24px;
+@media (max-width: 1023px) {
+  .docs__sidebar--left.docs__sidebar--mobile-open {
+    display: block;
+    position: fixed;
+    top: calc(var(--nav-height, 48px) + 52px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: calc(100vh - var(--nav-height, 48px) - 52px);
+    max-height: calc(100dvh - var(--nav-height, 48px) - 52px);
+    background-color: var(--color-bg);
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 20px 48px;
+    z-index: 89;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    animation: docsSlideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 }
 
 @media (min-width: 1024px) {
