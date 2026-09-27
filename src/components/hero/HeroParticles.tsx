@@ -426,10 +426,23 @@ export default function HeroParticles({ className = "" }: { className?: string }
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reducedMotion = useReducedMotion();
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return (
+      window.innerWidth >= 768 &&
+      !("ontouchstart" in window && window.innerWidth < 1024)
+    );
+  });
 
   useEffect(() => {
-    setIsDesktop(window.innerWidth >= 768 && !('ontouchstart' in window && window.innerWidth < 1024));
+    const handleResize = () => {
+      setIsDesktop(
+        window.innerWidth >= 768 &&
+          !("ontouchstart" in window && window.innerWidth < 1024),
+      );
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   /* Compiling the shaders and building the buffers below blocks the main thread

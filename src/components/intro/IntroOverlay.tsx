@@ -12,34 +12,36 @@ const FLIGHT_DURATION = 450;
 
 export default function IntroOverlay() {
   const pathname = usePathname();
-  const [dismissed, setDismissed] = useState(false);
-  const markRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
+  const [dismissed, setDismissed] = useState(() => {
+    if (typeof window === "undefined") return false;
     const isMobile =
       window.innerWidth < 768 ||
       /Mobi|Android|iPhone|iPad|iPod|FBAN|FBAV|Instagram/i.test(navigator.userAgent);
+    if (isMobile) return true;
+    try {
+      if (sessionStorage.getItem("craftly-intro-seen")) return true;
+    } catch {
+      // Ignore storage errors
+    }
+    return !document.documentElement.classList.contains("intro-active");
+  });
+  const markRef = useRef<HTMLImageElement>(null);
 
-    if (pathname !== "/" || isMobile) {
+  useEffect(() => {
+    if (dismissed || pathname !== "/") {
       document.documentElement.classList.remove("intro-hold", "intro-active");
-      setDismissed(true);
       window.dispatchEvent(new CustomEvent("craftly-intro-done"));
       return;
     }
 
     try {
-      if (sessionStorage.getItem("craftly-intro-seen")) {
-        document.documentElement.classList.remove("intro-hold", "intro-active");
-        setDismissed(true);
-        window.dispatchEvent(new CustomEvent("craftly-intro-done"));
-        return;
-      }
       sessionStorage.setItem("craftly-intro-seen", "true");
-    } catch (e) {}
+    } catch {
+      // Ignore storage errors
+    }
 
-    // If intro-active is not on html (e.g. non-home page or reduced motion), no animation needs to run
     if (!document.documentElement.classList.contains("intro-active")) {
-      setDismissed(true);
+      document.documentElement.classList.remove("intro-hold");
       window.dispatchEvent(new CustomEvent("craftly-intro-done"));
       return;
     }
@@ -95,7 +97,7 @@ export default function IntroOverlay() {
       events.forEach((e) => window.removeEventListener(e, finish));
       document.documentElement.classList.remove("intro-hold", "intro-active");
     };
-  }, [pathname]);
+  }, [pathname, dismissed]);
 
   if (dismissed || pathname !== "/") return null;
 
