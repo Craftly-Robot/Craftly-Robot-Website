@@ -426,6 +426,12 @@ export default function HeroParticles({ className = "" }: { className?: string }
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reducedMotion = useReducedMotion();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    setIsDesktop(window.innerWidth >= 768 && !('ontouchstart' in window && window.innerWidth < 1024));
+  }, []);
+
   /* Compiling the shaders and building the buffers below blocks the main thread
      for the better part of a second. Run it only after the intro overlay is
      gone, otherwise the stall lands in the middle of the wordmark's fade and
@@ -447,7 +453,7 @@ export default function HeroParticles({ className = "" }: { className?: string }
   }, [introDone]);
 
   useEffect(() => {
-    if (reducedMotion || !introDone) return;
+    if (reducedMotion || !introDone || !isDesktop) return;
 
     const container = containerRef.current;
     const canvas = canvasRef.current;
@@ -822,9 +828,9 @@ export default function HeroParticles({ className = "" }: { className?: string }
       posTex.dispose();
       renderer.dispose();
     };
-  }, [reducedMotion, introDone]);
+  }, [reducedMotion, introDone, isDesktop]);
 
-  if (reducedMotion) {
+  if (reducedMotion || !isDesktop) {
     return null;
   }
 

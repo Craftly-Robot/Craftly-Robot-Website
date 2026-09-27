@@ -282,7 +282,7 @@ export default function BrandFilmSection() {
             poster="/assets/video/craftly-brand-film-poster.webp"
             playsInline
             muted={isMuted}
-            preload="metadata"
+            preload="none"
             onTimeUpdate={handleTimeUpdate}
             onEnded={handleEnded}
             onClick={togglePlay}

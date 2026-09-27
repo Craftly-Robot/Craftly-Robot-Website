@@ -7,8 +7,8 @@ import "./IntroOverlay.css";
 
 /* Beat timings (ms), measured from the start of the effect.
    Balanced timings so the logo is clearly visible, elegant, and finishes smoothly */
-const FLIGHT_START = 1000;
-const FLIGHT_DURATION = 650;
+const FLIGHT_START = 600;
+const FLIGHT_DURATION = 450;
 
 export default function IntroOverlay() {
   const pathname = usePathname();
@@ -16,13 +16,31 @@ export default function IntroOverlay() {
   const markRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (pathname !== "/") {
+    const isMobile =
+      window.innerWidth < 768 ||
+      /Mobi|Android|iPhone|iPad|iPod|FBAN|FBAV|Instagram/i.test(navigator.userAgent);
+
+    if (pathname !== "/" || isMobile) {
       document.documentElement.classList.remove("intro-hold", "intro-active");
+      setDismissed(true);
+      window.dispatchEvent(new CustomEvent("craftly-intro-done"));
       return;
     }
 
+    try {
+      if (sessionStorage.getItem("craftly-intro-seen")) {
+        document.documentElement.classList.remove("intro-hold", "intro-active");
+        setDismissed(true);
+        window.dispatchEvent(new CustomEvent("craftly-intro-done"));
+        return;
+      }
+      sessionStorage.setItem("craftly-intro-seen", "true");
+    } catch (e) {}
+
     // If intro-active is not on html (e.g. non-home page or reduced motion), no animation needs to run
     if (!document.documentElement.classList.contains("intro-active")) {
+      setDismissed(true);
+      window.dispatchEvent(new CustomEvent("craftly-intro-done"));
       return;
     }
 
