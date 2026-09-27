@@ -34,7 +34,7 @@ export default function TrainingPage() {
     >
       <div style={{ marginBottom: "32px" }}>
         <ImageWithFallback
-          src="/assets/training_participation/1.webp"
+          src="/assets/training_participation/1.jpeg"
           alt="Training Participation"
           style={{
             width: "100%",
