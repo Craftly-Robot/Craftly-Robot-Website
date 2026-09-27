@@ -308,6 +308,33 @@
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 6px 8px;
+  margin: -6px -8px -6px 0;
+  border-radius: 6px;
+  min-height: 38px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 150ms ease, opacity 150ms ease;
+}
+
+.docs__nav-meta:hover,
+.docs__nav-meta:focus-visible {
+  background-color: var(--color-bg-secondary);
+}
+
+.docs__nav-subitem--toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
 }
 
 .docs__tag {

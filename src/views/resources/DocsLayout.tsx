@@ -520,7 +520,7 @@ export default function DocsLayout({
           className="docs__nav"
           onClick={(e) => {
             const target = e.target as HTMLElement;
-            if (target.closest("a")) {
+            if (target.closest("a") && !target.closest("button")) {
               setMobileSidebarOpen(false);
             }
           }}
@@ -551,19 +551,20 @@ export default function DocsLayout({
             >
               <span className="docs__nav-text">Craftly Workspace</span>
             </Link>
-            <div
+            <button
+              type="button"
               className="docs__nav-meta"
               onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 toggleWorkspace(e);
               }}
-              role="button"
-              tabIndex={0}
-              aria-label="Toggle Craftly Workspace section"
+              aria-expanded={isWorkspaceOpen}
+              aria-label="Toggle Craftly Workspace sections"
             >
               <span className="docs__tag">v3.8.5</span>
               <DropdownIcon isOpen={isWorkspaceOpen} size={18} />
-            </div>
+            </button>
           </div>
 
           {isWorkspaceOpen && (
@@ -981,19 +982,20 @@ export default function DocsLayout({
             >
               <span className="docs__nav-text">Craftly Robot</span>
             </Link>
-            <div
+            <button
+              type="button"
               className="docs__nav-meta"
               onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 toggleRobot(e);
               }}
-              role="button"
-              tabIndex={0}
-              aria-label="Toggle Craftly Robot section"
+              aria-expanded={isRobotOpen}
+              aria-label="Toggle Craftly Robot sections"
             >
               <span className="docs__tag">v1.0.150</span>
               <DropdownIcon isOpen={isRobotOpen} size={18} />
-            </div>
+            </button>
           </div>
 
           {isRobotOpen && (
@@ -1229,19 +1231,20 @@ export default function DocsLayout({
             >
               <span className="docs__nav-text">Craftly Cloud</span>
             </Link>
-            <div
+            <button
+              type="button"
               className="docs__nav-meta"
               onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 toggleCloud(e);
               }}
-              role="button"
-              tabIndex={0}
-              aria-label="Toggle Craftly Cloud section"
+              aria-expanded={isCloudOpen}
+              aria-label="Toggle Craftly Cloud sections"
             >
               <span className="docs__tag">v1.0.0</span>
               <DropdownIcon isOpen={isCloudOpen} size={18} />
-            </div>
+            </button>
           </div>
 
           {isCloudOpen && (
