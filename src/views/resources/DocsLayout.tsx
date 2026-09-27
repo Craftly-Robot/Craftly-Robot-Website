@@ -482,7 +482,15 @@ export default function DocsLayout({
         className={`docs__sidebar docs__sidebar--left ${mobileSidebarOpen ? "docs__sidebar--mobile-open" : ""}`}
         ref={sidebarRef}
       >
-        <nav className="docs__nav">
+        <nav
+          className="docs__nav"
+          onClick={(e) => {
+            const target = e.target as HTMLElement;
+            if (target.closest("a")) {
+              setMobileSidebarOpen(false);
+            }
+          }}
+        >
           <NavLink
             to="/resources/documentation"
             className={({ isActive }) =>
@@ -495,11 +503,30 @@ export default function DocsLayout({
 
           {/* Workspace */}
           <div
-            className="docs__nav-item docs__nav-item--with-meta"
-            onClick={toggleWorkspace}
+            className={`docs__nav-item docs__nav-item--with-meta ${
+              path.includes("/workspace") ? "docs__nav-item--active-parent" : ""
+            }`}
           >
-            <span className="docs__nav-text">Craftly Workspace</span>
-            <div className="docs__nav-meta">
+            <Link
+              href="/resources/documentation/workspace/overview/what-is-craftly-workspace"
+              className="docs__nav-title-link"
+              onClick={() => {
+                setIsWorkspaceOpen(true);
+                setMobileSidebarOpen(false);
+              }}
+            >
+              <span className="docs__nav-text">Craftly Workspace</span>
+            </Link>
+            <div
+              className="docs__nav-meta"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleWorkspace(e);
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle Craftly Workspace section"
+            >
               <span className="docs__tag">v3.8.5</span>
               <DropdownIcon isOpen={isWorkspaceOpen} size={18} />
             </div>
@@ -906,11 +933,30 @@ export default function DocsLayout({
 
           {/* Robot */}
           <div
-            className="docs__nav-item docs__nav-item--with-meta"
-            onClick={toggleRobot}
+            className={`docs__nav-item docs__nav-item--with-meta ${
+              path.includes("/robot") ? "docs__nav-item--active-parent" : ""
+            }`}
           >
-            <span className="docs__nav-text">Craftly Robot</span>
-            <div className="docs__nav-meta">
+            <Link
+              href="/resources/documentation/robot/overview/what-is-craftly-robot"
+              className="docs__nav-title-link"
+              onClick={() => {
+                setIsRobotOpen(true);
+                setMobileSidebarOpen(false);
+              }}
+            >
+              <span className="docs__nav-text">Craftly Robot</span>
+            </Link>
+            <div
+              className="docs__nav-meta"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleRobot(e);
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle Craftly Robot section"
+            >
               <span className="docs__tag">v1.0.150</span>
               <DropdownIcon isOpen={isRobotOpen} size={18} />
             </div>
@@ -1135,11 +1181,30 @@ export default function DocsLayout({
 
           {/* Cloud */}
           <div
-            className="docs__nav-item docs__nav-item--with-meta"
-            onClick={toggleCloud}
+            className={`docs__nav-item docs__nav-item--with-meta ${
+              path.includes("/cloud") ? "docs__nav-item--active-parent" : ""
+            }`}
           >
-            <span className="docs__nav-text">Craftly Cloud</span>
-            <div className="docs__nav-meta">
+            <Link
+              href="/resources/documentation/cloud/overview"
+              className="docs__nav-title-link"
+              onClick={() => {
+                setIsCloudOpen(true);
+                setMobileSidebarOpen(false);
+              }}
+            >
+              <span className="docs__nav-text">Craftly Cloud</span>
+            </Link>
+            <div
+              className="docs__nav-meta"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleCloud(e);
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle Craftly Cloud section"
+            >
               <span className="docs__tag">v1.0.0</span>
               <DropdownIcon isOpen={isCloudOpen} size={18} />
             </div>

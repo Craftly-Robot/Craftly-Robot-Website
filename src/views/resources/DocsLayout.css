@@ -182,6 +182,20 @@
   border-left: 3px solid var(--color-text);
 }
 
+.docs__nav-item--active-parent {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.docs__nav-title-link {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
 .docs__nav-text {
   white-space: nowrap;
   overflow: hidden;

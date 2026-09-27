@@ -55,7 +55,12 @@ export default function DocumentationPage() {
           className="docs__section-title docs-product-title"
           id="craftly-workspace"
         >
-          Craftly Workspace
+          <Link
+            href="/resources/documentation/workspace/overview/what-is-craftly-workspace"
+            className="docs-title-anchor"
+          >
+            Craftly Workspace
+          </Link>
         </h3>
         <p className="docs__text docs-product-subtitle">
           The place where Craftly works.
@@ -97,7 +102,12 @@ export default function DocumentationPage() {
           className="docs__section-title docs-product-title"
           id="craftly-robot"
         >
-          Craftly Robot
+          <Link
+            href="/resources/documentation/robot/overview/what-is-craftly-robot"
+            className="docs-title-anchor"
+          >
+            Craftly Robot
+          </Link>
         </h3>
         <p className="docs__text docs-product-subtitle">
           The intelligence Craftly is building for the real world.
@@ -149,7 +159,12 @@ export default function DocumentationPage() {
           className="docs__section-title docs-product-title"
           id="craftly-cloud"
         >
-          Craftly Cloud
+          <Link
+            href="/resources/documentation/cloud/overview"
+            className="docs-title-anchor"
+          >
+            Craftly Cloud
+          </Link>
         </h3>
         <p className="docs__text docs-product-subtitle">
           Bangladesh&apos;s sovereign national AI compute capacity.

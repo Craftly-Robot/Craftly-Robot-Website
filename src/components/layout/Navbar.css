@@ -512,10 +512,11 @@
   height: calc(100dvh - var(--nav-height));
   background: var(--color-bg);
   padding: var(--space-xl) var(--page-margin) var(--space-2xl);
-  z-index: 1;
+  z-index: 1000;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transform: translateY(-10px);
   transition:
     opacity var(--duration-normal) var(--ease-out),
@@ -526,6 +527,7 @@
 .mobile-nav--open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
 }
 

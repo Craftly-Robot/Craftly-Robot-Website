@@ -367,7 +367,11 @@ export default function Navbar() {
                       key={child.route}
                       href={child.route}
                       className="mobile-nav__item"
-                      onClick={closeMobile}
+                      onClick={() => {
+                        setTimeout(() => {
+                          closeMobile();
+                        }, 50);
+                      }}
                     >
                       <div className="mobile-nav__item-content">
                         <div className="mobile-nav__item-title">

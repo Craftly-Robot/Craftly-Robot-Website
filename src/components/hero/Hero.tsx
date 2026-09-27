@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { products } from "../../data/products";
 import ImageWithFallback from "../common/ImageWithFallback";
@@ -50,9 +51,18 @@ function CloudIcon({ className }: { className?: string }) {
 }
 
 export default function Hero({ hideParticles = false }: { hideParticles?: boolean } = {}) {
+  const router = useRouter();
   const [activeProductId, setActiveProductId] = useState<"workspace" | "robot" | "cloud">("workspace");
 
   const currentProduct = products.find((p) => p.id === activeProductId) || products[0];
+
+  const handleTabClick = (productId: "workspace" | "robot" | "cloud", route: string) => {
+    if (activeProductId === productId) {
+      router.push(route);
+    } else {
+      setActiveProductId(productId);
+    }
+  };
 
   return (
     <section className="hero">
@@ -74,7 +84,7 @@ export default function Hero({ hideParticles = false }: { hideParticles?: boolea
               aria-selected={activeProductId === "workspace"}
               aria-controls="hero-product-tagline"
               className={`hero__switcher-btn ${activeProductId === "workspace" ? "hero__switcher-btn--active" : ""}`}
-              onClick={() => setActiveProductId("workspace")}
+              onClick={() => handleTabClick("workspace", "/products/workspace")}
             >
               Craftly Workspace
             </button>
@@ -85,7 +95,7 @@ export default function Hero({ hideParticles = false }: { hideParticles?: boolea
               aria-selected={activeProductId === "robot"}
               aria-controls="hero-product-tagline"
               className={`hero__switcher-btn ${activeProductId === "robot" ? "hero__switcher-btn--active" : ""}`}
-              onClick={() => setActiveProductId("robot")}
+              onClick={() => handleTabClick("robot", "/products/robot")}
             >
               Craftly Robot
             </button>
@@ -96,7 +106,7 @@ export default function Hero({ hideParticles = false }: { hideParticles?: boolea
               aria-selected={activeProductId === "cloud"}
               aria-controls="hero-product-tagline"
               className={`hero__switcher-btn ${activeProductId === "cloud" ? "hero__switcher-btn--active" : ""}`}
-              onClick={() => setActiveProductId("cloud")}
+              onClick={() => handleTabClick("cloud", "/products/cloud")}
             >
               Craftly Cloud
             </button>

@@ -48,3 +48,14 @@
   color: var(--color-text);
   margin-top: 32px;
 }
+
+.docs-title-anchor {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 150ms ease, color 150ms ease;
+}
+
+.docs-title-anchor:hover {
+  color: var(--color-accent, #6366f1);
+  text-decoration: underline;
+}
