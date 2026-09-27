@@ -366,6 +366,15 @@
   scroll-margin-top: 100px;
 }
 
+.docs__title .brand-font-pacifico {
+  font-family: var(--font-pacifico), "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 1.05em;
+  letter-spacing: 0.01em;
+  margin-left: 0.15em;
+  display: inline-block;
+}
+
 .docs__section-title {
   font-size: 20px;
   font-weight: 600;

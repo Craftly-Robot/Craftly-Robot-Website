@@ -9,7 +9,11 @@ export default function DocumentationPage() {
       description="Documentation home for Craftly Workspace and Craftly Robot"
       crumbs={["Documentation", "Home"]}
       pageId="welcome"
-      pageTitle="Welcome to Craftly"
+      pageTitle={
+        <>
+          Welcome to <span className="brand-font-pacifico">Craftly</span>
+        </>
+      }
       tocItems={[
         { id: "welcome", label: "Welcome to Craftly" },
         { id: "choose-surface", label: "Choose Your Surface" },

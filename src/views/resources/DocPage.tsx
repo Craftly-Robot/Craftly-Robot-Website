@@ -7,7 +7,7 @@ interface DocPageProps {
   /** Breadcrumb segments after rootLabel, last one rendered bold. */
   crumbs: string[];
   pageId: string;
-  pageTitle: string;
+  pageTitle: React.ReactNode;
   /** First breadcrumb segment. Defaults to "Documentation". */
   rootLabel?: string;
   tocItems?: { id: string; label: string }[];
