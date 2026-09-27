@@ -103,9 +103,14 @@ export default function OnboardingQuestionsPage() {
                   alt={`Onboarding Question ${q.id}`}
                   loading="lazy"
                   style={{ width: "100%", display: "block" }}
-                  onError={() =>
-                    setImgErrors((prev) => ({ ...prev, [q.id]: true }))
-                  }
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.endsWith(".png")) {
+                      target.src = `/assets/onboarding_pic/${q.id}.png`;
+                    } else {
+                      setImgErrors((prev) => ({ ...prev, [q.id]: true }));
+                    }
+                  }}
                 />
               )}
             </div>
