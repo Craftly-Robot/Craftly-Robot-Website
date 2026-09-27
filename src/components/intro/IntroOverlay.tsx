@@ -7,8 +7,8 @@ import "./IntroOverlay.css";
 
 /* Beat timings (ms), measured from the start of the effect.
    Balanced timings so the logo is clearly visible, elegant, and finishes smoothly */
-const FLIGHT_START = 600;
-const FLIGHT_DURATION = 500;
+const FLIGHT_START = 1000;
+const FLIGHT_DURATION = 650;
 
 export default function IntroOverlay() {
   const pathname = usePathname();
@@ -73,13 +73,24 @@ export default function IntroOverlay() {
     timers.push(window.setTimeout(takeOff, FLIGHT_START));
     timers.push(window.setTimeout(finish, FLIGHT_START + FLIGHT_DURATION));
 
-    /* Never trap the visitor: any input ends the intro immediately. */
+    /* Never trap the visitor: any intentional input ends the intro immediately.
+       Wait 400ms before listening so initial touch events from opening the page on mobile
+       do not prematurely cancel the animation. */
     const events = ["keydown", "pointerdown", "touchstart", "wheel"] as const;
-    events.forEach((e) => window.addEventListener(e, finish, { passive: true }));
+    let eventsAttached = false;
+    const handleDismiss = () => finish();
+
+    const attachTimer = window.setTimeout(() => {
+      eventsAttached = true;
+      events.forEach((e) => window.addEventListener(e, handleDismiss, { passive: true }));
+    }, 400);
+    timers.push(attachTimer);
 
     return () => {
       timers.forEach(clearTimeout);
-      events.forEach((e) => window.removeEventListener(e, finish));
+      if (eventsAttached) {
+        events.forEach((e) => window.removeEventListener(e, handleDismiss));
+      }
       document.documentElement.classList.remove("intro-hold", "intro-active");
     };
   }, [pathname, dismissed]);
