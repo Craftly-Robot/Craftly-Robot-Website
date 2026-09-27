@@ -228,6 +228,38 @@ const DOCS_ROUTES = [
     path: "/resources/documentation/robot/feature-overview/real-world-task-coordination",
     label: "Real-World Task Coordination",
   },
+  {
+    path: "/resources/documentation/cloud/overview",
+    label: "Craftly Cloud - Overview",
+  },
+  {
+    path: "/resources/documentation/cloud/how-it-works",
+    label: "Craftly Cloud - How It Works",
+  },
+  {
+    path: "/resources/documentation/cloud/getting-started",
+    label: "Craftly Cloud - Getting Started",
+  },
+  {
+    path: "/resources/documentation/cloud/contribute-compute",
+    label: "Craftly Cloud - Contribute Compute",
+  },
+  {
+    path: "/resources/documentation/cloud/use-compute",
+    label: "Craftly Cloud - Use Compute",
+  },
+  {
+    path: "/resources/documentation/cloud/hardware-requirements",
+    label: "Craftly Cloud - Hardware & Requirements",
+  },
+  {
+    path: "/resources/documentation/cloud/earnings",
+    label: "Craftly Cloud - Earnings",
+  },
+  {
+    path: "/resources/documentation/cloud/security-privacy",
+    label: "Craftly Cloud - Security & Privacy",
+  },
   { path: "/resources/documentation/plan", label: "Craftly Plan" },
   {
     path: "/resources/documentation/salary-compensation",
@@ -278,6 +310,9 @@ export default function DocsLayout({
   const [isWorkspaceOpen, setIsWorkspaceOpen] = useState<boolean>(
     path.includes("/workspace"),
   );
+  const [isCloudOpen, setIsCloudOpen] = useState<boolean>(
+    path.includes("/cloud"),
+  );
 
   // Nested section toggles
   const [expandedSections, setExpandedSections] = useState<string[]>(() => {
@@ -313,6 +348,11 @@ export default function DocsLayout({
   const toggleWorkspace = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsWorkspaceOpen(!isWorkspaceOpen);
+  };
+
+  const toggleCloud = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsCloudOpen(!isCloudOpen);
   };
 
   const toggleSection = (section: string) => {
@@ -1090,6 +1130,87 @@ export default function DocsLayout({
                   </NavLink>
                 </div>
               )}
+            </div>
+          )}
+
+          {/* Cloud */}
+          <div
+            className="docs__nav-item docs__nav-item--with-meta"
+            onClick={toggleCloud}
+          >
+            <span className="docs__nav-text">Craftly Cloud</span>
+            <div className="docs__nav-meta">
+              <span className="docs__tag">v1.0.0</span>
+              <DropdownIcon isOpen={isCloudOpen} size={18} />
+            </div>
+          </div>
+
+          {isCloudOpen && (
+            <div className="docs__nav-subnav">
+              <NavLink
+                to="/resources/documentation/cloud/overview"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Overview
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/how-it-works"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                How It Works
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/getting-started"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Getting Started
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/contribute-compute"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Contribute Compute
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/use-compute"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Use Compute
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/hardware-requirements"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Hardware &amp; Requirements
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/earnings"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Earnings
+              </NavLink>
+              <NavLink
+                to="/resources/documentation/cloud/security-privacy"
+                className={({ isActive }) =>
+                  `docs__nav-subitem ${isActive ? "docs__nav-subitem--active" : ""}`
+                }
+              >
+                Security &amp; Privacy
+              </NavLink>
             </div>
           )}
 

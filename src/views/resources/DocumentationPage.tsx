@@ -15,6 +15,7 @@ export default function DocumentationPage() {
         { id: "choose-surface", label: "Choose Your Surface" },
         { id: "craftly-workspace", label: "Craftly Workspace" },
         { id: "craftly-robot", label: "Craftly Robot" },
+        { id: "craftly-cloud", label: "Craftly Cloud" },
         { id: "core-capabilities", label: "Core Craftly Capabilities" },
         { id: "craftly-platform", label: "The Craftly Platform" },
       ]}
@@ -139,6 +140,40 @@ export default function DocumentationPage() {
             className="docs__link--black"
           >
             Explore Robot &rarr;
+          </Link>
+        </div>
+      </div>
+
+      <div className="docs-intro-section">
+        <h3
+          className="docs__section-title docs-product-title"
+          id="craftly-cloud"
+        >
+          Craftly Cloud
+        </h3>
+        <p className="docs__text docs-product-subtitle">
+          Bangladesh&apos;s sovereign national AI compute capacity.
+        </p>
+        <p className="docs__text">
+          Craftly Cloud connects idle computing power from everyday computers across
+          Bangladesh into a high-performance distributed supercomputing mesh. Instead
+          of spending billions on foreign data centers, Craftly pools domestic
+          resources to power national AI, cancer research, and university innovation.
+        </p>
+        <ul className="docs__list">
+          <li>
+            <strong>Key Features:</strong> Distributed mesh architecture, sub-10ms domestic latency, sandboxed isolation, zero-knowledge verification, contributor earnings, and research grants.
+          </li>
+          <li>
+            <strong>Get Started:</strong> Explore Craftly Cloud and learn how to contribute compute or deploy your AI workloads.
+          </li>
+        </ul>
+        <div className="docs-link-container">
+          <Link
+            href="/resources/documentation/cloud/overview"
+            className="docs__link--black"
+          >
+            Explore Cloud &rarr;
           </Link>
         </div>
       </div>
