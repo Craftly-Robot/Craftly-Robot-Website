@@ -448,3 +448,7 @@ select {
   filter: invert(1);
 }
 
+.brand-font-pacifico {
+  font-family: var(--font-pacifico), "Pacifico", cursive;
+}
+

@@ -317,8 +317,10 @@ export default function CloudPage() {
           </div>
 
           <div className="cloud-footer__bottom">
-            <span>© 2026 Craftly</span>
-            <span className="cloud-footer__bottom-center">From Bangladesh. For the world.</span>
+            <div className="cloud-footer__bottom-left">
+              <span className="cloud-footer__copyright">© 2026 Craftly</span>
+              <span className="cloud-footer__bottom-center">From Bangladesh. For the world.</span>
+            </div>
             <button
               type="button"
               className="cloud-footer__back-to-top"
