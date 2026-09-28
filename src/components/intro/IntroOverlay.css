@@ -30,7 +30,7 @@ html.intro-active:not(.intro-hold) .intro__sheet {
   height: auto;
   transform: translate(-50%, -50%);
   transform-origin: center;
-  will-change: transform, opacity;
+  will-change: transform, opacity, filter;
   opacity: 0;
   /* Must live on the base rule: a transition declared alongside the value change
      it is meant to animate never runs. JS sets the target transform at takeoff. */
@@ -38,16 +38,35 @@ html.intro-active:not(.intro-hold) .intro__sheet {
 }
 
 html.intro-active .intro__mark {
-  animation: introSettle 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: introClarify 750ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-@keyframes introSettle {
-  from {
+@keyframes introClarify {
+  0% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.88);
+    filter: blur(10px);
+    transform: translate(-50%, calc(-50% + 14px)) scale(0.95);
   }
-  to {
+  100% {
     opacity: 1;
+    filter: blur(0px);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+html[data-theme="dark"].intro-active .intro__mark {
+  animation-name: introClarifyDark;
+}
+
+@keyframes introClarifyDark {
+  0% {
+    opacity: 0;
+    filter: invert(1) blur(10px);
+    transform: translate(-50%, calc(-50% + 14px)) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: invert(1) blur(0px);
     transform: translate(-50%, -50%) scale(1);
   }
 }
