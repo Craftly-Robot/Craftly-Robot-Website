@@ -6,9 +6,12 @@ import { usePathname } from "next/navigation";
 import "./IntroOverlay.css";
 
 /* Beat timings (ms), measured from the start of the effect.
-   Balanced timings so the logo is clearly visible, elegant, and finishes smoothly */
-const FLIGHT_START = 1000;
+   Continuous cinematic flow:
+   - 0-750ms: logo clarifies from optical lens blur and floats gently upward
+   - 750-1750ms: seamless kinetic takeoff directly into header slot (zero dead stop) */
+const FLIGHT_START = 750;
 const FLIGHT_DURATION = 1000;
+
 
 
 export default function IntroOverlay() {
