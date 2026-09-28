@@ -3,7 +3,6 @@
 import React, {
   useState,
   useEffect,
-  useLayoutEffect,
   useRef,
   type ReactNode,
 } from "react";
@@ -421,8 +420,9 @@ export default function DocsLayout({
   }, [tocItems]);
 
   const sidebarRef = useRef<HTMLElement>(null);
+  const isFirstMount = useRef(true);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const sidebar = sidebarRef.current;
     if (!sidebar) return;
 
@@ -442,10 +442,14 @@ export default function DocsLayout({
   }, []);
 
   useEffect(() => {
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
     if (activeId) {
       const activeElement = document.getElementById(`toc-${activeId}`);
       if (activeElement) {
-        activeElement.scrollIntoView({ behavior: "auto", block: "nearest" });
+        activeElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
     }
   }, [activeId]);

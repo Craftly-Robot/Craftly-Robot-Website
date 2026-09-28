@@ -33,3 +33,21 @@
 .robot-desc-mb-32 {
   margin-bottom: 32px;
 }
+
+/* Performance optimizations for desktop: content-visibility & containment */
+.abstracted-ui-feature {
+  min-height: 420px;
+}
+
+.robot-mt-2xl .abstracted-ui-feature {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
+}
+
+.robot-mt-3xl,
+.robot-mt-3xl-mb-3xl,
+.robot-mt-4xl {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 460px;
+}
+

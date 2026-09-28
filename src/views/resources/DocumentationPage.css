@@ -59,3 +59,11 @@
   color: var(--color-accent, #6366f1);
   text-decoration: underline;
 }
+
+/* Performance optimizations for desktop: content-visibility & containment */
+.docs-intro-section:nth-of-type(n+2),
+.docs-capabilities-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
+}
+

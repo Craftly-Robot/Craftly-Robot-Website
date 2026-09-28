@@ -36,9 +36,9 @@ export default function RobotPage() {
 
       <section className="abstracted-ui-section robot-section-pt">
         <div className="container robot-container-narrow">
-          {/* Pair 1 */}
+          {/* Pair 1 - Above the fold, immediate paint for optimal LCP & zero CLS */}
           <div className="abstracted-ui-grid">
-            <div className="abstracted-ui-feature reveal">
+            <div className="abstracted-ui-feature">
               <ProductVisual scene="robot-engineering" />
               <h3 className="abstracted-ui-feature__title">
                 Autonomous Engineering
@@ -48,7 +48,7 @@ export default function RobotPage() {
                 engineering tasks.
               </p>
             </div>
-            <div className="abstracted-ui-feature reveal reveal-delay-1">
+            <div className="abstracted-ui-feature">
               <ProductVisual scene="robot-codebase" />
               <h3 className="abstracted-ui-feature__title">
                 Codebase Intelligence

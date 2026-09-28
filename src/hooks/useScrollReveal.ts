@@ -10,10 +10,11 @@ export function useScrollReveal(
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleIntersection = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
+    (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -24,14 +25,22 @@ export function useScrollReveal(
     const container = containerRef.current;
     if (!container) return;
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: ANIMATION.REVEAL_THRESHOLD,
-      rootMargin: ANIMATION.REVEAL_ROOT_MARGIN,
-      ...options,
-    });
+    const observer = new IntersectionObserver(
+      (entries, obs) => handleIntersection(entries, obs),
+      {
+        threshold: ANIMATION.REVEAL_THRESHOLD,
+        rootMargin: ANIMATION.REVEAL_ROOT_MARGIN,
+        ...options,
+      },
+    );
 
-    const elements = Array.from(container.querySelectorAll(".reveal"));
-    if (container.classList.contains("reveal")) {
+    const elements = Array.from(
+      container.querySelectorAll(".reveal:not(.revealed)"),
+    );
+    if (
+      container.classList.contains("reveal") &&
+      !container.classList.contains("revealed")
+    ) {
       elements.push(container);
     }
     elements.forEach((el) => observer.observe(el));
