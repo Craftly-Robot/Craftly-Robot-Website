@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./UseCaseComponents.css";
 
 interface FeatureSectionProps {
@@ -19,12 +18,10 @@ export function FeatureSection({
   layout = "text-left",
   alignTop = false,
 }: FeatureSectionProps) {
-  const revealRef = useScrollReveal();
-
   const innerClass = `ucc-feature__inner ucc-feature__inner--${layout}`;
 
   return (
-    <section className="ucc-feature reveal" ref={revealRef}>
+    <section className="ucc-feature reveal">
       <div className="container">
         <div
           className={innerClass}

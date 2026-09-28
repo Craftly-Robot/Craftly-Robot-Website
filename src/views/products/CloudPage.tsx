@@ -4,15 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { SEO } from "../../components/SEO";
 import ImageWithFallback from "../../components/common/ImageWithFallback";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./CloudPage.css";
 
 export default function CloudPage() {
-  const revealRef = useScrollReveal();
   const [showAboutNumber, setShowAboutNumber] = useState(false);
 
   return (
-    <div className="cloud-page-container" ref={revealRef}>
+    <div className="cloud-page-container">
       <SEO
         title="Craftly Cloud - Bangladesh’s national AI compute capacity"
         description="Craftly is connecting every computer in Bangladesh to show the world what's possible."
@@ -133,6 +131,7 @@ export default function CloudPage() {
               width={1200}
               height={700}
               className="cloud-pilot__photo"
+              loading="lazy"
             />
           </div>
         </div>
@@ -162,6 +161,7 @@ export default function CloudPage() {
                   width={200}
                   height={170}
                   className="cloud-impact-card__svg"
+                  loading="lazy"
                 />
               </div>
               <span className="cloud-impact-card__tag">01 / SCIENCE &amp; HEALTH</span>
@@ -180,6 +180,7 @@ export default function CloudPage() {
                   width={200}
                   height={170}
                   className="cloud-impact-card__svg"
+                  loading="lazy"
                 />
               </div>
               <span className="cloud-impact-card__tag">02 / RESEARCH &amp; DEVELOPMENT</span>
@@ -198,6 +199,7 @@ export default function CloudPage() {
                   width={200}
                   height={170}
                   className="cloud-impact-card__svg"
+                  loading="lazy"
                 />
               </div>
               <span className="cloud-impact-card__tag">03 / ENTREPRENEURSHIP</span>

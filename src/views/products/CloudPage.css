@@ -303,6 +303,7 @@
 .cloud-skyline-img {
   width: 100%;
   height: auto;
+  aspect-ratio: 2048 / 496;
   max-height: 290px;
   object-fit: contain;
   object-position: bottom center;
@@ -514,9 +515,15 @@
   position: relative;
 }
 
+.cloud-pilot-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 550px;
+}
+
 .cloud-pilot__photo {
   width: 100%;
   height: auto;
+  aspect-ratio: 1200 / 700;
   display: block;
   object-fit: cover;
   max-height: 600px;
@@ -529,6 +536,13 @@
   padding-top: clamp(20px, 3vw, 36px);
   padding-bottom: clamp(40px, 5vw, 56px);
   background-color: var(--color-bg);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 550px;
+}
+
+.cloud-network-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }
 
 .cloud-impact-container {
@@ -618,6 +632,7 @@
 .cloud-impact-card__svg {
   width: auto;
   height: 160px;
+  aspect-ratio: 200 / 170;
   max-width: 100%;
   max-height: 160px;
   object-fit: contain;

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./ProjectWorkflowTerminal.css";
 
 const WORKFLOW_STEPS = [
@@ -58,7 +57,6 @@ export function ProjectWorkflowTerminal() {
   const [isTyping, setIsTyping] = useState(false);
   const [displayedCommand, setDisplayedCommand] = useState("");
   const [inView, setInView] = useState(false);
-  const revealRef = useScrollReveal();
   const containerRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -75,7 +73,7 @@ export function ProjectWorkflowTerminal() {
           setInView(true);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.2 },
     );
 
     if (containerRef.current) {
@@ -119,7 +117,7 @@ export function ProjectWorkflowTerminal() {
   }, [currentStep, inView]);
 
   return (
-    <div className="terminal-workflow reveal" ref={revealRef}>
+    <div className="terminal-workflow">
       <div className="terminal-workflow__container" ref={containerRef}>
         {/* Sidebar Steps */}
         <div className="terminal-workflow__sidebar">

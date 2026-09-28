@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import DropdownIcon from "../../../components/ui/DropdownIcon";
 import "./SupportCategoryMenu.css";
 
@@ -45,10 +44,9 @@ const CATEGORIES = [
 
 export function SupportCategoryMenu() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const revealRef = useScrollReveal();
 
   return (
-    <div className="support-menu reveal" ref={revealRef}>
+    <div className="support-menu">
       <div className="support-menu__list">
         {CATEGORIES.map((category) => {
           const isExpanded = expandedId === category.id;

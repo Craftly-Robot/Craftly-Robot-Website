@@ -2,7 +2,6 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import { useOS } from "../../../hooks/useOS";
 import "./UseCaseComponents.css";
 
@@ -17,11 +16,10 @@ export function UseCaseCTA({
   title = "Start using Craftly Workspace",
   children,
 }: UseCaseCTAProps) {
-  const revealRef = useScrollReveal();
   const os = useOS();
 
   return (
-    <section className="ucc-cta reveal" ref={revealRef}>
+    <section className="ucc-cta reveal">
       <div className="container">
         <h2 className="ucc-cta__headline">{title}</h2>
         <div className="ucc-cta__actions">

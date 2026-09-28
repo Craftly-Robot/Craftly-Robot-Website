@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./ReportingGraphVisual.css";
 
 const NODES = [
@@ -16,7 +15,6 @@ const NODES = [
 export function ReportingGraphVisual() {
   const [activeNode, setActiveNode] = useState(0);
   const [inView, setInView] = useState(false);
-  const revealRef = useScrollReveal();
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,7 +26,7 @@ export function ReportingGraphVisual() {
           setInView(false);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.2 },
     );
 
     if (containerRef.current) {
@@ -49,7 +47,7 @@ export function ReportingGraphVisual() {
   }, [inView]);
 
   return (
-    <div className="reporting-graph reveal" ref={revealRef}>
+    <div className="reporting-graph">
       <div className="reporting-graph__container" ref={containerRef}>
         <div className="reporting-graph__visualization">
           {NODES.map((node, index) => {

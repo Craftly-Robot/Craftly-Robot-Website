@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./CommandChain.css";
 
 interface CommandLevel {
@@ -65,14 +64,13 @@ const levels: CommandLevel[] = [
 
 export function CommandChain() {
   const [hoveredLevel, setHoveredLevel] = useState<string | null>(null);
-  const revealRef = useScrollReveal();
 
   const activeLevel = hoveredLevel
     ? levels.find((l) => l.id === hoveredLevel)
     : null;
 
   return (
-    <div className="command-chain reveal" ref={revealRef}>
+    <div className="command-chain">
       <div className="command-chain__visual">
         {levels.map((level, index) => {
           const isHovered = hoveredLevel === level.id;

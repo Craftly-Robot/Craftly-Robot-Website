@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./UseCaseComponents.css";
 
 interface UseCaseHeroProps {
@@ -17,10 +16,8 @@ export function UseCaseHero({
   primaryCta,
   secondaryCta,
 }: UseCaseHeroProps) {
-  const revealRef = useScrollReveal();
-
   return (
-    <section className="ucc-hero reveal" ref={revealRef}>
+    <section className="ucc-hero">
       <div className="container">
         <div className="ucc-hero__layout">
           <div className="ucc-hero__content">

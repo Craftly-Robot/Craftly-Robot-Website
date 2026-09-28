@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useScrollReveal } from "../../../hooks/useScrollReveal";
 import "./TaskLifecycle.css";
 
 const STAGES = ["Assigned", "In Progress", "Submission", "Review", "Completed"];
@@ -9,7 +8,6 @@ const STAGES = ["Assigned", "In Progress", "Submission", "Review", "Completed"];
 export function TaskLifecycle() {
   const [currentStage, setCurrentStage] = useState(0);
   const [inView, setInView] = useState(false);
-  const revealRef = useScrollReveal();
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,7 +19,7 @@ export function TaskLifecycle() {
           setInView(false);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.2 },
     );
 
     if (containerRef.current) {
@@ -42,7 +40,7 @@ export function TaskLifecycle() {
   }, [inView]);
 
   return (
-    <div className="task-lifecycle reveal" ref={revealRef}>
+    <div className="task-lifecycle">
       <div className="task-lifecycle__container" ref={containerRef}>
         {/* Progress Bar Header */}
         <div className="task-lifecycle__progress-bar">
