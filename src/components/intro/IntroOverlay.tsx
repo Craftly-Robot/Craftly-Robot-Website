@@ -8,7 +8,8 @@ import "./IntroOverlay.css";
 /* Beat timings (ms), measured from the start of the effect.
    Balanced timings so the logo is clearly visible, elegant, and finishes smoothly */
 const FLIGHT_START = 1000;
-const FLIGHT_DURATION = 650;
+const FLIGHT_DURATION = 1000;
+
 
 export default function IntroOverlay() {
   const pathname = usePathname();
